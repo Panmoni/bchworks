@@ -79,7 +79,7 @@ const currentPath = splitLocale(new URL(Astro.url).pathname).route;
       </div>
     </div>
     <nav
-      class="items-center w-full lg:w-auto hidden lg:flex text-default overflow-y-auto overflow-x-hidden lg:overflow-visible lg:mx-5"
+      class="items-center w-full lg:w-auto hidden lg:flex text-default overflow-y-auto overflow-x-hidden lg:overflow-visible lg:mx-3 xl:mx-5"
       aria-label={m.nav_main_aria({}, l)}
     >
       <ul class="flex flex-col lg:flex-row lg:self-center w-full lg:w-auto gap-0.5 font-mono text-lg lg:text-sm font-medium">
@@ -88,7 +88,7 @@ const currentPath = splitLocale(new URL(Astro.url).pathname).route;
             <li class={links?.length ? 'dropdown relative' : ''}>
               {links?.length ? (
                 <>
-                  <button class="rounded-lg hover:bg-soft px-3 py-2 flex items-center">
+                  <button class="rounded-lg hover:bg-soft px-3 lg:px-2 xl:px-3 py-2 flex items-center whitespace-nowrap">
                     {text}{' '}
                     <Icon name="tabler:chevron-down" class="w-3.5 h-3.5 ml-0.5 rtl:ml-0 rtl:mr-0.5 hidden lg:inline" />
                   </button>
@@ -111,7 +111,7 @@ const currentPath = splitLocale(new URL(Astro.url).pathname).route;
               ) : (
                 <a
                   class:list={[
-                    'rounded-lg hover:bg-soft px-3 py-2 flex items-center',
+                    'rounded-lg hover:bg-soft px-3 lg:px-2 xl:px-3 py-2 flex items-center whitespace-nowrap',
                     { 'aw-link-active bg-soft': href === currentPath },
                   ]}
                   href={href}

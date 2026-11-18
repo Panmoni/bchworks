@@ -74,7 +74,7 @@
 	"utxo_headline_dormant_unspent": "Inactiva desde {year}. Todavía sin gastar.",
 	"utxo_headline_unspent": "Sin gastar: ahora mismo está en el conjunto UTXO.",
 	"utxo_headline_spent": "Gastada desde entonces. Ya no existe.",
-	"utxo_headline_unspendable": "Datos, no dinero. Nadie podrá gastarlo nunca.",
+	"utxo_headline_unspendable": "Datos, no dinero. Nadie podrá gastarla nunca.",
 	"utxo_story_created_on_in_block": "Esta moneda contiene {amount}. Se creó el {date}, en el bloque {height}.",
 	"utxo_story_created_on": "Esta moneda contiene {amount}. Se creó el {date}.",
 	"utxo_story_created_moments_in_block": "Esta moneda contiene {amount}. Se creó hace unos momentos, en el bloque {height}.",
@@ -306,7 +306,7 @@
 	"utxo_col_woke": "Despertó",
 	"utxo_col_since": "Dormido desde",
 	"utxo_col_tx": "Transacción",
-	"utxo_years_short": "({years} a)",
+	"utxo_years_short": "({years} años)",
 	"utxo_how_title": "Cómo lo calculamos",
 	"utxo_node": "Nodo: {node}",
 	"utxo_chart_age_aria": "Gráfico de áreas apiladas: proporción del suministro de BCH según la antigüedad de las monedas a lo largo del tiempo. Pasa el cursor para ver los valores.",
@@ -324,14 +324,14 @@
 	"utxo_tip_total": "total",
 	"utxo_tip_week_to": "Semana hasta el {date}",
 	"utxo_tip_cdd": "días-moneda destruidos",
-	"utxo_tip_moved_after": "movidas tras 3 años o más",
+	"utxo_tip_moved_after": "movidos tras 3 años o más",
 	"utxo_tip_asleep": [
 		{
 			"declarations": ["input years", "local yearsPlural = years: plural"],
 			"selectors": ["yearsPlural"],
 			"match": {
-				"yearsPlural=one": "dormido {years} año",
-				"yearsPlural=*": "dormido {years} años"
+				"yearsPlural=one": "dormidos {years} año",
+				"yearsPlural=*": "dormidos {years} años"
 			}
 		}
 	],
@@ -350,13 +350,13 @@
 			}
 		}
 	],
-	"utxo_tip_click": "Haz clic para ejecutarlo en la máquina",
+	"utxo_tip_click": "Haz clic para ejecutarla en la máquina",
 	"utxo_axis_years": "{years}a",
 	"nav_home": "Inicio",
 	"nav_why_bch": "Por qué BCH",
 	"nav_use": "Usar",
 	"nav_get_wallet": "Conseguir una billetera",
-	"nav_grab_wallet": "Conseguir una billetera",
+	"nav_grab_wallet": "Billeteras",
 	"nav_compare_wallets": "Comparar billeteras",
 	"nav_buy_bch": "Comprar BCH",
 	"nav_spend_bch": "Gastar BCH",
@@ -400,7 +400,7 @@
 	"widget_blog_view_all": "Ver todas las entradas",
 	"widget_boxes_stale": "desactualizado",
 	"widget_boxes_stale_title": "El sitio responde, pero el código lleva un año sin cambios",
-	"widget_inner_title_fees": "Comisiones de <1 ¢",
+	"widget_inner_title_fees": "Comisiones de <1 ¢",
 	"notfound_title": "Página no encontrada",
 	"notfound_get_wallet": "Conseguir una billetera",
 	"notfound_build_on_bch": "Desarrollar en BCH",
@@ -455,9 +455,9 @@
 	"ref_snapshot": "Instantánea",
 	"ref_vitals_heading": "BCH ahora mismo",
 	"ref_vitals_block_height": "Altura de bloque",
-	"ref_vitals_tx_24h": "Transacciones, 24 h",
+	"ref_vitals_tx_24h": "Transacciones, 24 h",
 	"ref_vitals_median_fee": "Comisión mediana",
-	"ref_vitals_blocks_24h": "Bloques, 24 h",
+	"ref_vitals_blocks_24h": "Bloques, 24 h",
 	"ref_vitals_hashrate": "Tasa de hash",
 	"ref_vitals_nodes": "Nodos accesibles",
 	"ref_vitals_source": "Fuente:",
@@ -474,7 +474,7 @@
 		}
 	],
 	"ref_countdown_activated": "activada",
-	"ref_countdown_remaining": "en {d} d {h} h {m} min",
+	"ref_countdown_remaining": "en {d} d {h} h {m} min",
 	"ref_health_alive": "activo",
 	"ref_health_stale": "desactualizado",
 	"ref_health_dead": "muerto",
@@ -488,7 +488,7 @@
 	"ref_numbers_title": "Los números reales",
 	"ref_numbers_chain": "Cadena",
 	"ref_numbers_median_fee": "Comisión mediana",
-	"ref_numbers_tx_24h": "Tx / 24 h",
+	"ref_numbers_tx_24h": "Tx / 24 h",
 	"ref_numbers_block_time": "Tiempo de bloque",
 	"ref_numbers_market_cap": "Capitalización de mercado",
 	"ref_numbers_sources": "Fuentes:",
