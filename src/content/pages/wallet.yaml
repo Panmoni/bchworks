@@ -32,6 +32,15 @@ table:
     web: Web
     extension: Extension
     hardware: Hardware
+  # Values of the Custody and CashTokens columns, keyed by the data's enum.
+  custodyLabels:
+    non-custodial: non-custodial
+    custodial: custodial
+    hybrid: hybrid
+  cashtokensLabels:
+    full: full
+    partial: partial
+    none: none
   note: '"Last release" comes from the wallet''s public GitHub releases; closed-source wallets show n/a. Features are checked by hand against each wallet''s site and app store listing; each row shows when. Spot an error? <a class="underline" href="https://github.com/Panmoni/bitcoincashsite-www/blob/main/src/data/projects.json" target="_blank" rel="noopener noreferrer">Fix it on GitHub</a>. More projects in the <a class="underline" href="/directory">directory</a>.'
 
 faq:

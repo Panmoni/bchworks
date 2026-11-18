@@ -6,14 +6,12 @@ import { getCollection } from "astro:content";
 import Freshness from "~/components/reference/Freshness.astro";
 import HealthBadge from "~/components/reference/HealthBadge.astro";
 import InnerTitle from "~/components/widgets/InnerTitle.astro";
-import { getLocale, type LocaleCode } from "~/i18n/locales";
+import { localePath } from "~/i18n/links.mjs";
+import { getLocale } from "~/i18n/locales";
 import Layout from "~/layouts/PageLayout.astro";
-import {
-	englishData,
-	localizeRecord,
-	type TranslationState,
-} from "~/utils/l10n";
+import { englishData, type TranslationState } from "~/utils/l10n";
 import type { PageCopy } from "~/utils/pages";
+import { describeProject } from "~/utils/projects";
 import {
 	DIRECTORY_SECTIONS,
 	formatDate,
@@ -43,22 +41,13 @@ const sectionOf = (categories: string[]) =>
 
 const listed = projects.filter((p) => p.data.status !== "deprecated");
 
-// Section names are site data, English on every page; descriptions come from
-// the locale's overlay, else English marked as a fallback (docs/i18n.md).
-const sectionAttrs = englishData(Astro.currentLocale);
-const describe = (p: (typeof projects)[number]) =>
-	p.data.description
-		? localizeRecord(
-				{ id: p.id, description: p.data.description },
-				"projects",
-				["description"],
-				getLocale(Astro.currentLocale).code as LocaleCode,
-			).description
-		: null;
+// An English description on a translated page is a fallback fragment.
+const fallbackAttrs = englishData(Astro.currentLocale);
 const graveyard = projects.filter((p) => p.data.status === "deprecated");
 
 const sections = DIRECTORY_SECTIONS.map((s) => ({
 	...s,
+	title: copy.sections[s.id] as string,
 	items: listed
 		.filter((p) => sectionOf(p.data.categories) === s.id)
 		.sort((a, b) => a.data.title.localeCompare(b.data.title)),
@@ -77,7 +66,10 @@ const dataset = {
 	inLanguage: lang,
 	name: copy.datasetName,
 	description: metadata.description,
-	url: "https://bchworks.com/directory",
+	url: new URL(
+		localePath("/directory", getLocale(Astro.currentLocale).code),
+		"https://bchworks.com",
+	).href,
 	license: "https://creativecommons.org/licenses/by/4.0/",
 	creator: { "@type": "Organization", name: "BCH Works" },
 	...(lastCheck ? { dateModified: new Date(lastCheck).toISOString() } : {}),
@@ -127,26 +119,26 @@ const dataset = {
     </div>
 
     <nav class="mt-6 flex flex-wrap gap-2" aria-label={copy.sectionsNav}>
-      {sections.map((s) => <a class="wb-chip" href={`#${s.id}`}><span {...sectionAttrs}>{s.title}</span> ({s.items.length})</a>)}
+      {sections.map((s) => <a class="wb-chip" href={`#${s.id}`}>{s.title} ({s.items.length})</a>)}
     </nav>
   </section>
 
   {
     sections.map((s) => (
       <section id={s.id} class="max-w-7xl mx-auto px-4 sm:px-6 py-6 scroll-mt-24" data-dir-section>
-        <h2 class="font-heading text-3xl font-extrabold tracking-tight mb-4" {...sectionAttrs}>
+        <h2 class="font-heading text-3xl font-extrabold tracking-tight mb-4">
           {s.href ? <a class="hover:underline" href={s.href}>{s.title}</a> : s.title}
         </h2>
         <ul class="grid gap-3 md:grid-cols-2">
           {s.items.map((p) => {
             const h = health.get(p.id);
-            const description = describe(p);
+            const description = describeProject(p.id, p.data, Astro.currentLocale);
             return (
               <li
                 class="wb-card p-4 flex gap-3"
                 data-dir-item
                 data-state={h?.state ?? 'unknown'}
-                data-search={`${p.data.title} ${p.data.description ?? ''} ${p.data.categories.join(' ')} ${(p.data.tags ?? []).join(' ')}`.toLowerCase()}
+                data-search={`${p.data.title} ${description?.text ?? ''} ${p.data.categories.join(' ')} ${(p.data.tags ?? []).join(' ')}`.toLowerCase()}
               >
                 {p.data.icon && (
                   <Image src={p.data.icon} alt="" width={40} height={40} layout="fixed" fit="contain" class="w-10 h-10 shrink-0 rounded-lg border-2 border-line bg-white object-contain p-1" />
@@ -163,7 +155,7 @@ const dataset = {
                     <HealthBadge health={h} />
                   </div>
                   {description && (
-                    <p class="text-sm text-muted mt-1" {...(description.fallback ? englishData(Astro.currentLocale) : {})}>
+                    <p class="text-sm text-muted mt-1" {...(description.fallback ? fallbackAttrs : {})}>
                       {description.text}
                     </p>
                   )}

@@ -101,8 +101,8 @@ const faqLd = faqJsonLd(faq, lang);
                     <Freshness class="mt-1" date={w.data.verified} />
                   </td>
                   <td class="p-3">{f.platforms.map((p) => platformLabel[p]).join(', ')}</td>
-                  <td class="p-3">{f.custody}</td>
-                  <td class="p-3">{f.cashtokens}</td>
+                  <td class="p-3">{copy.table.custodyLabels[f.custody]}</td>
+                  <td class="p-3">{copy.table.cashtokensLabels[f.cashtokens]}</td>
                   <td class="p-3 text-center">{yes(f.walletconnect)}</td>
                   <td class="p-3 text-center">
                     {f.openSource && w.data.github ? (

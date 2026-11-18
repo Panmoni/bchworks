@@ -28,7 +28,7 @@ basics:
       description: Cada transacción queda en un registro público. Tu nombre no, pero las direcciones se pueden vincular. Usa una dirección nueva para cada pago; tu billetera lo hace por ti.
 starter:
   title: Empieza con una de estas
-  subtitle: Billeteras {count} de autocustodia que hoy le recomendaríamos a un amigo. Todas son gratuitas.
+  subtitle: '{count} billeteras de autocustodia que hoy le recomendaríamos a un amigo. Todas son gratuitas.'
   bestFor:
     Paytaca: La mejor para la mayoría. Celular y extensión de navegador. Compatibilidad completa con CashTokens y NFTs.
     Cashonize: La mejor para tokens y apps. Web, escritorio y Android. Se conecta a apps de BCH mediante WalletConnect / CashConnect.

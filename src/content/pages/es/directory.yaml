@@ -1,6 +1,6 @@
 metadata:
-  title: Directorio del ecosistema Bitcoin Cash, revisado a diario
-  description: Todas las billeteras, exchanges, herramientas para comercios, dapps y bibliotecas para desarrolladores de Bitcoin Cash que conocemos. Cada enlace se revisa a diario, para que puedas ver qué proyectos están activos, estancados o muertos.
+  title: Directorio del ecosistema Bitcoin Cash, con revisión diaria de estado
+  description: Todas las billeteras, exchanges, herramientas para comercios, dapps y bibliotecas para desarrolladores de Bitcoin Cash que conocemos. Cada enlace se revisa a diario, para que veas qué proyectos están activos, estancados o muertos.
 datasetName: Directorio del ecosistema Bitcoin Cash con revisiones de estado
 hero:
   title: El directorio de BCH que sabe qué está muerto
@@ -11,7 +11,7 @@ states:
   dead: muerto
   unknown: desconocido
 legend:
-  html: '<strong>Activo</strong>: el sitio responde y el código cambió en el último año. <strong>Estancado</strong>: el sitio responde, pero el repositorio está archivado o lleva un año sin actividad. <strong>Muerto</strong>: falló dos revisiones seguidas. <strong>Desconocido</strong>: el sitio bloquea los bots o aún no tenemos datos.'
+  html: '<strong>Activo</strong>: el sitio responde y el código tuvo cambios en el último año. <strong>Estancado</strong>: el sitio responde, pero el repositorio está archivado o lleva un año inactivo. <strong>Muerto</strong>: falló dos revisiones seguidas. <strong>Desconocido</strong>: el sitio bloquea bots o aún no tenemos datos.'
   lastCheck: Última revisión
   noCheck: La primera revisión automática aún no se ha ejecutado.
   missing: ¿Conoces un proyecto que nos falta o uno con datos incorrectos?
@@ -21,11 +21,22 @@ search:
   placeholder: Buscar proyectos…
   showAll: mostrar todo
 sectionsNav: Secciones del directorio
+sections:
+  wallet: Billeteras
+  buy: Comprar e intercambiar
+  spend: Gastar
+  earn: Ganar
+  accept: Aceptar pagos
+  cashtokens: CashTokens
+  build: Desarrollar
+  mining: Minería
+  support: Comunidad y medios
+  governance: Gobernanza
 commit: commit
 graveyard:
   title: Cementerio
-  text: Proyectos que cerraron o abandonaron BCH. Se conservan para que los enlaces antiguos tengan sentido. No envíes dinero a ninguno de ellos.
+  text: Proyectos que cerraron o abandonaron BCH. Los conservamos para que los enlaces antiguos tengan sentido. No les envíes dinero.
 translation:
-  sourceHash: 41d2297442863320
+  sourceHash: 4f0bb557a507775f
   status: machine
   translator: Claude

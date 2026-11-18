@@ -32,6 +32,18 @@ search:
   showAll: show all
 
 sectionsNav: Directory sections
+# Section headings, keyed by the DIRECTORY_SECTIONS id in src/utils/reference.ts.
+sections:
+  wallet: Wallets
+  buy: Buy & swap
+  spend: Spend
+  earn: Earn
+  accept: Accept payments
+  cashtokens: CashTokens
+  build: Build
+  mining: Mining
+  support: Community & media
+  governance: Governance
 commit: commit
 
 graveyard:

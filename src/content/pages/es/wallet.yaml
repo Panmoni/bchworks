@@ -1,16 +1,16 @@
 metadata:
   title: 'Las mejores billeteras de Bitcoin Cash: matriz de funciones'
-  description: 'Compara todas las billeteras de Bitcoin Cash lado a lado: soporte de CashTokens y NFTs, custodia, plataformas, WalletConnect, código abierto y fecha del último lanzamiento. Se verifica a diario.'
+  description: 'Compara todas las billeteras de Bitcoin Cash lado a lado: compatibilidad con CashTokens y NFTs, custodia, plataformas, WalletConnect, código abierto y fecha de la última versión. Revisado a diario.'
 hero:
   title: Elige una billetera de Bitcoin Cash
-  subtitle: Billeteras de {count} en una sola tabla. El estado y las fechas de lanzamiento se actualizan a diario.
+  subtitle: '{count} billeteras en una sola tabla. El estado y las fechas de las versiones se actualizan a diario.'
 tips:
-  - label: ¿Recién llegas a BCH?
-    text: Elige una billetera para celular <strong>sin custodia</strong> con soporte <strong>completo</strong> de CashTokens. Escribe la frase semilla en papel.
+  - label: ¿Eres nuevo en BCH?
+    text: Elige una billetera para celular <strong>sin custodia</strong> con compatibilidad <strong>completa</strong> con CashTokens. Anota la frase semilla en papel.
   - label: ¿Usas dapps?
     text: Necesitas <strong>WalletConnect</strong> para firmar en DEXs, mercados de NFTs y juegos.
-  - label: ¿Guardas mucho?
-    text: 'Usa una billetera <strong>física</strong> y revisa la fecha del último lanzamiento: un firmware antiguo es un riesgo.'
+  - label: ¿Guardas una cantidad grande?
+    text: 'Usa una billetera <strong>física</strong> y revisa la fecha de la última versión: un firmware antiguo es un riesgo.'
 table:
   wallet: Billetera
   platforms: Plataformas
@@ -18,7 +18,7 @@ table:
   cashtokens: CashTokens
   walletconnect: WalletConnect
   openSource: Código abierto
-  lastRelease: Último lanzamiento
+  lastRelease: Última versión
   status: Estado
   noRelease: n/d
   platformLabels:
@@ -27,20 +27,28 @@ table:
     desktop: Escritorio
     web: Web
     extension: Extensión
-    hardware: Física
-  note: “Último lanzamiento” proviene de los lanzamientos públicos de cada billetera en GitHub; las billeteras de código cerrado muestran n/d. Las funciones se verifican a mano con el sitio web y la ficha en la tienda de apps de cada billetera; cada fila indica cuándo. ¿Encontraste un error? <a class="underline" href="https://github.com/Panmoni/bitcoincashsite-www/blob/main/src/data/projects.json" target="_blank" rel="noopener noreferrer">Corrígelo en GitHub</a>. Más proyectos en el <a class="underline" href="/directory">directorio</a>.
+    hardware: Hardware
+  custodyLabels:
+    non-custodial: sin custodia
+    custodial: con custodia de terceros
+    hybrid: híbrida
+  cashtokensLabels:
+    full: completo
+    partial: parcial
+    none: ninguno
+  note: “Última versión” proviene de las versiones públicas de la billetera en GitHub; las billeteras de código cerrado muestran n/d. Las funciones se revisan a mano con el sitio y la ficha en la tienda de apps de cada billetera; cada fila indica cuándo. ¿Ves un error? <a class="underline" href="https://github.com/Panmoni/bitcoincashsite-www/blob/main/src/data/projects.json" target="_blank" rel="noopener noreferrer">Corrígelo en GitHub</a>. Más proyectos en el <a class="underline" href="/directory">directorio</a>.
 faq:
   title: Preguntas
   items:
     - q: ¿Cuál es la mejor billetera de Bitcoin Cash?
-      a: Para pagos cotidianos y CashTokens, elige una billetera sin custodia con soporte completo de CashTokens, como Paytaca o Cashonize. Para uso avanzado en computadora, Electron Cash. Para ahorros grandes, una billetera física. La tabla muestra qué billetera se ajusta a cada necesidad.
+      a: Para pagos cotidianos y CashTokens, elige una billetera sin custodia con compatibilidad completa con CashTokens, como Paytaca o Cashonize. Para uso avanzado en escritorio, Electron Cash. Para ahorros grandes, una billetera física. La tabla muestra qué billetera se ajusta a cada necesidad.
     - q: ¿Qué billeteras de Bitcoin Cash admiten CashTokens y NFTs?
-      a: Las billeteras marcadas como “completo” en la columna CashTokens pueden guardar, enviar y mostrar tokens fungibles y NFTs. “Parcial” significa que guardan tokens, pero les faltan algunas funciones, como mostrar NFTs o acuñarlos.
+      a: Las billeteras marcadas como “completa” en la columna CashTokens pueden guardar, enviar y mostrar tokens fungibles y NFTs. “Parcial” significa que guardan tokens pero les faltan algunas funciones, como mostrar NFTs o acuñarlos.
     - q: ¿Qué significa “sin custodia”?
-      a: Tú guardas las claves, normalmente como una frase semilla de 12 o 24 palabras. Nadie puede congelar ni perder tus monedas por ti. También significa que nadie puede recuperarlas si pierdes la frase semilla.
+      a: Tú tienes las claves, normalmente como una frase semilla de 12 o 24 palabras. Nadie puede congelar ni perder tus monedas por ti. También significa que nadie puede recuperarlas si pierdes la frase semilla.
     - q: ¿Qué es WalletConnect en Bitcoin Cash?
-      a: Una forma estándar de conectar tu billetera a una aplicación web (un DEX, un mercado de NFTs, un juego) y aprobar transacciones desde tu celular. Las apps de BCH usan las especificaciones BCH de WalletConnect y CashConnect.
+      a: Una forma estándar de conectar tu billetera a una aplicación web (un DEX, un mercado de NFTs, un juego) y aprobar transacciones desde tu celular. Las aplicaciones de BCH usan las especificaciones BCH WalletConnect y CashConnect.
 translation:
-  sourceHash: b94f5ca5dadb519a
+  sourceHash: 4d2520956c9d0ff4
   status: machine
   translator: Claude

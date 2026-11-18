@@ -40,19 +40,20 @@ export const getNextUpgrade = async (now = Date.now()) => {
 export const getHealthMap = async () =>
 	new Map((await getCollection("health")).map((h) => [h.id, h.data]));
 
-// Directory sections, in page order. A project lands in the first section
+// Directory sections, in page order; their headings are in the directory page
+// copy (src/content/pages/directory.yaml `sections`). A project lands in the first section
 // whose prefix matches one of its categories.
 export const DIRECTORY_SECTIONS = [
-	{ id: "wallet", title: "Wallets", href: "/wallet" },
-	{ id: "buy", title: "Buy & swap", href: "/buy" },
-	{ id: "spend", title: "Spend", href: "/spend" },
-	{ id: "earn", title: "Earn", href: "/earn" },
-	{ id: "accept", title: "Accept payments", href: "/accept" },
-	{ id: "cashtokens", title: "CashTokens", href: "/cashtokens" },
-	{ id: "build", title: "Build", href: "/build" },
-	{ id: "mining", title: "Mining", href: "/mining" },
-	{ id: "support", title: "Community & media", href: "/support" },
-	{ id: "governance", title: "Governance", href: undefined },
+	{ id: "wallet", href: "/wallet" },
+	{ id: "buy", href: "/buy" },
+	{ id: "spend", href: "/spend" },
+	{ id: "earn", href: "/earn" },
+	{ id: "accept", href: "/accept" },
+	{ id: "cashtokens", href: "/cashtokens" },
+	{ id: "build", href: "/build" },
+	{ id: "mining", href: "/mining" },
+	{ id: "support", href: "/support" },
+	{ id: "governance", href: undefined },
 ] as const;
 
 // JSON-LD FAQPage from a frontmatter faq list.

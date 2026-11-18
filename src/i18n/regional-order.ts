@@ -6,7 +6,9 @@
 // new LatAm projects belongs in the directory data.
 import type { LocaleCode } from "./locales";
 
-const REGIONAL_FIRST: Partial<Record<LocaleCode, Record<string, string[]>>> = {
+export const REGIONAL_FIRST: Partial<
+	Record<LocaleCode, Record<string, string[]>>
+> = {
 	es: {
 		// Buda is a Latin American exchange; CoinCola is peer-to-peer, so a
 		// buyer pays in local currency wherever they are.
