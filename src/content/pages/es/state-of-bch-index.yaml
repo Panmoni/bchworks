@@ -1,0 +1,13 @@
+metadata:
+  title: 'El estado de BCH: informe mensual de datos de Bitcoin Cash'
+  description: 'Un informe mensual sobre Bitcoin Cash: actividad en la cadena, comisiones, tasa de hash, salud del ecosistema y calendario de actualizaciones. Puedes citarlo libremente con un enlace.'
+hero:
+  title: El estado de BCH
+  subtitle: 'Bitcoin Cash en cifras, cada mes. Periodistas: citen libremente y enlacen a la fuente.'
+reports:
+  title: Informes
+  empty: El primer informe está en camino.
+translation:
+  sourceHash: 1dc8d3cf4113e15c
+  status: machine
+  translator: Claude

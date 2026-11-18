@@ -1,0 +1,11 @@
+metadata:
+  title: 'Bitcoin Cash frente a otras blockchains: comparaciones honestas'
+  description: Bitcoin Cash comparado con Bitcoin Core, Litecoin, Ethereum, Solana, Kaspa y Cardano. Comisiones y actividad en tiempo real, y las concesiones que ninguna de las partes te va a contar.
+hero:
+  title: BCH frente a todos
+  subtitle: Dónde gana Bitcoin Cash, dónde pierde y las cifras detrás de ambos casos.
+card: BCH frente a {ticker}
+translation:
+  sourceHash: 074442d6b4815c70
+  status: machine
+  translator: Claude

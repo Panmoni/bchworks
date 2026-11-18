@@ -501,5 +501,7 @@
 	"ref_numbers_na_note": "“n/a” significa que aún no hay una fuente pública gratuita en la que confiemos para ese número. Los tiempos de bloque son los objetivos del protocolo.",
 	"translation_notice_machine": "Traducción automática: nadie ha revisado esta página todavía.",
 	"translation_notice_stale": "Esta traducción puede estar desactualizada: la página en inglés cambió después de la revisión.",
-	"translation_credit": "Traducción revisada por {reviewer}."
+	"translation_credit": "Traducción revisada por {reviewer}.",
+	"legal_english_governs": "Esta traducción se ofrece por conveniencia. Si difiere de la versión en inglés, prevalece la versión en inglés.",
+	"legal_english_governs_link": "Leer la versión en inglés"
 }

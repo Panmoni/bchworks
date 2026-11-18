@@ -1,0 +1,55 @@
+metadata:
+  title: 'Referencia de Bitcoin Cash: actualizaciones, opcodes, billeteras, directorio'
+  description: 'La referencia actualizada y con fuentes de Bitcoin Cash: cada actualización, opcode y CHIP, una matriz de billeteras, un directorio del ecosistema con revisión de estado, glosario, comparaciones y guías por país.'
+hero:
+  title: La referencia de BCH
+  subtitle: Actualizada, con fuentes y fechada. Cada página muestra cuándo se revisó por última vez.
+entries: entradas
+sections:
+  - href: /upgrades
+    title: Actualizaciones
+    text: Cada actualización de la red desde 2017 y una cuenta regresiva para la próxima.
+    collection: upgrades
+  - href: /wallet
+    title: Selector de billeteras
+    text: CashTokens, custodia, plataformas, WalletConnect, última versión.
+  - href: /directory
+    title: Directorio del ecosistema
+    text: 'Cada proyecto, con revisión diaria de su estado: activo, estancado o muerto.'
+    collection: projects
+  - href: /opcodes
+    title: Referencia de opcodes
+    text: Todos los opcodes hasta mayo de 2026, con sus efectos en la pila y su estado en Bitcoin.
+    collection: opcodes
+  - href: /chips
+    title: CHIPs
+    text: Cada propuesta de mejora, su estado y quién la respalda.
+    collection: chips
+  - href: /glossary
+    title: Glosario
+    text: Covenant, BCMR, ABLA, DSProof, P2S y los demás, en lenguaje sencillo.
+    collection: glossary
+  - href: /compare
+    title: Comparaciones
+    text: BCH frente a BTC, LTC, ETH, SOL, KAS y ADA. Pros y contras, con honestidad.
+    collection: compare
+  - href: /guides
+    title: Guías por país
+    text: Compra, gasta y envía remesas en tu país. En español, portugués e inglés.
+    collection: guides
+  - href: /risks
+    title: Riesgos, sin rodeos
+    text: Lo que podría salir mal con BCH, dicho primero por nosotros.
+  - href: /is-bitcoin-cash-dead
+    title: ¿Está muerto BCH?
+    text: La pregunta del escéptico, respondida con datos.
+  - href: /what-is-a-utxo
+    title: La máquina UTXO
+    text: Mira cómo una transacción real gasta monedas y luego sigue una hacia atrás en el tiempo.
+  - href: /state-of-bch
+    title: El estado de BCH
+    text: El informe mensual de datos.
+translation:
+  sourceHash: 5ae62f1cafc0dd48
+  status: machine
+  translator: Claude

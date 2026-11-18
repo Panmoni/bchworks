@@ -1343,5 +1343,15 @@
 		"sourceHash": "d758b999c6cca929",
 		"status": "machine",
 		"translator": "Claude"
+	},
+	"legal_english_governs": {
+		"sourceHash": "3f44506b722b4947",
+		"status": "machine",
+		"translator": "Claude"
+	},
+	"legal_english_governs_link": {
+		"sourceHash": "9ad2585ad4f0c260",
+		"status": "machine",
+		"translator": "Claude"
 	}
 }

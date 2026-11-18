@@ -1,0 +1,29 @@
+metadata:
+  title: Contacto
+  description: Contacta a BCH Works para correcciones, inclusión de proyectos o preguntas sobre Bitcoin Cash.
+hero:
+  tagline: Contacto
+  title: Habla con BCH Works
+intro: |-
+  Correcciones, inclusión de proyectos, alianzas o preguntas sobre Bitcoin Cash. Para ayuda general con BCH, la comunidad
+  de nuestra <a class="underline" href="/support">página de Ayuda</a> suele responder más rápido.
+channels:
+  - title: Correo electrónico
+    text: hello@panmoni.com
+    note: Un equipo pequeño lee cada mensaje. Solemos responder en unos pocos días hábiles.
+    href: mailto:hello@panmoni.com
+  - title: Telegram
+    text: t.me/bchworks
+    note: Actualizaciones, herramientas nuevas y noticias honestas, además de un lugar para hacer preguntas.
+    href: https://t.me/bchworks
+send:
+  title: Qué enviarnos
+  items:
+    - title: Correcciones
+      description: ¿Viste un dato erróneo, un proyecto abandonado o un enlace roto? Avísanos. Mantener al día la información sobre BCH es la razón de ser de este sitio.
+    - title: Agrega tu proyecto
+      description: ¿Estás creando algo sobre Bitcoin Cash? Envíanos el enlace y una línea sobre lo que hace, o agrégalo tú mismo al directorio en GitHub. Incluimos proyectos que funcionan y que favorecen la autocustodia.
+translation:
+  sourceHash: d019f692bd4b6923
+  status: machine
+  translator: Claude

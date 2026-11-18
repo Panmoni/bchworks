@@ -1,0 +1,144 @@
+metadata:
+  title: 'Cómo desarrollar en Bitcoin Cash (BCH): covenants y CashTokens'
+  description: Bitcoin Cash es el lugar más barato para aprender y lanzar contratos al estilo de Bitcoin. Los bucles, las funciones, BigInt y los tokens nativos ya funcionan en la red principal, y una transacción de prueba cuesta unos 0,001 US$.
+hero:
+  title: El laboratorio de covenants de Bitcoin, en funcionamiento en la red principal.
+  subtitle: Las ideas de contratos que Bitcoin todavía debate ya funcionan en Bitcoin Cash. Apréndelas aquí, donde una transacción de prueba cuesta unos 0,001 US$.
+start:
+  title: Empezar a desarrollar
+  subtitle: CashScript para contratos, Libauth y Bitauth IDE para recorrer la VM paso a paso, mainnet-js para billeteras y tokens. Todo de código abierto.
+  featured:
+    - title: Ecosistema de CashTokens
+      description: Explora el ecosistema de CashTokens.
+      icon: https://static.panmoni.com/bitcoincashsite/cashtokenslogo.png
+      url: /cashtokens
+categories:
+  docs: Documentación de BCH
+  communities: Comunidades de desarrolladores
+  apis: APIs
+  contracts: Covenants y contratos inteligentes
+  protocols: Protocolos
+  explorers: Exploradores de bloques de BCH
+  network: Herramientas de red
+  utilities: Utilidades
+  fullnodes: Nodos completos de BCH
+  dapps: Dapps de ejemplo
+  cashtokensTooling: Herramientas de CashTokens
+tutorials:
+  title: Tutoriales
+video:
+  title: Reproductor de video de YouTube
+why:
+  title: Por qué aprender a desarrollar en BCH
+  subtitle: 'Un UTXO es una moneda: un valor, un candado y un número de serie. Ya lo entiendes por el efectivo. Bitcoin Cash te permite programar el candado.'
+  items:
+    - title: Las habilidades en UTXO son habilidades en Bitcoin
+      icon: tabler:currency-bitcoin
+      description: El script, la selección de monedas, la firma y el cálculo de comisiones funcionan igual en Bitcoin. El modelo también se traslada a Cardano, Kaspa, Ergo y a los objetos al estilo de Sui.
+    - title: Los tutoriales cuestan una décima de centavo
+      icon: tabler:receipt
+      description: Una transacción de prueba en la red principal cuesta unos 0,001 US$. Puedes romper cosas en una cadena real de prueba de trabajo por unos centavos, no por 20 US$ de gas.
+    - title: Covenants que puedes ejecutar hoy
+      icon: tabler:lock-code
+      description: Los opcodes de introspección permiten que un contrato verifique adónde van sus monedas. Las bóvedas, los límites de gasto, los depósitos en garantía y los pagos recurrentes ya funcionan; no son propuestas.
+    - title: Más capacidad de cómputo desde 2025
+      icon: tabler:cpu
+      description: La actualización de mayo de 2025 reemplazó los conteos de opcodes por un presupuesto de costo basado en la densidad y añadió BigInt, así que los contratos pueden hacer cálculos de precisión arbitraria.
+    - title: Bucles y funciones desde 2026
+      icon: tabler:repeat
+      description: La actualización de mayo de 2026 añadió bucles, funciones reutilizables, operaciones a nivel de bits y salidas pay-to-script. CashScript 0.13 admite bucles, operaciones a nivel de bits y P2S.
+    - title: Sin claves de administrador ni aprobaciones
+      icon: tabler:shield-check
+      description: Los covenants son bytecode fijo, sin dueño y sin proxy actualizable. Los tokens son nativos, así que no hay un approve() del que un atacante pueda abusar.
+specSheet:
+  chip: Ficha técnica · rev. 05/2026
+  title: Las cifras con las que diseñas.
+  intro: Valores típicos de la red principal y los límites que debes tener en cuenta al diseñar. Las fichas técnicas indican sus límites, y esta también.
+  columns:
+    param: Parámetro
+    typ: Típico
+    note: Notas
+  rows:
+    - param: Comisión de retransmisión
+      typ: 1 sat/byte
+      note: Fija por byte. Sin subasta, así que no se dispara en momentos de máxima carga.
+    - param: Tamaño de un pago
+      typ: ~226 bytes
+      note: 1 entrada, 2 salidas (P2PKH).
+    - param: Tiempo hasta ser vista
+      typ: ~2 s
+      note: Se retransmite con pruebas de doble gasto y una puntuación de riesgo.
+    - param: Intervalo entre bloques
+      typ: 10 min
+      note: El mismo objetivo que Bitcoin.
+    - param: Límite de tamaño de bloque
+      typ: Mínimo de 32 MB
+      note: 'Adaptativo desde 2024: crece con la demanda sostenida.'
+    - param: Enteros
+      typ: BigInt
+      note: Cálculos de precisión arbitraria desde mayo de 2025.
+    - param: Flujo de control
+      typ: Bucles, funciones
+      note: Desde mayo de 2026, con operaciones a nivel de bits y salidas P2S.
+    - param: Tokens
+      typ: Nativos
+      note: Tokens fungibles y NFTs dentro de UTXOs. Sin desplegar contratos.
+    - param: Frecuencia de actualizaciones
+      typ: Anual, el 15 de mayo
+      note: Antes, seis meses en Chipnet.
+fee:
+  title: Calcula una comisión.
+  intro: Comisión = bytes × sat/byte. Cambia el precio de ejemplo por el tuyo.
+  bytes: Tamaño de la tx (bytes)
+  rate: Tasa de comisión (sat/byte)
+  price: Precio de BCH, USD (ejemplo)
+  result: Comisión de red
+  initialUsd: $0.0010
+  initialSats: 226 sats
+limits:
+  title: Límites que debes tener en cuenta al diseñar.
+  intro: Vigente hoy. Actualizamos esta lista cuando cambia un límite.
+  columns:
+    rating: Límite
+    status: Estado
+    why: Por qué
+  rows:
+    - rating: Contratos con estado global compartido
+      status: No admitido
+      why: Por diseño. Un contrato es un candado sobre una moneda.
+    - rating: Finalidad en menos de un segundo
+      status: No admitido
+      why: Los bloques llegan cada 10 minutos en promedio.
+    - rating: Privacidad por defecto
+      status: No admitido
+      why: Registro transparente. CashFusion es opcional.
+    - rating: Liquidez profunda
+      status: Baja
+      why: DeFi se mide en millones, no en miles de millones.
+    - rating: USDT / USDC en L1
+      status: No disponible
+      why: Una decisión del emisor, no un límite del protocolo.
+    - rating: Tasa de hash frente a Bitcoin
+      status: Una pequeña fracción
+      why: Mismo algoritmo SHA-256, mucho menos trabajo.
+honest:
+  title: La parte honesta
+  subtitle: Qué esperar antes de invertir tu tiempo.
+  items:
+    - title: Más difícil que Solidity al principio
+      icon: tabler:brain
+      description: No hay un estado global que leer y escribir. Diseñas con monedas que se gastan y se crean, y los pools compartidos requieren cuidado para evitar la contención.
+    - title: Un ecosistema pequeño
+      icon: tabler:users
+      description: Menos desarrolladores, menos bibliotecas y poca liquidez. Lanzarás antes y destacarás más, pero también tendrás que responder tus propias preguntas más a menudo.
+    - title: Los errores siguen siendo errores
+      icon: tabler:bug
+      description: Sin claves de administrador, nadie puede corregir un contrato defectuoso. Prueba en Chipnet, recorre la VM paso a paso en Bitauth IDE y mantén bajos los límites de valor en el lanzamiento.
+cta:
+  title: Recibir novedades para desarrolladores
+  subtitle: Actualizaciones, herramientas y tutoriales para desarrolladores de Bitcoin Cash, en Telegram.
+  action: Recibir novedades de BCH
+translation:
+  sourceHash: 249106929af0ed57
+  status: machine
+  translator: Claude

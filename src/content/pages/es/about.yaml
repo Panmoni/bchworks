@@ -1,0 +1,266 @@
+metadata:
+  title: Acerca de BCH Works
+  description: 'BCH Works hace que Bitcoin Cash sea legible y esté vivo: guías y herramientas honestas, basadas en datos, para usar BCH y desarrollar sobre él. Financiado colectivamente con 277,08 BCH en 2020. Un proyecto de Panmoni.'
+header:
+  chip: Acerca de
+  title: No es un discurso de venta. Es un <mark class="bg-wb-green text-on-accent px-[0.12em] rounded-[0.12em] [box-decoration-break:clone]">taller</mark>.
+  intro: En 2020, la comunidad de Bitcoin Cash financió este sitio en cinco horas. Seguimos mostrando nuestro trabajo. BCH Works explica cómo funciona Bitcoin Cash, en qué es bueno y dónde se queda corto. Luego te ayuda a probarlo tú mismo.
+  receipt:
+    tag: tx · flipstarter · sep 2020
+    amount: 277.08 BCH
+    caption: Recaudado entre la comunidad para poner en marcha este sitio.
+    raisedIn: recaudado en
+    raisedInValue: 5 horas
+    inputs: entradas (financiadores)
+    fastest: Flipstarter más rápido
+    fastestValue: en su momento
+    ads: anuncios en este sitio
+    adsValue: '0'
+    link: Ver la campaña archivada ↗
+books:
+  chip: Cuentas claras
+  title: Quién pagó. Qué se compró.
+  intro: Léelo como una transacción de Bitcoin Cash. Nuestros financiadores son las entradas. En lo que se convirtió su dinero son las salidas.
+  inputs: Entradas
+  funders: financiadores
+  others: Además, los compradores y poseedores del token PAN SLP, quienes dieron propinas en Read.cash y noise.cash, y los chaintippers en Reddit y Twitter.
+  outputsTitle: Salidas · en qué se convirtió
+  funderList:
+    - Mike Komaransky
+    - Georg Engelmann
+    - Roger Ver
+    - toorik
+    - Majamalu
+    - Satoshi’s Angels
+    - William Patrick
+    - btcfork
+    - S0me_N0b0dy
+    - “Adam Draper”
+    - molecular
+    - AsahoryuMaryBerry
+    - read.cash
+    - Henry Cashlitt
+    - Jonathan Toomim
+    - FreeTrade
+    - emergent reasons
+    - RadTadd
+    - na
+    - Kaizen
+    - ProofOfConcept
+    - Shomari Prince
+    - Yasu
+    - John Floss
+    - Shadows
+    - SeptMike
+    - ChainXOR
+    - Stockleezy
+    - BitcoinTippingPoint
+    - AD1AD
+    - m4ktub
+    - sambarboza
+    - AndrewJD123
+    - BitcoinCashJesus3
+    - Holy Jesus Piece
+    - Crazy (loco) Money (pecunia)
+    - GoatPharmer
+    - cryptopanda15
+    - lugaxker
+    - Telesfor
+    - TAOJONES
+    - f.b.
+    - earaya
+    - curioustitmouse
+    - tiyoaeyo
+    - zquestz
+    - NgocTranTL
+    - saddit42
+    - n00b
+    - 6 donantes anónimos
+  outputs:
+    - title: Más de 1000 comercios
+      body: incorporados en toda Venezuela, 2020–2022
+      tone: bg-wb-green text-on-accent
+    - title: Más de 2500 usuarios
+      body: primera billetera, primer pago
+      tone: bg-surface
+    - title: Token Pioneers
+      body: la serie de tutoriales de CashTokens, 2023
+      tone: bg-wb-yellow text-on-accent
+    - title: TokenStork
+      body: un directorio de todos los CashTokens, 2024
+      tone: bg-surface
+    - title: BCH Works
+      body: este sitio, reescrito en 2026
+      tone: bg-wb-pink text-on-accent
+principles:
+  chip: Reglas de consenso
+  title: Cuatro reglas que no bifurcamos.
+  intro: Todas las páginas de este sitio las siguen. Así se ve cada una en una frase. Avísanos cuando una página rompa alguna.
+  'yes': Escribimos
+  'no': No escribimos
+  rules:
+    - code: regla_01 datos_primero
+      title: Mostrar la cifra.
+      body: Comisiones, tamaños de bloque y fechas de actualización. Te mostramos la cifra, no un adjetivo.
+      'yes': Una transacción de prueba cuesta unos 0,001 US$.
+      'no': ¡Comisiones casi cero, a la velocidad del rayo!
+      tone: bg-wb-green
+    - code: regla_02 límites
+      title: Decir qué falla.
+      body: BCH tiene un ecosistema pequeño, poca liquidez, bloques de 10 minutos y no tiene privacidad por defecto. Lo decimos, junto a lo bueno.
+      'yes': Los pagos aparecen en segundos. La liquidación final tarda unos 10 minutos.
+      'no': Pagos instantáneos y definitivos.
+      tone: bg-wb-yellow
+    - code: regla_03 práctica
+      title: Que puedas probarlo.
+      body: Te indicamos cosas que puedes probar tú mismo, no cosas que debas creer por fe.
+      'yes': Envíate unos centavos y mira cómo llegan.
+      'no': Confía en nosotros, funciona.
+      tone: bg-wb-blue
+    - code: regla_04 sin_precio
+      title: Sin hablar de precios.
+      body: No predecimos precios ni prometemos rendimientos. Este sitio trata de lo que hace BCH.
+      'yes': BCH es volátil. Guarda solo lo que puedas permitirte perder.
+      'no': BCH a 10.000 US$ para el próximo halving.
+      tone: bg-wb-pink
+limits:
+  chip: La regla 2, completa
+  title: En qué se queda corto BCH.
+  introBefore: Los puntos débiles, en un solo lugar.
+  introLink: Por qué Bitcoin Cash
+  introAfter: cubre los fuertes.
+  columns:
+    limit: Límite
+    fact: En resumen
+    meaning: Qué significa para ti
+  rows:
+    - limit: Liquidación
+      fact: ~10 min por bloque
+      meaning: Los pagos aparecen en segundos. En una venta grande, espera un bloque antes de entregar la mercancía.
+    - limit: Liquidez
+      fact: escasa
+      meaning: Menos exchanges y libros de órdenes que BTC o las stablecoins. Las operaciones grandes mueven el precio, así que revisa primero el spread.
+    - limit: Privacidad
+      fact: pública por defecto
+      meaning: Cualquiera puede leer el historial de una dirección. Usa una dirección nueva para cada pago que recibas.
+    - limit: Ecosistema
+      fact: pequeño
+      meaning: Menos billeteras, comercios y desarrolladores que las cadenas más grandes. Pregunta en la tienda antes de pagar con él.
+history:
+  chip: Historia
+  title: Un bloque a la vez.
+  blocks:
+    - label: bloque 0 · génesis
+      date: ago 2020
+      body: 'George Donnelly lanza BitcoinCash.site. Objetivo: un millón de nuevos usuarios de Bitcoin Cash.'
+    - label: bloque 1
+      date: sep 2020
+      body: Un Flipstarter recauda 277,08 BCH en cinco horas, el más rápido hasta entonces.
+      link:
+        text: Campaña archivada
+        href: https://archive.ph/50X6L
+    - label: bloque 2
+      date: 2020–22
+      body: El equipo de Panmoni incorpora a más de 1000 comercios y más de 2500 usuarios en toda Venezuela, con un presupuesto mínimo.
+      link:
+        text: Libro de fotos
+        href: /blog/bitcoin-agents-venezuela-photo-book
+    - label: bloque 3
+      date: '2023'
+      body: Se lanzan los CashTokens. Token Pioneers enseña a la gente a acuñar sus propios tokens.
+      link:
+        text: 'Tutorial #1'
+        href: /blog/token-pioneers-cashtokens-tutorial-1
+    - label: bloque 4
+      date: '2024'
+      body: 'Se lanza TokenStork: un directorio y explorador de todos los CashTokens.'
+      link:
+        text: Acerca de TokenStork
+        href: /blog/tokenstork
+    - label: bloque 5
+      date: '2026'
+      body: Pasa a llamarse BCH Works, con un diseño nuevo y una reescritura honesta.
+    - label: mempool · sin confirmar
+      date: Lo próximo
+      body: Vistas en vivo de la cadena desde nuestro propio nodo completo y plantillas de covenants que puedes probar en la red principal.
+      pending: true
+family:
+  chip: Quién está detrás
+  title: Panmoni, TokenStork y BCH Latam.
+  panmoni:
+    label: El estudio
+    title: Panmoni
+    body: Un estudio de productos Web3 fundado por <span class="font-bold">George Donnelly</span>. Panmoni crea y mantiene BCH Works, con foco en el uso real en América Latina.
+    cta: $ open panmoni.com ↗
+  tokenstork:
+    label: El sitio hermano
+    logoAlt: TokenStork
+    body: Un directorio y explorador de todos los CashTokens en Bitcoin Cash, indexado directamente desde su propio nodo completo. BCH Works cubre la cadena. TokenStork cubre los tokens.
+    cta: $ open tokenstork.com ↗
+  latam:
+    label: La comunidad
+    title: BCH Latam
+    body: La comunidad de Bitcoin Cash para América Latina, en español.
+    x: X @bchlatam ↗
+    telegram: Telegram ↗
+  corrections:
+    label: ¿Encontraste un error?
+    title: Correcciones
+    body: Escríbenos por correo y lo corregimos. Revisamos nuestras guías después de cada actualización de la red de mayo.
+brand:
+  chip: Recursos de marca
+  title: Logotipos.
+  intro: Logotipos de Bitcoin Cash y proyectos relacionados. Cada paquete incluye archivos SVG, PNG o PDF.
+  logoAlt: logotipo
+  download: Descargar
+  downloadSuffix: logotipos (.zip)
+  source: 'Fuente:'
+  brands:
+    - name: Bitcoin Cash
+      zip: /brand/bitcoin-cash.zip
+      source:
+        text: bitcoinbch.com
+        href: https://bitcoinbch.com/resources/logos.html
+      logos:
+        - src: /brand/bitcoin-cash/logo-2020/bitcoin-cash-logo-horizontal.svg
+          dark: false
+        - src: /brand/bitcoin-cash/logo-2020/bitcoin-cash-logo-horizontal-wt.svg
+          dark: true
+        - src: /brand/bitcoin-cash/logo-2020/bitcoin-cash-circle.svg
+          dark: false
+    - name: BCH Works
+      zip: /brand/bch-works.zip
+      logos:
+        - src: /brand/bch-works/bch-works-logo.svg
+          dark: false
+        - src: /brand/bch-works/bch-works-logo-white.svg
+          dark: true
+        - src: /brand/bch-works/bch-works-mark.svg
+          dark: false
+    - name: BCH Latam
+      zip: /brand/bch-latam.zip
+      logos:
+        - src: /brand/bch-latam/bitcoin-cash-logo-horizontal-latam-fullgreen.png
+          dark: false
+    - name: Panmoni
+      zip: /brand/panmoni.zip
+      logos:
+        - src: /brand/panmoni/PAN-Logo-Finalized-Full_Color-PNG-BG.png
+          dark: false
+        - src: /brand/panmoni/PAN-Logo-Finalized-Icon-PNG_BG-020520.png
+          dark: false
+contact:
+  chip: Agrega una entrada
+  title: Financia el próximo bloque.
+  intro: BCH Works no tiene anuncios. Las donaciones pagan el sitio, nuestro nodo completo y las herramientas.
+  donate: Donar en BCH
+  talkTitle: Habla con nosotros
+  talkBody: ¿Quieres que incluyamos un proyecto o tienes una idea? Escríbenos por correo o únete al chat.
+  telegram: Novedades de BCH en Telegram ↗
+  affiliate: Algunos enlaces de este sitio son enlaces de afiliado, marcados con un asterisco.
+  why: Por qué Bitcoin Cash →
+  wallet: Conseguir una billetera
+translation:
+  sourceHash: 8baa10fe94b2676a
+  status: machine
+  translator: Claude

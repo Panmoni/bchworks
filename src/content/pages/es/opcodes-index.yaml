@@ -1,0 +1,22 @@
+metadata:
+  title: Referencia de opcodes de Bitcoin Cash (2026)
+  description: 'Todos los opcodes de Bitcoin Cash Script, al día con la actualización de mayo de 2026: opcodes de bucles, funciones, operaciones a nivel de bits, introspección y tokens, con sus efectos en la pila, costos y estado en Bitcoin.'
+hero:
+  title: Referencia de opcodes de BCH
+  subtitle: '{count} entradas que cubren los 256 valores de byte, al día con la actualización de mayo de 2026. Incluidos los que Bitcoin Core todavía está debatiendo.'
+filter:
+  label: Filtrar opcodes
+  placeholder: 'Filtrar: OP_CAT, 0x7e, introspección…'
+  freshness: Comprobación más antigua
+  groups: Grupos de opcodes
+table:
+  hex: Hex
+  opcode: Opcode
+  stack: Pila
+  since: Desde
+  btc: En BTC
+  original: original
+translation:
+  sourceHash: cedc1b3ecf9f5df8
+  status: machine
+  translator: Claude

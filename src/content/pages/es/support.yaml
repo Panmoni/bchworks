@@ -1,0 +1,49 @@
+metadata:
+  title: Bitcoin Cash Ayuda y comunidad — BCH Works
+  description: 'Dónde encontrar ayuda sobre Bitcoin Cash: foros, chats, podcasts, medios, documentos y herramientas, además de respuestas directas a preguntas frecuentes sobre BCH.'
+hero:
+  title: Ayuda y comunidad de Bitcoin Cash
+  subtitle: ¿Te atascaste? ¿Tienes curiosidad? ¿Estás creando algo? La comunidad de BCH es pequeña y la gente responde las preguntas.
+discussion:
+  title: Hacer una pregunta
+  subtitle: Chats y foros donde se reúnen usuarios y desarrolladores de Bitcoin Cash. Todos son bienvenidos.
+media:
+  subtitle: Medios
+podcasts:
+  subtitle: Podcasts y canales de YouTube
+general:
+  subtitle: Sitios web generales sobre BCH
+financial:
+  subtitle: Servicios financieros
+papers:
+  subtitle: Documentos
+utilities:
+  subtitle: Utilidades
+faq:
+  title: Bitcoin Cash FAQ
+  subtitle: Respuestas directas, incluidas las partes que no nos favorecen.
+  items:
+    - title: ¿Quién dirige Bitcoin Cash?
+      description: Nadie, en el sentido de una empresa. Bitcoin Cash es un registro público que mantienen software de nodo independiente, mineros y usuarios. No hay fundación, ni tesorería, ni sede central. Los cambios al protocolo pasan por propuestas públicas (CHIPs) y se activan cada mayo si el ecosistema los adopta.
+    - title: ¿Quién creó Bitcoin Cash?
+      description: Satoshi Nakamoto publicó el whitepaper de Bitcoin en 2008. Bitcoin Cash comparte esa historia. En 2017 se separó de Bitcoin (BTC) para que el tamaño de los bloques siguiera creciendo y los pagos cotidianos siguieran siendo baratos.
+    - title: ¿En qué se diferencia BCH de BTC?
+      description: 'El mismo suministro de 21 millones, la misma prueba de trabajo SHA-256, la misma historia temprana. BTC eligió ser una capa de liquidación y oro digital. BCH mantuvo el plan del efectivo entre pares: bloques más grandes, comisiones de menos de un centavo y, desde 2023, tokens nativos y contratos covenant que BTC todavía está debatiendo. BTC tiene mucha más tasa de hash, liquidez y atención.'
+    - title: ¿Es legal Bitcoin Cash?
+      description: Depende de dónde vivas. La mayoría de los países permiten a las personas tenerlo y usarlo; algunos restringen los exchanges o los pagos. Revisa las normas locales, sobre todo en materia de impuestos.
+    - title: ¿Es privado Bitcoin Cash?
+      description: 'No. Es un registro público transparente. Tu nombre no aparece en él, pero las direcciones se pueden vincular. Lo que BCH sí te da es autocustodia y resistencia a la censura: sin cuenta y sin nadie que pueda congelar tu billetera.'
+    - title: ¿Cuáles son sus debilidades, sin rodeos?
+      description: Un ecosistema pequeño, poca liquidez, poco revuelo, mucha menos tasa de hash que BTC, bloques de 10 minutos y contratos más difíciles de escribir que en Solidity. Preferimos que lo escuches aquí primero.
+    - title: ¿Mi billetera está vinculada a mi identidad?
+      description: Una billetera de autocustodia se controla con tus claves o tu frase semilla, no con tu nombre ni tu documento de identidad. Eso también significa que nadie puede recuperar tus BCH si las pierdes. Haz una copia de seguridad segura de tu frase de recuperación.
+video:
+  title: Reproductor de video de YouTube
+cta:
+  title: Recibir novedades de BCH
+  subtitle: Actualizaciones, herramientas nuevas y noticias del ecosistema, sin exageraciones.
+  action: Recibir novedades de BCH
+translation:
+  sourceHash: 98e71f095e1135c4
+  status: machine
+  translator: Claude

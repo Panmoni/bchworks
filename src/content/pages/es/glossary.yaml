@@ -1,0 +1,14 @@
+metadata:
+  title: 'Glosario de Bitcoin Cash: covenants, CashTokens, BCMR, ABLA y más'
+  description: 'Definiciones en lenguaje claro de los términos de Bitcoin Cash que vas a encontrar: covenant, CashTokens, BCMR, CashAddr, CashFusion, DSProof, ABLA, sighash, P2S y más.'
+termSetName: Glosario de Bitcoin Cash
+hero:
+  title: Glosario de BCH
+  subtitle: ' términos, en lenguaje claro.'
+letterNav: Ir a la letra
+aka: alias
+learnMore: Más información
+translation:
+  sourceHash: 5a7d56dfff2b25cf
+  status: machine
+  translator: Claude

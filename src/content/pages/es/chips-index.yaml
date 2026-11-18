@@ -1,0 +1,11 @@
+metadata:
+  title: 'Bitcoin Cash CHIPs: todas las propuestas de mejora y su estado'
+  description: 'Todas las propuestas de mejora de Cash (CHIP): qué hace cada una, su estado, en qué actualización se incorporó y qué postura tienen las partes interesadas. Fuente: bitcoincashresearch.org.'
+hero:
+  title: CHIPs
+  subtitle: 'Propuestas de mejora de Cash: cómo decide BCH qué entra en cada actualización de mayo.'
+intro: BCH no tiene fundación ni un único cliente. Un cambio se incorpora cuando los equipos de nodos, los mineros, los exchanges y los desarrolladores llegan a un acuerdo sobre un CHIP, normalmente tras un año de debate en <a class="underline" href="https://bitcoincashresearch.org" target="_blank" rel="noopener noreferrer">bitcoincashresearch.org</a>. Consulta la <a class="underline" href="/upgrades">cronología de actualizaciones</a> para ver qué se incorporó y cuándo.
+translation:
+  sourceHash: d74b0c22379063df
+  status: machine
+  translator: Claude

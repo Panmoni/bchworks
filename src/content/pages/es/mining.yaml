@@ -1,0 +1,55 @@
+metadata:
+  title: 'Minería de Bitcoin Cash: pools SHA-256, nodos y economía sin rodeos'
+  description: 'Cómo funciona la minería de Bitcoin Cash: el mismo hardware SHA-256 que Bitcoin, una tasa de hash menor y pools a los que puedes unirte hoy. Cuánto cuesta y qué revisar primero.'
+hero:
+  title: Minería de Bitcoin Cash
+  subtitle: BCH usa prueba de trabajo SHA-256, igual que Bitcoin. Las mismas máquinas, una red más pequeña. La rentabilidad depende de tener electricidad barata y hardware eficiente.
+pools:
+  title: Opciones de minería de BCH
+  subtitle: Pools, herramientas y guías. Compara las comisiones y las reglas de pago antes de dirigir tu tasa de hash a cualquier pool.
+  highlight: Minar un bloque de BCH
+video:
+  title: Reproductor de video de YouTube
+how:
+  title: Cómo funciona la minería de BCH
+  subtitle: Los mineros ordenan las transacciones en bloques y ganan la recompensa por bloque más las comisiones.
+  items:
+    - title: El mismo hardware que Bitcoin
+      icon: tabler:cpu
+      description: BCH y BTC usan SHA-256. Cualquier ASIC de Bitcoin puede minar Bitcoin Cash, y muchos pools te permiten cambiar entre las dos.
+    - title: Una red más pequeña
+      icon: tabler:chart-pie
+      description: BCH tiene una pequeña fracción de la tasa de hash de Bitcoin. Con la misma máquina, tu proporción de bloques es mayor, pero la recompensa por bloque vale menos.
+    - title: Las cuentas son las mismas
+      icon: tabler:calculator
+      description: La ganancia es el valor de la recompensa menos el costo de la electricidad y el desgaste del hardware. Usa una calculadora con tu precio real de electricidad antes de comprar nada.
+    - title: Bloques de 10 minutos
+      icon: tabler:clock
+      description: La dificultad se ajusta en cada bloque para mantener el promedio cerca de 10 minutos, así que BCH maneja sin problemas las variaciones de tasa de hash entre cadenas.
+    - title: Bloques que pueden crecer
+      icon: tabler:trending-up
+      description: El límite de tamaño de bloque empieza en 32 MB y el algoritmo ABLA lo aumenta a medida que crece la demanda sostenida. Hoy los bloques usan solo una fracción mínima de él.
+    - title: Ejecuta también un nodo
+      icon: tabler:server
+      description: Un nodo completo como Bitcoin Cash Node te permite verificar cada bloque por tu cuenta. Tanto los mineros en solitario como los pools necesitan uno.
+honest:
+  title: La parte honesta
+  subtitle: Conoce esto antes de invertir.
+  items:
+    - title: Menor presupuesto de seguridad
+      icon: tabler:shield-half
+      description: Una tasa de hash menor en un algoritmo compartido significa que un atacante podría alquilar suficiente potencia para causar problemas. Es una desventaja real de una cadena SHA-256 minoritaria.
+    - title: Las comisiones son mínimas
+      icon: tabler:coin
+      description: Las comisiones bajas son buenas para los usuarios. Para los mineros, significa que por ahora sus ingresos vienen casi por completo del subsidio por bloque.
+    - title: La minería en la nube es riesgosa
+      icon: tabler:alert-triangle
+      description: Muchas ofertas de minería en la nube no son rentables o son directamente estafas. Si no puedes ver las máquinas ni los términos del contrato, asume lo peor.
+cta:
+  title: Recibir novedades de BCH
+  subtitle: Actualizaciones, noticias de la red y nuevas herramientas, en Telegram.
+  action: Recibir novedades de BCH
+translation:
+  sourceHash: 3d131ba24839fedb
+  status: machine
+  translator: Claude
