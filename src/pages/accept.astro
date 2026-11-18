@@ -1,65 +1,8 @@
 ---
-import Boxes from "~/components/widgets/Boxes.astro";
-import CallToAction from "~/components/widgets/CallToAction.astro";
-import Features from "~/components/widgets/Features.astro";
-import Hero from "~/components/widgets/Hero.astro";
-import InnerTitle from "~/components/widgets/InnerTitle.astro";
-import Layout from "~/layouts/PageLayout.astro";
+import AcceptPage from "~/components/pages/AcceptPage.astro";
 import { getPageCopy } from "~/utils/pages";
-import { getProjectsByCategory } from "~/utils/projects";
 
 const copy = await getPageCopy("accept");
-const metadata = { ...copy.metadata };
-
-const merchantTools = await getProjectsByCategory("accept");
-const gateways = await getProjectsByCategory("accept:gateway");
 ---
 
-<Layout {metadata}>
-  <InnerTitle>
-    <Fragment slot="title">{copy.hero.title}</Fragment>
-    <Fragment slot="subtitle">{copy.hero.subtitle}</Fragment>
-  </InnerTitle>
-
-  <Boxes
-    title={copy.merchantTools.title}
-    subtitle={copy.merchantTools.subtitle}
-    highlight=""
-    items={merchantTools}
-  />
-
-  <Boxes subtitle={copy.gateways.subtitle} items={gateways} />
-
-  <Hero>
-    <Fragment slot="image">
-      <div class="relative h-0 pb-[56.25%]">
-        <iframe
-          width="560"
-          height="315"
-          src="https://www.youtube.com/embed/arFDrjx_2JY"
-          title={copy.video.title}
-          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture;"
-          allowfullscreen
-          class="absolute top-0 left-0 w-full h-full"
-        >
-        </iframe>
-      </div>
-    </Fragment>
-  </Hero>
-
-  <Features highlight="" title={copy.why.title} subtitle={copy.why.subtitle} items={copy.why.items} />
-
-  <CallToAction
-    actions={[
-      {
-        variant: 'primary',
-        text: copy.cta.action,
-        href: 'https://t.me/bchworks',
-        target: '_blank',
-      },
-    ]}
-  >
-    <Fragment slot="title">{copy.cta.title}</Fragment>
-    <Fragment slot="subtitle">{copy.cta.subtitle}</Fragment>
-  </CallToAction>
-</Layout>
+<AcceptPage copy={copy} />

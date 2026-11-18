@@ -1,0 +1,63 @@
+metadata:
+  title: Conseguir una billetera Bitcoin Cash — BCH Works
+  description: Elige una billetera Bitcoin Cash de autocustodia, haz una copia de seguridad de tu frase de recuperación y envía tu primer BCH por menos de un centavo. Recomendaciones honestas de billeteras, con indicación de cuáles admiten CashTokens.
+hero:
+  title: Conseguir una billetera Bitcoin Cash
+  subtitle: Cinco minutos para configurarla. Sin cuenta, sin permiso, sin banco. Tus claves guardan tus monedas.
+basics:
+  title: Qué hace realmente una billetera
+  subtitle: Olvida la jerga. Bitcoin Cash funciona como el efectivo que llevas encima, no como una cuenta bancaria.
+  items:
+    - title: Tus monedas son monedas
+      icon: tabler:coins
+      description: 'Cada BCH que tienes es una moneda independiente (un “UTXO”): un valor, un candado y un número de serie. Gastar una es como entregar un billete y recibir el cambio.'
+    - title: La billetera guarda las claves
+      icon: tabler:key
+      description: Tu billetera almacena las claves que desbloquean tus monedas. Nadie más las tiene. Ninguna empresa puede congelar tu billetera ni cerrar tu cuenta, porque no hay cuenta.
+    - title: La frase de recuperación es la billetera
+      icon: tabler:lock
+      description: Tus 12 o 24 palabras pueden reconstruir tu billetera en cualquier dispositivo. Escríbelas, guarda copias en lugares seguros y nunca las ingreses en un sitio web. Si las pierdes, nadie puede ayudarte.
+    - title: Los pagos cuestan menos de un centavo
+      icon: tabler:receipt
+      description: "Una transacción típica cuesta alrededor de 0,001\_US$. Los pagos aparecen en segundos y se confirman en un bloque aproximadamente cada 10 minutos."
+    - title: Los tokens viven en la misma billetera
+      icon: tabler:stack-2
+      description: 'Muchas billeteras BCH también guardan CashTokens: tokens fungibles y NFTs que forman parte de la propia moneda. Sin una red aparte, sin token de gas.'
+    - title: Transparente, no privado
+      icon: tabler:eye
+      description: Cada transacción queda en un registro público. Tu nombre no, pero las direcciones se pueden vincular. Usa una dirección nueva para cada pago; tu billetera lo hace por ti.
+starter:
+  title: Empieza con una de estas
+  subtitle: Billeteras {count} de autocustodia que hoy le recomendaríamos a un amigo. Todas son gratuitas.
+  bestFor:
+    Paytaca: La mejor para la mayoría. Celular y extensión de navegador. Compatibilidad completa con CashTokens y NFTs.
+    Cashonize: La mejor para tokens y apps. Web, escritorio y Android. Se conecta a apps de BCH mediante WalletConnect / CashConnect.
+    Electron Cash: La mejor para usuarios avanzados. Escritorio. Compatible con CashTokens, control de monedas y CashFusion opcional.
+all:
+  title: Todas las billeteras BCH que seguimos
+  subtitle: Más opciones, incluidas billeteras multimoneda. Comprueba que una billetera sea de autocustodia y que siga teniendo mantenimiento antes de confiarle dinero. <a class='underline' href='/wallet'>Compáralas todas, función por función</a>.
+hardware:
+  subtitle: Billeteras físicas, para ahorros que casi no tocas
+faq:
+  title: Preguntas frecuentes sobre billeteras
+  subtitle: Las preguntas que la gente hace el primer día.
+  items:
+    - title: ¿Qué billetera debería elegir?
+      description: Si no estás seguro, empieza con Paytaca en tu celular. Si quieres probar apps de BCH y tokens, agrega Cashonize. Puedes usar más de una billetera; todas leen la misma cadena.
+    - title: ¿Tengo que dar mi nombre o mi identificación?
+      description: No para crear una billetera de autocustodia. Es posible que necesites una identificación para comprar BCH en un exchange, según dónde vivas y cómo compres.
+    - title: ¿Qué pasa si pierdo mi celular?
+      description: Instala una billetera en un dispositivo nuevo y restáurala con tu frase de recuperación. Tus monedas nunca estuvieron en el celular; están en la cadena, bloqueadas con tus claves.
+    - title: ¿Alguien puede revertir un pago que envío?
+      description: "No. Revisa la dirección antes de enviar. Empieza con un pequeño pago de prueba; a unos 0,001\_US$ por transacción, probar es casi gratis."
+video:
+  title: Reproductor de video de YouTube
+cta:
+  title: ¿Billetera lista?
+  subtitle: Consigue un poco de BCH y envíate un pago de prueba. Cuesta menos de un centavo.
+  next: 'Siguiente: consigue algo de BCH →'
+  updates: Recibir novedades de BCH
+translation:
+  sourceHash: 0289c2d0646b45fd
+  status: machine
+  translator: Claude

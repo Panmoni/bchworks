@@ -8,6 +8,7 @@ import UtxoMachine from "~/components/utxo/UtxoMachine.astro";
 import { getLocale } from "~/i18n/locales";
 import Layout from "~/layouts/PageLayout.astro";
 import { findLatestPosts } from "~/utils/blog";
+import type { TranslationState } from "~/utils/l10n";
 import type { CopyList, PageCopy } from "~/utils/pages";
 import { getBlogPermalink, getPermalink } from "~/utils/permalinks";
 
@@ -17,9 +18,11 @@ const lang = getLocale(Astro.currentLocale).bcp47;
 interface Props {
 	/** The page copy for this locale (src/content/pages/[<locale>/]index). */
 	copy: PageCopy;
+	/** Set on a translated page: drives its <TranslationNotice>. */
+	translation?: TranslationState | null;
 }
 
-const { copy } = Astro.props;
+const { copy, translation = null } = Astro.props;
 const metadata = { ...copy.metadata, ignoreTitleTemplate: true };
 
 // Tells search engines who publishes the site and what it is called.
@@ -78,7 +81,7 @@ const posts = await findLatestPosts({
 });
 ---
 
-<Layout metadata={metadata}>
+<Layout metadata={metadata} translation={translation}>
   <script slot="head" type="application/ld+json" set:html={JSON.stringify(siteLd)} />
   <!-- Hero: thesis + a real CashTokens snippet with token "stickers" -->
   <section class="px-4 sm:px-6 overflow-x-clip">

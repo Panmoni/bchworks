@@ -1,0 +1,179 @@
+metadata:
+  title: ¿Por qué Bitcoin Cash? Los argumentos contra BCH, respondidos
+  description: Las objeciones más fuertes a Bitcoin Cash (BCH), cada una respondida, debatida o concedida. Además, cómo se compara BCH con Bitcoin, Ethereum y Solana, y qué cadena sirve para cada tarea.
+hero:
+  chip: Los argumentos del escéptico
+  titleHtml: ¿Por qué <mark class="bg-wb-green text-on-accent px-[0.12em] rounded-[0.12em] [box-decoration-break:clone]">Bitcoin Cash</mark>? Estos son los argumentos en contra.
+  intro: Bitcoin Cash (BCH) es Bitcoin que mantuvo el plan del efectivo entre pares. A continuación están las objeciones más fuertes, con una respuesta directa a cada una. Los veredictos son nuestros, de BCH Works. La comunidad de BCH tiene opiniones diversas y no todos estarán de acuerdo. Algunas las ganamos, otras siguen abiertas y otras las concedemos.
+scoreboard:
+  label: Marcador · toca para filtrar
+  objections: objeciones
+verdicts:
+  answered: Respondida
+  contested: Debatida
+  conceded: Concedida
+objectionLabel: Objeción
+objections:
+  - claim: Es solo una bifurcación fallida de Bitcoin.
+    verdict: answered
+    answer: En 2017 ambas cadenas cambiaron las reglas. BCH aumentó el tamaño de bloque para mantener bajas las comisiones. Bitcoin Core activó SegWit ese mismo mes. Entonces, ¿cuál se bifurcó? Los exchanges centralizados repartieron el ticker BTC. No lo decidió ningún consenso de la comunidad ni ninguna prueba basada en el whitepaper. Muchos sostienen que BCH es el Bitcoin original, la cadena más cercana al whitepaper. BCH siguió adelante cuando BSV se separó de ella en 2018 y eCash en 2020. Desde entonces ha lanzado seis actualizaciones anuales según lo previsto, sin ninguna división de la cadena. Una cadena fallida no sigue lanzando actualizaciones.
+    evidence: Mira el historial de actualizaciones más abajo
+  - claim: Las comisiones son bajas solo porque nadie lo usa.
+    verdict: answered
+    answer: Las comisiones se cobran por byte, no por subasta. Pagas por los bytes que envías, aproximadamente un satoshi por cada uno. El límite de tamaño de bloque crece con la demanda sostenida, así que un día de mucho movimiento no sube el precio.
+    evidence: "226 bytes × 1 sat/byte = 226 sats ≈ 0,001\_US$"
+  - claim: Sin contratos inteligentes no hay aplicaciones reales.
+    verdict: contested
+    answer: BCH tiene contratos, llamados covenants. Cada uno es un candado sobre una moneda que verifica la transacción que la gasta. No se ejecuta como un programa global. Los DEXs, las stablecoins, las coberturas, el financiamiento colectivo y las bóvedas ya funcionan hoy. Un único fondo compartido que miles de personas actualizan a la vez sigue siendo más difícil de construir.
+    evidence: 'Desde mayo de 2026: bucles y funciones'
+  - claim: Nadie lo usa. El ecosistema es diminuto.
+    verdict: conceded
+    answer: Cierto. El ecosistema es pequeño, la liquidez es escasa y las DeFi en BCH se miden en millones, no en miles de millones. Lo decimos aquí porque la confianza vale más que el bombo.
+  - claim: Es menos seguro que Bitcoin.
+    verdict: conceded
+    answer: BCH usa la misma prueba de trabajo SHA-256, pero con una pequeña fracción de la tasa de hash de Bitcoin. Para montos grandes, espera más confirmaciones.
+  - claim: Los tokens en BCH son solo otro rug pull a punto de ocurrir.
+    verdict: answered
+    answer: CashTokens están dentro de las monedas de tu billetera. Ningún contrato de token guarda un saldo por ti y no hay ningún approve() que explotar, así que una aprobación olvidada no puede vaciarte. Ningún administrador puede pausar ni actualizar tu token.
+  - claim: Los bloques de diez minutos son demasiado lentos para los pagos.
+    verdict: contested
+    answer: El comercio ve tu pago en segundos. Si alguien intenta gastar las mismas monedas dos veces, los nodos retransmiten una prueba de doble gasto. La liquidación final sigue tardando unos diez minutos, y Solana es más rápida.
+  - claim: Lo controla alguna fundación o un grupo de iniciados.
+    verdict: contested
+    answer: El protocolo, no. No hay empresa, fundación ni tesorería, ni desbloqueos de tokens. Varios equipos independientes mantienen el software de nodo. Los cambios pasan por un proceso abierto de propuestas (CHIPs) y se activan cuando los equipos de nodos, billeteras, exchanges y aplicaciones se suman. El lado social es distinto. Una camarilla de iniciados actúa de forma tóxica. Desalienta a los recién llegados, intenta echar a la gente y bloquea arbitrariamente a personas de grupos de Telegram y subreddits de la comunidad. Hay que decirlo. BCH Works sostiene que BCH es para todos.
+  - claim: No es privado.
+    verdict: conceded
+    answer: Correcto. Al igual que Bitcoin, BCH es un registro público transparente. Electron Cash ofrece una herramienta opcional de mezcla de monedas llamada CashFusion, pero BCH no es privado por defecto.
+  - claim: No hay USDT ni USDC, así que no sirve para dólares.
+    verdict: contested
+    answer: Los grandes emisores de stablecoins no están en la cadena principal de BCH, y es una carencia real. Los contratos de stablecoins y de cobertura construidos sobre BCH sí existen y funcionan hoy.
+reliability:
+  chip: “Pero ¿es confiable?”
+  title: Seis actualizaciones. Seis a tiempo.
+  intro: BCH se actualiza una vez al año, el 15 de mayo. Cada actualización funciona primero durante seis meses en chipnet, la red de pruebas pública. Todas desde 2021 se han activado según lo previsto.
+  date: 15 de mayo
+  upgrades:
+    - year: '2021'
+      what: Se eliminó el límite de cadenas sin confirmar; varias salidas OP_RETURN.
+    - year: '2022'
+      what: Introspección nativa y enteros de 64 bits.
+    - year: '2023'
+      what: 'CashTokens: tokens fungibles nativos y NFTs.'
+    - year: '2024'
+      what: Límite de tamaño de bloque adaptativo que sigue la demanda.
+    - year: '2025'
+      what: Límites de la VM más altos y aritmética de números grandes.
+    - year: '2026'
+      what: Bucles, funciones y salidas pay-to-script.
+chooser:
+  chip: Selector
+  title: ¿Qué cadena sirve para tu tarea?
+  intro: Cada cadena gana en algo. Elige una tarea para ver cuál encaja. A veces no es BCH.
+  prompt: ¿Qué quieres hacer?
+  bestFit: La mejor opción
+  notBch: No BCH
+  chains:
+    - Bitcoin Cash
+    - Bitcoin
+    - Ethereum
+    - Solana
+  jobs:
+    - job: "Enviar 5\_US$ a la familia en el extranjero"
+      best: 0
+      why: Menos de un centavo, sin necesidad de cuenta, y quien lo recibe lo ve en segundos.
+      also: Solana se acerca en costo. Las comisiones de Bitcoin y Ethereum pueden costar más que el regalo cuando los bloques están llenos.
+    - job: Cobrar en el mostrador de una tienda
+      best: 0
+      why: Comisiones fijas por byte que puedes indicar de antemano, además de alertas de doble gasto en pagos sin confirmar.
+      also: Solana liquida más rápido. Muchas más tiendas aceptan tarjetas que cualquier cadena.
+    - job: Emitir un token sin clave de administrador
+      best: 0
+      why: CashTokens viven dentro de las monedas. No hay contrato de token que explotar ni dueño que pueda pausarlo.
+      also: Ethereum tiene muchas más billeteras y exchanges que listan tokens.
+    - job: Guardar ahorros durante diez años
+      best: 1
+      why: Bitcoin tiene la mayor tasa de hash, la liquidez más profunda y la trayectoria más larga.
+      also: BCH tiene el mismo suministro de 21 millones, pero un presupuesto de seguridad mucho menor.
+    - job: Operar un fondo común que miles actualizan a la vez
+      best: 2
+      why: Ethereum se creó precisamente para contratos globales con almacenamiento compartido.
+      also: BCH ejecuta DEXs y otras DeFi, pero este diseño es más difícil en un modelo de monedas.
+    - job: Liquidar en menos de un segundo
+      best: 3
+      why: Solana produce un bloque aproximadamente cada 0,4 segundos.
+      also: BCH muestra un pago en segundos, pero lo liquida en unos diez minutos.
+    - job: Tener USDT o USDC
+      best: 2
+      why: Los grandes emisores de stablecoins están en Ethereum, Solana y otras cadenas.
+      also: BCH tiene sus propios contratos de stablecoins, pero no a los grandes emisores.
+compare:
+  chip: Comparar
+  title: BCH frente a BTC frente a ETH frente a SOL.
+  intro: BCH gana en costo y en dinero simple y predecible. Pierde en velocidad hasta la finalidad y en tamaño del ecosistema.
+  columns:
+    - Bitcoin Cash
+    - Bitcoin
+    - Ethereum (L1)
+    - Solana
+  rows:
+    - label: Comisión típica
+      bch: "Menos de 1\_¢, fija por byte"
+      btc: Variable; se dispara cuando los bloques se llenan
+      eth: Subasta de gas; varía según la demanda
+      sol: Fracciones de centavo, más comisiones de prioridad
+    - label: Tiempo de bloque
+      bch: 10 min (los pagos se ven en segundos)
+      btc: 10 min
+      eth: 12 s
+      sol: ~0,4 s
+    - label: Modelo
+      bch: UTXO (monedas)
+      btc: UTXO (monedas)
+      eth: Cuentas
+      sol: Cuentas
+    - label: Tokens
+      bch: Nativos en la moneda; sin contrato
+      btc: Protocolos superpuestos (Runes, Ordinals)
+      eth: Contratos inteligentes (ERC-20, approve)
+      sol: Cuentas del programa de tokens
+    - label: Contratos
+      bch: Covenants; sin claves de administrador
+      btc: Script limitado
+      eth: Contratos inteligentes completos; los proxies actualizables son comunes
+      sol: Programas; actualizables por defecto
+    - label: Consenso
+      bch: Prueba de trabajo SHA-256
+      btc: Prueba de trabajo SHA-256
+      eth: Prueba de participación
+      sol: Prueba de participación
+    - label: Privacidad por defecto
+      bch: 'No'
+      btc: 'No'
+      eth: 'No'
+      sol: 'No'
+    - label: Tamaño del ecosistema
+      bch: Pequeño
+      btc: El más grande
+      eth: Grande
+      sol: Grande
+faqs:
+  title: Más preguntas
+  subtitle: Respuestas breves y directas.
+  items:
+    - title: ¿Qué es Bitcoin Cash?
+      description: Bitcoin Cash (BCH) es una criptomoneda de prueba de trabajo que se separó de Bitcoin en agosto de 2017 para mantener bajas las comisiones permitiendo bloques más grandes. Comparte la historia de Bitcoin hasta ese momento, su suministro de 21 millones y su algoritmo de minería SHA-256. Desde entonces ha añadido tokens nativos (CashTokens) y covenants programables.
+    - title: ¿En qué se diferencia BCH de Bitcoin (BTC)?
+      description: BTC eligió ser oro digital y liquidar la mayoría de los pagos cotidianos en otras capas. BCH eligió seguir siendo útil como efectivo en la cadena principal, con comisiones de menos de un centavo. BCH también ha lanzado funciones que BTC todavía debate, como los covenants y la introspección de transacciones, además de tokens nativos. BTC tiene mucha más tasa de hash, liquidez y adopción.
+    - title: ¿Es BCH una buena inversión?
+      description: No damos asesoramiento de inversión. El suministro de BCH es fijo, pero su precio es volátil y puede caer mucho. Ten solo lo que puedas permitirte perder y guarda las monedas en una billetera que controles.
+    - title: ¿Mi billetera de Bitcoin Cash está vinculada a mi identidad?
+      description: 'Tu billetera se controla con tu clave privada o tu frase de recuperación, no con tu nombre ni tu documento de identidad. Eso también significa que nadie puede recuperar tus monedas si la pierdes. Haz una copia de seguridad de tu frase de recuperación en un lugar seguro. Los exchanges son otro asunto: la mayoría exige verificar la identidad.'
+cta:
+  title: Júzgalo tú mismo.
+  subtitle: Envíate unos centavos de BCH. Toma minutos y casi no cuesta nada.
+  wallet: Conseguir una billetera
+  build: Empezar a desarrollar
+translation:
+  sourceHash: 1292e53fa2b5d8ef
+  status: machine
+  translator: Claude

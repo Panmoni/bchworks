@@ -1,0 +1,43 @@
+metadata:
+  title: 'Aceptar Bitcoin Cash: sin gas, solo franqueo'
+  description: Acepta pagos en Bitcoin Cash por menos de un centavo por transacción. Los pagos aparecen en segundos, las pruebas de doble gasto señalan los intentos de fraude y no hay contracargos.
+hero:
+  title: Aceptar Bitcoin Cash
+  subtitle: Sin gas. Franqueo. Una comisión que puedes calcular de cabeza y dinero que llega a tu propia billetera.
+merchantTools:
+  title: Herramientas para comercios
+  subtitle: Apps de punto de venta, facturación y plugins que reciben BCH directamente en una billetera que tú controlas.
+gateways:
+  subtitle: Pasarelas de pago (algunas convierten a moneda local por ti)
+video:
+  title: Reproductor de video de YouTube
+why:
+  title: Por qué los comercios aceptan BCH
+  subtitle: Lo que obtienes y lo que debes vigilar.
+  items:
+    - title: Franqueo, no gas
+      icon: tabler:mail
+      description: "Pagas una tasa de comisión fija por byte, unos 0,001\_US$ por un pago típico. Sin subasta de comisiones, sin porcentaje. Liquidar la misma venta cuesta lo mismo a las 9 a. m. que en plena hora pico."
+    - title: Visible en segundos
+      icon: tabler:bolt
+      description: Un pago aparece en tu billetera en segundos, antes de entrar en un bloque. Los bloques llegan aproximadamente cada 10 minutos; para ventas grandes puedes esperar a uno.
+    - title: Alertas de doble gasto
+      icon: tabler:shield-check
+      description: Los nodos retransmiten una prueba de doble gasto si alguien intenta gastar las mismas monedas dos veces. Las herramientas de pago pueden consultar una puntuación de riesgo antes de que entregues la mercancía.
+    - title: Sin contracargos
+      icon: tabler:receipt-off
+      description: Un pago confirmado no puede ser revertido por una red de tarjetas ni por un banco. Los reembolsos los decides tú y se envían como cualquier otro pago.
+    - title: Tu billetera, tus claves
+      icon: tabler:key
+      description: No hay cuenta de comercio que abrir ni procesador que pueda congelar tu saldo. Los fondos van directamente a claves que tú guardas. Haz una copia de seguridad de ellas.
+    - title: 'El precio se mueve: tenlo previsto'
+      icon: tabler:chart-line
+      description: BCH es volátil. Si fijas tus precios en moneda local, convierte al recibir mediante una pasarela o transfiere a un saldo estable de forma periódica. Conserva solo lo que quieras mantener.
+cta:
+  title: Recibe novedades de BCH
+  subtitle: Actualizaciones, herramientas y noticias para comercios, sin exageraciones.
+  action: Recibir novedades de BCH
+translation:
+  sourceHash: 247a51f647b5754d
+  status: machine
+  translator: Claude

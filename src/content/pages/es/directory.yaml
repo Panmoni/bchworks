@@ -1,0 +1,31 @@
+metadata:
+  title: Directorio del ecosistema Bitcoin Cash, revisado a diario
+  description: Todas las billeteras, exchanges, herramientas para comercios, dapps y bibliotecas para desarrolladores de Bitcoin Cash que conocemos. Cada enlace se revisa a diario, para que puedas ver qué proyectos están activos, estancados o muertos.
+datasetName: Directorio del ecosistema Bitcoin Cash con revisiones de estado
+hero:
+  title: El directorio de BCH que sabe qué está muerto
+  subtitle: proyectos. Cada enlace se comprueba a diario y en cada repositorio se buscan commits recientes.
+states:
+  alive: activo
+  stale: estancado
+  dead: muerto
+  unknown: desconocido
+legend:
+  html: '<strong>Activo</strong>: el sitio responde y el código cambió en el último año. <strong>Estancado</strong>: el sitio responde, pero el repositorio está archivado o lleva un año sin actividad. <strong>Muerto</strong>: falló dos revisiones seguidas. <strong>Desconocido</strong>: el sitio bloquea los bots o aún no tenemos datos.'
+  lastCheck: Última revisión
+  noCheck: La primera revisión automática aún no se ha ejecutado.
+  missing: ¿Conoces un proyecto que nos falta o uno con datos incorrectos?
+  edit: Editar la lista en GitHub
+search:
+  label: Buscar en el directorio
+  placeholder: Buscar proyectos…
+  showAll: mostrar todo
+sectionsNav: Secciones del directorio
+commit: commit
+graveyard:
+  title: Cementerio
+  text: Proyectos que cerraron o abandonaron BCH. Se conservan para que los enlaces antiguos tengan sentido. No envíes dinero a ninguno de ellos.
+translation:
+  sourceHash: 41d2297442863320
+  status: machine
+  translator: Claude

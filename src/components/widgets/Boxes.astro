@@ -2,10 +2,13 @@
 // icon > image and add link
 import Freshness from "~/components/reference/Freshness.astro";
 import { m, msg } from "~/i18n/messages";
+import { englishData } from "~/utils/l10n";
 
 interface Item {
 	title?: string;
 	description?: string;
+	// English text on a translated page (docs/i18n.md, "Fallback policy").
+	descriptionFallback?: boolean;
 	icon?: string;
 	url?: string;
 	// Directory entries: when a person last checked it, and the daily health state.
@@ -55,7 +58,7 @@ const l = msg(Astro.currentLocale);
     }
     <div class="grid gap-5 sm:grid-cols-2 lg:grid-cols-3 items-stretch">
       {
-        items.map(({ title, description, icon, url, verified, state }) => {
+        items.map(({ title, description, descriptionFallback, icon, url, verified, state }) => {
           const Tag = url ? 'a' : 'div';
           return (
             <Tag
@@ -73,7 +76,11 @@ const l = msg(Astro.currentLocale);
                 )}
                 <span class="min-w-0 wrap-break-word font-heading text-lg sm:text-xl font-extrabold tracking-tight leading-snug sm:leading-7">{title}</span>
               </div>
-              {description && <p class="text-muted text-[15px]">{description}</p>}
+              {description && (
+                <p class="text-muted text-[15px]" {...(descriptionFallback ? englishData(Astro.currentLocale) : {})}>
+                  {description}
+                </p>
+              )}
               {url && (
                 <span class="cmd mt-auto pt-1 font-mono text-xs text-muted truncate" translate="no">
                   $ open {url.replace(/^https?:\/\//, '').replace(/\/$/, '')}

@@ -1,0 +1,66 @@
+metadata:
+  title: ¿Qué es un UTXO? Mira cómo se gastan monedas reales
+  description: 'Un UTXO es una salida de transacción no gastada: una moneda. Dale a la Máquina UTXO una transacción real de Bitcoin Cash, mira cómo se consumen y se acuñan monedas y sigue cualquier moneda hasta el bloque que la creó.'
+hero:
+  chip: La Máquina UTXO
+  title: ¿Qué es un UTXO? Mira cómo se gastan monedas reales.
+  subtitle: Un UTXO (salida de transacción no gastada) es una moneda. Cada transacción de Bitcoin Cash funde algunas monedas y acuña otras nuevas. Pega cualquier transacción abajo y mira cómo ocurre; luego sigue una moneda hasta el bloque que la creó.
+presets:
+  - label: 'Aleatoria: del bloque más reciente'
+    random: true
+  - label: Despertó tras 7 años
+    txid: 058c30f20434bd2999067b5a842c115abcd3bb7d6847d2997b1ebe08f1d3a838
+  - label: Despertó tras 5,6 años
+    txid: 6c2449bbd93643dc7548075841a0dacb31365d0228874acecd54f74a5d0bcb64
+  - label: Primera recompensa por bloque exclusiva de BCH
+    txid: 220e50ede1bc15f6c8770876cf2c6b6431f66ebeec2f0b88e6fc790ba22db8a4
+  - label: La pizza de 10.000 BTC (2010)
+    txid: a1075db55d416d3ca199f55b6084e2115b9345e16c5cf302fc80e9d5fbf5d48d
+article:
+  coin:
+    title: Un UTXO es una moneda, no un saldo
+    body: 'Tu banco guarda un solo número para ti y lo modifica. Bitcoin Cash no. Guarda un montón de monedas separadas, y cada moneda está bloqueada para quien tenga la clave correcta. Cada moneda es un <strong>UTXO</strong>: una salida de alguna transacción anterior que nadie ha gastado todavía. El “saldo” de tu billetera es solo la suma de las monedas que tus claves pueden abrir.'
+  spending:
+    title: Gastar funde monedas y acuña otras nuevas
+    body: 'Una moneda siempre se gasta entera. Supongamos que tienes una moneda de 5 BCH y le pagas 3 BCH a alguien. Tu transacción consume la moneda de 5 BCH como <em>entrada</em> y crea dos <em>salidas</em>: 3 BCH bloqueados para el beneficiario y unos 2 BCH de vuelta para ti como cambio. La moneda antigua ya no existe. Las dos nuevas se suman al conjunto UTXO.'
+    fee: 'Las salidas suman un poco menos que las entradas. Esa diferencia es la comisión, y la cobra el minero que incluye la transacción en un bloque. En Bitcoin Cash suele ser de alrededor de un satoshi por byte: una fracción de centavo.'
+  tree:
+    title: Cada moneda tiene un árbol genealógico
+    body: 'Cada entrada apunta a la salida exacta que gasta, así que cada moneda se enlaza con sus padres, y estos con los suyos, hasta llegar a una <strong>coinbase</strong>: la transacción en la que un minero creó monedas nuevas como recompensa por bloque. Eso es lo que recorre “Seguir una moneda”. Algunos rastros terminan a pocos pasos. Otros atraviesan años de inactividad y cruzan la división de agosto de 2017, cuando BCH y BTC aún compartían un mismo registro.'
+  why:
+    title: Por qué Bitcoin Cash usa UTXOs
+    items:
+      - <strong>Verificaciones en paralelo.</strong> Las monedas son independientes, así que un nodo puede validar muchas transacciones a la vez.
+      - <strong>No hay estado compartido que vaciar.</strong> Una transacción gasta monedas concretas, o falla. No existe un saldo de contrato que un error pueda vaciar.
+      - <strong>Los tokens viajan incluidos.</strong> Los <a href="/cashtokens">CashTokens</a> también viven dentro de las salidas, así que un token se mueve con las mismas reglas y las mismas firmas que BCH.
+      - <strong>Más privacidad por defecto.</strong> Las billeteras pueden usar una dirección nueva para cada moneda, en lugar de una sola cuenta que muestra cada pago.
+    tradeoff: La contrapartida es que las billeteras deben elegir qué monedas gastar, y muchas monedas pequeñas generan transacciones más grandes. Consulta el <a href="/glossary">glosario</a> para ver los términos y <a href="/wallet">el selector de billeteras</a> para encontrar billeteras que lo gestionan por ti.
+charts:
+  intro: Todas las monedas que existen, agrupadas según cuánto tiempo llevan sin moverse. Calculamos esto nosotros mismos a partir de un Bitcoin Cash Node y cada día comparamos nuestro recuento con el total <code class="font-mono text-base">coinstatsindex</code> del propio nodo. Sin API de analítica de terceros.
+  unpublished: 'Estos gráficos provienen de <code class="font-mono">scripts/utxo-stats.mjs</code>, ejecutado contra un nodo BCHN con <code class="font-mono">-coinstatsindex</code>. La máquina de arriba ya funciona: lee la cadena en vivo.'
+  method:
+    - Leemos cada bloque desde el génesis con <code class="font-mono">getblock</code> en verbosidad 3, que indica la altura y el valor del prevout de cada entrada. Cada salida suma su valor al día en que nació. Cada entrada resta su valor y destruye valor × antigüedad en días-moneda. Las antigüedades cuentan días UTC completos, según el tiempo mediano del bloque.
+    - Al final de cada día pedimos al nodo el total del conjunto UTXO con <code class="font-mono">gettxoutsetinfo</code>, servido por <code class="font-mono">-coinstatsindex</code>. Si nuestro recuento difiere en un solo satoshi, el proceso falla en lugar de publicar. Se excluyen las salidas OP_RETURN y las dos coinbase duplicadas de BIP30, igual que las excluye el nodo.
+    - Omitimos los {confirmations} bloques más recientes, para que una reorganización no pueda alcanzar los datos. Las monedas nacidas antes del 1 de agosto de 2017 existen tanto en BCH como en BTC; “7+ años” incluye monedas que nunca se movieron después de la división.
+faq:
+  title: Preguntas
+  items:
+    - q: ¿Qué significa UTXO?
+      a: '“Unspent transaction output”: salida de transacción no gastada. Cada transacción crea salidas: cantidades bloqueadas a una dirección o un script. Una salida que nadie ha gastado todavía es un UTXO. El saldo de tu billetera es la suma de los UTXOs que tus claves pueden desbloquear.'
+    - q: ¿Un UTXO es como una moneda o un billete?
+      a: 'Sí. Un UTXO se gasta entero, como un billete. Para pagar 3 BCH con una moneda de 5 BCH, la transacción consume la moneda de 5 BCH y crea dos nuevas: 3 BCH para el beneficiario y unos 2 BCH de vuelta para ti como cambio, menos una pequeña comisión.'
+    - q: ¿En qué se diferencia el modelo UTXO del modelo de cuentas de Ethereum?
+      a: Ethereum guarda un saldo por cuenta y lo modifica directamente. Bitcoin Cash guarda un conjunto de monedas separadas y las reemplaza. Las monedas se pueden verificar en paralelo, una transacción gasta una moneda o no la gasta, y no hay un estado global de contratos que vaciar.
+    - q: ¿A dónde va la comisión de la transacción?
+      a: A ningún lugar explícito. La comisión es la diferencia entre lo que contienen las entradas y lo que contienen las salidas. El minero que incluye la transacción reclama esa diferencia en la transacción coinbase del bloque.
+    - q: ¿Qué es el conjunto UTXO?
+      a: 'La lista de todas las salidas no gastadas de la cadena: todo el dinero que existe en este momento. Los nodos completos la guardan en una base de datos para verificar cada transacción nueva. Es el registro contable, y solo contiene monedas, no historiales de cuentas.'
+    - q: ¿Qué son los días-moneda destruidos?
+      a: Una medida de la antigüedad del dinero que se movió. Si gastas 10 BCH que estuvieron quietos durante 100 días, destruyes 1000 días-moneda. Los picos grandes indican que se movieron monedas guardadas durante mucho tiempo, algo que los analistas observan como señal de que antiguos tenedores venden o reorganizan sus fondos.
+    - q: ¿Los CashTokens también usan UTXOs?
+      a: Sí. Desde mayo de 2023, cada salida de Bitcoin Cash puede llevar tokens fungibles o un NFT junto con sus BCH. Los tokens se mueven gastando y recreando salidas, exactamente igual que el propio BCH. La máquina marca las salidas con tokens con un anillo rosa.
+sources: La máquina lee la cadena en vivo mediante el protocolo Electrum Cash desde servidores públicos de <a class="underline" href="https://github.com/cculianu/Fulcrum" target="_blank" rel="noopener noreferrer">Fulcrum</a>. Solo les envía identificadores de transacción, nada más. Los gráficos del conjunto UTXO provienen de nuestro propio <a class="underline" href="https://bitcoincashnode.org" target="_blank" rel="noopener noreferrer">Bitcoin Cash Node</a>.
+translation:
+  sourceHash: 377ca9ad6886dd70
+  status: machine
+  translator: Claude

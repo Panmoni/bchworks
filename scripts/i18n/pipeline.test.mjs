@@ -244,6 +244,9 @@ describe("draft", () => {
 		assert.deepEqual(es.tags, en.tags);
 		assert.equal(es.image, en.image);
 		assert.deepEqual(es.publishDate, en.publishDate);
+		// FAQ items (`q`/`a`) are words: reference, compare and guide pages carry them.
+		assert.match(es.faq[0].q, /WALLETÑ/);
+		assert.match(es.faq[0].a, /CONTROLÑ/);
 	});
 
 	test("page copy translates every word but the identifier keys", async () => {

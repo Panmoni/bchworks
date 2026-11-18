@@ -1,0 +1,46 @@
+metadata:
+  title: 'Comprar Bitcoin Cash BCH: exchanges, intercambios y cajeros automáticos'
+  description: 'Cómo comprar y vender Bitcoin Cash de forma segura: exchanges, intercambios entre criptomonedas y cajeros automáticos. Pasa tus BCH a una billetera que tú controlas y envíalos al extranjero por menos de un centavo.'
+hero:
+  title: Comprar y vender Bitcoin Cash
+  subtitle: Cómpralo, pásalo a tu propia billetera y envíalo a cualquier lugar por menos de un centavo.
+exchanges:
+  title: Cómo comprar y vender BCH
+  subtitle: Elige un exchange de buena reputación, compra primero una cantidad pequeña y retírala a una billetera cuya frase de recuperación hayas respaldado. Las monedas que dejas en un exchange pertenecen al exchange hasta que las retiras.
+  highlight: Comprar algo de BCH
+swaps:
+  subtitle: Intercambios entre criptomonedas
+atms:
+  subtitle: Cajeros automáticos de Bitcoin Cash
+video:
+  title: Reproductor de video de YouTube
+before:
+  title: Antes de comprar
+  subtitle: Para qué sirve BCH y los riesgos que debes aceptar desde el principio.
+  items:
+    - title: Enviar dinero a casa
+      icon: tabler:send
+      description: "Compra BCH, envíalo a tu familia en el extranjero por unos 0,001\_US$ y ellos pueden gastarlo o venderlo en su país. Sin formularios ni oficinas de envío."
+    - title: Moverlo cuesta menos de un centavo
+      icon: tabler:cash
+      description: "Mover BCH cuesta más o menos lo mismo para 5\_US$ que para 5000\_US$. Los márgenes de los exchanges y las comisiones de retiro varían, así que compáralos."
+    - title: Autocustodia
+      icon: tabler:key
+      description: 'Una vez que BCH está en tu billetera, nadie puede congelarlo. Pero tampoco nadie puede recuperarlo por ti: haz una copia de seguridad de tu frase de recuperación.'
+    - title: Oferta fija
+      icon: tabler:lock
+      description: Nunca habrá más de 21 millones de BCH. Nadie puede imprimir más. Eso no hace que el precio sea estable.
+    - title: La volatilidad es real
+      icon: tabler:chart-line
+      description: BCH puede bajar o subir bruscamente en un día. No es un refugio seguro garantizado. Compra solo lo que puedas permitirte perder, y nunca por una promesa de ganancias.
+    - title: Cuidado con las estafas
+      icon: tabler:alert-triangle
+      description: Ningún exchange real te pide tu frase de recuperación. Ignora las ofertas de “duplica tus BCH” y a las personas que te contactan primero.
+cta:
+  title: Recibir novedades de BCH
+  subtitle: Actualizaciones, herramientas y noticias del ecosistema, sin exageraciones.
+  action: Recibir novedades de BCH
+translation:
+  sourceHash: c9930f5a6d24f56e
+  status: machine
+  translator: Claude

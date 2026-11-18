@@ -6,6 +6,9 @@ category: guides
 tags:
   - tokens
 image: ~/assets/images/hello.png
+faq:
+  - q: Do I need a wallet?
+    a: Yes, one you control.
 ---
 
 ## Before you start

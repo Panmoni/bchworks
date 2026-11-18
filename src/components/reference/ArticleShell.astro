@@ -4,6 +4,7 @@
 import Freshness from "~/components/reference/Freshness.astro";
 import { m, msg } from "~/i18n/messages";
 import Layout from "~/layouts/PageLayout.astro";
+import type { TranslationState } from "~/utils/l10n";
 import { faqJsonLd, isoDate } from "~/utils/reference";
 
 export interface Props {
@@ -17,6 +18,8 @@ export interface Props {
 	eyebrow?: string;
 	faq?: Array<{ q: string; a: string }>;
 	sources?: Array<{ title: string; url: string }>;
+	/** Set on a translated entry: drives its <TranslationNotice>. */
+	translation?: TranslationState | null;
 }
 
 const {
@@ -29,6 +32,7 @@ const {
 	eyebrow,
 	faq = [],
 	sources = [],
+	translation = null,
 } = Astro.props;
 
 // Labels follow `lang`, the entry's content language, not the routed site
@@ -61,7 +65,7 @@ const article = {
 const faqLd = faqJsonLd(faq, lang);
 ---
 
-<Layout metadata={{ title: metaTitle ?? title, description: metaDescription ?? description }} lang={lang}>
+<Layout metadata={{ title: metaTitle ?? title, description: metaDescription ?? description }} lang={lang} translation={translation}>
   <Fragment slot="head">
     <script type="application/ld+json" set:html={JSON.stringify(article)} />
     {faqLd && <script type="application/ld+json" set:html={JSON.stringify(faqLd)} />}

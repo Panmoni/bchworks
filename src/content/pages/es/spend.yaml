@@ -1,0 +1,103 @@
+metadata:
+  title: 'Gastar Bitcoin Cash: paga a quien sea por menos de un centavo'
+  description: Dónde y cómo gastar Bitcoin Cash. Paga a comercios, amigos y tiendas en línea por menos de un centavo por pago, sin cuenta y sin pedirle permiso a nadie.
+hero:
+  title: Gastar Bitcoin Cash
+  subtitle: 'Dinero que funciona: paga a quien sea, donde sea, por menos de un centavo. Sin cuenta, sin tarjeta, sin permiso.'
+merchants:
+  title: Dónde gastar BCH
+  subtitle: 'Mapas de comercios, tiendas de tarjetas de regalo y servicios que aceptan BCH. ¿No encuentras un comercio cerca? Enséñale a uno cómo aceptarlo: basta con un celular y cinco minutos.'
+video:
+  title: Reproductor de video de YouTube
+trace:
+  chip: Sigue un pago
+  title: Un café, del toque al bloque.
+  intro: "Esto es lo que pasa cuando pagas un flat white de 2,80\_€ con BCH. Cada parada muestra algo que BCH hace de otra manera, además del único punto en que es más lento."
+  underTheHood: Por dentro
+  fallsShort: Dónde se queda corto BCH
+  stops:
+    - time: 0,0 s
+      label: Parada 1 · Tocar
+      title: Escaneas el código y tocas Pagar.
+      body: Sin cuenta, sin tarjeta y sin registro. Tu billetera guarda las claves, así que ninguna empresa puede congelarla. Pagarle a una tienda en el extranjero funciona igual que pagarle a una de al lado.
+      detail: |-
+        La billetera arma una transacción de 226 bytes:
+        1 moneda entra → 2 monedas salen
+        (el café y tu cambio)
+    - time: 0,1 s
+      label: Parada 2 · Comisión
+      title: Franqueo, no gas.
+      body: "Pagas por los bytes que envías, como el franqueo. No hay subasta de comisiones, así que una tarde con mucho movimiento cuesta lo mismo que una tranquila, ya sea que envíes 1\_US$ o 1000\_US$."
+      detail: "226 bytes\n× 1 sat por byte\n= 226 sats ≈ 0,001\_US$"
+    - time: < 1 s
+      label: Parada 3 · Retransmisión
+      title: La red vigila las trampas.
+      body: Los nodos retransmiten tu pago. Si alguien intenta gastar las mismas monedas dos veces, los nodos le envían al comercio una prueba de doble gasto.
+      detail: |-
+        tx retransmitida → sin conflictos
+        → riesgo de doble gasto: bajo
+    - time: ~2 s
+      label: Parada 4 · Visto
+      title: El café lo ve.
+      body: La terminal muestra el pago con una puntuación de riesgo. Para un café, eso basta para entregarlo.
+      detail: |-
+        PAGADO ✓
+        0,0067 BCH (monto de ejemplo)
+    - time: desvío
+      label: Parada 5 · Fidelidad
+      title: Un token de fidelidad viaja con el pago.
+      body: Una tienda puede emitir su propio CashToken. Queda dentro de una moneda en tu billetera. No hay approve() que permita vaciarlo y ningún administrador puede pausarlo.
+      detail: |-
+        moneda #2
+          token: CAFE × 1
+          nft:   "visita 7 de 10"
+    - time: ~10 min
+      label: Parada 6 · La espera
+      title: Luego espera un bloque.
+      body: Los bloques tardan diez minutos en promedio, así que la liquidación tarda minutos, no segundos. Para montos grandes, espera una o dos confirmaciones.
+      detail:
+        - Solana liquida más rápido.
+        - Menos tiendas aceptan BCH que tarjetas.
+        - Los pagos son públicos en el registro, así que no des por hecha la privacidad.
+        - Los precios cambian, así que gasta montos que te sientas cómodo teniendo.
+      wait: true
+race:
+  chip: Comparar
+  title: El mismo café, cuatro cadenas.
+  intro: Cada barra muestra el tiempo hasta que el pago queda liquidado, en una escala de 15 minutos. BCH empata con Solana en costo y pierde frente a ella en velocidad.
+  settlesIn: se liquida en
+  scale:
+    - '0'
+    - 5 min
+    - 10 min
+    - 15 min
+  lanes:
+    - name: Bitcoin Cash
+      settle: unos 10 minutos
+      pct: 66.7
+      fee: "≈ 0,001\_US$, fijo"
+      note: visto en ~2 s
+      bch: true
+    - name: Bitcoin
+      settle: unos 10 minutos
+      pct: 66.7
+      fee: varía
+      note: se dispara cuando se llenan los bloques
+    - name: Ethereum L1
+      settle: unos 13 minutos
+      pct: 86.7
+      fee: subasta de gas
+      note: bloques de 12 s; final en ~13 min
+    - name: Solana
+      settle: unos 13 segundos
+      pct: 1.5
+      fee: fracciones de centavo
+      note: la liquidación más rápida
+cta:
+  title: Recibe novedades de BCH
+  subtitle: Actualizaciones, herramientas y noticias del ecosistema, sin exageraciones.
+  action: Recibir novedades de BCH
+translation:
+  sourceHash: 601f950d2251e1e3
+  status: machine
+  translator: Claude

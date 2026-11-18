@@ -1,0 +1,74 @@
+---
+// The /earn page, English or translated (PAN-386). The routes
+// src/pages/earn.astro and src/pages/[locale]/[page].astro pass the copy.
+import Boxes from "~/components/widgets/Boxes.astro";
+import CallToAction from "~/components/widgets/CallToAction.astro";
+import Features from "~/components/widgets/Features.astro";
+import Hero from "~/components/widgets/Hero.astro";
+import InnerTitle from "~/components/widgets/InnerTitle.astro";
+import Layout from "~/layouts/PageLayout.astro";
+import type { TranslationState } from "~/utils/l10n";
+import type { PageCopy } from "~/utils/pages";
+import { getProjectsByCategory } from "~/utils/projects";
+
+interface Props {
+	/** The page copy for this locale (src/content/pages/[<locale>/]earn). */
+	copy: PageCopy;
+	/** Set on a translated page: drives its <TranslationNotice>. */
+	translation?: TranslationState | null;
+}
+
+const { copy, translation = null } = Astro.props;
+const metadata = { ...copy.metadata, ignoreTitleTemplate: true };
+
+const social = await getProjectsByCategory("earn:social", Astro.currentLocale);
+const defi = await getProjectsByCategory("earn:defi", Astro.currentLocale);
+const gaming = await getProjectsByCategory("earn:gaming", Astro.currentLocale);
+---
+
+<Layout metadata={metadata} translation={translation}>
+  <InnerTitle>
+    <Fragment slot="title">{copy.hero.title}</Fragment>
+    <Fragment slot="subtitle">{copy.hero.subtitle}</Fragment>
+  </InnerTitle>
+
+  <Boxes title={copy.how.title} subtitle={copy.how.subtitle} highlight={copy.how.highlight} items={copy.how.items} />
+
+  <Boxes subtitle={copy.social.subtitle} items={social} />
+
+  <Boxes subtitle={copy.defi.subtitle} items={defi} />
+
+  <Boxes subtitle={copy.gaming.subtitle} items={gaming} />
+
+  <Hero>
+    <Fragment slot="image">
+      <div class="relative h-0 pb-[56.25%]">
+        <iframe
+          width="560"
+          height="315"
+          src="https://www.youtube.com/embed/arFDrjx_2JY"
+          title={copy.video.title}
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture;"
+          allowfullscreen
+          class="absolute top-0 left-0 w-full h-full"
+        >
+        </iframe>
+      </div>
+    </Fragment>
+  </Hero>
+
+  <Features highlight="" title={copy.why.title} subtitle={copy.why.subtitle} items={copy.why.items} />
+  <CallToAction
+    actions={[
+      {
+        variant: 'primary',
+        text: copy.cta.action,
+        href: 'https://t.me/bchworks',
+        target: '_blank',
+      },
+    ]}
+  >
+    <Fragment slot="title">{copy.cta.title}</Fragment>
+    <Fragment slot="subtitle">{copy.cta.subtitle}</Fragment>
+  </CallToAction>
+</Layout>

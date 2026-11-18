@@ -1,21 +1,35 @@
 ---
 // Renders one entry of the `reference` collection (risks, is-bch-dead) with
-// the live chain panel above the text.
-import { getEntry, render } from "astro:content";
+// the live chain panel above the text, in English or a translation (PAN-386).
+import { type CollectionEntry, render } from "astro:content";
 import ArticleShell from "~/components/reference/ArticleShell.astro";
 import BchVitals from "~/components/reference/BchVitals.astro";
+import { DEFAULT_LOCALE, type LocaleCode } from "~/i18n/locales";
+import { getLocalizedEntry, getTranslationState } from "~/utils/l10n";
 
 export interface Props {
 	id: string;
+	locale?: LocaleCode;
 }
 
-const entry = await getEntry("reference", Astro.props.id);
-if (!entry) throw new Error(`reference entry "${Astro.props.id}" is missing`);
+const { id, locale = DEFAULT_LOCALE } = Astro.props;
+const entry = await getLocalizedEntry("reference", id, locale);
+if (!entry) throw new Error(`reference entry "${id}" is missing in ${locale}`);
 const { Content } = await render(entry);
-const d = entry.data;
+// A translation has the English fields plus its `translation` block.
+const d = entry.data as CollectionEntry<"reference">["data"];
+const translation = await getTranslationState("reference", id, locale);
 ---
 
-<ArticleShell title={d.title} description={d.description} verified={d.verified} faq={d.faq} sources={d.sources}>
+<ArticleShell
+  title={d.title}
+  description={d.description}
+  verified={d.verified}
+  faq={d.faq}
+  sources={d.sources}
+  lang={locale === DEFAULT_LOCALE ? undefined : locale}
+  translation={translation}
+>
   <Fragment slot="before"><BchVitals /></Fragment>
   <Content />
 </ArticleShell>

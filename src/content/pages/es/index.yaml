@@ -1,0 +1,188 @@
+metadata:
+  title: 'Bitcoin Cash (BCH): apréndelo, constrúyelo, míralo funcionar — BCH Works'
+  description: 'Bitcoin Cash es Bitcoin que funciona como dinero: comisiones de menos de un centavo, tokens nativos sin aprobaciones de contratos inteligentes y covenants Bitcoin ya en funcionamiento. Guías honestas, billeteras y recursos para desarrolladores.'
+hero:
+  chip: 'Actualización de mayo de 2026: bucles y funciones ya activos'
+  title: Bitcoin que <mark class="bg-wb-green text-on-accent px-[0.12em] rounded-[0.12em] [box-decoration-break:clone]">funciona</mark>.
+  lede: Paga a cualquiera por menos de un centavo. Acuña un token sin un contrato inteligente. Ejecuta los covenants Bitcoin que en Bitcoin Core (BTC) siguen siendo solo propuestas.
+  tagline: Apréndelo. Constrúyelo. Míralo funcionar.
+  primaryAction: Conseguir una billetera →
+  secondaryAction: Empezar a desarrollar
+  code:
+    label: 'Ejemplo de código: acuñar un CashToken con mainnet-js'
+    intro: '// Acuña tu primer CashToken (Token Pioneers #1)'
+    result: '// → 8a3f…c91e   comisión: 0.00000431 BCH'
+    tutorial: → Sigue el tutorial completo
+  stickers:
+    fungible: fungible
+    nft: NFT · acuñación
+    noApprove: sin approve()
+    noGas: sin gas
+pillars:
+  chip: La versión corta
+  title: Tres cosas que BCH hace bien.
+  intro: Pagos baratos y rápidos. Tokens integrados en la moneda. Bitcoin Script sin los límites de antes. Cada una funciona hoy en la red principal.
+  items:
+    - kicker: Dinero
+      title: Sin gas. Franqueo.
+      description: Pagas una tasa fija por byte, no una puja en una subasta de gas. Un pago típico cuesta alrededor de una décima de centavo y aparece en la otra billetera en segundos.
+      icon: tabler:mail-dollar
+      url: /spend
+      tone: green
+    - kicker: Tokens
+      title: Tokens sin aprobaciones que puedan vaciarte.
+      description: Los CashTokens viven dentro de la propia moneda. No hay contrato de token, ni approve(), ni clave de administrador, ni proxy actualizable. Acuñar uno cuesta menos de un centavo.
+      icon: tabler:coins
+      url: /cashtokens
+      tone: yellow
+    - kicker: Laboratorio
+      title: El laboratorio de covenants de Bitcoin.
+      description: 'Covenants, introspección, aritmética de números grandes, bucles y funciones: ideas que Bitcoin Core (BTC) todavía debate ya funcionan en la red principal de BCH. Pruébalas por una fracción de centavo.'
+      icon: tabler:flask
+      url: /build
+      tone: blue
+steps:
+  chip: 4 pasos
+  title: Empieza con BCH.
+  intro: Tómate tu tiempo en cada paso. Nadie puede revertir un pago por ti, así que primero aprende a usar tus herramientas.
+  walletLink: Elegir una billetera →
+  items:
+    - title: Descargar una billetera
+      description: Elige una billetera de código abierto y de autocustodia. Primero envíate unos centavos y aprende cómo funciona.
+      icon: tabler:download
+    - title: Hacer una copia de seguridad de tu frase de recuperación
+      description: Tu frase de recuperación es tu dinero. Anótala, guarda copias en más de un lugar seguro y nunca la escribas en un sitio web.
+      icon: tabler:lock
+    - title: Conseguir BCH
+      description: Gánalo o compra una pequeña cantidad en un exchange o con un vendedor de confianza. Empieza con poco mientras aprendes.
+      icon: tabler:currency-bitcoin
+    - title: ¡Listo!
+      description: Envía, recibe, gasta, acuña un token o despliega tu primer contrato.
+      icon: tabler:check
+specs:
+  chip: Ficha técnica
+  title: Las cifras.
+  intro: Los datos que respaldan lo que decimos, tal como están hoy.
+  items:
+    - label: Comisión típica
+      figure: ~$0.001
+      description: Alrededor de 1 satoshi por byte. Pagas por el tamaño de la transacción, no por el cómputo, así que la comisión se mantiene estable y predecible.
+    - label: El pago aparece
+      figure: Segundos
+      description: Las billeteras ven un pago de inmediato. Las pruebas de doble gasto avisan a los comercios si alguien intenta gastar las mismas monedas dos veces. Los bloques se confirman cada 10 minutos en promedio.
+    - label: Tamaño de bloque
+      figure: 32 MB+
+      description: El límite crece con la demanda sostenida gracias al algoritmo adaptativo (ABLA). Los bloques actuales usan una pequeña fracción de él.
+    - label: Suministro
+      figure: 21M
+      description: Un suministro fijo, protegido por prueba de trabajo SHA-256. Comparte su historial con Bitcoin hasta la división de 2017.
+    - label: Tokens nativos
+      figure: 20k+
+      description: Hay más de 20.000 categorías de CashToken acuñadas en la cadena, sin ningún contrato de token de por medio.
+    - label: Actualizaciones
+      figure: Cada mayo
+      description: CashTokens en 2023, bloques adaptativos en 2024, más capacidad de cómputo en la VM y aritmética de números grandes en 2025, bucles y funciones en 2026.
+utxo:
+  chip: Cómo funciona
+  title: Ya entiendes UTXOs.
+  body1: Un UTXO es una moneda. Tiene un valor, un candado que dice quién puede gastarla y un número de serie. Cuando pagas, entregas monedas enteras y recibes cambio, igual que con el efectivo en papel.
+  body2: Bitcoin también funciona así. Ejecuta abajo una transacción real y mira cómo sus monedas se gastan y se acuñan. Luego sigue cualquier moneda hacia atrás en la historia.
+  moreAction: Más sobre UTXOs →
+  buildAction: Aprender a desarrollar en BCH
+  presets:
+    - label: 'Aleatorio: del último bloque'
+      random: true
+    - label: Despertó después de 7 años
+      txid: 058c30f20434bd2999067b5a842c115abcd3bb7d6847d2997b1ebe08f1d3a838
+    - label: La pizza de 10.000 BTC (2010)
+      txid: a1075db55d416d3ca199f55b6084e2115b9345e16c5cf302fc80e9d5fbf5d48d
+opportunities:
+  chip: Elige un proyecto
+  title: ¿Qué vas a hacer con él?
+  intro: Lanza una app, abre una caja, acuña un token o mina un bloque. Cada camino de abajo te lleva desde cero hasta una primera transacción.
+  items:
+    - title: Desarrollar en BCH
+      description: El lugar más barato para tocar una blockchain real de prueba de trabajo. Aprende UTXO y covenants, que son habilidades de Bitcoin, y lanza apps donde una transacción de prueba cuesta alrededor de 0,001 US$.
+      icon: tabler:code
+      url: /build
+      size: wide
+      tone: blue
+    - title: Aceptar BCH
+      description: Una comisión que puedes calcular mentalmente, sin contracargos y con alertas de doble gasto para pagos que aún no se confirman. Acepta BCH en una tienda, en línea o por trabajo freelance.
+      icon: tabler:cash-register
+      url: /accept
+      size: wide
+    - title: Acuñar un CashToken
+      description: Los tokens fungibles y los NFT son nativos de la cadena. Crea uno en minutos.
+      icon: tabler:coins
+      url: /cashtokens
+      tone: yellow
+    - title: Enviar dinero a casa
+      description: Mueve valor entre países en segundos, sin formularios y con una comisión que se redondea a cero.
+      icon: tabler:send
+      url: /buy
+    - title: Minar un bloque de BCH
+      description: Prueba de trabajo SHA-256. Únete a un pool, dirige tu tasa de hash a BCH o ejecuta un nodo completo.
+      icon: tabler:pick
+      url: /mining
+    - title: Ganar BCH
+      description: Trabaja como freelance, crea contenido, reclama recompensas, gestiona un Flipstarter o mantén infraestructura.
+      icon: tabler:briefcase
+      url: /earn
+    - title: Gastar BCH
+      description: Paga en comercios en línea y en persona. Sin cuenta, sin permiso, por menos de un centavo.
+      icon: tabler:shopping-cart
+      url: /spend
+    - title: Seguir un tutorial
+      description: Guías paso a paso, informes de campo y notas del ecosistema del blog de BCH Works.
+      icon: tabler:notebook
+      url: /blog
+    - title: Conectar con la comunidad de BCH
+      description: Recibe ayuda, encuentra un mentor y conoce a las personas que construyen BCH en todo el mundo. Todos son bienvenidos.
+      icon: tabler:users
+      url: /support
+      size: wide
+      tone: pink
+    - title: Leer el panorama honesto
+      description: Qué es Bitcoin Cash, cómo se compara con Bitcoin, Ethereum y Solana, y en qué todavía no es bueno.
+      icon: tabler:scale
+      url: /bitcoin-cash
+      size: wide
+limits:
+  chip: Sin rodeos
+  title: Lo que BCH no es (todavía).
+  intro: Toda cadena tiene sus compromisos. Estos son los nuestros, para que decidas con el panorama completo.
+  compareLink: Comparar BCH con Bitcoin, Ethereum y Solana →
+  items:
+    - title: Ecosistema pequeño
+      description: Unos cientos de desarrolladores activos y poca liquidez. La mayoría de la gente nunca ha usado una app de BCH.
+    - title: No es privado por defecto
+      description: BCH es un registro transparente. Obtienes autocustodia y resistencia a la censura, no anonimato.
+    - title: Bloques de 10 minutos
+      description: Los pagos aparecen en segundos, pero espera 6 bloques o más (alrededor de una hora) antes de considerar definitivo un pago grande.
+    - title: Menos tasa de hash que Bitcoin Core (BTC)
+      description: BCH comparte el algoritmo SHA-256 con Bitcoin y tiene una pequeña fracción de su tasa de hash.
+watch:
+  chip: Ver
+  title: Bitcoin Cash en tres clips.
+  intro: Videos cortos sobre el dinero sin permisos y lo que significa guardar tus propias claves.
+  videoTitle: 'Video de Bitcoin Cash, '
+  videos:
+    - id: ImiflXHbMIE
+      label: Parte 1
+    - id: UzTc_p_8n_o
+      label: Parte 2
+    - id: pe2h-fK4SiE
+      label: Parte 3
+blog:
+  chip: Blog
+  title: Desde el taller.
+  action: Ver todas las publicaciones →
+updates:
+  title: Recibe novedades de BCH.
+  text: Actualizaciones, nuevas herramientas y noticias honestas sobre Bitcoin Cash, en Telegram.
+  action: Unirse en Telegram
+translation:
+  sourceHash: 2c35d904ee15cbfc
+  status: machine
+  translator: Claude

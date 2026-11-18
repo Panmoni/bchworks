@@ -53,6 +53,9 @@ const FRONTMATTER_KEYS = new Set([
 	"notes",
 	"question",
 	"answer",
+	// FAQ items in reference, compare and guide frontmatter (PAN-386).
+	"q",
+	"a",
 	"sinceNote",
 	"btcNote",
 	"heading",

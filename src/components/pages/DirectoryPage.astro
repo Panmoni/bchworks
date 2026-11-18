@@ -1,0 +1,225 @@
+---
+// The /directory page, English or translated (PAN-386). The routes
+// src/pages/directory.astro and src/pages/[locale]/[page].astro pass the copy.
+import { Image } from "astro:assets";
+import { getCollection } from "astro:content";
+import Freshness from "~/components/reference/Freshness.astro";
+import HealthBadge from "~/components/reference/HealthBadge.astro";
+import InnerTitle from "~/components/widgets/InnerTitle.astro";
+import { getLocale, type LocaleCode } from "~/i18n/locales";
+import Layout from "~/layouts/PageLayout.astro";
+import {
+	englishData,
+	localizeRecord,
+	type TranslationState,
+} from "~/utils/l10n";
+import type { PageCopy } from "~/utils/pages";
+import {
+	DIRECTORY_SECTIONS,
+	formatDate,
+	getHealthMap,
+} from "~/utils/reference";
+
+// Language of this page's JSON-LD: the route's locale (PAN-380).
+const lang = getLocale(Astro.currentLocale).bcp47;
+
+interface Props {
+	/** The page copy for this locale (src/content/pages/[<locale>/]directory). */
+	copy: PageCopy;
+	/** Set on a translated page: drives its <TranslationNotice>. */
+	translation?: TranslationState | null;
+}
+
+const { copy, translation = null } = Astro.props;
+const metadata = { ...copy.metadata, ignoreTitleTemplate: true };
+
+const projects = await getCollection("projects");
+const health = await getHealthMap();
+
+const sectionOf = (categories: string[]) =>
+	DIRECTORY_SECTIONS.find((s) =>
+		categories.some((c) => c === s.id || c.startsWith(`${s.id}:`)),
+	)?.id ?? "support";
+
+const listed = projects.filter((p) => p.data.status !== "deprecated");
+
+// Section names are site data, English on every page; descriptions come from
+// the locale's overlay, else English marked as a fallback (docs/i18n.md).
+const sectionAttrs = englishData(Astro.currentLocale);
+const describe = (p: (typeof projects)[number]) =>
+	p.data.description
+		? localizeRecord(
+				{ id: p.id, description: p.data.description },
+				"projects",
+				["description"],
+				getLocale(Astro.currentLocale).code as LocaleCode,
+			).description
+		: null;
+const graveyard = projects.filter((p) => p.data.status === "deprecated");
+
+const sections = DIRECTORY_SECTIONS.map((s) => ({
+	...s,
+	items: listed
+		.filter((p) => sectionOf(p.data.categories) === s.id)
+		.sort((a, b) => a.data.title.localeCompare(b.data.title)),
+})).filter((s) => s.items.length);
+
+const tally = { alive: 0, stale: 0, dead: 0, unknown: 0 };
+for (const p of listed) tally[health.get(p.id)?.state ?? "unknown"]++;
+
+const lastCheck = [...health.values()]
+	.map((h) => h.checkedAt.getTime())
+	.sort((a, b) => b - a)[0];
+
+const dataset = {
+	"@context": "https://schema.org",
+	"@type": "Dataset",
+	inLanguage: lang,
+	name: copy.datasetName,
+	description: metadata.description,
+	url: "https://bchworks.com/directory",
+	license: "https://creativecommons.org/licenses/by/4.0/",
+	creator: { "@type": "Organization", name: "BCH Works" },
+	...(lastCheck ? { dateModified: new Date(lastCheck).toISOString() } : {}),
+};
+---
+
+<Layout metadata={metadata} translation={translation}>
+  <Fragment slot="head">
+    <script type="application/ld+json" set:html={JSON.stringify(dataset)} />
+  </Fragment>
+
+  <InnerTitle>
+    <Fragment slot="title">{copy.hero.title}</Fragment>
+    <Fragment slot="subtitle">
+      {`${listed.length} ${copy.hero.subtitle}`}
+    </Fragment>
+  </InnerTitle>
+
+  <section class="max-w-7xl mx-auto px-4 sm:px-6 py-8">
+    <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+      {
+        (['alive', 'stale', 'dead', 'unknown'] as const).map((s) => (
+          <button type="button" class="wb-card p-4 text-left wb-card-hover" data-filter-state={s}>
+            <span class="font-mono text-xs uppercase text-muted">{copy.states[s]}</span>
+            <span class="block font-heading text-3xl font-extrabold">{tally[s]}</span>
+          </button>
+        ))
+      }
+    </div>
+    <p class="mt-4 text-sm text-muted">
+      <Fragment set:html={copy.legend.html} />
+      {lastCheck ? <> {copy.legend.lastCheck} {formatDate(new Date(lastCheck), Astro.currentLocale)}.</> : <> {copy.legend.noCheck}</>}
+      {copy.legend.missing}
+      <a class="underline" href="https://github.com/Panmoni/bitcoincashsite-www/blob/main/src/data/projects.json" target="_blank" rel="noopener noreferrer">{copy.legend.edit}</a>.
+    </p>
+
+    <div class="mt-6 flex flex-wrap gap-3 items-center">
+      <label class="sr-only" for="dir-search">{copy.search.label}</label>
+      <input
+        id="dir-search"
+        type="search"
+        placeholder={copy.search.placeholder}
+        class="wb-card px-4 py-2 w-full md:w-96 bg-surface"
+        autocomplete="off"
+      />
+      <button type="button" class="font-mono text-xs underline" data-filter-state="">{copy.search.showAll}</button>
+    </div>
+
+    <nav class="mt-6 flex flex-wrap gap-2" aria-label={copy.sectionsNav}>
+      {sections.map((s) => <a class="wb-chip" href={`#${s.id}`}><span {...sectionAttrs}>{s.title}</span> ({s.items.length})</a>)}
+    </nav>
+  </section>
+
+  {
+    sections.map((s) => (
+      <section id={s.id} class="max-w-7xl mx-auto px-4 sm:px-6 py-6 scroll-mt-24" data-dir-section>
+        <h2 class="font-heading text-3xl font-extrabold tracking-tight mb-4" {...sectionAttrs}>
+          {s.href ? <a class="hover:underline" href={s.href}>{s.title}</a> : s.title}
+        </h2>
+        <ul class="grid gap-3 md:grid-cols-2">
+          {s.items.map((p) => {
+            const h = health.get(p.id);
+            const description = describe(p);
+            return (
+              <li
+                class="wb-card p-4 flex gap-3"
+                data-dir-item
+                data-state={h?.state ?? 'unknown'}
+                data-search={`${p.data.title} ${p.data.description ?? ''} ${p.data.categories.join(' ')} ${(p.data.tags ?? []).join(' ')}`.toLowerCase()}
+              >
+                {p.data.icon && (
+                  <Image src={p.data.icon} alt="" width={40} height={40} layout="fixed" fit="contain" class="w-10 h-10 shrink-0 rounded-lg border-2 border-line bg-white object-contain p-1" />
+                )}
+                <div class="min-w-0 flex-1">
+                  <div class="flex flex-wrap items-center gap-2">
+                    {p.data.url ? (
+                      <a class="font-heading text-lg font-extrabold hover:underline" href={p.data.url} target="_blank" rel="noopener noreferrer">
+                        {p.data.title}
+                      </a>
+                    ) : (
+                      <span class="font-heading text-lg font-extrabold">{p.data.title}</span>
+                    )}
+                    <HealthBadge health={h} />
+                  </div>
+                  {description && (
+                    <p class="text-sm text-muted mt-1" {...(description.fallback ? englishData(Astro.currentLocale) : {})}>
+                      {description.text}
+                    </p>
+                  )}
+                  <div class="mt-2 flex flex-wrap gap-x-4 gap-y-1">
+                    <Freshness date={p.data.verified} />
+                    {h?.lastCommit && (
+                      <span class="font-mono text-xs text-muted">
+                        <a class="underline" href={`https://github.com/${p.data.github}`} target="_blank" rel="noopener noreferrer">{copy.commit}</a>{' '}
+                        {formatDate(h.lastCommit, Astro.currentLocale)}
+                      </span>
+                    )}
+                  </div>
+                </div>
+              </li>
+            );
+          })}
+        </ul>
+      </section>
+    ))
+  }
+
+  {
+    graveyard.length > 0 && (
+      <section id="graveyard" class="max-w-7xl mx-auto px-4 sm:px-6 py-10">
+        <h2 class="font-heading text-3xl font-extrabold tracking-tight">{copy.graveyard.title}</h2>
+        <p class="text-muted mt-2 mb-4">
+          {copy.graveyard.text}
+        </p>
+        <ul class="flex flex-wrap gap-2">
+          {graveyard
+            .sort((a, b) => a.data.title.localeCompare(b.data.title))
+            .map((p) => <li class="wb-chip opacity-70 line-through">{p.data.title}</li>)}
+        </ul>
+      </section>
+    )
+  }
+</Layout>
+
+<script>
+  const input = document.querySelector<HTMLInputElement>('#dir-search');
+  let state = '';
+  const apply = () => {
+    const q = (input?.value ?? '').trim().toLowerCase();
+    for (const el of document.querySelectorAll<HTMLElement>('[data-dir-item]')) {
+      const hit = (!q || el.dataset.search?.includes(q)) && (!state || el.dataset.state === state);
+      el.hidden = !hit;
+    }
+    for (const sec of document.querySelectorAll<HTMLElement>('[data-dir-section]')) {
+      sec.hidden = !sec.querySelector('[data-dir-item]:not([hidden])');
+    }
+  };
+  input?.addEventListener('input', apply);
+  for (const b of document.querySelectorAll<HTMLElement>('[data-filter-state]')) {
+    b.addEventListener('click', () => {
+      state = b.dataset.filterState ?? '';
+      apply();
+    });
+  }
+</script>
