@@ -1,0 +1,2978 @@
+{
+	"zapit": {
+		"description": {
+			"text": "Celular y navegador",
+			"sourceHash": "8067bc423b0286fd",
+			"status": "machine",
+			"translator": "Claude"
+		}
+	},
+	"paytaca": {
+		"description": {
+			"text": "Celular y navegador",
+			"sourceHash": "8067bc423b0286fd",
+			"status": "machine",
+			"translator": "Claude"
+		}
+	},
+	"cashonize": {
+		"description": {
+			"text": "Web y Android",
+			"sourceHash": "7b343a1503cdf0ae",
+			"status": "machine",
+			"translator": "Claude"
+		}
+	},
+	"electron-cash": {
+		"description": {
+			"text": "Computadora y celular. Para usuarios avanzados.",
+			"sourceHash": "93559daa82f4d683",
+			"status": "machine",
+			"translator": "Claude"
+		}
+	},
+	"stack-wallet": {
+		"description": {
+			"text": "Android, iOS y F-Droid. Centrada en la privacidad y de código abierto.",
+			"sourceHash": "3a3d47cb0f043e30",
+			"status": "machine",
+			"translator": "Claude"
+		}
+	},
+	"cake-wallet": {
+		"description": {
+			"text": "Multiplataforma, multicripto.",
+			"sourceHash": "cfc7b4bc38fc64da",
+			"status": "machine",
+			"translator": "Claude"
+		}
+	},
+	"edge": {
+		"description": {
+			"text": "Multimoneda para celular.",
+			"sourceHash": "a6deaec644012de1",
+			"status": "machine",
+			"translator": "Claude"
+		}
+	},
+	"bitpay": {
+		"description": {
+			"text": "Celular y navegador.",
+			"sourceHash": "a736e90baa289ed9",
+			"status": "machine",
+			"translator": "Claude"
+		}
+	},
+	"fullstack-cash-wallet": {
+		"description": {
+			"text": "Billetera web compatible con SLP.",
+			"sourceHash": "ad22db553ac5c065",
+			"status": "machine",
+			"translator": "Claude"
+		}
+	},
+	"exodus": {
+		"description": {
+			"text": "Celular y navegador.",
+			"sourceHash": "a736e90baa289ed9",
+			"status": "machine",
+			"translator": "Claude"
+		}
+	},
+	"guarda": {
+		"description": {
+			"text": "Celular y computadora.",
+			"sourceHash": "f0a60e7832b4f7dc",
+			"status": "machine",
+			"translator": "Claude"
+		}
+	},
+	"coinbase-wallet": {
+		"description": {
+			"text": "Celular y navegador.",
+			"sourceHash": "a736e90baa289ed9",
+			"status": "machine",
+			"translator": "Claude"
+		}
+	},
+	"atomic-wallet": {
+		"description": {
+			"text": "Multimoneda.",
+			"sourceHash": "c53f78764cd7bcd5",
+			"status": "machine",
+			"translator": "Claude"
+		}
+	},
+	"cashaddress-org": {
+		"description": {
+			"text": "Generador de billeteras en JS.",
+			"sourceHash": "8a28e265e12f43cc",
+			"status": "machine",
+			"translator": "Claude"
+		}
+	},
+	"unstoppable-wallet": {
+		"description": {
+			"text": "Billetera multimoneda centrada en la privacidad.",
+			"sourceHash": "0df079b657964e73",
+			"status": "machine",
+			"translator": "Claude"
+		}
+	},
+	"gem-wallet": {
+		"description": {
+			"text": "Billetera multimoneda de código abierto.",
+			"sourceHash": "2adfba300fe82113",
+			"status": "machine",
+			"translator": "Claude"
+		}
+	},
+	"oxapay-wallet": {
+		"description": {
+			"text": "Billetera cripto compatible con BCH.",
+			"sourceHash": "013a886c8f46e036",
+			"status": "machine",
+			"translator": "Claude"
+		}
+	},
+	"coinomi": {
+		"description": {
+			"text": "Billetera multicadena.",
+			"sourceHash": "a1d35f5bda32d365",
+			"status": "machine",
+			"translator": "Claude"
+		}
+	},
+	"xdefi-wallet": {
+		"description": {
+			"text": "Billetera multicadena.",
+			"sourceHash": "a1d35f5bda32d365",
+			"status": "machine",
+			"translator": "Claude"
+		}
+	},
+	"coin-space": {
+		"description": {
+			"text": "Billetera de BCH de código abierto.",
+			"sourceHash": "327c6f65ca96a492",
+			"status": "machine",
+			"translator": "Claude"
+		}
+	},
+	"trust-wallet": {
+		"description": {
+			"text": "Popular billetera multicadena de autocustodia",
+			"sourceHash": "c4aa831911182f7e",
+			"status": "machine",
+			"translator": "Claude"
+		}
+	},
+	"bitcoin-com-wallet": {
+		"description": {
+			"text": "Billetera multicadena de autocustodia de Bitcoin.com",
+			"sourceHash": "b2964cb36048fef0",
+			"status": "machine",
+			"translator": "Claude"
+		}
+	},
+	"satochip": {
+		"description": {
+			"text": "Billetera física.",
+			"sourceHash": "3d901b58f5419e5d",
+			"status": "machine",
+			"translator": "Claude"
+		}
+	},
+	"ledger": {
+		"description": {
+			"text": "Billetera física.",
+			"sourceHash": "3d901b58f5419e5d",
+			"status": "machine",
+			"translator": "Claude"
+		}
+	},
+	"trezor": {
+		"description": {
+			"text": "Billetera física.",
+			"sourceHash": "3d901b58f5419e5d",
+			"status": "machine",
+			"translator": "Claude"
+		}
+	},
+	"keepkey": {
+		"description": {
+			"text": "Billetera física.",
+			"sourceHash": "3d901b58f5419e5d",
+			"status": "machine",
+			"translator": "Claude"
+		}
+	},
+	"onekey": {
+		"description": {
+			"text": "Billetera física y de software de código abierto",
+			"sourceHash": "bcbe9770a7d463e8",
+			"status": "machine",
+			"translator": "Claude"
+		}
+	},
+	"keystone": {
+		"description": {
+			"text": "Billetera física de código abierto, aislada de la red",
+			"sourceHash": "7f23c6a126e43de1",
+			"status": "machine",
+			"translator": "Claude"
+		}
+	},
+	"tangem": {
+		"description": {
+			"text": "Billetera física en tarjeta NFC con app para celular",
+			"sourceHash": "030268ddb295d29a",
+			"status": "machine",
+			"translator": "Claude"
+		}
+	},
+	"safepal": {
+		"description": {
+			"text": "Billetera multicadena física con app",
+			"sourceHash": "ddddc994ad9c9771",
+			"status": "machine",
+			"translator": "Claude"
+		}
+	},
+	"ellipal": {
+		"description": {
+			"text": "Billetera física aislada de la red, con app",
+			"sourceHash": "aaac127b02fcb420",
+			"status": "machine",
+			"translator": "Claude"
+		}
+	},
+	"kraken": {
+		"description": {
+			"text": "Global",
+			"sourceHash": "a258b30f88c30650",
+			"status": "machine",
+			"translator": "Claude"
+		}
+	},
+	"gemini": {
+		"description": {
+			"text": "Global",
+			"sourceHash": "a258b30f88c30650",
+			"status": "machine",
+			"translator": "Claude"
+		}
+	},
+	"bitcoinvn": {
+		"description": {
+			"text": "Cripto a cripto y VND",
+			"sourceHash": "84bd34ab3efe3e3d",
+			"status": "machine",
+			"translator": "Claude"
+		}
+	},
+	"coinbase": {
+		"description": {
+			"text": "Global",
+			"sourceHash": "a258b30f88c30650",
+			"status": "machine",
+			"translator": "Claude"
+		}
+	},
+	"binance": {
+		"description": {
+			"text": "Global",
+			"sourceHash": "a258b30f88c30650",
+			"status": "machine",
+			"translator": "Claude"
+		}
+	},
+	"okx": {
+		"description": {
+			"text": "Global",
+			"sourceHash": "a258b30f88c30650",
+			"status": "machine",
+			"translator": "Claude"
+		}
+	},
+	"coinex": {
+		"description": {
+			"text": "Global",
+			"sourceHash": "a258b30f88c30650",
+			"status": "machine",
+			"translator": "Claude"
+		}
+	},
+	"huobi": {
+		"description": {
+			"text": "Global",
+			"sourceHash": "a258b30f88c30650",
+			"status": "machine",
+			"translator": "Claude"
+		}
+	},
+	"buda": {
+		"description": {
+			"text": "América Latina",
+			"sourceHash": "ec3b43ddb1ac0976",
+			"status": "machine",
+			"translator": "Claude"
+		}
+	},
+	"coincola": {
+		"description": {
+			"text": "Entre pares",
+			"sourceHash": "a88c806de92a74f2",
+			"status": "machine",
+			"translator": "Claude"
+		}
+	},
+	"bitstamp": {
+		"description": {
+			"text": "Exchange global.",
+			"sourceHash": "4e941b7d24875874",
+			"status": "machine",
+			"translator": "Claude"
+		}
+	},
+	"cex-io": {
+		"description": {
+			"text": "Exchange global.",
+			"sourceHash": "4e941b7d24875874",
+			"status": "machine",
+			"translator": "Claude"
+		}
+	},
+	"uphold": {
+		"description": {
+			"text": "Plataforma global multiactivo.",
+			"sourceHash": "5d3b57c4259c79ef",
+			"status": "machine",
+			"translator": "Claude"
+		}
+	},
+	"etoro": {
+		"description": {
+			"text": "Plataforma de trading social.",
+			"sourceHash": "59b534bbff4eae1e",
+			"status": "machine",
+			"translator": "Claude"
+		}
+	},
+	"crypto-com": {
+		"description": {
+			"text": "Exchange global.",
+			"sourceHash": "4e941b7d24875874",
+			"status": "machine",
+			"translator": "Claude"
+		}
+	},
+	"coincheck": {
+		"description": {
+			"text": "Exchange japonés.",
+			"sourceHash": "4bcb18b36ca460f6",
+			"status": "machine",
+			"translator": "Claude"
+		}
+	},
+	"independent-reserve": {
+		"description": {
+			"text": "Exchange australiano.",
+			"sourceHash": "fab884252e766118",
+			"status": "machine",
+			"translator": "Claude"
+		}
+	},
+	"korbit": {
+		"description": {
+			"text": "Exchange coreano.",
+			"sourceHash": "04e2fa525abb9f08",
+			"status": "machine",
+			"translator": "Claude"
+		}
+	},
+	"poloniex": {
+		"description": {
+			"text": "Exchange global.",
+			"sourceHash": "4e941b7d24875874",
+			"status": "machine",
+			"translator": "Claude"
+		}
+	},
+	"karsha": {
+		"description": {
+			"text": "Exchange de BCH.",
+			"sourceHash": "7eb70dd7adfc0cb1",
+			"status": "machine",
+			"translator": "Claude"
+		}
+	},
+	"coinfalcon": {
+		"description": {
+			"text": "Exchange de BCH.",
+			"sourceHash": "7eb70dd7adfc0cb1",
+			"status": "machine",
+			"translator": "Claude"
+		}
+	},
+	"bitflyer": {
+		"description": {
+			"text": "Exchange japonés.",
+			"sourceHash": "4bcb18b36ca460f6",
+			"status": "machine",
+			"translator": "Claude"
+		}
+	},
+	"bitvavo": {
+		"description": {
+			"text": "Exchange europeo.",
+			"sourceHash": "b3468e7ecafa36c6",
+			"status": "machine",
+			"translator": "Claude"
+		}
+	},
+	"matrixport": {
+		"description": {
+			"text": "Plataforma cripto para instituciones y minoristas.",
+			"sourceHash": "452434b03b6b7d14",
+			"status": "machine",
+			"translator": "Claude"
+		}
+	},
+	"sideshift-ai": {
+		"description": {
+			"text": "Cripto a cripto",
+			"sourceHash": "3f10f9f85cc63e3c",
+			"status": "machine",
+			"translator": "Claude"
+		}
+	},
+	"thorswap": {
+		"description": {
+			"text": "Cripto a cripto",
+			"sourceHash": "3f10f9f85cc63e3c",
+			"status": "machine",
+			"translator": "Claude"
+		}
+	},
+	"shapeshift": {
+		"description": {
+			"text": "Cripto a cripto",
+			"sourceHash": "3f10f9f85cc63e3c",
+			"status": "machine",
+			"translator": "Claude"
+		}
+	},
+	"changenow": {
+		"description": {
+			"text": "Intercambio instantáneo sin custodia.",
+			"sourceHash": "8364b01c4b6c0d9b",
+			"status": "machine",
+			"translator": "Claude"
+		}
+	},
+	"stealthex": {
+		"description": {
+			"text": "Servicio de intercambio sin custodia.",
+			"sourceHash": "42fbabeb4d6d28d2",
+			"status": "machine",
+			"translator": "Claude"
+		}
+	},
+	"simpleswap": {
+		"description": {
+			"text": "Intercambio instantáneo de criptomonedas.",
+			"sourceHash": "b3181f95fbfd7202",
+			"status": "machine",
+			"translator": "Claude"
+		}
+	},
+	"swapzone": {
+		"description": {
+			"text": "Agregador de intercambios de criptomonedas.",
+			"sourceHash": "5e205f85b72cd3cd",
+			"status": "machine",
+			"translator": "Claude"
+		}
+	},
+	"changelly": {
+		"description": {
+			"text": "Servicio de intercambio instantáneo.",
+			"sourceHash": "dd3f519ce4cfd467",
+			"status": "machine",
+			"translator": "Claude"
+		}
+	},
+	"cyphergoat": {
+		"description": {
+			"text": "Servicio de intercambio de BCH.",
+			"sourceHash": "488ab5575524e16e",
+			"status": "machine",
+			"translator": "Claude"
+		}
+	},
+	"flashift": {
+		"description": {
+			"text": "Servicio de intercambio de BCH.",
+			"sourceHash": "488ab5575524e16e",
+			"status": "machine",
+			"translator": "Claude"
+		}
+	},
+	"whalesheaven": {
+		"description": {
+			"text": "Exchange de criptomonedas P2P.",
+			"sourceHash": "34f771720e30ef05",
+			"status": "machine",
+			"translator": "Claude"
+		}
+	},
+	"bestrate": {
+		"description": {
+			"text": "Agregador de intercambios.",
+			"sourceHash": "87f93ccbfc4d9545",
+			"status": "machine",
+			"translator": "Claude"
+		}
+	},
+	"basicswap": {
+		"description": {
+			"text": "DEX de intercambios atómicos entre pares compatible con BCH",
+			"sourceHash": "7adbe50987509245",
+			"status": "machine",
+			"translator": "Claude"
+		}
+	},
+	"axeswap": {
+		"description": {
+			"text": "Intercambios atómicos sin intermediarios de Monero a Bitcoin Cash",
+			"sourceHash": "7d325bcbbeac902f",
+			"status": "machine",
+			"translator": "Claude"
+		}
+	},
+	"coinatmradar": {
+		"description": {
+			"text": "Cajeros automáticos cerca de ti.",
+			"sourceHash": "5918bea638f67c1a",
+			"status": "machine",
+			"translator": "Claude"
+		}
+	},
+	"fastbtc-atm": {
+		"description": {
+			"text": "Red canadiense de cajeros automáticos de BCH.",
+			"sourceHash": "4877a1cdcb11eadf",
+			"status": "machine",
+			"translator": "Claude"
+		}
+	},
+	"coingate-spend": {
+		"description": {
+			"text": "Compra tarjetas de regalo con BCH.",
+			"sourceHash": "5fee526d57140d3d",
+			"status": "machine",
+			"translator": "Claude"
+		}
+	},
+	"alfatop": {
+		"description": {
+			"text": "Compra minutos para tu celular con BCH.",
+			"sourceHash": "fcca05577a76dee7",
+			"status": "machine",
+			"translator": "Claude"
+		}
+	},
+	"egifter": {
+		"description": {
+			"text": "Compra tarjetas de regalo con BCH.",
+			"sourceHash": "5fee526d57140d3d",
+			"status": "machine",
+			"translator": "Claude"
+		}
+	},
+	"bitgree": {
+		"description": {
+			"text": "Compra cosas con BCH.",
+			"sourceHash": "ada60131c575aac2",
+			"status": "machine",
+			"translator": "Claude"
+		}
+	},
+	"menufy": {
+		"description": {
+			"text": "Pide comida en línea con BCH.",
+			"sourceHash": "8dc4d6d77a6bdd4e",
+			"status": "machine",
+			"translator": "Claude"
+		}
+	},
+	"swagme-cash": {
+		"description": {
+			"text": "Artículos personalizados con logos de BCH.",
+			"sourceHash": "5511b0b3b6ad4ae3",
+			"status": "machine",
+			"translator": "Claude"
+		}
+	},
+	"travala": {
+		"description": {
+			"text": "Reserva hoteles y vuelos con BCH.",
+			"sourceHash": "54988e1610f9fdc0",
+			"status": "machine",
+			"translator": "Claude"
+		}
+	},
+	"overstock": {
+		"description": {
+			"text": "Compra muebles con BCH.",
+			"sourceHash": "f386fd8e5f27348e",
+			"status": "machine",
+			"translator": "Claude"
+		}
+	},
+	"keys4coins": {
+		"description": {
+			"text": "Compra tarjetas de regalo con BCH.",
+			"sourceHash": "5fee526d57140d3d",
+			"status": "machine",
+			"translator": "Claude"
+		}
+	},
+	"namecheap": {
+		"description": {
+			"text": "Compra dominios y más con BCH.",
+			"sourceHash": "df47e2152c5f7b83",
+			"status": "machine",
+			"translator": "Claude"
+		}
+	},
+	"ramnode": {
+		"description": {
+			"text": "Compra alojamiento web con BCH.",
+			"sourceHash": "e0b8b9c9038f3962",
+			"status": "machine",
+			"translator": "Claude"
+		}
+	},
+	"cheapair": {
+		"description": {
+			"text": "Compra boletos de avión con BCH.",
+			"sourceHash": "0bfa8365031fdaa4",
+			"status": "machine",
+			"translator": "Claude"
+		}
+	},
+	"mullvad": {
+		"description": {
+			"text": "Compra tu VPN con BCH.",
+			"sourceHash": "7958f95fcf70a274",
+			"status": "machine",
+			"translator": "Claude"
+		}
+	},
+	"satoshis-angels": {
+		"description": {
+			"text": "Servicios de marketing cripto.",
+			"sourceHash": "bb467f1d82b6356d",
+			"status": "machine",
+			"translator": "Claude"
+		}
+	},
+	"newegg": {
+		"description": {
+			"text": "Compra computadoras con BCH.",
+			"sourceHash": "067341f5b018b7b2",
+			"status": "machine",
+			"translator": "Claude"
+		}
+	},
+	"one-surgery": {
+		"description": {
+			"text": "Una comunidad global de cirugía.",
+			"sourceHash": "6aed888eee8818f1",
+			"status": "machine",
+			"translator": "Claude"
+		}
+	},
+	"apmex": {
+		"description": {
+			"text": "Compra metales preciosos con BCH.",
+			"sourceHash": "34904f82433cbd64",
+			"status": "machine",
+			"translator": "Claude"
+		}
+	},
+	"att": {
+		"description": {
+			"text": "Paga tu factura de teléfono con BCH.",
+			"sourceHash": "4d5c9e6c63369533",
+			"status": "machine",
+			"translator": "Claude"
+		}
+	},
+	"dish-tv": {
+		"description": {
+			"text": "Compra TV satelital con BCH.",
+			"sourceHash": "41828d91dd20e1bf",
+			"status": "machine",
+			"translator": "Claude"
+		}
+	},
+	"visionati": {
+		"description": {
+			"text": "Descripción y análisis de imágenes con IA.",
+			"sourceHash": "0532b1bfd6b7c0f1",
+			"status": "machine",
+			"translator": "Claude"
+		}
+	},
+	"alagoria": {
+		"description": {
+			"text": "Compra de forma anónima en Walmart y Home Depot.",
+			"sourceHash": "d389267fc25631d9",
+			"status": "machine",
+			"translator": "Claude"
+		}
+	},
+	"ipfs-bch": {
+		"description": {
+			"text": "Servicio de anclaje de archivos en IPFS con liquidación en la cadena.",
+			"sourceHash": "669d97abadb294bb",
+			"status": "machine",
+			"translator": "Claude"
+		}
+	},
+	"paytaca-map": {
+		"description": {
+			"text": "Mapa de comercios que aceptan BCH mediante Paytaca",
+			"sourceHash": "364143126fc61f70",
+			"status": "machine",
+			"translator": "Claude"
+		}
+	},
+	"bitcoin-com-map": {
+		"description": {
+			"text": "Mapa de comercios que aceptan BCH y otras criptomonedas",
+			"sourceHash": "f546000eba254ca6",
+			"status": "machine",
+			"translator": "Claude"
+		}
+	},
+	"cryptwerk": {
+		"description": {
+			"text": "Directorio de lugares que aceptan criptomonedas, incl. BCH",
+			"sourceHash": "e9555bc342c26496",
+			"status": "machine",
+			"translator": "Claude"
+		}
+	},
+	"noise-app": {
+		"description": {
+			"text": "Noise es una red social solo por invitación.",
+			"sourceHash": "f260cfcb92eb5439",
+			"status": "machine",
+			"translator": "Claude"
+		}
+	},
+	"read-cash": {
+		"description": {
+			"text": "Escribe artículos para la comunidad de Bitcoin Cash, gana seguidores y recibe propinas en BCH.",
+			"sourceHash": "badb344bc3a387b9",
+			"status": "machine",
+			"translator": "Claude"
+		}
+	},
+	"cashrain": {
+		"description": {
+			"text": "Gana recompensas comunitarias en BCH.",
+			"sourceHash": "542e5b80a3a57edc",
+			"status": "machine",
+			"translator": "Claude"
+		}
+	},
+	"glimpse-cash": {
+		"description": {
+			"text": "Sube videos y cobra en BCH.",
+			"sourceHash": "fdecdb2afd68cfa8",
+			"status": "machine",
+			"translator": "Claude"
+		}
+	},
+	"chaintip": {
+		"description": {
+			"text": "Servicio de propinas en BCH.",
+			"sourceHash": "52e23d2e6c2de19a",
+			"status": "machine",
+			"translator": "Claude"
+		}
+	},
+	"tipbitcoincash": {
+		"description": {
+			"text": "El servicio de propinas en Bitcoin Cash para streamers.",
+			"sourceHash": "d3ce28316dbcbfc5",
+			"status": "machine",
+			"translator": "Claude"
+		}
+	},
+	"cointree": {
+		"description": {
+			"text": "Crea un perfil y recibe propinas.",
+			"sourceHash": "df05c0602f5f0ef9",
+			"status": "machine",
+			"translator": "Claude"
+		}
+	},
+	"issues-cash": {
+		"description": {
+			"text": "Recompensas sin intermediarios por issues de GitHub con contratos inteligentes de BCH",
+			"sourceHash": "c6443121f46d40f8",
+			"status": "machine",
+			"translator": "Claude"
+		}
+	},
+	"purelypeer": {
+		"description": {
+			"text": "App de búsqueda de misiones con recompensas en BCH y descubrimiento de comercios",
+			"sourceHash": "b158179bd9d265d1",
+			"status": "machine",
+			"translator": "Claude"
+		}
+	},
+	"gaze-cash": {
+		"description": {
+			"text": "Plataforma de video sin anuncios que paga a los creadores en BCH",
+			"sourceHash": "2f1cdf0fcc114a0f",
+			"status": "machine",
+			"translator": "Claude"
+		}
+	},
+	"memo-cash": {
+		"description": {
+			"text": "Red social en la cadena.",
+			"sourceHash": "82f21bb16f946111",
+			"status": "machine",
+			"translator": "Claude"
+		}
+	},
+	"bchouse-app": {
+		"description": {
+			"text": "Red social de BCH.",
+			"sourceHash": "cdad2edda1b8caa1",
+			"status": "machine",
+			"translator": "Claude"
+		}
+	},
+	"yt-bch-university": {
+		"description": {
+			"text": "Canal de YouTube con tutoriales de Bitcoin Cash",
+			"sourceHash": "587dea1d95718e09",
+			"status": "machine",
+			"translator": "Claude"
+		}
+	},
+	"yt-bitcoin-out-loud": {
+		"description": {
+			"text": "Canal de YouTube sobre Bitcoin Cash",
+			"sourceHash": "9298601eb19e9649",
+			"status": "machine",
+			"translator": "Claude"
+		}
+	},
+	"moria-protocol": {
+		"description": {
+			"text": "Stablecoin con garantía en BCH (CDP).",
+			"sourceHash": "182b821454af197d",
+			"status": "machine",
+			"translator": "Claude"
+		}
+	},
+	"permute-cash": {
+		"description": {
+			"text": "Puente entre cadenas para BCH.",
+			"sourceHash": "cedaf2624ad69cf9",
+			"status": "machine",
+			"translator": "Claude"
+		}
+	},
+	"anyhedge": {
+		"description": {
+			"text": "Trading apalancado y cobertura descentralizados en Bitcoin Cash.",
+			"sourceHash": "cd374da149ccb46e",
+			"status": "machine",
+			"translator": "Claude"
+		}
+	},
+	"cauldrondex": {
+		"description": {
+			"text": "Intercambio y provisión de liquidez de tokens fungibles.",
+			"sourceHash": "caf72d5aec2fddd0",
+			"status": "machine",
+			"translator": "Claude"
+		}
+	},
+	"tapswap": {
+		"description": {
+			"text": "Mercado de NFT.",
+			"sourceHash": "e64a2718a9275b09",
+			"status": "machine",
+			"translator": "Claude"
+		}
+	},
+	"fex-cash": {
+		"description": {
+			"text": "Intercambio y provisión de liquidez de tokens fungibles.",
+			"sourceHash": "caf72d5aec2fddd0",
+			"status": "machine",
+			"translator": "Claude"
+		}
+	},
+	"guanaco": {
+		"description": {
+			"text": "DEX y protocolo de liquidez sin custodia en Bitcoin Cash.",
+			"sourceHash": "6604e9fa61d95073",
+			"status": "machine",
+			"translator": "Claude"
+		}
+	},
+	"bch-bull": {
+		"description": {
+			"text": "Apalancamiento y cobertura en la cadena.",
+			"sourceHash": "24d5a443317067c0",
+			"status": "machine",
+			"translator": "Claude"
+		}
+	},
+	"sideshift-staking": {
+		"description": {
+			"text": "Haz staking de tu BCH como XAI.",
+			"sourceHash": "7fce76779e99dd51",
+			"status": "machine",
+			"translator": "Claude"
+		}
+	},
+	"paryonusd": {
+		"description": {
+			"text": "Protocolo de la stablecoin PUSD sobrecolateralizada en Bitcoin Cash",
+			"sourceHash": "6a6b2bcf405929a6",
+			"status": "machine",
+			"translator": "Claude"
+		}
+	},
+	"future-bitcoin-cash": {
+		"description": {
+			"text": "Intercambia BCH 1:1 por tokens fungibles con bloqueo temporal y cupones",
+			"sourceHash": "5f253e37f165380e",
+			"status": "machine",
+			"translator": "Claude"
+		}
+	},
+	"badgers-cash": {
+		"description": {
+			"text": "Haz staking de BCH para ganar tokens fungibles BadgerCoin",
+			"sourceHash": "8f351ee24231f7c2",
+			"status": "machine",
+			"translator": "Claude"
+		}
+	},
+	"bch-games": {
+		"description": {
+			"text": "Gana partidas y recibe pagos en BCH.",
+			"sourceHash": "02a4ceb936ebac2b",
+			"status": "machine",
+			"translator": "Claude"
+		}
+	},
+	"satoshi-dice": {
+		"description": {
+			"text": "Casino cripto.",
+			"sourceHash": "88d14ddd07782c9c",
+			"status": "machine",
+			"translator": "Claude"
+		}
+	},
+	"spin-bch": {
+		"description": {
+			"text": "Gira para tener la oportunidad de ganar.",
+			"sourceHash": "de1f80f39a9d917c",
+			"status": "machine",
+			"translator": "Claude"
+		}
+	},
+	"blockchain-poker": {
+		"description": {
+			"text": "Juego de póker con BCH.",
+			"sourceHash": "df973a00eb52c592",
+			"status": "machine",
+			"translator": "Claude"
+		}
+	},
+	"basepoker": {
+		"description": {
+			"text": "Póker basado en BCH.",
+			"sourceHash": "0c5dff86917eed1a",
+			"status": "machine",
+			"translator": "Claude"
+		}
+	},
+	"bugs-cash": {
+		"description": {
+			"text": "Juego multijugador para navegador basado en Bitcoin Cash",
+			"sourceHash": "f3493c13f3005f6a",
+			"status": "machine",
+			"translator": "Claude"
+		}
+	},
+	"gumshoe": {
+		"description": {
+			"text": "Acertijo misterioso semanal con premio en BCH",
+			"sourceHash": "1eb228fcfed9e39a",
+			"status": "machine",
+			"translator": "Claude"
+		}
+	},
+	"bch-global-lotto": {
+		"description": {
+			"text": "Juego de lotería que paga en Bitcoin Cash",
+			"sourceHash": "b663f5dbf8a47ab9",
+			"status": "machine",
+			"translator": "Claude"
+		}
+	},
+	"crypto-woo": {
+		"description": {
+			"text": "Permite a los usuarios de WooCommerce aceptar BCH.",
+			"sourceHash": "4ee1b370797091bf",
+			"status": "machine",
+			"translator": "Claude"
+		}
+	},
+	"prompt-cash": {
+		"description": {
+			"text": "Pasarela de pago de BCH.",
+			"sourceHash": "6702b258f404fbdb",
+			"status": "machine",
+			"translator": "Claude"
+		}
+	},
+	"bitcart": {
+		"description": {
+			"text": "Aceptación de criptomonedas autoalojada y de código abierto.",
+			"sourceHash": "d59194fb71944884",
+			"status": "machine",
+			"translator": "Claude"
+		}
+	},
+	"cashpayserver": {
+		"description": {
+			"text": "Servicio autoalojado para gestionar facturas BIP70 y de JSON Payment Protocol.",
+			"sourceHash": "722c49f560d2da78",
+			"status": "machine",
+			"translator": "Claude"
+		}
+	},
+	"coinbase-commerce": {
+		"description": {
+			"text": "Una pasarela de pagos con criptomonedas.",
+			"sourceHash": "6a067f5bd2ef1710",
+			"status": "machine",
+			"translator": "Claude"
+		}
+	},
+	"gourl-io": {
+		"description": {
+			"text": "Una pasarela de pagos con criptomonedas.",
+			"sourceHash": "73c353b2be14fc99",
+			"status": "machine",
+			"translator": "Claude"
+		}
+	},
+	"pay-button": {
+		"description": {
+			"text": "Un botón de pago de BCH fácil de usar.",
+			"sourceHash": "6a80a9dcf44e6a38",
+			"status": "machine",
+			"translator": "Claude"
+		}
+	},
+	"coingate-accept": {
+		"description": {
+			"text": "Una pasarela de pagos con criptomonedas.",
+			"sourceHash": "73c353b2be14fc99",
+			"status": "machine",
+			"translator": "Claude"
+		}
+	},
+	"coinpayments": {
+		"description": {
+			"text": "Una pasarela de pagos con criptomonedas.",
+			"sourceHash": "73c353b2be14fc99",
+			"status": "machine",
+			"translator": "Claude"
+		}
+	},
+	"pos-cash": {
+		"description": {
+			"text": "Una app de punto de venta sencilla.",
+			"sourceHash": "8783e9c94215a875",
+			"status": "machine",
+			"translator": "Claude"
+		}
+	},
+	"scan-to-pay": {
+		"description": {
+			"text": "Terminales de papel para BCH.",
+			"sourceHash": "75f82052ae2ee436",
+			"status": "machine",
+			"translator": "Claude"
+		}
+	},
+	"cashtags": {
+		"description": {
+			"text": "Etiquetas de BCH que mantienen actualizado el tipo de cambio con monedas fiat.",
+			"sourceHash": "84f1b0e42adb4880",
+			"status": "machine",
+			"translator": "Claude"
+		}
+	},
+	"event-cash": {
+		"description": {
+			"text": "Vende entradas para eventos con pagos instantáneos en BCH",
+			"sourceHash": "d42ed9617189502e",
+			"status": "machine",
+			"translator": "Claude"
+		}
+	},
+	"bitrequest": {
+		"description": {
+			"text": "Solicitudes de pago de punto de venta compatibles con BCH",
+			"sourceHash": "5169ad5b9a6031d0",
+			"status": "machine",
+			"translator": "Claude"
+		}
+	},
+	"mobazha": {
+		"description": {
+			"text": "Plataforma de comercio descentralizada con pagos nativos en BCH",
+			"sourceHash": "e03f1ca110c56a56",
+			"status": "machine",
+			"translator": "Claude"
+		}
+	},
+	"stickers-cash": {
+		"description": {
+			"text": "Paquetes de calcomanías “Aceptamos BCH” para comercios",
+			"sourceHash": "2235717548bafa1c",
+			"status": "machine",
+			"translator": "Claude"
+		}
+	},
+	"nowpayments": {
+		"description": {
+			"text": "Pasarela de pagos con criptomonedas compatible con BCH.",
+			"sourceHash": "f7f0c21a37aebd8a",
+			"status": "machine",
+			"translator": "Claude"
+		}
+	},
+	"oxapay": {
+		"description": {
+			"text": "Procesador de pagos con criptomonedas.",
+			"sourceHash": "b6b6a21f433b509d",
+			"status": "machine",
+			"translator": "Claude"
+		}
+	},
+	"alfacoins": {
+		"description": {
+			"text": "API de pagos con criptomonedas.",
+			"sourceHash": "6ab619d6a86fd8b9",
+			"status": "machine",
+			"translator": "Claude"
+		}
+	},
+	"apirone": {
+		"description": {
+			"text": "API de procesamiento de pagos en BCH.",
+			"sourceHash": "3bb757018de70718",
+			"status": "machine",
+			"translator": "Claude"
+		}
+	},
+	"rocketr": {
+		"description": {
+			"text": "Pasarela de pago para bienes digitales.",
+			"sourceHash": "96b95302d533f532",
+			"status": "machine",
+			"translator": "Claude"
+		}
+	},
+	"alchemy-pay": {
+		"description": {
+			"text": "Pasarela de pago fiat-cripto.",
+			"sourceHash": "4f7702ace0f1dca7",
+			"status": "machine",
+			"translator": "Claude"
+		}
+	},
+	"aeon-xyz": {
+		"description": {
+			"text": "Plataforma de pagos con criptomonedas.",
+			"sourceHash": "85927a13022205ea",
+			"status": "machine",
+			"translator": "Claude"
+		}
+	},
+	"gocrypto": {
+		"description": {
+			"text": "Pagos con criptomonedas en punto de venta y en línea.",
+			"sourceHash": "d97ff661fe9e168b",
+			"status": "machine",
+			"translator": "Claude"
+		}
+	},
+	"living-room-of-satoshi": {
+		"description": {
+			"text": "Paga facturas australianas con BCH.",
+			"sourceHash": "4214412f1a836d54",
+			"status": "machine",
+			"translator": "Claude"
+		}
+	},
+	"paytaca-payment-hub": {
+		"description": {
+			"text": "Acepta pagos en Bitcoin Cash en línea",
+			"sourceHash": "e6c84f9d90f5ece9",
+			"status": "machine",
+			"translator": "Claude"
+		}
+	},
+	"httpay": {
+		"description": {
+			"text": "Pasarela de pago de BCH minimalista y autoalojada",
+			"sourceHash": "ca5fd38af3ba0e05",
+			"status": "machine",
+			"translator": "Claude"
+		}
+	},
+	"mainnetjs": {
+		"description": {
+			"text": "Todo en uno para JavaScript + API.",
+			"sourceHash": "e27333beb9d01ca0",
+			"status": "machine",
+			"translator": "Claude"
+		}
+	},
+	"libauth": {
+		"description": {
+			"text": "Una biblioteca de JavaScript ultraligera.",
+			"sourceHash": "44e9ba889d17d23f",
+			"status": "machine",
+			"translator": "Claude"
+		}
+	},
+	"oracles-cash": {
+		"description": {
+			"text": "Oráculos de precios verificables.",
+			"sourceHash": "b2f12a5f21be2cd7",
+			"status": "machine",
+			"translator": "Claude"
+		}
+	},
+	"bitcash-python": {
+		"description": {
+			"text": "Una biblioteca de Python.",
+			"sourceHash": "b8a2e84a87190095",
+			"status": "machine",
+			"translator": "Claude"
+		}
+	},
+	"bitcoincashclient": {
+		"description": {
+			"text": "Una biblioteca de C# .NET.",
+			"sourceHash": "0b8f4859cecaa363",
+			"status": "machine",
+			"translator": "Claude"
+		}
+	},
+	"bitcoincashj": {
+		"description": {
+			"text": "Una biblioteca de Java.",
+			"sourceHash": "afb24400724368a4",
+			"status": "machine",
+			"translator": "Claude"
+		}
+	},
+	"bch-js": {
+		"description": {
+			"text": "Una biblioteca de JavaScript.",
+			"sourceHash": "cd07735ce0d267b7",
+			"status": "machine",
+			"translator": "Claude"
+		}
+	},
+	"rust-bitcoincash": {
+		"description": {
+			"text": "Biblioteca de Bitcoin Cash en Rust.",
+			"sourceHash": "8a3530d99d2b44b9",
+			"status": "machine",
+			"translator": "Claude"
+		}
+	},
+	"cashp": {
+		"description": {
+			"text": "Biblioteca de PHP para BCH y tokens SLP.",
+			"sourceHash": "97c629a5149325e1",
+			"status": "machine",
+			"translator": "Claude"
+		}
+	},
+	"bitcoinkit-ios": {
+		"description": {
+			"text": "Billetera SPV + biblioteca en Swift.",
+			"sourceHash": "4a82aef2afdf6aa8",
+			"status": "machine",
+			"translator": "Claude"
+		}
+	},
+	"bitcoinkit-android": {
+		"description": {
+			"text": "Billetera SPV + biblioteca en Kotlin.",
+			"sourceHash": "ce98a8719561ed22",
+			"status": "machine",
+			"translator": "Claude"
+		}
+	},
+	"chaingraph": {
+		"description": {
+			"text": "Chaingraph es un indexador de blockchain multinodo y una API GraphQL.",
+			"sourceHash": "1c48876c546e6721",
+			"status": "machine",
+			"translator": "Claude"
+		}
+	},
+	"bitbox-sdk-lite": {
+		"description": {
+			"text": "Crea con Flutter.",
+			"sourceHash": "bb20e98a3b179ef3",
+			"status": "machine",
+			"translator": "Claude"
+		}
+	},
+	"haskoin-core": {
+		"description": {
+			"text": "Crea con Haskell.",
+			"sourceHash": "8c3813bd1848d71e",
+			"status": "machine",
+			"translator": "Claude"
+		}
+	},
+	"bitcore-lib-cash": {
+		"description": {
+			"text": "Biblioteca de JS para BCH de BitPay.",
+			"sourceHash": "6af8a5370424317d",
+			"status": "machine",
+			"translator": "Claude"
+		}
+	},
+	"python-bitcoincash": {
+		"description": {
+			"text": "Biblioteca de Python de bajo nivel.",
+			"sourceHash": "6a0a7923ec7ef6f0",
+			"status": "machine",
+			"translator": "Claude"
+		}
+	},
+	"signup-cash": {
+		"description": {
+			"text": "Una billetera para crear apps de BCH.",
+			"sourceHash": "1ec88590bacee285",
+			"status": "machine",
+			"translator": "Claude"
+		}
+	},
+	"be-cash": {
+		"description": {
+			"text": "Biblioteca de BCH en Rust.",
+			"sourceHash": "fae444d2a8ec1549",
+			"status": "machine",
+			"translator": "Claude"
+		}
+	},
+	"rbch": {
+		"description": {
+			"text": "Extracción y análisis de datos de la blockchain de Bitcoin Cash (BCH).",
+			"sourceHash": "bd181f8ec6a9a614",
+			"status": "machine",
+			"translator": "Claude"
+		}
+	},
+	"p2p-cash": {
+		"description": {
+			"text": "P2P-CASH es una biblioteca que te permite comunicarte con nodos completos de BCH.",
+			"sourceHash": "287f6e983cb02a91",
+			"status": "machine",
+			"translator": "Claude"
+		}
+	},
+	"rpckit": {
+		"description": {
+			"text": "Biblioteca JSON-RPC con tipado seguro en TypeScript para servicios de BCH",
+			"sourceHash": "668420998c8869dd",
+			"status": "machine",
+			"translator": "Claude"
+		}
+	},
+	"mem-cash": {
+		"description": {
+			"text": "Biblioteca de Bitcoin Cash en TypeScript de mainnet-pat",
+			"sourceHash": "29f92fb5d34fa83b",
+			"status": "machine",
+			"translator": "Claude"
+		}
+	},
+	"cashlab": {
+		"description": {
+			"text": "Biblioteca de TypeScript para crear apps de Bitcoin Cash",
+			"sourceHash": "6afc3b6a8628d2a2",
+			"status": "machine",
+			"translator": "Claude"
+		}
+	},
+	"xo-stack": {
+		"description": {
+			"text": "Stack de código abierto para crear apps BCH UTXO",
+			"sourceHash": "919f8236557f14a8",
+			"status": "machine",
+			"translator": "Claude"
+		}
+	},
+	"documentation-cash": {
+		"description": {
+			"text": "Documentación del protocolo BCH.",
+			"sourceHash": "0a8ac45e34209176",
+			"status": "machine",
+			"translator": "Claude"
+		}
+	},
+	"reference-cash": {
+		"description": {
+			"text": "Documentación del protocolo BCH.",
+			"sourceHash": "0a8ac45e34209176",
+			"status": "machine",
+			"translator": "Claude"
+		}
+	},
+	"bch-standards": {
+		"description": {
+			"text": "Estándares de BCH.",
+			"sourceHash": "d73d5192db53323d",
+			"status": "machine",
+			"translator": "Claude"
+		}
+	},
+	"electrum-cash-protocol-docs": {
+		"description": {
+			"text": "Referencia de los métodos del protocolo Electrum Cash.",
+			"sourceHash": "9bd53a21e7dd5f6d",
+			"status": "machine",
+			"translator": "Claude"
+		}
+	},
+	"electroncash-wiki": {
+		"description": {
+			"text": "Documentación de Electron Cash.",
+			"sourceHash": "c8fb406cb2019828",
+			"status": "machine",
+			"translator": "Claude"
+		}
+	},
+	"upgrade-specs": {
+		"description": {
+			"text": "Especificaciones de actualizaciones de la red de Bitcoin Cash Node",
+			"sourceHash": "9bf49d224187c675",
+			"status": "machine",
+			"translator": "Claude"
+		}
+	},
+	"vm-cash": {
+		"description": {
+			"text": "Referencia de opcodes de la VM de BCH hasta 2026",
+			"sourceHash": "1092efae2bbe2e1c",
+			"status": "machine",
+			"translator": "Claude"
+		}
+	},
+	"real-bitcoin-fam": {
+		"description": {
+			"text": "Una red de ayuda para quienes crean en Web3.",
+			"sourceHash": "f31c522ed4e0fafc",
+			"status": "machine",
+			"translator": "Claude"
+		}
+	},
+	"cashtoken-devs-tg": {
+		"description": {
+			"text": "Un grupo de Telegram activo para desarrolladores de CashTokens.",
+			"sourceHash": "f0722e0afb8b0573",
+			"status": "machine",
+			"translator": "Claude"
+		}
+	},
+	"mainnet-cash-tg": {
+		"description": {
+			"text": "Un grupo de Telegram activo para desarrolladores que usan MainnetJS.",
+			"sourceHash": "cd671b5afb05e503",
+			"status": "machine",
+			"translator": "Claude"
+		}
+	},
+	"libauth-devs-tg": {
+		"description": {
+			"text": "Un grupo de Telegram de ayuda para desarrolladores de libauth.",
+			"sourceHash": "ad27d3089480f36e",
+			"status": "machine",
+			"translator": "Claude"
+		}
+	},
+	"r-bchcashtokens": {
+		"description": {
+			"text": "Un subreddit para desarrolladores y usuarios de BCH.",
+			"sourceHash": "c927ace9290d6785",
+			"status": "machine",
+			"translator": "Claude"
+		}
+	},
+	"shrimp-club-bch": {
+		"description": {
+			"text": "Un Telegram para poseedores verificados de BCH.",
+			"sourceHash": "d3914733160a1b9a",
+			"status": "machine",
+			"translator": "Claude"
+		}
+	},
+	"bitauth-ide-tg": {
+		"description": {
+			"text": "Un grupo de Telegram para usuarios de BitAuth IDE.",
+			"sourceHash": "33a576645aa4d203",
+			"status": "machine",
+			"translator": "Claude"
+		}
+	},
+	"walletconnect-devs-tg": {
+		"description": {
+			"text": "Un grupo de Telegram para desarrolladores de WalletConnect.",
+			"sourceHash": "999aa952990aad92",
+			"status": "machine",
+			"translator": "Claude"
+		}
+	},
+	"bch-compilers-tg": {
+		"description": {
+			"text": "Un grupo de Telegram para desarrolladores avanzados de BCH.",
+			"sourceHash": "a047692fa10c097e",
+			"status": "machine",
+			"translator": "Claude"
+		}
+	},
+	"chaingraph-devs-tg": {
+		"description": {
+			"text": "Un grupo de Telegram para desarrolladores de Chaingraph.",
+			"sourceHash": "a5da1cf8c628c607",
+			"status": "machine",
+			"translator": "Claude"
+		}
+	},
+	"bch-argentina": {
+		"description": {
+			"text": "Un grupo de Telegram para usuarios y desarrolladores de BCH en Argentina.",
+			"sourceHash": "2dd0beb4226a89df",
+			"status": "machine",
+			"translator": "Claude"
+		}
+	},
+	"bch-latam": {
+		"description": {
+			"text": "Un grupo de Telegram en español para desarrolladores de BCH.",
+			"sourceHash": "3084e406d73681f8",
+			"status": "machine",
+			"translator": "Claude"
+		}
+	},
+	"tokenstork-support-tg": {
+		"description": {
+			"text": "Un grupo de Telegram para TokenStork.com.",
+			"sourceHash": "21ddda8de50d3cd6",
+			"status": "machine",
+			"translator": "Claude"
+		}
+	},
+	"bch-webring": {
+		"description": {
+			"text": "Federación de sitios web de Bitcoin Cash",
+			"sourceHash": "1899526f13490a0c",
+			"status": "machine",
+			"translator": "Claude"
+		}
+	},
+	"bch-1-hackcelerator": {
+		"description": {
+			"text": "Programa para desarrolladores de apps de BCH y CashTokens",
+			"sourceHash": "d5067b27cd70d012",
+			"status": "machine",
+			"translator": "Claude"
+		}
+	},
+	"bch-bliss": {
+		"description": {
+			"text": "Conferencia anual sobre actualizaciones de BCH en Liubliana",
+			"sourceHash": "fd410d954f7146c3",
+			"status": "machine",
+			"translator": "Claude"
+		}
+	},
+	"cash3-conference": {
+		"description": {
+			"text": "Conferencia y hackathon de Bitcoin Cash en Cebú",
+			"sourceHash": "f1ae53da7b8218f1",
+			"status": "machine",
+			"translator": "Claude"
+		}
+	},
+	"bch-city": {
+		"description": {
+			"text": "Centro de adopción de BCH en Townsville, Queensland",
+			"sourceHash": "31cc21dffd276008",
+			"status": "machine",
+			"translator": "Claude"
+		}
+	},
+	"bch-global-meetups": {
+		"description": {
+			"text": "Grupo de Meetup para eventos de Bitcoin Cash en todo el mundo",
+			"sourceHash": "0568b8026a447ff2",
+			"status": "machine",
+			"translator": "Claude"
+		}
+	},
+	"tokyo-bch-meetup": {
+		"description": {
+			"text": "Meetup periódico de Bitcoin Cash en Tokio",
+			"sourceHash": "4320dc80127402f0",
+			"status": "machine",
+			"translator": "Claude"
+		}
+	},
+	"darmstadt-bch-meetup": {
+		"description": {
+			"text": "Meetup bimestral de Bitcoin Cash en Darmstadt",
+			"sourceHash": "3c55b18ef6417676",
+			"status": "machine",
+			"translator": "Claude"
+		}
+	},
+	"fullstack-cash-api": {
+		"description": {
+			"text": "Blockchain de BCH como servicio.",
+			"sourceHash": "37b3caeba7009bf1",
+			"status": "machine",
+			"translator": "Claude"
+		}
+	},
+	"fountainhead-cash": {
+		"description": {
+			"text": "Diversos servicios de infraestructura.",
+			"sourceHash": "580c0f69137d8310",
+			"status": "machine",
+			"translator": "Claude"
+		}
+	},
+	"actorforth": {
+		"description": {
+			"text": "Clon de la API REST de Bitcoin.com.",
+			"sourceHash": "3a0eafe2714fd3c3",
+			"status": "machine",
+			"translator": "Claude"
+		}
+	},
+	"getblock-io": {
+		"description": {
+			"text": "Diversas APIs disponibles.",
+			"sourceHash": "2e7fd48505902483",
+			"status": "machine",
+			"translator": "Claude"
+		}
+	},
+	"coinremitter": {
+		"description": {
+			"text": "Pasarela de pagos de Bitcoin Cash.",
+			"sourceHash": "257d59d80cbd2e64",
+			"status": "machine",
+			"translator": "Claude"
+		}
+	},
+	"bitsocket-fountainhead": {
+		"description": {
+			"text": "Suscríbete a saldos de BCH y más.",
+			"sourceHash": "123bc29d9009dac2",
+			"status": "machine",
+			"translator": "Claude"
+		}
+	},
+	"insomnia-cash": {
+		"description": {
+			"text": "Ofrece una forma sencilla de interactuar con la blockchain de BCH mediante HTTP.",
+			"sourceHash": "0868bcbc10d01513",
+			"status": "machine",
+			"translator": "Claude"
+		}
+	},
+	"watchtower-cash": {
+		"description": {
+			"text": "API de infraestructura de BCH para monitoreo y apps",
+			"sourceHash": "6e3f1973a928e91a",
+			"status": "machine",
+			"translator": "Claude"
+		}
+	},
+	"cashscript": {
+		"description": {
+			"text": "Contratos inteligentes con SDK de JS.",
+			"sourceHash": "7558f72af58b44d5",
+			"status": "machine",
+			"translator": "Claude"
+		}
+	},
+	"cashscript-playground": {
+		"description": {
+			"text": "Prueba CashScript en tu navegador.",
+			"sourceHash": "5c725c8ec1e5504f",
+			"status": "machine",
+			"translator": "Claude"
+		}
+	},
+	"bitauth-ide": {
+		"description": {
+			"text": "Un IDE para crear contratos inteligentes en BCH.",
+			"sourceHash": "96d12b859183b100",
+			"status": "machine",
+			"translator": "Claude"
+		}
+	},
+	"spedn": {
+		"description": {
+			"text": "Diseñado para ser explícito.",
+			"sourceHash": "7a6dd2522663c422",
+			"status": "machine",
+			"translator": "Claude"
+		}
+	},
+	"meep": {
+		"description": {
+			"text": "Depurador de scripts de BCH por línea de comandos.",
+			"sourceHash": "306a77460048a14a",
+			"status": "machine",
+			"translator": "Claude"
+		}
+	},
+	"iguana": {
+		"description": {
+			"text": "Depurador.",
+			"sourceHash": "e007e139af70559d",
+			"status": "machine",
+			"translator": "Claude"
+		}
+	},
+	"vscode-cashscript": {
+		"description": {
+			"text": "Extensión de VS Code para CashScript.",
+			"sourceHash": "c8d239ee5b8d91d3",
+			"status": "machine",
+			"translator": "Claude"
+		}
+	},
+	"nexops": {
+		"description": {
+			"text": "Plataforma para generar, auditar y desplegar contratos de CashScript",
+			"sourceHash": "068dd9ec6c99b15b",
+			"status": "machine",
+			"translator": "Claude"
+		}
+	},
+	"opencashdao": {
+		"description": {
+			"text": "Plantilla de contrato DAO para Bitcoin Cash",
+			"sourceHash": "d4c6a643e4be97dc",
+			"status": "machine",
+			"translator": "Claude"
+		}
+	},
+	"jedex": {
+		"description": {
+			"text": "Demo de DEX de ejecución conjunta creada con CashTokens",
+			"sourceHash": "11c18c83828bbda3",
+			"status": "machine",
+			"translator": "Claude"
+		}
+	},
+	"quantumroot": {
+		"description": {
+			"text": "Contratos de bóveda poscuánticos en script de Bitcoin Cash",
+			"sourceHash": "c4f2c6eee5058e01",
+			"status": "machine",
+			"translator": "Claude"
+		}
+	},
+	"cashfusion": {
+		"description": {
+			"text": "Privacidad para BCH.",
+			"sourceHash": "48bc665a91c68854",
+			"status": "machine",
+			"translator": "Claude"
+		}
+	},
+	"cashshuffle": {
+		"description": {
+			"text": "Privacidad para BCH.",
+			"sourceHash": "48bc665a91c68854",
+			"status": "machine",
+			"translator": "Claude"
+		}
+	},
+	"cashaddr": {
+		"description": {
+			"text": "Formato de dirección de BCH.",
+			"sourceHash": "36384af4113ef177",
+			"status": "machine",
+			"translator": "Claude"
+		}
+	},
+	"cashaccounts": {
+		"description": {
+			"text": "Direcciones de BCH legibles para personas.",
+			"sourceHash": "4a8bd4e8b3701130",
+			"status": "machine",
+			"translator": "Claude"
+		}
+	},
+	"cashtokens-protocol": {
+		"description": {
+			"text": "Tokens fungibles y NFTs validados por los mineros.",
+			"sourceHash": "4ee96ed07b8b5f94",
+			"status": "machine",
+			"translator": "Claude"
+		}
+	},
+	"bcmr": {
+		"description": {
+			"text": "Un estándar para compartir metadatos autenticados entre billeteras de Bitcoin Cash.",
+			"sourceHash": "bedc0e64205cfe84",
+			"status": "machine",
+			"translator": "Claude"
+		}
+	},
+	"cashid": {
+		"description": {
+			"text": "Protocolo de autenticación de BCH.",
+			"sourceHash": "36634fb51f519e4a",
+			"status": "machine",
+			"translator": "Claude"
+		}
+	},
+	"bip-70": {
+		"description": {
+			"text": "Protocolo de comunicación entre un comercio y su cliente.",
+			"sourceHash": "7edf4bea73b8854f",
+			"status": "machine",
+			"translator": "Claude"
+		}
+	},
+	"slp": {
+		"description": {
+			"text": "Un protocolo de tokens.",
+			"sourceHash": "78ec99244fe9d8d0",
+			"status": "machine",
+			"translator": "Claude"
+		}
+	},
+	"memo-protocol": {
+		"description": {
+			"text": "Red social en la cadena.",
+			"sourceHash": "82f21bb16f946111",
+			"status": "machine",
+			"translator": "Claude"
+		}
+	},
+	"wizardconnect": {
+		"description": {
+			"text": "Protocolo de Riften Labs para conectar billeteras con dApps",
+			"sourceHash": "df9dff5e3b775f16",
+			"status": "machine",
+			"translator": "Claude"
+		}
+	},
+	"bitcann": {
+		"description": {
+			"text": "Protocolo descentralizado de nombres de dominio e identidad en BCH",
+			"sourceHash": "da7bba4a47a2f295",
+			"status": "machine",
+			"translator": "Claude"
+		}
+	},
+	"blockchair": {
+		"description": {
+			"text": "Muestra los datos sin procesar de las transacciones.",
+			"sourceHash": "467a522d7dd75bed",
+			"status": "machine",
+			"translator": "Claude"
+		}
+	},
+	"salemkode-explorer": {
+		"description": {
+			"text": "Incluye metadatos de CashTokens.",
+			"sourceHash": "d82a3031ea5254f6",
+			"status": "machine",
+			"translator": "Claude"
+		}
+	},
+	"3xpl": {
+		"description": {
+			"text": "Nuevo explorador con diseño moderno.",
+			"sourceHash": "bcd0e2715a063334",
+			"status": "machine",
+			"translator": "Claude"
+		}
+	},
+	"bu-explorer": {
+		"description": {
+			"text": "Excelente para desarrolladores.",
+			"sourceHash": "e4f439e1489d8a5d",
+			"status": "machine",
+			"translator": "Claude"
+		}
+	},
+	"coin-dance-explorer": {
+		"description": {
+			"text": "Estadísticas y servicios de Bitcoin Cash impulsados por la comunidad.",
+			"sourceHash": "0582479846e1b10e",
+			"status": "machine",
+			"translator": "Claude"
+		}
+	},
+	"electroncash-de-explorer": {
+		"description": {
+			"text": "Para la red principal.",
+			"sourceHash": "79f508323eb06dfd",
+			"status": "machine",
+			"translator": "Claude"
+		}
+	},
+	"bch-explorer": {
+		"description": {
+			"text": "Incluye gráficos útiles.",
+			"sourceHash": "43a51562b2147516",
+			"status": "machine",
+			"translator": "Claude"
+		}
+	},
+	"bitcoin-verde-explorer": {
+		"description": {
+			"text": "Interfaz básica.",
+			"sourceHash": "03f5aacac53020c8",
+			"status": "machine",
+			"translator": "Claude"
+		}
+	},
+	"blockchain-com-explorer": {
+		"description": {
+			"text": "Incluye estadísticas útiles.",
+			"sourceHash": "241c85ad2268e531",
+			"status": "machine",
+			"translator": "Claude"
+		}
+	},
+	"imaginary-cash-chipnet": {
+		"description": {
+			"text": "Para Chipnet, una red de pruebas de BCH.",
+			"sourceHash": "756c9d4ac9206fed",
+			"status": "machine",
+			"translator": "Claude"
+		}
+	},
+	"chaingraph-chipnet": {
+		"description": {
+			"text": "Para Chipnet, una red de pruebas de BCH.",
+			"sourceHash": "756c9d4ac9206fed",
+			"status": "machine",
+			"translator": "Claude"
+		}
+	},
+	"bch-ninja-chipnet": {
+		"description": {
+			"text": "Para Chipnet, una red de pruebas de BCH.",
+			"sourceHash": "756c9d4ac9206fed",
+			"status": "machine",
+			"translator": "Claude"
+		}
+	},
+	"loping-net-chipnet": {
+		"description": {
+			"text": "Explorador de bloques de Chipnet.",
+			"sourceHash": "551bd069c765eee3",
+			"status": "machine",
+			"translator": "Claude"
+		}
+	},
+	"electroncash-de-testnet": {
+		"description": {
+			"text": "Para la red de pruebas.",
+			"sourceHash": "bb819773baa9c899",
+			"status": "machine",
+			"translator": "Claude"
+		}
+	},
+	"tx-street": {
+		"description": {
+			"text": "Visualizador de BCH mempool.",
+			"sourceHash": "ddd8e8f9e2040f26",
+			"status": "machine",
+			"translator": "Claude"
+		}
+	},
+	"slp-token-explorer": {
+		"description": {
+			"text": "Explorador de tokens de SLP.",
+			"sourceHash": "b500d9d75aaee56d",
+			"status": "machine",
+			"translator": "Claude"
+		}
+	},
+	"smartbch-explorer": {
+		"description": {
+			"text": "Para la cadena lateral SmartBCH.",
+			"sourceHash": "4574e755f14cde48",
+			"status": "machine",
+			"translator": "Claude"
+		}
+	},
+	"cashflow-dev": {
+		"description": {
+			"text": "Explorador visual de transacciones de Bitcoin Cash",
+			"sourceHash": "a1cae5b85305e3e1",
+			"status": "machine",
+			"translator": "Claude"
+		}
+	},
+	"paytaca-explorer": {
+		"description": {
+			"text": "Explorador de bloques y de CashTokens con metadatos de BCMR",
+			"sourceHash": "22244f72f1c1b3a3",
+			"status": "machine",
+			"translator": "Claude"
+		}
+	},
+	"electrum-cash-npm": {
+		"description": {
+			"text": "Biblioteca JS para servidores Electrum.",
+			"sourceHash": "65afa24294152e8b",
+			"status": "machine",
+			"translator": "Claude"
+		}
+	},
+	"bitdb-bitsocket": {
+		"description": {
+			"text": "API de red de BCH.",
+			"sourceHash": "4a3917033240c4f1",
+			"status": "machine",
+			"translator": "Claude"
+		}
+	},
+	"fulcrum": {
+		"description": {
+			"text": "Un servidor SPV rápido y ágil.",
+			"sourceHash": "420f7fb28b0bbe1e",
+			"status": "machine",
+			"translator": "Claude"
+		}
+	},
+	"rostrum": {
+		"description": {
+			"text": "Una implementación eficiente de Electrum Server escrita en Rust.",
+			"sourceHash": "0bcedd17874ec4ea",
+			"status": "machine",
+			"translator": "Claude"
+		}
+	},
+	"dnsseeder": {
+		"description": {
+			"text": "Rastreador de red y seeder DNS escrito en Go.",
+			"sourceHash": "1398e23a61ed0428",
+			"status": "machine",
+			"translator": "Claude"
+		}
+	},
+	"bchaddrjs": {
+		"description": {
+			"text": "Biblioteca JS de conversión de direcciones.",
+			"sourceHash": "45c7792182babd69",
+			"status": "machine",
+			"translator": "Claude"
+		}
+	},
+	"bchutil": {
+		"description": {
+			"text": "Funciones prácticas.",
+			"sourceHash": "139f0860725fbbb4",
+			"status": "machine",
+			"translator": "Claude"
+		}
+	},
+	"qr-code": {
+		"description": {
+			"text": "Un elemento HTML de <qr-code> basado en SVG, personalizable y animable.",
+			"sourceHash": "a2ed67a4174ef8b1",
+			"status": "machine",
+			"translator": "Claude"
+		}
+	},
+	"address-conversion": {
+		"description": {
+			"text": "Herramienta de conversión entre los formatos de dirección CashAddress y legacy.",
+			"sourceHash": "307eded5afeebb18",
+			"status": "machine",
+			"translator": "Claude"
+		}
+	},
+	"tx-broadcaster": {
+		"description": {
+			"text": "Transmite transacciones sin procesar a la red.",
+			"sourceHash": "ab6ba4d983c21386",
+			"status": "machine",
+			"translator": "Claude"
+		}
+	},
+	"googol-tbch-faucet": {
+		"description": {
+			"text": "Consigue tBCH.",
+			"sourceHash": "d4796bf60a2d7f22",
+			"status": "machine",
+			"translator": "Claude"
+		}
+	},
+	"mainnet-cash-faucet": {
+		"description": {
+			"text": "Consigue tBCH.",
+			"sourceHash": "d4796bf60a2d7f22",
+			"status": "machine",
+			"translator": "Claude"
+		}
+	},
+	"electrum-server-list": {
+		"description": {
+			"text": "Consulta la lista de servidores Electrum, Fulcrum, etc. disponibles.",
+			"sourceHash": "b6ff3965824481f2",
+			"status": "machine",
+			"translator": "Claude"
+		}
+	},
+	"bch-stack-wizard": {
+		"description": {
+			"text": "Encuentra el CashAssembly óptimo para una transformación de la pila",
+			"sourceHash": "ffb89a21ff02ad86",
+			"status": "machine",
+			"translator": "Claude"
+		}
+	},
+	"psffpp": {
+		"description": {
+			"text": "Servicio de pinning en IPFS que se paga con Bitcoin Cash",
+			"sourceHash": "60b2a6b15c6918e9",
+			"status": "machine",
+			"translator": "Claude"
+		}
+	},
+	"bchd": {
+		"description": {
+			"text": "Escrito en Go.",
+			"sourceHash": "b49f94221e574fef",
+			"status": "machine",
+			"translator": "Claude"
+		}
+	},
+	"bch-unlimited": {
+		"description": {
+			"text": "Un nodo innovador.",
+			"sourceHash": "c33ad73e42874bff",
+			"status": "machine",
+			"translator": "Claude"
+		}
+	},
+	"bch-node": {
+		"description": {
+			"text": "El más usado para minería.",
+			"sourceHash": "ce2c43403989417d",
+			"status": "machine",
+			"translator": "Claude"
+		}
+	},
+	"bitcoin-verde": {
+		"description": {
+			"text": "Escrito en Java.",
+			"sourceHash": "a0d1908044409b1b",
+			"status": "machine",
+			"translator": "Claude"
+		}
+	},
+	"knuth": {
+		"description": {
+			"text": "Una plataforma de alto rendimiento.",
+			"sourceHash": "b3b1877a82ed251a",
+			"status": "machine",
+			"translator": "Claude"
+		}
+	},
+	"bchc": {
+		"description": {
+			"text": "Nodo completo e indexador de BCH de alto rendimiento",
+			"sourceHash": "f8db04417f2da3cc",
+			"status": "machine",
+			"translator": "Claude"
+		}
+	},
+	"flipstarter": {
+		"description": {
+			"text": "Recaudación de fondos descentralizada.",
+			"sourceHash": "fa26e47775ca65ad",
+			"status": "machine",
+			"translator": "Claude"
+		}
+	},
+	"mecenas": {
+		"description": {
+			"text": "Un plugin de pagos recurrentes para Electron Cash, pensado como solución de mecenazgo sin custodia.",
+			"sourceHash": "8db2e9f7f213cf73",
+			"status": "machine",
+			"translator": "Claude"
+		}
+	},
+	"bmp": {
+		"description": {
+			"text": "Gobernanza en la cadena basada en potencia de hash.",
+			"sourceHash": "20cd634723359f6a",
+			"status": "machine",
+			"translator": "Claude"
+		}
+	},
+	"votepeer": {
+		"description": {
+			"text": "Votación en blockchain resistente a la censura.",
+			"sourceHash": "f10306643f36f347",
+			"status": "machine",
+			"translator": "Claude"
+		}
+	},
+	"unspent-phi": {
+		"description": {
+			"text": "DeFi con scripts de desbloqueo de transacciones no gastadas.",
+			"sourceHash": "5e3bba280ed12a48",
+			"status": "machine",
+			"translator": "Claude"
+		}
+	},
+	"craft-cash": {
+		"description": {
+			"text": "Un programa de dibujo con vóxeles.",
+			"sourceHash": "6bd602824a6cc8ea",
+			"status": "machine",
+			"translator": "Claude"
+		}
+	},
+	"recurr": {
+		"description": {
+			"text": "Un protocolo sencillo para pagos recurrentes.",
+			"sourceHash": "93fc020afd8d417c",
+			"status": "machine",
+			"translator": "Claude"
+		}
+	},
+	"fundme-cash": {
+		"description": {
+			"text": "Financiamiento colectivo sin custodia con aportes reembolsables mediante CashTokens",
+			"sourceHash": "4a143ecdb150d488",
+			"status": "machine",
+			"translator": "Claude"
+		}
+	},
+	"shinobi-art-engine": {
+		"description": {
+			"text": "Una herramienta para crear colecciones de NFT de BCH a partir de capas de imagen.",
+			"sourceHash": "78a29be21c1bbd6c",
+			"status": "machine",
+			"translator": "Claude"
+		}
+	},
+	"cashtokens-airdrop-tool": {
+		"description": {
+			"text": "Un práctico programa en JavaScript para hacer airdrops de tokens fungibles a quienes poseen NFT.",
+			"sourceHash": "a934808be0a559d4",
+			"status": "machine",
+			"translator": "Claude"
+		}
+	},
+	"bcmr-generator": {
+		"description": {
+			"text": "Una herramienta para generar archivos BCMR.",
+			"sourceHash": "1b473c2d9ccfb392",
+			"status": "machine",
+			"translator": "Claude"
+		}
+	},
+	"cashtokens-studio": {
+		"description": {
+			"text": "Una app completa de gestión de CashTokens.",
+			"sourceHash": "d5a12bd98b97cc0a",
+			"status": "machine",
+			"translator": "Claude"
+		}
+	},
+	"nft-storage": {
+		"description": {
+			"text": "Pinning de archivos en IPFS, gratis y sencillo.",
+			"sourceHash": "c617215aef7751bb",
+			"status": "machine",
+			"translator": "Claude"
+		}
+	},
+	"tokenstork": {
+		"description": {
+			"text": "Un directorio de todos los CashTokens acuñados hasta hoy, a partir de su propio indexador: suministro en vivo, poseedores, NFT, metadatos de BCMR, precios y TVL. También herramientas de acuñación y airdrop, estadísticas por bloque y un resumen diario de tokens.",
+			"sourceHash": "aecdb9c40476fb74",
+			"status": "machine",
+			"translator": "Claude"
+		}
+	},
+	"tokenburner": {
+		"description": {
+			"text": "Quema CashTokens de forma irrevocable en la cadena",
+			"sourceHash": "5aff219913b40e19",
+			"status": "machine",
+			"translator": "Claude"
+		}
+	},
+	"dropship-cash": {
+		"description": {
+			"text": "dApp para hacer airdrops de BCH y CashTokens",
+			"sourceHash": "19913629c96c374e",
+			"status": "machine",
+			"translator": "Claude"
+		}
+	},
+	"cashtokens-org": {
+		"description": {
+			"text": "Especificaciones de CashTokens y BCMR.",
+			"sourceHash": "f874d77ff98f08f1",
+			"status": "machine",
+			"translator": "Claude"
+		}
+	},
+	"bitcats": {
+		"description": {
+			"text": "10.000 imágenes digitales únicas de gatos dibujadas a mano.",
+			"sourceHash": "40b68de5c522450c",
+			"status": "machine",
+			"translator": "Claude"
+		}
+	},
+	"cashninjas": {
+		"description": {
+			"text": "Colección de NFT con mejoras de OpenAI que dan un nombre y una descripción a cada Cash-Ninja.",
+			"sourceHash": "ae8bf9067f0aca0b",
+			"status": "machine",
+			"translator": "Claude"
+		}
+	},
+	"bch-gurus": {
+		"description": {
+			"text": "Un juego único de predicción de precios de criptomonedas, en la cadena y entre pares, y una colección de NFT.",
+			"sourceHash": "aa6f8ac83041df57",
+			"status": "machine",
+			"translator": "Claude"
+		}
+	},
+	"emerald-dao": {
+		"description": {
+			"text": "Plantilla sencilla de DAO para Bitcoin Cash que funciona como una bóveda de ahorro de depósito a plazo fijo, con un esquema opcional de recompensas financiado colectivamente.",
+			"sourceHash": "a9c6e544c888728d",
+			"status": "machine",
+			"translator": "Claude"
+		}
+	},
+	"shady-battlegrounds": {
+		"description": {
+			"text": "Desde un juego de carreras hasta un juego de artillería jugador contra jugador a gran escala que incluye varios tipos de armas para llevar al campo de batalla.",
+			"sourceHash": "0b6d1fa37a1f81cf",
+			"status": "machine",
+			"translator": "Claude"
+		}
+	},
+	"ghostwriter": {
+		"description": {
+			"text": "NFTs basados en texto.",
+			"sourceHash": "be1db155daa79052",
+			"status": "machine",
+			"translator": "Claude"
+		}
+	},
+	"bch-vision-2021": {
+		"description": {
+			"text": "Una colección de 25 imágenes para redes sociales que plantean una visión del desarrollo futuro de BCH.",
+			"sourceHash": "f4f3b673525de909",
+			"status": "machine",
+			"translator": "Claude"
+		}
+	},
+	"reapers": {
+		"description": {
+			"text": "Colección de NFTs de BCH.",
+			"sourceHash": "d3eec30dea86e6b0",
+			"status": "machine",
+			"translator": "Claude"
+		}
+	},
+	"tokenaut": {
+		"description": {
+			"text": "Proyecto CashTokens de BCH.",
+			"sourceHash": "d5852490fb2cc8e0",
+			"status": "machine",
+			"translator": "Claude"
+		}
+	},
+	"pepi-nft": {
+		"description": {
+			"text": "Colección de NFTs de memes en CashTokens",
+			"sourceHash": "96a5254e969d149a",
+			"status": "machine",
+			"translator": "Claude"
+		}
+	},
+	"dogecash": {
+		"description": {
+			"text": "Memecoin.",
+			"sourceHash": "6842adf8ba88ea0a",
+			"status": "machine",
+			"translator": "Claude"
+		}
+	},
+	"wrapped-bch": {
+		"description": {
+			"text": "BCH, pero como CashToken.",
+			"sourceHash": "78780190438c811c",
+			"status": "machine",
+			"translator": "Claude"
+		}
+	},
+	"rbf-tokens": {
+		"description": {
+			"text": "Token de reconocimiento de la comunidad de Real Bitcoin Fam para premiar a nuevos desarrolladores de BCH que crean con CashTokens.",
+			"sourceHash": "3fdfd74479e90eaa",
+			"status": "machine",
+			"translator": "Claude"
+		}
+	},
+	"spice-token": {
+		"description": {
+			"text": "CashToken BCH.",
+			"sourceHash": "293ac93669b7866e",
+			"status": "machine",
+			"translator": "Claude"
+		}
+	},
+	"popcorn-token": {
+		"description": {
+			"text": "CashToken BCH.",
+			"sourceHash": "293ac93669b7866e",
+			"status": "machine",
+			"translator": "Claude"
+		}
+	},
+	"bchpump": {
+		"description": {
+			"text": "Plataforma de lanzamiento de CashTokens con curva de vinculación",
+			"sourceHash": "e13d38a7b4bd6aa9",
+			"status": "machine",
+			"translator": "Claude"
+		}
+	},
+	"token-explorer": {
+		"description": {
+			"text": "Busca CashTokens por categoría.",
+			"sourceHash": "a175d80b3b46127a",
+			"status": "machine",
+			"translator": "Claude"
+		}
+	},
+	"nft-viewer": {
+		"description": {
+			"text": "Ve tu colección de NFTs.",
+			"sourceHash": "5b2fefc96d802b72",
+			"status": "machine",
+			"translator": "Claude"
+		}
+	},
+	"registry-cash": {
+		"description": {
+			"text": "Lista de todos los FTs de CashTokens creados.",
+			"sourceHash": "f808de996c71dcc1",
+			"status": "machine",
+			"translator": "Claude"
+		}
+	},
+	"cashtoken-markets": {
+		"description": {
+			"text": "Precios, poseedores, capitalización de mercado y volumen de CashTokens",
+			"sourceHash": "721171d8777d0695",
+			"status": "machine",
+			"translator": "Claude"
+		}
+	},
+	"opentokenregistry": {
+		"description": {
+			"text": "BCMR de referencia con requisitos para aparecer en la lista.",
+			"sourceHash": "960189d6ddaf5820",
+			"status": "machine",
+			"translator": "Claude"
+		}
+	},
+	"tokenstork-registry": {
+		"description": {
+			"text": "Un BCMR basado en DNS.",
+			"sourceHash": "8e18f728cc14e1fa",
+			"status": "machine",
+			"translator": "Claude"
+		}
+	},
+	"paytaca-bcmr-indexer": {
+		"description": {
+			"text": "Indexador y validador de metadatos de tokens de BCMR",
+			"sourceHash": "4fa4ce17abf664f9",
+			"status": "machine",
+			"translator": "Claude"
+		}
+	},
+	"bitcoincashsite-yt": {
+		"description": {
+			"text": "Transmisiones en vivo y tutoriales de BCH.",
+			"sourceHash": "a159225f63063a92",
+			"status": "machine",
+			"translator": "Claude"
+		}
+	},
+	"bch-research": {
+		"description": {
+			"text": "Foro de investigación de BCH.",
+			"sourceHash": "8c00a4ccdfaa7cd5",
+			"status": "machine",
+			"translator": "Claude"
+		}
+	},
+	"bch-node-tg": {
+		"description": {
+			"text": "Ayuda para nodos completos de BCH.",
+			"sourceHash": "956f64ba45017be6",
+			"status": "machine",
+			"translator": "Claude"
+		}
+	},
+	"panmoni-tg": {
+		"description": {
+			"text": "Ayuda general sobre BCH.",
+			"sourceHash": "db8aca0007ac6d66",
+			"status": "machine",
+			"translator": "Claude"
+		}
+	},
+	"real-bitcoin-cash": {
+		"description": {
+			"text": "Foro comunitario de Lemmy para Bitcoin Cash",
+			"sourceHash": "1d5696928ad12cb0",
+			"status": "machine",
+			"translator": "Claude"
+		}
+	},
+	"yt-mrzwets": {
+		"description": {
+			"text": "Tutoriales y noticias de CashTokens.",
+			"sourceHash": "f2090445f8626ca8",
+			"status": "machine",
+			"translator": "Claude"
+		}
+	},
+	"yt-paytaca": {
+		"description": {
+			"text": "Pódcast y más.",
+			"sourceHash": "e030eef42e582d70",
+			"status": "machine",
+			"translator": "Claude"
+		}
+	},
+	"yt-generalprotocols": {
+		"description": {
+			"text": "Discusión técnica.",
+			"sourceHash": "2df3a5db8efb7b9a",
+			"status": "machine",
+			"translator": "Claude"
+		}
+	},
+	"casualbch": {
+		"description": {
+			"text": "Tutoriales y noticias de CashTokens.",
+			"sourceHash": "f2090445f8626ca8",
+			"status": "machine",
+			"translator": "Claude"
+		}
+	},
+	"bch-podcast": {
+		"description": {
+			"text": "Conversaciones sobre BCH.",
+			"sourceHash": "b56c03790c5060d3",
+			"status": "machine",
+			"translator": "Claude"
+		}
+	},
+	"yt-bchnetwork": {
+		"description": {
+			"text": "Desarrolladores de BCH en YouTube.",
+			"sourceHash": "c9c0322d066e082f",
+			"status": "machine",
+			"translator": "Claude"
+		}
+	},
+	"yt-rayusesbch": {
+		"description": {
+			"text": "Canal de YouTube de BCH.",
+			"sourceHash": "185d14cb69bac5a2",
+			"status": "machine",
+			"translator": "Claude"
+		}
+	},
+	"bitcoincashtv": {
+		"description": {
+			"text": "Contenido en video de BCH.",
+			"sourceHash": "923e01ffc6e30cfc",
+			"status": "machine",
+			"translator": "Claude"
+		}
+	},
+	"gp-spaces": {
+		"description": {
+			"text": "Programa de debate habitual de General Protocols sobre Bitcoin Cash",
+			"sourceHash": "c10d6c5db721aea5",
+			"status": "machine",
+			"translator": "Claude"
+		}
+	},
+	"paytaca-talks": {
+		"description": {
+			"text": "Pódcast de Paytaca sobre Bitcoin Cash",
+			"sourceHash": "60a3334bc2078b69",
+			"status": "machine",
+			"translator": "Claude"
+		}
+	},
+	"la-economia-p2p": {
+		"description": {
+			"text": "Pódcast en español sobre economía, privacidad y BCH",
+			"sourceHash": "e59e3af62e80afe2",
+			"status": "machine",
+			"translator": "Claude"
+		}
+	},
+	"bitcoinprotocol-org": {
+		"description": {
+			"text": "Un sitio web de BCH con un diseño renovado.",
+			"sourceHash": "24c448726580828a",
+			"status": "machine",
+			"translator": "Claude"
+		}
+	},
+	"bitcoincash-org": {
+		"description": {
+			"text": "Sitio web de BCH de una sola página.",
+			"sourceHash": "35834b79b0765d2b",
+			"status": "machine",
+			"translator": "Claude"
+		}
+	},
+	"helpme-cash": {
+		"description": {
+			"text": "Proyectos y herramientas de BCH con calendario de eventos.",
+			"sourceHash": "8493d5140cc644dc",
+			"status": "machine",
+			"translator": "Claude"
+		}
+	},
+	"developers-cash": {
+		"description": {
+			"text": "Referencia para desarrolladores.",
+			"sourceHash": "b9cfd16dad08b2a3",
+			"status": "machine",
+			"translator": "Claude"
+		}
+	},
+	"bch-info": {
+		"description": {
+			"text": "Sitio web para desarrolladores de BCH.",
+			"sourceHash": "847808f99a86acba",
+			"status": "machine",
+			"translator": "Claude"
+		}
+	},
+	"awesomebch": {
+		"description": {
+			"text": "Proyectos y recursos de Bitcoin Cash.",
+			"sourceHash": "dd280c18c4bf2892",
+			"status": "machine",
+			"translator": "Claude"
+		}
+	},
+	"bchfaq": {
+		"description": {
+			"text": "Preguntas frecuentes sobre BCH con respuestas completas.",
+			"sourceHash": "b6685aeec148c00b",
+			"status": "machine",
+			"translator": "Claude"
+		}
+	},
+	"bmap-app": {
+		"description": {
+			"text": "Un mapa de comercios.",
+			"sourceHash": "ffb12475551b9e6c",
+			"status": "machine",
+			"translator": "Claude"
+		}
+	},
+	"whybitcoincash": {
+		"description": {
+			"text": "Sitio web introductorio sobre BCH.",
+			"sourceHash": "d594137ec3fbb0b6",
+			"status": "machine",
+			"translator": "Claude"
+		}
+	},
+	"best-bch-wallets": {
+		"description": {
+			"text": "Tu guía para encontrar la billetera de BCH ideal para ti.",
+			"sourceHash": "2ba9e5e0bc1a5319",
+			"status": "machine",
+			"translator": "Claude"
+		}
+	},
+	"accept-bch-initiative": {
+		"description": {
+			"text": "Una lista de comercios que aceptan BCH, seleccionada por la comunidad.",
+			"sourceHash": "b6d1179b03dabd71",
+			"status": "machine",
+			"translator": "Claude"
+		}
+	},
+	"btc-vs-bch-energy": {
+		"description": {
+			"text": "Compara el consumo de energía de BTC y BCH.",
+			"sourceHash": "673c2f2691413783",
+			"status": "machine",
+			"translator": "Claude"
+		}
+	},
+	"elbitcoin": {
+		"description": {
+			"text": "Información sobre BCH en español.",
+			"sourceHash": "5f2c8963aa146e8e",
+			"status": "machine",
+			"translator": "Claude"
+		}
+	},
+	"bitcoincash-network": {
+		"description": {
+			"text": "Sitio de información sobre BCH.",
+			"sourceHash": "37b5645e86e63a25",
+			"status": "machine",
+			"translator": "Claude"
+		}
+	},
+	"bchgang": {
+		"description": {
+			"text": "Comunidad de BCH.",
+			"sourceHash": "7309c2173bdea10f",
+			"status": "machine",
+			"translator": "Claude"
+		}
+	},
+	"discover-cash": {
+		"description": {
+			"text": "Sitio de información sobre el ecosistema de Bitcoin Cash",
+			"sourceHash": "2b643013314a862c",
+			"status": "machine",
+			"translator": "Claude"
+		}
+	},
+	"keepbitcoinfree-bch-dev": {
+		"description": {
+			"text": "Lista de proyectos mantenida por KeepBitcoinFree",
+			"sourceHash": "db14f399e0b813e7",
+			"status": "machine",
+			"translator": "Claude"
+		}
+	},
+	"eatbch": {
+		"description": {
+			"text": "Organización benéfica que alimenta a comunidades con donaciones en BCH",
+			"sourceHash": "dffc99a804a848c5",
+			"status": "machine",
+			"translator": "Claude"
+		}
+	},
+	"whitepaper": {
+		"description": {
+			"text": "por Satoshi Nakamoto",
+			"sourceHash": "bff4881b16127695",
+			"status": "machine",
+			"translator": "Claude"
+		}
+	},
+	"letter-from-ceo": {
+		"description": {
+			"text": "por Rick Falkvinge",
+			"sourceHash": "44eb9ed14e9043a6",
+			"status": "machine",
+			"translator": "Claude"
+		}
+	},
+	"whitepaper-visualized": {
+		"description": {
+			"text": "El whitepaper en formato de cómic.",
+			"sourceHash": "cdbaa0fddde0591f",
+			"status": "machine",
+			"translator": "Claude"
+		}
+	},
+	"coin-dance": {
+		"description": {
+			"text": "Información de la blockchain de BCH.",
+			"sourceHash": "4f7750daebf78466",
+			"status": "machine",
+			"translator": "Claude"
+		}
+	},
+	"bitcoinfees-cash": {
+		"description": {
+			"text": "Compara las comisiones por transacción de BTC y BCH en tiempo real.",
+			"sourceHash": "7b9e36ca43bc022e",
+			"status": "machine",
+			"translator": "Claude"
+		}
+	},
+	"fork-lol": {
+		"description": {
+			"text": "Información de la blockchain de BCH.",
+			"sourceHash": "4f7750daebf78466",
+			"status": "machine",
+			"translator": "Claude"
+		}
+	},
+	"jochen-hoenicke": {
+		"description": {
+			"text": "Datos de BCH mempool.",
+			"sourceHash": "c4860dc29c5d696f",
+			"status": "machine",
+			"translator": "Claude"
+		}
+	},
+	"cashfusion-stats": {
+		"description": {
+			"text": "Datos de uso de CashFusion.",
+			"sourceHash": "3c5636d011c619ca",
+			"status": "machine",
+			"translator": "Claude"
+		}
+	},
+	"cashnodes": {
+		"description": {
+			"text": "Muestra los nodos completos de BCH activos en este momento.",
+			"sourceHash": "e09f4606d6613721",
+			"status": "machine",
+			"translator": "Claude"
+		}
+	},
+	"bch-gg": {
+		"description": {
+			"text": "Crea enlaces cortos de BCH.",
+			"sourceHash": "86dfa055fdfd8f39",
+			"status": "machine",
+			"translator": "Claude"
+		}
+	},
+	"tx-watch": {
+		"description": {
+			"text": "Visualizador en vivo de transacciones y bloques de BTC frente a BCH",
+			"sourceHash": "80f69da0f1981793",
+			"status": "machine",
+			"translator": "Claude"
+		}
+	},
+	"bch-notary": {
+		"description": {
+			"text": "Notariza documentos en la blockchain de Bitcoin Cash",
+			"sourceHash": "89fd192d697e4b29",
+			"status": "machine",
+			"translator": "Claude"
+		}
+	},
+	"bitcoin-com-tools": {
+		"description": {
+			"text": "Colección de utilidades gratuitas de Bitcoin y BCH",
+			"sourceHash": "5342d36850f625b3",
+			"status": "machine",
+			"translator": "Claude"
+		}
+	},
+	"flipstarters-overview": {
+		"description": {
+			"text": "Índice de campañas de Flipstarter activas y pasadas",
+			"sourceHash": "bcd83f418076125d",
+			"status": "machine",
+			"translator": "Claude"
+		}
+	},
+	"coinrabbit": {
+		"description": {
+			"text": "Préstamos cripto con garantía en BCH.",
+			"sourceHash": "8059b4e950d2e603",
+			"status": "machine",
+			"translator": "Claude"
+		}
+	},
+	"nexo": {
+		"description": {
+			"text": "Préstamos cripto con BCH como garantía.",
+			"sourceHash": "d4b62851ee351d38",
+			"status": "machine",
+			"translator": "Claude"
+		}
+	},
+	"bitcoin-india": {
+		"description": {
+			"text": "Remesas y servicios de BCH en India.",
+			"sourceHash": "372be4d1b9c2b7cd",
+			"status": "machine",
+			"translator": "Claude"
+		}
+	},
+	"asicseer-pool": {
+		"description": {
+			"text": "Software rápido en C para pools de minería de Bitcoin Cash",
+			"sourceHash": "059c7ad89415365d",
+			"status": "machine",
+			"translator": "Claude"
+		}
+	}
+}

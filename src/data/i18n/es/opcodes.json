@@ -1,0 +1,1114 @@
+{
+	"op_0": {
+		"description": {
+			"text": "Apila una cadena de bytes vacía, que la VM interpreta como el número 0 y como falso.",
+			"sourceHash": "247919d159b9f3cf",
+			"status": "machine",
+			"translator": "Claude"
+		}
+	},
+	"op_pushbytes_n": {
+		"description": {
+			"text": "Los bytes 0x01 a 0x4b (1–75) no son instrucciones con nombre: cada uno apila los N bytes siguientes del script, donde N es el valor del opcode. Por ejemplo, 0x14 apila los 20 bytes siguientes. Según la regla de apilado mínimo, los datos de 1–75 bytes deben usar esta forma, salvo que exista un apilado más corto (como OP_1–OP_16).",
+			"sourceHash": "221d559ebd69adbe",
+			"status": "machine",
+			"translator": "Claude"
+		}
+	},
+	"op_pushdata1": {
+		"description": {
+			"text": "El byte siguiente indica una longitud (0–255); se apila esa cantidad de bytes siguientes. Las reglas de apilado mínimo solo lo permiten para 76–255 bytes.",
+			"sourceHash": "887ea29e6746cf59",
+			"status": "machine",
+			"translator": "Claude"
+		}
+	},
+	"op_pushdata2": {
+		"description": {
+			"text": "Los dos bytes siguientes (little-endian) indican una longitud; se apila esa cantidad de bytes siguientes. Es necesario para apilar más de 255 bytes.",
+			"sourceHash": "16a4a2ece7c72de7",
+			"status": "machine",
+			"translator": "Claude"
+		}
+	},
+	"op_pushdata4": {
+		"description": {
+			"text": "Los cuatro bytes siguientes (little-endian) indican una longitud; se apila esa cantidad de bytes siguientes. El límite de 10.000 bytes por elemento de la pila lo vuelve redundante en la práctica, y las reglas de apilado mínimo lo rechazan para cualquier tamaño que OP_PUSHDATA2 pueda codificar.",
+			"sourceHash": "907a49e27aab545e",
+			"status": "machine",
+			"translator": "Claude"
+		}
+	},
+	"op_1negate": {
+		"description": {
+			"text": "Apila el número -1.",
+			"sourceHash": "48e34287e955774c",
+			"status": "machine",
+			"translator": "Claude"
+		}
+	},
+	"op_reserved": {
+		"description": {
+			"text": "Hace fallar el script si se ejecuta. Dentro de una rama OP_IF no ejecutada, se ignora.",
+			"sourceHash": "b0a528367eaea8d0",
+			"status": "machine",
+			"translator": "Claude"
+		}
+	},
+	"op_1": {
+		"description": {
+			"text": "Apila el número 1 (un byte 0x01), el valor verdadero estándar.",
+			"sourceHash": "5c1e323f180db0ba",
+			"status": "machine",
+			"translator": "Claude"
+		}
+	},
+	"op_2": {
+		"description": {
+			"text": "Apila el número 2. Según las reglas de apilado mínimo, para apilar 2 es obligatoria la forma de un byte.",
+			"sourceHash": "600ec2649f5cc381",
+			"status": "machine",
+			"translator": "Claude"
+		}
+	},
+	"op_3": {
+		"description": {
+			"text": "Apila el número 3. Según las reglas de apilado mínimo, para apilar 3 es obligatoria la forma de un byte.",
+			"sourceHash": "2b2056a07024adb1",
+			"status": "machine",
+			"translator": "Claude"
+		}
+	},
+	"op_4": {
+		"description": {
+			"text": "Apila el número 4. Según las reglas de apilado mínimo, para apilar 4 es obligatoria la forma de un byte.",
+			"sourceHash": "6b57e69cf682dd7d",
+			"status": "machine",
+			"translator": "Claude"
+		}
+	},
+	"op_5": {
+		"description": {
+			"text": "Apila el número 5. Según las reglas de apilado mínimo, para apilar 5 es obligatoria la forma de un byte.",
+			"sourceHash": "e01266935ee61c11",
+			"status": "machine",
+			"translator": "Claude"
+		}
+	},
+	"op_6": {
+		"description": {
+			"text": "Apila el número 6. Según las reglas de apilado mínimo, para apilar 6 es obligatoria la forma de un byte.",
+			"sourceHash": "0d5c5e2e1d282b39",
+			"status": "machine",
+			"translator": "Claude"
+		}
+	},
+	"op_7": {
+		"description": {
+			"text": "Apila el número 7. Según las reglas de apilado mínimo, para apilar 7 es obligatoria la forma de un byte.",
+			"sourceHash": "300e663940eb1517",
+			"status": "machine",
+			"translator": "Claude"
+		}
+	},
+	"op_8": {
+		"description": {
+			"text": "Apila el número 8. Según las reglas de apilado mínimo, para apilar 8 es obligatoria la forma de un byte.",
+			"sourceHash": "42b0037cc47c1d3b",
+			"status": "machine",
+			"translator": "Claude"
+		}
+	},
+	"op_9": {
+		"description": {
+			"text": "Apila el número 9. Según las reglas de apilado mínimo, para apilar 9 es obligatoria la forma de un byte.",
+			"sourceHash": "8a2679bcf47f512b",
+			"status": "machine",
+			"translator": "Claude"
+		}
+	},
+	"op_10": {
+		"description": {
+			"text": "Apila el número 10. Según las reglas de apilado mínimo, para apilar 10 es obligatoria la forma de un byte.",
+			"sourceHash": "e8915f59d77ee4f8",
+			"status": "machine",
+			"translator": "Claude"
+		}
+	},
+	"op_11": {
+		"description": {
+			"text": "Apila el número 11. Según las reglas de apilado mínimo, para apilar 11 es obligatoria la forma de un byte.",
+			"sourceHash": "fab1c56b1c069dd4",
+			"status": "machine",
+			"translator": "Claude"
+		}
+	},
+	"op_12": {
+		"description": {
+			"text": "Apila el número 12. Según las reglas de apilado mínimo, para apilar 12 es obligatoria la forma de un byte.",
+			"sourceHash": "fd354bd9eb0a4ded",
+			"status": "machine",
+			"translator": "Claude"
+		}
+	},
+	"op_13": {
+		"description": {
+			"text": "Apila el número 13. Según las reglas de apilado mínimo, para apilar 13 es obligatoria la forma de un byte.",
+			"sourceHash": "635ebf7140c8d1bd",
+			"status": "machine",
+			"translator": "Claude"
+		}
+	},
+	"op_14": {
+		"description": {
+			"text": "Apila el número 14. Según las reglas de apilado mínimo, para apilar 14 es obligatoria la forma de un byte.",
+			"sourceHash": "aa3840be6b290835",
+			"status": "machine",
+			"translator": "Claude"
+		}
+	},
+	"op_15": {
+		"description": {
+			"text": "Apila el número 15. Según las reglas de apilado mínimo, para apilar 15 es obligatoria la forma de un byte.",
+			"sourceHash": "a575d453735d5a85",
+			"status": "machine",
+			"translator": "Claude"
+		}
+	},
+	"op_16": {
+		"description": {
+			"text": "Apila el número 16. Según las reglas de apilado mínimo, para apilar 16 es obligatoria la forma de un byte.",
+			"sourceHash": "7434319931422211",
+			"status": "machine",
+			"translator": "Claude"
+		}
+	},
+	"op_nop": {
+		"description": {
+			"text": "No hace nada.",
+			"sourceHash": "9407157969e57f0d",
+			"status": "machine",
+			"translator": "Claude"
+		}
+	},
+	"op_ver": {
+		"description": {
+			"text": "Originalmente apilaba la versión del cliente; está reservado desde hace mucho. Hace fallar el script si se ejecuta y se ignora en una rama no ejecutada.",
+			"sourceHash": "71eea5f7c9c2eb31",
+			"status": "machine",
+			"translator": "Claude"
+		}
+	},
+	"op_if": {
+		"description": {
+			"text": "Saca el elemento superior; si es verdadero, ejecuta las instrucciones siguientes hasta OP_ELSE o OP_ENDIF. Cualquier valor sirve como condición. BCH no exige que esté codificado de forma mínima.",
+			"sourceHash": "52611a359aa5d330",
+			"status": "machine",
+			"translator": "Claude"
+		}
+	},
+	"op_notif": {
+		"description": {
+			"text": "Saca el elemento superior; si es falso, ejecuta las instrucciones siguientes hasta OP_ELSE o OP_ENDIF. Cualquier valor sirve como condición. BCH no exige que esté codificado de forma mínima.",
+			"sourceHash": "85a6288340d848d4",
+			"status": "machine",
+			"translator": "Claude"
+		}
+	},
+	"op_begin": {
+		"description": {
+			"text": "Marca el inicio de un bucle apilando la posición de la instrucción actual en la pila de control. El OP_UNTIL correspondiente vuelve a este punto. Antes de mayo de 2026, este byte era el OP_VERIF deshabilitado. OP_BEGIN y OP_UNTIL deben formar pareja incluso dentro de una rama no ejecutada, y un bloque OP_IF no puede cruzar el límite de un bucle.",
+			"sourceHash": "fd7cc3507da71fbf",
+			"status": "machine",
+			"translator": "Claude"
+		}
+	},
+	"op_until": {
+		"description": {
+			"text": "Cierra un bucle. Saca el elemento superior de la pila: si es falso (0), la ejecución vuelve justo después del OP_BEGIN correspondiente; si es verdadero, la ejecución continúa. Antes de mayo de 2026, este byte era el OP_VERNOTIF deshabilitado. OP_BEGIN y OP_UNTIL deben formar pareja incluso dentro de una rama no ejecutada, y un bloque OP_IF no puede cruzar el límite de un bucle.",
+			"sourceHash": "43ebcac4577318ce",
+			"status": "machine",
+			"translator": "Claude"
+		}
+	},
+	"op_else": {
+		"description": {
+			"text": "Cambia a la otra rama del bloque OP_IF o OP_NOTIF actual.",
+			"sourceHash": "df8a3459209ad717",
+			"status": "machine",
+			"translator": "Claude"
+		}
+	},
+	"op_endif": {
+		"description": {
+			"text": "Cierra un bloque OP_IF / OP_NOTIF. Todo bloque condicional debe cerrarse; si no, el script falla.",
+			"sourceHash": "38a291e611cda72b",
+			"status": "machine",
+			"translator": "Claude"
+		}
+	},
+	"op_verify": {
+		"description": {
+			"text": "Saca el elemento superior y hace fallar el script si no es verdadero.",
+			"sourceHash": "676cc45a83d7c7fb",
+			"status": "machine",
+			"translator": "Claude"
+		}
+	},
+	"op_return": {
+		"description": {
+			"text": "Hace fallar el script de inmediato. Las salidas que empiezan con OP_RETURN son demostrablemente imposibles de gastar y se usan para transportar datos.",
+			"sourceHash": "d0682260583a9b42",
+			"status": "machine",
+			"translator": "Claude"
+		}
+	},
+	"op_toaltstack": {
+		"description": {
+			"text": "Mueve el elemento superior a la pila alternativa.",
+			"sourceHash": "69e834fc340f322f",
+			"status": "machine",
+			"translator": "Claude"
+		}
+	},
+	"op_fromaltstack": {
+		"description": {
+			"text": "Mueve el elemento superior de la pila alternativa a la pila principal.",
+			"sourceHash": "6905b75d0df71209",
+			"status": "machine",
+			"translator": "Claude"
+		}
+	},
+	"op_2drop": {
+		"description": {
+			"text": "Elimina los dos elementos superiores.",
+			"sourceHash": "09b3cbde13f214d1",
+			"status": "machine",
+			"translator": "Claude"
+		}
+	},
+	"op_2dup": {
+		"description": {
+			"text": "Duplica los dos elementos superiores.",
+			"sourceHash": "6eb40371014bce7f",
+			"status": "machine",
+			"translator": "Claude"
+		}
+	},
+	"op_3dup": {
+		"description": {
+			"text": "Duplica los tres elementos superiores.",
+			"sourceHash": "416ffd777e2cc537",
+			"status": "machine",
+			"translator": "Claude"
+		}
+	},
+	"op_2over": {
+		"description": {
+			"text": "Copia al tope el par de elementos que está dos pares más abajo.",
+			"sourceHash": "adae3ca392157311",
+			"status": "machine",
+			"translator": "Claude"
+		}
+	},
+	"op_2rot": {
+		"description": {
+			"text": "Mueve los elementos quinto y sexto al tope.",
+			"sourceHash": "fad4573dbdec78fd",
+			"status": "machine",
+			"translator": "Claude"
+		}
+	},
+	"op_2swap": {
+		"description": {
+			"text": "Intercambia los dos pares de elementos superiores.",
+			"sourceHash": "2f716cff6d327e56",
+			"status": "machine",
+			"translator": "Claude"
+		}
+	},
+	"op_ifdup": {
+		"description": {
+			"text": "Duplica el elemento superior si no es cero.",
+			"sourceHash": "077b5d6fae60b1b1",
+			"status": "machine",
+			"translator": "Claude"
+		}
+	},
+	"op_depth": {
+		"description": {
+			"text": "Apila el número de elementos que hay en la pila.",
+			"sourceHash": "030ccba97e53d968",
+			"status": "machine",
+			"translator": "Claude"
+		}
+	},
+	"op_drop": {
+		"description": {
+			"text": "Elimina el elemento superior.",
+			"sourceHash": "b33905529b8bfd15",
+			"status": "machine",
+			"translator": "Claude"
+		}
+	},
+	"op_dup": {
+		"description": {
+			"text": "Duplica el elemento superior. Es más conocido como el primer paso de un bloqueo P2PKH.",
+			"sourceHash": "ff7abaa87506d927",
+			"status": "machine",
+			"translator": "Claude"
+		}
+	},
+	"op_nip": {
+		"description": {
+			"text": "Elimina el segundo elemento desde el tope.",
+			"sourceHash": "fd7dddcb251a6b09",
+			"status": "machine",
+			"translator": "Claude"
+		}
+	},
+	"op_over": {
+		"description": {
+			"text": "Copia al tope el segundo elemento desde el tope.",
+			"sourceHash": "b942b191877dab9e",
+			"status": "machine",
+			"translator": "Claude"
+		}
+	},
+	"op_pick": {
+		"description": {
+			"text": "Saca n y luego copia al tope el elemento que está n posiciones más abajo.",
+			"sourceHash": "795101fda4249a39",
+			"status": "machine",
+			"translator": "Claude"
+		}
+	},
+	"op_roll": {
+		"description": {
+			"text": "Saca n y luego mueve al tope el elemento que está n posiciones más abajo.",
+			"sourceHash": "cb13af0855b31a2a",
+			"status": "machine",
+			"translator": "Claude"
+		}
+	},
+	"op_rot": {
+		"description": {
+			"text": "Mueve el tercer elemento al tope.",
+			"sourceHash": "c7562618810ef296",
+			"status": "machine",
+			"translator": "Claude"
+		}
+	},
+	"op_swap": {
+		"description": {
+			"text": "Intercambia los dos elementos superiores.",
+			"sourceHash": "14fc50ca5cc9107b",
+			"status": "machine",
+			"translator": "Claude"
+		}
+	},
+	"op_tuck": {
+		"description": {
+			"text": "Copia el elemento superior debajo del segundo elemento.",
+			"sourceHash": "e50937aa3cb73b04",
+			"status": "machine",
+			"translator": "Claude"
+		}
+	},
+	"op_cat": {
+		"description": {
+			"text": "Concatena los dos elementos superiores. Deshabilitado en Bitcoin desde 2010 y rehabilitado en BCH en mayo de 2018. Los covenants lo usan para construir scripts de salida en la pila.",
+			"sourceHash": "fbad15ab490727a7",
+			"status": "machine",
+			"translator": "Claude"
+		}
+	},
+	"op_split": {
+		"description": {
+			"text": "Divide una cadena de bytes en la posición n, en dos elementos. Ocupó el byte del OP_SUBSTR deshabilitado y reemplaza a OP_SUBSTR, OP_LEFT y OP_RIGHT.",
+			"sourceHash": "4684f8e919ca5635",
+			"status": "machine",
+			"translator": "Claude"
+		}
+	},
+	"op_num2bin": {
+		"description": {
+			"text": "Convierte el número n en una cadena de exactamente `size` bytes, rellenando con ceros y conservando el bit de signo. Usa el byte del OP_LEFT deshabilitado.",
+			"sourceHash": "24946f30e0089087",
+			"status": "machine",
+			"translator": "Claude"
+		}
+	},
+	"op_bin2num": {
+		"description": {
+			"text": "Convierte una cadena de bytes en el número, codificado de forma mínima, que representa. Usa el byte del OP_RIGHT deshabilitado.",
+			"sourceHash": "a2208e18819857c2",
+			"status": "machine",
+			"translator": "Claude"
+		}
+	},
+	"op_size": {
+		"description": {
+			"text": "Apila la longitud en bytes del elemento superior sin eliminarlo.",
+			"sourceHash": "32061ed6fbc0c3e0",
+			"status": "machine",
+			"translator": "Claude"
+		}
+	},
+	"op_invert": {
+		"description": {
+			"text": "Invierte todos los bits del elemento superior (NOT a nivel de bits). Deshabilitado desde 2010 y rehabilitado en BCH en mayo de 2026.",
+			"sourceHash": "f6ce2242bf7e0b90",
+			"status": "machine",
+			"translator": "Claude"
+		}
+	},
+	"op_and": {
+		"description": {
+			"text": "AND a nivel de bits de dos cadenas de bytes de igual longitud. Deshabilitado en Bitcoin desde 2010 y rehabilitado en BCH en mayo de 2018.",
+			"sourceHash": "a1634d07d13f920e",
+			"status": "machine",
+			"translator": "Claude"
+		}
+	},
+	"op_or": {
+		"description": {
+			"text": "OR a nivel de bits de dos cadenas de bytes de igual longitud. Deshabilitado en Bitcoin desde 2010 y rehabilitado en BCH en mayo de 2018.",
+			"sourceHash": "2fa5f6f3b91d0ceb",
+			"status": "machine",
+			"translator": "Claude"
+		}
+	},
+	"op_xor": {
+		"description": {
+			"text": "XOR a nivel de bits de dos cadenas de bytes de igual longitud. Deshabilitado en Bitcoin desde 2010 y rehabilitado en BCH en mayo de 2018.",
+			"sourceHash": "443d68abe6176037",
+			"status": "machine",
+			"translator": "Claude"
+		}
+	},
+	"op_equal": {
+		"description": {
+			"text": "Apila 1 si los dos elementos superiores son iguales byte a byte; si no, 0.",
+			"sourceHash": "3ff0dec016b53bf3",
+			"status": "machine",
+			"translator": "Claude"
+		}
+	},
+	"op_equalverify": {
+		"description": {
+			"text": "OP_EQUAL seguido de OP_VERIFY: falla a menos que los dos elementos superiores sean iguales.",
+			"sourceHash": "15c25b822d300a12",
+			"status": "machine",
+			"translator": "Claude"
+		}
+	},
+	"op_define": {
+		"description": {
+			"text": "Guarda el cuerpo de una función (bytecode) en la tabla de funciones bajo un identificador de 0–7 bytes. Las funciones son inmutables: redefinir un identificador falla. Este byte era OP_RESERVED1 antes de mayo de 2026.",
+			"sourceHash": "435ff206d8283954",
+			"status": "machine",
+			"translator": "Claude"
+		}
+	},
+	"op_invoke": {
+		"description": {
+			"text": "Extrae un identificador de función y ejecuta el bytecode de esa función sobre la pila actual; luego continúa después de OP_INVOKE. Falla si ninguna función tiene ese identificador. Este byte era OP_RESERVED2 antes de mayo de 2026.",
+			"sourceHash": "a402e337ae6e675f",
+			"status": "machine",
+			"translator": "Claude"
+		}
+	},
+	"op_1add": {
+		"description": {
+			"text": "Suma 1 al número superior. Desde mayo de 2025, los números pueden tener hasta 10.000 bytes de longitud (BigInt).",
+			"sourceHash": "792b9551ce244687",
+			"status": "machine",
+			"translator": "Claude"
+		}
+	},
+	"op_1sub": {
+		"description": {
+			"text": "Resta 1 al número superior. Desde mayo de 2025, los números pueden tener hasta 10.000 bytes de longitud (BigInt).",
+			"sourceHash": "85c62401aec6a518",
+			"status": "machine",
+			"translator": "Claude"
+		}
+	},
+	"op_lshiftnum": {
+		"description": {
+			"text": "Desplazamiento aritmético a la izquierda: multiplica el número a por 2 elevado a `bits`. Los desplazamientos negativos fallan. Este byte era el OP_2MUL deshabilitado antes de mayo de 2026.",
+			"sourceHash": "a2013ec2d04713ad",
+			"status": "machine",
+			"translator": "Claude"
+		}
+	},
+	"op_rshiftnum": {
+		"description": {
+			"text": "Desplazamiento aritmético a la derecha: divide el número a entre 2 elevado a `bits`, redondeando hacia menos infinito. Los desplazamientos negativos fallan. Este byte era el OP_2DIV deshabilitado antes de mayo de 2026.",
+			"sourceHash": "2c88bc7f6fce6659",
+			"status": "machine",
+			"translator": "Claude"
+		}
+	},
+	"op_negate": {
+		"description": {
+			"text": "Cambia el signo del número superior. Desde mayo de 2025, los números pueden tener hasta 10.000 bytes de longitud (BigInt).",
+			"sourceHash": "23f76eb549d1c86a",
+			"status": "machine",
+			"translator": "Claude"
+		}
+	},
+	"op_abs": {
+		"description": {
+			"text": "Reemplaza el número superior por su valor absoluto. Desde mayo de 2025, los números pueden tener hasta 10.000 bytes de longitud (BigInt).",
+			"sourceHash": "02603a929f594ef8",
+			"status": "machine",
+			"translator": "Claude"
+		}
+	},
+	"op_not": {
+		"description": {
+			"text": "Apila 1 si el número superior es 0; si no, 0.",
+			"sourceHash": "9ba4635a5050c73c",
+			"status": "machine",
+			"translator": "Claude"
+		}
+	},
+	"op_0notequal": {
+		"description": {
+			"text": "Apila 0 si el número superior es 0; si no, 1.",
+			"sourceHash": "c6cf6f97df2b8e1a",
+			"status": "machine",
+			"translator": "Claude"
+		}
+	},
+	"op_add": {
+		"description": {
+			"text": "Suma los dos números superiores. Desde mayo de 2025, los números pueden tener hasta 10.000 bytes de longitud (BigInt).",
+			"sourceHash": "28e839bb0f510e83",
+			"status": "machine",
+			"translator": "Claude"
+		}
+	},
+	"op_sub": {
+		"description": {
+			"text": "Resta el número superior del que está debajo. Desde mayo de 2025, los números pueden tener hasta 10.000 bytes de longitud (BigInt).",
+			"sourceHash": "2c7aeb9210b6521e",
+			"status": "machine",
+			"translator": "Claude"
+		}
+	},
+	"op_mul": {
+		"description": {
+			"text": "Multiplica los dos números superiores. Deshabilitado en Bitcoin desde 2010 y rehabilitado en BCH en mayo de 2022 con enteros de 64 bits; BigInt (2025) eliminó el límite de 64 bits.",
+			"sourceHash": "b1e595251ec5004b",
+			"status": "machine",
+			"translator": "Claude"
+		}
+	},
+	"op_div": {
+		"description": {
+			"text": "Divide a entre b, truncando hacia cero. La división entre cero falla. Rehabilitado en BCH en mayo de 2018. Desde mayo de 2025, los números pueden tener hasta 10.000 bytes de longitud (BigInt).",
+			"sourceHash": "b73f3095dc695c5a",
+			"status": "machine",
+			"translator": "Claude"
+		}
+	},
+	"op_mod": {
+		"description": {
+			"text": "Apila el resto de dividir a entre b. El módulo por cero falla. Rehabilitado en BCH en mayo de 2018. Desde mayo de 2025, los números pueden tener hasta 10.000 bytes de longitud (BigInt).",
+			"sourceHash": "3641e7395deb0a82",
+			"status": "machine",
+			"translator": "Claude"
+		}
+	},
+	"op_lshiftbin": {
+		"description": {
+			"text": "Desplazamiento lógico a la izquierda de una cadena de bytes por `bits`, manteniendo su longitud: entran ceros por la derecha y los bits que salen por la izquierda se descartan. Este byte era el OP_LSHIFT deshabilitado antes de mayo de 2026.",
+			"sourceHash": "9d7528646332075d",
+			"status": "machine",
+			"translator": "Claude"
+		}
+	},
+	"op_rshiftbin": {
+		"description": {
+			"text": "Desplazamiento lógico a la derecha de una cadena de bytes por `bits`, manteniendo su longitud: entran ceros por la izquierda y los bits que salen por la derecha se descartan. Este byte era el OP_RSHIFT deshabilitado antes de mayo de 2026.",
+			"sourceHash": "b2ecc77b650c5147",
+			"status": "machine",
+			"translator": "Claude"
+		}
+	},
+	"op_booland": {
+		"description": {
+			"text": "Apila 1 si ambos números son distintos de cero; si no, 0. Desde mayo de 2025, los números pueden tener hasta 10.000 bytes de longitud (BigInt).",
+			"sourceHash": "e879555c2f2af408",
+			"status": "machine",
+			"translator": "Claude"
+		}
+	},
+	"op_boolor": {
+		"description": {
+			"text": "Apila 1 si alguno de los dos números es distinto de cero; si no, 0. Desde mayo de 2025, los números pueden tener hasta 10.000 bytes de longitud (BigInt).",
+			"sourceHash": "2d03127cec048757",
+			"status": "machine",
+			"translator": "Claude"
+		}
+	},
+	"op_numequal": {
+		"description": {
+			"text": "Apila 1 si los dos números son iguales; si no, 0. Desde mayo de 2025, los números pueden tener hasta 10.000 bytes de longitud (BigInt).",
+			"sourceHash": "189ef7aa33a18c18",
+			"status": "machine",
+			"translator": "Claude"
+		}
+	},
+	"op_numequalverify": {
+		"description": {
+			"text": "OP_NUMEQUAL y luego OP_VERIFY: falla a menos que los números sean iguales. Desde mayo de 2025, los números pueden tener hasta 10.000 bytes de longitud (BigInt).",
+			"sourceHash": "6798a23cf1efed68",
+			"status": "machine",
+			"translator": "Claude"
+		}
+	},
+	"op_numnotequal": {
+		"description": {
+			"text": "Apila 1 si los números son distintos; si no, 0. Desde mayo de 2025, los números pueden tener hasta 10.000 bytes de longitud (BigInt).",
+			"sourceHash": "fa659bcbe516d37d",
+			"status": "machine",
+			"translator": "Claude"
+		}
+	},
+	"op_lessthan": {
+		"description": {
+			"text": "Apila 1 si a es menor que b; si no, 0. Desde mayo de 2025, los números pueden tener hasta 10.000 bytes de longitud (BigInt).",
+			"sourceHash": "440bce55a03ea913",
+			"status": "machine",
+			"translator": "Claude"
+		}
+	},
+	"op_greaterthan": {
+		"description": {
+			"text": "Apila 1 si a es mayor que b; si no, 0. Desde mayo de 2025, los números pueden tener hasta 10.000 bytes de longitud (BigInt).",
+			"sourceHash": "9e639bf3de3ff0d0",
+			"status": "machine",
+			"translator": "Claude"
+		}
+	},
+	"op_lessthanorequal": {
+		"description": {
+			"text": "Apila 1 si a es menor o igual que b; si no, 0. Desde mayo de 2025, los números pueden tener hasta 10.000 bytes de longitud (BigInt).",
+			"sourceHash": "805b6c06d4422537",
+			"status": "machine",
+			"translator": "Claude"
+		}
+	},
+	"op_greaterthanorequal": {
+		"description": {
+			"text": "Apila 1 si a es mayor o igual que b; si no, 0. Desde mayo de 2025, los números pueden tener hasta 10.000 bytes de longitud (BigInt).",
+			"sourceHash": "923f673e7e2d91c3",
+			"status": "machine",
+			"translator": "Claude"
+		}
+	},
+	"op_min": {
+		"description": {
+			"text": "Apila el menor de dos números. Desde mayo de 2025, los números pueden tener hasta 10.000 bytes de longitud (BigInt).",
+			"sourceHash": "0126db89da7301ad",
+			"status": "machine",
+			"translator": "Claude"
+		}
+	},
+	"op_max": {
+		"description": {
+			"text": "Apila el mayor de dos números. Desde mayo de 2025, los números pueden tener hasta 10.000 bytes de longitud (BigInt).",
+			"sourceHash": "3889e0b3936108c8",
+			"status": "machine",
+			"translator": "Claude"
+		}
+	},
+	"op_within": {
+		"description": {
+			"text": "Apila 1 si x es al menos min y menor que max; si no, 0. Desde mayo de 2025, los números pueden tener hasta 10.000 bytes de longitud (BigInt).",
+			"sourceHash": "4fb04c963b044110",
+			"status": "machine",
+			"translator": "Claude"
+		}
+	},
+	"op_ripemd160": {
+		"description": {
+			"text": "Reemplaza el elemento superior por su hash RIPEMD-160 (20 bytes).",
+			"sourceHash": "a6273ed7e29d079a",
+			"status": "machine",
+			"translator": "Claude"
+		}
+	},
+	"op_sha1": {
+		"description": {
+			"text": "Reemplaza el elemento superior por su hash SHA-1 (20 bytes). SHA-1 está roto en cuanto a resistencia a colisiones; evítalo en contratos nuevos.",
+			"sourceHash": "6b75db8e48eb7c1f",
+			"status": "machine",
+			"translator": "Claude"
+		}
+	},
+	"op_sha256": {
+		"description": {
+			"text": "Reemplaza el elemento superior por su hash SHA-256 (32 bytes).",
+			"sourceHash": "9eeed624c2c744ff",
+			"status": "machine",
+			"translator": "Claude"
+		}
+	},
+	"op_hash160": {
+		"description": {
+			"text": "Reemplaza el elemento superior por su hash SHA-256 seguido de RIPEMD-160 (20 bytes). Se usa en P2PKH y en las direcciones P2SH20.",
+			"sourceHash": "8a7de5daf25cd883",
+			"status": "machine",
+			"translator": "Claude"
+		}
+	},
+	"op_hash256": {
+		"description": {
+			"text": "Reemplaza el elemento superior por su hash SHA-256 doble (32 bytes). Se usa en P2SH32 (2023) y para calcular los IDs de transacción.",
+			"sourceHash": "e84bb12869e36071",
+			"status": "machine",
+			"translator": "Claude"
+		}
+	},
+	"op_codeseparator": {
+		"description": {
+			"text": "Marca una posición en el script: las comprobaciones de firma firman solo el bytecode posterior al último OP_CODESEPARATOR ejecutado. OP_ACTIVEBYTECODE también parte de ahí.",
+			"sourceHash": "b53e8f0793f9e5d4",
+			"status": "machine",
+			"translator": "Claude"
+		}
+	},
+	"op_checksig": {
+		"description": {
+			"text": "Verifica una firma de transacción con una clave pública y apila 1 o 0. Desde mayo de 2019 acepta firmas ECDSA y Schnorr, que se distinguen por la longitud de la firma.",
+			"sourceHash": "bcd2d086212a0a01",
+			"status": "machine",
+			"translator": "Claude"
+		}
+	},
+	"op_checksigverify": {
+		"description": {
+			"text": "OP_CHECKSIG seguido de OP_VERIFY: falla a menos que la firma sea válida.",
+			"sourceHash": "deac2a31517b3805",
+			"status": "machine",
+			"translator": "Claude"
+		}
+	},
+	"op_checkmultisig": {
+		"description": {
+			"text": "Verifica firmas m de n y apila 1 o 0. Desde noviembre de 2019 acepta firmas Schnorr cuando el elemento ficticio es un campo de bits que indica qué claves firmaron; el modo ECDSA requiere un elemento ficticio nulo.",
+			"sourceHash": "b410b0ab63e2a3b0",
+			"status": "machine",
+			"translator": "Claude"
+		}
+	},
+	"op_checkmultisigverify": {
+		"description": {
+			"text": "OP_CHECKMULTISIG seguido de OP_VERIFY.",
+			"sourceHash": "5c66e212d4e42de2",
+			"status": "machine",
+			"translator": "Claude"
+		}
+	},
+	"op_nop1": {
+		"description": {
+			"text": "No hace nada; reservado para futuras actualizaciones. La política estándar de retransmisión rechaza los scripts que lo usan.",
+			"sourceHash": "ac5499a7cbb96aea",
+			"status": "machine",
+			"translator": "Claude"
+		}
+	},
+	"op_checklocktimeverify": {
+		"description": {
+			"text": "Falla a menos que el locktime de la transacción sea al menos t (altura de bloque o tiempo, del mismo tipo) y la entrada no sea final. Deja t en la pila. Heredado del BIP-65 de Bitcoin.",
+			"sourceHash": "761a3cbd80fb174f",
+			"status": "machine",
+			"translator": "Claude"
+		}
+	},
+	"op_checksequenceverify": {
+		"description": {
+			"text": "Falla a menos que el locktime relativo de la entrada (número de secuencia) sea al menos n. Deja n en la pila. Heredado del BIP-112 de Bitcoin.",
+			"sourceHash": "7f3d85fe1c6d5a07",
+			"status": "machine",
+			"translator": "Claude"
+		}
+	},
+	"op_nop4": {
+		"description": {
+			"text": "No hace nada; reservado para futuras actualizaciones. La política estándar de retransmisión rechaza los scripts que lo usan.",
+			"sourceHash": "ac5499a7cbb96aea",
+			"status": "machine",
+			"translator": "Claude"
+		}
+	},
+	"op_nop5": {
+		"description": {
+			"text": "No hace nada; reservado para futuras actualizaciones. La política estándar de retransmisión rechaza los scripts que lo usan.",
+			"sourceHash": "ac5499a7cbb96aea",
+			"status": "machine",
+			"translator": "Claude"
+		}
+	},
+	"op_nop6": {
+		"description": {
+			"text": "No hace nada; reservado para futuras actualizaciones. La política estándar de retransmisión rechaza los scripts que lo usan.",
+			"sourceHash": "ac5499a7cbb96aea",
+			"status": "machine",
+			"translator": "Claude"
+		}
+	},
+	"op_nop7": {
+		"description": {
+			"text": "No hace nada; reservado para futuras actualizaciones. La política estándar de retransmisión rechaza los scripts que lo usan.",
+			"sourceHash": "ac5499a7cbb96aea",
+			"status": "machine",
+			"translator": "Claude"
+		}
+	},
+	"op_nop8": {
+		"description": {
+			"text": "No hace nada; reservado para futuras actualizaciones. La política estándar de retransmisión rechaza los scripts que lo usan.",
+			"sourceHash": "ac5499a7cbb96aea",
+			"status": "machine",
+			"translator": "Claude"
+		}
+	},
+	"op_nop9": {
+		"description": {
+			"text": "No hace nada; reservado para futuras actualizaciones. La política estándar de retransmisión rechaza los scripts que lo usan.",
+			"sourceHash": "ac5499a7cbb96aea",
+			"status": "machine",
+			"translator": "Claude"
+		}
+	},
+	"op_nop10": {
+		"description": {
+			"text": "No hace nada; reservado para futuras actualizaciones. La política estándar de retransmisión rechaza los scripts que lo usan.",
+			"sourceHash": "ac5499a7cbb96aea",
+			"status": "machine",
+			"translator": "Claude"
+		}
+	},
+	"op_checkdatasig": {
+		"description": {
+			"text": "Verifica una firma sobre datos de mensaje arbitrarios (SHA-256 de msg), no sobre la transacción. Permite a los contratos verificar datos firmados por un oráculo. Acepta firmas Schnorr desde mayo de 2019.",
+			"sourceHash": "1ba82f07729a1494",
+			"status": "machine",
+			"translator": "Claude"
+		}
+	},
+	"op_checkdatasigverify": {
+		"description": {
+			"text": "OP_CHECKDATASIG seguido de OP_VERIFY.",
+			"sourceHash": "cbf2c18887306658",
+			"status": "machine",
+			"translator": "Claude"
+		}
+	},
+	"op_reversebytes": {
+		"description": {
+			"text": "Invierte el orden de los bytes del elemento superior. Es útil para pasar entre datos little-endian y big-endian, como los hashes que muestran los exploradores.",
+			"sourceHash": "d27b5800dde960f2",
+			"status": "machine",
+			"translator": "Claude"
+		}
+	},
+	"op_unknown189": {
+		"description": {
+			"text": "No definido. Un script falla si ejecuta este byte. El CHIP de introspección dejó 0xbd–0xbf libres para futuras operaciones de formato o de introspección sin argumentos.",
+			"sourceHash": "d5db058c67e1eedb",
+			"status": "machine",
+			"translator": "Claude"
+		}
+	},
+	"op_unknown190": {
+		"description": {
+			"text": "No definido. Un script falla si ejecuta este byte. El CHIP de introspección dejó 0xbd–0xbf libres para futuras operaciones de formato o de introspección sin argumentos.",
+			"sourceHash": "d5db058c67e1eedb",
+			"status": "machine",
+			"translator": "Claude"
+		}
+	},
+	"op_unknown191": {
+		"description": {
+			"text": "No definido. Un script falla si ejecuta este byte. El CHIP de introspección dejó 0xbd–0xbf libres para futuras operaciones de formato o de introspección sin argumentos.",
+			"sourceHash": "d5db058c67e1eedb",
+			"status": "machine",
+			"translator": "Claude"
+		}
+	},
+	"op_inputindex": {
+		"description": {
+			"text": "Apila el índice de la entrada que se está evaluando.",
+			"sourceHash": "456341f4a440187d",
+			"status": "machine",
+			"translator": "Claude"
+		}
+	},
+	"op_activebytecode": {
+		"description": {
+			"text": "Apila el bytecode que se está evaluando, a partir del último OP_CODESEPARATOR ejecutado. En P2SH es el bytecode de canje.",
+			"sourceHash": "187359000c402f67",
+			"status": "machine",
+			"translator": "Claude"
+		}
+	},
+	"op_txversion": {
+		"description": {
+			"text": "Coloca en la pila la versión de la transacción.",
+			"sourceHash": "9d22250debdc6161",
+			"status": "machine",
+			"translator": "Claude"
+		}
+	},
+	"op_txinputcount": {
+		"description": {
+			"text": "Coloca en la pila el número de entradas de la transacción.",
+			"sourceHash": "2ac73edfc8df95dd",
+			"status": "machine",
+			"translator": "Claude"
+		}
+	},
+	"op_txoutputcount": {
+		"description": {
+			"text": "Coloca en la pila el número de salidas de la transacción.",
+			"sourceHash": "3723429ce6a3d547",
+			"status": "machine",
+			"translator": "Claude"
+		}
+	},
+	"op_txlocktime": {
+		"description": {
+			"text": "Coloca en la pila el locktime de la transacción.",
+			"sourceHash": "488782dcfe644d19",
+			"status": "machine",
+			"translator": "Claude"
+		}
+	},
+	"op_utxovalue": {
+		"description": {
+			"text": "Coloca en la pila el valor en satoshis del UTXO gastado por la entrada i. Falla si el índice está fuera de rango.",
+			"sourceHash": "9e45736a55564e93",
+			"status": "machine",
+			"translator": "Claude"
+		}
+	},
+	"op_utxobytecode": {
+		"description": {
+			"text": "Coloca en la pila el bytecode de bloqueo del UTXO gastado por la entrada i. Falla si el índice está fuera de rango.",
+			"sourceHash": "42166b1dea5290c3",
+			"status": "machine",
+			"translator": "Claude"
+		}
+	},
+	"op_outpointtxhash": {
+		"description": {
+			"text": "Coloca en la pila el hash de la transacción que creó la salida gastada por la entrada i. Falla si el índice está fuera de rango.",
+			"sourceHash": "7da42975e5642ec9",
+			"status": "machine",
+			"translator": "Claude"
+		}
+	},
+	"op_outpointindex": {
+		"description": {
+			"text": "Coloca en la pila el índice de salida del outpoint gastado por la entrada i. Falla si el índice está fuera de rango.",
+			"sourceHash": "4d2a25b1d44a2d0d",
+			"status": "machine",
+			"translator": "Claude"
+		}
+	},
+	"op_inputbytecode": {
+		"description": {
+			"text": "Coloca en la pila el bytecode de desbloqueo de la entrada i. Falla si el índice está fuera de rango.",
+			"sourceHash": "48988ec07d04a095",
+			"status": "machine",
+			"translator": "Claude"
+		}
+	},
+	"op_inputsequencenumber": {
+		"description": {
+			"text": "Coloca en la pila el número de secuencia de la entrada i. Falla si el índice está fuera de rango.",
+			"sourceHash": "7d610ad20781c40d",
+			"status": "machine",
+			"translator": "Claude"
+		}
+	},
+	"op_outputvalue": {
+		"description": {
+			"text": "Coloca en la pila el valor en satoshis de la salida i. Falla si el índice está fuera de rango.",
+			"sourceHash": "c359bced0a85b5fd",
+			"status": "machine",
+			"translator": "Claude"
+		}
+	},
+	"op_outputbytecode": {
+		"description": {
+			"text": "Coloca en la pila el bytecode de bloqueo de la salida i. Falla si el índice está fuera de rango.",
+			"sourceHash": "6f2f6bbb104323f5",
+			"status": "machine",
+			"translator": "Claude"
+		}
+	},
+	"op_utxotokencategory": {
+		"description": {
+			"text": "Coloca en la pila la categoría de token del UTXO gastado por la entrada i, con un byte de capacidad añadido al final para los NFTs mutables (0x01) o con capacidad de acuñación (0x02). Coloca 0 si el UTXO no contiene tokens.",
+			"sourceHash": "2a526932d3cb1c0e",
+			"status": "machine",
+			"translator": "Claude"
+		}
+	},
+	"op_utxotokencommitment": {
+		"description": {
+			"text": "Coloca en la pila el compromiso del NFT del UTXO gastado por la entrada i. Coloca 0 si no hay NFT o si el compromiso está vacío.",
+			"sourceHash": "4f8c40c15f426073",
+			"status": "machine",
+			"translator": "Claude"
+		}
+	},
+	"op_utxotokenamount": {
+		"description": {
+			"text": "Coloca en la pila la cantidad de tokens fungibles del UTXO gastado por la entrada i, o 0 si no contiene ninguno.",
+			"sourceHash": "176f3d1b563500b8",
+			"status": "machine",
+			"translator": "Claude"
+		}
+	},
+	"op_outputtokencategory": {
+		"description": {
+			"text": "Coloca en la pila la categoría de token de la salida i, con un byte de capacidad añadido al final para los NFTs mutables (0x01) o con capacidad de acuñación (0x02). Coloca 0 si la salida no contiene tokens.",
+			"sourceHash": "0332d0dc92a4738a",
+			"status": "machine",
+			"translator": "Claude"
+		}
+	},
+	"op_outputtokencommitment": {
+		"description": {
+			"text": "Coloca en la pila el compromiso del NFT de la salida i. Coloca 0 si no hay NFT o si el compromiso está vacío.",
+			"sourceHash": "11f33bb3a68a8471",
+			"status": "machine",
+			"translator": "Claude"
+		}
+	},
+	"op_outputtokenamount": {
+		"description": {
+			"text": "Coloca en la pila la cantidad de tokens fungibles de la salida i, o 0 si no contiene ninguno.",
+			"sourceHash": "bb162281880195c6",
+			"status": "machine",
+			"translator": "Claude"
+		}
+	},
+	"op_unknown_n": {
+		"description": {
+			"text": "Los bytes 0xd4 a 0xff (212–255) no están definidos. Un script falla si ejecuta uno, lo que los deja libres para futuras actualizaciones. Libauth los llama de OP_UNKNOWN212 a OP_UNKNOWN255. BCHN llama a 0xd4 y 0xd5 OP_RESERVED3 y OP_RESERVED4, y a 0xff INVALIDOPCODE. El byte 0xef también sirve como prefijo de tokens CashTokens: marca los datos de token colocados antes del bytecode de bloqueo de una salida, fuera del script que ejecuta la VM. Como opcode, sigue sin estar definido.",
+			"sourceHash": "5fc3a67e551e564d",
+			"status": "machine",
+			"translator": "Claude"
+		}
+	}
+}
