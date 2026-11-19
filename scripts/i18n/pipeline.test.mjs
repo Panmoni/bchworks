@@ -1,6 +1,7 @@
 // The translation pipeline against a fixture site (scripts/i18n/fixtures/site)
 // with the Claude API replaced by a fake translator.
 import assert from "node:assert/strict";
+import { spawnSync } from "node:child_process";
 import { cpSync, mkdtempSync, readFileSync, writeFileSync } from "node:fs";
 import { tmpdir } from "node:os";
 import { join } from "node:path";
@@ -592,6 +593,48 @@ describe("reviewMatching (--only)", () => {
 				}),
 			RefusedError,
 		);
+	});
+});
+
+// The CLI works on the real repo, so these cases stop before writing.
+describe("pnpm i18n:review arguments", () => {
+	const cli = (...argv) =>
+		spawnSync(
+			process.execPath,
+			[new URL("./review.mjs", import.meta.url).pathname, ...argv],
+			{ encoding: "utf8" },
+		);
+
+	test("takes exactly one of a path and --only", () => {
+		assert.equal(cli("es", "--reviewer", "X").status, 2);
+		const both = cli(
+			"es",
+			"messages/es.json",
+			"--only",
+			"x",
+			"--reviewer",
+			"X",
+		);
+		assert.equal(both.status, 2);
+		assert.match(both.stderr, /usage/);
+	});
+
+	test("--only reaches the bulk review, and matching nothing exits 1", () => {
+		const r = cli("es", "--only", "src/content/nothing/**", "--reviewer", "X");
+		assert.equal(r.status, 1);
+		assert.match(r.stderr, /no es translation file matches/);
+	});
+
+	test("a path reaches review, which refuses a file that is not a translation", () => {
+		const r = cli("es", "src/content/nothing.md", "--reviewer", "X");
+		assert.equal(r.status, 1);
+		assert.match(r.stderr, /refused: .* is not a es translation/);
+	});
+
+	test("--rechecked never goes with --only", () => {
+		const r = cli("es", "--only", "**", "--reviewer", "X", "--rechecked");
+		assert.equal(r.status, 2);
+		assert.match(r.stderr, /--rechecked takes one path/);
 	});
 });
 

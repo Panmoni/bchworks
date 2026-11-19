@@ -248,7 +248,7 @@ const removeRows = (ids) => {
 
 const approveRow = async (row, edits) => {
 	try {
-		const { n } = await post("/api/approve", { id: row.id, edits });
+		const { n } = await post("/api/approve", { id: row.id, viewHash: row.viewHash, edits });
 		if (state.editing === row) state.editing = null;
 		removeRows([row.id]);
 		toast(n ? `Approved ${row.id}` : `${row.id} was already reviewed`);
@@ -263,7 +263,11 @@ const startEdit = (row) => {
 
 const saveEdit = (row) => {
 	const edits = {};
-	for (const t of row._el.querySelectorAll("textarea")) edits[t._field] = t.value;
+	// Only the strings the reviewer changed.
+	for (const t of row._el.querySelectorAll("textarea")) {
+		const seg = row.segments.find((s) => s.field === t._field);
+		if (seg && t.value !== seg.es) edits[t._field] = t.value;
+	}
 	approveRow(row, edits);
 };
 
@@ -283,7 +287,8 @@ const approveClean = async (g) => {
 	const ids = eligible(g).map((r) => r.id);
 	if (!ids.length || !confirm(`Approve ${ids.length} clean rows you have seen in ${g.name}?`)) return;
 	try {
-		const { approved, skipped } = await post("/api/approve-clean", { ids });
+		const items = eligible(g).map((r) => ({ id: r.id, viewHash: r.viewHash }));
+		const { approved, skipped } = await post("/api/approve-clean", { items });
 		removeRows(approved);
 		toast(`Approved ${approved.length}` + (skipped.length ? `\nSkipped ${skipped.length}: ${skipped.slice(0, 3).map((s) => `${s.id} (${s.why})`).join("; ")}` : ""), skipped.length > 0);
 	} catch (e) { toast(`Refused: ${e.message}`, true); }
@@ -292,7 +297,7 @@ const approveClean = async (g) => {
 document.addEventListener("keydown", (e) => {
 	const row = state.rows[state.current];
 	if (state.editing) {
-		if (e.key === "Escape") { state.editing = null; refresh(row); }
+		if (e.key === "Escape") { const edited = state.editing; state.editing = null; refresh(edited); }
 		else if (e.key === "Enter" && (e.ctrlKey || e.metaKey)) { e.preventDefault(); saveEdit(state.editing); }
 		return;
 	}
