@@ -961,7 +961,7 @@
 	},
 	"op_txversion": {
 		"description": {
-			"text": "Coloca en la pila la versión de la transacción.",
+			"text": "Apila la versión de la transacción.",
 			"sourceHash": "9d22250debdc6161",
 			"status": "machine",
 			"translator": "Claude"
@@ -969,7 +969,7 @@
 	},
 	"op_txinputcount": {
 		"description": {
-			"text": "Coloca en la pila el número de entradas de la transacción.",
+			"text": "Apila el número de entradas de la transacción.",
 			"sourceHash": "2ac73edfc8df95dd",
 			"status": "machine",
 			"translator": "Claude"
@@ -977,7 +977,7 @@
 	},
 	"op_txoutputcount": {
 		"description": {
-			"text": "Coloca en la pila el número de salidas de la transacción.",
+			"text": "Apila el número de salidas de la transacción.",
 			"sourceHash": "3723429ce6a3d547",
 			"status": "machine",
 			"translator": "Claude"
@@ -985,7 +985,7 @@
 	},
 	"op_txlocktime": {
 		"description": {
-			"text": "Coloca en la pila el locktime de la transacción.",
+			"text": "Apila el locktime de la transacción.",
 			"sourceHash": "488782dcfe644d19",
 			"status": "machine",
 			"translator": "Claude"
@@ -993,7 +993,7 @@
 	},
 	"op_utxovalue": {
 		"description": {
-			"text": "Coloca en la pila el valor en satoshis del UTXO gastado por la entrada i. Falla si el índice está fuera de rango.",
+			"text": "Apila el valor en satoshis del UTXO gastado por la entrada i. Falla si el índice está fuera de rango.",
 			"sourceHash": "9e45736a55564e93",
 			"status": "machine",
 			"translator": "Claude"
@@ -1001,7 +1001,7 @@
 	},
 	"op_utxobytecode": {
 		"description": {
-			"text": "Coloca en la pila el bytecode de bloqueo del UTXO gastado por la entrada i. Falla si el índice está fuera de rango.",
+			"text": "Apila el bytecode de bloqueo del UTXO gastado por la entrada i. Falla si el índice está fuera de rango.",
 			"sourceHash": "42166b1dea5290c3",
 			"status": "machine",
 			"translator": "Claude"
@@ -1009,7 +1009,7 @@
 	},
 	"op_outpointtxhash": {
 		"description": {
-			"text": "Coloca en la pila el hash de la transacción que creó la salida gastada por la entrada i. Falla si el índice está fuera de rango.",
+			"text": "Apila el hash de la transacción que creó la salida gastada por la entrada i. Falla si el índice está fuera de rango.",
 			"sourceHash": "7da42975e5642ec9",
 			"status": "machine",
 			"translator": "Claude"
@@ -1017,7 +1017,7 @@
 	},
 	"op_outpointindex": {
 		"description": {
-			"text": "Coloca en la pila el índice de salida del outpoint gastado por la entrada i. Falla si el índice está fuera de rango.",
+			"text": "Apila el índice de salida del outpoint gastado por la entrada i. Falla si el índice está fuera de rango.",
 			"sourceHash": "4d2a25b1d44a2d0d",
 			"status": "machine",
 			"translator": "Claude"
@@ -1025,7 +1025,7 @@
 	},
 	"op_inputbytecode": {
 		"description": {
-			"text": "Coloca en la pila el bytecode de desbloqueo de la entrada i. Falla si el índice está fuera de rango.",
+			"text": "Apila el bytecode de desbloqueo de la entrada i. Falla si el índice está fuera de rango.",
 			"sourceHash": "48988ec07d04a095",
 			"status": "machine",
 			"translator": "Claude"
@@ -1033,7 +1033,7 @@
 	},
 	"op_inputsequencenumber": {
 		"description": {
-			"text": "Coloca en la pila el número de secuencia de la entrada i. Falla si el índice está fuera de rango.",
+			"text": "Apila el número de secuencia de la entrada i. Falla si el índice está fuera de rango.",
 			"sourceHash": "7d610ad20781c40d",
 			"status": "machine",
 			"translator": "Claude"
@@ -1041,7 +1041,7 @@
 	},
 	"op_outputvalue": {
 		"description": {
-			"text": "Coloca en la pila el valor en satoshis de la salida i. Falla si el índice está fuera de rango.",
+			"text": "Apila el valor en satoshis de la salida i. Falla si el índice está fuera de rango.",
 			"sourceHash": "c359bced0a85b5fd",
 			"status": "machine",
 			"translator": "Claude"
@@ -1049,7 +1049,7 @@
 	},
 	"op_outputbytecode": {
 		"description": {
-			"text": "Coloca en la pila el bytecode de bloqueo de la salida i. Falla si el índice está fuera de rango.",
+			"text": "Apila el bytecode de bloqueo de la salida i. Falla si el índice está fuera de rango.",
 			"sourceHash": "6f2f6bbb104323f5",
 			"status": "machine",
 			"translator": "Claude"
@@ -1057,7 +1057,7 @@
 	},
 	"op_utxotokencategory": {
 		"description": {
-			"text": "Coloca en la pila la categoría de token del UTXO gastado por la entrada i, con un byte de capacidad añadido al final para los NFTs mutables (0x01) o con capacidad de acuñación (0x02). Coloca 0 si el UTXO no contiene tokens.",
+			"text": "Apila la categoría de token del UTXO gastado por la entrada i, con un byte de capacidad añadido al final para los NFTs mutables (0x01) o con capacidad de acuñación (0x02). Coloca 0 si el UTXO no contiene tokens.",
 			"sourceHash": "2a526932d3cb1c0e",
 			"status": "machine",
 			"translator": "Claude"
@@ -1065,7 +1065,7 @@
 	},
 	"op_utxotokencommitment": {
 		"description": {
-			"text": "Coloca en la pila el compromiso del NFT del UTXO gastado por la entrada i. Coloca 0 si no hay NFT o si el compromiso está vacío.",
+			"text": "Apila el compromiso del NFT del UTXO gastado por la entrada i. Apila 0 si no hay NFT o si el compromiso está vacío.",
 			"sourceHash": "4f8c40c15f426073",
 			"status": "machine",
 			"translator": "Claude"
@@ -1073,7 +1073,7 @@
 	},
 	"op_utxotokenamount": {
 		"description": {
-			"text": "Coloca en la pila la cantidad de tokens fungibles del UTXO gastado por la entrada i, o 0 si no contiene ninguno.",
+			"text": "Apila la cantidad de tokens fungibles del UTXO gastado por la entrada i, o 0 si no contiene ninguno.",
 			"sourceHash": "176f3d1b563500b8",
 			"status": "machine",
 			"translator": "Claude"
@@ -1081,7 +1081,7 @@
 	},
 	"op_outputtokencategory": {
 		"description": {
-			"text": "Coloca en la pila la categoría de token de la salida i, con un byte de capacidad añadido al final para los NFTs mutables (0x01) o con capacidad de acuñación (0x02). Coloca 0 si la salida no contiene tokens.",
+			"text": "Apila la categoría de token de la salida i, con un byte de capacidad añadido al final para los NFTs mutables (0x01) o con capacidad de acuñación (0x02). Coloca 0 si la salida no contiene tokens.",
 			"sourceHash": "0332d0dc92a4738a",
 			"status": "machine",
 			"translator": "Claude"
@@ -1089,7 +1089,7 @@
 	},
 	"op_outputtokencommitment": {
 		"description": {
-			"text": "Coloca en la pila el compromiso del NFT de la salida i. Coloca 0 si no hay NFT o si el compromiso está vacío.",
+			"text": "Apila el compromiso del NFT de la salida i. Apila 0 si no hay NFT o si el compromiso está vacío.",
 			"sourceHash": "11f33bb3a68a8471",
 			"status": "machine",
 			"translator": "Claude"
@@ -1097,7 +1097,7 @@
 	},
 	"op_outputtokenamount": {
 		"description": {
-			"text": "Coloca en la pila la cantidad de tokens fungibles de la salida i, o 0 si no contiene ninguno.",
+			"text": "Apila la cantidad de tokens fungibles de la salida i, o 0 si no contiene ninguno.",
 			"sourceHash": "bb162281880195c6",
 			"status": "machine",
 			"translator": "Claude"

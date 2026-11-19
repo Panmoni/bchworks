@@ -106,6 +106,10 @@
 		"translation": "covenant",
 		"note": "Kept in English: no Spanish term is in use. Gloss on first use: un contrato que limita cómo se pueden gastar las monedas."
 	},
+	"push": {
+		"translation": "apilar",
+		"note": "The VM pushing a value onto the stack: \"Apila el número 1.\" Not \"coloca en la pila\"."
+	},
 	"Locking bytecode": "bytecode de bloqueo",
 	"Unlocking bytecode": "bytecode de desbloqueo",
 	"Sighash": {

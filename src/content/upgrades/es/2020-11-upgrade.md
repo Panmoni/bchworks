@@ -3,7 +3,7 @@ title: 'Noviembre de 2020: ajuste de dificultad ASERT (y la división de ABC)'
 date: 2020-11-15T12:00:00.000Z
 status: activated
 height: 661648
-summary: Reemplazó el DAA de 2017 por ASERT (aserti3-2d) y puso fin a las oscilaciones diarias de la dificultad. El conjunto de reglas rival de Bitcoin ABC, con un impuesto del 8 % sobre la coinbase, se separó casi sin poder de hash.
+summary: Reemplazó el DAA de 2017 por ASERT (aserti3-2d) y puso fin a las oscilaciones diarias de la dificultad. El conjunto de reglas rival de Bitcoin ABC, con un impuesto del 8 % sobre la coinbase, se separó casi sin poder de hash.
 keywords:
   - november 2020 upgrade
   - asert
@@ -63,8 +63,8 @@ En simulaciones frente a otras candidatas, ASERT obtuvo la mejor puntuación en 
 
 ## La división
 
-Bitcoin ABC, entonces uno de los equipos de nodos, publicó un conjunto de reglas distinto para esta fecha. Exigía que el 8 % de cada recompensa
-por bloque fuera a una dirección que controlaba (la “regla de la coinbase”). Bitcoin Cash Node y la mayoría de los mineros la rechazaron. Más del 80 %
+Bitcoin ABC, entonces uno de los equipos de nodos, publicó un conjunto de reglas distinto para esta fecha. Exigía que el 8 % de cada recompensa
+por bloque fuera a una dirección que controlaba (la “regla de la coinbase”). Bitcoin Cash Node y la mayoría de los mineros la rechazaron. Más del 80 %
 de los mineros había estado señalizando apoyo a BCHN antes de la división, y la cadena de ABC casi no obtuvo poder de hash. La cadena de ABC cotizó
 como BCHA y cambió su nombre a eCash (XEC) el 1 de julio de 2021. La cadena de BCH es la que sigue las reglas de esta página.
 

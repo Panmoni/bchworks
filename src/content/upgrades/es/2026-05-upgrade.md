@@ -99,7 +99,7 @@ y seguridad operativa (los contratos revelan menos sobre su estructura) y mejor 
 criptográficas” (traducción nuestra). Las funciones hash, la aritmética de campos y el estado empaquetado en bits necesitan desplazamientos e inversión.
 
 **P2S.** El CHIP de P2S menciona dos objetivos. Seguridad: los contratos P2SH siempre tienen una dirección a la que se puede pagar, así que los usuarios pueden enviar dinero
-a una dirección de contrato por error y perderlo. Una salida P2S no tiene ninguna dirección a la que una billetera sencilla pueda pagar. Simplicidad: los covenants (un contrato que limita cómo se pueden gastar las monedas)
+a una dirección de contrato por error y perderlo. Una salida P2S no tiene ninguna dirección a la que una billetera sencilla pueda pagar. Simplicidad: los covenants (contratos que limitan cómo se pueden gastar las monedas)
 ya no construyen ni verifican un hash P2SH para cada salida, lo que ahorra al menos 34 bytes por salida.
 
 ## Qué permite

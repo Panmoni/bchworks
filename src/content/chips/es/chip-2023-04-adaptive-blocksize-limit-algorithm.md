@@ -75,7 +75,7 @@ El algoritmo cambia el comportamiento por defecto. Hoy, el comportamiento por de
 - Un **búfer elástico** añade margen cuando la función de control sube rápido. El búfer propuesto puede “tomar prestado” alrededor de un año de crecimiento (por ejemplo, un 2× rápido en unos pocos meses) y luego decae con una vida media de aproximadamente medio año.
 - El límite es el tamaño de bloque de control más el búfer, nunca por debajo de 32 MB.
 
-El CHIP modela un ataque de spam por parte de un minero con el 50 % de la tasa de hash (hashrate) que llena sus propios bloques. Tardaría alrededor de 1,5 años en duplicar el límite y 2,5 años más en lograr otro +50 %, mientras los costos siguen subiendo.
+El CHIP modela un ataque de spam por parte de un minero con el 50 % de la tasa de hash (hashrate) que llena sus propios bloques. Tardaría alrededor de 1,5 años en duplicar el límite y 2,5 años más en lograr otro +50 %, mientras los costos siguen subiendo.
 
 ## Estado actual
 

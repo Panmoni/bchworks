@@ -81,8 +81,8 @@ Es la principal candidata para la [actualización de mayo de 2027](/upgrades/202
 
 El argumento central del CHIP: los bloques de 10 minutos tienen un costo real; no son un valor por defecto neutral.
 
-- Hoy, según el CHIP, alrededor del 25 % de las confirmaciones simples tarda más de 14 minutos. Con bloques de 1 minuto, el 95 % llegaría en menos de 3 minutos.
-- Las esperas de varias confirmaciones se vuelven más estables: un objetivo de 60 minutos (60 bloques de 1 minuto) se completa en menos de 73 minutos el 95 % de las veces, frente a un 20 % de probabilidad de superar los 79 minutos con 6 bloques de 10 minutos.
+- Hoy, según el CHIP, alrededor del 25 % de las confirmaciones simples tarda más de 14 minutos. Con bloques de 1 minuto, el 95 % llegaría en menos de 3 minutos.
+- Las esperas de varias confirmaciones se vuelven más estables: un objetivo de 60 minutos (60 bloques de 1 minuto) se completa en menos de 73 minutos el 95 % de las veces, frente a un 20 % de probabilidad de superar los 79 minutos con 6 bloques de 10 minutos.
 - [0-conf](/glossary#zero-conf) (transacción sin confirmar) cubre la mayoría de los pagos BCH. Pero en muchos casos hay que volver a esperar un bloque: transacciones marcadas, exchanges, billeteras multimoneda. El CHIP afirma que los usuarios actuales se benefician directamente, antes de cualquier nueva adopción.
 - El autor sostiene que, excluyendo BTC, BCH tiene los bloques más lentos de todas las monedas principales y del conjunto de prueba de trabajo de UTXO.
 
@@ -97,7 +97,7 @@ El argumento central del CHIP: los bloques de 10 minutos tienen un costo real; n
 - **La maduración de Coinbase, el parking de bloques y la finalización** se redefinen en ticks para mantener su significado en tiempo real (la finalización sigue en unos 120 minutos).
 - **La [mediana del tiempo pasado](/glossary#median-time-past)** se reduce de unos 110 a unos 11 minutos.
 - **El crecimiento de los encabezados** se multiplica por 10, de unos 4,2 a unos 42 MB por año. El CHIP lo combina con [Simplified Header Verification](/chips/chip-2026-02-simplified-header-verification) para que las billeteras ligeras puedan mantener una prueba de encabezados de tamaño fijo.
-- **Las tasas de bloques huérfanos** se modelan entre 0,41 y 1,94 %, por debajo de la tolerancia del 2 % del CHIP.
+- **Las tasas de bloques huérfanos** se modelan entre 0,41 y 1,94 %, por debajo de la tolerancia del 2 % del CHIP.
 
 Activación propuesta: chipnet (la red de pruebas de los CHIPs) en el MTP `1794744000` (15 de noviembre de 2026) y red principal en el MTP `1810382400` (15 de mayo de 2027). La rama master de Bitcoin Cash Node incluye la fecha de 2027 como tiempo de activación “provisional”. El CHIP estima el bloque de activación en la red principal cerca de la altura 1.003.670, pero es una estimación, no una altura fija.
 

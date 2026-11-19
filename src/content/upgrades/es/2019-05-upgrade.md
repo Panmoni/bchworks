@@ -67,4 +67,4 @@ garantizaba que el dueño original las recuperara.
 - **Firmas más pequeñas y de tamaño fijo** para las billeteras que elijan Schnorr, sin necesidad de un nuevo tipo de dirección.
 - **Firma entre varias partes.** La linealidad abre la puerta a las firmas agregadas, en las que varias personas producen una sola
   firma.
-- **Tamaños de contrato predecibles.** Los covenants (un contrato que limita cómo se pueden gastar las monedas) que verifican firmas conocen de antemano la longitud exacta en bytes.
+- **Tamaños de contrato predecibles.** Los covenants (contratos que limitan cómo se pueden gastar las monedas) que verifican firmas conocen de antemano la longitud exacta en bytes.

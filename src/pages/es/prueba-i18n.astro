@@ -4,8 +4,9 @@
 // English header and footer out. Remove once real Spanish pages ship.
 //
 // It also proves the fragment fallback (PAN-378, docs/i18n.md): the glossary
-// term below has no Spanish overlay, so it renders in English inside
-// lang="en" data-l10n-fallback.
+// term below goes in under an id no overlay holds, so it renders in English
+// inside lang="en" data-l10n-fallback however much of the glossary is
+// translated.
 import { getEntry } from "astro:content";
 import LocalizedText from "~/components/common/LocalizedText.astro";
 import Layout from "~/layouts/Layout.astro";
@@ -19,7 +20,11 @@ const metadata = {
 const utxo = await getEntry("glossary", "utxo");
 if (!utxo) throw new Error("glossary entry utxo is missing");
 const term = localizeRecord(
-	{ id: utxo.id, term: utxo.data.term, definition: utxo.data.definition },
+	{
+		id: "prueba-i18n-untranslated",
+		term: utxo.data.term,
+		definition: utxo.data.definition,
+	},
 	"glossary",
 	["term", "definition"],
 	"es",

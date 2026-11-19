@@ -50,12 +50,12 @@ translation:
 | Elemento | Estado |
 |---|---|
 | Fecha de la actualización | 15 de mayo de 2027, 12:00 UTC (MTP `1810382400`). El código de Bitcoin Cash Node la registra como hora de activación “tentativa”. |
-| Fijación | Por convención, hacia el **15 de noviembre de 2026**, cuando Chipnet (la red de pruebas de los CHIPs) activa el CHIPs elegido con seis meses de antelación. |
+| Fijación | Por convención, hacia el **15 de noviembre de 2026**, cuando Chipnet (la red de pruebas de los CHIPs) activa los CHIPs elegidos con seis meses de antelación. |
 | Faster Blocks (bloques de 1 minuto) | Propuesto. Se están recogiendo declaraciones de las partes interesadas. El código de los nodos no está terminado. |
 | Otros CHIPs | Borradores. Ninguno se ha ganado un lugar con un apoyo claro. |
 | Un año “sin cambios” | Posible. Algunos colaboradores han dicho que incluso podría demostrar disciplina. |
 
-El `date` de esta página es la hora de activación tentativa. Cambiará a “fijada” solo si las versiones de los nodos
+El `date` de esta página es la hora de activación tentativa. Cambiará a `locked-in` (fijada) solo si las versiones de los nodos
 incluyen las reglas, y cuando lo hagan.
 
 ## El candidato principal: Faster Blocks
@@ -72,9 +72,9 @@ Lo que cambiaría, según el CHIP:
   su significado.
 - La [mediana del tiempo pasado](/glossary#median-time-past) se reduce de unos 110 a unos 11 minutos.
 - El crecimiento de la cadena de cabeceras se multiplica por 10, de unos 4,2 a unos 42 MB al año.
-- El CHIP estima tasas de bloques huérfanos del 0,41–1,94 %, por debajo de su tolerancia del 2 %.
+- El CHIP estima tasas de bloques huérfanos del 0,41–1,94 %, por debajo de su tolerancia del 2 %.
 
-La ventaja principal: el CHIP afirma que el 95 % de las primeras confirmaciones llegarían en menos de 3 minutos. Hoy, cerca del 25 % de
+La ventaja principal: el CHIP afirma que el 95 % de las primeras confirmaciones llegarían en menos de 3 minutos. Hoy, cerca del 25 % de
 las confirmaciones individuales tarda más de 14 minutos.
 
 Calendario propuesto: Chipnet el 15 de noviembre de 2026 (MTP `1794744000`), red principal el 15 de mayo de 2027.
@@ -100,7 +100,7 @@ de los dos resultados.
 
 ## Otros borradores que mencionan 2027
 
-- [CHIP-2026-06 OP_SIGHASH](/chips/chip-2026-06-op-sighash): un opcode (código de operación) que coloca en la pila el hash de firma de la transacción.
+- [CHIP-2026-06 OP_SIGHASH](/chips/chip-2026-06-op-sighash): un opcode (código de operación) que apila el hash de firma de la transacción.
   Su autor sugirió mayo de 2027. El desarrollador principal de BCHN señaló problemas en la especificación, luego abrió una solicitud de fusión en BCHN
   que lo implementa y dijo que “quizá acabe recomendando que lo hagamos para 2027” (traducción nuestra).
 - [CHIP-2025-01 TXv5](/chips/chip-2025-01-txv5): un nuevo formato de transacción con satoshis fraccionarios. Su autor propuso

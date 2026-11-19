@@ -1,5 +1,5 @@
 ---
-title: CashTokens Corrección de la ambigüedad FT+NFT
+title: Corrección de la ambigüedad FT+NFT de CashTokens
 code: CHIP-2026-06
 owners:
   - bitcoincashautist

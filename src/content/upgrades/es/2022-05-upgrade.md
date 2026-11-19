@@ -55,7 +55,7 @@ Se activaron dos CHIPs:
 
 ## Por qué
 
-**Introspección.** Los [covenants](/glossary#covenant) (contratos que controlan a dónde pueden ir después sus monedas) ya
+**Introspección.** Los [covenants](/glossary#covenant) (contratos que limitan cómo se pueden gastar las monedas) ya
 funcionaban en BCH, pero solo mediante un truco: colocar una copia de los datos de firma de la transacción, verificarla con
 `OP_CHECKSIG` y con `OP_CHECKDATASIG`, y luego desmenuzarla. El CHIP indica que esto duplicaba o triplicaba el tamaño incluso de transacciones de covenants sencillos, y
 los más avanzados chocaban con el límite de 1650 bytes del script de desbloqueo. El CHIP da a los contratos

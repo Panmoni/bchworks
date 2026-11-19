@@ -5,7 +5,7 @@ owners:
   - bitcoincashautist
 status: draft
 upgrade: 2027-05-upgrade
-summary: Propone un opcode que calcula el hash de firma de la transacción y lo coloca en la pila, sin verificar ninguna firma.
+summary: Propone un opcode que calcula el hash de firma de la transacción y lo apila, sin verificar ninguna firma.
 spec: https://gitlab.com/0353F40E/sighash
 discussion: https://bitcoincashresearch.org/t/chip-2026-06-op-sighash/1869
 stakeholders: []
