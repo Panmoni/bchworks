@@ -61,7 +61,7 @@ honest:
       description: Existen unas 20.000 categorías de token, pero solo unos pocos cientos se negocian en Cauldron, Fex o TapSwap. Muchos tokens no tienen ningún mercado.
     - title: Los contratos pueden tener errores
       icon: tabler:bug
-      description: Los tokens usados dentro de covenants heredan el riesgo de ese covenant. No hay claves de administrador, pero un contrato defectuoso sigue siendo defectuoso. Lee las auditorías cuando existan.
+      description: Los tokens usados dentro de covenants (contratos que limitan cómo se pueden gastar las monedas) heredan el riesgo de ese covenant. No hay claves de administrador, pero un contrato defectuoso sigue siendo defectuoso. Lee las auditorías cuando existan.
 cta:
   title: Sigue la escena de los tokens
   subtitle: Nuevas herramientas, actualizaciones y tutoriales en nuestro canal de Telegram. Los datos de tokens en vivo están en TokenStork.
@@ -70,3 +70,4 @@ translation:
   sourceHash: f7acfd40039cf93d
   status: machine
   translator: Claude
+  qaHash: 50f1292f368bb3b2

@@ -24,14 +24,15 @@ stakeholders:
     source: https://upgradespecs.bitcoincashnode.org/unconfirmed-transaction-chain-limit/
 verified: 2026-09-26T00:00:00.000Z
 sources:
-  - title: Límite de cadena de transacciones sin confirmar (copia de las especificaciones de actualización de BCHN, v1.2)
+  - title: Unconfirmed Transaction Chain Limit (BCHN upgrade specs copy, v1.2)
     url: https://upgradespecs.bitcoincashnode.org/unconfirmed-transaction-chain-limit/
-  - title: Especificación de la actualización de la red del 15 de mayo de 2021
+  - title: 2021-05-15 Network Upgrade Specification
     url: https://upgradespecs.bitcoincashnode.org/2021-05-15-upgrade/
 translation:
   sourceHash: 94a1d1cc6f9d3578
   status: machine
   translator: Claude
+  qaHash: b0e7dcb8ece42f09
 ---
 
 ## Resumen

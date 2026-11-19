@@ -30,12 +30,13 @@ verified: 2026-09-26T00:00:00.000Z
 sources:
   - title: 'CHIP-2021-03: Bigger Script Integers'
     url: https://gitlab.com/GeneralProtocols/research/chips/-/blob/master/CHIP-2021-02-Bigger-Script-Integers.md
-  - title: Especificación de la actualización de la red del 15 de mayo de 2022
+  - title: 2022-05-15 Network Upgrade Specification
     url: https://upgradespecs.bitcoincashnode.org/2022-05-15-upgrade/
 translation:
   sourceHash: ef6c5c3e0d8098a7
   status: machine
   translator: Claude
+  qaHash: 04d6bb28bb57fe8b
 ---
 
 ## Resumen

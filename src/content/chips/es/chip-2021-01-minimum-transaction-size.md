@@ -11,7 +11,7 @@ discussion: https://bitcoincashresearch.org/t/chip-2021-01-allow-transactions-to
 stakeholders: []
 verified: 2026-09-26T00:00:00.000Z
 sources:
-  - title: Especificación de la actualización de la red del 15 de mayo de 2023
+  - title: 2023-05-15 Network Upgrade Specification
     url: https://upgradespecs.bitcoincashnode.org/2023-05-15-upgrade/
   - title: CHIP 2021-01 Allow Transactions to be smaller in size (Bitcoin Cash Research)
     url: https://bitcoincashresearch.org/t/chip-2021-01-allow-transactions-to-be-smaller-in-size/154
@@ -23,6 +23,7 @@ translation:
   sourceHash: afb0b28fc4b45c4d
   status: machine
   translator: Claude
+  qaHash: 80459ff6213a0fff
 ---
 
 ## Resumen
@@ -49,7 +50,7 @@ A partir de la actualización de mayo de 2023, una transacción debe tener al me
 
 ## Estado actual
 
-Se activó el 15 de mayo de 2023 con [CashTokens](/upgrades/2023-05-cashtokens). El resumen de la actualización de bitjson: “Permitir
+Se activó el 15 de mayo de 2023 con [CashTokens](/upgrades/2023-05-cashtokens). El resumen de bitjson sobre la actualización: “Permitir
 que las transacciones sean de apenas 65 bytes evita desperdiciar ancho de banda y almacenamiento” (traducción nuestra).
 
 No se encontró una tabla formal de partes interesadas para este CHIP.

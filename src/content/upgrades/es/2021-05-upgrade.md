@@ -26,6 +26,7 @@ translation:
   sourceHash: dba0b73104eae87f
   status: machine
   translator: Claude
+  qaHash: 4fd97edbeab6a8b2
 ---
 
 ## Qué cambió
@@ -50,7 +51,7 @@ Dos cambios:
 **Límite de cadena.** Los autores del CHIP (Software Verde, con Bitcoin.com, CoinFLEX y la ciudad de Dublin, Ohio) describieron
 el problema: una vez que se difunde una transacción, no se puede retirar, y una transacción más allá del eslabón 50 podía simplemente
 desaparecer de la retransmisión, a menudo sin aviso. Sus casos reales: fallaron los pagos de dividendos en tokens de CoinFLEX; en una beta de Dublin Identity
-fallaron registros; usuarios nuevos en encuentros se pasaban monedas más rápido de lo que llegaban los bloques y chocaban con el límite. El CHIP
+fallaron los registros; usuarios nuevos en encuentros se pasaban monedas más rápido de lo que llegaban los bloques y chocaban con el límite. El CHIP
 también señala que el límite servía sobre todo a Child-Pays-For-Parent, una función de comisiones que, según una investigación de Tom Zander, casi no se usaba
 en BCH. El límite añadía complejidad a servicios y billeteras, y hacía menos fiable el [0-conf](/glossary#zero-conf) (transacción sin confirmar).
 
@@ -62,7 +63,7 @@ fácil de acordar.
 
 - **Envía tan rápido como quieras.** Un servicio puede lanzar cientos de pagos dependientes sin esperar un bloque.
 - **Billeteras más simples.** Se acabó el seguimiento de la profundidad de la cadena y los errores de “espera una confirmación” al gastar rápido.
-- **Combinación de protocolos.** Una transacción puede llevar datos de dos protocolos lado a lado, por ejemplo una
+- **Combinación de protocolos.** Una transacción puede llevar datos de dos protocolos, uno junto al otro, por ejemplo una
   transferencia de tokens y un mensaje aparte de una aplicación. El CHIP se publicó primero en el repositorio del protocolo de subastas de ActorForth.
 
 ## Nota sobre el proceso

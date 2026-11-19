@@ -6,7 +6,7 @@ hero:
   subtitle: BCH usa prueba de trabajo SHA-256, igual que Bitcoin. Las mismas máquinas, una red más pequeña. La rentabilidad depende de tener electricidad barata y hardware eficiente.
 pools:
   title: Opciones de minería de BCH
-  subtitle: Pools, herramientas y guías. Compara las comisiones y las reglas de pago antes de dirigir tu tasa de hash a cualquier pool.
+  subtitle: Pools, herramientas y guías. Compara las comisiones y las reglas de pago antes de dirigir tu tasa de hash (hashrate) a cualquier pool.
   highlight: Minar un bloque de BCH
 video:
   title: Reproductor de video de YouTube
@@ -28,12 +28,12 @@ how:
       description: La dificultad se ajusta en cada bloque para mantener el promedio cerca de 10 minutos, así que BCH maneja sin problemas las variaciones de tasa de hash entre cadenas.
     - title: Bloques que pueden crecer
       icon: tabler:trending-up
-      description: El límite de tamaño de bloque empieza en 32 MB y el algoritmo ABLA lo aumenta a medida que crece la demanda sostenida. Hoy los bloques usan solo una fracción mínima de él.
+      description: El límite de tamaño de bloque empieza en 32 MB y el algoritmo ABLA lo aumenta a medida que crece la demanda sostenida. Hoy los bloques usan solo una fracción mínima de ese límite.
     - title: Ejecuta también un nodo
       icon: tabler:server
       description: Un nodo completo como Bitcoin Cash Node te permite verificar cada bloque por tu cuenta. Tanto los mineros en solitario como los pools necesitan uno.
 honest:
-  title: La parte honesta
+  title: La verdad sin rodeos
   subtitle: Conoce esto antes de invertir.
   items:
     - title: Menor presupuesto de seguridad
@@ -53,3 +53,4 @@ translation:
   sourceHash: 3d131ba24839fedb
   status: machine
   translator: Claude
+  qaHash: 2e970321addcaae6

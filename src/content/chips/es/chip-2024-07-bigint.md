@@ -38,16 +38,17 @@ stakeholders:
     source: https://github.com/bitjson/bch-bigint/blob/master/stakeholders.md
 verified: 2026-09-26T00:00:00.000Z
 sources:
-  - title: Especificación de BigInt CHIP-2024-07
+  - title: CHIP-2024-07 BigInt specification
     url: https://github.com/bitjson/bch-bigint
-  - title: Respuestas de las partes interesadas sobre BigInt
+  - title: BigInt stakeholder responses
     url: https://github.com/bitjson/bch-bigint/blob/master/stakeholders.md
-  - title: Especificación de la actualización de la red del 15/05/2025
+  - title: 2025-05-15 Network Upgrade Specification
     url: https://upgradespecs.bitcoincashnode.org/2025-05-15-upgrade/
 translation:
   sourceHash: 7214ec650a913a3c
   status: machine
   translator: Claude
+  qaHash: c8cea22345d6905a
 ---
 
 ## Resumen
@@ -58,7 +59,7 @@ BigInt (aritmética de alta precisión) se basa en [Límites de la VM](/chips/ch
 
 “Muchas aplicaciones financieras y criptográficas requieren aritmética de mayor precisión que la disponible actualmente para los contratos de Bitcoin Cash” (traducción nuestra). Antes de los límites de la VM, el diseño anti-DoS no podía permitir números más grandes de forma segura. Una vez que los límites de la VM cobran la aritmética según su costo real, se puede habilitar una mayor precisión “sin aumentar los requisitos de procesamiento o de memoria de la VM” (traducción nuestra).
 
-CHIP enumera dos beneficios:
+El CHIP enumera dos beneficios:
 
 - **Contratos más seguros.** Se acaba la emulación matemática, que es difícil de revisar. Menos desbordamientos significan menos errores que podrían exponer a los usuarios a pérdidas.
 - **Transacciones más pequeñas.** Eliminar el código de emulación reduce el tamaño de los contratos y baja las comisiones.

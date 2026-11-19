@@ -14,6 +14,7 @@ translation:
   sourceHash: 078d00558eaf20a9
   status: machine
   translator: Claude
+  qaHash: e342a6bcce12777d
 ---
 
 ## Tabla de contenidos
@@ -99,14 +100,14 @@ Para una introducción a BCH CashTokens en general y a los CashTokens fungibles,
 <a name="heading-how-nfts-work-on-chain"></a>
 ## Cómo funcionan los NFTs en la cadena
 
-Como se mencionó en el [tutorial 1 de esta serie](/blog/token-pioneers-cashtokens-tutorial-1#cashtokens-explained), la actualización BCH CashTokens de mayo de 2023 añadió a las UTXOs un nuevo campo llamado `token_data`. Este campo tiene varios subcampos. Los FTs (tokens fungibles) solo usan los campos `amount` y `category`.
+Como se mencionó en el [tutorial 1 de esta serie](/blog/token-pioneers-cashtokens-tutorial-1#cashtokens-explained), la actualización BCH CashTokens de mayo de 2023 añadió a los UTXOs un nuevo campo llamado `token_data`. Este campo tiene varios subcampos. Los FTs (tokens fungibles) solo usan los campos `amount` y `category`.
 
 Los NFTs (tokens no fungibles) usan `category`, igual que los [tokens fungibles](/blog/token-pioneers-cashtokens-tutorial-1), y los dos campos `nft`:
 
-- `capability`: si el valor es `minting`, permite a quien lo tiene crear más NFTs de la misma `category` y con cualquier `commitment`. Estos nuevos NFTs pueden tener capacidad `minting` o `mutable`. Si el valor es `mutable`, permite cambiar el campo `commitment` al gastar el NFT hacia una nueva UTXO. Si la capacidad es `none`, el NFT se puede gastar (es decir, mover a otra UTXO), pero el `commitment` no se puede cambiar y no se puede usar para acuñar nuevos NFTs. Los NFTs con la `none` `capability` suelen mostrarse como “Immutable” en las billeteras y los exploradores de bloques.
+- `capability`: si el valor es `minting`, permite a quien lo tiene crear más NFTs de la misma `category` y con cualquier `commitment`. Estos nuevos NFTs pueden tener capacidad `minting` o `mutable`. Si el valor es `mutable`, permite cambiar el campo `commitment` al gastar el NFT hacia un nuevo UTXO. Si la capacidad es `none`, el NFT se puede gastar (es decir, mover a otro UTXO), pero el `commitment` no se puede cambiar y no se puede usar para acuñar nuevos NFTs. Los NFTs con `capability` `none` suelen mostrarse como “Immutable” en las billeteras y los exploradores de bloques.
 - `commitment`: el mensaje del NFT, que puede tener hasta 40 bytes.
 
-Los NFTs no usan el campo `amount`, ya que solo puede haber 1 NFT por UTXO. Así, la cantidad de NFTs en una UTXO queda implícita. Si hay datos en los campos `nft`, hay 1 NFT. Si no, hay 0 NFTs en esa UTXO y los campos `nft` se omiten.
+Los NFTs no usan el campo `amount`, ya que solo puede haber 1 NFT por UTXO. Así, la cantidad de NFTs en un UTXO queda implícita. Si hay datos en los campos `nft`, hay 1 NFT. Si no, hay 0 NFTs en ese UTXO y los campos `nft` se omiten.
 
 Los NFTs y los FTs pueden compartir la misma `category`. A diferencia de los FTs, los NFTs no se pueden fusionar ni dividir. Sin embargo, probablemente sea posible fraccionar un NFT guardándolo en un contrato y emitiendo tokens fungibles respaldados por él.
 
@@ -422,7 +423,7 @@ Sí, puedes crear, vender e intercambiar los NFTs en JPEG que todos conocemos y 
 
 Estos compromisos de NFT, cadenas de bytes de unos 40 caracteres, no se pueden suplantar y son irrevocables, lo que significa que otros contratos pueden leerlos y actuar con confianza en función de ellos. Así, los NFTs de Cash Tokens permiten que los contratos en la cadena “llamen” a otros contratos.
 
-Los contratos pueden interoperar en la cadena en grupos que trabajan juntos sin necesidad de confianza. Así, los contratos se convierten en bloques de construcción, Legos de DeFi si quieres, que pueden colaborar aunque los hayan desarrollado y desplegado personas distintas y en momentos distintos. Cada UTXO hace lo suyo, a veces incluso en paralelo.
+Los contratos pueden interoperar en la cadena en grupos que trabajan juntos sin necesidad de confianza. Así, los contratos se convierten en bloques de construcción, Legos de DeFi, por así decirlo, que pueden colaborar aunque los hayan desarrollado y desplegado personas distintas y en momentos distintos. Cada UTXO hace lo suyo, a veces incluso en paralelo.
 
 Los NFTs que tienen la misma `category` pueden tener valores `commitment` idénticos; sin embargo, también se puede imponer la unicidad con **covenants** (contratos que limitan cómo se pueden gastar las monedas), que sin duda veremos en esta serie.
 
@@ -808,7 +809,7 @@ Así se veía el formulario antes de enviarlo:
 Este es el mensaje de éxito:
 ![](../../../assets/images/posts/tp2/Screenshot%202023-08-12%20at%205.04.43%20PM.png "NFT de acuñación creado con éxito.")
 
-Mira la transacción génesis en [Blockchair](https://blockchair.com/bitcoin-cash/transaction/b60397c8ad8f5286aca765449c973dd278691c743b31598a2a70f1b2e2af0af9). Esta es la `tokenData` relevante del nuevo **NFT de acuñación**. Fíjate en que dice que su `capability` es “minting”. Esto significa que puede crear más de la misma categoría y con cualquier `commitment` que quieras.
+Mira la transacción génesis en [Blockchair](https://blockchair.com/bitcoin-cash/transaction/b60397c8ad8f5286aca765449c973dd278691c743b31598a2a70f1b2e2af0af9). Este es el `tokenData` relevante del nuevo **NFT de acuñación**. Fíjate en que dice que su `capability` es “minting”. Esto significa que puede crear más de la misma categoría y con cualquier `commitment` que quieras.
 
 ```json
       "tokenData": {
@@ -821,7 +822,7 @@ Mira la transacción génesis en [Blockchair](https://blockchair.com/bitcoin-cas
       }
 ```
 
-Esta es la OP_RETURN con los metadatos BCMR, es decir, el `authhead` actual. Y como es la transacción génesis, siempre será el `authbase`, incluso después de que actualice el `authhead` cambiando algunos metadatos y actualizando el archivo en la cadena.
+Este es el OP_RETURN con los metadatos BCMR, es decir, el `authhead` actual. Y como es la transacción génesis, siempre será el `authbase`, incluso después de que actualice el `authhead` cambiando algunos metadatos y actualizando el archivo en la cadena.
 
 ![](../../../assets/images/posts/tp2/Screenshot%202023-08-12%20at%205.09.05%20PM.png)
 
@@ -854,7 +855,7 @@ Un próximo tutorial explicará cómo acuñar NFTs de forma programática y pond
 1. Copia tu `category`, visita [explorer.salemkode.com](https://explorer.salemkode.com/) y pégalo en el cuadro de búsqueda. Haz clic en “Open token page” a la izquierda y ¡mira todos tus nuevos NFTs! Recórrelos y mira los valores de sus compromisos.
 2. Toma el ID de la transacción más reciente de tu nuevo `category` de NFTs y pégalo en [Blockchair.com](https://blockchair.com/). Examina la transacción en bruto.
 
-[Aquí está la mía](https://blockchair.com/bitcoin-cash/transaction/f9cde0d11929afa45a9699926e689acc579c270408bb29b22b3921b90379593a), que tiene 27 salidas. Aquí también está la [página de SalemKode](https://explorer.salemkode.com/token/792eb291fee60820bc04fcdde48c73fa23a2a35756fe01c7164f5b5ce783f5f2) de mi serie de NFTs. Y esta es la `tokenData` de uno de mis nuevos NFTs. Fíjate en que el valor `capability` es `none` (“Immutable”) y que el valor `commitment` corresponde al NFT #8 de mi serie, como puedes ver en el archivo de metadatos de arriba.
+[Aquí está la mía](https://blockchair.com/bitcoin-cash/transaction/f9cde0d11929afa45a9699926e689acc579c270408bb29b22b3921b90379593a), que tiene 27 salidas. Aquí también está la [página de SalemKode](https://explorer.salemkode.com/token/792eb291fee60820bc04fcdde48c73fa23a2a35756fe01c7164f5b5ce783f5f2) de mi serie de NFTs. Y este es el `tokenData` de uno de mis nuevos NFTs. Fíjate en que el valor `capability` es `none` (“Immutable”) y que el valor `commitment` corresponde al NFT #8 de mi serie, como puedes ver en el archivo de metadatos de arriba.
 
 ```json
             "tokenData": {
@@ -873,7 +874,7 @@ Un próximo tutorial explicará cómo acuñar NFTs de forma programática y pond
 
 [Como vimos en el tutorial 1](/blog/token-pioneers-cashtokens-tutorial-1#7-freeze-your-tokens-authbase), es importante mover tu `authbase` y luego asegurarlo para no perder el control de los metadatos de tu nueva serie de NFTs.
 
-> **Nota:** mientras que el `authhead` es la actualización más reciente del `authchain` de una `category` dada, el `authbase` es la OP_RETURN donde definiste por primera vez los metadatos (BCMR) de tu token en la transacción génesis del token.
+> **Nota:** mientras que el `authhead` es la actualización más reciente del `authchain` de una `category` dada, el `authbase` es el OP_RETURN donde definiste por primera vez los metadatos (BCMR) de tu token en la transacción génesis del token.
 
 <a name="heading-e-oops-authupdatejs-to-the-rescue"></a>
 #### (e) ¡Ups! ¡`authUpdate.js` al rescate!

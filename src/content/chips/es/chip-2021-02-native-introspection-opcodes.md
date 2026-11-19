@@ -41,6 +41,7 @@ translation:
   sourceHash: 5c1da0ff13624470
   status: machine
   translator: Claude
+  qaHash: 7c009e2c300285fd
 ---
 
 ## Resumen
@@ -49,7 +50,7 @@ Este CHIP añade operaciones de la máquina virtual que permiten a un contrato l
 
 ## Motivación
 
-Los covenants (contratos que limitan cómo se pueden gastar las monedas) se hicieron posibles en BCH con [`OP_CHECKDATASIG`](/opcodes/op_checkdatasig) en 2018. Pero usaban un rodeo: verificar la misma firma con `OP_CHECKSIG` y con `OP_CHECKDATASIG`, y luego analizar una copia de los datos de firma de la transacción que aporta quien gasta.
+Los covenants (contratos que limitan cómo se pueden gastar las monedas) se hicieron posibles en BCH con [`OP_CHECKDATASIG`](/opcodes/op_checkdatasig) en 2018. Pero usaban un rodeo: verificar la misma firma con `OP_CHECKSIG` y con `OP_CHECKDATASIG`, y luego analizar una copia de los datos de firma de la transacción que apila quien gasta.
 
 El CHIP dice que esto “duplica o triplica el tamaño incluso de las transacciones de covenant más simples” (traducción nuestra), y los covenants avanzados chocaban con el límite estándar de 1650 bytes para el script de desbloqueo. Los opcodes (códigos de operación) nativos eliminan esa duplicación.
 

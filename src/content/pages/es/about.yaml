@@ -1,13 +1,13 @@
 metadata:
   title: Acerca de BCH Works
-  description: 'BCH Works hace que Bitcoin Cash sea legible y esté vivo: guías y herramientas honestas, basadas en datos, para usar BCH y desarrollar sobre él. Financiado colectivamente con 277,08 BCH en 2020. Un proyecto de Panmoni.'
+  description: 'BCH Works hace que Bitcoin Cash se entienda y cobre vida: guías y herramientas honestas, basadas en datos, para usar BCH y desarrollar sobre él. Financiado colectivamente con 277,08 BCH en 2020. Un proyecto de Panmoni.'
 header:
   chip: Acerca de
   title: No es un discurso de venta. Es un <mark class="bg-wb-green text-on-accent px-[0.12em] rounded-[0.12em] [box-decoration-break:clone]">taller</mark>.
   intro: En 2020, la comunidad de Bitcoin Cash financió este sitio en cinco horas. Seguimos mostrando nuestro trabajo. BCH Works explica cómo funciona Bitcoin Cash, en qué es bueno y dónde se queda corto. Luego te ayuda a probarlo tú mismo.
   receipt:
     tag: tx · flipstarter · sep 2020
-    amount: 277.08 BCH
+    amount: 277,08 BCH
     caption: Recaudado entre la comunidad para poner en marcha este sitio.
     raisedIn: recaudado en
     raisedInValue: 5 horas
@@ -20,7 +20,7 @@ header:
 books:
   chip: Cuentas claras
   title: Quién pagó. Qué se compró.
-  intro: Léelo como una transacción de Bitcoin Cash. Nuestros financiadores son las entradas. En lo que se convirtió su dinero son las salidas.
+  intro: Léelo como una transacción de Bitcoin Cash. Nuestros financiadores son las entradas. Las salidas son aquello en lo que se convirtió su dinero.
   inputs: Entradas
   funders: financiadores
   others: Además, los compradores y poseedores del token PAN SLP, quienes dieron propinas en Read.cash y noise.cash, y los chaintippers en Reddit y Twitter.
@@ -106,14 +106,14 @@ principles:
       'no': ¡Comisiones casi cero, a la velocidad del rayo!
       tone: bg-wb-green
     - code: regla_02 límites
-      title: Decir qué falla.
+      title: Decir los puntos débiles.
       body: BCH tiene un ecosistema pequeño, poca liquidez, bloques de 10 minutos y no tiene privacidad por defecto. Lo decimos, junto a lo bueno.
       'yes': Los pagos aparecen en segundos. La liquidación final tarda unos 10 minutos.
       'no': Pagos instantáneos y definitivos.
       tone: bg-wb-yellow
     - code: regla_03 práctica
       title: Que puedas probarlo.
-      body: Te indicamos cosas que puedes probar tú mismo, no cosas que debas creer por fe.
+      body: Te indicamos cosas que puedes probar tú mismo, no cosas que debas aceptar por fe.
       'yes': Envíate unos centavos y mira cómo llegan.
       'no': Confía en nosotros, funciona.
       tone: bg-wb-blue
@@ -139,7 +139,7 @@ limits:
       meaning: Los pagos aparecen en segundos. En una venta grande, espera un bloque antes de entregar la mercancía.
     - limit: Liquidez
       fact: escasa
-      meaning: Menos exchanges y libros de órdenes que BTC o las stablecoins. Las operaciones grandes mueven el precio, así que revisa primero el spread.
+      meaning: Menos exchanges y libros de órdenes que BTC o las stablecoins (monedas estables). Las operaciones grandes mueven el precio, así que revisa primero el spread.
     - limit: Privacidad
       fact: pública por defecto
       meaning: Cualquiera puede leer el historial de una dirección. Usa una dirección nueva para cada pago que recibas.
@@ -182,7 +182,7 @@ history:
       body: Pasa a llamarse BCH Works, con un diseño nuevo y una reescritura honesta.
     - label: mempool · sin confirmar
       date: Lo próximo
-      body: Vistas en vivo de la cadena desde nuestro propio nodo completo y plantillas de covenants que puedes probar en la red principal.
+      body: Vistas en vivo de la cadena desde nuestro propio nodo completo y plantillas de covenants (contratos que limitan cómo se pueden gastar las monedas) que puedes probar en la red principal.
       pending: true
 family:
   chip: Quién está detrás
@@ -206,7 +206,7 @@ family:
   corrections:
     label: ¿Encontraste un error?
     title: Correcciones
-    body: Escríbenos por correo y lo corregimos. Revisamos nuestras guías después de cada actualización de la red de mayo.
+    body: Escríbenos por correo y lo corregimos. Revisamos nuestras guías después de la actualización de la red de cada mayo.
 brand:
   chip: Recursos de marca
   title: Logotipos.
@@ -264,3 +264,4 @@ translation:
   sourceHash: 8baa10fe94b2676a
   status: machine
   translator: Claude
+  qaHash: 02025bb1d74ccf4a

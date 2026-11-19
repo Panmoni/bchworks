@@ -1,5 +1,5 @@
 metadata:
-  title: Bitcoin Cash Ayuda y comunidad — BCH Works
+  title: Ayuda y comunidad de Bitcoin Cash — BCH Works
   description: 'Dónde encontrar ayuda sobre Bitcoin Cash: foros, chats, podcasts, medios, documentos y herramientas, además de respuestas directas a preguntas frecuentes sobre BCH.'
 hero:
   title: Ayuda y comunidad de Bitcoin Cash
@@ -28,11 +28,11 @@ faq:
     - title: ¿Quién creó Bitcoin Cash?
       description: Satoshi Nakamoto publicó el whitepaper de Bitcoin en 2008. Bitcoin Cash comparte esa historia. En 2017 se separó de Bitcoin (BTC) para que el tamaño de los bloques siguiera creciendo y los pagos cotidianos siguieran siendo baratos.
     - title: ¿En qué se diferencia BCH de BTC?
-      description: 'El mismo suministro de 21 millones, la misma prueba de trabajo SHA-256, la misma historia temprana. BTC eligió ser una capa de liquidación y oro digital. BCH mantuvo el plan del efectivo entre pares: bloques más grandes, comisiones de menos de un centavo y, desde 2023, tokens nativos y contratos covenant que BTC todavía está debatiendo. BTC tiene mucha más tasa de hash, liquidez y atención.'
+      description: 'El mismo suministro de 21 millones, la misma prueba de trabajo SHA-256, la misma historia temprana. BTC eligió ser una capa de liquidación y oro digital. BCH mantuvo el plan del efectivo entre pares: bloques más grandes, comisiones de menos de un centavo y, desde 2023, tokens nativos y contratos covenant (contratos que limitan cómo se pueden gastar las monedas) que BTC todavía está debatiendo. BTC tiene mucha más tasa de hash (hashrate), liquidez y atención.'
     - title: ¿Es legal Bitcoin Cash?
       description: Depende de dónde vivas. La mayoría de los países permiten a las personas tenerlo y usarlo; algunos restringen los exchanges o los pagos. Revisa las normas locales, sobre todo en materia de impuestos.
     - title: ¿Es privado Bitcoin Cash?
-      description: 'No. Es un registro público transparente. Tu nombre no aparece en él, pero las direcciones se pueden vincular. Lo que BCH sí te da es autocustodia y resistencia a la censura: sin cuenta y sin nadie que pueda congelar tu billetera.'
+      description: 'No. Es un registro público transparente. Tu nombre no aparece en él, pero las direcciones se pueden vincular. Lo que BCH sí te da es autocustodia (tú guardas tus propias claves) y resistencia a la censura: sin cuenta y sin nadie que pueda congelar tu billetera.'
     - title: ¿Cuáles son sus debilidades, sin rodeos?
       description: Un ecosistema pequeño, poca liquidez, poco revuelo, mucha menos tasa de hash que BTC, bloques de 10 minutos y contratos más difíciles de escribir que en Solidity. Preferimos que lo escuches aquí primero.
     - title: ¿Mi billetera está vinculada a mi identidad?
@@ -47,3 +47,4 @@ translation:
   sourceHash: 98e71f095e1135c4
   status: machine
   translator: Claude
+  qaHash: 3fc117bf9c95de92

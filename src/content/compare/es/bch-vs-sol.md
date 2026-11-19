@@ -62,6 +62,7 @@ translation:
   sourceHash: c060dcbaa616ecd6
   status: machine
   translator: Claude
+  qaHash: b748cfe028a6a2d0
 ---
 
 Solana y Bitcoin Cash están en extremos opuestos del dial de velocidad. Solana trata la cadena como una sola computadora rápida y compartida. Bitcoin Cash la trata como un libro contable de monedas, cada una con su propio candado. Ambas dicen tener comisiones bajas. Llegan ahí por caminos distintos.

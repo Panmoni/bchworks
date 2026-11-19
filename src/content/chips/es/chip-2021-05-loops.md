@@ -41,16 +41,17 @@ stakeholders:
     source: https://github.com/bitjson/bch-loops/blob/master/stakeholders.md
 verified: 2026-09-26T00:00:00.000Z
 sources:
-  - title: Especificación de bucles CHIP-2021-05
+  - title: CHIP-2021-05 Loops specification
     url: https://github.com/bitjson/bch-loops
-  - title: Respuestas de las partes interesadas sobre los bucles
+  - title: Loops stakeholder responses
     url: https://github.com/bitjson/bch-loops/blob/master/stakeholders.md
-  - title: Especificación de la actualización de la red del 15/05/2026
+  - title: 2026-05-15 Network Upgrade Specification
     url: https://upgradespecs.bitcoincashnode.org/2026-05-15-upgrade/
 translation:
   sourceHash: 94dd5c1cd3ca34b3
   status: machine
   translator: Claude
+  qaHash: 5b76994a25e8d8e7
 ---
 
 ## Resumen
@@ -76,7 +77,7 @@ Según el CHIP, los bucles ayudan de dos maneras:
 
 ## Qué especifica
 
-- `OP_BEGIN` coloca la posición de la siguiente instrucción en la pila de control.
+- `OP_BEGIN` apila la posición de la siguiente instrucción en la pila de control.
 - `OP_UNTIL` extrae el elemento superior de la pila. Si es `0`, la ejecución salta de vuelta justo después del `OP_BEGIN` correspondiente;
   de lo contrario, la ejecución continúa.
 - Desde [Límites de la VM](/chips/chip-2021-05-vm-limits), cada operación cuenta para los límites de costo basados en densidad, así que un bucle

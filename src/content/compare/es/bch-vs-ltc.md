@@ -58,6 +58,7 @@ translation:
   sourceHash: 1bcf41a085ff2fea
   status: machine
   translator: Claude
+  qaHash: 37a0868650e816ad
 ---
 
 Litecoin y Bitcoin Cash son dos de los intentos más antiguos de hacer que el dinero al estilo de Bitcoin sea más barato y rápido de usar. Tomaron caminos distintos.
@@ -92,7 +93,7 @@ El precio, las comisiones y las transacciones diarias cambian constantemente. Co
 
 **Tokens nativos.** Desde la [actualización CashTokens](/upgrades/2023-05-cashtokens) de mayo de 2023, cualquier salida de BCH puede llevar tokens fungibles o un NFT. No hay que desplegar ningún contrato de token ni aprobar ninguna autorización. Litecoin no tiene nada equivalente integrado en sus reglas de consenso.
 
-**Contratos.** BCH ha ampliado Bitcoin Script cada mayo desde 2022: introspección, luego tokens, luego la [actualización de 2025 de límites de la VM y BigInt (aritmética de alta precisión)](/upgrades/2025-05-vm-limits-bigint) y después bucles y funciones en la [actualización de 2026](/upgrades/2026-05-upgrade). Eso hace de BCH un lugar práctico para escribir [covenants](/glossary#covenant) (un contrato que limita cómo se pueden gastar las monedas): contratos que controlan a dónde pueden ir sus monedas después.
+**Contratos.** BCH ha ampliado Bitcoin Script cada mayo desde 2022: introspección, luego tokens, luego la [actualización de 2025 de límites de la VM y BigInt (aritmética de alta precisión)](/upgrades/2025-05-vm-limits-bigint) y después bucles y funciones en la [actualización de 2026](/upgrades/2026-05-upgrade). Eso hace de BCH un lugar práctico para escribir [covenants](/glossary#covenant): contratos que controlan a dónde pueden ir sus monedas después.
 
 **0-conf más seguro.** Los nodos de BCH retransmiten [pruebas de doble gasto](/glossary#dsproof) cuando alguien intenta gastar la misma moneda dos veces. Eso da a los comercios una señal antes de que llegue un bloque.
 
@@ -102,7 +103,7 @@ El precio, las comisiones y las transacciones diarias cambian constantemente. Co
 
 **Bloques más rápidos.** Un objetivo de 2,5 minutos significa que la primera confirmación llega, en promedio, unas cuatro veces antes. Para un comercio que espera una confirmación, es una diferencia real.
 
-**Privacidad opcional con MWEB.** Litecoin activó los MimbleWimble Extension Blocks el 20 de mayo de 2022. MWEB es opcional. Las monedas que se mueven a él obtienen montos y direcciones confidenciales. BCH no tiene ninguna función de privacidad a nivel de protocolo; [CashFusion](/glossary#cashfusion) es una herramienta opcional de las billeteras. MWEB tuvo un costo: Upbit, Bithumb, Coinone, Korbit y Gopax, en Corea del Sur, retiraron Litecoin en junio de 2022, alegando normas contra el lavado de dinero.
+**Privacidad opcional con MWEB.** Litecoin activó los MimbleWimble Extension Blocks el 20 de mayo de 2022. MWEB es opcional. Las monedas que se mueven a él obtienen montos y direcciones confidenciales. BCH no tiene ninguna función de privacidad a nivel de protocolo; [CashFusion](/glossary#cashfusion) es una herramienta opcional de las billeteras. MWEB tuvo un costo: Upbit, Bithumb, Coinone, Korbit y Gopax, en Corea del Sur, retiraron Litecoin de sus listados en junio de 2022, alegando normas contra el lavado de dinero.
 
 **Un ETF al contado en EE. UU.** Canary Capital lanzó el Canary Litecoin ETF (LTCC) en Nasdaq el 28 de octubre de 2025. Bitcoin Cash no tiene un ETF al contado en EE. UU. Grayscale presentó el 11 de septiembre de 2026 una solicitud para convertir su Bitcoin Cash Trust (BCHG) en uno, pero la norma de cotización en la que se apoya aún no estaba aprobada y la solicitud no fija ninguna fecha.
 

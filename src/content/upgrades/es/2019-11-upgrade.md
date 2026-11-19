@@ -3,7 +3,7 @@ title: 'Noviembre de 2019: multifirma Schnorr y MINIMALDATA'
 date: 2019-11-15T12:00:00.000Z
 status: activated
 height: 609136
-summary: OP_CHECKMULTISIG obtuvo el modo Schnorr, y la codificación mínima de pushes y de números pasó a ser regla de consenso.
+summary: OP_CHECKMULTISIG obtuvo el modo Schnorr, y el apilado mínimo de datos y la codificación mínima de números pasaron a ser reglas de consenso.
 keywords:
   - november 2019 upgrade
   - schnorr multisig
@@ -25,6 +25,7 @@ translation:
   sourceHash: f4080578632a954f
   status: machine
   translator: Claude
+  qaHash: 42952e186eefb19d
 ---
 
 ## Qué cambió
@@ -39,7 +40,7 @@ Cambios de consenso:
   [`OP_CHECKMULTISIGVERIFY`](/opcodes/op_checkmultisigverify) aceptan firmas [Schnorr](/glossary#schnorr-signatures). El elemento de pila
   “ficticio” sin uso que la multifirma siempre consumía se reaprovecha. Cuando no está vacío, el opcode (código de operación) se ejecuta en
   modo Schnorr, y el elemento ficticio se convierte en un campo de bits que indica qué claves públicas firmaron.
-- **MINIMALDATA.** Cada push de datos ejecutado debe usar el opcode de push más pequeño, y cada número debe usar su codificación
+- **MINIMALDATA.** Cada operación ejecutada que apila datos debe usar el opcode de apilado más pequeño, y cada número debe usar su codificación
   mínima. Esto ya era una regla de estandaridad (de retransmisión). Ahora es de consenso.
 
 ## Por qué
@@ -48,7 +49,7 @@ Cambios de consenso:
   de firma única. La multifirma quedó para después porque necesitaba una nueva forma de emparejar firmas con claves.
 - **Verificaciones de multifirma más rápidas.** Con el campo de bits, el nodo sabe exactamente qué clave corresponde a cada firma. En modo
   ECDSA puede tener que probar varias claves por firma.
-- **Acabar con la maleabilidad.** Los pushes no mínimos permitían que un tercero cambiara los bytes de una transacción (y su ID) sin
+- **Acabar con la maleabilidad.** Las operaciones de apilado no mínimas permitían que un tercero cambiara los bytes de una transacción (y su ID) sin
   invalidarla. Convertir MINIMALDATA en regla de consenso cierra esa puerta para siempre.
 
 ## Qué permite

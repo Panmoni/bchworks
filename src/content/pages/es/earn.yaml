@@ -3,7 +3,7 @@ metadata:
   description: 'Formas de ganar Bitcoin Cash: trabajar como freelance, crear, dar propinas, cobrar recompensas por tareas, financiar proyectos colectivamente con Flipstarter, mantener infraestructura o cobrar por uso con micropagos.'
 hero:
   title: Ganar Bitcoin Cash
-  subtitle: Recibe pagos en un dinero que cuesta una décima de centavo mover. Incluso vale la pena enviar cantidades pequeñas.
+  subtitle: Recibe pagos en un dinero cuyo envío cuesta una décima de centavo. Incluso vale la pena enviar cantidades pequeñas.
 how:
   title: Cómo ganar BCH
   subtitle: "Las microcomisiones cambian lo que vale la pena cobrar. Una propina de 0,05\_US$, un pago por artículo o un precio por llamada a una API tienen sentido cuando mover el dinero cuesta unos 0,001\_US$."
@@ -18,7 +18,7 @@ how:
     - title: Cobro por uso
       description: Vende llamadas a APIs, descargas o tareas de agentes de IA por centavos. Las comisiones de BCH son lo bastante bajas para que el cobro por uso funcione.
       url: /build
-    - title: Infraestructura
+    - title: Operación de infraestructura
       description: Mina bloques o mantén los nodos e indexadores de los que dependen las aplicaciones. La minería requiere un capital considerable; haz las cuentas primero.
       url: /mining
 social:
@@ -42,7 +42,7 @@ why:
     - title: Hecho para pagos pequeños
       icon: tabler:robot
       description: Las máquinas pueden pagar a otras máquinas. Las APIs de pago por llamada y los agentes de IA que pagan por lo que usan son viables con estas comisiones.
-    - title: Ninguna cuenta que congelar
+    - title: Sin cuentas que congelar
       icon: tabler:key
       description: Tus ganancias llegan a una billetera que tú controlas. Ninguna plataforma puede retener tu saldo ni cerrar tu cuenta.
     - title: Financiación colectiva con Flipstarter
@@ -50,7 +50,7 @@ why:
       description: Los aportes solo se cobran si se alcanza la meta, y eso se garantiza en la cadena. Los desarrolladores de BCH han financiado años de trabajo de esta forma.
     - title: Ojo con el precio
       icon: tabler:chart-line
-      description: BCH es volátil. Si necesitas ingresos estables, convierte parte de cada pago o guarda una stablecoin de BCH, como ParyonUSD.
+      description: BCH es volátil. Si necesitas ingresos estables, convierte parte de cada pago o guarda una stablecoin (moneda estable) de BCH, como ParyonUSD.
 cta:
   title: Recibe novedades de BCH
   subtitle: Actualizaciones, herramientas y noticias del ecosistema, sin exageraciones.
@@ -59,3 +59,4 @@ translation:
   sourceHash: 45b024cc72262d52
   status: machine
   translator: Claude
+  qaHash: 6ab30c044f36fe62

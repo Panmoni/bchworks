@@ -1,6 +1,6 @@
 metadata:
-  title: 'Blog de Bitcoin Cash: tutoriales BCH, datos y actualizaciones{page}'
-  description: 'El blog de BCH Works: tutoriales Bitcoin Cash, guías prácticas de CashTokens, datos de la red y explicaciones de las actualizaciones.'
+  title: 'Blog de Bitcoin Cash: tutoriales de BCH, datos y actualizaciones{page}'
+  description: 'El blog de BCH Works: tutoriales de Bitcoin Cash, guías prácticas de CashTokens, datos de la red y explicaciones de las actualizaciones.'
 page: ' — Página {page}'
 headline:
   title: Blog de Bitcoin Cash
@@ -9,3 +9,4 @@ translation:
   sourceHash: 8c1b3f09c54a45f0
   status: machine
   translator: Claude
+  qaHash: a7f0058f8e57e3c0

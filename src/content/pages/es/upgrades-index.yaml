@@ -3,9 +3,10 @@ metadata:
   description: 'Todas las actualizaciones de la red de Bitcoin Cash, desde la bifurcación de 2017 hasta mayo de 2027: qué cambió, por qué y qué permite. Con una cuenta regresiva hasta la próxima.'
 hero:
   title: Actualizaciones de Bitcoin Cash
-  subtitle: Una actualización del protocolo cada mayo, según el calendario. Aquí está cada una, qué cambió y por qué.
+  subtitle: 'Una actualización del protocolo cada mayo, en la fecha prevista. Aquí tienes cada una: qué cambió y por qué.'
 block: ' · bloque {height}'
 translation:
   sourceHash: 8cb041eb38dfc579
   status: machine
   translator: Claude
+  qaHash: 1bf923759bb1cb64

@@ -12,6 +12,7 @@ translation:
   sourceHash: 8735fd7aeb1bee8c
   status: machine
   translator: Claude
+  qaHash: f96732db531c1ff7
 ---
 
 La serie Visión BCH es una colección de 25 imágenes para redes sociales publicadas por primera vez en 2021. Presentan una visión del desarrollo futuro de Bitcoin Cash.

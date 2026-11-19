@@ -25,6 +25,7 @@ translation:
   sourceHash: 89611129b17d1e6f
   status: machine
   translator: Claude
+  qaHash: 143cd9b2b70d8a90
 ---
 
 ## Qué cambió

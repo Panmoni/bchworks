@@ -16,6 +16,7 @@ translation:
   sourceHash: 52c4ade6b6ee3935
   status: machine
   translator: Claude
+  qaHash: 53bd5e391f0ad14f
 ---
 
 El 22 de septiembre, CME Group anunció que planea listar [futuros de Bitcoin Cash](https://www.prnewswire.com/news-releases/cme-group-to-expand-crypto-derivatives-suite-with-bitcoin-cash-and-uniswap-futures-302886066.html) a partir del 19 de octubre, sujeto a revisión regulatoria. Un contrato estándar equivale a 250 BCH. Un contrato Micro equivale a 25 BCH.

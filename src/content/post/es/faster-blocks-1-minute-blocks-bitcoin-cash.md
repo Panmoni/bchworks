@@ -16,6 +16,7 @@ translation:
   sourceHash: 2275643202fafab7
   status: machine
   translator: Claude
+  qaHash: 6a19152761c2d933
 ---
 
 Bitcoin Cash produce un bloque aproximadamente cada 10 minutos. Una propuesta llamada [Faster Blocks (CHIP-2025-03)](/chips/chip-2025-03-faster-blocks) lo reduciría a 1 minuto, a partir de la actualización de mayo de 2027.
@@ -30,8 +31,8 @@ Los bloques llegarían 10 veces más seguido. Todo lo que está ligado a un bloq
 
 ## Qué cambia
 
-- **Las confirmaciones llegan más rápido.** Hoy, aproximadamente 1 de cada 4 primeras confirmaciones tarda más de 14 minutos. Con bloques de 1 minuto, el 95 % llegaría en menos de 3 minutos, según el CHIP.
-- **Las esperas largas se vuelven más estables.** Una espera de 60 minutos formada por 60 bloques de un minuto termina en menos de 73 minutos el 95 % de las veces. Con seis bloques de 10 minutos, hay un 20 % de probabilidad de esperar más de 79 minutos.
+- **Las confirmaciones llegan más rápido.** Hoy, aproximadamente 1 de cada 4 primeras confirmaciones tarda más de 14 minutos. Con bloques de 1 minuto, el 95 % llegaría en menos de 3 minutos, según el CHIP.
+- **Las esperas largas se vuelven más estables.** Una espera de 60 minutos formada por 60 bloques de un minuto termina en menos de 73 minutos el 95 % de las veces. Con seis bloques de 10 minutos, hay un 20 % de probabilidad de esperar más de 79 minutos.
 - **Los encabezados de bloque crecen 10×**, de unos 4,2 MB a unos 42 MB al año. Una propuesta complementaria, [Simplified Header Verification](/chips/chip-2026-02-simplified-header-verification), permite que las billeteras ligeras guarden en su lugar una prueba de tamaño fijo.
 - **La mediana del tiempo pasado** (un reloj que usan los contratos y los locktimes) se reduce de unos 110 minutos a unos 11.
 
@@ -58,7 +59,7 @@ Las objeciones que más pesan:
 - **“Si no está roto, no lo arregles.”** Richard Brady (cashflow.dev, Coinbooth, ParyonUSD) y otros no ven una necesidad urgente.
 - **Clientes ligeros y crecimiento de los encabezados.** Tom Zander (Flowee) planteó inquietudes sobre las billeteras SPV (verificación simplificada de pagos).
 
-Del lado a favor están el Bitcoin Cash Podcast, Selene Wallet, BCH-1, Paytaca, Mainnet.cash, TapSwap y otros. Joemar Taganna, de Paytaca, pasó de “desaprobar por ahora” a apoyarla el 26 de septiembre. La lista completa, con una fuente para cada postura, está en la [página de CHIP](/chips/chip-2025-03-faster-blocks).
+Del lado a favor están el Bitcoin Cash Podcast, Selene Wallet, BCH-1, Paytaca, Mainnet.cash, TapSwap y otros. Joemar Taganna, de Paytaca, pasó de “desaprobar por ahora” a apoyarla el 26 de septiembre. La lista completa, con una fuente para cada postura, está en la [página del CHIP](/chips/chip-2025-03-faster-blocks).
 
 ## El calendario
 
@@ -75,7 +76,7 @@ También es posible un año sin cambios de consenso. BCH ha lanzado una actualiz
 
 - **Si guardas o pagas:** no tienes que hacer nada. Las billeteras que siguen la actualización de la red siguen funcionando, y los pagos siguen apareciendo en segundos.
 - **Comercios y exchanges:** las confirmaciones llegan más rápido. Quizás quieras aumentar tu número de confirmaciones, ya que cada bloque cubre menos tiempo.
-- **Mineros:** recompensas más pequeñas por bloque, 10 veces más bloques. Los ingresos por hora no cambian. Las tasas de huérfanos se modelan en 0,41–1,94 %, por debajo del límite del 2 % del CHIP.
+- **Mineros:** recompensas más pequeñas por bloque, 10 veces más bloques. Los ingresos por hora no cambian. Las tasas de huérfanos se modelan en 0,41–1,94 %, por debajo del límite del 2 % del CHIP.
 - **Desarrolladores:** los bloqueos temporales existentes conservan su significado. Los contratos nuevos que cuentan bloques deberían contar en la nueva unidad.
 
 Actualizaremos esta publicación cuando se tome la decisión de cierre. Sigue la [página de la actualización de 2027](/upgrades/2027-05-upgrade) para la cuenta regresiva.

@@ -93,7 +93,7 @@ fee:
   rate: Tasa de comisión (sat/byte)
   price: Precio de BCH, USD (ejemplo)
   result: Comisión de red
-  initialUsd: $0.0010
+  initialUsd: 0,0010 US$
   initialSats: 226 sats
 limits:
   title: Límites que debes tener en cuenta al diseñar.
@@ -122,7 +122,7 @@ limits:
       status: Una pequeña fracción
       why: Mismo algoritmo SHA-256, mucho menos trabajo.
 honest:
-  title: La parte honesta
+  title: Sin rodeos
   subtitle: Qué esperar antes de invertir tu tiempo.
   items:
     - title: Más difícil que Solidity al principio
@@ -142,3 +142,4 @@ translation:
   sourceHash: 249106929af0ed57
   status: machine
   translator: Claude
+  qaHash: b545fc556ff9f077

@@ -30,6 +30,7 @@ translation:
   sourceHash: 207c6f1171c19cb8
   status: machine
   translator: Claude
+  qaHash: 8005810a9b809f6a
 ---
 
 ## Qué cambió
@@ -41,7 +42,7 @@ primer bloque con las nuevas reglas.
 Se activaron dos CHIPs:
 
 - **[CHIP-2021-02 Native Introspection](/chips/chip-2021-02-native-introspection-opcodes)** añadió 14 opcodes
-  (códigos de operación, `0xc0`–`0xcd`) que colocan en la pila datos sobre la transacción actual:
+  (códigos de operación, `0xc0`–`0xcd`) que apilan datos sobre la transacción actual:
   - Transacción completa: [`OP_INPUTINDEX`](/opcodes/op_inputindex), [`OP_ACTIVEBYTECODE`](/opcodes/op_activebytecode),
     [`OP_TXVERSION`](/opcodes/op_txversion), [`OP_TXINPUTCOUNT`](/opcodes/op_txinputcount),
     [`OP_TXOUTPUTCOUNT`](/opcodes/op_txoutputcount), [`OP_TXLOCKTIME`](/opcodes/op_txlocktime).
@@ -56,7 +57,7 @@ Se activaron dos CHIPs:
 ## Por qué
 
 **Introspección.** Los [covenants](/glossary#covenant) (contratos que limitan cómo se pueden gastar las monedas) ya
-funcionaban en BCH, pero solo mediante un truco: colocar una copia de los datos de firma de la transacción, verificarla con
+funcionaban en BCH, pero solo mediante un truco: apilar una copia de los datos de firma de la transacción, verificarla con
 `OP_CHECKSIG` y con `OP_CHECKDATASIG`, y luego desmenuzarla. El CHIP indica que esto duplicaba o triplicaba el tamaño incluso de transacciones de covenants sencillos, y
 los más avanzados chocaban con el límite de 1650 bytes del script de desbloqueo. El CHIP da a los contratos
 acceso directo a esos mismos datos “sin aumentar los costos de validación de las transacciones” (traducción nuestra).
@@ -65,7 +66,7 @@ acceso directo a esos mismos datos “sin aumentar los costos de validación de 
 más tenía que emular una aritmética más grande, lo que era difícil de asegurar y engordaba las transacciones. Los números de 64 bits cubren cualquier valor posible
 de una salida (el suministro total es de unos 2,1 mil billones de satoshis).
 
-El CHIPs recomendó lanzar ambos a la vez: `OP_UTXOVALUE` y `OP_OUTPUTVALUE` devuelven montos que solo caben en
+Los CHIPs recomendaron lanzar ambos a la vez: `OP_UTXOVALUE` y `OP_OUTPUTVALUE` devuelven montos que solo caben en
 números de 64 bits.
 
 ## Qué permite

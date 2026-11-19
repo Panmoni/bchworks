@@ -70,6 +70,7 @@ translation:
   sourceHash: c88cd21894a6dc0c
   status: machine
   translator: Claude
+  qaHash: 0829d660901c7457
 ---
 
 Bitcoin Cash y Ethereum ejecutan contratos inteligentes. Parten de extremos opuestos. Bitcoin Cash es el diseño de [UTXO](/glossary#utxo) de Bitcoin con contratos añadidos encima. Ethereum es una computadora mundial con dinero añadido encima. Esa sola diferencia explica casi todo lo que sigue.

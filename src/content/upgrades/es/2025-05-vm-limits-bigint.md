@@ -24,7 +24,7 @@ sources:
     url: https://github.com/bitjson/bch-vm-limits
   - title: 'CHIP-2024-07 BigInt: High-Precision Arithmetic for Bitcoin Cash'
     url: https://github.com/bitjson/bch-bigint
-  - title: Discusión sobre VM Limits (Bitcoin Cash Research)
+  - title: Discusión sobre Límites de la VM (Bitcoin Cash Research)
     url: https://bitcoincashresearch.org/t/chip-2021-05-targeted-virtual-machine-limits/437
   - title: Bitcoin Cash Node chainparams.cpp (upgrade11Height)
     url: https://gitlab.com/bitcoin-cash-node/bitcoin-cash-node/-/blob/master/src/chainparams.cpp
@@ -32,6 +32,7 @@ translation:
   sourceHash: 72f3600813f58927
   status: machine
   translator: Claude
+  qaHash: a6ae9384c359e179
 ---
 
 ## Qué cambió
@@ -48,7 +49,7 @@ Se activaron dos CHIPs, ambos mantenidos por Jason Dreyzehner.
 [límites de la VM](/glossary#vm-limits).
 
 - **Desaparece el límite de 201 operaciones.** Lo reemplaza un **límite de costo de operaciones**: cada entrada puede gastar un presupuesto de
-  800 unidades de costo por byte de su “longitud de control de densidad” (aproximadamente, el tamaño de la entrada que gasta). Insertar datos
+  800 unidades de costo por byte de su “longitud de control de densidad” (aproximadamente, el tamaño de la entrada que gasta). Apilar datos
   cuesta su longitud; el hashing, las verificaciones de firmas y la aritmética costosa cuestan más.
 - **Los elementos de la pila pueden tener 10.000 bytes**, frente a 520. Esto coincide con el tamaño máximo de script ya existente y elimina el
   tope de 520 bytes en la longitud de los contratos de P2SH. Para mantener un alcance acotado, la política de retransmisión siguió limitando el bytecode de desbloqueo a 1650

@@ -41,6 +41,7 @@ translation:
   sourceHash: 0d5f8e35014614a8
   status: machine
   translator: Claude
+  qaHash: 3bcbf3ca44053819
 ---
 
 ## Estado al 26 de septiembre de 2026

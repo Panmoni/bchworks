@@ -24,14 +24,14 @@ objections:
     evidence: "226 bytes × 1 sat/byte = 226 sats ≈ 0,001\_US$"
   - claim: Sin contratos inteligentes no hay aplicaciones reales.
     verdict: contested
-    answer: BCH tiene contratos, llamados covenants. Cada uno es un candado sobre una moneda que verifica la transacción que la gasta. No se ejecuta como un programa global. Los DEXs, las stablecoins, las coberturas, el financiamiento colectivo y las bóvedas ya funcionan hoy. Un único fondo compartido que miles de personas actualizan a la vez sigue siendo más difícil de construir.
+    answer: BCH tiene contratos, llamados covenants. Cada uno es un candado sobre una moneda que verifica la transacción que la gasta. No se ejecuta como un programa global. Los DEXs (exchanges descentralizados), las stablecoins (monedas estables), las coberturas, el financiamiento colectivo y las bóvedas ya funcionan hoy. Un único fondo compartido que miles de personas actualizan a la vez sigue siendo más difícil de construir.
     evidence: 'Desde mayo de 2026: bucles y funciones'
   - claim: Nadie lo usa. El ecosistema es diminuto.
     verdict: conceded
     answer: Cierto. El ecosistema es pequeño, la liquidez es escasa y las DeFi en BCH se miden en millones, no en miles de millones. Lo decimos aquí porque la confianza vale más que el bombo.
   - claim: Es menos seguro que Bitcoin.
     verdict: conceded
-    answer: BCH usa la misma prueba de trabajo SHA-256, pero con una pequeña fracción de la tasa de hash de Bitcoin. Para montos grandes, espera más confirmaciones.
+    answer: BCH usa la misma prueba de trabajo SHA-256, pero con una pequeña fracción de la tasa de hash (hashrate) de Bitcoin. Para montos grandes, espera más confirmaciones.
   - claim: Los tokens en BCH son solo otro rug pull a punto de ocurrir.
     verdict: answered
     answer: CashTokens están dentro de las monedas de tu billetera. Ningún contrato de token guarda un saldo por ti y no hay ningún approve() que explotar, así que una aprobación olvidada no puede vaciarte. Ningún administrador puede pausar ni actualizar tu token.
@@ -54,7 +54,7 @@ reliability:
   date: 15 de mayo
   upgrades:
     - year: '2021'
-      what: Se eliminó el límite de cadenas sin confirmar; varias salidas OP_RETURN.
+      what: Se eliminó el límite de cadenas de transacciones sin confirmar; varias salidas OP_RETURN.
     - year: '2022'
       what: Introspección nativa y enteros de 64 bits.
     - year: '2023'
@@ -71,7 +71,7 @@ chooser:
   intro: Cada cadena gana en algo. Elige una tarea para ver cuál encaja. A veces no es BCH.
   prompt: ¿Qué quieres hacer?
   bestFit: La mejor opción
-  notBch: No BCH
+  notBch: No es BCH
   chains:
     - Bitcoin Cash
     - Bitcoin
@@ -177,3 +177,4 @@ translation:
   sourceHash: 1292e53fa2b5d8ef
   status: machine
   translator: Claude
+  qaHash: 3716b3d8082006c1

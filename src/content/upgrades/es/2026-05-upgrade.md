@@ -40,6 +40,7 @@ translation:
   sourceHash: 012cc6a78245497c
   status: machine
   translator: Claude
+  qaHash: 28fcb8856b2e5886
 ---
 
 ## Qué cambió
@@ -77,7 +78,7 @@ iniciaron en 2018: inversión de bits más desplazamientos numéricos y binarios
 
 ### Pay to Script (CHIP-2024-12)
 
-[P2S](/chips/chip-2024-12-p2s) cambia las reglas de estandaridad (retransmisión) y un límite de los tokens:
+[P2S](/chips/chip-2024-12-p2s) cambia las reglas de transacciones estándar (retransmisión) y un límite de los tokens:
 
 - **Las salidas Pay-to-Script son estándar.** Se puede retransmitir cualquier bytecode de bloqueo de hasta 201 bytes, no solo las antiguas
   plantillas (P2PKH, P2SH, multifirma directa, etc.). Consulta [P2S](/glossary#p2s).

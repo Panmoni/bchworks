@@ -41,16 +41,17 @@ stakeholders:
     source: https://github.com/cashtokens/cashtokens/blob/master/stakeholders.md
 verified: 2026-09-26T00:00:00.000Z
 sources:
-  - title: Especificación de CHIP-2022-02 CashTokens
+  - title: CHIP-2022-02 CashTokens specification
     url: https://github.com/cashtokens/cashtokens
-  - title: Respuestas de las partes interesadas sobre CashTokens
+  - title: CashTokens stakeholder responses
     url: https://github.com/cashtokens/cashtokens/blob/master/stakeholders.md
-  - title: Especificación de la actualización de la red del 15 de mayo de 2023
+  - title: 2023-05-15 Network Upgrade Specification
     url: https://upgradespecs.bitcoincashnode.org/2023-05-15-upgrade/
 translation:
   sourceHash: 94c72a8ec3bfeba7
   status: machine
   translator: Claude
+  qaHash: 1df8f227191a6668
 ---
 
 ## Resumen
@@ -67,7 +68,7 @@ los contratos no podían emitir sus propios mensajes verificables, y los orácul
 fuera de alcance.
 
 Las primitivas de tokens dan a los contratos esa capacidad “sin aumentar los costos de validación de transacciones ni de bloques” (traducción nuestra), y mantienen
-el modelo sin estado de [UTXO](/glossary#utxo) de BCH. Los contratos pueden interactuar entre sí sin un estado global compartido.
+el modelo [UTXO](/glossary#utxo) sin estado de BCH. Los contratos pueden interactuar entre sí sin un estado global compartido.
 
 ## Qué especifica
 

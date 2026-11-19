@@ -24,6 +24,7 @@ translation:
   sourceHash: 044e4a178d11cab8
   status: machine
   translator: Claude
+  qaHash: aa603165babfcb81
 ---
 
 ## Qué cambió
@@ -45,7 +46,7 @@ Cambios de consenso:
 Cambios de política recomendados (no de consenso):
 
 - Las salidas de datos [`OP_RETURN`](/glossary#op-return) pueden llevar hasta 223 bytes en total.
-- Protección contra repetición automática para la siguiente actualización, como forma de retirar las versiones antiguas de nodos.
+- Protección automática contra repetición para la siguiente actualización, como forma de retirar las versiones antiguas de nodos.
 
 ## Por qué
 

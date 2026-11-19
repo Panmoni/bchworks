@@ -56,13 +56,14 @@ translation:
   sourceHash: 1cb0ae6ee4350fff
   status: machine
   translator: Claude
+  qaHash: 32272b401d987291
 ---
 
 Respuesta corta: no. Bitcoin Cash sigue produciendo bloques, lanza una actualización del protocolo cada año y sigue publicando software. Un exchange regulado prevé listar futuros de BCH en octubre de 2026. También es una red pequeña con poca liquidez. Ambas cosas son ciertas, y esta página muestra las pruebas de cada una.
 
 ## Por qué la gente lo pregunta
 
-La pregunta tiene historia. BCH se separó de Bitcoin el 1 de agosto de 2017 y alcanzó su máximo de 4355,62 US$ en diciembre de ese año. Para agosto de 2018 había caído cerca de un 88 %. Ese mismo año se separó Bitcoin SV. En noviembre de 2020 la cadena volvió a dividirse, cuando el equipo de Bitcoin ABC se fue y más tarde se convirtió en eCash. Algunas plataformas se retiraron entonces. OKCoin dejó de listar BCH y BSV en febrero de 2021, alegando que los usuarios nuevos los confundían con Bitcoin. Coinbase Wallet retiró BCH en enero de 2023.
+La pregunta tiene historia. BCH se separó de Bitcoin el 1 de agosto de 2017 y alcanzó su máximo de 4355,62 US$ en diciembre de ese año. Para agosto de 2018 había caído cerca de un 88 %. Ese mismo año se separó Bitcoin SV. En noviembre de 2020 la cadena volvió a dividirse, cuando el equipo de Bitcoin ABC se fue y más tarde se convirtió en eCash. Algunas plataformas se retiraron entonces. OKCoin dejó de listar BCH y BSV en febrero de 2021, alegando que los usuarios nuevos los confundían con Bitcoin. Coinbase Wallet retiró BCH en enero de 2023.
 
 Cada uno de estos hechos alimentó la pregunta “¿está muerto BCH?”. Ninguno detuvo la cadena. La pregunta justa es cómo está la red ahora, no en 2018.
 
@@ -97,7 +98,7 @@ Sí, aunque el equipo es pequeño.
 - **Lenguaje de contratos.** CashScript v0.13.0 añadió bucles `for` y `while`, desplazamientos de bits y contratos P2S, en línea con la actualización de 2026. Publicó la v0.13.3 el 15 de septiembre de 2026 y tiene versiones preliminares de la v0.14 con funciones definidas por el usuario.
 - **Aplicaciones.** ParyonUSD, una stablecoin (moneda estable) respaldada por BCH, entró en funcionamiento el 30 de abril de 2026. En una sola semana de septiembre de 2026, las noticias de la comunidad mencionaron un nuevo DEX (exchange descentralizado) nativo, un servicio de IA de pago por uso con precios en BCH, una nueva versión de la billetera Cashonize y pruebas de pagos privados en Chipnet.
 
-Explora lo que está activo en el [directorio](/directory). Comprueba cada proyecto a diario y señala los que han dejado de funcionar, para que puedas juzgar por ti mismo.
+Explora lo que está activo en el [directorio](/directory). El directorio comprueba cada proyecto a diario y señala los que han dejado de funcionar, para que puedas juzgar por ti mismo.
 
 ## ¿Alguien lo negocia?
 
@@ -107,14 +108,14 @@ Que se listen futuros no significa que la gente use BCH para pagar cosas. Sí si
 
 ## Lo que realmente flojea
 
-No estar muerto no es lo mismo que prosperar. Esto es lo que los escépticos aciertan:
+No estar muerto no es lo mismo que prosperar. Esto es en lo que aciertan los escépticos:
 
 - **El uso es reducido.** Las transacciones y los depósitos en DeFi son mínimos frente a Ethereum o Solana. Consulta el panel en vivo.
 - **La liquidez es escasa**, y no hay USDT ni USDC en BCH.
-- **La tasa de hash (hashrate) es una parte pequeña** del total de SHA-256, lo que plantea dudas sobre ataques del 51 %.
+- **La tasa de hash (hashrate) es una parte pequeña** del total de SHA-256, lo que plantea dudas sobre ataques del 51 %.
 - **Los bloques tardan 10 minutos**, y todavía no hay acuerdo sobre bloques más rápidos.
 - **El acceso se redujo en algunos lugares.** Coinbase Wallet retiró el soporte para BCH en enero de 2023, alegando poco uso. El exchange Coinbase lo mantuvo.
-- **El precio oscila mucho.** BCH cayó cerca de un 88 % desde su máximo de diciembre de 2017 hasta agosto de 2018.
+- **El precio oscila mucho.** BCH cayó cerca de un 88 % desde su máximo de diciembre de 2017 hasta agosto de 2018.
 - **Historial de bifurcaciones.** BCH se dividió en 2018 (Bitcoin SV) y en 2020 (eCash).
 
 Tratamos cada punto, con fuentes y formas de mitigarlo, en la página [Riesgos, sin rodeos](/risks).

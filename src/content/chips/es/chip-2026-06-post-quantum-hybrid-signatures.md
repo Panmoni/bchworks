@@ -11,7 +11,7 @@ discussion: https://bitcoincashresearch.org/t/chip-2026-06-post-quantum-and-hybr
 stakeholders: []
 verified: 2026-09-26T00:00:00.000Z
 sources:
-  - title: 'CHIP-2026-06: Firmas poscuánticas e híbridas (Bitcoin Cash Research)'
+  - title: 'CHIP-2026-06: Post-Quantum and Hybrid Signatures (Bitcoin Cash Research)'
     url: https://bitcoincashresearch.org/t/chip-2026-06-post-quantum-and-hybrid-signatures/1864
   - title: Repositorio de firmas genéricas de CHIP-2026-06
     url: https://gitlab.com/mainnet-pat/chip-2026-06-generic-sigs
@@ -19,6 +19,7 @@ translation:
   sourceHash: 6192ed54290b2e91
   status: machine
   translator: Claude
+  qaHash: 6695b921f0e277f8
 ---
 
 ## Resumen

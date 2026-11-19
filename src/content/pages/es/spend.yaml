@@ -31,7 +31,7 @@ trace:
       detail: "226 bytes\n× 1 sat por byte\n= 226 sats ≈ 0,001\_US$"
     - time: < 1 s
       label: Parada 3 · Retransmisión
-      title: La red vigila las trampas.
+      title: La red vigila que nadie haga trampa.
       body: Los nodos retransmiten tu pago. Si alguien intenta gastar las mismas monedas dos veces, los nodos le envían al comercio una prueba de doble gasto.
       detail: |-
         tx retransmitida → sin conflictos
@@ -59,7 +59,7 @@ trace:
         - Solana liquida más rápido.
         - Menos tiendas aceptan BCH que tarjetas.
         - Los pagos son públicos en el registro, así que no des por hecha la privacidad.
-        - Los precios cambian, así que gasta montos que te sientas cómodo teniendo.
+        - Los precios cambian, así que gasta solo montos que te resulte cómodo tener.
       wait: true
 race:
   chip: Comparar
@@ -101,3 +101,4 @@ translation:
   sourceHash: 601f950d2251e1e3
   status: machine
   translator: Claude
+  qaHash: d943bced34ab3b9d

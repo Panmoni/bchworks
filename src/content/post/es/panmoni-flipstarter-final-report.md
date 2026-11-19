@@ -12,6 +12,7 @@ translation:
   sourceHash: e15b963222fde016
   status: machine
   translator: Claude
+  qaHash: 493cced4dbf25b0e
 ---
 
 ## Introducción
@@ -382,7 +383,7 @@ Telesfor
 TAOJONES  
 f.b.  
 earaya  
-curiousitmouse  
+curioustitmouse  
 tiyoaeyo  
 zquestz  
 NgocTranTL  

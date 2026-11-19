@@ -41,21 +41,22 @@ stakeholders:
     source: https://github.com/bitjson/bch-bitwise/blob/master/stakeholders.md
 verified: 2026-09-26T00:00:00.000Z
 sources:
-  - title: Especificación de CHIP-2025-05 Bitwise
+  - title: CHIP-2025-05 Bitwise specification
     url: https://github.com/bitjson/bch-bitwise
-  - title: Respuestas de las partes interesadas sobre Bitwise
+  - title: Bitwise stakeholder responses
     url: https://github.com/bitjson/bch-bitwise/blob/master/stakeholders.md
-  - title: Especificación de la actualización de la red del 15 de mayo de 2026
+  - title: 2026-05-15 Network Upgrade Specification
     url: https://upgradespecs.bitcoincashnode.org/2026-05-15-upgrade/
 translation:
   sourceHash: 9e9865cddaad87fa
   status: machine
   translator: Claude
+  qaHash: 4b288aef30dc64fc
 ---
 
 ## Resumen
 
-Este CHIP “reactiva las operaciones a nivel de bits, lo que permite que los contratos Bitcoin Cash implementen de forma más eficiente diversas
+Este CHIP “reactiva las operaciones a nivel de bits, lo que permite que los contratos de Bitcoin Cash implementen de forma más eficiente diversas
 aplicaciones financieras y criptográficas” (traducción nuestra).
 
 ## Motivación

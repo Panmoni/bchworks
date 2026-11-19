@@ -5,6 +5,7 @@ translation:
   sourceHash: 22d7699361fb30d9
   status: machine
   translator: Claude
+  qaHash: 7eb5930535358456
 ---
 
 _Última actualización_: 30 de septiembre de 2026

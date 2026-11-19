@@ -41,16 +41,17 @@ stakeholders:
     source: https://github.com/bitjson/bch-vm-limits/blob/master/stakeholders.md
 verified: 2026-09-26T00:00:00.000Z
 sources:
-  - title: Especificación de los límites de la VM CHIP-2021-05
+  - title: CHIP-2021-05 VM Limits specification
     url: https://github.com/bitjson/bch-vm-limits
-  - title: Respuestas de las partes interesadas sobre los límites de la VM
+  - title: VM Limits stakeholder responses
     url: https://github.com/bitjson/bch-vm-limits/blob/master/stakeholders.md
-  - title: Especificación de la actualización de la red 2025-05-15
+  - title: 2025-05-15 Network Upgrade Specification
     url: https://upgradespecs.bitcoincashnode.org/2025-05-15-upgrade/
 translation:
   sourceHash: b3bd3dbf24de2991
   status: machine
   translator: Claude
+  qaHash: e666be62c2cc40ce
 ---
 
 ## Resumen
@@ -69,7 +70,7 @@ Este CHIP “reajusta los límites de la máquina virtual (VM) para permitir con
 ## Qué especifica
 
 - Se **elimina el límite de 201 operaciones**, que se reemplaza por un **límite de costo de operación** de 800 por byte de “longitud de control
-  de densidad” (la longitud del bytecode de desbloqueo de la entrada más 41). Cada inserción en la pila cuesta su longitud; el hashing, las verificaciones de firmas
+  de densidad” (la longitud del bytecode de desbloqueo de la entrada más 41). Cada valor que se apila cuesta su longitud; el hashing, las verificaciones de firmas
   y la aritmética costosa cuestan más.
 - El **límite de elementos de pila** sube de 520 a 10.000 bytes, igual al tamaño máximo de un script.
 - Un **límite de hashing**: unas 3,5 iteraciones de digest por byte de densidad en los bloques y 0,5 para las transacciones estándar.

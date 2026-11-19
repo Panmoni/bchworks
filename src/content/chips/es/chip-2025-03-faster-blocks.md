@@ -5,7 +5,7 @@ owners:
   - bitcoincashautist
 status: proposed
 upgrade: 2027-05-upgrade
-summary: Propone reducir el tiempo de bloque objetivo de 10 minutos a 1 minuto y ajustar la recompensa, la dificultad y el tamaño de bloque por bloque a 1/10, de modo que la emisión y la capacidad de procesamiento por hora sigan iguales. No está fijada.
+summary: Propone reducir el tiempo de bloque objetivo de 10 minutos a 1 minuto y reducir a 1/10 la recompensa, la dificultad y el tamaño de cada bloque, de modo que la emisión y la capacidad de procesamiento por hora sigan iguales. No está fijado.
 spec: https://gitlab.com/0353F40E/fablous
 discussion: https://bitcoincashresearch.org/t/chip-2025-03-faster-blocks-for-bitcoin-cash/1513
 stakeholders:
@@ -55,7 +55,7 @@ verified: 2026-09-26T00:00:00.000Z
 sources:
   - title: CHIP-2025-03 Faster Blocks for Bitcoin Cash (readme)
     url: https://gitlab.com/0353F40E/fablous
-  - title: 'CHIP-2025-03: respuestas de las partes interesadas'
+  - title: CHIP-2025-03 stakeholder responses
     url: https://gitlab.com/0353F40E/fablous/-/blob/master/stakeholders.md
   - title: CHIP-2025-03 Faster Blocks for Bitcoin Cash (Bitcoin Cash Research)
     url: https://bitcoincashresearch.org/t/chip-2025-03-faster-blocks-for-bitcoin-cash/1513
@@ -69,6 +69,7 @@ translation:
   sourceHash: f2197bf239b04f97
   status: machine
   translator: Claude
+  qaHash: 4b79d3d7acf0404f
 ---
 
 ## Resumen

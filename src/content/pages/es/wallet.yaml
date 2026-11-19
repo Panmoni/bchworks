@@ -10,7 +10,7 @@ tips:
   - label: ¿Usas dapps?
     text: Necesitas <strong>WalletConnect</strong> para firmar en DEXs, mercados de NFTs y juegos.
   - label: ¿Guardas una cantidad grande?
-    text: 'Usa una billetera <strong>física</strong> y revisa la fecha de la última versión: un firmware antiguo es un riesgo.'
+    text: 'Usa una billetera <strong>física</strong> (hardware wallet) y revisa la fecha de la última versión: un firmware antiguo es un riesgo.'
 table:
   wallet: Billetera
   platforms: Plataformas
@@ -43,7 +43,7 @@ faq:
     - q: ¿Cuál es la mejor billetera de Bitcoin Cash?
       a: Para pagos cotidianos y CashTokens, elige una billetera sin custodia con compatibilidad completa con CashTokens, como Paytaca o Cashonize. Para uso avanzado en escritorio, Electron Cash. Para ahorros grandes, una billetera física. La tabla muestra qué billetera se ajusta a cada necesidad.
     - q: ¿Qué billeteras de Bitcoin Cash admiten CashTokens y NFTs?
-      a: Las billeteras marcadas como “completa” en la columna CashTokens pueden guardar, enviar y mostrar tokens fungibles y NFTs. “Parcial” significa que guardan tokens pero les faltan algunas funciones, como mostrar NFTs o acuñarlos.
+      a: Las billeteras marcadas como “completo” en la columna CashTokens pueden guardar, enviar y mostrar tokens fungibles y NFTs. “Parcial” significa que guardan tokens pero les faltan algunas funciones, como mostrar NFTs o acuñarlos.
     - q: ¿Qué significa “sin custodia”?
       a: Tú tienes las claves, normalmente como una frase semilla de 12 o 24 palabras. Nadie puede congelar ni perder tus monedas por ti. También significa que nadie puede recuperarlas si pierdes la frase semilla.
     - q: ¿Qué es WalletConnect en Bitcoin Cash?
@@ -52,3 +52,4 @@ translation:
   sourceHash: 4d2520956c9d0ff4
   status: machine
   translator: Claude
+  qaHash: e9b6dbdf22857e4e

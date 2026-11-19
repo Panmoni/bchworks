@@ -10,12 +10,13 @@ discussion: https://bitcoincashresearch.org/t/retracted-chip-2026-06-cashtokens-
 stakeholders: []
 verified: 2026-09-26T00:00:00.000Z
 sources:
-  - title: RETIRADA CHIP-2026-06 CashTokens Corrección de la ambigüedad FT+NFT (Bitcoin Cash Research)
+  - title: RETRACTED CHIP-2026-06 CashTokens FT+NFT Ambiguity Fix (Bitcoin Cash Research)
     url: https://bitcoincashresearch.org/t/retracted-chip-2026-06-cashtokens-ft-nft-ambiguity-fix/1870
 translation:
   sourceHash: 5b5f61bca4a0ed83
   status: machine
   translator: Claude
+  qaHash: bedc8cc088f75e1e
 ---
 
 ## Resumen
@@ -27,13 +28,13 @@ siendo gastables, pero tendrían que dividirse al gastarse.
 
 ## Motivación
 
-El autor buscaba “preparar el futuro”: que un contrato pudiera comprometerse con una transacción completa, usando bucles e
+El autor buscaba que fuera “a prueba de futuro”: que un contrato pudiera comprometerse con una transacción completa, usando bucles e
 introspección, sin que se filtraran estos bits “invisibles”. Un análisis de la blockchain (cadena de bloques) encontró la combinación solo unas pocas
 veces.
 
 ## Estado actual
 
-**Retirada.** Publicada el 14 de junio de 2026 y retirada el 16 de junio de 2026. El motivo del autor: la corrección “no es realmente gratis” (traducción nuestra). Trasladaría
+**Retirado.** Publicado el 14 de junio de 2026 y retirado el 16 de junio de 2026. El motivo del autor: la corrección “no es realmente gratis” (traducción nuestra). Trasladaría
 deuda técnica a los desarrolladores de billeteras, que tendrían que manejar este caso límite al fusionar los saldos de un usuario en menos
 UTXOs. En la discusión se señaló que los emisores pueden evitar el problema si nunca emiten NFTs nulos, aunque
 los contratos que no distinguen categorías, como TapSwap, aún podrían verse afectados.

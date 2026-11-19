@@ -52,6 +52,7 @@ translation:
   sourceHash: d3143e2d8068a4b7
   status: machine
   translator: Claude
+  qaHash: f892f028eee8716d
 ---
 
 Nigeria tiene uno de los mercados cripto más activos de África, pero casi todo funciona con bitcoin y USDT. Bitcoin Cash es un rincón pequeño de ese mercado. Eso determina esta guía: **no hay un mercado directo de naira a BCH en las plataformas que revisamos en septiembre de 2026**, así que toda ruta pasa por USDT. La buena noticia es que la ruta es corta y usa un exchange local con licencia.
@@ -66,7 +67,7 @@ Quidax dice que fue el primer exchange en obtener una licencia provisional de Di
 2. Cambia USDT por **BCH** en el mercado BCH/USDT.
 3. Retira los BCH a tu propia billetera.
 
-El mercado BCH/USDT tiene **poca liquidez**. Cuando lo revisamos, solo se negoció alrededor de un BCH en 24 horas. Usa **órdenes limitadas** y mira la diferencia entre la mejor oferta de compra y la de venta antes de operar.
+El mercado BCH/USDT tiene **poca liquidez**. Cuando lo revisamos, solo se negoció alrededor de un BCH en 24 horas. Usa **órdenes límite** y mira la diferencia entre la mejor oferta de compra y la de venta antes de operar.
 
 **¿Ya tienes USDT u otra moneda?**
 
@@ -108,14 +109,14 @@ Dos conversiones significan dos spreads. A veces sale más barato conservar una 
 
 ## Billetera recomendada
 
-Usa una billetera **sin custodia**, en la que solo tú tienes la frase de recuperación. **Paytaca** funciona en Android, iOS y como extensión de Chrome. **Electron Cash** cubre la computadora de escritorio. Compáralas en nuestro [selector de billeteras](/wallet).
+Usa una billetera **sin custodia**, en la que solo tú tienes la frase de recuperación. **Paytaca** funciona en Android, iOS y como extensión de Chrome. **Electron Cash** es la opción para computadoras de escritorio. Compáralas en nuestro [selector de billeteras](/wallet).
 
 - Escribe la frase de recuperación en papel. Nunca le tomes una captura de pantalla.
 - Ningún agente de soporte real te la pedirá.
 
 ## Situación legal y fiscal
 
-La Investments and Securities Act 2025, firmada en marzo de 2025, trata los activos virtuales y digitales como valores y coloca a los exchanges de activos digitales y a otros proveedores de servicios bajo la Securities and Exchange Commission, que ahora les otorga licencias. Tener y usar cripto como persona física no está prohibido. En cuanto a impuestos, la Nigeria Tax Act 2025 entró en vigor el 1 de enero de 2026. Según resúmenes de prensa y de asesores, las ganancias de activos digitales ahora son ganancias gravables que tributan a través del impuesto sobre la renta de las personas físicas, con una tasa de hasta el 25 %, y los exchanges con licencia deben reportar las transacciones de sus usuarios a la autoridad tributaria. **Esto no es asesoría legal ni fiscal.** Las normas son nuevas y todavía se están aplicando; habla con un profesional de impuestos nigeriano.
+La Investments and Securities Act 2025, firmada en marzo de 2025, trata los activos virtuales y digitales como valores y coloca a los exchanges de activos digitales y a otros proveedores de servicios bajo la Securities and Exchange Commission, que ahora les otorga licencias. Tener y usar cripto como persona física no está prohibido. En cuanto a impuestos, la Nigeria Tax Act 2025 entró en vigor el 1 de enero de 2026. Según resúmenes de prensa y de asesores, las ganancias de activos digitales ahora son ganancias gravables que tributan a través del impuesto sobre la renta de las personas físicas, con una tasa de hasta el 25 %, y los exchanges con licencia deben reportar las transacciones de sus usuarios a la autoridad tributaria. **Esto no es asesoría legal ni fiscal.** Las normas son nuevas y todavía se están aplicando; habla con un profesional de impuestos nigeriano.
 
 ## Comunidades locales de BCH
 

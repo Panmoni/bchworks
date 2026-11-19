@@ -3,7 +3,7 @@ title: 'Noviembre de 2018: CTOR, OP_CHECKDATASIG y la división de BSV'
 date: 2018-11-15T16:40:00.000Z
 status: activated
 height: 556767
-summary: Orden canónico de transacciones (CTOR), OP_CHECKDATASIG, un tamaño mínimo de transacción de 100 bytes y las reglas de solo push y de pila limpia. Un grupo rival se separó con una bifurcación como Bitcoin SV.
+summary: Orden canónico de transacciones (CTOR), OP_CHECKDATASIG, un tamaño mínimo de transacción de 100 bytes y las reglas de solo apilamiento y de pila limpia. Un grupo rival se separó mediante una bifurcación y formó Bitcoin SV.
 keywords:
   - november 2018 upgrade
   - ctor
@@ -28,6 +28,7 @@ translation:
   sourceHash: fb65984a114304a8
   status: machine
   translator: Claude
+  qaHash: 3a0dec943efecf10
 ---
 
 ## Qué cambió
@@ -43,7 +44,7 @@ Cambios de consenso:
   Verifican una firma frente a cualquier mensaje y clave pública, no solo frente a la transacción que gasta.
 - **Tamaño mínimo de transacción: 100 bytes.** Esto bloqueó una debilidad conocida del árbol de Merkle que permite a un atacante engañar
   a las billeteras [SPV](/glossary#spv) (verificación simplificada de pagos) con una transacción de 64 bytes.
-- **scriptSig de solo push.** Los scripts de desbloqueo solo pueden insertar datos (regla 2 de BIP 62).
+- **scriptSig de solo apilamiento.** Los scripts de desbloqueo solo pueden apilar datos (regla 2 de BIP 62).
 - **Pila limpia.** Debe quedar exactamente un valor verdadero tras ejecutar el script (regla 6 de BIP 62).
 
 ## Por qué
@@ -52,7 +53,7 @@ Cambios de consenso:
   la propagación y la validación de bloques.
 - **CHECKDATASIG** fue la función de contrato inteligente más destacada. Permite que un script acepte datos firmados por un tercero,
   como un [oráculo](/glossary#oracle) que publica un precio.
-- **Solo push y pila limpia** impidieron que terceros alteraran (maleabilidad) las transacciones.
+- **Solo apilamiento y pila limpia** impidieron que terceros pudieran modificar las transacciones (maleabilidad).
 
 ## La división
 

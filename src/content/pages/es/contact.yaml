@@ -22,8 +22,9 @@ send:
     - title: Correcciones
       description: ¿Viste un dato erróneo, un proyecto abandonado o un enlace roto? Avísanos. Mantener al día la información sobre BCH es la razón de ser de este sitio.
     - title: Agrega tu proyecto
-      description: ¿Estás creando algo sobre Bitcoin Cash? Envíanos el enlace y una línea sobre lo que hace, o agrégalo tú mismo al directorio en GitHub. Incluimos proyectos que funcionan y que favorecen la autocustodia.
+      description: ¿Estás creando algo sobre Bitcoin Cash? Envíanos el enlace y una línea sobre lo que hace, o agrégalo tú mismo al directorio en GitHub. Incluimos proyectos que funcionan y que favorecen la autocustodia (tú guardas tus propias claves).
 translation:
   sourceHash: d019f692bd4b6923
   status: machine
   translator: Claude
+  qaHash: 1bbc67a8251c90d2

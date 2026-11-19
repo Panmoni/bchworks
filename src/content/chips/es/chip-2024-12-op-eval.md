@@ -14,12 +14,13 @@ sources:
     url: https://bitcoincashresearch.org/t/chip-2024-12-op-eval-function-evaluation/1450
   - title: Withdrawing OP_EVAL (Bitcoin Cash Research)
     url: https://bitcoincashresearch.org/t/chip-2024-12-op-eval-function-evaluation/1450/91
-  - title: Especificación de CHIP-2025-05 Functions
+  - title: CHIP-2025-05 Functions specification
     url: https://github.com/bitjson/bch-functions
 translation:
   sourceHash: cdb0f6f0e5aa8065
   status: machine
   translator: Claude
+  qaHash: 81648e4726fe1aba
 ---
 
 ## Resumen

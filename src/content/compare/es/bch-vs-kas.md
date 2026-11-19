@@ -6,9 +6,9 @@ rival: Kaspa
 ticker: KAS
 faq:
   - q: ¿Es Kaspa más rápida que Bitcoin Cash?
-    a: Sí, en confirmaciones. Kaspa produce 10 bloques por segundo en una blockDAG, así que una transacción recibe su primera confirmación en aproximadamente un segundo. Bitcoin Cash apunta a un bloque cada 10 minutos. Los pagos en BCH aparecen igualmente en las billeteras en segundos como transacciones sin confirmar, protegidas por pruebas de doble gasto, pero no se confirman tan rápido.
+    a: Sí, en confirmaciones. Kaspa produce 10 bloques por segundo en una blockDAG, así que una transacción recibe su primera confirmación en aproximadamente un segundo. Bitcoin Cash tiene como objetivo un bloque cada 10 minutos. Los pagos en BCH aparecen igualmente en las billeteras en segundos como transacciones sin confirmar, protegidas por pruebas de doble gasto, pero no se confirman tan rápido.
   - q: ¿Tiene Kaspa contratos inteligentes?
-    a: Sí, desde que el hard fork Toccata se activó el 30 de junio de 2026. Añadió contratos tipo covenant, emisión nativa de tokens, opcodes de verificación de pruebas de conocimiento cero y el lenguaje de contratos SilverScript. Bitcoin Cash ejecuta covenants de UTXO desde su actualización de introspección de 2022 y tokens nativos desde 2023.
+    a: Sí, desde que el hard fork Toccata se activó el 30 de junio de 2026. Añadió contratos tipo covenant, emisión nativa de tokens, opcodes de verificación de pruebas de conocimiento cero y el lenguaje de contratos SilverScript. Bitcoin Cash admite covenants de UTXO desde su actualización de introspección de 2022 y tokens nativos desde 2023.
   - q: ¿Es Bitcoin Cash mejor que Kaspa?
     a: Responden a necesidades distintas. Kaspa va por delante en velocidad de confirmación y tiene una historia reciente de lanzamiento justo. Bitcoin Cash tiene una trayectoria más larga, la minería SHA-256 y la historia de Bitcoin, y una plataforma de contratos que ha publicado actualizaciones cada mayo desde 2022. Elige según lo que necesite tu aplicación.
   - q: ¿Qué es GHOSTDAG?
@@ -54,6 +54,7 @@ translation:
   sourceHash: 577eb24e2581f24f
   status: machine
   translator: Claude
+  qaHash: 8cf2a52996893b19
 ---
 
 Bitcoin Cash y Kaspa son cadenas de prueba de trabajo basadas en UTXO. No comparten historia. BCH desciende de Bitcoin y mantiene la cadena de bloques de 10 minutos de Bitcoin. Kaspa empezó desde cero con una estructura diferente: una blockDAG que acepta muchos bloques a la vez.
@@ -62,7 +63,7 @@ Bitcoin Cash y Kaspa son cadenas de prueba de trabajo basadas en UTXO. No compar
 
 Bitcoin Cash se separó de Bitcoin el 1 de agosto de 2017. Heredó el historial completo de Bitcoin, la minería SHA-256 y el límite de 21 millones. Desde 2022 usa una actualización anual en mayo para ampliar Bitcoin Script hasta convertirlo en una plataforma de contratos completa.
 
-Kaspa se lanzó el 7 de noviembre de 2021 con un lanzamiento justo: sin preminado, sin ICO y sin asignación para los fundadores. Usa el protocolo GHOSTDAG. En una cadena normal, dos bloques encontrados en el mismo momento compiten y uno se descarta. GHOSTDAG conserva ambos y los ordena en un grafo acíclico dirigido. Ese diseño permite a Kaspa producir muchos más bloques por segundo.
+Kaspa nació el 7 de noviembre de 2021 con un lanzamiento justo: sin preminado, sin ICO y sin asignación para los fundadores. Usa el protocolo GHOSTDAG. En una cadena normal, dos bloques encontrados en el mismo momento compiten y uno se descarta. GHOSTDAG conserva ambos y los ordena en un grafo acíclico dirigido. Ese diseño permite a Kaspa producir muchos más bloques por segundo.
 
 Kaspa ha avanzado rápido en dos años:
 
@@ -101,7 +102,7 @@ Las comisiones, la tasa de hash (hashrate) y el número de transacciones cambian
 
 ## Dónde gana Kaspa
 
-**Velocidad de confirmación.** Con 10 bloques por segundo, Kaspa incluye una transacción en un bloque en unos 100 milisegundos. La primera confirmación llega en aproximadamente un segundo y la seguridad probabilística completa en unos 10 segundos, según Coinstancy. Los comercios de BCH pueden aceptar pagos [0-conf](/glossary#zero-conf) en segundos, pero la primera confirmación tarda unos 10 minutos de media. Una propuesta de BCH para pasar a bloques de 1 minuto (CHIP-2025-03) sigue en revisión y no forma parte del consenso.
+**Velocidad de confirmación.** Con 10 bloques por segundo, Kaspa incluye una transacción en un bloque en unos 100 milisegundos. La primera confirmación llega en aproximadamente un segundo y la seguridad probabilística completa en unos 10 segundos, según Coinstancy. Los comercios de BCH pueden aceptar pagos [0-conf](/glossary#zero-conf) en segundos, pero la primera confirmación tarda unos 10 minutos en promedio. Una propuesta de BCH para pasar a bloques de 1 minuto (CHIP-2025-03) sigue en revisión y no forma parte del consenso.
 
 **Verificación ZK nativa.** Toccata añadió opcodes que verifican directamente pruebas de conocimiento cero. BCH puede hacer cálculos pesados en script, pero no tiene un opcode ZK dedicado.
 

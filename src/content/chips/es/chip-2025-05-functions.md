@@ -55,6 +55,7 @@ translation:
   sourceHash: dd0c870420eb0e13
   status: machine
   translator: Claude
+  qaHash: 0624a96c1a1c194a
 ---
 
 ## Resumen
@@ -86,7 +87,7 @@ El CHIP menciona tres beneficios:
 
 Este CHIP reemplazó a [CHIP-2024-12 OP_EVAL](/chips/chip-2024-12-op-eval), que proponía un único opcode (código de operación) para “evaluar este
 bytecode”. Jason Dreyzehner retiró OP_EVAL el 28 de mayo de 2025 y abrió este tema con el nuevo diseño. La
-especificación de la actualización Bitcoin Cash Node enlaza el hilo de discusión “CHIP-2025-08 Functions (Takes 2 & 3)”, que refleja revisiones
+especificación de la actualización de Bitcoin Cash Node enlaza el hilo de discusión “CHIP-2025-08 Functions (Takes 2 & 3)”, que refleja revisiones
 posteriores.
 
 ## Estado actual

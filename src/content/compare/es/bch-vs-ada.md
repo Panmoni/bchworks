@@ -1,6 +1,6 @@
 ---
 title: Bitcoin Cash frente a Cardano (BCH frente a ADA)
-description: 'BCH frente a ADA: dos cadenas UTXO comparadas. Covenants frente a eUTXO, tokens nativos en ambas, prueba de trabajo frente a la participación de Ouroboros y en qué lleva ventaja Cardano.'
+description: 'BCH frente a ADA: dos cadenas UTXO comparadas. Covenants frente a eUTXO, tokens nativos en ambas, prueba de trabajo frente a la prueba de participación Ouroboros y en qué lleva ventaja Cardano.'
 verified: 2026-09-26T00:00:00.000Z
 rival: Cardano
 ticker: ADA
@@ -28,7 +28,7 @@ sources:
     url: https://cardano.org/
   - title: Cardano (Wikipedia)
     url: https://en.wikipedia.org/wiki/Cardano_(blockchain_platform)
-  - title: Lenguaje Aiken
+  - title: Aiken language
     url: https://aiken-lang.org/
   - title: Cardano moves to full decentralized governance after Plomin hard fork (The Block)
     url: https://www.theblock.co/post/337680/cardano-plans-transition-to-full-decentralized-governance-after-wednesdays-plomin-hard-fork
@@ -58,6 +58,7 @@ translation:
   sourceHash: 7dad31e4c20a8939
   status: machine
   translator: Claude
+  qaHash: 04bd8ed7846c5202
 ---
 
 Cardano y Bitcoin Cash son parientes más cercanos que la mayoría de las parejas que se suelen comparar. Ambas conservan la idea de [UTXO](/glossary#utxo) de Bitcoin: las monedas son salidas discretas, cada una con su propio bloqueo. Ambas ponen los tokens en el propio libro contable. Se diferencian en el consenso, en cómo los contratos ven el mundo y en cómo se gobierna la cadena.
@@ -72,7 +73,7 @@ Cardano se lanzó en 2017 como una nueva cadena de prueba de participación basa
 
 | | Bitcoin Cash (BCH) | Cardano (ADA) |
 |---|---|---|
-| Tiempo de bloque | ~10 minutos (prueba de trabajo) | ~20 segundos (slots de 1 s, 5 % activos) |
+| Tiempo de bloque | ~10 minutos (prueba de trabajo) | ~20 segundos (slots de 1 s, 5 % activos) |
 | Política de tamaño de bloque | Límite adaptativo (ABLA), mínimo de 32 MB, crece con el uso sostenido | Parámetro del protocolo, modificado por voto de gobernanza |
 | Modelo de comisiones | Tasa fija por byte; 1 sat/byte por defecto | `a × size + b`, más costos de ejecución de scripts |
 | Modelo de contratos inteligentes | [Covenants](/glossary#covenant) de UTXO (contratos que limitan cómo se pueden gastar las monedas) con opcodes (códigos de operación) de introspección | eUTXO: datum, redeemer, contexto del script |
@@ -90,7 +91,7 @@ Si conoces un modelo, puedes leer el otro. Los conceptos se corresponden de cerc
 | eUTXO de Cardano | Bitcoin Cash |
 |---|---|
 | Datum (datos que lleva una salida) | Compromiso del NFT en un CashToken, de hasta 128 bytes desde 2026 |
-| Redeemer (datos aportados para desbloquear) | Bytecode de desbloqueo que aporta quien gasta |
+| Redeemer (datos aportados para desbloquear) | Bytecode de desbloqueo que apila quien gasta |
 | Contexto del script (la transacción completa) | Opcodes de [introspección](/glossary#introspection) que leen las entradas y las salidas |
 | Política de acuñación | Categoría de token creada en una transacción de génesis; todo el suministro fungible se fija ahí, y los nuevos NFTs requieren un NFT con capacidad de acuñación, que puede custodiar un covenant |
 | Script validador | Bytecode de bloqueo, a menudo escrito en CashScript |

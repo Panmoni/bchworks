@@ -39,12 +39,12 @@ sections:
     collection: guides
   - href: /risks
     title: Riesgos, sin rodeos
-    text: Lo que podría salir mal con BCH, dicho primero por nosotros.
+    text: Lo que podría salir mal con BCH, dicho por nosotros antes que nadie.
   - href: /is-bitcoin-cash-dead
     title: ¿Está muerto BCH?
     text: La pregunta del escéptico, respondida con datos.
   - href: /what-is-a-utxo
-    title: La máquina UTXO
+    title: La Máquina UTXO
     text: Mira cómo una transacción real gasta monedas y luego sigue una hacia atrás en el tiempo.
   - href: /state-of-bch
     title: El estado de BCH
@@ -53,3 +53,4 @@ translation:
   sourceHash: 5ae62f1cafc0dd48
   status: machine
   translator: Claude
+  qaHash: 818c96c1485acd63

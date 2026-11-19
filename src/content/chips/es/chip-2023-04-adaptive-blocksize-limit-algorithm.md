@@ -57,6 +57,7 @@ translation:
   sourceHash: 0775fa7cc19ec820
   status: machine
   translator: Claude
+  qaHash: bb777c4f83b11aaa
 ---
 
 ## Resumen

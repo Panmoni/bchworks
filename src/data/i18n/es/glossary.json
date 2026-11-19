@@ -4,13 +4,15 @@
 			"text": "UTXO",
 			"sourceHash": "b1acb69fe873a84e",
 			"status": "machine",
-			"translator": "Claude"
+			"translator": "Claude",
+			"qaHash": "f857ba1ea3d6b844"
 		},
 		"definition": {
 			"text": "Salida de transacción no gastada. Una moneda: una cantidad de BCH, un bloqueo que indica quién puede gastarla y un ID (el hash de la transacción más el índice de la salida). Cada transacción destruye algunos UTXOs y crea otros nuevos. BCH no tiene cuentas ni saldos globales.",
 			"sourceHash": "364e910a9d62b9a4",
 			"status": "machine",
-			"translator": "Claude"
+			"translator": "Claude",
+			"qaHash": "6d5df1a4c83089af"
 		}
 	},
 	"satoshi": {
@@ -18,13 +20,15 @@
 			"text": "satoshi",
 			"sourceHash": "002688cc350a5333",
 			"status": "machine",
-			"translator": "Claude"
+			"translator": "Claude",
+			"qaHash": "cf48022bb9295a2a"
 		},
 		"definition": {
 			"text": "La unidad más pequeña de BCH: 0,00000001 BCH. Las comisiones se expresan en satoshis por byte.",
 			"sourceHash": "ccd5ff1589cf08b3",
 			"status": "machine",
-			"translator": "Claude"
+			"translator": "Claude",
+			"qaHash": "c04d463780233c7a"
 		}
 	},
 	"fee-rate": {
@@ -32,13 +36,15 @@
 			"text": "Tasa de comisión",
 			"sourceHash": "6c6cc6eb80efa410",
 			"status": "machine",
-			"translator": "Claude"
+			"translator": "Claude",
+			"qaHash": "c684963d8f794dab"
 		},
 		"definition": {
 			"text": "Lo que paga una transacción por cada byte de su tamaño, en satoshis por byte. Las comisiones de BCH dependen del tamaño, no de cuánto cómputo realice un contrato. La tasa mínima de retransmisión habitual es de 1 sat/byte.",
 			"sourceHash": "637d739c3a6ac6dc",
 			"status": "machine",
-			"translator": "Claude"
+			"translator": "Claude",
+			"qaHash": "9047de3f1e5271a2"
 		}
 	},
 	"dust": {
@@ -46,13 +52,15 @@
 			"text": "Polvo",
 			"sourceHash": "75372bcd9ea0fe8c",
 			"status": "machine",
-			"translator": "Claude"
+			"translator": "Claude",
+			"qaHash": "731cf18068714c00"
 		},
 		"definition": {
 			"text": "Una salida tan pequeña que gastarla costaría más en comisiones de lo que contiene. Los nodos se niegan a retransmitir salidas por debajo del límite de polvo.",
 			"sourceHash": "90dc5e0aa265e468",
 			"status": "machine",
-			"translator": "Claude"
+			"translator": "Claude",
+			"qaHash": "55a7d8db6a9d4f36"
 		}
 	},
 	"mempool": {
@@ -60,13 +68,15 @@
 			"text": "Mempool",
 			"sourceHash": "f2845b922706d4d5",
 			"status": "machine",
-			"translator": "Claude"
+			"translator": "Claude",
+			"qaHash": "b79f8fd1a5ce114c"
 		},
 		"definition": {
 			"text": "El conjunto de transacciones válidas que un nodo ha visto pero que ningún bloque ha confirmado todavía. Las billeteras de BCH suelen mostrar un pago en cuanto llega a la mempool.",
 			"sourceHash": "90191e17750bd025",
 			"status": "machine",
-			"translator": "Claude"
+			"translator": "Claude",
+			"qaHash": "f7af2a0f9b9bf4ac"
 		}
 	},
 	"zero-conf": {
@@ -74,13 +84,15 @@
 			"text": "0-conf",
 			"sourceHash": "3c03147694a33bc3",
 			"status": "machine",
-			"translator": "Claude"
+			"translator": "Claude",
+			"qaHash": "95d66068d6a4541a"
 		},
 		"definition": {
 			"text": "Aceptar un pago en cuanto aparece en la red, antes de que entre en un bloque. Es común en BCH para montos pequeños, con la ayuda de las pruebas de doble gasto. Sigue siendo una evaluación de riesgo, no una garantía.",
 			"sourceHash": "3ada92c36f02065a",
 			"status": "machine",
-			"translator": "Claude"
+			"translator": "Claude",
+			"qaHash": "f1e0c81f0f373380"
 		}
 	},
 	"double-spend": {
@@ -88,13 +100,15 @@
 			"text": "Doble gasto",
 			"sourceHash": "35938f3312951234",
 			"status": "machine",
-			"translator": "Claude"
+			"translator": "Claude",
+			"qaHash": "bea93a2d8c61a6c3"
 		},
 		"definition": {
 			"text": "Un intento de gastar el mismo UTXO dos veces, por ejemplo, pagar a un comercio y luego enviarte la misma moneda a ti mismo. Solo uno de los dos gastos puede confirmarse.",
 			"sourceHash": "fd61954781def9bf",
 			"status": "machine",
-			"translator": "Claude"
+			"translator": "Claude",
+			"qaHash": "c1fd402d75cf88fe"
 		}
 	},
 	"dsproof": {
@@ -102,13 +116,15 @@
 			"text": "DSProof",
 			"sourceHash": "d69a1c1be54c0df5",
 			"status": "machine",
-			"translator": "Claude"
+			"translator": "Claude",
+			"qaHash": "44c38ce5a2664313"
 		},
 		"definition": {
 			"text": "Prueba de doble gasto. Cuando un nodo ve dos transacciones que gastan la misma salida, retransmite una prueba compacta, de modo que las billeteras y los comercios se enteran del conflicto en segundos. Cubre los pagos habituales de P2PKH, no todos los tipos de transacción.",
 			"sourceHash": "9997a82aa4294760",
 			"status": "machine",
-			"translator": "Claude"
+			"translator": "Claude",
+			"qaHash": "36c2a84751e99a17"
 		}
 	},
 	"proof-of-work": {
@@ -116,13 +132,15 @@
 			"text": "Prueba de trabajo",
 			"sourceHash": "12cd4684e0a48188",
 			"status": "machine",
-			"translator": "Claude"
+			"translator": "Claude",
+			"qaHash": "df35d1f485e7b507"
 		},
 		"definition": {
 			"text": "El método de consenso que BCH comparte con Bitcoin. Los mineros calculan el hash de los encabezados de bloque con SHA-256 hasta que uno cumple el objetivo de dificultad. Gana la cadena con más trabajo acumulado.",
 			"sourceHash": "0305767dc786ad72",
 			"status": "machine",
-			"translator": "Claude"
+			"translator": "Claude",
+			"qaHash": "3b4bc872b0a2ae8c"
 		}
 	},
 	"halving": {
@@ -130,13 +148,15 @@
 			"text": "Halving",
 			"sourceHash": "ca672212c297e1e7",
 			"status": "machine",
-			"translator": "Claude"
+			"translator": "Claude",
+			"qaHash": "8c3b3da4bd3233b3"
 		},
 		"definition": {
 			"text": "El subsidio por bloque se reduce a la mitad cada 210.000 bloques, aproximadamente cada cuatro años. BCH mantiene el calendario de Bitcoin y su límite de 21 millones de monedas.",
 			"sourceHash": "26d7d729be829729",
 			"status": "machine",
-			"translator": "Claude"
+			"translator": "Claude",
+			"qaHash": "684dedbfaf2e3ba5"
 		}
 	},
 	"seed-phrase": {
@@ -144,13 +164,15 @@
 			"text": "Frase semilla",
 			"sourceHash": "8c68f785793aba96",
 			"status": "machine",
-			"translator": "Claude"
+			"translator": "Claude",
+			"qaHash": "c811ad9fddf18886"
 		},
 		"definition": {
 			"text": "Una lista de 12 o 24 palabras que respalda todas las claves de una billetera. Quien tenga las palabras controla las monedas. Anótala fuera de línea y nunca la compartas.",
 			"sourceHash": "61c64040b651540a",
 			"status": "machine",
-			"translator": "Claude"
+			"translator": "Claude",
+			"qaHash": "71945602f0ce43d3"
 		}
 	},
 	"self-custody": {
@@ -158,13 +180,15 @@
 			"text": "Autocustodia",
 			"sourceHash": "19dcf0815888d0e4",
 			"status": "machine",
-			"translator": "Claude"
+			"translator": "Claude",
+			"qaHash": "484ac412e6db4165"
 		},
 		"definition": {
 			"text": "Guardar tus propias claves en lugar de confiar en que un exchange o una app las guarde. Con una billetera de BCH sin custodia, ninguna empresa se interpone entre tú y tus monedas.",
 			"sourceHash": "c5eaa2a0a2dbaeb0",
 			"status": "machine",
-			"translator": "Claude"
+			"translator": "Claude",
+			"qaHash": "ab3e4f5a7d9de382"
 		}
 	},
 	"multisig": {
@@ -172,13 +196,15 @@
 			"text": "Multifirma",
 			"sourceHash": "a8e7d238af5c7dec",
 			"status": "machine",
-			"translator": "Claude"
+			"translator": "Claude",
+			"qaHash": "74b2cc4fa1da2142"
 		},
 		"definition": {
 			"text": "Un bloqueo que requiere M de N firmas para gastar, por ejemplo, 2 de 3. BCH permite firmas Schnorr en multifirma desde noviembre de 2019.",
 			"sourceHash": "ece7e1a98888cc53",
 			"status": "machine",
-			"translator": "Claude"
+			"translator": "Claude",
+			"qaHash": "a5c685aea0bf16e9"
 		}
 	},
 	"timelock": {
@@ -186,13 +212,15 @@
 			"text": "Bloqueo temporal",
 			"sourceHash": "e12a2ce4d26b2017",
 			"status": "machine",
-			"translator": "Claude"
+			"translator": "Claude",
+			"qaHash": "5e289eb387b985c8"
 		},
 		"definition": {
 			"text": "Una condición que impide gastar una moneda antes de cierta altura de bloque o cierto momento. BCH tiene OP_CHECKLOCKTIMEVERIFY y OP_CHECKSEQUENCEVERIFY, como Bitcoin.",
 			"sourceHash": "9f459fa26658f8ae",
 			"status": "machine",
-			"translator": "Claude"
+			"translator": "Claude",
+			"qaHash": "c6a2058cf6fe9201"
 		}
 	},
 	"opcode": {
@@ -200,13 +228,15 @@
 			"text": "Opcode",
 			"sourceHash": "c37ef4ad36a525a8",
 			"status": "machine",
-			"translator": "Claude"
+			"translator": "Claude",
+			"qaHash": "9a57c38c62280bf8"
 		},
 		"definition": {
 			"text": "Una instrucción del lenguaje de contratos de BCH, como OP_ADD o OP_CHECKSIG. Cada una tiene un código de un byte.",
 			"sourceHash": "60e13abe72ec4802",
 			"status": "machine",
-			"translator": "Claude"
+			"translator": "Claude",
+			"qaHash": "62036b62552ea86f"
 		}
 	},
 	"bitcoin-script": {
@@ -214,13 +244,15 @@
 			"text": "Bitcoin Script",
 			"sourceHash": "ef3862b01170dab2",
 			"status": "machine",
-			"translator": "Claude"
+			"translator": "Claude",
+			"qaHash": "b435927627720424"
 		},
 		"definition": {
 			"text": "El lenguaje basado en pila que bloquea y desbloquea monedas en Bitcoin y BCH. BCH restauró opcodes desactivados y añadió muchos nuevos entre 2018 y 2026.",
 			"sourceHash": "58bfae780670399d",
 			"status": "machine",
-			"translator": "Claude"
+			"translator": "Claude",
+			"qaHash": "7ab90f30423c0c39"
 		}
 	},
 	"cashvm": {
@@ -228,13 +260,15 @@
 			"text": "CashVM",
 			"sourceHash": "5fe9e87169d5e05e",
 			"status": "machine",
-			"translator": "Claude"
+			"translator": "Claude",
+			"qaHash": "3a18a5c31eddbc7d"
 		},
 		"definition": {
 			"text": "Un nombre común para la máquina virtual de Bitcoin Cash: el intérprete de Script tal como lo han ampliado las actualizaciones de BCH con introspección, tokens, enteros grandes, bucles y funciones.",
 			"sourceHash": "62da379ba9de53bd",
 			"status": "machine",
-			"translator": "Claude"
+			"translator": "Claude",
+			"qaHash": "68efc0aa2731c660"
 		}
 	},
 	"locking-bytecode": {
@@ -242,13 +276,15 @@
 			"text": "Bytecode de bloqueo",
 			"sourceHash": "3a1e1fc229d4de39",
 			"status": "machine",
-			"translator": "Claude"
+			"translator": "Claude",
+			"qaHash": "a2e4a39edda325a2"
 		},
 		"definition": {
 			"text": "El script de una salida que establece las condiciones de gasto. Las herramientas de Bitcoin lo llaman scriptPubKey.",
 			"sourceHash": "361715694872bc31",
 			"status": "machine",
-			"translator": "Claude"
+			"translator": "Claude",
+			"qaHash": "783892e30d3c3791"
 		}
 	},
 	"unlocking-bytecode": {
@@ -256,13 +292,15 @@
 			"text": "Bytecode de desbloqueo",
 			"sourceHash": "377538771b17953b",
 			"status": "machine",
-			"translator": "Claude"
+			"translator": "Claude",
+			"qaHash": "c5709ef77b95311e"
 		},
 		"definition": {
 			"text": "Los datos que aporta una entrada para cumplir el bloqueo de una salida, como una firma y una clave pública. Las herramientas de Bitcoin lo llaman scriptSig. Desde mayo de 2026, el límite estándar coincide con el límite de consenso de 10.000 bytes.",
 			"sourceHash": "8ae4ce510669fff9",
 			"status": "machine",
-			"translator": "Claude"
+			"translator": "Claude",
+			"qaHash": "85e85eda56a9490e"
 		}
 	},
 	"cashaddr": {
@@ -270,13 +308,15 @@
 			"text": "CashAddr",
 			"sourceHash": "e6ad64343e9b9dec",
 			"status": "machine",
-			"translator": "Claude"
+			"translator": "Claude",
+			"qaHash": "1c53ac5e4c212d79"
 		},
 		"definition": {
 			"text": "El formato de direcciones de BCH, por ejemplo, bitcoincash:qr.... Usa un prefijo y una suma de verificación distintos de los de las direcciones heredadas de Bitcoin, así que es menos probable que alguien envíe BCH a una dirección de BTC por error. Los tipos de CashAddr compatibles con tokens le indican al remitente que la billetera acepta CashTokens.",
 			"sourceHash": "69c6ba602527b67d",
 			"status": "machine",
-			"translator": "Claude"
+			"translator": "Claude",
+			"qaHash": "99626ee78249adca"
 		}
 	},
 	"p2pkh": {
@@ -284,13 +324,15 @@
 			"text": "P2PKH",
 			"sourceHash": "8884d37239ba7046",
 			"status": "machine",
-			"translator": "Claude"
+			"translator": "Claude",
+			"qaHash": "f7d3344c5d4633bf"
 		},
 		"definition": {
 			"text": "Pago a hash de clave pública. La salida de pago estándar de una sola clave: se gasta con una firma de la clave cuyo hash indica.",
 			"sourceHash": "771bc215b97b3336",
 			"status": "machine",
-			"translator": "Claude"
+			"translator": "Claude",
+			"qaHash": "be850bb52beebd23"
 		}
 	},
 	"p2sh": {
@@ -298,13 +340,15 @@
 			"text": "P2SH",
 			"sourceHash": "e1772a6d26d4e94e",
 			"status": "machine",
-			"translator": "Claude"
+			"translator": "Claude",
+			"qaHash": "aa73bdb38abd16ad"
 		},
 		"definition": {
 			"text": "Pago a hash de script. La salida se compromete con el hash de 20 bytes de un script, y quien la gasta revela el script. BCH también ofrece una forma de 32 bytes.",
 			"sourceHash": "489ff0117b2c6efd",
 			"status": "machine",
-			"translator": "Claude"
+			"translator": "Claude",
+			"qaHash": "8d52e1971828a5db"
 		}
 	},
 	"p2sh32": {
@@ -312,13 +356,15 @@
 			"text": "P2SH32",
 			"sourceHash": "12c1ea63e958978b",
 			"status": "machine",
-			"translator": "Claude"
+			"translator": "Claude",
+			"qaHash": "2b2d0c899c2caaa5"
 		},
 		"definition": {
 			"text": "Pago a hash de script con un hash de 32 bytes. Se activó en mayo de 2023 para dar a los contratos una seguridad contra colisiones de 128 bits en lugar de los 80 bits del P2SH clásico.",
 			"sourceHash": "7100d1c7e6408b59",
 			"status": "machine",
-			"translator": "Claude"
+			"translator": "Claude",
+			"qaHash": "c7ac08c4e2e9e1f4"
 		}
 	},
 	"p2s": {
@@ -326,13 +372,15 @@
 			"text": "P2S",
 			"sourceHash": "8e33213d19c1dd0a",
 			"status": "machine",
-			"translator": "Claude"
+			"translator": "Claude",
+			"qaHash": "d90a3c53e6b302a5"
 		},
 		"definition": {
 			"text": "Pago a script. Desde mayo de 2026, una salida puede contener directamente el bytecode de un contrato y seguir siendo estándar, sin envolverlo en un hash. Esto simplifica los contratos de bóveda, multiparte y DeFi.",
 			"sourceHash": "435a1b5932bd401c",
 			"status": "machine",
-			"translator": "Claude"
+			"translator": "Claude",
+			"qaHash": "4d7d881b3234fecd"
 		}
 	},
 	"op-return": {
@@ -340,13 +388,15 @@
 			"text": "OP_RETURN",
 			"sourceHash": "3c8f573260033d97",
 			"status": "machine",
-			"translator": "Claude"
+			"translator": "Claude",
+			"qaHash": "dd416684dafc26d7"
 		},
 		"definition": {
 			"text": "Una salida que lleva datos y nunca se puede gastar. Se usa para mensajes de protocolo y metadatos, como publicaciones de BCMR. Desde mayo de 2021, una transacción puede llevar más de una.",
 			"sourceHash": "11aa4248854d37b0",
 			"status": "machine",
-			"translator": "Claude"
+			"translator": "Claude",
+			"qaHash": "cff8fd727728f52d"
 		}
 	},
 	"op-checkdatasig": {
@@ -354,13 +404,15 @@
 			"text": "OP_CHECKDATASIG",
 			"sourceHash": "3e81053e19e243a1",
 			"status": "machine",
-			"translator": "Claude"
+			"translator": "Claude",
+			"qaHash": "55d72cc36580e3c1"
 		},
 		"definition": {
 			"text": "Verifica una firma sobre datos arbitrarios, no sobre la transacción. Se añadió en noviembre de 2018. Permite a los contratos verificar mensajes firmados por oráculos, como un precio.",
 			"sourceHash": "527869a015301c85",
 			"status": "machine",
-			"translator": "Claude"
+			"translator": "Claude",
+			"qaHash": "f1cc95f47ff26a31"
 		}
 	},
 	"schnorr-signatures": {
@@ -368,13 +420,15 @@
 			"text": "Firmas Schnorr",
 			"sourceHash": "14d7e78ee99dc55f",
 			"status": "machine",
-			"translator": "Claude"
+			"translator": "Claude",
+			"qaHash": "4b6efe1986670a0d"
 		},
 		"definition": {
 			"text": "Un esquema de firma que BCH añadió en mayo de 2019 junto a ECDSA, sobre las mismas claves secp256k1. Las firmas Schnorr ocupan 64 bytes y funcionan en multifirma desde noviembre de 2019.",
 			"sourceHash": "75ae41d9ce569f86",
 			"status": "machine",
-			"translator": "Claude"
+			"translator": "Claude",
+			"qaHash": "237a96aa80c98ddc"
 		}
 	},
 	"sighash": {
@@ -382,13 +436,15 @@
 			"text": "Sighash",
 			"sourceHash": "5b12501728a51523",
 			"status": "machine",
-			"translator": "Claude"
+			"translator": "Claude",
+			"qaHash": "d91460e9be2d3313"
 		},
 		"definition": {
 			"text": "Un indicador en cada firma que dice qué partes de la transacción cubre, como SIGHASH_ALL o ANYONECANPAY. Los protocolos multiparte eligen indicadores que permiten a otros añadir entradas o salidas.",
 			"sourceHash": "39fafea3ed83ce0c",
 			"status": "machine",
-			"translator": "Claude"
+			"translator": "Claude",
+			"qaHash": "b3abc4082f1a69a9"
 		}
 	},
 	"sighash-forkid": {
@@ -396,13 +452,15 @@
 			"text": "SIGHASH_FORKID",
 			"sourceHash": "c01e486cc796e5e1",
 			"status": "machine",
-			"translator": "Claude"
+			"translator": "Claude",
+			"qaHash": "081cff69e88701a7"
 		},
 		"definition": {
 			"text": "Un indicador obligatorio en toda firma de BCH desde la bifurcación de 2017. Cambia el mensaje firmado, de modo que una transacción de BCH no es válida en BTC. Esto dio a las dos cadenas protección contra repetición.",
 			"sourceHash": "a673b82cd37c6618",
 			"status": "machine",
-			"translator": "Claude"
+			"translator": "Claude",
+			"qaHash": "fb007f5487e086a3"
 		}
 	},
 	"sighash-utxos": {
@@ -410,13 +468,15 @@
 			"text": "SIGHASH_UTXOS",
 			"sourceHash": "213af8e979ed9e59",
 			"status": "machine",
-			"translator": "Claude"
+			"translator": "Claude",
+			"qaHash": "dff947c9f320815d"
 		},
 		"definition": {
 			"text": "Un modo de firma añadido en mayo de 2023. La firma cubre todas las salidas que se gastan, incluidos los datos de tokens, para que una billetera pueda firmar sin confiar en quien haya aportado las entradas.",
 			"sourceHash": "0adb59bbfe1210ff",
 			"status": "machine",
-			"translator": "Claude"
+			"translator": "Claude",
+			"qaHash": "b99b884c96576073"
 		}
 	},
 	"covenant": {
@@ -424,13 +484,15 @@
 			"text": "Covenant",
 			"sourceHash": "92adf3600448e274",
 			"status": "machine",
-			"translator": "Claude"
+			"translator": "Claude",
+			"qaHash": "aa7ea0dcbf227a9b"
 		},
 		"definition": {
 			"text": "Un contrato que limita cómo se pueden gastar después sus monedas, por ejemplo: “esta salida debe ir a una copia de este mismo contrato”. Los covenants de BCH son bytecode fijo, sin clave de propietario ni de administrador. Aun así, pueden tener errores.",
 			"sourceHash": "3041b631b0a070ce",
 			"status": "machine",
-			"translator": "Claude"
+			"translator": "Claude",
+			"qaHash": "fbfe9c3104b746ec"
 		}
 	},
 	"introspection": {
@@ -438,13 +500,15 @@
 			"text": "Introspección",
 			"sourceHash": "01a85752504a5fbe",
 			"status": "machine",
-			"translator": "Claude"
+			"translator": "Claude",
+			"qaHash": "5a97ef5e4db58567"
 		},
 		"definition": {
 			"text": "Opcodes que permiten a un contrato leer la transacción que lo gasta: sus entradas, salidas, montos y scripts. BCH añadió introspección nativa en mayo de 2022, lo que hizo prácticos los covenants.",
 			"sourceHash": "d5194c72ea84896f",
 			"status": "machine",
-			"translator": "Claude"
+			"translator": "Claude",
+			"qaHash": "dae8f02ee7af577c"
 		}
 	},
 	"vm-limits": {
@@ -452,13 +516,15 @@
 			"text": "Límites de la VM",
 			"sourceHash": "d7550f7a78a31739",
 			"status": "machine",
-			"translator": "Claude"
+			"translator": "Claude",
+			"qaHash": "4f3a37c4a67b16b1"
 		},
 		"definition": {
 			"text": "La actualización de mayo de 2025 que reemplazó los antiguos límites de 201 opcodes y 520 bytes por un presupuesto de costo de operaciones vinculado al tamaño de cada entrada. Ahora los elementos de la pila pueden contener hasta 10.000 bytes.",
 			"sourceHash": "b4e1de1e3853b49d",
 			"status": "machine",
-			"translator": "Claude"
+			"translator": "Claude",
+			"qaHash": "3d2bf2df2ab75e8b"
 		}
 	},
 	"bigint": {
@@ -466,13 +532,15 @@
 			"text": "BigInt",
 			"sourceHash": "7f7b1b4f2c113a35",
 			"status": "machine",
-			"translator": "Claude"
+			"translator": "Claude",
+			"qaHash": "8e99cb73cc052a9c"
 		},
 		"definition": {
 			"text": "La actualización de mayo de 2025 que eliminó el tope de 8 bytes para los números en los contratos. Ahora los números pueden ser tan grandes como lo permita un elemento de la pila, así que los contratos pueden hacer cálculos de alta precisión y criptográficos.",
 			"sourceHash": "9e41b1f81b1243f7",
 			"status": "machine",
-			"translator": "Claude"
+			"translator": "Claude",
+			"qaHash": "78bb105a67709b73"
 		}
 	},
 	"loops": {
@@ -480,13 +548,15 @@
 			"text": "Bucles",
 			"sourceHash": "c08f99e3947df0bf",
 			"status": "machine",
-			"translator": "Claude"
+			"translator": "Claude",
+			"qaHash": "c191d400aedc4cd9"
 		},
 		"definition": {
 			"text": "OP_BEGIN y OP_UNTIL, activados en mayo de 2026. Un contrato puede repetir un bloque de código en lugar de copiarlo, lo que reduce el tamaño de las transacciones. El presupuesto de costo de operaciones sigue limitando el trabajo total.",
 			"sourceHash": "2a45cf5e2c6022b0",
 			"status": "machine",
-			"translator": "Claude"
+			"translator": "Claude",
+			"qaHash": "23540e313b5e0ff4"
 		}
 	},
 	"functions": {
@@ -494,13 +564,15 @@
 			"text": "Funciones",
 			"sourceHash": "75e942e5b366227e",
 			"status": "machine",
-			"translator": "Claude"
+			"translator": "Claude",
+			"qaHash": "2ac3b822d613efd3"
 		},
 		"definition": {
 			"text": "OP_DEFINE y OP_INVOKE, activados en mayo de 2026. Un contrato define código reutilizable una sola vez y lo llama muchas veces.",
 			"sourceHash": "643683e8a4d1cfe2",
 			"status": "machine",
-			"translator": "Claude"
+			"translator": "Claude",
+			"qaHash": "879031ddec739f5f"
 		}
 	},
 	"bitwise-operations": {
@@ -508,13 +580,15 @@
 			"text": "Operaciones a nivel de bits",
 			"sourceHash": "25d6b2229aace75d",
 			"status": "machine",
-			"translator": "Claude"
+			"translator": "Claude",
+			"qaHash": "44eedfd1b53d4c84"
 		},
 		"definition": {
 			"text": "Opcodes a nivel de bits restaurados en mayo de 2026: OP_INVERT más desplazamientos aritméticos y binarios. Ayudan con algoritmos financieros y criptográficos.",
 			"sourceHash": "a2054801abb26292",
 			"status": "machine",
-			"translator": "Claude"
+			"translator": "Claude",
+			"qaHash": "722bd6cae840af15"
 		}
 	},
 	"cashtokens": {
@@ -522,13 +596,15 @@
 			"text": "CashTokens",
 			"sourceHash": "5e3c15a2c421689f",
 			"status": "machine",
-			"translator": "Claude"
+			"translator": "Claude",
+			"qaHash": "719caa086f3a8c1b"
 		},
 		"definition": {
 			"text": "Tokens nativos en BCH, activados en mayo de 2023. Los tokens fungibles y los NFTs viven dentro de UTXOs junto al monto de BCH, y los nodos los validan. No hay contrato de token ni approve().",
 			"sourceHash": "8fa52ba3e1dd58d0",
 			"status": "machine",
-			"translator": "Claude"
+			"translator": "Claude",
+			"qaHash": "55ceb72aaccb9b4f"
 		}
 	},
 	"token-category": {
@@ -536,13 +612,15 @@
 			"text": "Categoría de token",
 			"sourceHash": "f5f3c4a73df6cb43",
 			"status": "machine",
-			"translator": "Claude"
+			"translator": "Claude",
+			"qaHash": "6c77007e84b1d86e"
 		},
 		"definition": {
 			"text": "El ID de 32 bytes de un token. Es igual al ID de la transacción cuya salida 0 se gastó para crear el token, así que cada categoría es única.",
 			"sourceHash": "109babba964298b9",
 			"status": "machine",
-			"translator": "Claude"
+			"translator": "Claude",
+			"qaHash": "6cc0ee7072661b57"
 		}
 	},
 	"token-genesis": {
@@ -550,13 +628,15 @@
 			"text": "Génesis del token",
 			"sourceHash": "7d3392cae6fc8560",
 			"status": "machine",
-			"translator": "Claude"
+			"translator": "Claude",
+			"qaHash": "71118a823c06aa89"
 		},
 		"definition": {
 			"text": "La transacción que crea una nueva categoría de token. Debe gastar una salida en el índice 0; el ID de transacción de esa salida se convierte en el ID de la categoría.",
 			"sourceHash": "62cbbb68352d7982",
 			"status": "machine",
-			"translator": "Claude"
+			"translator": "Claude",
+			"qaHash": "e38085efaae26a35"
 		}
 	},
 	"fungible-token": {
@@ -564,13 +644,15 @@
 			"text": "Token fungible",
 			"sourceHash": "87e6a540834659ea",
 			"status": "machine",
-			"translator": "Claude"
+			"translator": "Claude",
+			"qaHash": "04a9adf790690e59"
 		},
 		"definition": {
 			"text": "Un monto de CashToken en el que todas las unidades son iguales, como una stablecoin o unos puntos. Una categoría puede contener hasta 9.223.372.036.854.775.807 unidades base.",
 			"sourceHash": "ce16608a48bb9df4",
 			"status": "machine",
-			"translator": "Claude"
+			"translator": "Claude",
+			"qaHash": "8a0555a40a757c69"
 		}
 	},
 	"nft": {
@@ -578,13 +660,15 @@
 			"text": "NFT",
 			"sourceHash": "35987a0f9ae77012",
 			"status": "machine",
-			"translator": "Claude"
+			"translator": "Claude",
+			"qaHash": "6ac3838407b254f3"
 		},
 		"definition": {
 			"text": "Un CashToken no fungible. Cada NFT tiene una categoría, un compromiso opcional y una capacidad. En BCH, los NFTs también sirven como estado de contratos e insignias de acceso.",
 			"sourceHash": "dc5c80dca76c1619",
 			"status": "machine",
-			"translator": "Claude"
+			"translator": "Claude",
+			"qaHash": "ec217228f71c53bd"
 		}
 	},
 	"nft-commitment": {
@@ -592,13 +676,15 @@
 			"text": "Compromiso del NFT",
 			"sourceHash": "8f744aa7d3659b5d",
 			"status": "machine",
-			"translator": "Claude"
+			"translator": "Claude",
+			"qaHash": "33a3a7447ce868a6"
 		},
 		"definition": {
 			"text": "Datos almacenados dentro de un NFT. Los contratos pueden leerlos y actualizarlos, así que funcionan como estado en la cadena. El límite era de 40 bytes en el lanzamiento y subió a 128 bytes en mayo de 2026.",
 			"sourceHash": "f392369426fad69d",
 			"status": "machine",
-			"translator": "Claude"
+			"translator": "Claude",
+			"qaHash": "7865365c28911da3"
 		}
 	},
 	"minting-capability": {
@@ -606,13 +692,15 @@
 			"text": "Capacidad de acuñación",
 			"sourceHash": "244ee35b22a15d7d",
 			"status": "machine",
-			"translator": "Claude"
+			"translator": "Claude",
+			"qaHash": "65cc2c4373bdac8d"
 		},
 		"definition": {
 			"text": "Una capacidad de NFT que permite a quien lo tiene crear cualquier cantidad de NFTs nuevos de la misma categoría, cada uno con cualquier compromiso.",
 			"sourceHash": "519de8b3e72e8015",
 			"status": "machine",
-			"translator": "Claude"
+			"translator": "Claude",
+			"qaHash": "66c2e5cdda4bcf63"
 		}
 	},
 	"mutable-capability": {
@@ -620,13 +708,15 @@
 			"text": "Capacidad mutable",
 			"sourceHash": "be797feb63547e42",
 			"status": "machine",
-			"translator": "Claude"
+			"translator": "Claude",
+			"qaHash": "1aa3fe8eb3e59a58"
 		},
 		"definition": {
 			"text": "Una capacidad de NFT que permite a la transacción que lo gasta crear un NFT de la misma categoría con cualquier compromiso. Los contratos la usan para actualizar el estado.",
 			"sourceHash": "aa9d7be10e188b1a",
 			"status": "machine",
-			"translator": "Claude"
+			"translator": "Claude",
+			"qaHash": "d8b34da49130ba66"
 		}
 	},
 	"immutable-nft": {
@@ -634,13 +724,15 @@
 			"text": "NFT inmutable",
 			"sourceHash": "99dc96c3b9b9bd42",
 			"status": "machine",
-			"translator": "Claude"
+			"translator": "Claude",
+			"qaHash": "952997c17362ce0e"
 		},
 		"definition": {
 			"text": "Un NFT sin capacidad. Su compromiso nunca puede cambiar.",
 			"sourceHash": "c102daeae22c9470",
 			"status": "machine",
-			"translator": "Claude"
+			"translator": "Claude",
+			"qaHash": "896eaa536c670481"
 		}
 	},
 	"bcmr": {
@@ -648,13 +740,15 @@
 			"text": "BCMR",
 			"sourceHash": "70b090b52278a09c",
 			"status": "machine",
-			"translator": "Claude"
+			"translator": "Claude",
+			"qaHash": "c399a7a667367367"
 		},
 		"definition": {
 			"text": "Bitcoin Cash Metadata Registries. Un estándar para publicar nombres, tickers, decimales e íconos de tokens, y tipos de NFT. Los emisores publican un hash del registro en la cadena mediante una authchain, o lo sirven por HTTPS desde su dominio.",
 			"sourceHash": "6a65b5c242dba428",
 			"status": "machine",
-			"translator": "Claude"
+			"translator": "Claude",
+			"qaHash": "079fd477f61705b5"
 		}
 	},
 	"authchain": {
@@ -662,13 +756,15 @@
 			"text": "Authchain",
 			"sourceHash": "f973a0f095c82265",
 			"status": "machine",
-			"translator": "Claude"
+			"translator": "Claude",
+			"qaHash": "394a8068ad2e2db1"
 		},
 		"definition": {
 			"text": "Una cadena de transacciones en la que cada una gasta la salida 0 de la anterior. Su extremo actual identifica quién controla una identidad BCMR, así que los metadatos de un token pueden cambiar con un historial en la cadena.",
 			"sourceHash": "b8245629069583d5",
 			"status": "machine",
-			"translator": "Claude"
+			"translator": "Claude",
+			"qaHash": "5708ff7ac5e0df3f"
 		}
 	},
 	"slp": {
@@ -676,13 +772,15 @@
 			"text": "SLP",
 			"sourceHash": "9d98d3dc874ce893",
 			"status": "machine",
-			"translator": "Claude"
+			"translator": "Claude",
+			"qaHash": "33b7f897a5240eae"
 		},
 		"definition": {
 			"text": "Simple Ledger Protocol, el sistema de tokens más antiguo de BCH, de 2018. Almacenaba los datos de los tokens en salidas OP_RETURN que los mineros no validaban. CashTokens lo reemplazó; considera SLP como algo heredado.",
 			"sourceHash": "20f891351183b787",
 			"status": "machine",
-			"translator": "Claude"
+			"translator": "Claude",
+			"qaHash": "14d8d2bbc35b43c1"
 		}
 	},
 	"abla": {
@@ -690,13 +788,15 @@
 			"text": "ABLA",
 			"sourceHash": "6a89fcde49bbfbdc",
 			"status": "machine",
-			"translator": "Claude"
+			"translator": "Claude",
+			"qaHash": "c5d034b8971b0350"
 		},
 		"definition": {
 			"text": "Adaptive Blocksize Limit Algorithm, activado en mayo de 2024. El límite de tamaño de bloque sigue el uso sostenido de los bloques y nunca baja de un mínimo de 32 MB, así que la capacidad puede crecer con la demanda sin una nueva bifurcación.",
 			"sourceHash": "0a8c85eab203e533",
 			"status": "machine",
-			"translator": "Claude"
+			"translator": "Claude",
+			"qaHash": "b8326f25bd97433e"
 		}
 	},
 	"block-size-limit": {
@@ -704,13 +804,15 @@
 			"text": "Límite de tamaño de bloque",
 			"sourceHash": "3534a067c4514b80",
 			"status": "machine",
-			"translator": "Claude"
+			"translator": "Claude",
+			"qaHash": "fdac73eaab1e1330"
 		},
 		"definition": {
 			"text": "El bloque más grande que aceptan los nodos. BCH empezó con 8 MB en 2017 y pasó a 32 MB en 2018. Desde 2024 lo fija ABLA, con un mínimo de 32 MB. Los bloques reales de hoy son mucho más pequeños.",
 			"sourceHash": "6dc132ad31f4ac58",
 			"status": "machine",
-			"translator": "Claude"
+			"translator": "Claude",
+			"qaHash": "dbdbbf1da77f5e27"
 		}
 	},
 	"asert-daa": {
@@ -718,13 +820,15 @@
 			"text": "ASERT DAA",
 			"sourceHash": "4dcecbc3f1fad929",
 			"status": "machine",
-			"translator": "Claude"
+			"translator": "Claude",
+			"qaHash": "1bd01c66a6fa1754"
 		},
 		"definition": {
 			"text": "El algoritmo de ajuste de dificultad que BCH usa desde noviembre de 2020 (aserti3-2d). Apunta a bloques de 10 minutos y se ajusta a las variaciones de la tasa de hash con una vida media de 2 días.",
 			"sourceHash": "eab226aec3fa04f2",
 			"status": "machine",
-			"translator": "Claude"
+			"translator": "Claude",
+			"qaHash": "42b31c9a9639df19"
 		}
 	},
 	"ctor": {
@@ -732,13 +836,15 @@
 			"text": "CTOR",
 			"sourceHash": "042350c8631778a9",
 			"status": "machine",
-			"translator": "Claude"
+			"translator": "Claude",
+			"qaHash": "1ad7a9e433e8e712"
 		},
 		"definition": {
 			"text": "Ordenamiento canónico de transacciones. Desde noviembre de 2018, las transacciones de un bloque de BCH (después de la coinbase) se ordenan por ID de transacción, lo que simplifica la propagación de bloques y la validación en paralelo.",
 			"sourceHash": "4cbe13bca62e5d14",
 			"status": "machine",
-			"translator": "Claude"
+			"translator": "Claude",
+			"qaHash": "3e4b7f390c6b54ba"
 		}
 	},
 	"uahf": {
@@ -746,13 +852,15 @@
 			"text": "UAHF",
 			"sourceHash": "e0eeb22f8f02256e",
 			"status": "machine",
-			"translator": "Claude"
+			"translator": "Claude",
+			"qaHash": "6d2c24266bff279d"
 		},
 		"definition": {
 			"text": "Hard fork activado por los usuarios. La bifurcación del 1 de agosto de 2017 que creó Bitcoin Cash con un límite de bloque mayor y protección contra repetición.",
 			"sourceHash": "7dff52bbf7ce389d",
 			"status": "machine",
-			"translator": "Claude"
+			"translator": "Claude",
+			"qaHash": "b5df2e422037483d"
 		}
 	},
 	"network-upgrade": {
@@ -760,13 +868,15 @@
 			"text": "Actualización de la red",
 			"sourceHash": "f159e8bfb8f64d7d",
 			"status": "machine",
-			"translator": "Claude"
+			"translator": "Claude",
+			"qaHash": "cc0918440a34b6f6"
 		},
 		"definition": {
-			"text": "Un cambio de consenso programado. BCH se actualiza una vez al año, el 15 de mayo, y la fijación de CHIPs ocurre unos seis meses antes.",
+			"text": "Un cambio de consenso programado. BCH se actualiza una vez al año, el 15 de mayo, y los CHIPs se fijan unos seis meses antes.",
 			"sourceHash": "fa8e6fa4210969c3",
 			"status": "machine",
-			"translator": "Claude"
+			"translator": "Claude",
+			"qaHash": "d3dcbce124100faf"
 		}
 	},
 	"chip": {
@@ -774,13 +884,15 @@
 			"text": "CHIP",
 			"sourceHash": "d426b95100fa5dd1",
 			"status": "machine",
-			"translator": "Claude"
+			"translator": "Claude",
+			"qaHash": "d824d583af3bc665"
 		},
 		"definition": {
 			"text": "Cash Improvement Proposal. El proceso público para proponer cambios en BCH. Los autores publican una especificación, reúnen declaraciones de las partes interesadas y buscan fijar la propuesta meses antes de la actualización de mayo.",
 			"sourceHash": "841626df74e8bbe6",
 			"status": "machine",
-			"translator": "Claude"
+			"translator": "Claude",
+			"qaHash": "aa615b85d911b611"
 		}
 	},
 	"chipnet": {
@@ -788,13 +900,15 @@
 			"text": "Chipnet",
 			"sourceHash": "31f1dfb5c6e56e89",
 			"status": "machine",
-			"translator": "Claude"
+			"translator": "Claude",
+			"qaHash": "465807190d2d8f18"
 		},
 		"definition": {
 			"text": "Una red de pruebas de BCH que activa la siguiente actualización unos seis meses antes, en noviembre. Los desarrolladores prueban allí los nuevos CHIPs antes de la red principal.",
 			"sourceHash": "30a76fab302118dc",
 			"status": "machine",
-			"translator": "Claude"
+			"translator": "Claude",
+			"qaHash": "f1bd1cd8a0d905d7"
 		}
 	},
 	"faster-blocks": {
@@ -802,13 +916,15 @@
 			"text": "Bloques más rápidos",
 			"sourceHash": "336f26dc4354e3b5",
 			"status": "machine",
-			"translator": "Claude"
+			"translator": "Claude",
+			"qaHash": "169914718ddfe9be"
 		},
 		"definition": {
 			"text": "CHIP-2025-03, una propuesta para reducir el tiempo de bloque objetivo de BCH de 10 minutos a 1 minuto. Apunta al ciclo de actualización de 2027 y, a septiembre de 2026, no se había fijado.",
 			"sourceHash": "5676abba556de4db",
 			"status": "machine",
-			"translator": "Claude"
+			"translator": "Claude",
+			"qaHash": "eff5ff33aae8a061"
 		}
 	},
 	"segwit": {
@@ -816,13 +932,15 @@
 			"text": "SegWit",
 			"sourceHash": "3b0ba3487fcac742",
 			"status": "machine",
-			"translator": "Claude"
+			"translator": "Claude",
+			"qaHash": "41e946f542cb8973"
 		},
 		"definition": {
 			"text": "Segregated Witness, una actualización de Bitcoin de 2017 que sacó las firmas de los datos principales de la transacción. BCH no la adoptó.",
 			"sourceHash": "d111419ed1c2ebeb",
 			"status": "machine",
-			"translator": "Claude"
+			"translator": "Claude",
+			"qaHash": "4660a37705d60331"
 		}
 	},
 	"ecash": {
@@ -830,13 +948,15 @@
 			"text": "eCash",
 			"sourceHash": "dafa37dbe114e52b",
 			"status": "machine",
-			"translator": "Claude"
+			"translator": "Claude",
+			"qaHash": "2a42337ead915463"
 		},
 		"definition": {
 			"text": "La cadena que se separó de BCH en noviembre de 2020, liderada por Bitcoin ABC, tras una disputa por un fondo de desarrollo obligatorio financiado por los mineros. Su ticker es XEC.",
 			"sourceHash": "25786a0f8b49c7e5",
 			"status": "machine",
-			"translator": "Claude"
+			"translator": "Claude",
+			"qaHash": "fd0f8088daf44306"
 		}
 	},
 	"bchn": {
@@ -844,13 +964,15 @@
 			"text": "BCHN",
 			"sourceHash": "5ebdb222902de9a0",
 			"status": "machine",
-			"translator": "Claude"
+			"translator": "Claude",
+			"qaHash": "09cfa9f4bd97f56e"
 		},
 		"definition": {
 			"text": "Bitcoin Cash Node, el nodo completo en C++ que produce la mayoría de los bloques de BCH. La versión 29 implementa la actualización de mayo de 2026.",
 			"sourceHash": "3400b90907a83f99",
 			"status": "machine",
-			"translator": "Claude"
+			"translator": "Claude",
+			"qaHash": "6d5ee64620cbe2dc"
 		}
 	},
 	"bitcoin-unlimited": {
@@ -858,13 +980,15 @@
 			"text": "Bitcoin Unlimited",
 			"sourceHash": "f0096332db073918",
 			"status": "machine",
-			"translator": "Claude"
+			"translator": "Claude",
+			"qaHash": "258e04d4439b5851"
 		},
 		"definition": {
 			"text": "Un nodo completo independiente de BCH escrito en C++.",
 			"sourceHash": "fa967a6a531fc1a2",
 			"status": "machine",
-			"translator": "Claude"
+			"translator": "Claude",
+			"qaHash": "0ac325bedf65305b"
 		}
 	},
 	"knuth": {
@@ -872,13 +996,15 @@
 			"text": "Knuth",
 			"sourceHash": "5f920c9f211432f5",
 			"status": "machine",
-			"translator": "Claude"
+			"translator": "Claude",
+			"qaHash": "a86aab6328ab0149"
 		},
 		"definition": {
 			"text": "Un nodo completo de BCH en C++ y una plataforma de desarrollo con bibliotecas en varios lenguajes. También se escribe K•th.",
 			"sourceHash": "d568f7c096adab5a",
 			"status": "machine",
-			"translator": "Claude"
+			"translator": "Claude",
+			"qaHash": "554d10857770f46f"
 		}
 	},
 	"flowee": {
@@ -886,13 +1012,15 @@
 			"text": "Flowee",
 			"sourceHash": "c5759007efe42df0",
 			"status": "machine",
-			"translator": "Claude"
+			"translator": "Claude",
+			"qaHash": "9335c0b551277912"
 		},
 		"definition": {
 			"text": "Un proyecto de BCH en C++ que incluye el nodo Flowee Hub y la billetera Flowee Pay.",
 			"sourceHash": "5bd73a924d158dda",
 			"status": "machine",
-			"translator": "Claude"
+			"translator": "Claude",
+			"qaHash": "c86346e1eed70cb1"
 		}
 	},
 	"bitcoin-verde": {
@@ -900,13 +1028,15 @@
 			"text": "Bitcoin Verde",
 			"sourceHash": "04b9d5136f8f2c94",
 			"status": "machine",
-			"translator": "Claude"
+			"translator": "Claude",
+			"qaHash": "f306d26e97dfdd65"
 		},
 		"definition": {
 			"text": "Un nodo completo, explorador de bloques y biblioteca de BCH escritos desde cero en Java.",
 			"sourceHash": "e274ef04c0364084",
 			"status": "machine",
-			"translator": "Claude"
+			"translator": "Claude",
+			"qaHash": "0eda303264b4086c"
 		}
 	},
 	"electrum-cash-protocol": {
@@ -914,13 +1044,15 @@
 			"text": "Protocolo Electrum Cash",
 			"sourceHash": "946e2496f37153b7",
 			"status": "machine",
-			"translator": "Claude"
+			"translator": "Claude",
+			"qaHash": "fa88b02cc09a6952"
 		},
 		"definition": {
 			"text": "El protocolo cliente-servidor que usan la mayoría de las billeteras ligeras de BCH para consultar saldos y difundir transacciones. Fulcrum es el servidor principal.",
 			"sourceHash": "330004978b2f936f",
 			"status": "machine",
-			"translator": "Claude"
+			"translator": "Claude",
+			"qaHash": "8bb442cf00100916"
 		}
 	},
 	"fulcrum": {
@@ -928,13 +1060,15 @@
 			"text": "Fulcrum",
 			"sourceHash": "047bdb93ac5552e5",
 			"status": "machine",
-			"translator": "Claude"
+			"translator": "Claude",
+			"qaHash": "eef6bc505fcad408"
 		},
 		"definition": {
 			"text": "Un servidor rápido en C++ que indexa un nodo de BCH y ofrece el protocolo Electrum Cash a billeteras y aplicaciones.",
 			"sourceHash": "5e4c46620a52744c",
 			"status": "machine",
-			"translator": "Claude"
+			"translator": "Claude",
+			"qaHash": "12252595d706238b"
 		}
 	},
 	"chaingraph": {
@@ -942,13 +1076,15 @@
 			"text": "Chaingraph",
 			"sourceHash": "7871ee001b6c2689",
 			"status": "machine",
-			"translator": "Claude"
+			"translator": "Claude",
+			"qaHash": "b7d7ec4807d5350b"
 		},
 		"definition": {
 			"text": "Un indexador de blockchain de código abierto con una API GraphQL. Sigue uno o más nodos de BCH y admite suscripciones en vivo.",
 			"sourceHash": "6707c0a6847ce172",
 			"status": "machine",
-			"translator": "Claude"
+			"translator": "Claude",
+			"qaHash": "58ed72abfaac692e"
 		}
 	},
 	"cashscript": {
@@ -956,13 +1092,15 @@
 			"text": "CashScript",
 			"sourceHash": "d4776bd521a6fecd",
 			"status": "machine",
-			"translator": "Claude"
+			"translator": "Claude",
+			"qaHash": "33a595c66b21720a"
 		},
 		"definition": {
 			"text": "Un lenguaje de alto nivel para contratos de BCH que compila a bytecode de CashVM. La versión 0.13 añadió bucles y operadores a nivel de bits.",
 			"sourceHash": "942957fa62b7b10b",
 			"status": "machine",
-			"translator": "Claude"
+			"translator": "Claude",
+			"qaHash": "b8c653c05008e572"
 		}
 	},
 	"libauth": {
@@ -970,13 +1108,15 @@
 			"text": "Libauth",
 			"sourceHash": "bd2bde689ac31fda",
 			"status": "machine",
-			"translator": "Claude"
+			"translator": "Claude",
+			"qaHash": "375ae1376fc207e5"
 		},
 		"definition": {
 			"text": "Una biblioteca de TypeScript para BCH: claves, direcciones, transacciones y una implementación completa de CashVM.",
 			"sourceHash": "97353244829bebfd",
 			"status": "machine",
-			"translator": "Claude"
+			"translator": "Claude",
+			"qaHash": "945830dcb101d56b"
 		}
 	},
 	"bitauth-ide": {
@@ -984,13 +1124,15 @@
 			"text": "Bitauth IDE",
 			"sourceHash": "b769d2047644234c",
 			"status": "machine",
-			"translator": "Claude"
+			"translator": "Claude",
+			"qaHash": "dbfea54a2126d61c"
 		},
 		"definition": {
 			"text": "Un editor y depurador en el navegador para contratos de BCH. Recorre cada opcode paso a paso y muestra la pila.",
 			"sourceHash": "4781ada7339b0488",
 			"status": "machine",
-			"translator": "Claude"
+			"translator": "Claude",
+			"qaHash": "b2c726b1f5324354"
 		}
 	},
 	"mainnet-js": {
@@ -998,13 +1140,15 @@
 			"text": "mainnet-js",
 			"sourceHash": "dfd94308d28743e7",
 			"status": "machine",
-			"translator": "Claude"
+			"translator": "Claude",
+			"qaHash": "a944c0ceafb6676b"
 		},
 		"definition": {
 			"text": "Una biblioteca de JavaScript para crear billeteras y aplicaciones de BCH, compatible con CashTokens.",
 			"sourceHash": "795cfd57267729c9",
 			"status": "machine",
-			"translator": "Claude"
+			"translator": "Claude",
+			"qaHash": "b0b3943bc1c9c5c7"
 		}
 	},
 	"walletconnect": {
@@ -1012,13 +1156,15 @@
 			"text": "WalletConnect",
 			"sourceHash": "ee79d0aae3900b7d",
 			"status": "machine",
-			"translator": "Claude"
+			"translator": "Claude",
+			"qaHash": "fa0f181703f2495e"
 		},
 		"definition": {
 			"text": "Un protocolo que permite a un sitio web pedirle a una billetera que firme. Cashonize y Paytaca admiten una especificación WalletConnect de BCH que usan dapps como TapSwap.",
 			"sourceHash": "c58e21a3d90cae98",
 			"status": "machine",
-			"translator": "Claude"
+			"translator": "Claude",
+			"qaHash": "076d5c60df4f289f"
 		}
 	},
 	"cashconnect": {
@@ -1026,13 +1172,15 @@
 			"text": "CashConnect",
 			"sourceHash": "8b67903e955e90c4",
 			"status": "machine",
-			"translator": "Claude"
+			"translator": "Claude",
+			"qaHash": "ad05eee5b4bbd28a"
 		},
 		"definition": {
 			"text": "Una especificación de BCH para conectar billeteras con dapps, basada en WalletConnect más un RPC que entiende contratos. Cashonize la admite; en la última revisión, la especificación figuraba como pre-alfa.",
 			"sourceHash": "d539a64e3468d0fb",
 			"status": "machine",
-			"translator": "Claude"
+			"translator": "Claude",
+			"qaHash": "bb5874766df64a50"
 		}
 	},
 	"electron-cash": {
@@ -1040,13 +1188,15 @@
 			"text": "Electron Cash",
 			"sourceHash": "feca326dc582522a",
 			"status": "machine",
-			"translator": "Claude"
+			"translator": "Claude",
+			"qaHash": "7ea98402f827989f"
 		},
 		"definition": {
 			"text": "Una billetera de BCH para escritorio y Android con muchos años de trayectoria. Incluye CashFusion.",
 			"sourceHash": "bf240994add27c04",
 			"status": "machine",
-			"translator": "Claude"
+			"translator": "Claude",
+			"qaHash": "70306f65de4bac81"
 		}
 	},
 	"cashfusion": {
@@ -1054,13 +1204,15 @@
 			"text": "CashFusion",
 			"sourceHash": "702c8f7631960b12",
 			"status": "machine",
-			"translator": "Claude"
+			"translator": "Claude",
+			"qaHash": "a095375a99cab2f1"
 		},
 		"definition": {
 			"text": "Un protocolo opcional de mezcla de monedas en Electron Cash. Muchos usuarios combinan sus monedas en una sola transacción grande, lo que impide el rastreo simple de direcciones. BCH es un registro transparente; CashFusion se usa solo si lo activas.",
 			"sourceHash": "2ada8fe4a95e376a",
 			"status": "machine",
-			"translator": "Claude"
+			"translator": "Claude",
+			"qaHash": "6c3d3b79a2c53018"
 		}
 	},
 	"cauldron": {
@@ -1068,13 +1220,15 @@
 			"text": "Cauldron",
 			"sourceHash": "a895294809364f17",
 			"status": "machine",
-			"translator": "Claude"
+			"translator": "Claude",
+			"qaHash": "78029f082b937d1c"
 		},
 		"definition": {
 			"text": "Un DEX para CashTokens. Cualquiera puede abrir un pequeño contrato de pool de liquidez para un par BCH/token, y los intercambios se enrutan a través de muchos pools de este tipo.",
 			"sourceHash": "1a9ee904c3a7cfae",
 			"status": "machine",
-			"translator": "Claude"
+			"translator": "Claude",
+			"qaHash": "3ef22a4710792811"
 		}
 	},
 	"anyhedge": {
@@ -1082,13 +1236,15 @@
 			"text": "AnyHedge",
 			"sourceHash": "62aae76d13e5eb8f",
 			"status": "machine",
-			"translator": "Claude"
+			"translator": "Claude",
+			"qaHash": "206b35d82578d704"
 		},
 		"definition": {
 			"text": "Un protocolo de contratos sin custodia en BCH, creado por General Protocols, para posiciones de cobertura y largas que se liquidan con precios de oráculos.",
 			"sourceHash": "d20cafe6efd569a2",
 			"status": "machine",
-			"translator": "Claude"
+			"translator": "Claude",
+			"qaHash": "5a8e7ed9d29aab64"
 		}
 	},
 	"bch-bull": {
@@ -1096,13 +1252,15 @@
 			"text": "BCH Bull",
 			"sourceHash": "9a0b869ed1f1e555",
 			"status": "machine",
-			"translator": "Claude"
+			"translator": "Claude",
+			"qaHash": "cdcb159182014619"
 		},
 		"definition": {
 			"text": "Una app de trading construida sobre AnyHedge. Los usuarios abren posiciones de cobertura o largas apalancadas frente a activos como USD, el oro o BTC.",
 			"sourceHash": "5a6258f04f0bc94b",
 			"status": "machine",
-			"translator": "Claude"
+			"translator": "Claude",
+			"qaHash": "910971c5772576aa"
 		}
 	},
 	"moria": {
@@ -1110,13 +1268,15 @@
 			"text": "Moria",
 			"sourceHash": "5c1b3e87e789c13a",
 			"status": "machine",
-			"translator": "Claude"
+			"translator": "Claude",
+			"qaHash": "10b8df3e8451508f"
 		},
 		"definition": {
 			"text": "Un protocolo de BCH para pedir prestado MUSD, un token vinculado a USD, con garantía en BCH cuyo precio fija un oráculo.",
 			"sourceHash": "b392a318d39e7366",
 			"status": "machine",
-			"translator": "Claude"
+			"translator": "Claude",
+			"qaHash": "4a093a0ee8b6248b"
 		}
 	},
 	"paryonusd": {
@@ -1124,13 +1284,15 @@
 			"text": "ParyonUSD",
 			"sourceHash": "8fe02628f7f7eaa8",
 			"status": "machine",
-			"translator": "Claude"
+			"translator": "Claude",
+			"qaHash": "05d4b6a08f3661ed"
 		},
 		"definition": {
 			"text": "Un protocolo de stablecoin sobrecolateralizado en BCH que emite PUSD. Se llamaba ParityUSD hasta un cambio de marca en 2026.",
 			"sourceHash": "a0d561d752ef2682",
 			"status": "machine",
-			"translator": "Claude"
+			"translator": "Claude",
+			"qaHash": "bec66a5b4b1aeb42"
 		}
 	},
 	"tokenstork": {
@@ -1138,13 +1300,15 @@
 			"text": "TokenStork",
 			"sourceHash": "9c28413e96d0891d",
 			"status": "machine",
-			"translator": "Claude"
+			"translator": "Claude",
+			"qaHash": "25cba4fe10691640"
 		},
 		"definition": {
 			"text": "Un directorio y explorador para CashTokens, con datos de tokens, mercados y metadatos. Un sitio hermano de BCH Works.",
 			"sourceHash": "83b29c0c129b8157",
 			"status": "machine",
-			"translator": "Claude"
+			"translator": "Claude",
+			"qaHash": "ed4bfdbdf307d627"
 		}
 	},
 	"median-time-past": {
@@ -1152,13 +1316,15 @@
 			"text": "Mediana del tiempo pasado",
 			"sourceHash": "e5c11677a41348e1",
 			"status": "machine",
-			"translator": "Claude"
+			"translator": "Claude",
+			"qaHash": "d1aee7b084480c7e"
 		},
 		"definition": {
 			"text": "La marca de tiempo mediana de los 11 bloques anteriores. Avanza de forma constante incluso cuando el reloj de un minero está desajustado, por eso BCH la usa para programar las actualizaciones de la red y comprobar los bloqueos basados en tiempo.",
 			"sourceHash": "5532540b83b4881a",
 			"status": "machine",
-			"translator": "Claude"
+			"translator": "Claude",
+			"qaHash": "a2d7182c3e4a8de3"
 		}
 	},
 	"replay-protection": {
@@ -1166,13 +1332,15 @@
 			"text": "Protección contra repetición",
 			"sourceHash": "c77377c1e2d09dec",
 			"status": "machine",
-			"translator": "Claude"
+			"translator": "Claude",
+			"qaHash": "38371617a8d33332"
 		},
 		"definition": {
 			"text": "Una regla que impide que una transacción firmada para una cadena sea válida en la otra después de una división. En la bifurcación de 2017, BCH exigió SIGHASH_FORKID en las firmas, así que las transacciones de BCH no se pueden repetir en BTC ni al revés.",
 			"sourceHash": "1cb50ae644847325",
 			"status": "machine",
-			"translator": "Claude"
+			"translator": "Claude",
+			"qaHash": "194c13715633e908"
 		}
 	},
 	"daa": {
@@ -1180,13 +1348,15 @@
 			"text": "Algoritmo de ajuste de dificultad",
 			"sourceHash": "5fc33257eb52c5b9",
 			"status": "machine",
-			"translator": "Claude"
+			"translator": "Claude",
+			"qaHash": "26b27bc30bcb4c08"
 		},
 		"definition": {
 			"text": "La regla que reajusta la dificultad de minería para que los bloques sigan llegando aproximadamente cada 10 minutos. BCH reemplazó su regla de emergencia de agosto de 2017 en noviembre de 2017 y luego pasó a ASERT en noviembre de 2020.",
 			"sourceHash": "3b4bef6bcde6475b",
 			"status": "machine",
-			"translator": "Claude"
+			"translator": "Claude",
+			"qaHash": "e0b5ce11ac3f25ad"
 		}
 	},
 	"spv": {
@@ -1194,13 +1364,15 @@
 			"text": "SPV",
 			"sourceHash": "fbfaa650c265c4a2",
 			"status": "machine",
-			"translator": "Claude"
+			"translator": "Claude",
+			"qaHash": "1bd34f7692d62040"
 		},
 		"definition": {
 			"text": "Cómo una billetera ligera comprueba un pago sin la cadena completa: guarda los encabezados de bloque y pide una prueba de Merkle de que la transacción está en un bloque. Se describe en la sección 8 del whitepaper de Bitcoin.",
 			"sourceHash": "9d2fb1eb4565df3e",
 			"status": "machine",
-			"translator": "Claude"
+			"translator": "Claude",
+			"qaHash": "c988fad5f63bd63e"
 		}
 	},
 	"oracle": {
@@ -1208,13 +1380,15 @@
 			"text": "Oráculo",
 			"sourceHash": "dc7620ebfc35d54e",
 			"status": "machine",
-			"translator": "Claude"
+			"translator": "Claude",
+			"qaHash": "94022fad88a549ed"
 		},
 		"definition": {
 			"text": "Un servicio que firma datos externos, como un precio, para que un contrato pueda verificarlos en la cadena con OP_CHECKDATASIG. Los contratos de AnyHedge se liquidan con mensajes de precios firmados por oráculos.",
 			"sourceHash": "9a32d46f32583db7",
 			"status": "machine",
-			"translator": "Claude"
+			"translator": "Claude",
+			"qaHash": "cf65133fa5edb1ee"
 		}
 	},
 	"sigchecks": {
@@ -1222,13 +1396,15 @@
 			"text": "SigChecks",
 			"sourceHash": "28882183c9d1c2ee",
 			"status": "machine",
-			"translator": "Claude"
+			"translator": "Claude",
+			"qaHash": "3579680149db8ae7"
 		},
 		"definition": {
 			"text": "El número de comprobaciones de firma que realiza realmente una transacción. La actualización de mayo de 2020 reemplazó el antiguo recuento de SigOps por SigChecks, que limita el trabajo real de validación por transacción y por bloque.",
 			"sourceHash": "574f438d3027c9de",
 			"status": "machine",
-			"translator": "Claude"
+			"translator": "Claude",
+			"qaHash": "2a63db77705df689"
 		}
 	}
 }

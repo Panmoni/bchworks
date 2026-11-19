@@ -15,6 +15,7 @@ translation:
   sourceHash: 5a133b792841d683
   status: machine
   translator: Claude
+  qaHash: afbbc6d78a0bd695
 ---
 
 ## Índice

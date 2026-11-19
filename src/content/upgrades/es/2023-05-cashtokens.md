@@ -36,19 +36,20 @@ translation:
   sourceHash: 34e847db14ebcfe0
   status: machine
   translator: Claude
+  qaHash: bf3e19e64f636903
 ---
 
 ## Qué cambió
 
 La activación llegó cuando la [mediana del tiempo pasado](/glossary#median-time-past) alcanzó el tiempo Unix `1684152000`
-(15 de mayo de 2023, 12:00 UTC). El primer bloque con las nuevas reglas es la altura 792.773. La red de pruebas
+(15 de mayo de 2023, 12:00 UTC). El primer bloque con las nuevas reglas es la altura 792.773. La red
 [chipnet](/glossary#chipnet) (la red de pruebas de los CHIPs) aplicó las mismas reglas seis meses antes, desde el 15 de noviembre de 2022.
 
 Se activaron cuatro CHIPs:
 
 ### CashTokens (CHIP-2022-02)
 
-[CashTokens](/chips/chip-2022-02-cashtokens), de Jason Dreyzehner, añade dos tipos de token directamente a
+[CashTokens](/chips/chip-2022-02-cashtokens), de Jason Dreyzehner, añade dos tipos de token directamente a los
 [UTXOs](/glossary#utxo):
 
 - **[Tokens fungibles](/glossary#fungible-token)**: unidades intercambiables, como una stablecoin (moneda estable) o puntos. Una categoría puede
@@ -87,7 +88,7 @@ consenso. Antes, solo la política de retransmisión lo imponía.
 
 ## Por qué
 
-**Contratos que pueden dar fe de algo.** El CashTokens CHIP parte de una carencia: antes de 2023, los únicos compromisos que un
+**Contratos que pueden dar fe de algo.** El CHIP de CashTokens parte de una carencia: antes de 2023, los únicos compromisos que un
 contrato podía verificar eran firmas, y las firmas necesitan una clave privada. Un contrato no puede guardar una clave, así que todo lo que un
 contrato “dijera” tenía que firmarlo una parte de confianza. Eso descartaba los oráculos descentralizados y muchos diseños con varios contratos. Los compromisos de los tokens dan a los contratos sus propios mensajes verificables, “sin aumentar los costos de validación de transacciones ni de bloques” (traducción nuestra).
 

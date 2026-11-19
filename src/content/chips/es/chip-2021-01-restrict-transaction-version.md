@@ -23,6 +23,7 @@ translation:
   sourceHash: 5fc04aa7999368e6
   status: machine
   translator: Claude
+  qaHash: 884778bc2a98f70a
 ---
 
 ## Resumen
@@ -31,7 +32,7 @@ Antes de 2023, solo la política de retransmisión limitaba las transacciones a 
 CHIP hace que las versiones 1 y 2 sean las únicas válidas, a nivel de consenso.
 
 La especificación de la actualización de BCHN lo incluye como “CHIP-2021-01 Restrict Transaction Version”. Comparte el número 2021-01 con el
-[Minimum Transaction Size](/chips/chip-2021-01-minimum-transaction-size) CHIP, que es independiente.
+CHIP [Minimum Transaction Size](/chips/chip-2021-01-minimum-transaction-size), que es independiente.
 
 ## Motivación
 

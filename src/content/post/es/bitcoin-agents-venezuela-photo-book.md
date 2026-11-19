@@ -13,6 +13,7 @@ translation:
   sourceHash: 6f541f8896aca4c4
   status: machine
   translator: Claude
+  qaHash: 2b8935275aad7dd5
 ---
 
 ## Un libro de fotos para el equipo detrás del trabajo
@@ -41,6 +42,6 @@ Y a muchos otros miembros del equipo de quienes no tenemos buenas fotos: [@Axus0
 
 ## Lo que sigue
 
-Panmoni sigue formándose y desarrollando nuevos proyectos. Seguimos comprometidos con construir una adopción masiva de las criptomonedas que sea sin permisos, libre de intermediarios, descentralizada y que sirva a mercados de todo el mundo.
+Panmoni sigue formándose y desarrollando nuevos proyectos. Seguimos comprometidos con construir una adopción masiva de las criptomonedas sin permisos, libre de intermediarios, descentralizada y que sirva a mercados objetivo de todo el mundo.
 
 Esta publicación es una adaptación de un [hilo publicado originalmente en X](https://x.com/PanmoniCom/status/1601245413478060033).

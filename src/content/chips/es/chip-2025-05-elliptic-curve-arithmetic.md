@@ -20,6 +20,7 @@ translation:
   sourceHash: e17604af4c037497
   status: machine
   translator: Claude
+  qaHash: 3bcae3d4f9b370e2
 ---
 
 ## Resumen
@@ -49,4 +50,4 @@ requeriría publicar pronto una versión completamente especificada, posiblement
 Borrador, publicado por primera vez el 23 de mayo de 2025. En el hilo “2027 protocol upgrade ideas” (diciembre de 2025), kzKallisti lo incluyó entre
 los CHIPs destacados que estaban “incompletos y sin consenso” (traducción nuestra). En agosto de 2026 dijo que “consideraría respaldar un
 CHIP bien especificado, medido con benchmarks y probado para fijarlo en 2027” (traducción nuestra). No está fijado y no se encontraron declaraciones formales
-de las partes interesadas. El pódcast BCH mencionó una página de sondeo de opinión sobre la propuesta en consensus.cash.
+de las partes interesadas. The BCH Podcast mencionó una página de sondeo de opinión sobre la propuesta en consensus.cash.

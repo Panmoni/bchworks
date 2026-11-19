@@ -5,6 +5,7 @@ translation:
   sourceHash: 18372ed816627044
   status: machine
   translator: Claude
+  qaHash: 0eac75e6849f4353
 ---
 
 _Última actualización_: 26 de septiembre de 2026
@@ -23,7 +24,7 @@ BCH Works no es una billetera, un exchange, un bróker ni un asesor financiero. 
 
 Todo lo que hay en este sitio es información general con fines educativos. No es asesoramiento financiero, de inversión, legal ni fiscal, ni una recomendación para comprar, vender o conservar ningún activo.
 
-Las criptomonedas son volátiles y riesgosas. Puedes perder parte o la totalidad del dinero que inviertas. Las leyes sobre criptomonedas varían según el país y cambian a menudo. Eres responsable de tus propias decisiones y de cumplir las leyes que se te aplican. Si tienes dudas, consulta a un profesional cualificado. Nuestra [página de riesgos](/risks) trata con más detalle los principales riesgos de Bitcoin Cash.
+Las criptomonedas son volátiles y riesgosas. Puedes perder parte o la totalidad del dinero que inviertas. Las leyes sobre criptomonedas varían según el país y cambian a menudo. Eres responsable de tus propias decisiones y de cumplir las leyes que se te aplican. Si tienes dudas, consulta a un profesional calificado. Nuestra [página de riesgos](/risks) trata con más detalle los principales riesgos de Bitcoin Cash.
 
 ## Exactitud de la información
 
@@ -76,7 +77,7 @@ El sitio se ofrece “tal cual” y “según disponibilidad”, sin garantías 
 
 En la máxima medida permitida por la ley, Panmoni y sus colaboradores no son responsables de ningún daño indirecto, incidental, especial, consecuente o punitivo. Esto incluye la pérdida de fondos, de ganancias y de datos derivada de tu uso del sitio, de la información que contiene o de cualquier servicio de terceros al que enlace.
 
-Como el sitio es gratuito, nuestra responsabilidad total por cualquier reclamación relacionada con el sitio se limita a 100 US$.
+Como el sitio es gratuito, nuestra responsabilidad total por cualquier reclamación relacionada con el sitio se limita a 100 US$.
 
 Nada de lo dispuesto en estos términos limita la responsabilidad que la ley no nos permite limitar. Esto incluye la responsabilidad por muerte o lesiones personales causadas por negligencia, por fraude, o tus derechos como consumidor según la legislación local obligatoria.
 

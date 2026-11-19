@@ -18,13 +18,14 @@ translation:
   sourceHash: fd85239fbc8f8b42
   status: machine
   translator: Claude
+  qaHash: 5cd9a62ff187ed27
 ---
 
 ## Resumen
 
 Esta propuesta “define un método para que los nodos generen, distribuyan, validen y consuman instantáneas UTXO a través de la red P2P de BCH” (traducción nuestra). Un nodo nuevo podría descargar una instantánea del conjunto [UTXO](/glossary#utxo) actual en lugar de procesar cada bloque desde 2009.
 
-Es una propuesta de servicios entre pares. Por ahora no pide a los mineros que se comprometan con conjuntos UTXO, pero “allana el camino para compromisos UTXO en el futuro, si se desea” (traducción nuestra).
+Es una propuesta de servicios entre pares. Por ahora no pide a los mineros que incluyan compromisos de los conjuntos UTXO, pero “allana el camino para compromisos UTXO en el futuro, si se desea” (traducción nuestra).
 
 ## Motivación
 

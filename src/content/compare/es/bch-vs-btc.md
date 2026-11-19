@@ -12,7 +12,7 @@ faq:
   - q: ¿Tienen Bitcoin y Bitcoin Cash el mismo suministro?
     a: Sí. Ambas tienen un límite fijo de 21 millones de monedas y ambas usan prueba de trabajo SHA-256. Comparten el mismo historial de transacciones hasta la división de 2017.
   - q: ¿Tiene Bitcoin Cash la Lightning Network?
-    a: No. Bitcoin Cash escala en la cadena con bloques más grandes. Su límite de tamaño de bloque tiene un mínimo de 32 MB y, desde mayo de 2024, crece automáticamente con la demanda sostenida según el algoritmo ABLA.
+    a: No. Bitcoin Cash, en cambio, escala en la cadena con bloques más grandes. Su límite de tamaño de bloque tiene un mínimo de 32 MB y, desde mayo de 2024, crece automáticamente con la demanda sostenida según el algoritmo ABLA.
   - q: ¿Puede Bitcoin Cash hacer cosas que Bitcoin no puede?
     a: Sí, a nivel de script. BCH tiene introspección nativa (2022), tokens nativos llamados CashTokens (2023), aritmética con enteros grandes (2025) y bucles acotados y funciones (2026). Los desarrolladores de Bitcoin aún debaten propuestas de covenants de este tipo.
   - q: ¿Existe un ETF de Bitcoin Cash?
@@ -58,6 +58,7 @@ translation:
   sourceHash: 19babea6b11efb9f
   status: machine
   translator: Claude
+  qaHash: 2784aeefc4ff9ac1
 ---
 
 Bitcoin Cash y Bitcoin son la misma cadena hasta el 1 de agosto de 2017. En el bloque 478.559 se dividieron. Todo poseedor de BTC en ese momento recibió también BCH. Ambas monedas siguen compartiendo minería SHA-256, bloques de 10 minutos y un límite de suministro de 21 millones.
