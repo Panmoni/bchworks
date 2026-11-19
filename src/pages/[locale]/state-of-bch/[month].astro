@@ -23,6 +23,7 @@ export const getStaticPaths = (async () => {
 				params: { locale: code, month: report.data.month },
 				props: {
 					entry,
+					locale: code,
 					copy: copy.data as PageCopy,
 					translation: await getTranslationState("reports", report.id, code),
 				},
@@ -34,7 +35,7 @@ export const getStaticPaths = (async () => {
 
 type Props = InferGetStaticPropsType<typeof getStaticPaths>;
 
-const { entry, copy, translation } = Astro.props as Props;
+const { entry, copy, locale, translation } = Astro.props as Props;
 const { Content } = await render(entry);
 // getLocalizedEntry's union leaves data untyped; it is a report's.
 const d = entry.data as Omit<CollectionEntry<"reports">["data"], "lang">;
@@ -44,7 +45,7 @@ const d = entry.data as Omit<CollectionEntry<"reports">["data"], "lang">;
   title={d.title}
   description={d.description}
   verified={d.verified}
-  lang={Astro.currentLocale}
+  lang={locale}
   eyebrow={copy.eyebrow.replaceAll('{month}', () => d.month)}
   faq={d.faq}
   sources={d.sources}

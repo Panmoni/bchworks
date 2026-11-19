@@ -24,6 +24,7 @@ export const getStaticPaths = (async () => {
 				params: { locale: code, slug: english.id },
 				props: {
 					entry,
+					locale: code,
 					copy: copy.data as PageCopy,
 					translation: await getTranslationState("compare", english.id, code),
 				},
@@ -35,7 +36,7 @@ export const getStaticPaths = (async () => {
 
 type Props = InferGetStaticPropsType<typeof getStaticPaths>;
 
-const { entry, copy, translation } = Astro.props as Props;
+const { entry, copy, locale, translation } = Astro.props as Props;
 const { Content } = await render(entry);
 // getLocalizedEntry's union leaves data untyped; it is a comparison's.
 const d = entry.data as Omit<CollectionEntry<"compare">["data"], "lang">;
@@ -47,7 +48,7 @@ const compare = (rival in metrics.chains ? [rival] : []) as ChainId[];
   title={d.title}
   description={d.description}
   verified={d.verified}
-  lang={Astro.currentLocale}
+  lang={locale}
   eyebrow={copy.eyebrow.replaceAll('{ticker}', () => d.ticker)}
   faq={d.faq}
   sources={d.sources}
