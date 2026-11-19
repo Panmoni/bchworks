@@ -11,6 +11,7 @@ import { hashSource } from "../../src/utils/localize.mjs";
 import {
 	catalogMetaPath,
 	catalogPath,
+	chunk,
 	contentSources,
 	docLeaves,
 	englishCatalog,
@@ -106,10 +107,20 @@ export const collect = ({ root, locale, locales, only }) => {
 			en: getAt(en.data, p),
 			es: getIn(es.data, p),
 		}));
+		// A draft can come from an original in another language.
+		const from = en.data.lang ?? "en";
+		for (const s of segments) s.from = from;
 		if (en.body !== null)
-			segments.push({ field: "body", en: en.body, es: es.body, body: true });
+			segments.push({
+				field: "body",
+				en: en.body,
+				es: es.body,
+				body: true,
+				from,
+			});
 		take(es.data.translation, hashSource(text), {
 			kind: "content",
+			from,
 			area: collection,
 			path: target,
 			id: target,
@@ -134,6 +145,7 @@ export const collect = ({ root, locale, locales, only }) => {
 					area: file,
 					path: target,
 					key,
+					record: record.id,
 					id: `${target} ${key}`,
 					segments: [{ field, en: value, es: t.text }],
 				});
@@ -165,9 +177,12 @@ const stem = (w) => {
  * "transacciones"), so an inflected form passes. A label (a translation in
  * title case for a term that is not kept as is: "Support" → "Ayuda") applies
  * only to a segment that is the label alone; in prose the word is translated
- * by its meaning.
+ * by its meaning: a label's rendering opens with a capitalised word that is
+ * not in the English term ("Ayuda"), unlike a term kept in its rendering
+ * ("NFT inmutable"). With `dnt`, a term that holds a do-not-translate name
+ * ("Buy BCH") is marked, so it is read in English with the names left in.
  */
-export const glossaryMatchers = (terminology) =>
+export const glossaryMatchers = (terminology, dnt) =>
 	Object.entries(terminology).map(([term, entry]) => {
 		const translation =
 			typeof entry === "string" ? entry : (entry?.translation ?? "");
@@ -175,11 +190,13 @@ export const glossaryMatchers = (terminology) =>
 			.split(/\s+/)
 			.filter(Boolean)
 			.map((w) => `${escape(stem(w))}\\p{L}*`);
-		const label = /^\p{Lu}/u.test(translation) && translation !== term;
+		const lead = translation.split(/\s+/)[0] ?? "";
+		const label = /^\p{Lu}/u.test(lead) && !term.split(/\s+/).includes(lead);
 		const en = `${escape(term)}(?:s|es)?`;
 		return {
 			term,
 			translation,
+			holdsDnt: Boolean(dnt && new RegExp(dnt.source, "u").test(term)),
 			en: new RegExp(label ? `^\\s*${en}\\s*$` : word(en), "iu"),
 			es: new RegExp(`(?<![\\p{L}\\p{N}])${stems.join("\\s+")}`, "u"),
 		};
@@ -200,7 +217,7 @@ const USTED_IMPERATIVES = new Set(
 // An accented stem with an -ese/-ase enclitic: asegúrese, regístrese.
 const USTED_ENCLITIC = /^\p{L}*[áéíóú]\p{L}*[ae]se$/u;
 const SENTENCE_START =
-	/(?:^|[.!?:;¡¿]\s+|\n\s*(?:[-*+]|\d+[.)])?\s*|\*\*)(\p{Lu}\p{L}*)/gu;
+	/(?:^|[.!?:;]\s+|\n\s*(?:[-*+]|\d+[.)])?\s*|\*\*|\s(?=[¡¿]))[¡¿]?(\p{Lu}\p{L}*)/gu;
 
 // Common English words that are not also Spanish words ("has", "a", "no",
 // "me" are both, so they are left out).
@@ -275,7 +292,10 @@ const counts = (list) =>
  * The deterministic findings for one segment, `{ check, severity, message }[]`.
  * `ctx`: `{ glossary: glossaryMatchers(...), dnt: dntPattern(...) }`.
  */
-export const checkSegment = ({ en, es, field, body = false }, ctx) => {
+export const checkSegment = (
+	{ en, es, field, body = false, from = "en" },
+	ctx,
+) => {
 	const out = [];
 	const add = (check, severity, message) =>
 		out.push({ check, severity, message });
@@ -283,7 +303,8 @@ export const checkSegment = ({ en, es, field, body = false }, ctx) => {
 	// reads inside them. A body's soft line breaks become spaces first, so a
 	// name wrapped across two lines ("Bitcoin\nCash") is still one name.
 	const soft = (s) => (body ? s.replace(/([^\n])\n(?=[^\n])/g, "$1 ") : s);
-	const enMasked = mask(soft(body ? rebaseRelative(en) : en), ctx.dnt);
+	const enSource = soft(body ? rebaseRelative(en) : en);
+	const enMasked = mask(enSource, ctx.dnt);
 	const esMasked = mask(soft(es), ctx.dnt);
 	const enText = enMasked.text;
 	const esText = esMasked.text;
@@ -295,16 +316,20 @@ export const checkSegment = ({ en, es, field, body = false }, ctx) => {
 
 	// Glossary adherence. The draft is read unmasked: a required rendering
 	// may itself be a do-not-translate term ("satoshi").
+	// The glossary and the English-word checks read English only.
+	const english = from === "en";
 	const esFolded = fold(es);
-	if (!identical)
+	const enNames = mask(enSource).text;
+	if (english && !identical)
 		for (const g of ctx.glossary)
-			if (g.en.test(enText) && !g.es.test(esFolded))
+			if (g.en.test(g.holdsDnt ? enNames : enText) && !g.es.test(esFolded))
 				add("glossary", "low", `"${g.term}" should be "${g.translation}"`);
 
 	// Register: tú, never usted.
 	if (/(?<!\p{L})usted(?!\p{L})/iu.test(esPlain))
 		add("register", "medium", "usted: address the reader as tú");
 	if (
+		english &&
 		/\byour\b/i.test(enText) &&
 		/(?<!\p{L})sus?(?!\p{L})/iu.test(esPlain) &&
 		!/(?<!\p{L})tus?(?!\p{L})/iu.test(esPlain)
@@ -336,9 +361,9 @@ export const checkSegment = ({ en, es, field, body = false }, ctx) => {
 			add("untranslated", "medium", "identical to the English");
 	}
 	// Line by line as written: a list keeps one item to a line.
-	else
-		for (const s of mask(es, ctx.dnt)
-			.text.replace(/⟦\d+⟧/g, " ")
+	else if (english)
+		for (const s of (body ? mask(es, ctx.dnt).text : esText)
+			.replace(/⟦\d+⟧/g, " ")
 			.split(/(?<=[.!?:])\s+|\n+/)) {
 			const w = words(s);
 			const english = w.filter((x) => ENGLISH.has(x.toLowerCase())).length;
@@ -359,11 +384,6 @@ export const checkSegment = ({ en, es, field, body = false }, ctx) => {
 // ---------------------------------------------------------------------- run
 
 const BATCH = 40;
-
-const chunk = (list, n) =>
-	Array.from({ length: Math.ceil(list.length / n) }, (_, i) =>
-		list.slice(i * n, i * n + n),
-	);
 
 /** Runs `jobs` (async functions) `n` at a time. */
 const pool = async (jobs, n) => {
@@ -422,7 +442,9 @@ const toRow = (unit, seg, findings, review, fix, applied) => {
  * Returns `{ fix }` or `{ reject: <why> }`.
  */
 const vet = (seg, review, dnt) => {
-	if (review?.verdict !== "fixed" || typeof review.text !== "string") return {};
+	if (review?.verdict !== "fixed") return {};
+	if (typeof review.text !== "string")
+		return { reject: "the fix carried no text" };
 	const text = review.text;
 	if (text.trim() === seg.es.trim()) return {};
 	const before = [...counts(mask(seg.es, dnt).tokens)].sort().join("\n");
@@ -435,12 +457,17 @@ const vet = (seg, review, dnt) => {
 	return { fix: lead + text.trim() + trail };
 };
 
-/** Writes a unit's fixes and its qaHash; `fixes` maps a field to its text. */
-const apply = (root, locale, unit, fixes) => {
+/**
+ * Writes a unit's fixes (`fixes` maps a field to its text) and, when `stamp`,
+ * its qaHash. A unit the model did not fully review is not stamped, so the
+ * next run sends it again.
+ */
+const apply = (root, locale, unit, fixes, stamp) => {
+	if (!fixes.size && !stamp) return;
 	const segments = unit.segments.map((s) =>
 		fixes.has(s.field) ? { ...s, es: fixes.get(s.field) } : s,
 	);
-	const hash = qaHash({ ...unit, segments });
+	const qa = stamp ? { qaHash: qaHash({ ...unit, segments }) } : {};
 	if (unit.kind === "catalog") {
 		const tr = readJson(root, unit.path, {});
 		for (const s of segments)
@@ -451,22 +478,24 @@ const apply = (root, locale, unit, fixes) => {
 		if (fixes.size) writeJson(root, unit.path, tr);
 		const metaPath = catalogMetaPath(locale);
 		const meta = readJson(root, metaPath, {});
-		meta[unit.key] = { ...meta[unit.key], qaHash: hash };
-		writeJson(root, metaPath, meta);
+		if (stamp) {
+			meta[unit.key] = { ...meta[unit.key], ...qa };
+			writeJson(root, metaPath, meta);
+		}
 	} else if (unit.kind === "overlay") {
 		const overlay = readJson(root, unit.path, {});
-		const [id] = unit.key.split(".");
+		const id = unit.record;
 		const field = unit.segments[0].field;
 		overlay[id][field] = {
 			...overlay[id][field],
 			...(fixes.has(field) ? { text: fixes.get(field) } : {}),
-			qaHash: hash,
+			...qa,
 		};
 		writeJson(root, unit.path, overlay);
 	} else {
 		const text = readFileSync(join(root, unit.path), "utf8");
 		const doc = parseDoc(text, unit.path);
-		const translation = { ...doc.data.translation, qaHash: hash };
+		const translation = { ...doc.data.translation, ...qa };
 		const leafFixed = [...fixes.keys()].some((f) => f !== "body");
 		if (leafFixed) {
 			// A frontmatter value changed: write the whole file again.
@@ -488,7 +517,7 @@ const apply = (root, locale, unit, fixes) => {
 
 /**
  * Checks and reviews every unit. `reviewer` is
- * `{ review({ locale, items, terminology, style }) → verdict[] }`; without
+ * `{ review({ locale, from, items, terminology, style }) → verdict[] }`; without
  * one (a dry run) only the deterministic checks run and nothing is written.
  * `previous` is the last report's rows: a unit whose qaHash still matches
  * keeps its rows and is not sent again. With `fix`, fixed text is written
@@ -514,7 +543,7 @@ export const qa = async ({
 	const ctx = {
 		dnt,
 		dntWhole: dnt && new RegExp(`^(?:${dnt.source})$`, "u"),
-		glossary: glossaryMatchers(terminology),
+		glossary: glossaryMatchers(terminology, dnt),
 	};
 	const prior = Map.groupBy(previous, (r) => r.unit);
 	const rows = [];
@@ -565,7 +594,13 @@ export const qa = async ({
 		);
 		let verdicts;
 		try {
-			verdicts = await reviewer.review({ locale, items, terminology, style });
+			verdicts = await reviewer.review({
+				locale,
+				from: batch[0].from ?? "en",
+				items,
+				terminology,
+				style,
+			});
 		} catch (e) {
 			if (e.name === "TranslatorError") throw e;
 			for (const u of batch) failed.push(`${u.id}: ${e.message}`);
@@ -574,8 +609,10 @@ export const qa = async ({
 		const byId = new Map(verdicts.map((v) => [v.id, v]));
 		for (const unit of batch) {
 			const fixes = new Map();
+			let complete = true;
 			const unitRows = unit.segments.map((s) => {
 				let review = byId.get(segmentId(unit, s));
+				if (!review) complete = false;
 				if (!review)
 					review = {
 						verdict: "flag",
@@ -598,7 +635,7 @@ export const qa = async ({
 					: found.get(unit).get(s);
 				return toRow(unit, s, after, review, text, applied);
 			});
-			if (fix) apply(root, locale, unit, fixes);
+			if (fix) apply(root, locale, unit, fixes, complete);
 			rows.push(...unitRows);
 			onUnit(unit, unitRows);
 		}

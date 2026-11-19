@@ -364,7 +364,7 @@ const withRetry = async (fn) => {
 	}
 };
 
-const chunk = (list, n) =>
+export const chunk = (list, n) =>
 	Array.from({ length: Math.ceil(list.length / n) }, (_, i) =>
 		list.slice(i * n, i * n + n),
 	);

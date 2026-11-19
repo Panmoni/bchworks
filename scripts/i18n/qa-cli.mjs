@@ -6,7 +6,7 @@
 // checks, calls no API and writes nothing. The report goes to
 // i18n-qa/<locale>.json. Workflow: docs/i18n.md.
 import { existsSync, readFileSync } from "node:fs";
-import { join } from "node:path";
+import { join, matchesGlob } from "node:path";
 import { parseArgs } from "node:util";
 import {
 	DEFAULT_LOCALE,
@@ -63,13 +63,14 @@ const print = (rows) => {
 };
 
 const save = (rows) => {
-	// Keep a last-report row this run did not replace: its unit is outside
-	// --only, or a failure stopped the run before it.
+	// Keep a last-report row this run did not replace: its file is outside
+	// --only, or a failure stopped the run before its unit. A row whose unit
+	// left QA (reviewed or stale since) is dropped.
 	const inScope = new Set(units.map((u) => u.id));
 	const replaced = new Set(rows.map((r) => r.unit));
+	const outside = (r) => values.only && !matchesGlob(r.path, values.only);
 	const kept = previous.filter(
-		(r) =>
-			!replaced.has(r.unit) && (inScope.has(r.unit) || Boolean(values.only)),
+		(r) => !replaced.has(r.unit) && (inScope.has(r.unit) || outside(r)),
 	);
 	writeJson(root, reportPath, {
 		locale,

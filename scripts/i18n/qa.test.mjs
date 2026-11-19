@@ -22,11 +22,16 @@ const TERMS = {
 	send: "enviar",
 	Support: { translation: "Ayuda", note: "Nav label." },
 	satoshi: "satoshi",
+	"Buy BCH": "Comprar BCH",
+	"Immutable NFT": "NFT inmutable",
 };
 const ctx = {
 	dnt: dntPattern(["Bitcoin Cash", "BCH", "satoshi"]),
 	dntWhole: /^(?:Bitcoin Cash|BCH|satoshi)$/u,
-	glossary: glossaryMatchers(TERMS),
+	glossary: glossaryMatchers(
+		TERMS,
+		dntPattern(["Bitcoin Cash", "BCH", "satoshi"]),
+	),
 };
 const check = (en, es, extra = {}) => checkSegment({ en, es, ...extra }, ctx);
 const kinds = (findings) => findings.map((f) => f.check);
@@ -80,6 +85,32 @@ describe("glossary check", () => {
 	});
 });
 
+describe("glossary check: names and labels", () => {
+	test("reads a term that holds a do-not-translate name", () => {
+		assert.equal(only(check("Buy BCH", "Adquirir BCH"), "glossary").length, 1);
+		assert.deepEqual(only(check("Buy BCH", "Comprar BCH"), "glossary"), []);
+	});
+
+	test("reads a term kept in its rendering in prose, not as a label", () => {
+		assert.equal(
+			only(
+				check("Each immutable NFT stays.", "Cada NFT mutable queda."),
+				"glossary",
+			).length,
+			1,
+		);
+	});
+
+	test("skips the English-only checks for a non-English original", () => {
+		assert.deepEqual(
+			check("Tu monedero y su clave", "Tu monedero y su clave en BCH", {
+				from: "pt",
+			}).filter((f) => f.check !== "protected"),
+			[],
+		);
+	});
+});
+
 describe("register check", () => {
 	test("flags usted", () => {
 		assert.deepEqual(kinds(check("You can", "Usted puede")), ["register"]);
@@ -104,6 +135,18 @@ describe("register check", () => {
 				'formal imperative "Descargue": use the tú form',
 				'formal imperative "Asegúrese": use the tú form',
 			],
+		);
+	});
+
+	test("flags a formal imperative right after ¡ or ¿", () => {
+		assert.deepEqual(
+			kinds(
+				check(
+					"Get it! Want it?",
+					"Hola. ¡Descargue la app! Bien, ¿Busque algo?",
+				),
+			),
+			["register", "register"],
 		);
 	});
 
@@ -430,7 +473,11 @@ describe("qa", () => {
 		const second = await run({ reviewer: again, previous: first.rows });
 		assert.equal(second.skipped, 4);
 		assert.equal(again.calls.length, 0);
-		assert.equal(second.rows.length, first.rows.length);
+		const order = (rows) =>
+			rows.toSorted((a, b) =>
+				`${a.unit}#${a.field}`.localeCompare(`${b.unit}#${b.field}`),
+			);
+		assert.deepEqual(order(second.rows), order(first.rows));
 
 		const es = json("messages/es.json");
 		wr("messages/es.json", { ...es, hello: "Buenas" });
@@ -459,20 +506,118 @@ describe("qa", () => {
 		const body = rows.find((r) => r.field === "body");
 		assert.equal(body.verdict, "flag");
 		assert.match(body.reason, /not applied: the fix changed protected text/);
-		// The title fix was usable and the qaHash is stamped; the body is not.
+		// The body keeps its draft; only the qaHash is new.
+		const after = rd("src/content/post/es/hello.md");
+		assert.match(after, /\nAbre tu monedero\.\n$/);
+		assert.equal(after.replace(/\s+qaHash: \w+/, ""), before);
+	});
+
+	test("a fix that changes the heading outline is flagged, not written", async () => {
+		const reviewer = {
+			async review({ items }) {
+				return items.map(({ id, draft }) => ({
+					id,
+					verdict: "fixed",
+					text: draft.includes("Abre") ? `## Abre\n\n${draft}` : draft,
+					reason: "x",
+				}));
+			},
+		};
+		const { rows } = await run({ reviewer, fix: true });
+		const body = rows.find((r) => r.field === "body");
+		assert.equal(body.verdict, "flag");
+		assert.match(
+			body.reason,
+			/not applied: the fix changed the heading outline/,
+		);
 		assert.match(rd("src/content/post/es/hello.md"), /\nAbre tu monedero\.\n$/);
-		assert.notEqual(rd("src/content/post/es/hello.md"), before);
+	});
+
+	test("a body-only fix keeps the frontmatter as written", async () => {
+		const post = "src/content/post/es/hello.md";
+		// Quoted on purpose: a full re-render would drop the quotes.
+		wr(
+			post,
+			rd(post).replace(
+				"title: Consigue un monedero",
+				"title: 'Consigue un monedero'",
+			),
+		);
+		const reviewer = {
+			async review({ items }) {
+				return items.map(({ id, draft }) =>
+					id.endsWith("#body")
+						? { id, verdict: "fixed", text: "Abre tu billetera.", reason: "x" }
+						: { id, verdict: "clean" },
+				);
+			},
+		};
+		await run({ reviewer, fix: true });
+		const after = rd(post);
+		assert.match(after, /^---\ntitle: 'Consigue un monedero'\n/);
+		assert.match(after, /qaHash: [0-9a-f]{16}/);
+		assert.match(after, /\n---\nAbre tu billetera\.\n$/);
+	});
+
+	test("a unit the model skipped is not stamped, so it is sent again", async () => {
+		const reviewer = {
+			async review({ items }) {
+				return items
+					.filter((i) => i.id !== "messages/es.json hello")
+					.map(({ id }) => ({ id, verdict: "clean" }));
+			},
+		};
+		const { rows } = await run({ reviewer, fix: true });
+		const hello = rows.find((r) => r.key === "hello");
+		assert.equal(hello.verdict, "flag");
+		assert.match(hello.reason, /no verdict/);
+		const meta = json("messages/meta/es.json");
+		assert.equal(meta.hello.qaHash, undefined);
+		assert.match(meta.bye.qaHash, /^[0-9a-f]{16}$/);
+	});
+
+	test("a fixed verdict without text is a flag, never clean", async () => {
+		const reviewer = {
+			async review({ items }) {
+				return items.map(({ id }) => ({ id, verdict: "fixed", reason: "x" }));
+			},
+		};
+		const { rows } = await run({ reviewer });
+		const hello = rows.find((r) => r.key === "hello");
+		assert.equal(hello.verdict, "flag");
+		assert.match(hello.reason, /not applied: the fix carried no text/);
+	});
+
+	test("--fix writes an overlay record whose id holds a dot", async () => {
+		wr("src/data/glossary.json", [{ id: "bitcoin.com", term: "Fee" }]);
+		wr("src/data/i18n/es/glossary.json", {
+			"bitcoin.com": {
+				term: { text: "Tarifa", ...machine(hashSource("Fee")) },
+			},
+		});
+		await run({ reviewer: fakeReviewer(), fix: true });
+		const term = json("src/data/i18n/es/glossary.json")["bitcoin.com"].term;
+		assert.equal(term.text, "Comisión");
 	});
 
 	test("an API failure stops the run and carries the rows so far", async () => {
+		// The first batch (messages and overlays) succeeds; the content file's
+		// request fails.
+		const ok = fakeReviewer();
 		const reviewer = {
-			async review() {
-				throw Object.assign(new Error("quota"), { name: "TranslatorError" });
+			async review(batch) {
+				if (ok.calls.length)
+					throw Object.assign(new Error("quota"), { name: "TranslatorError" });
+				return ok.review(batch);
 			},
 		};
 		await assert.rejects(run({ reviewer, concurrency: 1 }), (e) => {
 			assert.equal(e.message, "quota");
-			assert.ok(Array.isArray(e.rows));
+			assert.deepEqual(e.rows.map((r) => r.unit).sort(), [
+				"messages/es.json bye",
+				"messages/es.json hello",
+				"src/data/i18n/es/glossary.json fee.term",
+			]);
 			return true;
 		});
 	});
