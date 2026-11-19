@@ -4,6 +4,7 @@
 import { getCollection } from "astro:content";
 import Freshness from "~/components/reference/Freshness.astro";
 import InnerTitle from "~/components/widgets/InnerTitle.astro";
+import { DEFAULT_LOCALE } from "~/i18n/locales";
 import Layout from "~/layouts/PageLayout.astro";
 import { listLocalized, type TranslationState } from "~/utils/l10n";
 import type { PageCopy } from "~/utils/pages";
@@ -20,8 +21,8 @@ const metadata = { ...copy.metadata, ignoreTitleTemplate: true };
 
 const locale = Astro.currentLocale;
 // A guide's words are in its translation's language, else in the guide's own
-// `lang` (the Venezuela guide is written in Spanish): only words in neither
-// the page's language nor a translation are a fallback fragment.
+// `lang` (the Venezuela guide is written in Spanish). Only English words on a
+// non-English page are a fallback fragment; Portuguese keeps its lang="pt".
 const guides = (
 	await listLocalized(
 		"guides",
@@ -30,8 +31,11 @@ const guides = (
 	)
 ).map((i) => ({
 	...i,
-	lang: i.fallback ? i.entry.data.lang : (locale ?? i.entry.data.lang),
-	fallback: i.fallback && i.entry.data.lang !== locale,
+	lang:
+		locale && locale !== DEFAULT_LOCALE && !i.fallback
+			? locale
+			: i.entry.data.lang,
+	fallback: i.fallback && i.entry.data.lang === DEFAULT_LOCALE,
 }));
 const langName = { en: "English", es: "Español", pt: "Português" };
 ---

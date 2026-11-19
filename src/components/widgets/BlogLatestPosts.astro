@@ -36,12 +36,13 @@ const {
 } = Astro.props;
 
 const posts = APP_BLOG.isEnabled
-	? await findLatestPosts({ count, category, tag })
+	? await findLatestPosts({ count, category, tag, locale: Astro.currentLocale })
 	: [];
 ---
 
 {
-  APP_BLOG.isEnabled ? (
+  /* A locale with no translated posts in this list shows no section. */
+  APP_BLOG.isEnabled && posts.length ? (
     <WidgetWrapper id={id} isDark={isDark} containerClass={classes?.container} bg={bg}>
       <div class="flex flex-col gap-4 lg:flex-row lg:items-end lg:justify-between mb-8">
         {title && (

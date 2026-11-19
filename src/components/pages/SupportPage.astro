@@ -21,13 +21,31 @@ interface Props {
 const { copy, translation = null } = Astro.props;
 const metadata = { ...copy.metadata, ignoreTitleTemplate: true };
 
-const discussion = await getProjectsByCategory("support:discussion");
-const media = await getProjectsByCategory("support:media");
-const podcasts = await getProjectsByCategory("support:podcast");
-const general = await getProjectsByCategory("support:general");
-const papers = await getProjectsByCategory("support:paper");
-const utilities = await getProjectsByCategory("support:utility");
-const financial = await getProjectsByCategory("support:financial");
+const discussion = await getProjectsByCategory(
+	"support:discussion",
+	Astro.currentLocale,
+);
+const media = await getProjectsByCategory("support:media", Astro.currentLocale);
+const podcasts = await getProjectsByCategory(
+	"support:podcast",
+	Astro.currentLocale,
+);
+const general = await getProjectsByCategory(
+	"support:general",
+	Astro.currentLocale,
+);
+const papers = await getProjectsByCategory(
+	"support:paper",
+	Astro.currentLocale,
+);
+const utilities = await getProjectsByCategory(
+	"support:utility",
+	Astro.currentLocale,
+);
+const financial = await getProjectsByCategory(
+	"support:financial",
+	Astro.currentLocale,
+);
 ---
 
 <Layout metadata={metadata} translation={translation}>

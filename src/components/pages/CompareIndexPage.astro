@@ -5,11 +5,7 @@ import { getCollection } from "astro:content";
 import RealNumbers from "~/components/reference/RealNumbers.astro";
 import InnerTitle from "~/components/widgets/InnerTitle.astro";
 import Layout from "~/layouts/PageLayout.astro";
-import {
-	englishData,
-	listLocalized,
-	type TranslationState,
-} from "~/utils/l10n";
+import { listLocalized, type TranslationState } from "~/utils/l10n";
 import type { PageCopy } from "~/utils/pages";
 
 interface Props {
@@ -44,8 +40,8 @@ const pages = await listLocalized(
           <li>
             <a class="wb-card wb-card-hover block p-5 h-full" href={`/compare/${i.entry.id}`}>
               <span class="font-mono text-xs text-muted">{copy.card.replaceAll('{ticker}', () => i.entry.data.ticker)}</span>
-              <span class="block font-heading text-xl font-extrabold mt-1" {...(i.fallback ? englishData(Astro.currentLocale) : {})}>{i.data.title}</span>
-              <span class="block text-sm text-muted mt-2" {...(i.fallback ? englishData(Astro.currentLocale) : {})}>{i.data.description}</span>
+              <span class="block font-heading text-xl font-extrabold mt-1" {...i.attrs}>{i.data.title}</span>
+              <span class="block text-sm text-muted mt-2" {...i.attrs}>{i.data.description}</span>
             </a>
           </li>
         ))

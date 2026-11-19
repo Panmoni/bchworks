@@ -21,6 +21,8 @@ interface Props {
 
 const { copy, translation = null } = Astro.props;
 const metadata = { ...copy.metadata, ignoreTitleTemplate: true };
+// Marks English words on a non-English page as a fallback fragment.
+const en = englishData(Astro.currentLocale);
 
 const order = [
 	"proposed",
@@ -58,14 +60,14 @@ const byStatus = order
     {
       byStatus.map((g) => (
         <section class="mb-10">
-          <h2 class="font-heading text-2xl font-extrabold tracking-tight mb-3 capitalize" {...englishData(Astro.currentLocale)}>{g.status}</h2>
+          <h2 class="font-heading text-2xl font-extrabold tracking-tight mb-3 capitalize" {...en}>{g.status}</h2>
           <ul class="grid gap-3 md:grid-cols-2">
             {g.items.map((i) => (
               <li>
                 <a class="wb-card wb-card-hover block p-4 h-full" href={`/chips/${i.entry.id}`}>
                   <span class="font-mono text-xs text-muted">{i.entry.data.code}</span>
-                  <span class="block font-heading text-lg font-extrabold" {...(i.fallback ? englishData(Astro.currentLocale) : {})}>{i.data.title}</span>
-                  <span class="block text-sm text-muted mt-1" {...(i.fallback ? englishData(Astro.currentLocale) : {})}>{i.data.summary}</span>
+                  <span class="block font-heading text-lg font-extrabold" {...i.attrs}>{i.data.title}</span>
+                  <span class="block text-sm text-muted mt-1" {...i.attrs}>{i.data.summary}</span>
                   <Freshness class="mt-2" date={i.entry.data.verified} />
                 </a>
               </li>

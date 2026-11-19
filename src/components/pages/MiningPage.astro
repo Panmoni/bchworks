@@ -21,7 +21,7 @@ interface Props {
 const { copy, translation = null } = Astro.props;
 const metadata = { ...copy.metadata, ignoreTitleTemplate: true };
 
-const pools = await getProjectsByCategory("mining");
+const pools = await getProjectsByCategory("mining", Astro.currentLocale);
 ---
 
 <Layout metadata={metadata} translation={translation}>

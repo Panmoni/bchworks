@@ -24,6 +24,8 @@ interface Props {
 
 const { copy, translation = null } = Astro.props;
 const metadata = { ...copy.metadata, ignoreTitleTemplate: true };
+// Marks English words on a non-English page as a fallback fragment.
+const en = englishData(Astro.currentLocale);
 
 const upgrades = await listLocalized(
 	"upgrades",
@@ -51,16 +53,16 @@ const statusStyle = {
 
     <ol class="relative border-l-4 border-line ml-3 mt-8 space-y-6">
       {
-        upgrades.map(({ entry: u, data: t, fallback }) => (
+        upgrades.map(({ entry: u, data: t, attrs }) => (
           <li class="ml-6">
             <span aria-hidden="true" class:list={['absolute -left-[11px] w-4 h-4 rounded-full border-2 border-line', statusStyle[u.data.status]]} />
             <a href={`/upgrades/${u.id}`} class="wb-card wb-card-hover block p-5">
               <p class="font-mono text-xs text-muted">
-                {formatDate(u.data.date, Astro.currentLocale)} · <span {...englishData(Astro.currentLocale)}>{u.data.status}</span>
+                {formatDate(u.data.date, Astro.currentLocale)} · <span {...en}>{u.data.status}</span>
                 {u.data.height && copy.block.replaceAll('{height}', () => formatNumber(u.data.height as number, Astro.currentLocale))}
               </p>
-              <h2 class="font-heading text-2xl font-extrabold tracking-tight mt-1" {...(fallback ? englishData(Astro.currentLocale) : {})}>{t.title}</h2>
-              <p class="text-muted mt-2" {...(fallback ? englishData(Astro.currentLocale) : {})}>{t.summary}</p>
+              <h2 class="font-heading text-2xl font-extrabold tracking-tight mt-1" {...attrs}>{t.title}</h2>
+              <p class="text-muted mt-2" {...attrs}>{t.summary}</p>
               <Freshness class="mt-3" date={u.data.verified} />
             </a>
           </li>

@@ -49,8 +49,12 @@ const terms = (await getCollection("glossary"))
 		}),
 	);
 const byId = new Map(terms.map((t) => [t.id, t]));
+// The first letter without accents or leading punctuation, so "Árbol" files
+// under A, as the base-sensitivity sort places it.
 const initial = (t: (typeof terms)[number]) =>
-	t.l10n.term.text[0].toLocaleUpperCase(lang);
+	(
+		t.l10n.term.text.normalize("NFD").replace(/[^\p{L}\p{N}]/gu, "")[0] ?? "#"
+	).toLocaleUpperCase(lang);
 const letters = [...new Set(terms.map(initial))];
 
 const termSet = {

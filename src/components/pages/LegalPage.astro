@@ -9,6 +9,7 @@ import { m, msg } from "~/i18n/messages";
 import MarkdownLayout from "~/layouts/MarkdownLayout.astro";
 import { getTranslationState } from "~/utils/l10n";
 import { getPageEntry } from "~/utils/pages";
+import { getPermalink } from "~/utils/permalinks";
 
 export interface Props {
 	/** The `pages` entry id, which is also the English path: privacy-policy, terms-conditions. */
@@ -32,7 +33,7 @@ const l = msg(Astro.currentLocale);
     <p class="not-prose rounded border-2 border-line bg-soft px-4 py-3 text-base" role="note" data-legal-notice>
       {m.legal_english_governs({}, l)}
       {" "}
-      <a class="font-bold underline underline-offset-4" href={`/${id}`} hreflang={DEFAULT_LOCALE} data-locale-switch={DEFAULT_LOCALE}>{m.legal_english_governs_link({}, l)}</a>
+      <a class="font-bold underline underline-offset-4" href={getPermalink(id)} hreflang={DEFAULT_LOCALE} data-locale-switch={DEFAULT_LOCALE}>{m.legal_english_governs_link({}, l)}</a>
     </p>
   )}
   <Content />

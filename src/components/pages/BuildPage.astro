@@ -22,18 +22,45 @@ interface Props {
 const { copy, translation = null } = Astro.props;
 const metadata = { ...copy.metadata, ignoreTitleTemplate: true };
 
-const libraries = await getProjectsByCategory("build:library");
-const docs = await getProjectsByCategory("build:docs");
-const communities = await getProjectsByCategory("build:community");
-const apis = await getProjectsByCategory("build:api");
-const contracts = await getProjectsByCategory("build:contracts");
-const protocols = await getProjectsByCategory("build:protocol");
-const explorers = await getProjectsByCategory("build:explorer");
-const network = await getProjectsByCategory("build:network");
-const utilities = await getProjectsByCategory("build:utility");
-const fullnodes = await getProjectsByCategory("build:fullnode");
-const dapps = await getProjectsByCategory("build:dapp");
-const cashtokensTooling = await getProjectsByCategory("cashtokens:devtool");
+const libraries = await getProjectsByCategory(
+	"build:library",
+	Astro.currentLocale,
+);
+const docs = await getProjectsByCategory("build:docs", Astro.currentLocale);
+const communities = await getProjectsByCategory(
+	"build:community",
+	Astro.currentLocale,
+);
+const apis = await getProjectsByCategory("build:api", Astro.currentLocale);
+const contracts = await getProjectsByCategory(
+	"build:contracts",
+	Astro.currentLocale,
+);
+const protocols = await getProjectsByCategory(
+	"build:protocol",
+	Astro.currentLocale,
+);
+const explorers = await getProjectsByCategory(
+	"build:explorer",
+	Astro.currentLocale,
+);
+const network = await getProjectsByCategory(
+	"build:network",
+	Astro.currentLocale,
+);
+const utilities = await getProjectsByCategory(
+	"build:utility",
+	Astro.currentLocale,
+);
+const fullnodes = await getProjectsByCategory(
+	"build:fullnode",
+	Astro.currentLocale,
+);
+const dapps = await getProjectsByCategory("build:dapp", Astro.currentLocale);
+const cashtokensTooling = await getProjectsByCategory(
+	"cashtokens:devtool",
+	Astro.currentLocale,
+);
 ---
 
 <Layout metadata={metadata} translation={translation}>

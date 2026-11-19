@@ -160,8 +160,10 @@ export interface ListedEntry<C extends LocalizedCollection> {
 	entry: CollectionEntry<C>;
 	/** The entry's data in the page's locale, or English when it has no translation. */
 	data: CollectionEntry<C>["data"];
-	/** English shown on a non-English page: render its words inside englishData(). */
+	/** English shown on a non-English page. */
 	fallback: boolean;
+	/** Spread on the element holding the entry's words: marks a fallback as English. */
+	attrs: { lang?: string; "data-l10n-fallback"?: boolean };
 }
 
 /**
@@ -181,12 +183,14 @@ export const listLocalized = async <C extends LocalizedCollection>(
 				locale && locale !== DEFAULT_LOCALE
 					? await getLocalizedEntry(collection, entry.id, locale as LocaleCode)
 					: null;
+			const fallback = !!locale && locale !== DEFAULT_LOCALE && !t;
 			return {
 				entry,
 				// A translation has the English fields plus its `translation` block.
 				data: ((t as { data?: unknown } | null)?.data ??
 					entry.data) as CollectionEntry<C>["data"],
-				fallback: !!locale && locale !== DEFAULT_LOCALE && !t,
+				fallback,
+				attrs: fallback ? englishData(locale) : {},
 			};
 		}),
 	);
