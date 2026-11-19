@@ -44,3 +44,6 @@ src/content/*/en-XA/
 src/content/*/ar-XB/
 src/data/i18n/en-XA/
 src/data/i18n/ar-XB/
+
+# QA reports (pnpm i18n:qa, PAN-412): regenerated, never committed.
+i18n-qa/

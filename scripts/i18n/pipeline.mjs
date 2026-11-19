@@ -74,16 +74,16 @@ export const PATHS = {
 };
 
 const read = (root, p) => readFileSync(join(root, p), "utf8");
-const readJson = (root, p, fallback) =>
+export const readJson = (root, p, fallback) =>
 	existsSync(join(root, p)) ? JSON.parse(read(root, p)) : fallback;
-const write = (root, p, text) => {
+export const write = (root, p, text) => {
 	mkdirSync(dirname(join(root, p)), { recursive: true });
 	writeFileSync(join(root, p), text);
 };
-const writeJson = (root, p, data) =>
+export const writeJson = (root, p, data) =>
 	write(root, p, `${JSON.stringify(data, null, "\t")}\n`);
-const isDir = (p) => existsSync(p) && statSync(p).isDirectory();
-const filesUnder = (dir) =>
+export const isDir = (p) => existsSync(p) && statSync(p).isDirectory();
+export const filesUnder = (dir) =>
 	readdirSync(dir).flatMap((n) => {
 		const p = join(dir, n);
 		return isDir(p) ? filesUnder(p) : [p];
@@ -91,7 +91,7 @@ const filesUnder = (dir) =>
 
 // ---------------------------------------------------------------- documents
 
-const FRONTMATTER = /^---\r?\n([\s\S]*?)\r?\n---\r?\n?/;
+export const FRONTMATTER = /^---\r?\n([\s\S]*?)\r?\n---\r?\n?/;
 
 // js-yaml 5 reads an unquoted date as a string, and dumping that string
 // quotes it, which the collection schemas' z.date() rejects. Read dates the
@@ -117,11 +117,11 @@ export const parseDoc = (text, path) => {
 
 const yaml = (data) => dump(data, { lineWidth: -1, noRefs: true });
 
-const renderDoc = ({ data, body, yamlFile }) =>
+export const renderDoc = ({ data, body, yamlFile }) =>
 	yamlFile ? yaml(data) : `---\n${yaml(data)}---\n${body}`;
 
 /** Paths (key lists) of the string leaves a draft translates. */
-const docLeaves = (data, collection) => {
+export const docLeaves = (data, collection) => {
 	const out = [];
 	const walk = (v, path, key) => {
 		if (typeof v === "string") {
@@ -140,29 +140,59 @@ const docLeaves = (data, collection) => {
 	return out;
 };
 
-const getAt = (obj, path) => path.reduce((o, k) => o[k], obj);
-const setAt = (obj, path, value) => {
+export const getAt = (obj, path) => path.reduce((o, k) => o[k], obj);
+export const setAt = (obj, path, value) => {
 	getAt(obj, path.slice(0, -1))[path.at(-1)] = value;
 };
 
 // ------------------------------------------------------------------ catalog
 
 /** The string leaves of one inlang message: a string, or variant matches. */
-const messageLeaves = (value) =>
+export const messageLeaves = (value) =>
 	typeof value === "string"
 		? [[]]
 		: value.flatMap((variant, i) =>
 				Object.keys(variant.match ?? {}).map((k) => [i, "match", k]),
 			);
 
-const catalogPath = (locale) => `${PATHS.messages}/${locale}.json`;
-const catalogMetaPath = (locale) => `${PATHS.messages}/meta/${locale}.json`;
-const englishCatalog = (root) => {
+export const catalogPath = (locale) => `${PATHS.messages}/${locale}.json`;
+export const catalogMetaPath = (locale) =>
+	`${PATHS.messages}/meta/${locale}.json`;
+export const englishCatalog = (root) => {
 	const { $schema: _, ...en } = readJson(root, catalogPath("en"), {});
 	return en;
 };
 
 // ------------------------------------------------------------------- scan
+
+/**
+ * Every English content file `locale` translates, with the path its
+ * translation has: `{ collection, source, target, text }`. `locales` lists the
+ * locale dirs to skip, since they hold translations, not English.
+ */
+export function* contentSources({ root, locale, locales }) {
+	const contentRoot = join(root, PATHS.content);
+	for (const collection of isDir(contentRoot) ? readdirSync(contentRoot) : []) {
+		const base = join(contentRoot, collection);
+		if (!isDir(base)) continue;
+		for (const abs of filesUnder(base)) {
+			const rel = relative(base, abs);
+			if (locales.includes(rel.split("/")[0])) continue;
+			if (!/\.(md|mdx|yaml)$/.test(rel)) continue;
+			const source = relative(root, abs);
+			const text = readFileSync(abs, "utf8");
+			// An original written in this locale (a Spanish guide at the
+			// English root) is its own translation.
+			if (parseDoc(text, source).data.lang === locale) continue;
+			yield {
+				collection,
+				source,
+				target: join(PATHS.content, collection, locale, rel),
+				text,
+			};
+		}
+	}
+}
 
 const freshness = (meta, hash) => {
 	if (!meta?.sourceHash || !meta?.status) return "unknown";
@@ -210,35 +240,25 @@ export const scan = ({ root, locale, locales, only, restale = false }) => {
 	}
 
 	// Content: one unit per file.
-	const contentRoot = join(root, PATHS.content);
-	for (const collection of isDir(contentRoot) ? readdirSync(contentRoot) : []) {
-		const base = join(contentRoot, collection);
-		if (!isDir(base)) continue;
-		for (const abs of filesUnder(base)) {
-			const rel = relative(base, abs);
-			if (locales.includes(rel.split("/")[0])) continue;
-			if (!/\.(md|mdx|yaml)$/.test(rel)) continue;
-			const source = relative(root, abs);
-			const text = readFileSync(abs, "utf8");
-			// An original written in this locale (a Spanish guide at the
-			// English root) is its own translation.
-			if (parseDoc(text, source).data.lang === locale) continue;
-			const target = join(PATHS.content, collection, locale, rel);
-			const unit = {
-				kind: "content",
-				collection,
-				source,
-				target,
-				hash: hashSource(text),
-			};
-			if (!existsSync(join(root, target))) {
-				sort({ ...unit, state: "missing" });
-				continue;
-			}
-			const t = parseDoc(read(root, target), target).data.translation;
-			const state = freshness(t, unit.hash);
-			if (state !== "fresh") sort({ ...unit, state }, t);
+	for (const { collection, source, target, text } of contentSources({
+		root,
+		locale,
+		locales,
+	})) {
+		const unit = {
+			kind: "content",
+			collection,
+			source,
+			target,
+			hash: hashSource(text),
+		};
+		if (!existsSync(join(root, target))) {
+			sort({ ...unit, state: "missing" });
+			continue;
 		}
+		const t = parseDoc(read(root, target), target).data.translation;
+		const state = freshness(t, unit.hash);
+		if (state !== "fresh") sort({ ...unit, state }, t);
 	}
 
 	// Overlays: one unit per record field.
@@ -632,7 +652,7 @@ export const review = ({ root, locale, path, reviewer, rechecked = false }) => {
 // only when more of the block follows.
 const BLOCK =
 	/^translation:[ \t]*\r?\n(?:[ \t]+\S.*(?:\r?\n|$)|[ \t]*\r?\n(?=[ \t]+\S))*/m;
-const replaceTranslationBlock = (text, path, meta) => {
+export const replaceTranslationBlock = (text, path, meta) => {
 	const yamlFile = extname(path) === ".yaml";
 	const fm = yamlFile ? text : text.match(FRONTMATTER)?.[1];
 	if (fm === undefined || !BLOCK.test(fm))

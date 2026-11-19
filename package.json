@@ -28,6 +28,7 @@
 		"test": "node --test src/utils/*.test.mjs src/i18n/*.test.mjs scripts/i18n/*.test.mjs",
 		"i18n:draft": "node scripts/i18n/draft.mjs",
 		"i18n:review": "node scripts/i18n/review.mjs",
+		"i18n:qa": "node scripts/i18n/qa-cli.mjs",
 		"data:health": "node scripts/health-check.mjs",
 		"data:metrics": "node scripts/metrics.mjs",
 		"data:utxo": "node scripts/utxo-stats.mjs",
