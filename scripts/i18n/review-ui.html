@@ -1,0 +1,324 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Translation review</title>
+<style>
+:root {
+	--bg: #f7f7f5; --panel: #fff; --ink: #1d1d1b; --muted: #6b6b66; --line: #e2e2dc;
+	--focus: #2f6fed; --high: #c62828; --medium: #e07b00; --low: #9a8a00;
+	--fixed: #2e7d32; --clean: #5f7d63; --unchecked: #7a5cc0; --note: #b0458a;
+	--mono: ui-monospace, SFMono-Regular, Menlo, monospace;
+}
+@media (prefers-color-scheme: dark) {
+	:root {
+		--bg: #161615; --panel: #1f1f1d; --ink: #ecece8; --muted: #9a9a93; --line: #34342f;
+		--focus: #6b9bff; --high: #ff6b6b; --medium: #ffa94d; --low: #e0cf4a;
+		--fixed: #69c46d; --clean: #8fae93; --unchecked: #b59cff; --note: #f08cc8;
+	}
+}
+* { box-sizing: border-box; }
+body { margin: 0; background: var(--bg); color: var(--ink); font: 15px/1.5 system-ui, sans-serif; }
+header {
+	position: sticky; top: 0; z-index: 2; background: var(--panel); border-bottom: 1px solid var(--line);
+	padding: 10px 16px; display: flex; flex-wrap: wrap; gap: 4px 20px; align-items: baseline;
+}
+header h1 { font-size: 16px; margin: 0; }
+header .meta, header .keys { color: var(--muted); font-size: 13px; }
+kbd { font: 12px var(--mono); border: 1px solid var(--line); border-radius: 3px; padding: 0 4px; }
+main { padding: 12px 16px 60vh; max-width: 1500px; margin: 0 auto; }
+section { margin-bottom: 22px; }
+section > h2 {
+	font-size: 14px; margin: 0 0 6px; display: flex; gap: 12px; align-items: center; flex-wrap: wrap;
+}
+section > h2 .count { color: var(--muted); font-weight: normal; }
+button {
+	font: inherit; font-size: 13px; padding: 3px 10px; border-radius: 4px; cursor: pointer;
+	border: 1px solid var(--line); background: var(--panel); color: var(--ink);
+}
+button:hover:not(:disabled) { border-color: var(--focus); }
+button:disabled { opacity: .45; cursor: default; }
+.row { background: var(--panel); border: 1px solid var(--line); border-radius: 6px; margin-bottom: 4px; scroll-margin-top: 90px; }
+.row.current { outline: 2px solid var(--focus); outline-offset: -1px; }
+.summary { display: flex; gap: 10px; padding: 6px 10px; cursor: pointer; align-items: baseline; }
+.summary .id { font: 13px var(--mono); overflow-wrap: anywhere; }
+.summary .why { color: var(--muted); font-size: 13px; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; flex: 1; min-width: 0; }
+.summary .seen { color: var(--fixed); font-size: 12px; }
+.badge { font-size: 11px; font-weight: 600; text-transform: uppercase; letter-spacing: .04em; min-width: 72px; }
+.badge.high { color: var(--high); } .badge.medium { color: var(--medium); } .badge.low { color: var(--low); }
+.badge.fixed { color: var(--fixed); } .badge.clean { color: var(--clean); } .badge.unchecked { color: var(--unchecked); }
+.detail { border-top: 1px solid var(--line); padding: 8px 10px 10px; }
+.reason, .note { font-size: 13px; white-space: pre-wrap; margin: 0 0 8px; padding: 6px 8px; border-radius: 4px; background: var(--bg); }
+.note { border-left: 3px solid var(--note); }
+.seg { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; margin-bottom: 8px; }
+.seg .field { grid-column: 1 / -1; font: 12px var(--mono); color: var(--muted); }
+.text { margin: 0; white-space: pre-wrap; overflow-wrap: anywhere; font: 14px/1.5 system-ui, sans-serif; padding: 6px 8px; border: 1px solid var(--line); border-radius: 4px; }
+textarea.text { width: 100%; min-height: 3em; resize: vertical; background: var(--panel); color: var(--ink); }
+.actions { display: flex; gap: 8px; flex-wrap: wrap; }
+#toast {
+	position: fixed; bottom: 16px; left: 50%; transform: translateX(-50%); max-width: min(90vw, 760px);
+	background: var(--ink); color: var(--bg); padding: 8px 14px; border-radius: 6px; font-size: 13px;
+	white-space: pre-wrap; display: none; z-index: 3;
+}
+#toast.error { background: var(--high); color: #fff; }
+@media (max-width: 760px) { .seg { grid-template-columns: 1fr; } .summary .why { display: none; } }
+</style>
+</head>
+<body>
+<header>
+	<h1>Translation review</h1>
+	<span class="meta" id="meta">Loading…</span>
+	<span class="keys"><kbd>j</kbd>/<kbd>k</kbd> move · <kbd>o</kbd> open/close · <kbd>a</kbd> approve · <kbd>e</kbd> edit (<kbd>Ctrl</kbd>+<kbd>Enter</kbd> save and approve, <kbd>Esc</kbd> cancel) · <kbd>s</kbd> send back</span>
+</header>
+<main id="main"></main>
+<div id="toast" role="status"></div>
+<script>
+"use strict";
+const $ = (tag, props = {}, ...kids) => {
+	const el = document.createElement(tag);
+	for (const [k, v] of Object.entries(props)) {
+		if (k === "class") el.className = v;
+		else if (k.startsWith("on")) el.addEventListener(k.slice(2), v);
+		else el[k] = v;
+	}
+	el.append(...kids.filter((k) => k != null));
+	return el;
+};
+
+const state = { groups: [], rows: [], current: -1, seen: new Set(), editing: null };
+let toastTimer;
+const toast = (msg, error = false) => {
+	const t = document.getElementById("toast");
+	t.textContent = msg;
+	t.className = error ? "error" : "";
+	t.style.display = "block";
+	clearTimeout(toastTimer);
+	toastTimer = setTimeout(() => { t.style.display = "none"; }, error ? 8000 : 2500);
+};
+
+const post = async (path, body) => {
+	const res = await fetch(path, {
+		method: "POST",
+		headers: { "content-type": "application/json" },
+		body: JSON.stringify(body),
+	});
+	const data = await res.json();
+	if (!res.ok) throw new Error(data.error ?? res.statusText);
+	return data;
+};
+
+const label = (r) => r.rating.verdict === "flag" ? r.rating.severity : r.rating.verdict;
+const firstLine = (r) => (r.note ? `Sent back: ${r.note.note}` : r.rating.reason ?? "").split("\n")[0];
+
+// Marks an open row seen once any of it is on screen: "approve all clean"
+// sends only seen rows.
+const observer = new IntersectionObserver((entries) => {
+	for (const e of entries) {
+		if (!e.isIntersecting) continue;
+		const row = e.target.closest(".row")?._row;
+		if (row && !state.seen.has(row.id)) {
+			state.seen.add(row.id);
+			row._el.querySelector(".seen").textContent = "seen";
+			updateGroup(row._group);
+		}
+	}
+});
+
+const renderDetail = (row) => {
+	const editing = state.editing === row;
+	const segs = row.segments.map((s) =>
+		$("div", { class: "seg" },
+			s.field ? $("div", { class: "field", textContent: s.field }) : null,
+			$("pre", { class: "text", lang: "en", textContent: s.en }),
+			editing
+				? $("textarea", { class: "text", lang: row.locale, value: s.es, rows: Math.min(30, s.es.split("\n").length + 1), _field: s.field })
+				: $("pre", { class: "text", lang: row.locale, textContent: s.es })));
+	const actions = editing
+		? [$("button", { textContent: "Save and approve", onclick: () => saveEdit(row) }),
+			$("button", { textContent: "Cancel", onclick: () => { state.editing = null; refresh(row); } })]
+		: [$("button", { textContent: "Approve (a)", onclick: () => approveRow(row) }),
+			$("button", { textContent: "Edit (e)", onclick: () => startEdit(row) }),
+			$("button", { textContent: "Send back (s)", onclick: () => sendBackRow(row) })];
+	return $("div", { class: "detail" },
+		row.rating.reason ? $("p", { class: "reason", textContent: row.rating.reason }) : null,
+		row.note ? $("p", { class: "note", textContent: `Sent back by ${row.note.reviewer}: ${row.note.note}` }) : null,
+		...segs,
+		$("div", { class: "actions" }, ...actions));
+};
+
+const refresh = (row) => {
+	const el = row._el;
+	el.querySelector(".why").textContent = firstLine(row);
+	el.querySelector(".detail")?.remove();
+	if (row._open) {
+		const d = renderDetail(row);
+		el.append(d);
+		observer.observe(d);
+		d.querySelector("textarea")?.focus();
+	}
+};
+
+const renderRow = (row, group) => {
+	row._group = group;
+	row._el = $("div", { class: "row", _row: row },
+		$("div", { class: "summary", onclick: () => { select(state.rows.indexOf(row)); toggle(row); } },
+			$("span", { class: `badge ${label(row)}`, textContent: label(row) }),
+			$("span", { class: "id", textContent: row.id }),
+			$("span", { class: "why", textContent: firstLine(row) }),
+			$("span", { class: "seen", textContent: state.seen.has(row.id) ? "seen" : "" })));
+	return row._el;
+};
+
+const eligible = (g) => g.rows.filter((r) => state.seen.has(r.id) && !r.note && (r.rating.verdict === "clean" || r.rating.verdict === "fixed"));
+
+const updateGroup = (g) => {
+	const clean = g.rows.filter((r) => !r.note && (r.rating.verdict === "clean" || r.rating.verdict === "fixed")).length;
+	const n = eligible(g).length;
+	g._count.textContent = `${g.rows.length} rows · ${clean} clean`;
+	g._button.textContent = `Approve all clean (${n} seen)`;
+	g._button.disabled = n === 0;
+	if (!g.rows.length) g._el.remove();
+};
+
+const render = () => {
+	const main = document.getElementById("main");
+	main.replaceChildren();
+	state.rows = [];
+	for (const g of state.groups) {
+		g._count = $("span", { class: "count" });
+		g._button = $("button", { onclick: () => approveClean(g) });
+		g._el = $("section", {}, $("h2", {}, $("span", { textContent: g.name }), g._count, g._button));
+		for (const r of g.rows) {
+			g._el.append(renderRow(r, g));
+			state.rows.push(r);
+		}
+		main.append(g._el);
+		updateGroup(g);
+	}
+	updateMeta();
+};
+
+const updateMeta = () => {
+	const flagged = state.rows.filter((r) => r.rating.verdict === "flag").length;
+	document.getElementById("meta").textContent =
+		`${state.locale} · reviewer ${state.reviewer} · ${state.rows.length} machine units, ${flagged} flagged` +
+		(state.stale ? ` · ${state.stale} stale (redraft first)` : "") +
+		(state.reportAt ? ` · QA report ${state.reportAt.slice(0, 16).replace("T", " ")}` : " · no QA report");
+};
+
+const toggle = (row, open = !row._open) => {
+	row._open = open;
+	if (!open && state.editing === row) state.editing = null;
+	refresh(row);
+};
+
+const select = (i, open = false) => {
+	if (i < 0 || i >= state.rows.length) return;
+	const prev = state.rows[state.current];
+	if (prev && prev !== state.rows[i]) {
+		prev._el.classList.remove("current");
+		if (open && state.editing !== prev) toggle(prev, false);
+	}
+	state.current = i;
+	const row = state.rows[i];
+	row._el.classList.add("current");
+	if (open) toggle(row, true);
+	row._el.scrollIntoView({ block: "start" });
+};
+
+const removeRows = (ids) => {
+	const gone = new Set(ids);
+	const cur = state.rows[state.current];
+	for (const g of state.groups) {
+		const before = g.rows.length;
+		g.rows = g.rows.filter((r) => !gone.has(r.id) || (r._el.remove(), false));
+		if (g.rows.length !== before) updateGroup(g);
+	}
+	state.groups = state.groups.filter((g) => g.rows.length);
+	const idx = state.current;
+	state.rows = state.groups.flatMap((g) => g.rows);
+	state.current = -1;
+	if (state.rows.length) {
+		const keep = cur && !gone.has(cur.id) ? state.rows.indexOf(cur) : Math.min(idx, state.rows.length - 1);
+		select(keep, true);
+	}
+	updateMeta();
+};
+
+const approveRow = async (row, edits) => {
+	try {
+		const { n } = await post("/api/approve", { id: row.id, edits });
+		if (state.editing === row) state.editing = null;
+		removeRows([row.id]);
+		toast(n ? `Approved ${row.id}` : `${row.id} was already reviewed`);
+	} catch (e) { toast(`Refused: ${e.message}`, true); }
+};
+
+const startEdit = (row) => {
+	state.editing = row;
+	row._open = true;
+	refresh(row);
+};
+
+const saveEdit = (row) => {
+	const edits = {};
+	for (const t of row._el.querySelectorAll("textarea")) edits[t._field] = t.value;
+	approveRow(row, edits);
+};
+
+const sendBackRow = async (row) => {
+	const note = prompt(`Send back ${row.id} with a note (empty clears it):`, row.note?.note ?? "");
+	if (note === null) return;
+	try {
+		const { note: saved } = await post("/api/send-back", { id: row.id, note });
+		if (saved) row.note = saved; else delete row.note;
+		refresh(row);
+		updateGroup(row._group);
+		toast(saved ? `Sent back ${row.id}` : `Cleared the note on ${row.id}`);
+	} catch (e) { toast(`Refused: ${e.message}`, true); }
+};
+
+const approveClean = async (g) => {
+	const ids = eligible(g).map((r) => r.id);
+	if (!ids.length || !confirm(`Approve ${ids.length} clean rows you have seen in ${g.name}?`)) return;
+	try {
+		const { approved, skipped } = await post("/api/approve-clean", { ids });
+		removeRows(approved);
+		toast(`Approved ${approved.length}` + (skipped.length ? `\nSkipped ${skipped.length}: ${skipped.slice(0, 3).map((s) => `${s.id} (${s.why})`).join("; ")}` : ""), skipped.length > 0);
+	} catch (e) { toast(`Refused: ${e.message}`, true); }
+};
+
+document.addEventListener("keydown", (e) => {
+	const row = state.rows[state.current];
+	if (state.editing) {
+		if (e.key === "Escape") { state.editing = null; refresh(row); }
+		else if (e.key === "Enter" && (e.ctrlKey || e.metaKey)) { e.preventDefault(); saveEdit(state.editing); }
+		return;
+	}
+	if (e.target.closest?.("input, textarea") || e.ctrlKey || e.metaKey || e.altKey) return;
+	const keys = {
+		j: () => select(state.current + 1, true),
+		k: () => select(Math.max(0, state.current - 1), true),
+		o: () => row && toggle(row),
+		a: () => row && approveRow(row),
+		e: () => row && startEdit(row),
+		s: () => row && sendBackRow(row),
+	};
+	if (keys[e.key]) { e.preventDefault(); keys[e.key](); }
+});
+
+(async () => {
+	try {
+		const res = await fetch("/api/units");
+		const data = await res.json();
+		if (!res.ok) throw new Error(data.error);
+		Object.assign(state, { locale: data.locale, reviewer: data.reviewer, stale: data.stale, reportAt: data.reportAt, groups: data.groups });
+		for (const g of state.groups) for (const r of g.rows) r.locale = data.locale;
+		render();
+		if (state.rows.length) select(0, true);
+	} catch (e) { toast(`Could not load: ${e.message}`, true); }
+})();
+</script>
+</body>
+</html>

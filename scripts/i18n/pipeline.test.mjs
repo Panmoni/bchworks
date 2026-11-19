@@ -12,6 +12,7 @@ import {
 	RefusedError,
 	rebaseRelative,
 	review,
+	reviewMatching,
 	scan,
 } from "./pipeline.mjs";
 import { dntPattern, mask, unmask } from "./protect.mjs";
@@ -469,6 +470,125 @@ describe("review", () => {
 					locale: "es",
 					path: "src/content/post/hello.md",
 					reviewer: "Luis",
+				}),
+			RefusedError,
+		);
+	});
+
+	test("keys review one message and leave the rest of the catalog", () => {
+		const path = "messages/es.json";
+		const n = review({
+			root,
+			locale: "es",
+			path,
+			reviewer: "Luis",
+			keys: ["fresh_key"],
+		});
+		assert.equal(n, 1);
+		const meta = json("messages/meta/es.json");
+		assert.equal(meta.fresh_key.status, "reviewed");
+		assert.equal(meta.fresh_key.reviewer, "Luis");
+		assert.equal(meta.stale_key.status, "machine");
+		assert.equal(meta.handmade_key, undefined);
+	});
+
+	test("keys refuse a stale message and write nothing", () => {
+		const before = rd("messages/meta/es.json");
+		assert.throws(
+			() =>
+				review({
+					root,
+					locale: "es",
+					path: "messages/es.json",
+					reviewer: "Luis",
+					keys: ["stale_key"],
+				}),
+			(e) => e instanceof RefusedError && /stale_key/.test(e.message),
+		);
+		assert.equal(rd("messages/meta/es.json"), before);
+	});
+
+	test("keys narrow an overlay to one field, and refuse it stale", () => {
+		const path = "src/data/i18n/es/glossary.json";
+		const args = { root, locale: "es", path, reviewer: "Luis" };
+		assert.throws(
+			() => review({ ...args, keys: ["fee.definition"] }),
+			(e) => e instanceof RefusedError && /fee\.definition/.test(e.message),
+		);
+		// fee.term is already reviewed against this English: Ana keeps it.
+		assert.equal(review({ ...args, keys: ["fee.term"] }), 0);
+		assert.equal(json(path).fee.term.reviewer, "Ana");
+	});
+
+	test("a content file is one unit: keys are refused", () => {
+		assert.throws(
+			() =>
+				review({
+					root,
+					locale: "es",
+					path: "src/content/post/es/reviewed.md",
+					reviewer: "Luis",
+					keys: ["title"],
+				}),
+			(e) => e instanceof RefusedError && /one unit/.test(e.message),
+		);
+	});
+
+	test("a content file reviewed against this English keeps its reviewer", () => {
+		const path = "src/content/post/es/reviewed.md";
+		const before = rd(path);
+		assert.equal(review({ root, locale: "es", path, reviewer: "Luis" }), 0);
+		assert.equal(rd(path), before);
+	});
+});
+
+describe("reviewMatching (--only)", () => {
+	const run = (only) =>
+		reviewMatching({
+			root,
+			locale: "es",
+			locales: LOCALES,
+			only,
+			reviewer: "Luis",
+		});
+
+	test("reviews every matching file and reports the refused ones", async () => {
+		await draft({
+			root,
+			locale: "es",
+			todo: scan({ root, locale: "es", locales: LOCALES }).todo,
+			translator: fake(),
+		});
+		const { reviewed, refused } = run("src/content/post/es/*");
+		const n = Object.fromEntries(reviewed.map((r) => [r.path, r.n]));
+		assert.equal(n["src/content/post/es/hello.md"], 1);
+		assert.equal(n["src/content/post/es/reviewed.md"], 0, "Ana keeps hers");
+		assert.deepEqual(
+			refused.map((r) => r.path),
+			["src/content/post/es/changed.md"],
+		);
+		assert.match(refused[0].message, /English changed/);
+		const hello = "src/content/post/es/hello.md";
+		assert.equal(parseDoc(rd(hello), hello).data.translation.reviewer, "Luis");
+		assert.ok(!reviewed.some((r) => r.path === "messages/es.json"));
+	});
+
+	test("matches nothing outside the glob", () => {
+		assert.deepEqual(run("src/content/nothing/**"), {
+			reviewed: [],
+			refused: [],
+		});
+	});
+
+	test("names its reviewer", () => {
+		assert.throws(
+			() =>
+				reviewMatching({
+					root,
+					locale: "es",
+					locales: LOCALES,
+					only: "**",
+					reviewer: " ",
 				}),
 			RefusedError,
 		);

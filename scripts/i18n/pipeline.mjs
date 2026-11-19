@@ -574,11 +574,22 @@ const reviewedMeta = (old, hash, reviewer) => ({
  * current English. `path` is the translation file: a content translation,
  * messages/<locale>.json or an overlay. Every unit in it is reviewed except
  * one already reviewed against the current English, which keeps its
- * reviewer. Returns the number of units stamped.
+ * reviewer. `keys` narrows a catalog to those message keys, or an overlay to
+ * those `<id>.<field>` units; a content file is one unit. Returns the number
+ * of units stamped. The CLI, its `--only` and the review console all approve
+ * through this one function.
  */
-export const review = ({ root, locale, path, reviewer, rechecked = false }) => {
+export const review = ({
+	root,
+	locale,
+	path,
+	reviewer,
+	rechecked = false,
+	keys: only,
+}) => {
 	if (!reviewer?.trim()) throw new RefusedError("a review names its reviewer");
 	const p = relative(root, join(root, path));
+	const picked = (key) => !only || only.includes(key);
 
 	if (p === catalogPath(locale)) {
 		const en = englishCatalog(root);
@@ -586,7 +597,7 @@ export const review = ({ root, locale, path, reviewer, rechecked = false }) => {
 		const meta = readJson(root, catalogMetaPath(locale), {});
 		const hash = (k) => hashSource(JSON.stringify(en[k]));
 		const keys = Object.keys(tr).filter(
-			(k) => k in en && !reviewedFresh(meta[k], hash(k)),
+			(k) => k in en && picked(k) && !reviewedFresh(meta[k], hash(k)),
 		);
 		const stale = keys.filter((k) => meta[k]?.sourceHash !== hash(k));
 		if (stale.length && !rechecked) refuseStale(p, stale);
@@ -606,6 +617,7 @@ export const review = ({ root, locale, path, reviewer, rechecked = false }) => {
 		const units = Object.entries(overlay).flatMap(([id, fields]) =>
 			Object.keys(fields)
 				.filter((f) => typeof records.get(id)?.[f] === "string")
+				.filter((f) => picked(`${id}.${f}`))
 				.map((f) => ({ id, f, hash: hashSource(records.get(id)[f]) }))
 				.filter((u) => !reviewedFresh(fields[u.f], u.hash)),
 		);
@@ -630,6 +642,7 @@ export const review = ({ root, locale, path, reviewer, rechecked = false }) => {
 			`${p} is not a ${locale} translation: expected ${catalogPath(locale)}, ` +
 				`${overlayDir}<file>.json or ${PATHS.content}/<collection>/${locale}/…`,
 		);
+	if (only) throw new RefusedError(`${p} is one unit: review it without keys`);
 	if (!existsSync(join(root, p))) throw new RefusedError(`${p} does not exist`);
 	const source = [...parts.slice(0, at), ...parts.slice(at + 1)].join("/");
 	if (!existsSync(join(root, source)))
@@ -637,6 +650,7 @@ export const review = ({ root, locale, path, reviewer, rechecked = false }) => {
 	const hash = hashSource(read(root, source));
 	const text = read(root, p);
 	const old = parseDoc(text, p).data.translation;
+	if (reviewedFresh(old, hash)) return 0;
 	if (old?.sourceHash !== hash && !rechecked) refuseStale(p, [source]);
 	write(
 		root,
@@ -644,6 +658,48 @@ export const review = ({ root, locale, path, reviewer, rechecked = false }) => {
 		replaceTranslationBlock(text, p, reviewedMeta(old, hash, reviewer)),
 	);
 	return 1;
+};
+
+/** Every translation file of `locale`: the catalog, overlays, content. */
+export const translationFiles = ({ root, locale, locales }) => {
+	const overlays = Object.keys(OVERLAY_FIELDS).map(
+		(file) => `${PATHS.overlays}/${locale}/${file}.json`,
+	);
+	const content = [...contentSources({ root, locale, locales })].map(
+		(s) => s.target,
+	);
+	return [catalogPath(locale), ...overlays, ...content].filter((p) =>
+		existsSync(join(root, p)),
+	);
+};
+
+/**
+ * `review` of every translation file of `locale` that matches the `only`
+ * glob. A refused file is reported and the rest still go through. Returns
+ * `{ reviewed: [{ path, n }], refused: [{ path, message }] }`.
+ */
+export const reviewMatching = ({
+	root,
+	locale,
+	locales,
+	only,
+	reviewer,
+	rechecked = false,
+}) => {
+	if (!reviewer?.trim()) throw new RefusedError("a review names its reviewer");
+	const reviewed = [];
+	const refused = [];
+	for (const path of translationFiles({ root, locale, locales })) {
+		if (!matchesGlob(path, only)) continue;
+		try {
+			const n = review({ root, locale, path, reviewer, rechecked });
+			reviewed.push({ path, n });
+		} catch (e) {
+			if (!(e instanceof RefusedError)) throw e;
+			refused.push({ path, message: e.message });
+		}
+	}
+	return { reviewed, refused };
 };
 
 // Rewrites only the `translation:` block, so a reviewer's own formatting of

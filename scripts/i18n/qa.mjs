@@ -460,9 +460,10 @@ const vet = (seg, review, dnt) => {
 /**
  * Writes a unit's fixes (`fixes` maps a field to its text) and, when `stamp`,
  * its qaHash. A unit the model did not fully review is not stamped, so the
- * next run sends it again.
+ * next run sends it again. The review console writes a reviewer's edits
+ * through it too, unstamped.
  */
-const apply = (root, locale, unit, fixes, stamp) => {
+export const apply = (root, locale, unit, fixes, stamp) => {
 	if (!fixes.size && !stamp) return;
 	const segments = unit.segments.map((s) =>
 		fixes.has(s.field) ? { ...s, es: fixes.get(s.field) } : s,
