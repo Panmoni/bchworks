@@ -1,0 +1,39 @@
+---
+// A legal page (privacy policy, terms), English or translated (PAN-387). A
+// translation carries a notice, from the message catalog, that the English
+// text governs, so every non-English locale shows it without the translator
+// typing it.
+import { render } from "astro:content";
+import { DEFAULT_LOCALE, type LocaleCode } from "~/i18n/locales";
+import { m, msg } from "~/i18n/messages";
+import MarkdownLayout from "~/layouts/MarkdownLayout.astro";
+import { getTranslationState } from "~/utils/l10n";
+import { getPageEntry } from "~/utils/pages";
+
+export interface Props {
+	/** The `pages` entry id, which is also the English path: privacy-policy, terms-conditions. */
+	id: string;
+	locale?: LocaleCode;
+}
+
+const { id, locale = DEFAULT_LOCALE } = Astro.props;
+const entry = await getPageEntry(id, locale);
+if (!entry) throw new Error(`pages entry "${id}" is missing in ${locale}`);
+const { Content } = await render(entry);
+const translated = locale !== DEFAULT_LOCALE;
+const translation = translated
+	? await getTranslationState("pages", id, locale)
+	: null;
+const l = msg(Astro.currentLocale);
+---
+
+<MarkdownLayout frontmatter={entry.data} translation={translation}>
+  {translated && (
+    <p class="not-prose rounded border-2 border-line bg-soft px-4 py-3 text-base" role="note" data-legal-notice>
+      {m.legal_english_governs({}, l)}
+      {" "}
+      <a class="font-bold underline underline-offset-4" href={`/${id}`} hreflang={DEFAULT_LOCALE} data-locale-switch={DEFAULT_LOCALE}>{m.legal_english_governs_link({}, l)}</a>
+    </p>
+  )}
+  <Content />
+</MarkdownLayout>

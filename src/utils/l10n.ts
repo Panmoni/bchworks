@@ -155,3 +155,38 @@ export const englishData = (currentLocale: string | undefined) =>
 	currentLocale && currentLocale !== DEFAULT_LOCALE
 		? { lang: DEFAULT_LOCALE, "data-l10n-fallback": true }
 		: {};
+
+export interface ListedEntry<C extends LocalizedCollection> {
+	entry: CollectionEntry<C>;
+	/** The entry's data in the page's locale, or English when it has no translation. */
+	data: CollectionEntry<C>["data"];
+	/** English shown on a non-English page: render its words inside englishData(). */
+	fallback: boolean;
+}
+
+/**
+ * English `entries` of `collection` as an index page lists them in `locale`
+ * (PAN-387): a translated entry's own words, else the English words marked
+ * as a fallback fragment. Links stay English; the build rewrites them to the
+ * locale page where one exists (src/i18n/links.mjs).
+ */
+export const listLocalized = async <C extends LocalizedCollection>(
+	collection: C,
+	entries: CollectionEntry<C>[],
+	locale: string | undefined,
+): Promise<ListedEntry<C>[]> =>
+	Promise.all(
+		entries.map(async (entry) => {
+			const t =
+				locale && locale !== DEFAULT_LOCALE
+					? await getLocalizedEntry(collection, entry.id, locale as LocaleCode)
+					: null;
+			return {
+				entry,
+				// A translation has the English fields plus its `translation` block.
+				data: ((t as { data?: unknown } | null)?.data ??
+					entry.data) as CollectionEntry<C>["data"],
+				fallback: !!locale && locale !== DEFAULT_LOCALE && !t,
+			};
+		}),
+	);

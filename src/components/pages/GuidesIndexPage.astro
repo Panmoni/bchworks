@@ -1,0 +1,61 @@
+---
+// The /guides page, English or translated (PAN-387). The routes
+// src/pages/guides/index.astro and src/pages/[locale]/[page].astro pass the copy.
+import { getCollection } from "astro:content";
+import Freshness from "~/components/reference/Freshness.astro";
+import InnerTitle from "~/components/widgets/InnerTitle.astro";
+import Layout from "~/layouts/PageLayout.astro";
+import { listLocalized, type TranslationState } from "~/utils/l10n";
+import type { PageCopy } from "~/utils/pages";
+
+interface Props {
+	/** The page copy for this locale (src/content/pages/[<locale>/]guides-index). */
+	copy: PageCopy;
+	/** Set on a translated page: drives its <TranslationNotice>. */
+	translation?: TranslationState | null;
+}
+
+const { copy, translation = null } = Astro.props;
+const metadata = { ...copy.metadata, ignoreTitleTemplate: true };
+
+const locale = Astro.currentLocale;
+// A guide's words are in its translation's language, else in the guide's own
+// `lang` (the Venezuela guide is written in Spanish): only words in neither
+// the page's language nor a translation are a fallback fragment.
+const guides = (
+	await listLocalized(
+		"guides",
+		(await getCollection("guides")).sort((a, b) => a.id.localeCompare(b.id)),
+		locale,
+	)
+).map((i) => ({
+	...i,
+	lang: i.fallback ? i.entry.data.lang : (locale ?? i.entry.data.lang),
+	fallback: i.fallback && i.entry.data.lang !== locale,
+}));
+const langName = { en: "English", es: "Español", pt: "Português" };
+---
+
+<Layout metadata={metadata} translation={translation}>
+  <InnerTitle>
+    <Fragment slot="title">{copy.hero.title}</Fragment>
+    <Fragment slot="subtitle">{copy.hero.subtitle}</Fragment>
+  </InnerTitle>
+  <section class="max-w-5xl mx-auto px-4 sm:px-6 py-8">
+    <ul class="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+      {
+        guides.map((g) => (
+          <li>
+            <a class="wb-card wb-card-hover block p-5 h-full" href={`/guides/${g.entry.id}`} hreflang={g.lang}>
+              <span class="text-4xl" aria-hidden="true">{g.entry.data.flag}</span>
+              <span class="block font-heading text-xl font-extrabold mt-2" lang={g.lang} data-l10n-fallback={g.fallback || undefined}>{g.data.country}</span>
+              <span class="block font-mono text-xs text-muted">{langName[g.lang as keyof typeof langName] ?? g.lang}</span>
+              <span class="block text-sm text-muted mt-2" lang={g.lang} data-l10n-fallback={g.fallback || undefined}>{g.data.description}</span>
+              <Freshness class="mt-3" date={g.entry.data.verified} lang={g.lang} />
+            </a>
+          </li>
+        ))
+      }
+    </ul>
+  </section>
+</Layout>

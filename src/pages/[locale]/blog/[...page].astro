@@ -1,0 +1,50 @@
+---
+// /<code>/blog[/<n>]: the posts translated into a locale, newest first
+// (PAN-387). Built only for a locale with blog-page copy and at least one
+// translated post: an untranslated post has no locale route, so it is not
+// listed (docs/i18n.md, "Fallback policy").
+import type { GetStaticPaths, InferGetStaticPropsType } from "astro";
+import BlogListPage from "~/components/pages/BlogListPage.astro";
+import { DEFAULT_LOCALE, LOCALES } from "~/i18n/locales";
+import {
+	blogPostsPerPage,
+	fetchLocalizedPosts,
+	isBlogEnabled,
+	isBlogListRouteEnabled,
+} from "~/utils/blog";
+import { getTranslationState } from "~/utils/l10n";
+import { getPageEntry, type PageCopy } from "~/utils/pages";
+import { BLOG_BASE } from "~/utils/permalinks";
+
+export const prerender = true;
+
+export const getStaticPaths = (async ({ paginate }) => {
+	if (!isBlogEnabled || !isBlogListRouteEnabled) return [];
+	// This file's directory is the list path; English reads it from config.
+	if (BLOG_BASE !== "blog")
+		throw new Error(`Move src/pages/[locale]/blog/ to /${BLOG_BASE}/`);
+	const paths = [];
+	for (const { code } of LOCALES.filter((l) => l.code !== DEFAULT_LOCALE)) {
+		const entry = await getPageEntry("blog-page", code);
+		const posts = await fetchLocalizedPosts(code);
+		if (!entry || !posts.length) continue;
+		paths.push(
+			...paginate(posts, {
+				params: { locale: code },
+				pageSize: blogPostsPerPage,
+				props: {
+					copy: entry.data as PageCopy,
+					translation: await getTranslationState("pages", "blog-page", code),
+				},
+			}),
+		);
+	}
+	return paths;
+}) satisfies GetStaticPaths;
+
+type Props = InferGetStaticPropsType<typeof getStaticPaths>;
+
+const { page, copy, translation } = Astro.props as Props;
+---
+
+<BlogListPage page={page} copy={copy} translation={translation} />

@@ -1,38 +1,8 @@
 ---
-import Features2 from "~/components/widgets/Features2.astro";
-import HeroText from "~/components/widgets/HeroText.astro";
-import Layout from "~/layouts/PageLayout.astro";
+import ContactPage from "~/components/pages/ContactPage.astro";
 import { getPageCopy } from "~/utils/pages";
 
 const copy = await getPageCopy("contact");
-const metadata = copy.metadata;
-const channels: { title: string; text: string; note: string; href: string }[] =
-	copy.channels;
 ---
 
-<Layout metadata={metadata}>
-  <HeroText tagline={copy.hero.tagline} title={copy.hero.title} />
-
-  <section class="max-w-4xl mx-auto px-4 sm:px-6 pb-8">
-    <p class="text-xl text-muted mb-6" set:html={copy.intro} />
-    <ul class="grid gap-5 sm:grid-cols-2">
-      {
-        channels.map((c) => (
-          <li>
-            <a
-              class="wb-card wb-card-hover flex flex-col gap-2 p-6 h-full"
-              href={c.href}
-              {...(c.href.startsWith('http') ? { target: '_blank', rel: 'noopener noreferrer' } : {})}
-            >
-              <span class="font-mono text-xs uppercase text-muted">{c.title}</span>
-              <span class="font-heading text-2xl font-extrabold tracking-tight break-all">{c.text}</span>
-              <span class="text-muted">{c.note}</span>
-            </a>
-          </li>
-        ))
-      }
-    </ul>
-  </section>
-
-  <Features2 title={copy.send.title} items={copy.send.items} />
-</Layout>
+<ContactPage copy={copy} />

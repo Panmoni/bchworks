@@ -1,11 +1,5 @@
 ---
-import { render } from "astro:content";
-import MarkdownLayout from "~/layouts/MarkdownLayout.astro";
-import { getPageEntry } from "~/utils/pages";
-
-// biome-ignore lint/style/noNonNullAssertion: getPageEntry throws for English
-const entry = (await getPageEntry("terms-conditions", "en"))!;
-const { Content } = await render(entry);
+import LegalPage from "~/components/pages/LegalPage.astro";
 ---
 
-<MarkdownLayout frontmatter={entry.data}><Content /></MarkdownLayout>
+<LegalPage id="terms-conditions" />

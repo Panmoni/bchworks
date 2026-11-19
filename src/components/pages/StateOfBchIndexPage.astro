@@ -1,0 +1,62 @@
+---
+// The /state-of-bch page, English or translated (PAN-387). The routes
+// src/pages/state-of-bch/index.astro and src/pages/[locale]/[page].astro pass the copy.
+import { getCollection } from "astro:content";
+import BchVitals from "~/components/reference/BchVitals.astro";
+import RealNumbers from "~/components/reference/RealNumbers.astro";
+import InnerTitle from "~/components/widgets/InnerTitle.astro";
+import Layout from "~/layouts/PageLayout.astro";
+import {
+	englishData,
+	listLocalized,
+	type TranslationState,
+} from "~/utils/l10n";
+import type { PageCopy } from "~/utils/pages";
+
+interface Props {
+	/** The page copy for this locale (src/content/pages/[<locale>/]state-of-bch-index). */
+	copy: PageCopy;
+	/** Set on a translated page: drives its <TranslationNotice>. */
+	translation?: TranslationState | null;
+}
+
+const { copy, translation = null } = Astro.props;
+const metadata = { ...copy.metadata, ignoreTitleTemplate: true };
+
+const reports = await listLocalized(
+	"reports",
+	(await getCollection("reports")).sort((a, b) =>
+		b.data.month.localeCompare(a.data.month),
+	),
+	Astro.currentLocale,
+);
+---
+
+<Layout metadata={metadata} translation={translation}>
+  <InnerTitle>
+    <Fragment slot="title">{copy.hero.title}</Fragment>
+    <Fragment slot="subtitle">{copy.hero.subtitle}</Fragment>
+  </InnerTitle>
+  <section class="max-w-5xl mx-auto px-4 sm:px-6 py-8">
+    <BchVitals />
+    <RealNumbers />
+    <h2 class="font-heading text-3xl font-extrabold tracking-tight mt-10 mb-4">{copy.reports.title}</h2>
+    {
+      reports.length ? (
+        <ul class="grid gap-3 sm:grid-cols-2">
+          {reports.map((i) => (
+            <li>
+              <a class="wb-card wb-card-hover block p-5" href={`/state-of-bch/${i.entry.data.month}`}>
+                <span class="font-mono text-xs text-muted">{i.entry.data.month}</span>
+                <span class="block font-heading text-xl font-extrabold" {...(i.fallback ? englishData(Astro.currentLocale) : {})}>{i.data.title}</span>
+                <span class="block text-sm text-muted mt-1" {...(i.fallback ? englishData(Astro.currentLocale) : {})}>{i.data.description}</span>
+              </a>
+            </li>
+          ))}
+        </ul>
+      ) : (
+        <p class="text-muted">{copy.reports.empty}</p>
+      )
+    }
+  </section>
+</Layout>

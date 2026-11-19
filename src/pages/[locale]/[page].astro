@@ -1,14 +1,18 @@
 ---
-// The translated top-level pages at /<locale>/<slug> (PAN-386). A path is
-// listed only where the locale's entry exists (docs/i18n.md, "Fallback
-// policy"): src/content/pages/<locale>/<slug> for a page body, or
-// src/content/reference/<locale>/<slug>.md for a reference article.
+// The translated top-level pages at /<locale>/<slug> (PAN-386, PAN-387). A
+// path is listed only where the locale's entry exists (docs/i18n.md,
+// "Fallback policy"): src/content/pages/<locale>/<id> for a page body or the
+// legal text, or src/content/reference/<locale>/<slug>.md for a reference
+// article.
 import type { GetStaticPaths, InferGetStaticPropsType } from "astro";
 import {
+	LOCALIZED_LEGAL,
 	LOCALIZED_PAGES,
 	LOCALIZED_REFERENCE,
 	type LocalizedPageSlug,
+	pageCopyId,
 } from "~/components/pages";
+import LegalPage from "~/components/pages/LegalPage.astro";
 import ReferencePage from "~/components/reference/ReferencePage.astro";
 import { DEFAULT_LOCALE, LOCALES, type LocaleCode } from "~/i18n/locales";
 import { getLocalizedEntry, getTranslationState } from "~/utils/l10n";
@@ -18,7 +22,8 @@ export const getStaticPaths = (async () => {
 	const paths = [];
 	for (const { code } of LOCALES.filter((l) => l.code !== DEFAULT_LOCALE)) {
 		for (const slug of Object.keys(LOCALIZED_PAGES) as LocalizedPageSlug[]) {
-			const entry = await getPageEntry(slug, code);
+			const id = pageCopyId(slug);
+			const entry = await getPageEntry(id, code);
 			if (entry)
 				paths.push({
 					params: { locale: code, page: slug },
@@ -26,7 +31,7 @@ export const getStaticPaths = (async () => {
 						kind: "page" as const,
 						slug,
 						copy: entry.data as PageCopy,
-						translation: await getTranslationState("pages", slug, code),
+						translation: await getTranslationState("pages", id, code),
 					},
 				});
 		}
@@ -35,6 +40,13 @@ export const getStaticPaths = (async () => {
 				paths.push({
 					params: { locale: code, page: slug },
 					props: { kind: "reference" as const, slug, locale: code },
+				});
+		}
+		for (const slug of LOCALIZED_LEGAL) {
+			if (await getPageEntry(slug, code))
+				paths.push({
+					params: { locale: code, page: slug },
+					props: { kind: "legal" as const, slug, locale: code },
 				});
 		}
 	}
@@ -52,5 +64,7 @@ const Page = props.kind === "page" ? LOCALIZED_PAGES[props.slug] : null;
     <Page copy={props.copy} translation={props.translation} />
   ) : props.kind === "reference" ? (
     <ReferencePage id={props.slug} locale={props.locale as LocaleCode} />
+  ) : props.kind === "legal" ? (
+    <LegalPage id={props.slug} locale={props.locale as LocaleCode} />
   ) : null
 }

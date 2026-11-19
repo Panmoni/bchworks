@@ -2,15 +2,18 @@
 import Layout from "~/layouts/PageLayout.astro";
 
 import type { MetaData } from "~/types";
+import type { TranslationState } from "~/utils/l10n";
 
 export interface Props {
 	frontmatter: {
 		title?: string;
 		description?: string;
 	};
+	/** Set on a translated page: shows its <TranslationNotice>. */
+	translation?: TranslationState | null;
 }
 
-const { frontmatter } = Astro.props;
+const { frontmatter, translation = null } = Astro.props;
 
 const metadata: MetaData = {
 	title: frontmatter?.title,
@@ -18,7 +21,7 @@ const metadata: MetaData = {
 };
 ---
 
-<Layout metadata={metadata}>
+<Layout metadata={metadata} translation={translation}>
   <section class="px-4 sm:px-6 py-16 lg:py-20 mx-auto max-w-7xl">
     <h1 class="max-w-4xl font-extrabold font-heading text-4xl sm:text-5xl md:text-6xl leading-none tracking-[-0.04em] wrap-break-word">{frontmatter.title}</h1>
     <div
