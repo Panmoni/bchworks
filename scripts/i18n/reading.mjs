@@ -76,6 +76,15 @@ export const blocks = (md) => {
 	return out;
 };
 
+/** A body's link reference definitions, ready to append to one paragraph. */
+const linkRefs = (md) =>
+	md
+		.split(/\r?\n/)
+		.filter((l) => /^ {0,3}\[[^\]]+\]:\s*\S/.test(l))
+		.map((l) => `\n${l}`)
+		.join("")
+		.replace(/^\n/, "\n\n");
+
 const ESCAPES = {
 	"&": "&amp;",
 	"<": "&lt;",
@@ -180,8 +189,12 @@ const unitRows = async (unit, md, report) => {
 			continue;
 		}
 		if (unit.segments.length > 1 || flag) rows.push({ label: "body", flag });
+		// Each paragraph renders alone, so each carries the body's link
+		// reference definitions (`[1]: https://…`) or `[text][1]` breaks.
 		const en = blocks(seg.en);
 		const es = blocks(seg.es);
+		const enRefs = linkRefs(seg.en);
+		const esRefs = linkRefs(seg.es);
 		const pairs =
 			en.length === es.length
 				? en.map((e, i) => [e, es[i]])
@@ -189,8 +202,8 @@ const unitRows = async (unit, md, report) => {
 		for (const [e, s] of pairs)
 			rows.push({
 				md: true,
-				en: (await md.render(e)).code,
-				es: (await md.render(s)).code,
+				en: (await md.render(e + enRefs)).code,
+				es: (await md.render(s + esRefs)).code,
 			});
 		if (en.length !== es.length)
 			rows.at(-1).warn =
@@ -329,7 +342,7 @@ const page = ({ locale, areas, summary, stale, nonce, reportAt, now }) => {
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<meta http-equiv="Content-Security-Policy" content="default-src 'none'; img-src data: https:; style-src 'unsafe-inline'; script-src 'nonce-${nonce}'">
+<meta http-equiv="Content-Security-Policy" content="default-src 'none'; img-src data:; style-src 'unsafe-inline'; script-src 'nonce-${nonce}'; base-uri 'none'; form-action 'none'">
 <title>Reading copy: ${esc(locale)}</title>
 <style>${CSS}</style>
 </head>
@@ -443,7 +456,8 @@ document.getElementById("export").addEventListener("click", () => {
 	setTimeout(() => URL.revokeObjectURL(url), 1000);
 });
 const show = () => {
-	const id = decodeURIComponent(location.hash.slice(1));
+	let id = "";
+	try { id = decodeURIComponent(location.hash.slice(1)); } catch {}
 	const target = id && document.getElementById("area-" + id);
 	const area = target && target.tagName === "SECTION" ? target : document.getElementById("index");
 	for (const s of document.querySelectorAll("main>section")) s.hidden = s !== area;

@@ -205,6 +205,30 @@ describe("buildReading", () => {
 		assert.match(html, /<script nonce="TESTNONCE">/);
 	});
 
+	test("raw HTML in a Markdown body cannot redirect or load from the network", async () => {
+		const { html } = await build();
+		assert.match(html, /base-uri 'none'; form-action 'none'/);
+		assert.match(html, /img-src data:;/);
+	});
+
+	test("a paragraph keeps the body's reference links", async () => {
+		const en =
+			"---\ntitle: Get a wallet\n---\nSee [the docs][1].\n\nMore.\n\n[1]: https://example.com/\n";
+		wr("src/content/post/hello.md", en);
+		wr(
+			POST,
+			"---\ntitle: Consigue una billetera\ntranslation:\n" +
+				`  sourceHash: ${hashSource(en)}\n  status: machine\n  translator: Claude\n` +
+				"---\nMira [la documentación][1].\n\nMás.\n\n[1]: https://example.com/\n",
+		);
+		const post = article((await build()).html, POST);
+		assert.match(post, /<a href="https:\/\/example.com\/">the docs<\/a>/);
+		assert.match(
+			post,
+			/<a href="https:\/\/example.com\/">la documentación<\/a>/,
+		);
+	});
+
 	test("--only narrows the copy", async () => {
 		const { areas } = await build({ only: "src/content/**" });
 		assert.deepEqual(
