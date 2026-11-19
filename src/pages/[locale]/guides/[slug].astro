@@ -1,0 +1,57 @@
+---
+// /<code>/guides/<slug>: a translated country guide (PAN-388). Only a guide
+// with a translation in src/content/guides/<code>/ gets a route. A guide
+// written in that language (Venezuela in Spanish) is its own original at
+// /guides/<slug> and has none (docs/i18n.md, "Fallback policy").
+import { type CollectionEntry, getCollection, render } from "astro:content";
+import type { GetStaticPaths, InferGetStaticPropsType } from "astro";
+import ArticleShell from "~/components/reference/ArticleShell.astro";
+import { DEFAULT_LOCALE, LOCALES } from "~/i18n/locales";
+import { getLocalizedEntry, getTranslationState } from "~/utils/l10n";
+
+export const getStaticPaths = (async () => {
+	const guides = await getCollection("guides");
+	const paths = [];
+	for (const { code } of LOCALES.filter((l) => l.code !== DEFAULT_LOCALE)) {
+		for (const guide of guides) {
+			const entry = await getLocalizedEntry("guides", guide.id, code);
+			if (!entry) continue;
+			paths.push({
+				params: { locale: code, slug: guide.id },
+				props: {
+					entry,
+					guide,
+					translation: await getTranslationState("guides", guide.id, code),
+				},
+			});
+		}
+	}
+	return paths;
+}) satisfies GetStaticPaths;
+
+type Props = InferGetStaticPropsType<typeof getStaticPaths>;
+
+const { entry, guide, translation } = Astro.props as Props;
+const { Content } = await render(entry);
+// getLocalizedEntry's union leaves data untyped; it is a guide's, minus lang.
+const d = entry.data as Omit<CollectionEntry<"guides">["data"], "lang">;
+const locale = Astro.currentLocale ?? DEFAULT_LOCALE;
+const back = {
+	en: "Country guides",
+	es: "Guías por país",
+	pt: "Guias por país",
+};
+---
+
+<ArticleShell
+  title={d.title}
+  description={d.description}
+  verified={d.verified}
+  lang={locale}
+  eyebrow={`<a href="/guides">${back[locale as keyof typeof back] ?? back.en}</a> · ${guide.data.flag} ${d.country}`}
+  faq={d.faq}
+  sources={d.sources}
+  translation={translation}
+>
+  <Content />
+</ArticleShell>

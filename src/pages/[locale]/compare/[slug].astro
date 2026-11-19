@@ -1,0 +1,60 @@
+---
+// /<code>/compare/<slug>: a translated comparison (PAN-388). A route exists
+// only where both the entry and the page copy (src/content/pages/<code>/
+// compare-entry.yaml) are translated (docs/i18n.md, "Fallback policy").
+import { type CollectionEntry, getCollection, render } from "astro:content";
+import type { GetStaticPaths, InferGetStaticPropsType } from "astro";
+import ArticleShell from "~/components/reference/ArticleShell.astro";
+import RealNumbers from "~/components/reference/RealNumbers.astro";
+import { DEFAULT_LOCALE, LOCALES } from "~/i18n/locales";
+import { getLocalizedEntry, getTranslationState } from "~/utils/l10n";
+import { getPageEntry, type PageCopy } from "~/utils/pages";
+import { type ChainId, metrics } from "~/utils/reference";
+
+export const getStaticPaths = (async () => {
+	const entries = await getCollection("compare");
+	const paths = [];
+	for (const { code } of LOCALES.filter((l) => l.code !== DEFAULT_LOCALE)) {
+		const copy = await getPageEntry("compare-entry", code);
+		if (!copy) continue;
+		for (const english of entries) {
+			const entry = await getLocalizedEntry("compare", english.id, code);
+			if (!entry) continue;
+			paths.push({
+				params: { locale: code, slug: english.id },
+				props: {
+					entry,
+					copy: copy.data as PageCopy,
+					translation: await getTranslationState("compare", english.id, code),
+				},
+			});
+		}
+	}
+	return paths;
+}) satisfies GetStaticPaths;
+
+type Props = InferGetStaticPropsType<typeof getStaticPaths>;
+
+const { entry, copy, translation } = Astro.props as Props;
+const { Content } = await render(entry);
+// getLocalizedEntry's union leaves data untyped; it is a comparison's.
+const d = entry.data as Omit<CollectionEntry<"compare">["data"], "lang">;
+const rival = d.ticker.toLowerCase();
+const compare = (rival in metrics.chains ? [rival] : []) as ChainId[];
+---
+
+<ArticleShell
+  title={d.title}
+  description={d.description}
+  verified={d.verified}
+  lang={Astro.currentLocale}
+  eyebrow={copy.eyebrow.replaceAll('{ticker}', () => d.ticker)}
+  faq={d.faq}
+  sources={d.sources}
+  translation={translation}
+>
+  <Fragment slot="before">
+    <RealNumbers compare={compare} title={copy.numbers.replaceAll('{ticker}', () => d.ticker)} />
+  </Fragment>
+  <Content />
+</ArticleShell>

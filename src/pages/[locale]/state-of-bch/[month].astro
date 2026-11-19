@@ -1,0 +1,54 @@
+---
+// /<code>/state-of-bch/<month>: a translated monthly report (PAN-388). A
+// route exists only where both the report and the page copy
+// (src/content/pages/<code>/state-of-bch-entry.yaml) are translated
+// (docs/i18n.md, "Fallback policy").
+import { type CollectionEntry, getCollection, render } from "astro:content";
+import type { GetStaticPaths, InferGetStaticPropsType } from "astro";
+import ArticleShell from "~/components/reference/ArticleShell.astro";
+import { DEFAULT_LOCALE, LOCALES } from "~/i18n/locales";
+import { getLocalizedEntry, getTranslationState } from "~/utils/l10n";
+import { getPageEntry, type PageCopy } from "~/utils/pages";
+
+export const getStaticPaths = (async () => {
+	const reports = await getCollection("reports");
+	const paths = [];
+	for (const { code } of LOCALES.filter((l) => l.code !== DEFAULT_LOCALE)) {
+		const copy = await getPageEntry("state-of-bch-entry", code);
+		if (!copy) continue;
+		for (const report of reports) {
+			const entry = await getLocalizedEntry("reports", report.id, code);
+			if (!entry) continue;
+			paths.push({
+				params: { locale: code, month: report.data.month },
+				props: {
+					entry,
+					copy: copy.data as PageCopy,
+					translation: await getTranslationState("reports", report.id, code),
+				},
+			});
+		}
+	}
+	return paths;
+}) satisfies GetStaticPaths;
+
+type Props = InferGetStaticPropsType<typeof getStaticPaths>;
+
+const { entry, copy, translation } = Astro.props as Props;
+const { Content } = await render(entry);
+// getLocalizedEntry's union leaves data untyped; it is a report's.
+const d = entry.data as Omit<CollectionEntry<"reports">["data"], "lang">;
+---
+
+<ArticleShell
+  title={d.title}
+  description={d.description}
+  verified={d.verified}
+  lang={Astro.currentLocale}
+  eyebrow={copy.eyebrow.replaceAll('{month}', () => d.month)}
+  faq={d.faq}
+  sources={d.sources}
+  translation={translation}
+>
+  <Content />
+</ArticleShell>

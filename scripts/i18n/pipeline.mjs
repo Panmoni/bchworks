@@ -44,7 +44,8 @@ export const OVERLAY_FIELDS = {
 // only these keys are translated. Not `position`: a CHIP stakeholder's
 // position is an enum the schema checks (support, oppose…), found by the
 // pseudo-locale build (PAN-383). Page copy (`pages`) is all words except
-// the identifier keys the page code reads.
+// the identifier keys the page code reads. `q` and `a` are an article's FAQ
+// items, which feed its FAQPage JSON-LD; `country` is a guide's (PAN-388).
 const FRONTMATTER_KEYS = new Set([
 	"title",
 	"description",
@@ -61,6 +62,9 @@ const FRONTMATTER_KEYS = new Set([
 	"heading",
 	"text",
 	"label",
+	"q",
+	"a",
+	"country",
 ]);
 const NEVER_KEYS = new Set(["translation", "lang", "slug", "canonical"]);
 

@@ -76,6 +76,7 @@ describe("scan", () => {
 			"catalog:blocks:missing",
 			"catalog:greeting:missing",
 			"catalog:stale_key:stale",
+			"content:src/content/guides/es/kenya.md:missing",
 			"content:src/content/pages/es/about.yaml:missing",
 			"content:src/content/post/es/hello.md:missing",
 			"overlay:fee.definition:stale",
@@ -168,6 +169,25 @@ describe("draft", () => {
 			overlay.fee.definition.text,
 			"WHATÑ AÑ TRANSACTIONÑ PAYSÑ MINERSÑ.",
 		);
+	});
+
+	test("translates an article's FAQ and country, keeps its data", async () => {
+		await run();
+		const { data, body } = parseDoc(
+			rd("src/content/guides/es/kenya.md"),
+			"x.md",
+		);
+		assert.equal(data.country, "KENYAÑ");
+		assert.deepEqual(data.faq, [
+			{
+				q: "HOWÑ DOÑ IÑ BUYÑ BCH?",
+				a: "BUYÑ USDTÑ FIRSTÑ, THENÑ TRADEÑ ITÑ FORÑ BCH.",
+			},
+		]);
+		assert.equal(data.flag, "🇰🇪");
+		assert.equal(data.verified.toISOString().slice(0, 10), "2026-09-26");
+		assert.equal(data.sources[0].url, "https://example.com/markets");
+		assert.match(body, /SHILLINGSÑ/);
 	});
 
 	test("leaves reviewed and unattributed work untouched", async () => {

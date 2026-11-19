@@ -46,7 +46,9 @@ export const buildRequest = ({
 	style,
 }) => ({
 	model: MODEL,
-	max_tokens: 64000,
+	// The model's ceiling: thinking counts against it, and the longest post
+	// (CashTokens tutorial 3, ~100 KB) overran 64000 (PAN-388).
+	max_tokens: 128000,
 	betas: ["server-side-fallback-2026-07-01"],
 	// Fallbacks: if this model declines, the API re-runs the request on
 	// another one instead of failing.
