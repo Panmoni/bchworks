@@ -30,6 +30,7 @@
 		"i18n:review": "node scripts/i18n/review.mjs",
 		"i18n:review-ui": "node scripts/i18n/review-ui.mjs",
 		"i18n:qa": "node scripts/i18n/qa-cli.mjs",
+		"i18n:reading-copy": "node scripts/i18n/reading-cli.mjs",
 		"data:health": "node scripts/health-check.mjs",
 		"data:metrics": "node scripts/metrics.mjs",
 		"data:utxo": "node scripts/utxo-stats.mjs",

@@ -53,20 +53,37 @@ export const qaHash = (unit) =>
  * segment is `{ field, en, es, body? }`: one string the English and the draft
  * both hold. `id` names the unit in the report. Stale units (the English
  * changed since the draft) are counted, not returned: they need a redraft,
- * not a review.
+ * not a review. `statuses` widens the set: the reading copy (PAN-414) also
+ * shows fresh `reviewed` units, each carrying its `status`. `stale` counts
+ * only stale `machine` units.
  */
-export const collect = ({ root, locale, locales, only }) => {
+export const collect = ({
+	root,
+	locale,
+	locales,
+	only,
+	statuses = ["machine"],
+}) => {
 	const units = [];
 	let stale = 0;
 	const wanted = (...paths) => !only || paths.some((p) => matchesGlob(p, only));
 	const take = (meta, hash, unit) => {
-		if (meta?.status !== "machine") return;
-		if (meta.sourceHash !== hash) return void stale++;
+		if (!statuses.includes(meta?.status)) return;
+		if (meta.sourceHash !== hash) {
+			if (meta.status === "machine") stale++;
+			return;
+		}
 		const segments = unit.segments.filter(
 			(s) => typeof s.en === "string" && typeof s.es === "string",
 		);
 		if (segments.length)
-			units.push({ ...unit, sourceHash: hash, qaHash: meta.qaHash, segments });
+			units.push({
+				...unit,
+				status: meta.status,
+				sourceHash: hash,
+				qaHash: meta.qaHash,
+				segments,
+			});
 	};
 
 	// Catalog: one unit per message, one segment per string leaf.
