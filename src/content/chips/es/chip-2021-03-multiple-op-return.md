@@ -19,9 +19,8 @@ sources:
     url: https://upgradespecs.bitcoincashnode.org/2021-05-15-upgrade/
 translation:
   sourceHash: a455e9e6ed8913ab
-  status: reviewed
+  status: machine
   translator: Claude
-  reviewer: George Donnelly
 ---
 
 ## Resumen
@@ -51,4 +50,4 @@ cambio fuera lo más pequeño y de menor riesgo posible, y fácil de acordar par
 ## Estado actual
 
 Se activó con la [actualización de mayo de 2021](/upgrades/2021-05-upgrade). Más tarde,
-el [P2S CHIP](/chips/chip-2024-12-p2s) (2026) mantuvo la misma regla acumulativa de 223 bytes para las salidas de datos.
+el [CHIP P2S](/chips/chip-2024-12-p2s) (2026) mantuvo la misma regla acumulativa de 223 bytes para las salidas de datos.

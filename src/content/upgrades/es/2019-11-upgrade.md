@@ -23,15 +23,14 @@ sources:
     url: https://gitlab.com/bitcoin-cash-node/bitcoin-cash-node/-/blob/master/src/chainparams.cpp
 translation:
   sourceHash: f4080578632a954f
-  status: reviewed
+  status: machine
   translator: Claude
-  reviewer: George Donnelly
 ---
 
 ## Qué cambió
 
 La activación llegó cuando la [mediana del tiempo pasado](/glossary#median-time-past) alcanzó el tiempo Unix `1573819200`
-(15 de noviembre de 2019, 12:00 UTC). El primer bloque con las nuevas reglas es el de altura 609.136. El código de Bitcoin Cash Node llama
+(15 de noviembre de 2019, 12:00 UTC). El primer bloque con las nuevas reglas es el de altura 609136. El código de Bitcoin Cash Node llama
 a esta actualización “Graviton”.
 
 Cambios de consenso:

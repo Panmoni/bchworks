@@ -268,6 +268,13 @@ const NUMBER_RULES = [
 		"low",
 		"a four-digit number takes no thousands separator (2048)",
 	],
+	[
+		// A block height is data and takes no separator (es-style.md): read
+		// a dotted number right after "bloque" or "altura", a table cell too.
+		/(?<!\p{L})(?:bloques?|altura)(?:\s+de\s+bloque)?\s*[:|]?\s*\d{1,3}(?:\.\d{3})+(?!\d|,\d)/iu,
+		"medium",
+		"a block height takes no separator (bloque 478558)",
+	],
 	[/\d(?:%| %)/, "low", "a no-break space (U+00A0) goes before %"],
 ];
 const EN_MONTH = String.raw`(?:January|February|March|April|May|June|July|August|September|October|November|December)`;

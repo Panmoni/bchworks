@@ -23,15 +23,14 @@ sources:
     url: https://api.blockchair.com/bitcoin-cash/raw/block/582679
 translation:
   sourceHash: 89611129b17d1e6f
-  status: reviewed
+  status: machine
   translator: Claude
-  reviewer: George Donnelly
 ---
 
 ## Qué cambió
 
 La activación llegó cuando la [mediana del tiempo pasado](/glossary#median-time-past) alcanzó el tiempo Unix `1557921600`
-(15 de mayo de 2019, 12:00 UTC). El primer bloque con las nuevas reglas es el de altura 582.680. A partir de esta actualización, las actualizaciones de BCH
+(15 de mayo de 2019, 12:00 UTC). El primer bloque con las nuevas reglas es el de altura 582680. A partir de esta actualización, las actualizaciones de BCH
 se activan a las 12:00 UTC del día 15.
 
 Cambios de consenso:

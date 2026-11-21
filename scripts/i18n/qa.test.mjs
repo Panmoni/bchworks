@@ -230,6 +230,20 @@ describe("format check", () => {
 		assert.match(fmt("Sube un 5%")[0], /no-break space/);
 	});
 
+	test("flags a separator in a block height", () => {
+		const height = /block height/;
+		assert.match(fmt("El bloque 478.559 es el primero")[0], height);
+		assert.match(fmt("de altura 478.558.")[0], height);
+		assert.match(fmt("| Altura de bloque | 970.356 |")[0], height);
+		assert.match(fmt("cerca de la altura 1.003.670")[0], height);
+		assert.deepEqual(
+			fmt(
+				"El bloque 478559, la altura 1003670, un bloqueo de hasta 30000 y cada 210.000 bloques",
+			),
+			[],
+		);
+	});
+
 	test("flags an English date and a capitalised month", () => {
 		assert.match(fmt("El May 15, 2022 salió")[0], /English date/);
 		assert.match(fmt("El 15 de Mayo de 2022")[0], /lowercase/);

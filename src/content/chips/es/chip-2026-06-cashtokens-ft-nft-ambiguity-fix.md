@@ -14,9 +14,8 @@ sources:
     url: https://bitcoincashresearch.org/t/retracted-chip-2026-06-cashtokens-ft-nft-ambiguity-fix/1870
 translation:
   sourceHash: 5b5f61bca4a0ed83
-  status: reviewed
+  status: machine
   translator: Claude
-  reviewer: George Donnelly
 ---
 
 ## Resumen
@@ -40,4 +39,4 @@ UTXOs. En la discusión se señaló que los emisores pueden evitar el problema s
 los contratos que no distinguen categorías, como TapSwap, aún podrían verse afectados.
 
 Nota: esta propuesta comparte el prefijo “CHIP-2026-06” con las propuestas no relacionadas [OP_SIGHASH](/chips/chip-2026-06-op-sighash) y
-[Post-Quantum Signatures](/chips/chip-2026-06-post-quantum-hybrid-signatures).
+[Firmas poscuánticas e híbridas](/chips/chip-2026-06-post-quantum-hybrid-signatures).

@@ -46,28 +46,28 @@ translation:
 ## Qué cambió
 
 La activación llegó cuando la [mediana del tiempo pasado](/glossary#median-time-past) alcanzó el tiempo Unix `1778846400`
-(15 de mayo de 2026, 12:00 UTC). El primer bloque con las nuevas reglas es el de altura 951.145. [Chipnet](/glossary#chipnet) (la red de pruebas de los CHIPs) las aplicaba
+(15 de mayo de 2026, 12:00 UTC). El primer bloque con las nuevas reglas es el de altura 951145. [Chipnet](/glossary#chipnet) (la red de pruebas de los CHIPs) las aplicaba
 desde mediados de noviembre de 2025. El hilo comunitario de lock-in en Bitcoin Cash Research llamó a esta actualización “Layla”.
 
 Se activaron cuatro CHIPs, todos mantenidos por Jason Dreyzehner.
 
 ### Bucles (CHIP-2021-05)
 
-[Loops](/chips/chip-2021-05-loops) añade [`OP_BEGIN`](/opcodes/op_begin) (`0x65`) y [`OP_UNTIL`](/opcodes/op_until)
+[Bucles](/chips/chip-2021-05-loops) añade [`OP_BEGIN`](/opcodes/op_begin) (`0x65`) y [`OP_UNTIL`](/opcodes/op_until)
 (`0x66`), la construcción de bucle que usan la mayoría de los lenguajes tipo Forth. Cuando `OP_UNTIL` extrae un cero, la ejecución vuelve al punto
 justo después del `OP_BEGIN` correspondiente; cualquier otro valor termina el bucle. Cada iteración se cobra según los [límites de la VM de 2025](/upgrades/2025-05-vm-limits-bigint), así que los bucles no pueden disparar
 el costo de validación.
 
 ### Funciones (CHIP-2025-05)
 
-[Functions](/chips/chip-2025-05-functions) añade [`OP_DEFINE`](/opcodes/op_define) (`0x89`) y
+[Funciones](/chips/chip-2025-05-functions) añade [`OP_DEFINE`](/opcodes/op_define) (`0x89`) y
 [`OP_INVOKE`](/opcodes/op_invoke) (`0x8a`). Un contrato guarda un fragmento de bytecode en una tabla de funciones bajo un
 identificador y luego lo llama tantas veces como haga falta. Las funciones definidas son inmutables. Este CHIP reemplazó un
 diseño `OP_EVAL` anterior ([CHIP-2024-12 OP_EVAL](/chips/chip-2024-12-op-eval)), que su autor retiró en mayo de 2025.
 
 ### Operaciones a nivel de bits (CHIP-2025-05)
 
-[Bitwise](/chips/chip-2025-05-bitwise) habilita cinco opcodes (códigos de operación):
+El [CHIP de operaciones a nivel de bits](/chips/chip-2025-05-bitwise) habilita cinco opcodes (códigos de operación):
 [`OP_INVERT`](/opcodes/op_invert) (`0x83`),
 [`OP_LSHIFTNUM`](/opcodes/op_lshiftnum) (`0x8d`),
 [`OP_RSHIFTNUM`](/opcodes/op_rshiftnum) (`0x8e`),

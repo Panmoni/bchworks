@@ -26,15 +26,14 @@ sources:
     url: https://bitwiseinvestments.com/crypto-market-insights/the-november-2018-bitcoin-cash-fork
 translation:
   sourceHash: fb65984a114304a8
-  status: reviewed
+  status: machine
   translator: Claude
-  reviewer: George Donnelly
 ---
 
 ## Qué cambió
 
 La activación se produjo cuando la [mediana del tiempo pasado](/glossary#median-time-past) alcanzó el tiempo Unix `1542300000`
-(15 de noviembre de 2018, 16:40 UTC). El primer bloque con las nuevas reglas es el de altura 556.767.
+(15 de noviembre de 2018, 16:40 UTC). El primer bloque con las nuevas reglas es el de altura 556767.
 
 Cambios de consenso:
 

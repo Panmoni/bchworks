@@ -28,15 +28,14 @@ sources:
     url: https://api.blockchair.com/bitcoin-cash/raw/block/740237
 translation:
   sourceHash: 207c6f1171c19cb8
-  status: reviewed
+  status: machine
   translator: Claude
-  reviewer: George Donnelly
 ---
 
 ## Qué cambió
 
 La activación llegó cuando la [mediana del tiempo pasado](/glossary#median-time-past) alcanzó el tiempo Unix `1652616000`
-(15 de mayo de 2022, 12:00 UTC). El bloque 740.237 fue el primero con una mediana del tiempo pasado posterior a esa marca, así que el bloque 740.238 es el
+(15 de mayo de 2022, 12:00 UTC). El bloque 740237 fue el primero con una mediana del tiempo pasado posterior a esa marca, así que el bloque 740238 es el
 primer bloque con las nuevas reglas.
 
 Se activaron dos CHIPs:

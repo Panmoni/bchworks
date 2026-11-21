@@ -16,9 +16,8 @@ sources:
     url: https://gitlab.com/0353F40E/fablous
 translation:
   sourceHash: d555f7f5cea06d08
-  status: reviewed
+  status: machine
   translator: Claude
-  reviewer: George Donnelly
 ---
 
 ## Resumen
@@ -29,7 +28,7 @@ solo el estado más reciente del acumulador, O(log n) hashes, y puede extenderlo
 
 ## Motivación
 
-El autor encontró esta estructura de datos mientras trabajaba en [Faster Blocks](/chips/chip-2025-03-faster-blocks), que haría
+El autor encontró esta estructura de datos mientras trabajaba en [Bloques más rápidos](/chips/chip-2025-03-faster-blocks), que haría
 crecer la cadena de encabezados 10×, de unos 4,2 a unos 42 MB por año. SHV hace que los datos de encabezados que una billetera ligera debe guardar
 sean de tamaño fijo, sea cual sea la frecuencia de bloques. Es útil incluso si los tiempos de bloque nunca cambian.
 

@@ -55,9 +55,8 @@ sources:
     url: https://upgradespecs.bitcoincashnode.org/2024-05-15-upgrade/
 translation:
   sourceHash: 0775fa7cc19ec820
-  status: reviewed
+  status: machine
   translator: Claude
-  reviewer: George Donnelly
 ---
 
 ## Resumen
@@ -82,4 +81,4 @@ El CHIP modela un ataque de spam por parte de un minero con el 50 % de la tasa 
 
 Aceptado y activado el 15 de mayo de 2024. La tabla de partes interesadas registra 60 aprobaciones, 8 neutrales y 4 rechazos. En la consulta, la falta de respuesta se contó como neutral.
 
-Hasta ahora, el algoritmo no ha elevado el límite en la práctica, porque los bloques actuales están muy por debajo de 32 MB. El [Faster Blocks CHIP](/chips/chip-2025-03-faster-blocks) propuesto reescalaría ABLA a 1/10 por bloque para que la capacidad de procesamiento por minuto se mantenga igual.
+Hasta ahora, el algoritmo no ha elevado el límite en la práctica, porque los bloques actuales están muy por debajo de 32 MB. El [CHIP de bloques más rápidos](/chips/chip-2025-03-faster-blocks) propuesto reescalaría ABLA a 1/10 por bloque para que la capacidad de procesamiento por minuto se mantenga igual.

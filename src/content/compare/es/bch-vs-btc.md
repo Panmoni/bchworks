@@ -8,7 +8,7 @@ faq:
   - q: ¿Es Bitcoin Cash mejor que Bitcoin?
     a: Depende del uso. Bitcoin tiene mucha más tasa de hash, liquidez, soporte en exchanges y productos institucionales, incluidos los ETFs al contado en EE. UU. Bitcoin Cash está diseñado para pagos baratos en la cadena y tiene un sistema de contratos más capaz. Elige BTC como reserva de valor a largo plazo con los mercados más profundos; elige BCH para pagar y desarrollar en la cadena por fracciones de centavo.
   - q: ¿Por qué Bitcoin Cash se bifurcó de Bitcoin?
-    a: Un grupo de desarrolladores, activistas y mineros se opuso a la actualización SegWit y quería, en cambio, bloques más grandes. Dividieron la cadena el 1 de agosto de 2017, en el bloque 478.559. Quien tuviera BTC en ese momento recibió la misma cantidad de BCH.
+    a: Un grupo de desarrolladores, activistas y mineros se opuso a la actualización SegWit y quería, en cambio, bloques más grandes. Dividieron la cadena el 1 de agosto de 2017, en el bloque 478559. Quien tuviera BTC en ese momento recibió la misma cantidad de BCH.
   - q: ¿Tienen Bitcoin y Bitcoin Cash el mismo suministro?
     a: Sí. Ambas tienen un límite fijo de 21 millones de monedas y ambas usan prueba de trabajo SHA-256. Comparten el mismo historial de transacciones hasta la división de 2017.
   - q: ¿Tiene Bitcoin Cash la Lightning Network?
@@ -61,7 +61,7 @@ translation:
   qaHash: 2784aeefc4ff9ac1
 ---
 
-Bitcoin Cash y Bitcoin son la misma cadena hasta el 1 de agosto de 2017. En el bloque 478.559 se dividieron. Todo poseedor de BTC en ese momento recibió también BCH. Ambas monedas siguen compartiendo minería SHA-256, bloques de 10 minutos y un límite de suministro de 21 millones.
+Bitcoin Cash y Bitcoin son la misma cadena hasta el 1 de agosto de 2017. En el bloque 478559 se dividieron. Todo poseedor de BTC en ese momento recibió también BCH. Ambas monedas siguen compartiendo minería SHA-256, bloques de 10 minutos y un límite de suministro de 21 millones.
 
 La división fue por el escalado. Un bando apoyaba SegWit, un soft fork que cambió la forma de almacenar las firmas y preparó Bitcoin para canales de pago fuera de la cadena. Un grupo de desarrolladores, activistas y mineros con sede en China se opuso a SegWit y quería, en cambio, bloques más grandes. Bitcoin activó SegWit en agosto de 2017. Bitcoin Cash arrancó con bloques de 8 MB y subió el límite a 32 MB en 2018.
 

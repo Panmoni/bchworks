@@ -37,8 +37,8 @@ translation:
 ## Qué cambió
 
 La activación llegó cuando la [mediana del tiempo pasado](/glossary#median-time-past) alcanzó el tiempo Unix `1605441600`
-(15 de noviembre de 2020, 12:00 UTC). El bloque 661.647 fue el último bajo el algoritmo anterior y sirve como ancla de ASERT.
-El bloque 661.648 es el primero cuya dificultad calcula ASERT. El código de Bitcoin Cash Node llama a esta actualización “Axion”.
+(15 de noviembre de 2020, 12:00 UTC). El bloque 661647 fue el último bajo el algoritmo anterior y sirve como ancla de ASERT.
+El bloque 661648 es el primero cuya dificultad calcula ASERT. El código de Bitcoin Cash Node llama a esta actualización “Axion”.
 
 El único cambio de consenso: **el algoritmo de ajuste de dificultad pasó a ser ASERT** (`aserti3-2d`), diseñado por Mark
 Lundeberg y especificado por freetrader, Jonathan Toomim, Calin Culianu y Mark Lundeberg. Consulta [ASERT](/glossary#asert-daa).
@@ -75,5 +75,5 @@ como BCHA y cambió su nombre a eCash (XEC) el 1 de julio de 2021. La cadena de 
 - **Minería justa.** Los mineros leales ya no están en desventaja frente a los que cambian de cadena para aprovechar las ventanas de dificultad baja.
 - **Una fórmula simple y sin estado.** Un nodo solo necesita el bloque ancla y el bloque actual para calcular la dificultad.
   No hay ninguna ventana que manipular ni errores de redondeo que se acumulen con el tiempo.
-- **Una base para bloques más rápidos.** La propuesta [Faster Blocks CHIP](/chips/chip-2025-03-faster-blocks) mantiene ASERT y
+- **Una base para bloques más rápidos.** La propuesta del [CHIP de bloques más rápidos](/chips/chip-2025-03-faster-blocks) mantiene ASERT y
   lo reescala para un objetivo de 1 minuto.

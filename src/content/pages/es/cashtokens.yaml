@@ -1,43 +1,43 @@
 metadata:
   title: 'BCH CashTokens: tokens fungibles y NFTs en Bitcoin Cash'
-  description: CashTokens son tokens fungibles y NFTs integrados en el propio Bitcoin Cash. Sin contrato de token, sin approve() que alguien pueda usar para vaciar tu billetera y menos de un centavo por acuñar o enviar.
+  description: Los CashTokens son tokens fungibles y NFTs integrados en el propio Bitcoin Cash. Sin contrato de token, sin approve() con el que te puedan vaciar y menos de un centavo por acuñar o enviar.
 hero:
   title: CashTokens
-  subtitle: Tokens y NFTs que viven dentro de la propia moneda. Sin contrato de token, sin aprobaciones que alguien pueda usar para vaciar tu billetera y menos de un centavo por acuñar o enviar.
+  subtitle: Tokens y NFTs que viven dentro de la propia moneda. Sin contrato de token, sin aprobaciones con las que te puedan vaciar y menos de un centavo por acuñar o enviar.
 devTools:
   title: Desarrollar con CashTokens
   subtitle: Empieza aquí. Estas herramientas te permiten acuñar, enviar y leer tokens. Una acuñación de prueba cuesta alrededor de una décima de centavo.
 wallets:
-  subtitle: Billeteras para CashTokens
+  subtitle: Billeteras de CashTokens
 reference:
   subtitle: Referencia y ayuda de CashTokens
 nfts:
-  subtitle: Proyectos de NFTs
+  subtitle: Proyectos de NFT
 fungibles:
   subtitle: Proyectos de tokens fungibles
 faucets:
   subtitle: Faucets de tokens fungibles
 explorers:
-  subtitle: Exploradores de CashTokens — para ver datos en vivo de cada token, consulta <a href='https://tokenstork.com' target='_blank' rel='noopener noreferrer' class='underline'>TokenStork</a>
+  subtitle: Exploradores de CashTokens — para datos en tiempo real de cada token, consulta <a href='https://tokenstork.com' target='_blank' rel='noopener noreferrer' class='underline'>TokenStork</a>
 bcmrs:
   subtitle: Registros de metadatos de BCMR (nombres, símbolos, íconos)
 mentors:
   subtitle: Mentores de CashTokens en X
 tutorials:
-  title: 'Pioneros de los tokens: tutoriales de CashTokens'
-  intro: '¿Empiezas a desarrollar? Ve al <a class="underline" href="/build">centro para desarrolladores</a>. ¿Ya acuñaste un token fungible? <a class="underline" href="/blog/token-pioneers-cashtokens-tutorial-2">Acuña tus primeros NFTs en el tutorial 2</a>.'
+  title: 'Token Pioneers: tutoriales de CashTokens'
+  intro: ¿Eres nuevo en el desarrollo? Empieza en el <a class="underline" href="/build">centro para desarrolladores</a>. ¿Ya acuñaste un token fungible? <a class="underline" href="/blog/token-pioneers-cashtokens-tutorial-2">Acuña tus primeros NFTs en el tutorial 2</a>.
 video:
   title: Reproductor de video de YouTube
 native:
   title: Tokens sin el lastre de la EVM
-  subtitle: En la mayoría de las cadenas, un token es un contrato inteligente que lleva un registro de saldos. En Bitcoin Cash, el token forma parte de la moneda que tienes.
+  subtitle: En la mayoría de las cadenas, un token es un contrato inteligente que lleva un registro de saldos. En Bitcoin Cash, el token es parte de la moneda que tienes.
   items:
     - title: Nativos, no un contrato
       icon: tabler:coins
-      description: Desde mayo de 2023, cada salida de BCH puede llevar tokens fungibles o un NFT. Los mineros validan las reglas de los tokens. Nadie despliega ni es dueño de un contrato de token.
-    - title: Sin approve() que puedan usar para vaciarte
+      description: Desde mayo de 2023, cualquier salida de BCH puede llevar tokens fungibles o un NFT. Los mineros validan las reglas de los tokens. Nadie despliega ni es dueño de un contrato de token.
+    - title: Sin approve() con el que te puedan vaciar
       icon: tabler:shield-check
-      description: Las aprobaciones de tokens antiguas son una de las principales causas de pérdidas en las cadenas EVM. CashTokens no tienen un sistema de permisos de gasto. Solo una firma de tus claves mueve tus tokens.
+      description: Las aprobaciones de tokens antiguas son una causa importante de pérdidas en las cadenas EVM. Los CashTokens no tienen un sistema de asignaciones. Solo una firma de tus claves mueve tus tokens.
     - title: Menos de un centavo por acuñar o enviar
       icon: tabler:receipt
       description: Pagas franqueo por byte, no gas por cómputo. Una acuñación o una transferencia cuesta mucho menos de un centavo, así que las pruebas y las distribuciones pequeñas siguen siendo baratas.
@@ -51,24 +51,24 @@ native:
       icon: tabler:id-badge
       description: Los registros de BCMR asocian nombres, símbolos e íconos a una categoría de token. Las billeteras comparan el registro con un hash que el emisor publicó en la cadena.
 honest:
-  title: La parte honesta
-  subtitle: De qué no te protegen CashTokens.
+  title: Sin rodeos
+  subtitle: De qué no te protegen los CashTokens.
   items:
     - title: Los emisores aún pueden vender en masa
       icon: tabler:alert-triangle
-      description: Los tokens nativos eliminan los exploits de aprobaciones. No impiden que un equipo venda su propia oferta. Revisa la distribución de tenedores en TokenStork antes de comprar.
+      description: Los tokens nativos eliminan los exploits de aprobaciones. No impiden que un equipo venda su propia reserva de tokens. Revisa la distribución de tenedores en TokenStork antes de comprar.
     - title: La liquidez es escasa
       icon: tabler:chart-line
-      description: Existen unas 20.000 categorías de token, pero solo unos pocos cientos se negocian en Cauldron, Fex o TapSwap. Muchos tokens no tienen ningún mercado.
+      description: Existen unas 20.000 categorías de tokens, pero solo unos pocos cientos se negocian en Cauldron, Fex o TapSwap. Muchos tokens no tienen ningún mercado.
     - title: Los contratos pueden tener errores
       icon: tabler:bug
-      description: Los tokens usados dentro de covenants (contratos que limitan cómo se pueden gastar las monedas) heredan el riesgo de ese covenant. No hay claves de administrador, pero un contrato defectuoso sigue siendo defectuoso. Lee las auditorías cuando existan.
+      description: Los tokens usados dentro de covenants heredan el riesgo de ese covenant. No hay claves de administrador, pero un contrato defectuoso sigue siendo defectuoso. Lee las auditorías cuando existan.
 cta:
-  title: Sigue la escena de los tokens
-  subtitle: Nuevas herramientas, actualizaciones y tutoriales en nuestro canal de Telegram. Los datos de tokens en vivo están en TokenStork.
+  title: Sigue el mundo de los tokens
+  subtitle: Nuevas herramientas, actualizaciones y tutoriales en nuestro canal de Telegram. Los datos de tokens en tiempo real están en TokenStork.
   action: Recibir novedades de BCH
 translation:
-  sourceHash: f7acfd40039cf93d
+  sourceHash: c5c4eca37abd67be
   status: machine
   translator: Claude
-  qaHash: 50f1292f368bb3b2
+  qaHash: 4e311741537acb3b

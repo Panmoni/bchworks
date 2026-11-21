@@ -34,15 +34,14 @@ sources:
     url: https://gitlab.com/bitcoin-cash-node/bitcoin-cash-node/-/blob/master/src/chainparams.cpp
 translation:
   sourceHash: 34e847db14ebcfe0
-  status: reviewed
+  status: machine
   translator: Claude
-  reviewer: George Donnelly
 ---
 
 ## Qué cambió
 
 La activación llegó cuando la [mediana del tiempo pasado](/glossary#median-time-past) alcanzó el tiempo Unix `1684152000`
-(15 de mayo de 2023, 12:00 UTC). El primer bloque con las nuevas reglas es la altura 792.773. La red
+(15 de mayo de 2023, 12:00 UTC). El primer bloque con las nuevas reglas es la altura 792773. La red
 [chipnet](/glossary#chipnet) (la red de pruebas de los CHIPs) aplicó las mismas reglas seis meses antes, desde el 15 de noviembre de 2022.
 
 Se activaron cuatro CHIPs:

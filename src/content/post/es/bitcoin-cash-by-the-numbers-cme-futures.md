@@ -31,7 +31,7 @@ Instantánea de nuestro proceso diario de datos, 30 de septiembre de 2026 (UTC):
 
 | Métrica | Valor |
 |---|---|
-| Altura de bloque | 970.863 |
+| Altura de bloque | 970863 |
 | Transacciones, últimas 24 horas | 11.953 |
 | Comisión mediana | 0,0013 US$ |
 | Bloques, últimas 24 horas | 153 (objetivo: 144) |

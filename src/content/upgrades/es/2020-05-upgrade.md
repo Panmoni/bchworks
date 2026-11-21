@@ -23,15 +23,14 @@ sources:
     url: https://gitlab.com/bitcoin-cash-node/bitcoin-cash-node/-/blob/master/src/chainparams.cpp
 translation:
   sourceHash: 5260693752b4aa34
-  status: reviewed
+  status: machine
   translator: Claude
-  reviewer: George Donnelly
 ---
 
 ## Qué cambió
 
 La activación llegó cuando la [mediana del tiempo pasado](/glossary#median-time-past) alcanzó el tiempo Unix `1589544000`
-(15 de mayo de 2020, 12:00 UTC). El primer bloque con las nuevas reglas es el de altura 635.259. El código de Bitcoin Cash Node llama a esta
+(15 de mayo de 2020, 12:00 UTC). El primer bloque con las nuevas reglas es el de altura 635259. El código de Bitcoin Cash Node llama a esta
 actualización “Phonon”.
 
 Cambios de consenso:

@@ -22,15 +22,14 @@ sources:
     url: https://api.blockchair.com/bitcoin-cash/raw/block/530355
 translation:
   sourceHash: 044e4a178d11cab8
-  status: reviewed
+  status: machine
   translator: Claude
-  reviewer: George Donnelly
 ---
 
 ## Qué cambió
 
 Esta actualización se activó cuando la [mediana del tiempo pasado](/glossary#median-time-past) alcanzó el tiempo Unix `1526400000`
-(15 de mayo de 2018, 16:00 UTC). El primer bloque con las nuevas reglas es el de altura 530.356.
+(15 de mayo de 2018, 16:00 UTC). El primer bloque con las nuevas reglas es el de altura 530356.
 
 Cambios de consenso:
 

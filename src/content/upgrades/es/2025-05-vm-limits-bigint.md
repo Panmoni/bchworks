@@ -30,15 +30,14 @@ sources:
     url: https://gitlab.com/bitcoin-cash-node/bitcoin-cash-node/-/blob/master/src/chainparams.cpp
 translation:
   sourceHash: 72f3600813f58927
-  status: reviewed
+  status: machine
   translator: Claude
-  reviewer: George Donnelly
 ---
 
 ## Qué cambió
 
 La activación llegó cuando la [mediana del tiempo pasado](/glossary#median-time-past) alcanzó el tiempo Unix `1747310400`
-(15 de mayo de 2025, 12:00 UTC). El primer bloque bajo las nuevas reglas es el de altura 898.374. [Chipnet](/glossary#chipnet) (la red de pruebas de los CHIPs)
+(15 de mayo de 2025, 12:00 UTC). El primer bloque bajo las nuevas reglas es el de altura 898374. [Chipnet](/glossary#chipnet) (la red de pruebas de los CHIPs)
 las aplicaba desde el 15 de noviembre de 2024.
 
 Se activaron dos CHIPs, ambos mantenidos por Jason Dreyzehner.

@@ -97,10 +97,10 @@ El argumento central del CHIP: los bloques de 10 minutos tienen un costo real; n
 - **[ASERT](/glossary#asert-daa)** conserva sus propiedades de resistencia al timewarp.
 - **La maduración de Coinbase, el parking de bloques y la finalización** se redefinen en ticks para mantener su significado en tiempo real (la finalización sigue en unos 120 minutos).
 - **La [mediana del tiempo pasado](/glossary#median-time-past)** se reduce de unos 110 a unos 11 minutos.
-- **El crecimiento de los encabezados** se multiplica por 10, de unos 4,2 a unos 42 MB por año. El CHIP lo combina con [Simplified Header Verification](/chips/chip-2026-02-simplified-header-verification) para que las billeteras ligeras puedan mantener una prueba de encabezados de tamaño fijo.
+- **El crecimiento de los encabezados** se multiplica por 10, de unos 4,2 a unos 42 MB por año. El CHIP lo combina con [Verificación simplificada de encabezados](/chips/chip-2026-02-simplified-header-verification) para que las billeteras ligeras puedan mantener una prueba de encabezados de tamaño fijo.
 - **Las tasas de bloques huérfanos** se modelan entre 0,41 y 1,94 %, por debajo de la tolerancia del 2 % del CHIP.
 
-Activación propuesta: chipnet (la red de pruebas de los CHIPs) en el MTP `1794744000` (15 de noviembre de 2026) y red principal en el MTP `1810382400` (15 de mayo de 2027). La rama master de Bitcoin Cash Node incluye la fecha de 2027 como tiempo de activación “provisional”. El CHIP estima el bloque de activación en la red principal cerca de la altura 1.003.670, pero es una estimación, no una altura fija.
+Activación propuesta: chipnet (la red de pruebas de los CHIPs) en el MTP `1794744000` (15 de noviembre de 2026) y red principal en el MTP `1810382400` (15 de mayo de 2027). La rama master de Bitcoin Cash Node incluye la fecha de 2027 como tiempo de activación “provisional”. El CHIP estima el bloque de activación en la red principal cerca de la altura 1003670, pero es una estimación, no una altura fija.
 
 ## Estado actual (26 de septiembre de 2026)
 

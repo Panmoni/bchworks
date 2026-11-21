@@ -39,9 +39,8 @@ sources:
     url: https://upgradespecs.bitcoincashnode.org/2022-05-15-upgrade/
 translation:
   sourceHash: 5c1da0ff13624470
-  status: reviewed
+  status: machine
   translator: Claude
-  reviewer: George Donnelly
 ---
 
 ## Resumen
@@ -75,7 +74,7 @@ Catorce opcodes en los puntos de código `0xc0`–`0xcd`:
 | [`OP_OUTPUTVALUE`](/opcodes/op_outputvalue) | valor de la salida N |
 | [`OP_OUTPUTBYTECODE`](/opcodes/op_outputbytecode) | bytecode de bloqueo de la salida N |
 
-El CHIP recomendaba desplegarlo junto con [Bigger Script Integers](/chips/chip-2021-03-bigger-script-integers), ya que los valores pueden superar el rango de 32 bits.
+El CHIP recomendaba desplegarlo junto con [Enteros más grandes en Script](/chips/chip-2021-03-bigger-script-integers), ya que los valores pueden superar el rango de 32 bits.
 
 ## Estado actual
 
