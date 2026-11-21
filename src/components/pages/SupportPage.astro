@@ -19,7 +19,12 @@ interface Props {
 }
 
 const { copy, translation = null } = Astro.props;
-const metadata = { ...copy.metadata, ignoreTitleTemplate: true };
+// Never ranks; noindex, and astro.config.mjs keeps it out of the sitemap (PAN-426).
+const metadata = {
+	...copy.metadata,
+	ignoreTitleTemplate: true,
+	robots: { index: false, follow: true },
+};
 
 const discussion = await getProjectsByCategory(
 	"support:discussion",

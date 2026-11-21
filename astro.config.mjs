@@ -137,8 +137,12 @@ export default defineConfig({
 					sitemap({
 						serialize: (item) => lastmod.serialize(alternates.serialize(item)),
 						// Tag, category and paged blog archives are noindex; keep them out.
+						// So are the legal, contact and support pages in every locale (PAN-426).
 						filter: (page) =>
 							!/\/(tag|category)\/|\/blog\/\d+$/.test(page) &&
+							!/\/(privacy-policy|terms-conditions|contact|support)$/.test(
+								new URL(page).pathname,
+							) &&
 							!inDraftLocale(new URL(page).pathname),
 					}),
 				]

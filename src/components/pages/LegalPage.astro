@@ -26,9 +26,12 @@ const translation = translated
 	? await getTranslationState("pages", id, locale)
 	: null;
 const l = msg(Astro.currentLocale);
+// Legal pages never rank; keep them out of the index (PAN-426). The sitemap
+// filter in astro.config.mjs drops them too.
+const NOINDEX = { index: false, follow: true };
 ---
 
-<MarkdownLayout frontmatter={entry.data} translation={translation}>
+<MarkdownLayout frontmatter={{ ...entry.data, robots: NOINDEX }} translation={translation}>
   {translated && (
     <p class="not-prose rounded border-2 border-line bg-soft px-4 py-3 text-base" role="note" data-legal-notice>
       {m.legal_english_governs({}, l)}
