@@ -1,10 +1,14 @@
 #!/usr/bin/env node
-// pnpm i18n:qa <locale> [--only <path-glob>] [--fix] [--dry-run]
+// pnpm i18n:qa <locale> [--only <path-glob>] [--units <file>] [--fix] [--dry-run]
+// pnpm i18n:qa <locale> --provider deepinfra [--model <label|id>] [--only …] [--units …]
 //
 // Checks every fresh machine draft of <locale>, then has the model review it.
 // --fix writes the fixed text back; --dry-run runs only the deterministic
-// checks, calls no API and writes nothing. The report goes to
-// i18n-qa/<locale>.json. Workflow: docs/i18n.md.
+// checks, calls no API and writes nothing. --units narrows the run to the
+// unit ids listed in <file>, one per line. The report goes to
+// i18n-qa/<locale>.json. --provider deepinfra asks a model outside the
+// Anthropic family instead (PAN-440): advisory only, so it never takes --fix,
+// and its report goes to i18n-qa/<locale>.<model>.json. Workflow: docs/i18n.md.
 import { existsSync, readFileSync } from "node:fs";
 import { join, matchesGlob } from "node:path";
 import { parseArgs } from "node:util";
@@ -14,6 +18,7 @@ import {
 	PSEUDO_CODES,
 } from "../../src/i18n/locales.ts";
 import { claudeReviewer, MODEL } from "./claude.mjs";
+import { DEFAULT_MODEL, deepinfraReviewer } from "./deepinfra.mjs";
 import { writeJson } from "./pipeline.mjs";
 import { collect, qa, SEVERITIES, summarize } from "./qa.mjs";
 
@@ -21,6 +26,9 @@ const { values, positionals } = parseArgs({
 	allowPositionals: true,
 	options: {
 		only: { type: "string" },
+		units: { type: "string" },
+		provider: { type: "string", default: "claude" },
+		model: { type: "string" },
 		fix: { type: "boolean", default: false },
 		"dry-run": { type: "boolean", default: false },
 	},
@@ -28,25 +36,49 @@ const { values, positionals } = parseArgs({
 
 const others = LOCALES.map((l) => l.code).filter((c) => c !== DEFAULT_LOCALE);
 const [locale] = positionals;
-if (!others.includes(locale) || (values.fix && values["dry-run"])) {
+const deepinfra = values.provider === "deepinfra";
+if (
+	!others.includes(locale) ||
+	(values.fix && values["dry-run"]) ||
+	!["claude", "deepinfra"].includes(values.provider) ||
+	(values.model && !deepinfra) ||
+	(values.fix && deepinfra)
+) {
+	const l = `<${others.join("|")}>`;
 	console.error(
-		`usage: pnpm i18n:qa <${others.join("|")}> [--only <glob>] [--fix | --dry-run]`,
+		`usage: pnpm i18n:qa ${l} [--only <glob>] [--units <file>] [--fix | --dry-run]\n` +
+			`       pnpm i18n:qa ${l} --provider deepinfra [--model <label|id>] [--only <glob>] [--units <file>] [--dry-run]`,
 	);
 	process.exit(2);
 }
 
 const root = new URL("../..", import.meta.url).pathname;
-const reportPath = `i18n-qa/${locale}.json`;
+const model = values.model ?? DEFAULT_MODEL;
+const reportPath = deepinfra
+	? `i18n-qa/${locale}.${model.replace(/[^\w.-]+/g, "_")}.json`
+	: `i18n-qa/${locale}.json`;
 const previous = existsSync(join(root, reportPath))
 	? JSON.parse(readFileSync(join(root, reportPath), "utf8")).rows
 	: [];
+const ids = values.units
+	? new Set(
+			readFileSync(values.units, "utf8")
+				.split("\n")
+				.map((l) => l.trim())
+				.filter(Boolean),
+		)
+	: null;
 
-const { units, stale } = collect({
+const collected = collect({
 	root,
 	locale,
 	locales: [...new Set([...others, ...PSEUDO_CODES])],
 	only: values.only,
 });
+const { stale } = collected;
+const units = ids
+	? collected.units.filter((u) => ids.has(u.id))
+	: collected.units;
 console.log(
 	`${units.length} machine units to check` +
 		(stale ? `, ${stale} stale skipped (redraft them first)` : ""),
@@ -62,19 +94,24 @@ const print = (rows) => {
 		);
 };
 
+let reviewer;
+
 const save = (rows) => {
 	// Keep a last-report row this run did not replace: its file is outside
-	// --only, or a failure stopped the run before its unit. A row whose unit
-	// left QA (reviewed or stale since) is dropped.
+	// --only or its unit outside --units, or a failure stopped the run before
+	// its unit. A row whose unit left QA (reviewed or stale since) is dropped.
 	const inScope = new Set(units.map((u) => u.id));
 	const replaced = new Set(rows.map((r) => r.unit));
-	const outside = (r) => values.only && !matchesGlob(r.path, values.only);
+	const outside = (r) =>
+		(values.only && !matchesGlob(r.path, values.only)) ||
+		(ids && !ids.has(r.unit));
 	const kept = previous.filter(
 		(r) => !replaced.has(r.unit) && (inScope.has(r.unit) || outside(r)),
 	);
 	writeJson(root, reportPath, {
 		locale,
-		model: MODEL,
+		model: reviewer?.model ?? MODEL,
+		...(reviewer?.usage ? { usage: reviewer.usage } : {}),
 		generatedAt: new Date().toISOString(),
 		rows: [...kept, ...rows],
 	});
@@ -93,13 +130,14 @@ if (values["dry-run"]) {
 
 let done = 0;
 try {
+	reviewer = deepinfra ? deepinfraReviewer({ model }) : claudeReviewer();
 	const { rows, checked, skipped, failed } = await qa({
 		root,
 		locale,
 		units,
 		previous,
 		fix: values.fix,
-		reviewer: claudeReviewer(),
+		reviewer,
 		onUnit: () => {
 			done++;
 			if (done % 25 === 0) console.log(`… ${done} reviewed`);
@@ -110,8 +148,18 @@ try {
 	print(rows);
 	console.log(
 		`${checked} checked, ${skipped} unchanged since the last QA, ${failed.length} failed` +
-			(values.fix ? "; fixes written" : "; nothing written (use --fix)"),
+			(values.fix
+				? "; fixes written"
+				: deepinfra
+					? "; advisory, nothing written"
+					: "; nothing written (use --fix)"),
 	);
+	if (reviewer.usage) {
+		const u = reviewer.usage;
+		console.log(
+			`${reviewer.model}: ${u.calls} calls, ${u.prompt} prompt + ${u.completion} completion tokens, ~$${u.cost.toFixed(2)}`,
+		);
+	}
 	process.exit(failed.length ? 1 : 0);
 } catch (e) {
 	if (e.rows) save(e.rows);
