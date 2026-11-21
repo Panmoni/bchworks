@@ -1,7 +1,12 @@
 # Copy for src/pages/wallet.astro.
 metadata:
-  title: "Best Bitcoin Cash Wallets: Feature Matrix"
-  description: "Compare every Bitcoin Cash wallet side by side: CashTokens and NFT support, custody, platforms, WalletConnect, open source and last release date. Checked daily."
+  title: "Best Bitcoin Cash Wallets for Android, iOS, Desktop and Hardware"
+  description: "Compare every Bitcoin Cash (BCH) wallet for Android, iPhone, Windows, macOS, Linux and hardware: CashTokens and NFT support, custody, WalletConnect, open source and last release date. Checked daily."
+
+# Shown as "Updated <date>" under the title. Bump it when the copy or the
+# wallet list changes.
+updateDate: 2026-11-21
+updated: Updated
 
 hero:
   title: Choose a Bitcoin Cash wallet
@@ -43,6 +48,22 @@ table:
     none: none
   note: '"Last release" comes from the wallet''s public GitHub releases; closed-source wallets show n/a. Features are checked by hand against each wallet''s site and app store listing; each row shows when. Spot an error? <a class="underline" href="https://github.com/Panmoni/bitcoincashsite-www/blob/main/src/data/projects.json" target="_blank" rel="noopener noreferrer">Fix it on GitHub</a>. More projects in the <a class="underline" href="/directory">directory</a>.'
 
+# One section per platform, worded the way people search. `id` is the
+# wallet.platforms value whose wallets the section lists, and the anchor.
+platforms:
+  - id: android
+    title: Bitcoin Cash wallets for Android
+    text: "Each wallet below has an Android app. Install it from Google Play or, where the wallet offers one, the APK from its official site or GitHub releases page. Never install a wallet APK from a mirror or a link someone sent you: fake APKs steal seed phrases."
+  - id: ios
+    title: Bitcoin Cash wallets for iOS (iPhone and iPad)
+    text: "Each wallet below has an iPhone app in the App Store. Check the developer name on the listing before you install: fake wallet apps copy real names and icons."
+  - id: desktop
+    title: Bitcoin Cash desktop wallets for Windows, macOS and Linux
+    text: "These wallets run on a computer. Most ship builds for Windows, macOS and Linux; check the wallet's download page for your system. Electron Cash is the long-standing full-featured BCH desktop wallet."
+  - id: hardware
+    title: Bitcoin Cash hardware wallets
+    text: "A hardware wallet keeps your keys on a separate device and signs each transaction there, so malware on your computer or phone cannot spend your coins. Buy it from the maker, never second-hand, and check that its current firmware supports BCH."
+
 faq:
   title: Questions
   items:
@@ -54,3 +75,7 @@ faq:
       a: You hold the keys, usually as a 12- or 24-word seed phrase. Nobody can freeze or lose your coins for you. It also means nobody can recover them if you lose the seed.
     - q: What is WalletConnect on Bitcoin Cash?
       a: A standard way to connect your wallet to a web app (a DEX, an NFT market, a game) and approve transactions from your phone. BCH apps use the BCH WalletConnect and CashConnect specs.
+    - q: Which Bitcoin Cash wallet works on Android, iPhone and desktop?
+      a: Several wallets have apps for all three, such as Electron Cash, Stack Wallet, Cake Wallet and Exodus. The Platforms column in the table shows every wallet's apps.
+    - q: Is it safe to download a Bitcoin Cash wallet APK?
+      a: Only from the wallet's official site or its GitHub releases page. Fake wallet APKs are a common way to steal seed phrases. If the wallet is on Google Play, installing from there is the simpler choice.

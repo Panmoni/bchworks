@@ -1,6 +1,8 @@
 metadata:
   title: 'Las mejores billeteras de Bitcoin Cash: matriz de funciones'
   description: 'Compara todas las billeteras de Bitcoin Cash lado a lado: compatibilidad con CashTokens y NFTs, custodia, plataformas, WalletConnect, código abierto y fecha de la última versión. Revisado a diario.'
+updateDate: 2026-11-21
+updated: Actualizado
 hero:
   title: Elige una billetera de Bitcoin Cash
   subtitle: '{count} billeteras en una sola tabla. El estado y las fechas de las versiones se actualizan a diario.'
@@ -37,6 +39,19 @@ table:
     partial: parcial
     none: ninguno
   note: “Última versión” proviene de las versiones públicas de la billetera en GitHub; las billeteras de código cerrado muestran n/d. Las funciones se revisan a mano con el sitio y la ficha en la tienda de apps de cada billetera; cada fila indica cuándo. ¿Ves un error? <a class="underline" href="https://github.com/Panmoni/bitcoincashsite-www/blob/main/src/data/projects.json" target="_blank" rel="noopener noreferrer">Corrígelo en GitHub</a>. Más proyectos en el <a class="underline" href="/directory">directorio</a>.
+platforms:
+  - id: android
+    title: Billeteras de Bitcoin Cash para Android
+    text: 'Cada billetera de esta lista tiene app para Android. Instálala desde Google Play o, si la billetera lo ofrece, el APK de su sitio oficial o de su página de versiones en GitHub. Nunca instales el APK de una billetera desde un espejo o un enlace que alguien te envió: los APK falsos roban frases semilla.'
+  - id: ios
+    title: Billeteras de Bitcoin Cash para iOS (iPhone y iPad)
+    text: 'Cada billetera de esta lista tiene app para iPhone en la App Store. Revisa el nombre del desarrollador en la ficha antes de instalarla: las apps de billeteras falsas copian nombres e íconos reales.'
+  - id: desktop
+    title: Billeteras de escritorio de Bitcoin Cash para Windows, macOS y Linux
+    text: 'Estas billeteras funcionan en una computadora. La mayoría ofrece versiones para Windows, macOS y Linux; revisa la página de descarga de la billetera para tu sistema. Electron Cash es la billetera de escritorio de BCH más veterana y completa.'
+  - id: hardware
+    title: Billeteras físicas (hardware wallets) de Bitcoin Cash
+    text: 'Una billetera física guarda tus claves en un dispositivo aparte y firma cada transacción allí, así que un malware en tu computadora o celular no puede gastar tus monedas. Cómprala al fabricante, nunca de segunda mano, y revisa que su firmware actual admita BCH.'
 faq:
   title: Preguntas
   items:
@@ -48,6 +63,10 @@ faq:
       a: Tú tienes las claves, normalmente como una frase semilla de 12 o 24 palabras. Nadie puede congelar ni perder tus monedas por ti. También significa que nadie puede recuperarlas si pierdes la frase semilla.
     - q: ¿Qué es WalletConnect en Bitcoin Cash?
       a: Una forma estándar de conectar tu billetera a una aplicación web (un DEX, un mercado de NFTs, un juego) y aprobar transacciones desde tu celular. Las aplicaciones de BCH usan las especificaciones BCH WalletConnect y CashConnect.
+    - q: ¿Qué billetera de Bitcoin Cash funciona en Android, iPhone y escritorio?
+      a: Varias billeteras tienen apps para los tres, como Electron Cash, Stack Wallet, Cake Wallet y Exodus. La columna Plataformas de la tabla muestra las apps de cada billetera.
+    - q: ¿Es seguro descargar el APK de una billetera de Bitcoin Cash?
+      a: Solo desde el sitio oficial de la billetera o su página de versiones en GitHub. Los APK falsos son una forma común de robar frases semilla. Si la billetera está en Google Play, instalarla desde allí es la opción más sencilla.
 translation:
   sourceHash: 4d2520956c9d0ff4
   status: machine
