@@ -133,4 +133,51 @@ describe("deepinfraReviewer", () => {
 			});
 		}
 	});
+
+	test("a malformed reply fails the batch only, never the run", async () => {
+		const content = (c) => ({ choices: [{ message: { content: c } }] });
+		for (const res of [
+			content('{"verdicts":{"id":"a"}}'),
+			content('{"verdicts":[null]}'),
+			content("{}"),
+			content("not json"),
+			{},
+		]) {
+			const { fetch } = fakeFetch(res);
+			const r = deepinfraReviewer({ fetch, key: "k" });
+			await assert.rejects(r.review(batch), (e) => {
+				assert.equal(e instanceof TranslatorError, false);
+				return true;
+			});
+		}
+	});
+
+	test("an unknown model or no credit stops the run", async () => {
+		for (const status of [402, 403, 404]) {
+			const { fetch } = fakeFetch({}, { status });
+			const r = deepinfraReviewer({ fetch, key: "k" });
+			await assert.rejects(r.review(batch), TranslatorError);
+		}
+	});
+
+	test("counts usage as numbers whatever type the API sends", async () => {
+		const { fetch } = fakeFetch(
+			reply([], { prompt_tokens: "7", estimated_cost: "0.25" }),
+		);
+		const r = deepinfraReviewer({ fetch, key: "k" });
+		await r.review(batch);
+		assert.deepEqual(r.usage, {
+			calls: 1,
+			prompt: 7,
+			completion: 0,
+			cost: 0.25,
+		});
+	});
+
+	test("a model id never resolves through an inherited property", () => {
+		assert.equal(
+			buildDeepinfraRequest(batch, "constructor").model,
+			"constructor",
+		);
+	});
 });

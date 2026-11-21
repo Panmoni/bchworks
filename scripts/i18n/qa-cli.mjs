@@ -57,9 +57,9 @@ const model = values.model ?? DEFAULT_MODEL;
 const reportPath = deepinfra
 	? `i18n-qa/${locale}.${model.replace(/[^\w.-]+/g, "_")}.json`
 	: `i18n-qa/${locale}.json`;
-const previous = existsSync(join(root, reportPath))
-	? JSON.parse(readFileSync(join(root, reportPath), "utf8")).rows
-	: [];
+const last = existsSync(join(root, reportPath))
+	? JSON.parse(readFileSync(join(root, reportPath), "utf8"))
+	: { rows: [] };
 const ids = values.units
 	? new Set(
 			readFileSync(values.units, "utf8")
@@ -79,6 +79,28 @@ const { stale } = collected;
 const units = ids
 	? collected.units.filter((u) => ids.has(u.id))
 	: collected.units;
+const fresh = new Set(collected.units.map((u) => u.id));
+
+// A last-report row about text its unit no longer holds is out of date:
+// drop all of that unit's rows so it is reviewed again, even when a qaHash
+// another run stamped still matches.
+const textOf = new Map(
+	collected.units.flatMap((u) =>
+		u.segments.map((s) => [
+			`${u.id}\0${u.kind === "overlay" ? "" : (s.field ?? "")}`,
+			s.es,
+		]),
+	),
+);
+const outdated = new Set(
+	last.rows
+		.filter((r) => {
+			const text = textOf.get(`${r.unit}\0${r.field ?? ""}`);
+			return text !== undefined && text !== r.es;
+		})
+		.map((r) => r.unit),
+);
+const previous = last.rows.filter((r) => !outdated.has(r.unit));
 console.log(
 	`${units.length} machine units to check` +
 		(stale ? `, ${stale} stale skipped (redraft them first)` : ""),
@@ -96,22 +118,30 @@ const print = (rows) => {
 
 let reviewer;
 
+const addUsage = (a = {}, b) =>
+	Object.fromEntries(
+		Object.keys(b).map((k) => [k, (Number(a[k]) || 0) + b[k]]),
+	);
+
 const save = (rows) => {
 	// Keep a last-report row this run did not replace: its file is outside
-	// --only or its unit outside --units, or a failure stopped the run before
-	// its unit. A row whose unit left QA (reviewed or stale since) is dropped.
+	// --only, its still-fresh unit outside --units, or a failure stopped the
+	// run before its unit. A row whose unit left QA (reviewed or stale since)
+	// is dropped.
 	const inScope = new Set(units.map((u) => u.id));
 	const replaced = new Set(rows.map((r) => r.unit));
 	const outside = (r) =>
 		(values.only && !matchesGlob(r.path, values.only)) ||
-		(ids && !ids.has(r.unit));
+		(ids && !ids.has(r.unit) && fresh.has(r.unit));
 	const kept = previous.filter(
 		(r) => !replaced.has(r.unit) && (inScope.has(r.unit) || outside(r)),
 	);
 	writeJson(root, reportPath, {
 		locale,
 		model: reviewer?.model ?? MODEL,
-		...(reviewer?.usage ? { usage: reviewer.usage } : {}),
+		// Usage adds up every run that wrote this report, so a resumed or
+		// --units run does not lose the cost of the runs before it.
+		...(reviewer?.usage ? { usage: addUsage(last.usage, reviewer.usage) } : {}),
 		generatedAt: new Date().toISOString(),
 		rows: [...kept, ...rows],
 	});

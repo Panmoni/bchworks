@@ -16,15 +16,18 @@ export const MODELS = {
 };
 export const DEFAULT_MODEL = "deepseek";
 
-// GLM spends its whole budget thinking at a higher effort and returns no
-// JSON (measured in xmodel-review, 2026-08-14). DeepSeek takes no tuning.
+// xmodel-review's tuning for the same models: at a higher effort GLM can
+// spend its whole budget thinking and return no JSON. DeepSeek takes none.
 const TUNING = { glm: { reasoning_effort: "low" } };
+
+const resolve = (model) =>
+	Object.hasOwn(MODELS, model) ? MODELS[model] : model;
 
 /** The /chat/completions body for one QA batch on `model`. */
 export const buildDeepinfraRequest = (batch, model) => {
 	const req = buildReviewRequest(batch);
 	return {
-		model: MODELS[model] ?? model,
+		model: resolve(model),
 		messages: [{ role: "system", content: req.system }, ...req.messages],
 		response_format: {
 			type: "json_schema",
@@ -36,7 +39,7 @@ export const buildDeepinfraRequest = (batch, model) => {
 		},
 		max_tokens: 64000,
 		temperature: 0.2,
-		...TUNING[model],
+		...(Object.hasOwn(TUNING, model) ? TUNING[model] : {}),
 	};
 };
 
@@ -54,7 +57,7 @@ export const deepinfraReviewer = ({
 	const usage = { calls: 0, prompt: 0, completion: 0, cost: 0 };
 	return {
 		name: model,
-		model: MODELS[model] ?? model,
+		model: resolve(model),
 		usage,
 		async review(batch) {
 			let res;
@@ -70,23 +73,34 @@ export const deepinfraReviewer = ({
 				});
 			} catch (e) {
 				// A timeout or a dropped connection: this batch only.
-				throw new Error(`DeepInfra: ${e.message}`);
+				throw new Error(`DeepInfra: ${e.message}`, { cause: e });
 			}
-			// A rejected key, no credit or an unknown model: every batch would
-			// fail the same way, so the run stops. The body is not echoed.
-			if ([401, 402, 403, 404].includes(res.status))
-				throw new TranslatorError(`DeepInfra: HTTP ${res.status}`);
-			if (!res.ok) throw new Error(`DeepInfra: HTTP ${res.status}`);
+			if (!res.ok) {
+				// Release the connection; the body is not read or echoed.
+				await res.body?.cancel();
+				// A rejected key, no credit or an unknown model: every batch
+				// would fail the same way, so the run stops.
+				if ([401, 402, 403, 404].includes(res.status))
+					throw new TranslatorError(`DeepInfra: HTTP ${res.status}`);
+				throw new Error(`DeepInfra: HTTP ${res.status}`);
+			}
 			const body = await res.json();
 			const u = body.usage ?? {};
 			usage.calls++;
-			usage.prompt += u.prompt_tokens ?? 0;
-			usage.completion += u.completion_tokens ?? 0;
-			usage.cost += u.estimated_cost ?? 0;
+			usage.prompt += Number(u.prompt_tokens) || 0;
+			usage.completion += Number(u.completion_tokens) || 0;
+			usage.cost += Number(u.estimated_cost) || 0;
 			const choice = body.choices?.[0];
 			if (choice?.finish_reason === "length")
 				throw new Error("DeepInfra: reply hit max_tokens");
-			return JSON.parse(choice?.message?.content ?? "{}").verdicts ?? [];
+			const verdicts = JSON.parse(choice?.message?.content ?? "{}").verdicts;
+			// A malformed reply fails this batch, never the whole run.
+			if (
+				!Array.isArray(verdicts) ||
+				!verdicts.every((v) => v && typeof v === "object")
+			)
+				throw new Error("DeepInfra: the reply is not a list of verdicts");
+			return verdicts;
 		},
 	};
 };
