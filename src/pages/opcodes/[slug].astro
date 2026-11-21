@@ -1,6 +1,7 @@
 ---
 import { getCollection } from "astro:content";
 import ArticleShell from "~/components/reference/ArticleShell.astro";
+import { isNoindexOpcode } from "~/utils/opcodes.mjs";
 import { getPageCopy } from "~/utils/pages";
 
 export const getStaticPaths = async () => {
@@ -33,19 +34,18 @@ const upgrade = o.since
 	: undefined;
 
 // Pad short descriptions for search snippets, staying inside ~160 characters.
-// A long one leads with the name and byte instead: NOP and undefined opcodes
-// share their descriptions, and every meta description must be unique.
+// Noindex opcodes share long descriptions (the NOPs, the undefined bytes), so
+// theirs lead with the name and byte to keep every meta description unique.
+const noindex = isNoindexOpcode(o);
 const suffix = fill(copy.metadata.description);
 const metaDescription =
 	o.metaDescription ??
 	(o.description.length + suffix.length <= 160
 		? o.description + suffix
-		: `${o.name} (${hex}): ${o.description}`);
-
-// NOP, reserved and undefined opcodes are too thin to rank; astro.config.mjs
-// keeps them out of the sitemap too (PAN-425).
-const robots =
-	o.group === "reserved" ? { index: false, follow: true } : undefined;
+		: noindex
+			? `${o.name} (${hex}): ${o.description}`
+			: o.description);
+const robots = noindex ? { index: false, follow: true } : undefined;
 const kindLabel: Record<string, string> = copy.usedIn.kind;
 
 const term = {

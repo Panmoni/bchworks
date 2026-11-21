@@ -21,6 +21,7 @@ import {
 	responsiveTablesPlugin,
 } from "./src/utils/frontmatter.mjs";
 import { sitemapLastmod } from "./src/utils/lastmod.mjs";
+import { isNoindexOpcode } from "./src/utils/opcodes.mjs";
 import tasks from "./src/utils/tasks.mjs";
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
@@ -31,10 +32,12 @@ const draftLocales = draftLocaleCodes();
 const inDraftLocale = (pathname) =>
 	draftLocales.includes(splitLocale(pathname).locale);
 
-// NOP, reserved and undefined opcode pages are noindex (PAN-425): drop them too.
+// Noindex opcode pages (PAN-425) leave the sitemap too.
 const noindexOpcodes = new Set(
-	JSON.parse(readFileSync("./src/data/opcodes.json", "utf8"))
-		.filter((o) => o.group === "reserved")
+	JSON.parse(
+		readFileSync(path.join(__dirname, "src/data/opcodes.json"), "utf8"),
+	)
+		.filter(isNoindexOpcode)
 		.map((o) => `/opcodes/${o.id}`),
 );
 

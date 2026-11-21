@@ -1127,7 +1127,7 @@
 		"stackOut": "n",
 		"description": "Pushes the number of items on the stack.",
 		"cost": "Base instruction cost 100 plus bytes pushed (2025 VM limits).",
-		"example": "OP_1 OP_2 OP_DEPTH OP_2 OP_EQUAL",
+		"example": "OP_1 OP_2 OP_DEPTH OP_2 OP_NUMEQUALVERIFY OP_DROP",
 		"metaDescription": "OP_DEPTH (0x74) pushes how many items sit on the Bitcoin Cash Script stack. Worked example with stack trace, cost and how scripts use the count.",
 		"walkthrough": [
 			{
@@ -1148,9 +1148,14 @@
 				"stack": "1 2 2 2"
 			},
 			{
-				"op": "OP_EQUAL",
-				"stack": "1 2 1",
-				"note": "The count matched. The top item is true."
+				"op": "OP_NUMEQUALVERIFY",
+				"stack": "1 2",
+				"note": "The count matched, so the script goes on."
+			},
+			{
+				"op": "OP_DROP",
+				"stack": "1",
+				"note": "One true item is left, as the clean-stack rule requires."
 			}
 		],
 		"usedIn": [
@@ -1389,7 +1394,7 @@
 			},
 			{
 				"kind": "upgrade",
-				"title": "May 2020 upgrade",
+				"title": "May 2020: SigChecks and OP_REVERSEBYTES",
 				"url": "/upgrades/2020-05-upgrade",
 				"note": "Before OP_REVERSEBYTES, contracts reversed byte order with chains of OP_SPLIT, OP_SWAP and OP_CAT."
 			}
@@ -1506,7 +1511,7 @@
 			},
 			{
 				"kind": "upgrade",
-				"title": "May 2020 upgrade",
+				"title": "May 2020: SigChecks and OP_REVERSEBYTES",
 				"url": "/upgrades/2020-05-upgrade",
 				"note": "Before OP_REVERSEBYTES, contracts reversed byte order with chains of OP_SPLIT, OP_SWAP and OP_CAT."
 			}
@@ -4176,7 +4181,7 @@
 			{
 				"op": "OP_EQUAL",
 				"stack": "1",
-				"note": "Output 0 carries the same category and capability, so the token stays in the contract's hands."
+				"note": "Output 0 carries the same category and capability as the token this input spends. A covenant also checks OP_OUTPUTBYTECODE to pin where it goes."
 			}
 		],
 		"usedIn": [
