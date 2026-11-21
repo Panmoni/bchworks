@@ -1,6 +1,7 @@
 // The DeepInfra QA reviewer (PAN-440), run against a fake fetch: no key and
 // no network.
 import assert from "node:assert/strict";
+import { spawnSync } from "node:child_process";
 import { describe, test } from "node:test";
 import { buildReviewRequest, TranslatorError } from "./claude.mjs";
 import {
@@ -22,11 +23,17 @@ const batch = {
 
 const fakeFetch = (reply, { status = 200 } = {}) => {
 	const sent = [];
+	const cancelled = [];
 	const fetch = async (url, init) => {
 		sent.push({ url, init, body: JSON.parse(init.body) });
-		return { ok: status < 400, status, json: async () => reply };
+		return {
+			ok: status < 400,
+			status,
+			json: async () => reply,
+			body: { cancel: async () => cancelled.push(status) },
+		};
 	};
-	return { fetch, sent };
+	return { fetch, sent, cancelled };
 };
 
 const reply = (verdicts, usage = {}, finish_reason = "stop") => ({
@@ -111,24 +118,29 @@ describe("deepinfraReviewer", () => {
 	});
 
 	test("a rejected key stops the run without echoing the body or the key", async () => {
-		const { fetch } = fakeFetch({ error: "bad key k-secret" }, { status: 401 });
+		const { fetch, cancelled } = fakeFetch(
+			{ error: "bad key k-secret" },
+			{ status: 401 },
+		);
 		const r = deepinfraReviewer({ fetch, key: "k-secret" });
 		await assert.rejects(r.review(batch), (e) => {
 			assert.ok(e instanceof TranslatorError);
-			assert.doesNotMatch(e.message, /k-secret/);
+			assert.equal(e.message, "DeepInfra: HTTP 401");
 			return true;
 		});
+		assert.deepEqual(cancelled, [401]);
 	});
 
 	test("a server error or a truncated reply fails the batch only", async () => {
-		for (const [res, status] of [
-			[{}, 503],
-			[reply([], {}, "length"), 200],
+		for (const [res, status, message] of [
+			[{}, 503, "DeepInfra: HTTP 503"],
+			[reply([], {}, "length"), 200, "DeepInfra: reply hit max_tokens"],
 		]) {
 			const { fetch } = fakeFetch(res, { status });
 			const r = deepinfraReviewer({ fetch, key: "k" });
 			await assert.rejects(r.review(batch), (e) => {
 				assert.equal(e instanceof TranslatorError, false);
+				assert.equal(e.message, message);
 				return true;
 			});
 		}
@@ -180,5 +192,30 @@ describe("deepinfraReviewer", () => {
 			buildDeepinfraRequest(batch, "constructor").model,
 			"constructor",
 		);
+	});
+});
+
+// The CLI's guards (qa-cli.mjs), run as a process with no key: neither path
+// may reach the network.
+describe("pnpm i18n:qa --provider deepinfra", () => {
+	const cli = new URL("./qa-cli.mjs", import.meta.url).pathname;
+	const run = (...args) => {
+		const { DEEPINFRA_API_KEY: _, ...env } = process.env;
+		return spawnSync(process.execPath, [cli, "es", ...args], {
+			env,
+			encoding: "utf8",
+		});
+	};
+
+	test("refuses --fix: its findings are advisory", () => {
+		const r = run("--provider", "deepinfra", "--fix");
+		assert.equal(r.status, 2);
+		assert.match(r.stderr, /usage:/);
+	});
+
+	test("a missing key stops before any call", () => {
+		const r = run("--provider", "deepinfra", "--units", "/dev/null");
+		assert.equal(r.status, 1);
+		assert.match(r.stderr, /DEEPINFRA_API_KEY is not set/);
 	});
 });
