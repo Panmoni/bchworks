@@ -58,7 +58,8 @@ export default defineConfig({
 				"img-src 'self' data: https:",
 				// The wss:// hosts are the UTXO Machine's Fulcrum servers; keep them in
 				// step with SERVERS in src/components/utxo/electrum.ts.
-				"connect-src 'self' wss://bch.imaginary.cash:50004 wss://electrum.imaginary.cash:50004 wss://bch.loping.net:50004 wss://fulcrum.jettscythe.xyz:50004 wss://blackie.c3-soft.com:50004",
+				// cloudflareinsights.com receives Cloudflare Web Analytics beacons.
+				"connect-src 'self' https://cloudflareinsights.com wss://bch.imaginary.cash:50004 wss://electrum.imaginary.cash:50004 wss://bch.loping.net:50004 wss://fulcrum.jettscythe.xyz:50004 wss://blackie.c3-soft.com:50004",
 				"frame-src https://www.youtube.com https://www.youtube-nocookie.com",
 				"object-src 'none'",
 				"base-uri 'self'",
@@ -67,8 +68,14 @@ export default defineConfig({
 			// Google Analytics runs through Cloudflare Zaraz, which adds its own
 			// nonce to script-src at the edge. 'inline-speculation-rules' lets the
 			// client prerender below add its <script type="speculationrules">.
+			// static.cloudflareinsights.com serves the Web Analytics beacon that
+			// Cloudflare injects at the edge; without it the RUM data goes dark.
 			scriptDirective: {
-				resources: ["'self'", "'inline-speculation-rules'"],
+				resources: [
+					"'self'",
+					"'inline-speculation-rules'",
+					"https://static.cloudflareinsights.com",
+				],
 			},
 			styleDirective: {
 				// Shiki code blocks and a few components set style="" attributes.
