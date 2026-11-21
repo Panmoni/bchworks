@@ -25,6 +25,7 @@ mentors:
   subtitle: Mentores de CashTokens en X
 tutorials:
   title: 'Pioneros de los tokens: tutoriales de CashTokens'
+  intro: '¿Empiezas a desarrollar? Ve al <a class="underline" href="/build">centro para desarrolladores</a>. ¿Ya acuñaste un token fungible? <a class="underline" href="/blog/token-pioneers-cashtokens-tutorial-2">Acuña tus primeros NFTs en el tutorial 2</a>.'
 video:
   title: Reproductor de video de YouTube
 native:

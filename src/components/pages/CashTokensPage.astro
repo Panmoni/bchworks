@@ -81,6 +81,9 @@ const mentors = await getProjectsByCategory(
 
   <Boxes subtitle={copy.mentors.subtitle} items={mentors} />
 
+  <section class="max-w-7xl mx-auto px-4 sm:px-6 pt-8">
+    <p class="text-lg text-muted" set:html={copy.tutorials.intro} />
+  </section>
   <BlogLatestPosts title={copy.tutorials.title} category="Tutorial" />
 
   <Hero>

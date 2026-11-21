@@ -30,6 +30,7 @@ mentors:
 
 tutorials:
   title: "Token Pioneers: CashTokens Tutorials"
+  intro: 'New to building? Start at the <a class="underline" href="/build">builder hub</a>. Already minted a fungible token? <a class="underline" href="/blog/token-pioneers-cashtokens-tutorial-2">Mint your first NFTs in tutorial 2</a>.'
 
 video:
   title: YouTube video player

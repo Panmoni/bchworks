@@ -52,6 +52,7 @@ platforms:
   - id: hardware
     title: Billeteras físicas (hardware wallets) de Bitcoin Cash
     text: 'Una billetera física guarda tus claves en un dispositivo aparte y firma cada transacción allí, así que un malware en tu computadora o celular no puede gastar tus monedas. Cómprala al fabricante, nunca de segunda mano, y revisa que su firmware actual admita BCH.'
+builders: '¿Desarrollas sobre Bitcoin Cash? Empieza en el <a class="underline" href="/build">centro para desarrolladores</a> y luego acuña tus primeros NFTs con el <a class="underline" href="/blog/token-pioneers-cashtokens-tutorial-2">tutorial 2 de Token Pioneers</a>.'
 faq:
   title: Preguntas
   items:

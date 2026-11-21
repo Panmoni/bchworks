@@ -64,6 +64,8 @@ platforms:
     title: Bitcoin Cash hardware wallets
     text: "A hardware wallet keeps your keys on a separate device and signs each transaction there, so malware on your computer or phone cannot spend your coins. Buy it from the maker, never second-hand, and check that its current firmware supports BCH."
 
+builders: 'Building on Bitcoin Cash? Start at the <a class="underline" href="/build">builder hub</a>, then mint your first NFTs with <a class="underline" href="/blog/token-pioneers-cashtokens-tutorial-2">Token Pioneers tutorial 2</a>.'
+
 faq:
   title: Questions
   items:

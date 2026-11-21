@@ -15,6 +15,7 @@ hero:
     intro: "// Mint your first CashToken (Token Pioneers #1)"
     result: "// → 8a3f…c91e   fee: 0.00000431 BCH"
     tutorial: → Follow the full tutorial
+    nfts: '→ Part 2: mint your first NFTs'
   stickers:
     fungible: fungible
     nft: NFT · minting
