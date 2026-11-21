@@ -139,6 +139,7 @@ describe("deepinfraReviewer", () => {
 		for (const res of [
 			content('{"verdicts":{"id":"a"}}'),
 			content('{"verdicts":[null]}'),
+			content('{"verdicts":[{"id":"a","verdict":"Flag"}]}'),
 			content("{}"),
 			content("not json"),
 			{},

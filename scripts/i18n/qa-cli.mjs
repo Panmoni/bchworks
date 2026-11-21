@@ -92,14 +92,25 @@ const textOf = new Map(
 		]),
 	),
 );
+// A unit the last run got no verdict for is asked again too.
 const outdated = new Set(
 	last.rows
 		.filter((r) => {
+			if (!fresh.has(r.unit)) return false;
 			const text = textOf.get(`${r.unit}\0${r.field ?? ""}`);
-			return text !== undefined && text !== r.es;
+			return (
+				text !== r.es || r.reason?.startsWith("the QA pass returned no verdict")
+			);
 		})
 		.map((r) => r.unit),
 );
+if (ids) {
+	const unknown = [...ids].filter((id) => !fresh.has(id));
+	if (unknown.length)
+		console.warn(
+			`--units: ${unknown.length} id(s) are not fresh machine units, skipped: ${unknown.slice(0, 5).join(", ")}${unknown.length > 5 ? " …" : ""}`,
+		);
+}
 const previous = last.rows.filter((r) => !outdated.has(r.unit));
 console.log(
 	`${units.length} machine units to check` +
@@ -117,6 +128,14 @@ const print = (rows) => {
 };
 
 let reviewer;
+
+const printUsage = () => {
+	const u = reviewer?.usage;
+	if (u)
+		console.log(
+			`${reviewer.model}: ${u.calls} calls, ${u.prompt} prompt + ${u.completion} completion tokens, ~$${u.cost.toFixed(2)}`,
+		);
+};
 
 const addUsage = (a = {}, b) =>
 	Object.fromEntries(
@@ -184,15 +203,12 @@ try {
 					? "; advisory, nothing written"
 					: "; nothing written (use --fix)"),
 	);
-	if (reviewer.usage) {
-		const u = reviewer.usage;
-		console.log(
-			`${reviewer.model}: ${u.calls} calls, ${u.prompt} prompt + ${u.completion} completion tokens, ~$${u.cost.toFixed(2)}`,
-		);
-	}
+	printUsage();
 	process.exit(failed.length ? 1 : 0);
 } catch (e) {
 	if (e.rows) save(e.rows);
 	console.error(e.message);
+	// A run stopped mid-way still says what it spent.
+	printUsage();
 	process.exit(1);
 }

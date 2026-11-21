@@ -84,7 +84,16 @@ export const deepinfraReviewer = ({
 					throw new TranslatorError(`DeepInfra: HTTP ${res.status}`);
 				throw new Error(`DeepInfra: HTTP ${res.status}`);
 			}
-			const body = await res.json();
+			const parse = async (read) => {
+				try {
+					return await read();
+				} catch (e) {
+					throw new Error(`DeepInfra (${model}): unparseable reply`, {
+						cause: e,
+					});
+				}
+			};
+			const body = await parse(() => res.json());
 			const u = body.usage ?? {};
 			usage.calls++;
 			usage.prompt += Number(u.prompt_tokens) || 0;
@@ -93,11 +102,16 @@ export const deepinfraReviewer = ({
 			const choice = body.choices?.[0];
 			if (choice?.finish_reason === "length")
 				throw new Error("DeepInfra: reply hit max_tokens");
-			const verdicts = JSON.parse(choice?.message?.content ?? "{}").verdicts;
-			// A malformed reply fails this batch, never the whole run.
+			const { verdicts } = await parse(() =>
+				JSON.parse(choice?.message?.content ?? "{}"),
+			);
+			// A malformed reply fails this batch, never the whole run. A verdict
+			// outside the schema would otherwise read as clean in qa.mjs.
 			if (
 				!Array.isArray(verdicts) ||
-				!verdicts.every((v) => v && typeof v === "object")
+				!verdicts.every(
+					(v) => v && ["clean", "fixed", "flag"].includes(v.verdict),
+				)
 			)
 				throw new Error("DeepInfra: the reply is not a list of verdicts");
 			return verdicts;
