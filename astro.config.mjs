@@ -7,6 +7,7 @@ import { defineConfig, fontProviders } from "astro/config";
 import icon from "astro-icon";
 import path from "path";
 import { fileURLToPath } from "url";
+import { resolveVersion } from "./scripts/version.mjs";
 import { i18nAlternates } from "./src/i18n/alternates.mjs";
 import { splitLocale } from "./src/i18n/links.mjs";
 import localizeLinks from "./src/i18n/links-integration.mjs";
@@ -32,6 +33,9 @@ const inDraftLocale = (pathname) =>
 // hreflang for translated pages, written after the build; the sitemap
 // reuses the same links as xhtml:link alternates.
 const alternates = i18nAlternates();
+
+// The footer shows the site version and build commit (scripts/version.mjs).
+const build = resolveVersion();
 
 export default defineConfig({
 	site: SITE.site || "https://bchworks.com",
@@ -180,6 +184,10 @@ export default defineConfig({
 	},
 
 	vite: {
+		define: {
+			__APP_VERSION__: JSON.stringify(build.version),
+			__GIT_COMMIT__: JSON.stringify(build.commit),
+		},
 		// Recompiles messages/*.json into src/paraglide/ on change in dev. The
 		// locale list itself comes from scripts/i18n-compile.mjs (run first).
 		plugins: [tailwindcss(), paraglideVitePlugin(paraglideOptions)],

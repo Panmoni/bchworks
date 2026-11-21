@@ -1,0 +1,36 @@
+name: Tag the site version
+
+# Every push to main gets the next vX.Y.Z tag (rules in scripts/version.mjs).
+# The tag is the version; nothing is committed. The deploy build computes the
+# same number on its own, so it does not wait for this run.
+#
+# The daily data-refresh push uses GITHUB_TOKEN and so never triggers this;
+# its commits never bump anyway.
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: version-tag
+  cancel-in-progress: false
+
+jobs:
+  tag:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+          ref: main
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+      - name: Tag and push the next version
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          node scripts/version.mjs --push

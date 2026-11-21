@@ -25,7 +25,7 @@
 		"fix": "biome check --write .",
 		"format": "biome format --write .",
 		"lint": "biome lint .",
-		"test": "node --test src/utils/*.test.mjs src/i18n/*.test.mjs scripts/i18n/*.test.mjs",
+		"test": "node --test src/utils/*.test.mjs src/i18n/*.test.mjs scripts/i18n/*.test.mjs scripts/version.test.mjs",
 		"i18n:draft": "node scripts/i18n/draft.mjs",
 		"i18n:review": "node scripts/i18n/review.mjs",
 		"i18n:review-ui": "node scripts/i18n/review-ui.mjs",
@@ -34,7 +34,8 @@
 		"data:health": "node scripts/health-check.mjs",
 		"data:metrics": "node scripts/metrics.mjs",
 		"data:utxo": "node scripts/utxo-stats.mjs",
-		"report:draft": "node scripts/state-of-bch.mjs"
+		"report:draft": "node scripts/state-of-bch.mjs",
+		"version:show": "node scripts/version.mjs"
 	},
 	"dependencies": {
 		"@astrojs/rss": "^4.0.19",
