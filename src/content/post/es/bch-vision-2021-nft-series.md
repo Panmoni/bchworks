@@ -2,7 +2,7 @@
 publishDate: 2023-08-12T00:00:00.000Z
 title: Serie Visión BCH 2021 (serie de NFT)
 description: ninguno
-excerpt: La serie Visión BCH es una colección de 25 imágenes para redes sociales publicadas por primera vez en 2021..
+excerpt: La serie Visión BCH es una colección de 25 imágenes para redes sociales publicadas por primera vez en 2021.
 image: ~/assets/images/blog/bch-vision.png
 category: NFTs
 tags:
@@ -69,9 +69,9 @@ Intercámbialos en <a href="https://tapswap.cash/trade/792eb291fee60820bc04fcdde
 
 ![Incentivos, no violencia](../../../assets/images/posts/vision-series/12.png)
 
-## 13. 100 % de inclusión financiera y económica
+## 13. 100 % de inclusión financiera y económica
 
-![100 % de inclusión financiera y económica](../../../assets/images/posts/vision-series/13.png)
+![100 % de inclusión financiera y económica](../../../assets/images/posts/vision-series/13.png)
 
 ## 14. El Ledger es la base
 

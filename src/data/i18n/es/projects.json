@@ -3,3348 +3,3348 @@
 		"description": {
 			"text": "Celular y navegador",
 			"sourceHash": "8067bc423b0286fd",
-			"status": "machine",
+			"status": "reviewed",
 			"translator": "Claude",
-			"qaHash": "fdbf39556fc996c6"
+			"reviewer": "George Donnelly"
 		}
 	},
 	"paytaca": {
 		"description": {
 			"text": "Celular y navegador",
 			"sourceHash": "8067bc423b0286fd",
-			"status": "machine",
+			"status": "reviewed",
 			"translator": "Claude",
-			"qaHash": "fdbf39556fc996c6"
+			"reviewer": "George Donnelly"
 		}
 	},
 	"cashonize": {
 		"description": {
 			"text": "Web y Android",
 			"sourceHash": "7b343a1503cdf0ae",
-			"status": "machine",
+			"status": "reviewed",
 			"translator": "Claude",
-			"qaHash": "6096bb7eb49015b3"
+			"reviewer": "George Donnelly"
 		}
 	},
 	"electron-cash": {
 		"description": {
 			"text": "Computadora y celular. Para usuarios avanzados.",
 			"sourceHash": "93559daa82f4d683",
-			"status": "machine",
+			"status": "reviewed",
 			"translator": "Claude",
-			"qaHash": "522f66d9b3ccb646"
+			"reviewer": "George Donnelly"
 		}
 	},
 	"stack-wallet": {
 		"description": {
 			"text": "Android, iOS y F-Droid. Centrada en la privacidad y de código abierto.",
 			"sourceHash": "3a3d47cb0f043e30",
-			"status": "machine",
+			"status": "reviewed",
 			"translator": "Claude",
-			"qaHash": "b34f1cd8e2f7c8db"
+			"reviewer": "George Donnelly"
 		}
 	},
 	"cake-wallet": {
 		"description": {
 			"text": "Multiplataforma, multicripto.",
 			"sourceHash": "cfc7b4bc38fc64da",
-			"status": "machine",
+			"status": "reviewed",
 			"translator": "Claude",
-			"qaHash": "9f802486538ac129"
+			"reviewer": "George Donnelly"
 		}
 	},
 	"edge": {
 		"description": {
 			"text": "Multimoneda para celular.",
 			"sourceHash": "a6deaec644012de1",
-			"status": "machine",
+			"status": "reviewed",
 			"translator": "Claude",
-			"qaHash": "e54464c876822834"
+			"reviewer": "George Donnelly"
 		}
 	},
 	"bitpay": {
 		"description": {
 			"text": "Celular y navegador.",
 			"sourceHash": "a736e90baa289ed9",
-			"status": "machine",
+			"status": "reviewed",
 			"translator": "Claude",
-			"qaHash": "c0f1929c17628e65"
+			"reviewer": "George Donnelly"
 		}
 	},
 	"fullstack-cash-wallet": {
 		"description": {
 			"text": "Billetera web compatible con SLP.",
 			"sourceHash": "ad22db553ac5c065",
-			"status": "machine",
+			"status": "reviewed",
 			"translator": "Claude",
-			"qaHash": "c634b3e31d04dc7e"
+			"reviewer": "George Donnelly"
 		}
 	},
 	"exodus": {
 		"description": {
 			"text": "Celular y navegador.",
 			"sourceHash": "a736e90baa289ed9",
-			"status": "machine",
+			"status": "reviewed",
 			"translator": "Claude",
-			"qaHash": "c0f1929c17628e65"
+			"reviewer": "George Donnelly"
 		}
 	},
 	"guarda": {
 		"description": {
 			"text": "Celular y computadora.",
 			"sourceHash": "f0a60e7832b4f7dc",
-			"status": "machine",
+			"status": "reviewed",
 			"translator": "Claude",
-			"qaHash": "ee9a459b72a95bc9"
+			"reviewer": "George Donnelly"
 		}
 	},
 	"coinbase-wallet": {
 		"description": {
 			"text": "Celular y navegador.",
 			"sourceHash": "a736e90baa289ed9",
-			"status": "machine",
+			"status": "reviewed",
 			"translator": "Claude",
-			"qaHash": "c0f1929c17628e65"
+			"reviewer": "George Donnelly"
 		}
 	},
 	"atomic-wallet": {
 		"description": {
 			"text": "Multimoneda.",
 			"sourceHash": "c53f78764cd7bcd5",
-			"status": "machine",
+			"status": "reviewed",
 			"translator": "Claude",
-			"qaHash": "553ea6c497a2d1df"
+			"reviewer": "George Donnelly"
 		}
 	},
 	"cashaddress-org": {
 		"description": {
 			"text": "Generador de billeteras en JS.",
 			"sourceHash": "8a28e265e12f43cc",
-			"status": "machine",
+			"status": "reviewed",
 			"translator": "Claude",
-			"qaHash": "f77c9ccc8a74e6a7"
+			"reviewer": "George Donnelly"
 		}
 	},
 	"unstoppable-wallet": {
 		"description": {
 			"text": "Billetera multimoneda centrada en la privacidad.",
 			"sourceHash": "0df079b657964e73",
-			"status": "machine",
+			"status": "reviewed",
 			"translator": "Claude",
-			"qaHash": "ef2ca01e38af5204"
+			"reviewer": "George Donnelly"
 		}
 	},
 	"gem-wallet": {
 		"description": {
 			"text": "Billetera multimoneda de código abierto.",
 			"sourceHash": "2adfba300fe82113",
-			"status": "machine",
+			"status": "reviewed",
 			"translator": "Claude",
-			"qaHash": "494d55ba51c39dd8"
+			"reviewer": "George Donnelly"
 		}
 	},
 	"oxapay-wallet": {
 		"description": {
 			"text": "Billetera cripto compatible con BCH.",
 			"sourceHash": "013a886c8f46e036",
-			"status": "machine",
+			"status": "reviewed",
 			"translator": "Claude",
-			"qaHash": "e1057bad674931f3"
+			"reviewer": "George Donnelly"
 		}
 	},
 	"coinomi": {
 		"description": {
 			"text": "Billetera multicadena.",
 			"sourceHash": "a1d35f5bda32d365",
-			"status": "machine",
+			"status": "reviewed",
 			"translator": "Claude",
-			"qaHash": "66ac229402716a44"
+			"reviewer": "George Donnelly"
 		}
 	},
 	"xdefi-wallet": {
 		"description": {
 			"text": "Billetera multicadena.",
 			"sourceHash": "a1d35f5bda32d365",
-			"status": "machine",
+			"status": "reviewed",
 			"translator": "Claude",
-			"qaHash": "66ac229402716a44"
+			"reviewer": "George Donnelly"
 		}
 	},
 	"coin-space": {
 		"description": {
 			"text": "Billetera de BCH de código abierto.",
 			"sourceHash": "327c6f65ca96a492",
-			"status": "machine",
+			"status": "reviewed",
 			"translator": "Claude",
-			"qaHash": "8461e8d1b99ed241"
+			"reviewer": "George Donnelly"
 		}
 	},
 	"trust-wallet": {
 		"description": {
 			"text": "Popular billetera multicadena de autocustodia",
 			"sourceHash": "c4aa831911182f7e",
-			"status": "machine",
+			"status": "reviewed",
 			"translator": "Claude",
-			"qaHash": "4c2e520a37c7a635"
+			"reviewer": "George Donnelly"
 		}
 	},
 	"bitcoin-com-wallet": {
 		"description": {
 			"text": "Billetera multicadena de autocustodia de Bitcoin.com",
 			"sourceHash": "b2964cb36048fef0",
-			"status": "machine",
+			"status": "reviewed",
 			"translator": "Claude",
-			"qaHash": "1a99f1bfea5197f4"
+			"reviewer": "George Donnelly"
 		}
 	},
 	"satochip": {
 		"description": {
 			"text": "Billetera física.",
 			"sourceHash": "3d901b58f5419e5d",
-			"status": "machine",
+			"status": "reviewed",
 			"translator": "Claude",
-			"qaHash": "031729f87810fe1b"
+			"reviewer": "George Donnelly"
 		}
 	},
 	"ledger": {
 		"description": {
 			"text": "Billetera física.",
 			"sourceHash": "3d901b58f5419e5d",
-			"status": "machine",
+			"status": "reviewed",
 			"translator": "Claude",
-			"qaHash": "031729f87810fe1b"
+			"reviewer": "George Donnelly"
 		}
 	},
 	"trezor": {
 		"description": {
 			"text": "Billetera física.",
 			"sourceHash": "3d901b58f5419e5d",
-			"status": "machine",
+			"status": "reviewed",
 			"translator": "Claude",
-			"qaHash": "031729f87810fe1b"
+			"reviewer": "George Donnelly"
 		}
 	},
 	"keepkey": {
 		"description": {
 			"text": "Billetera física.",
 			"sourceHash": "3d901b58f5419e5d",
-			"status": "machine",
+			"status": "reviewed",
 			"translator": "Claude",
-			"qaHash": "031729f87810fe1b"
+			"reviewer": "George Donnelly"
 		}
 	},
 	"onekey": {
 		"description": {
 			"text": "Billetera física y de software de código abierto",
 			"sourceHash": "bcbe9770a7d463e8",
-			"status": "machine",
+			"status": "reviewed",
 			"translator": "Claude",
-			"qaHash": "6e0b25f9fb25afac"
+			"reviewer": "George Donnelly"
 		}
 	},
 	"keystone": {
 		"description": {
 			"text": "Billetera física de código abierto, aislada de la red",
 			"sourceHash": "7f23c6a126e43de1",
-			"status": "machine",
+			"status": "reviewed",
 			"translator": "Claude",
-			"qaHash": "1506fd856f7da927"
+			"reviewer": "George Donnelly"
 		}
 	},
 	"tangem": {
 		"description": {
 			"text": "Billetera física en tarjeta NFC con app para celular",
 			"sourceHash": "030268ddb295d29a",
-			"status": "machine",
+			"status": "reviewed",
 			"translator": "Claude",
-			"qaHash": "d994d6e42503e43b"
+			"reviewer": "George Donnelly"
 		}
 	},
 	"safepal": {
 		"description": {
 			"text": "Billetera multicadena física con app",
 			"sourceHash": "ddddc994ad9c9771",
-			"status": "machine",
+			"status": "reviewed",
 			"translator": "Claude",
-			"qaHash": "5f50c8803a7e07f4"
+			"reviewer": "George Donnelly"
 		}
 	},
 	"ellipal": {
 		"description": {
 			"text": "Billetera física aislada de la red, con app",
 			"sourceHash": "aaac127b02fcb420",
-			"status": "machine",
+			"status": "reviewed",
 			"translator": "Claude",
-			"qaHash": "8062264a65911bff"
+			"reviewer": "George Donnelly"
 		}
 	},
 	"kraken": {
 		"description": {
 			"text": "Global",
 			"sourceHash": "a258b30f88c30650",
-			"status": "machine",
+			"status": "reviewed",
 			"translator": "Claude",
-			"qaHash": "45adea75d07fe75b"
+			"reviewer": "George Donnelly"
 		}
 	},
 	"gemini": {
 		"description": {
 			"text": "Global",
 			"sourceHash": "a258b30f88c30650",
-			"status": "machine",
+			"status": "reviewed",
 			"translator": "Claude",
-			"qaHash": "45adea75d07fe75b"
+			"reviewer": "George Donnelly"
 		}
 	},
 	"bitcoinvn": {
 		"description": {
 			"text": "Cripto a cripto y VND",
 			"sourceHash": "84bd34ab3efe3e3d",
-			"status": "machine",
+			"status": "reviewed",
 			"translator": "Claude",
-			"qaHash": "bcf98b9f37e38504"
+			"reviewer": "George Donnelly"
 		}
 	},
 	"coinbase": {
 		"description": {
 			"text": "Global",
 			"sourceHash": "a258b30f88c30650",
-			"status": "machine",
+			"status": "reviewed",
 			"translator": "Claude",
-			"qaHash": "45adea75d07fe75b"
+			"reviewer": "George Donnelly"
 		}
 	},
 	"binance": {
 		"description": {
 			"text": "Global",
 			"sourceHash": "a258b30f88c30650",
-			"status": "machine",
+			"status": "reviewed",
 			"translator": "Claude",
-			"qaHash": "45adea75d07fe75b"
+			"reviewer": "George Donnelly"
 		}
 	},
 	"okx": {
 		"description": {
 			"text": "Global",
 			"sourceHash": "a258b30f88c30650",
-			"status": "machine",
+			"status": "reviewed",
 			"translator": "Claude",
-			"qaHash": "45adea75d07fe75b"
+			"reviewer": "George Donnelly"
 		}
 	},
 	"coinex": {
 		"description": {
 			"text": "Global",
 			"sourceHash": "a258b30f88c30650",
-			"status": "machine",
+			"status": "reviewed",
 			"translator": "Claude",
-			"qaHash": "45adea75d07fe75b"
+			"reviewer": "George Donnelly"
 		}
 	},
 	"huobi": {
 		"description": {
 			"text": "Global",
 			"sourceHash": "a258b30f88c30650",
-			"status": "machine",
+			"status": "reviewed",
 			"translator": "Claude",
-			"qaHash": "45adea75d07fe75b"
+			"reviewer": "George Donnelly"
 		}
 	},
 	"buda": {
 		"description": {
 			"text": "América Latina",
 			"sourceHash": "ec3b43ddb1ac0976",
-			"status": "machine",
+			"status": "reviewed",
 			"translator": "Claude",
-			"qaHash": "c2e282b7f724a6c3"
+			"reviewer": "George Donnelly"
 		}
 	},
 	"coincola": {
 		"description": {
 			"text": "Entre pares",
 			"sourceHash": "a88c806de92a74f2",
-			"status": "machine",
+			"status": "reviewed",
 			"translator": "Claude",
-			"qaHash": "56427827da58897e"
+			"reviewer": "George Donnelly"
 		}
 	},
 	"bitstamp": {
 		"description": {
 			"text": "Exchange global.",
 			"sourceHash": "4e941b7d24875874",
-			"status": "machine",
+			"status": "reviewed",
 			"translator": "Claude",
-			"qaHash": "c12328ef94fe7a04"
+			"reviewer": "George Donnelly"
 		}
 	},
 	"cex-io": {
 		"description": {
 			"text": "Exchange global.",
 			"sourceHash": "4e941b7d24875874",
-			"status": "machine",
+			"status": "reviewed",
 			"translator": "Claude",
-			"qaHash": "c12328ef94fe7a04"
+			"reviewer": "George Donnelly"
 		}
 	},
 	"uphold": {
 		"description": {
 			"text": "Plataforma global multiactivo.",
 			"sourceHash": "5d3b57c4259c79ef",
-			"status": "machine",
+			"status": "reviewed",
 			"translator": "Claude",
-			"qaHash": "1941b06c9954dd1c"
+			"reviewer": "George Donnelly"
 		}
 	},
 	"etoro": {
 		"description": {
 			"text": "Plataforma de trading social.",
 			"sourceHash": "59b534bbff4eae1e",
-			"status": "machine",
+			"status": "reviewed",
 			"translator": "Claude",
-			"qaHash": "96eaf31a591ed53f"
+			"reviewer": "George Donnelly"
 		}
 	},
 	"crypto-com": {
 		"description": {
 			"text": "Exchange global.",
 			"sourceHash": "4e941b7d24875874",
-			"status": "machine",
+			"status": "reviewed",
 			"translator": "Claude",
-			"qaHash": "c12328ef94fe7a04"
+			"reviewer": "George Donnelly"
 		}
 	},
 	"coincheck": {
 		"description": {
 			"text": "Exchange japonés.",
 			"sourceHash": "4bcb18b36ca460f6",
-			"status": "machine",
+			"status": "reviewed",
 			"translator": "Claude",
-			"qaHash": "205017098a97d43e"
+			"reviewer": "George Donnelly"
 		}
 	},
 	"independent-reserve": {
 		"description": {
 			"text": "Exchange australiano.",
 			"sourceHash": "fab884252e766118",
-			"status": "machine",
+			"status": "reviewed",
 			"translator": "Claude",
-			"qaHash": "4976af0fe1883382"
+			"reviewer": "George Donnelly"
 		}
 	},
 	"korbit": {
 		"description": {
 			"text": "Exchange coreano.",
 			"sourceHash": "04e2fa525abb9f08",
-			"status": "machine",
+			"status": "reviewed",
 			"translator": "Claude",
-			"qaHash": "4cc2c0a0242c5fcc"
+			"reviewer": "George Donnelly"
 		}
 	},
 	"poloniex": {
 		"description": {
 			"text": "Exchange global.",
 			"sourceHash": "4e941b7d24875874",
-			"status": "machine",
+			"status": "reviewed",
 			"translator": "Claude",
-			"qaHash": "c12328ef94fe7a04"
+			"reviewer": "George Donnelly"
 		}
 	},
 	"karsha": {
 		"description": {
 			"text": "Exchange de BCH.",
 			"sourceHash": "7eb70dd7adfc0cb1",
-			"status": "machine",
+			"status": "reviewed",
 			"translator": "Claude",
-			"qaHash": "9d8e5da9b22d0cf7"
+			"reviewer": "George Donnelly"
 		}
 	},
 	"coinfalcon": {
 		"description": {
 			"text": "Exchange de BCH.",
 			"sourceHash": "7eb70dd7adfc0cb1",
-			"status": "machine",
+			"status": "reviewed",
 			"translator": "Claude",
-			"qaHash": "9d8e5da9b22d0cf7"
+			"reviewer": "George Donnelly"
 		}
 	},
 	"bitflyer": {
 		"description": {
 			"text": "Exchange japonés.",
 			"sourceHash": "4bcb18b36ca460f6",
-			"status": "machine",
+			"status": "reviewed",
 			"translator": "Claude",
-			"qaHash": "205017098a97d43e"
+			"reviewer": "George Donnelly"
 		}
 	},
 	"bitvavo": {
 		"description": {
 			"text": "Exchange europeo.",
 			"sourceHash": "b3468e7ecafa36c6",
-			"status": "machine",
+			"status": "reviewed",
 			"translator": "Claude",
-			"qaHash": "89d2d573dbe91fb9"
+			"reviewer": "George Donnelly"
 		}
 	},
 	"matrixport": {
 		"description": {
 			"text": "Plataforma cripto para instituciones y minoristas.",
 			"sourceHash": "452434b03b6b7d14",
-			"status": "machine",
+			"status": "reviewed",
 			"translator": "Claude",
-			"qaHash": "f66a66473e58305a"
+			"reviewer": "George Donnelly"
 		}
 	},
 	"sideshift-ai": {
 		"description": {
 			"text": "Cripto a cripto",
 			"sourceHash": "3f10f9f85cc63e3c",
-			"status": "machine",
+			"status": "reviewed",
 			"translator": "Claude",
-			"qaHash": "afb36ef85bb6ba4d"
+			"reviewer": "George Donnelly"
 		}
 	},
 	"thorswap": {
 		"description": {
 			"text": "Cripto a cripto",
 			"sourceHash": "3f10f9f85cc63e3c",
-			"status": "machine",
+			"status": "reviewed",
 			"translator": "Claude",
-			"qaHash": "afb36ef85bb6ba4d"
+			"reviewer": "George Donnelly"
 		}
 	},
 	"shapeshift": {
 		"description": {
 			"text": "Cripto a cripto",
 			"sourceHash": "3f10f9f85cc63e3c",
-			"status": "machine",
+			"status": "reviewed",
 			"translator": "Claude",
-			"qaHash": "afb36ef85bb6ba4d"
+			"reviewer": "George Donnelly"
 		}
 	},
 	"changenow": {
 		"description": {
 			"text": "Intercambio instantáneo sin custodia.",
 			"sourceHash": "8364b01c4b6c0d9b",
-			"status": "machine",
+			"status": "reviewed",
 			"translator": "Claude",
-			"qaHash": "666bc0bf27fe4cc0"
+			"reviewer": "George Donnelly"
 		}
 	},
 	"stealthex": {
 		"description": {
 			"text": "Servicio de intercambio sin custodia.",
 			"sourceHash": "42fbabeb4d6d28d2",
-			"status": "machine",
+			"status": "reviewed",
 			"translator": "Claude",
-			"qaHash": "a040f2136dc6a2ee"
+			"reviewer": "George Donnelly"
 		}
 	},
 	"simpleswap": {
 		"description": {
 			"text": "Intercambio instantáneo de criptomonedas.",
 			"sourceHash": "b3181f95fbfd7202",
-			"status": "machine",
+			"status": "reviewed",
 			"translator": "Claude",
-			"qaHash": "14e1f612c91e23f1"
+			"reviewer": "George Donnelly"
 		}
 	},
 	"swapzone": {
 		"description": {
 			"text": "Agregador de intercambios de criptomonedas.",
 			"sourceHash": "5e205f85b72cd3cd",
-			"status": "machine",
+			"status": "reviewed",
 			"translator": "Claude",
-			"qaHash": "ced353c08d1e1d33"
+			"reviewer": "George Donnelly"
 		}
 	},
 	"changelly": {
 		"description": {
 			"text": "Servicio de intercambio instantáneo.",
 			"sourceHash": "dd3f519ce4cfd467",
-			"status": "machine",
+			"status": "reviewed",
 			"translator": "Claude",
-			"qaHash": "381b4fd48740e0d7"
+			"reviewer": "George Donnelly"
 		}
 	},
 	"cyphergoat": {
 		"description": {
 			"text": "Servicio de intercambio de BCH.",
 			"sourceHash": "488ab5575524e16e",
-			"status": "machine",
+			"status": "reviewed",
 			"translator": "Claude",
-			"qaHash": "51eccddd9f237d74"
+			"reviewer": "George Donnelly"
 		}
 	},
 	"flashift": {
 		"description": {
 			"text": "Servicio de intercambio de BCH.",
 			"sourceHash": "488ab5575524e16e",
-			"status": "machine",
+			"status": "reviewed",
 			"translator": "Claude",
-			"qaHash": "51eccddd9f237d74"
+			"reviewer": "George Donnelly"
 		}
 	},
 	"whalesheaven": {
 		"description": {
 			"text": "Exchange de criptomonedas P2P.",
 			"sourceHash": "34f771720e30ef05",
-			"status": "machine",
+			"status": "reviewed",
 			"translator": "Claude",
-			"qaHash": "2f8021f3533a538d"
+			"reviewer": "George Donnelly"
 		}
 	},
 	"bestrate": {
 		"description": {
 			"text": "Agregador de intercambios.",
 			"sourceHash": "87f93ccbfc4d9545",
-			"status": "machine",
+			"status": "reviewed",
 			"translator": "Claude",
-			"qaHash": "dbfa0e829078ee1d"
+			"reviewer": "George Donnelly"
 		}
 	},
 	"basicswap": {
 		"description": {
 			"text": "DEX de intercambios atómicos entre pares compatible con BCH",
 			"sourceHash": "7adbe50987509245",
-			"status": "machine",
+			"status": "reviewed",
 			"translator": "Claude",
-			"qaHash": "209da0d0f25a75af"
+			"reviewer": "George Donnelly"
 		}
 	},
 	"axeswap": {
 		"description": {
 			"text": "Intercambios atómicos sin intermediarios de Monero a Bitcoin Cash",
 			"sourceHash": "7d325bcbbeac902f",
-			"status": "machine",
+			"status": "reviewed",
 			"translator": "Claude",
-			"qaHash": "04d7dbc88477e79b"
+			"reviewer": "George Donnelly"
 		}
 	},
 	"coinatmradar": {
 		"description": {
 			"text": "Cajeros automáticos cerca de ti.",
 			"sourceHash": "5918bea638f67c1a",
-			"status": "machine",
+			"status": "reviewed",
 			"translator": "Claude",
-			"qaHash": "1d6c3b1ddc2c7c36"
+			"reviewer": "George Donnelly"
 		}
 	},
 	"fastbtc-atm": {
 		"description": {
 			"text": "Red canadiense de cajeros automáticos de BCH.",
 			"sourceHash": "4877a1cdcb11eadf",
-			"status": "machine",
+			"status": "reviewed",
 			"translator": "Claude",
-			"qaHash": "74c32f7dba8163cf"
+			"reviewer": "George Donnelly"
 		}
 	},
 	"coingate-spend": {
 		"description": {
 			"text": "Compra tarjetas de regalo con BCH.",
 			"sourceHash": "5fee526d57140d3d",
-			"status": "machine",
+			"status": "reviewed",
 			"translator": "Claude",
-			"qaHash": "8cd6062c78e1d2ae"
+			"reviewer": "George Donnelly"
 		}
 	},
 	"alfatop": {
 		"description": {
 			"text": "Compra minutos para tu celular con BCH.",
 			"sourceHash": "fcca05577a76dee7",
-			"status": "machine",
+			"status": "reviewed",
 			"translator": "Claude",
-			"qaHash": "827eede7d832ba3a"
+			"reviewer": "George Donnelly"
 		}
 	},
 	"egifter": {
 		"description": {
 			"text": "Compra tarjetas de regalo con BCH.",
 			"sourceHash": "5fee526d57140d3d",
-			"status": "machine",
+			"status": "reviewed",
 			"translator": "Claude",
-			"qaHash": "8cd6062c78e1d2ae"
+			"reviewer": "George Donnelly"
 		}
 	},
 	"bitgree": {
 		"description": {
 			"text": "Compra cosas con BCH.",
 			"sourceHash": "ada60131c575aac2",
-			"status": "machine",
+			"status": "reviewed",
 			"translator": "Claude",
-			"qaHash": "df319cd4aaa76ea6"
+			"reviewer": "George Donnelly"
 		}
 	},
 	"menufy": {
 		"description": {
 			"text": "Pide comida en línea con BCH.",
 			"sourceHash": "8dc4d6d77a6bdd4e",
-			"status": "machine",
+			"status": "reviewed",
 			"translator": "Claude",
-			"qaHash": "a7f61fb82a8b8266"
+			"reviewer": "George Donnelly"
 		}
 	},
 	"swagme-cash": {
 		"description": {
 			"text": "Artículos personalizados con logos de BCH.",
 			"sourceHash": "5511b0b3b6ad4ae3",
-			"status": "machine",
+			"status": "reviewed",
 			"translator": "Claude",
-			"qaHash": "86c910098d14bc07"
+			"reviewer": "George Donnelly"
 		}
 	},
 	"travala": {
 		"description": {
 			"text": "Reserva hoteles y vuelos con BCH.",
 			"sourceHash": "54988e1610f9fdc0",
-			"status": "machine",
+			"status": "reviewed",
 			"translator": "Claude",
-			"qaHash": "f65c2202953d2300"
+			"reviewer": "George Donnelly"
 		}
 	},
 	"overstock": {
 		"description": {
 			"text": "Compra muebles con BCH.",
 			"sourceHash": "f386fd8e5f27348e",
-			"status": "machine",
+			"status": "reviewed",
 			"translator": "Claude",
-			"qaHash": "0d01f8c0fb6bc77a"
+			"reviewer": "George Donnelly"
 		}
 	},
 	"keys4coins": {
 		"description": {
 			"text": "Compra tarjetas de regalo con BCH.",
 			"sourceHash": "5fee526d57140d3d",
-			"status": "machine",
+			"status": "reviewed",
 			"translator": "Claude",
-			"qaHash": "8cd6062c78e1d2ae"
+			"reviewer": "George Donnelly"
 		}
 	},
 	"namecheap": {
 		"description": {
 			"text": "Compra dominios y más con BCH.",
 			"sourceHash": "df47e2152c5f7b83",
-			"status": "machine",
+			"status": "reviewed",
 			"translator": "Claude",
-			"qaHash": "46dc5156740b948b"
+			"reviewer": "George Donnelly"
 		}
 	},
 	"ramnode": {
 		"description": {
 			"text": "Compra alojamiento web con BCH.",
 			"sourceHash": "e0b8b9c9038f3962",
-			"status": "machine",
+			"status": "reviewed",
 			"translator": "Claude",
-			"qaHash": "b2ad151c1bcb2110"
+			"reviewer": "George Donnelly"
 		}
 	},
 	"cheapair": {
 		"description": {
 			"text": "Compra boletos de avión con BCH.",
 			"sourceHash": "0bfa8365031fdaa4",
-			"status": "machine",
+			"status": "reviewed",
 			"translator": "Claude",
-			"qaHash": "e4c591e875c90136"
+			"reviewer": "George Donnelly"
 		}
 	},
 	"mullvad": {
 		"description": {
 			"text": "Compra tu VPN con BCH.",
 			"sourceHash": "7958f95fcf70a274",
-			"status": "machine",
+			"status": "reviewed",
 			"translator": "Claude",
-			"qaHash": "1c3c76215b96a0b3"
+			"reviewer": "George Donnelly"
 		}
 	},
 	"satoshis-angels": {
 		"description": {
 			"text": "Servicios de marketing cripto.",
 			"sourceHash": "bb467f1d82b6356d",
-			"status": "machine",
+			"status": "reviewed",
 			"translator": "Claude",
-			"qaHash": "6393238930fbd840"
+			"reviewer": "George Donnelly"
 		}
 	},
 	"newegg": {
 		"description": {
 			"text": "Compra computadoras con BCH.",
 			"sourceHash": "067341f5b018b7b2",
-			"status": "machine",
+			"status": "reviewed",
 			"translator": "Claude",
-			"qaHash": "83e8a4c2fc4fa5ed"
+			"reviewer": "George Donnelly"
 		}
 	},
 	"one-surgery": {
 		"description": {
 			"text": "Una comunidad global de cirugía.",
 			"sourceHash": "6aed888eee8818f1",
-			"status": "machine",
+			"status": "reviewed",
 			"translator": "Claude",
-			"qaHash": "27e8fa939e5fad33"
+			"reviewer": "George Donnelly"
 		}
 	},
 	"apmex": {
 		"description": {
 			"text": "Compra metales preciosos con BCH.",
 			"sourceHash": "34904f82433cbd64",
-			"status": "machine",
+			"status": "reviewed",
 			"translator": "Claude",
-			"qaHash": "9a167d71e811120f"
+			"reviewer": "George Donnelly"
 		}
 	},
 	"att": {
 		"description": {
 			"text": "Paga tu factura de teléfono con BCH.",
 			"sourceHash": "4d5c9e6c63369533",
-			"status": "machine",
+			"status": "reviewed",
 			"translator": "Claude",
-			"qaHash": "5eb31cc81ce7af46"
+			"reviewer": "George Donnelly"
 		}
 	},
 	"dish-tv": {
 		"description": {
 			"text": "Compra TV satelital con BCH.",
 			"sourceHash": "41828d91dd20e1bf",
-			"status": "machine",
+			"status": "reviewed",
 			"translator": "Claude",
-			"qaHash": "61851ac7c66bf78a"
+			"reviewer": "George Donnelly"
 		}
 	},
 	"visionati": {
 		"description": {
 			"text": "Descripción y análisis de imágenes con IA.",
 			"sourceHash": "0532b1bfd6b7c0f1",
-			"status": "machine",
+			"status": "reviewed",
 			"translator": "Claude",
-			"qaHash": "87b88fb2f572ce26"
+			"reviewer": "George Donnelly"
 		}
 	},
 	"alagoria": {
 		"description": {
 			"text": "Compra de forma anónima en Walmart y Home Depot.",
 			"sourceHash": "d389267fc25631d9",
-			"status": "machine",
+			"status": "reviewed",
 			"translator": "Claude",
-			"qaHash": "15753c8eba6772ea"
+			"reviewer": "George Donnelly"
 		}
 	},
 	"ipfs-bch": {
 		"description": {
 			"text": "Servicio de anclaje de archivos en IPFS con liquidación en la cadena.",
 			"sourceHash": "669d97abadb294bb",
-			"status": "machine",
+			"status": "reviewed",
 			"translator": "Claude",
-			"qaHash": "48b1d3767879a5af"
+			"reviewer": "George Donnelly"
 		}
 	},
 	"paytaca-map": {
 		"description": {
 			"text": "Mapa de comercios que aceptan BCH mediante Paytaca",
 			"sourceHash": "364143126fc61f70",
-			"status": "machine",
+			"status": "reviewed",
 			"translator": "Claude",
-			"qaHash": "1af974aa6dc8e663"
+			"reviewer": "George Donnelly"
 		}
 	},
 	"bitcoin-com-map": {
 		"description": {
 			"text": "Mapa de comercios que aceptan BCH y otras criptomonedas",
 			"sourceHash": "f546000eba254ca6",
-			"status": "machine",
+			"status": "reviewed",
 			"translator": "Claude",
-			"qaHash": "2f7b164fce2ae717"
+			"reviewer": "George Donnelly"
 		}
 	},
 	"cryptwerk": {
 		"description": {
 			"text": "Directorio de lugares que aceptan criptomonedas, incl. BCH",
 			"sourceHash": "e9555bc342c26496",
-			"status": "machine",
+			"status": "reviewed",
 			"translator": "Claude",
-			"qaHash": "1aa2f071d10534e7"
+			"reviewer": "George Donnelly"
 		}
 	},
 	"noise-app": {
 		"description": {
 			"text": "Noise es una red social solo por invitación.",
 			"sourceHash": "f260cfcb92eb5439",
-			"status": "machine",
+			"status": "reviewed",
 			"translator": "Claude",
-			"qaHash": "31cc84f6ecc606e1"
+			"reviewer": "George Donnelly"
 		}
 	},
 	"read-cash": {
 		"description": {
 			"text": "Escribe artículos para la comunidad de Bitcoin Cash, gana seguidores y recibe propinas en BCH.",
 			"sourceHash": "badb344bc3a387b9",
-			"status": "machine",
+			"status": "reviewed",
 			"translator": "Claude",
-			"qaHash": "68bbbea570b572f4"
+			"reviewer": "George Donnelly"
 		}
 	},
 	"cashrain": {
 		"description": {
 			"text": "Gana recompensas comunitarias en BCH.",
 			"sourceHash": "542e5b80a3a57edc",
-			"status": "machine",
+			"status": "reviewed",
 			"translator": "Claude",
-			"qaHash": "bb1997fef32a37b0"
+			"reviewer": "George Donnelly"
 		}
 	},
 	"glimpse-cash": {
 		"description": {
 			"text": "Sube videos y cobra en BCH.",
 			"sourceHash": "fdecdb2afd68cfa8",
-			"status": "machine",
+			"status": "reviewed",
 			"translator": "Claude",
-			"qaHash": "50edd85f8da9e3bf"
+			"reviewer": "George Donnelly"
 		}
 	},
 	"chaintip": {
 		"description": {
 			"text": "Servicio de propinas en BCH.",
 			"sourceHash": "52e23d2e6c2de19a",
-			"status": "machine",
+			"status": "reviewed",
 			"translator": "Claude",
-			"qaHash": "a0c3a7e39457ffaf"
+			"reviewer": "George Donnelly"
 		}
 	},
 	"tipbitcoincash": {
 		"description": {
 			"text": "El servicio de propinas en Bitcoin Cash para streamers.",
 			"sourceHash": "d3ce28316dbcbfc5",
-			"status": "machine",
+			"status": "reviewed",
 			"translator": "Claude",
-			"qaHash": "c4c41a10f1863c1b"
+			"reviewer": "George Donnelly"
 		}
 	},
 	"cointree": {
 		"description": {
 			"text": "Crea un perfil y recibe propinas.",
 			"sourceHash": "df05c0602f5f0ef9",
-			"status": "machine",
+			"status": "reviewed",
 			"translator": "Claude",
-			"qaHash": "8e8241d73eb70ae9"
+			"reviewer": "George Donnelly"
 		}
 	},
 	"issues-cash": {
 		"description": {
 			"text": "Recompensas sin intermediarios por issues de GitHub con contratos inteligentes de BCH",
 			"sourceHash": "c6443121f46d40f8",
-			"status": "machine",
+			"status": "reviewed",
 			"translator": "Claude",
-			"qaHash": "8e9cf118b68b2b6f"
+			"reviewer": "George Donnelly"
 		}
 	},
 	"purelypeer": {
 		"description": {
 			"text": "App de búsqueda de misiones con recompensas en BCH y descubrimiento de comercios",
 			"sourceHash": "b158179bd9d265d1",
-			"status": "machine",
+			"status": "reviewed",
 			"translator": "Claude",
-			"qaHash": "dc5c64601c16de88"
+			"reviewer": "George Donnelly"
 		}
 	},
 	"gaze-cash": {
 		"description": {
 			"text": "Plataforma de video sin anuncios que paga a los creadores en BCH",
 			"sourceHash": "2f1cdf0fcc114a0f",
-			"status": "machine",
+			"status": "reviewed",
 			"translator": "Claude",
-			"qaHash": "ae440b50ee51313e"
+			"reviewer": "George Donnelly"
 		}
 	},
 	"memo-cash": {
 		"description": {
 			"text": "Red social en la cadena.",
 			"sourceHash": "82f21bb16f946111",
-			"status": "machine",
+			"status": "reviewed",
 			"translator": "Claude",
-			"qaHash": "3e7cdfefc54a733b"
+			"reviewer": "George Donnelly"
 		}
 	},
 	"bchouse-app": {
 		"description": {
 			"text": "Red social de BCH.",
 			"sourceHash": "cdad2edda1b8caa1",
-			"status": "machine",
+			"status": "reviewed",
 			"translator": "Claude",
-			"qaHash": "328f80d5a7dffcdd"
+			"reviewer": "George Donnelly"
 		}
 	},
 	"yt-bch-university": {
 		"description": {
 			"text": "Canal de YouTube con tutoriales de Bitcoin Cash",
 			"sourceHash": "587dea1d95718e09",
-			"status": "machine",
+			"status": "reviewed",
 			"translator": "Claude",
-			"qaHash": "060c02ae6b31cb06"
+			"reviewer": "George Donnelly"
 		}
 	},
 	"yt-bitcoin-out-loud": {
 		"description": {
 			"text": "Canal de YouTube sobre Bitcoin Cash",
 			"sourceHash": "9298601eb19e9649",
-			"status": "machine",
+			"status": "reviewed",
 			"translator": "Claude",
-			"qaHash": "89619c875572da1b"
+			"reviewer": "George Donnelly"
 		}
 	},
 	"moria-protocol": {
 		"description": {
 			"text": "Stablecoin con garantía en BCH (CDP).",
 			"sourceHash": "182b821454af197d",
-			"status": "machine",
+			"status": "reviewed",
 			"translator": "Claude",
-			"qaHash": "22ab26939aac76db"
+			"reviewer": "George Donnelly"
 		}
 	},
 	"permute-cash": {
 		"description": {
 			"text": "Puente entre cadenas para BCH.",
 			"sourceHash": "cedaf2624ad69cf9",
-			"status": "machine",
+			"status": "reviewed",
 			"translator": "Claude",
-			"qaHash": "3b5d0e533f3f8021"
+			"reviewer": "George Donnelly"
 		}
 	},
 	"anyhedge": {
 		"description": {
 			"text": "Trading apalancado y cobertura descentralizados en Bitcoin Cash.",
 			"sourceHash": "cd374da149ccb46e",
-			"status": "machine",
+			"status": "reviewed",
 			"translator": "Claude",
-			"qaHash": "1a699ec19e00ccdb"
+			"reviewer": "George Donnelly"
 		}
 	},
 	"cauldrondex": {
 		"description": {
 			"text": "Intercambio y provisión de liquidez de tokens fungibles.",
 			"sourceHash": "caf72d5aec2fddd0",
-			"status": "machine",
+			"status": "reviewed",
 			"translator": "Claude",
-			"qaHash": "5e7cd52bc6223e9f"
+			"reviewer": "George Donnelly"
 		}
 	},
 	"tapswap": {
 		"description": {
 			"text": "Mercado de NFTs.",
 			"sourceHash": "e64a2718a9275b09",
-			"status": "machine",
+			"status": "reviewed",
 			"translator": "Claude",
-			"qaHash": "43b243d076cf9aff"
+			"reviewer": "George Donnelly"
 		}
 	},
 	"fex-cash": {
 		"description": {
 			"text": "Intercambio y provisión de liquidez de tokens fungibles.",
 			"sourceHash": "caf72d5aec2fddd0",
-			"status": "machine",
+			"status": "reviewed",
 			"translator": "Claude",
-			"qaHash": "5e7cd52bc6223e9f"
+			"reviewer": "George Donnelly"
 		}
 	},
 	"guanaco": {
 		"description": {
 			"text": "DEX y protocolo de liquidez sin custodia en Bitcoin Cash.",
 			"sourceHash": "6604e9fa61d95073",
-			"status": "machine",
+			"status": "reviewed",
 			"translator": "Claude",
-			"qaHash": "bcca84912199e3d8"
+			"reviewer": "George Donnelly"
 		}
 	},
 	"bch-bull": {
 		"description": {
 			"text": "Apalancamiento y cobertura en la cadena.",
 			"sourceHash": "24d5a443317067c0",
-			"status": "machine",
+			"status": "reviewed",
 			"translator": "Claude",
-			"qaHash": "c6c3998d89b97334"
+			"reviewer": "George Donnelly"
 		}
 	},
 	"sideshift-staking": {
 		"description": {
 			"text": "Haz staking de tu BCH como XAI.",
 			"sourceHash": "7fce76779e99dd51",
-			"status": "machine",
+			"status": "reviewed",
 			"translator": "Claude",
-			"qaHash": "2bfc962b0a3121d1"
+			"reviewer": "George Donnelly"
 		}
 	},
 	"paryonusd": {
 		"description": {
 			"text": "Protocolo de la stablecoin PUSD sobrecolateralizada en Bitcoin Cash",
 			"sourceHash": "6a6b2bcf405929a6",
-			"status": "machine",
+			"status": "reviewed",
 			"translator": "Claude",
-			"qaHash": "59313f666e2b770b"
+			"reviewer": "George Donnelly"
 		}
 	},
 	"future-bitcoin-cash": {
 		"description": {
 			"text": "Intercambia BCH 1:1 por tokens fungibles con bloqueo temporal y cupones",
 			"sourceHash": "5f253e37f165380e",
-			"status": "machine",
+			"status": "reviewed",
 			"translator": "Claude",
-			"qaHash": "65c64ee0d5094f56"
+			"reviewer": "George Donnelly"
 		}
 	},
 	"badgers-cash": {
 		"description": {
 			"text": "Haz staking de BCH para ganar tokens fungibles BadgerCoin",
 			"sourceHash": "8f351ee24231f7c2",
-			"status": "machine",
+			"status": "reviewed",
 			"translator": "Claude",
-			"qaHash": "6fabb13be5d04bba"
+			"reviewer": "George Donnelly"
 		}
 	},
 	"bch-games": {
 		"description": {
 			"text": "Gana partidas y recibe pagos en BCH.",
 			"sourceHash": "02a4ceb936ebac2b",
-			"status": "machine",
+			"status": "reviewed",
 			"translator": "Claude",
-			"qaHash": "660ead6681967000"
+			"reviewer": "George Donnelly"
 		}
 	},
 	"satoshi-dice": {
 		"description": {
 			"text": "Casino cripto.",
 			"sourceHash": "88d14ddd07782c9c",
-			"status": "machine",
+			"status": "reviewed",
 			"translator": "Claude",
-			"qaHash": "b1e78e1241d7b6ed"
+			"reviewer": "George Donnelly"
 		}
 	},
 	"spin-bch": {
 		"description": {
 			"text": "Gira para tener la oportunidad de ganar.",
 			"sourceHash": "de1f80f39a9d917c",
-			"status": "machine",
+			"status": "reviewed",
 			"translator": "Claude",
-			"qaHash": "251ef627866d7146"
+			"reviewer": "George Donnelly"
 		}
 	},
 	"blockchain-poker": {
 		"description": {
 			"text": "Juego de póker con BCH.",
 			"sourceHash": "df973a00eb52c592",
-			"status": "machine",
+			"status": "reviewed",
 			"translator": "Claude",
-			"qaHash": "0bd023b81429239a"
+			"reviewer": "George Donnelly"
 		}
 	},
 	"basepoker": {
 		"description": {
 			"text": "Póker basado en BCH.",
 			"sourceHash": "0c5dff86917eed1a",
-			"status": "machine",
+			"status": "reviewed",
 			"translator": "Claude",
-			"qaHash": "dbf59126b0c56eca"
+			"reviewer": "George Donnelly"
 		}
 	},
 	"bugs-cash": {
 		"description": {
 			"text": "Juego multijugador para navegador basado en Bitcoin Cash",
 			"sourceHash": "f3493c13f3005f6a",
-			"status": "machine",
+			"status": "reviewed",
 			"translator": "Claude",
-			"qaHash": "82d40b8578b7b325"
+			"reviewer": "George Donnelly"
 		}
 	},
 	"gumshoe": {
 		"description": {
 			"text": "Acertijo misterioso semanal con premio en BCH",
 			"sourceHash": "1eb228fcfed9e39a",
-			"status": "machine",
+			"status": "reviewed",
 			"translator": "Claude",
-			"qaHash": "4087d418e029811b"
+			"reviewer": "George Donnelly"
 		}
 	},
 	"bch-global-lotto": {
 		"description": {
 			"text": "Juego de lotería que paga en Bitcoin Cash",
 			"sourceHash": "b663f5dbf8a47ab9",
-			"status": "machine",
+			"status": "reviewed",
 			"translator": "Claude",
-			"qaHash": "dddc57bc4186c6bf"
+			"reviewer": "George Donnelly"
 		}
 	},
 	"crypto-woo": {
 		"description": {
 			"text": "Permite a los usuarios de WooCommerce aceptar BCH.",
 			"sourceHash": "4ee1b370797091bf",
-			"status": "machine",
+			"status": "reviewed",
 			"translator": "Claude",
-			"qaHash": "9ef95731a230037e"
+			"reviewer": "George Donnelly"
 		}
 	},
 	"prompt-cash": {
 		"description": {
 			"text": "Pasarela de pago de BCH.",
 			"sourceHash": "6702b258f404fbdb",
-			"status": "machine",
+			"status": "reviewed",
 			"translator": "Claude",
-			"qaHash": "cb9bdef265de78b3"
+			"reviewer": "George Donnelly"
 		}
 	},
 	"bitcart": {
 		"description": {
 			"text": "Aceptación de criptomonedas autoalojada y de código abierto.",
 			"sourceHash": "d59194fb71944884",
-			"status": "machine",
+			"status": "reviewed",
 			"translator": "Claude",
-			"qaHash": "248a2f9f62470bba"
+			"reviewer": "George Donnelly"
 		}
 	},
 	"cashpayserver": {
 		"description": {
 			"text": "Servicio autoalojado para gestionar facturas BIP70 y de JSON Payment Protocol.",
 			"sourceHash": "722c49f560d2da78",
-			"status": "machine",
+			"status": "reviewed",
 			"translator": "Claude",
-			"qaHash": "bdb952d700f1b97d"
+			"reviewer": "George Donnelly"
 		}
 	},
 	"coinbase-commerce": {
 		"description": {
 			"text": "Una pasarela de pagos con criptomonedas.",
 			"sourceHash": "6a067f5bd2ef1710",
-			"status": "machine",
+			"status": "reviewed",
 			"translator": "Claude",
-			"qaHash": "e8fd883cf6d971e3"
+			"reviewer": "George Donnelly"
 		}
 	},
 	"gourl-io": {
 		"description": {
 			"text": "Una pasarela de pagos con criptomonedas.",
 			"sourceHash": "73c353b2be14fc99",
-			"status": "machine",
+			"status": "reviewed",
 			"translator": "Claude",
-			"qaHash": "a1a764e940629555"
+			"reviewer": "George Donnelly"
 		}
 	},
 	"pay-button": {
 		"description": {
 			"text": "Un botón de pago de BCH fácil de usar.",
 			"sourceHash": "6a80a9dcf44e6a38",
-			"status": "machine",
+			"status": "reviewed",
 			"translator": "Claude",
-			"qaHash": "9464ad90077e06d7"
+			"reviewer": "George Donnelly"
 		}
 	},
 	"coingate-accept": {
 		"description": {
 			"text": "Una pasarela de pagos con criptomonedas.",
 			"sourceHash": "73c353b2be14fc99",
-			"status": "machine",
+			"status": "reviewed",
 			"translator": "Claude",
-			"qaHash": "a1a764e940629555"
+			"reviewer": "George Donnelly"
 		}
 	},
 	"coinpayments": {
 		"description": {
 			"text": "Una pasarela de pagos con criptomonedas.",
 			"sourceHash": "73c353b2be14fc99",
-			"status": "machine",
+			"status": "reviewed",
 			"translator": "Claude",
-			"qaHash": "a1a764e940629555"
+			"reviewer": "George Donnelly"
 		}
 	},
 	"pos-cash": {
 		"description": {
 			"text": "Una app de punto de venta sencilla.",
 			"sourceHash": "8783e9c94215a875",
-			"status": "machine",
+			"status": "reviewed",
 			"translator": "Claude",
-			"qaHash": "8d38738cffd320fa"
+			"reviewer": "George Donnelly"
 		}
 	},
 	"scan-to-pay": {
 		"description": {
 			"text": "Terminales de papel para BCH.",
 			"sourceHash": "75f82052ae2ee436",
-			"status": "machine",
+			"status": "reviewed",
 			"translator": "Claude",
-			"qaHash": "87e45b1f287cc763"
+			"reviewer": "George Donnelly"
 		}
 	},
 	"cashtags": {
 		"description": {
 			"text": "Etiquetas de BCH que mantienen actualizado el tipo de cambio con monedas fiat.",
 			"sourceHash": "84f1b0e42adb4880",
-			"status": "machine",
+			"status": "reviewed",
 			"translator": "Claude",
-			"qaHash": "d985d9e7d3df74c1"
+			"reviewer": "George Donnelly"
 		}
 	},
 	"event-cash": {
 		"description": {
 			"text": "Vende entradas para eventos con pagos instantáneos en BCH",
 			"sourceHash": "d42ed9617189502e",
-			"status": "machine",
+			"status": "reviewed",
 			"translator": "Claude",
-			"qaHash": "0ded0b2ea7e20067"
+			"reviewer": "George Donnelly"
 		}
 	},
 	"bitrequest": {
 		"description": {
 			"text": "Solicitudes de pago de punto de venta compatibles con BCH",
 			"sourceHash": "5169ad5b9a6031d0",
-			"status": "machine",
+			"status": "reviewed",
 			"translator": "Claude",
-			"qaHash": "9156301992c20b55"
+			"reviewer": "George Donnelly"
 		}
 	},
 	"mobazha": {
 		"description": {
 			"text": "Plataforma de comercio descentralizada con pagos nativos en BCH",
 			"sourceHash": "e03f1ca110c56a56",
-			"status": "machine",
+			"status": "reviewed",
 			"translator": "Claude",
-			"qaHash": "031649f32a7df49a"
+			"reviewer": "George Donnelly"
 		}
 	},
 	"stickers-cash": {
 		"description": {
 			"text": "Paquetes de calcomanías “Aceptamos BCH” para comercios",
 			"sourceHash": "2235717548bafa1c",
-			"status": "machine",
+			"status": "reviewed",
 			"translator": "Claude",
-			"qaHash": "5962c6d0d36b823e"
+			"reviewer": "George Donnelly"
 		}
 	},
 	"nowpayments": {
 		"description": {
 			"text": "Pasarela de pagos con criptomonedas compatible con BCH.",
 			"sourceHash": "f7f0c21a37aebd8a",
-			"status": "machine",
+			"status": "reviewed",
 			"translator": "Claude",
-			"qaHash": "97ceaaa66af126b8"
+			"reviewer": "George Donnelly"
 		}
 	},
 	"oxapay": {
 		"description": {
 			"text": "Procesador de pagos con criptomonedas.",
 			"sourceHash": "b6b6a21f433b509d",
-			"status": "machine",
+			"status": "reviewed",
 			"translator": "Claude",
-			"qaHash": "67d7969e5262b9ea"
+			"reviewer": "George Donnelly"
 		}
 	},
 	"alfacoins": {
 		"description": {
 			"text": "API de pagos con criptomonedas.",
 			"sourceHash": "6ab619d6a86fd8b9",
-			"status": "machine",
+			"status": "reviewed",
 			"translator": "Claude",
-			"qaHash": "cdecd369b0ae90f3"
+			"reviewer": "George Donnelly"
 		}
 	},
 	"apirone": {
 		"description": {
 			"text": "API de procesamiento de pagos en BCH.",
 			"sourceHash": "3bb757018de70718",
-			"status": "machine",
+			"status": "reviewed",
 			"translator": "Claude",
-			"qaHash": "5ab311f9f6d6b034"
+			"reviewer": "George Donnelly"
 		}
 	},
 	"rocketr": {
 		"description": {
 			"text": "Pasarela de pago para bienes digitales.",
 			"sourceHash": "96b95302d533f532",
-			"status": "machine",
+			"status": "reviewed",
 			"translator": "Claude",
-			"qaHash": "a5476fc02e14eae4"
+			"reviewer": "George Donnelly"
 		}
 	},
 	"alchemy-pay": {
 		"description": {
 			"text": "Pasarela de pago fiat-cripto.",
 			"sourceHash": "4f7702ace0f1dca7",
-			"status": "machine",
+			"status": "reviewed",
 			"translator": "Claude",
-			"qaHash": "0d531a01ca23f82b"
+			"reviewer": "George Donnelly"
 		}
 	},
 	"aeon-xyz": {
 		"description": {
 			"text": "Plataforma de pagos con criptomonedas.",
 			"sourceHash": "85927a13022205ea",
-			"status": "machine",
+			"status": "reviewed",
 			"translator": "Claude",
-			"qaHash": "7e666f22ebe95a48"
+			"reviewer": "George Donnelly"
 		}
 	},
 	"gocrypto": {
 		"description": {
 			"text": "Pagos con criptomonedas en punto de venta y en línea.",
 			"sourceHash": "d97ff661fe9e168b",
-			"status": "machine",
+			"status": "reviewed",
 			"translator": "Claude",
-			"qaHash": "13005c1d2ffb70ff"
+			"reviewer": "George Donnelly"
 		}
 	},
 	"living-room-of-satoshi": {
 		"description": {
 			"text": "Paga facturas australianas con BCH.",
 			"sourceHash": "4214412f1a836d54",
-			"status": "machine",
+			"status": "reviewed",
 			"translator": "Claude",
-			"qaHash": "187d5eea495d2f5a"
+			"reviewer": "George Donnelly"
 		}
 	},
 	"paytaca-payment-hub": {
 		"description": {
 			"text": "Acepta pagos en Bitcoin Cash en línea",
 			"sourceHash": "e6c84f9d90f5ece9",
-			"status": "machine",
+			"status": "reviewed",
 			"translator": "Claude",
-			"qaHash": "5b18c36f3489db51"
+			"reviewer": "George Donnelly"
 		}
 	},
 	"httpay": {
 		"description": {
 			"text": "Pasarela de pago de BCH minimalista y autoalojada",
 			"sourceHash": "ca5fd38af3ba0e05",
-			"status": "machine",
+			"status": "reviewed",
 			"translator": "Claude",
-			"qaHash": "bccc61ceaf9cefc9"
+			"reviewer": "George Donnelly"
 		}
 	},
 	"mainnetjs": {
 		"description": {
 			"text": "Todo en uno para JavaScript + API.",
 			"sourceHash": "e27333beb9d01ca0",
-			"status": "machine",
+			"status": "reviewed",
 			"translator": "Claude",
-			"qaHash": "01e1ec8faa8d6b7a"
+			"reviewer": "George Donnelly"
 		}
 	},
 	"libauth": {
 		"description": {
 			"text": "Una biblioteca de JavaScript ultraligera.",
 			"sourceHash": "44e9ba889d17d23f",
-			"status": "machine",
+			"status": "reviewed",
 			"translator": "Claude",
-			"qaHash": "06c1bb4c3171b5b3"
+			"reviewer": "George Donnelly"
 		}
 	},
 	"oracles-cash": {
 		"description": {
 			"text": "Oráculos de precios verificables.",
 			"sourceHash": "b2f12a5f21be2cd7",
-			"status": "machine",
+			"status": "reviewed",
 			"translator": "Claude",
-			"qaHash": "f015f8785e80f94f"
+			"reviewer": "George Donnelly"
 		}
 	},
 	"bitcash-python": {
 		"description": {
 			"text": "Una biblioteca de Python.",
 			"sourceHash": "b8a2e84a87190095",
-			"status": "machine",
+			"status": "reviewed",
 			"translator": "Claude",
-			"qaHash": "ff491d042f7f4f8f"
+			"reviewer": "George Donnelly"
 		}
 	},
 	"bitcoincashclient": {
 		"description": {
 			"text": "Una biblioteca de C# .NET.",
 			"sourceHash": "0b8f4859cecaa363",
-			"status": "machine",
+			"status": "reviewed",
 			"translator": "Claude",
-			"qaHash": "293e893d03ea4604"
+			"reviewer": "George Donnelly"
 		}
 	},
 	"bitcoincashj": {
 		"description": {
 			"text": "Una biblioteca de Java.",
 			"sourceHash": "afb24400724368a4",
-			"status": "machine",
+			"status": "reviewed",
 			"translator": "Claude",
-			"qaHash": "77baec6639555cb0"
+			"reviewer": "George Donnelly"
 		}
 	},
 	"bch-js": {
 		"description": {
 			"text": "Una biblioteca de JavaScript.",
 			"sourceHash": "cd07735ce0d267b7",
-			"status": "machine",
+			"status": "reviewed",
 			"translator": "Claude",
-			"qaHash": "7b32bb0e3572e376"
+			"reviewer": "George Donnelly"
 		}
 	},
 	"rust-bitcoincash": {
 		"description": {
 			"text": "Biblioteca de Bitcoin Cash en Rust.",
 			"sourceHash": "8a3530d99d2b44b9",
-			"status": "machine",
+			"status": "reviewed",
 			"translator": "Claude",
-			"qaHash": "3ee51743ec03f865"
+			"reviewer": "George Donnelly"
 		}
 	},
 	"cashp": {
 		"description": {
 			"text": "Biblioteca de PHP para BCH y tokens SLP.",
 			"sourceHash": "97c629a5149325e1",
-			"status": "machine",
+			"status": "reviewed",
 			"translator": "Claude",
-			"qaHash": "665fd2aacdfa61be"
+			"reviewer": "George Donnelly"
 		}
 	},
 	"bitcoinkit-ios": {
 		"description": {
 			"text": "Billetera SPV + biblioteca en Swift.",
 			"sourceHash": "4a82aef2afdf6aa8",
-			"status": "machine",
+			"status": "reviewed",
 			"translator": "Claude",
-			"qaHash": "917dc8f8a62a7c33"
+			"reviewer": "George Donnelly"
 		}
 	},
 	"bitcoinkit-android": {
 		"description": {
 			"text": "Billetera SPV + biblioteca en Kotlin.",
 			"sourceHash": "ce98a8719561ed22",
-			"status": "machine",
+			"status": "reviewed",
 			"translator": "Claude",
-			"qaHash": "a27659fa84273df5"
+			"reviewer": "George Donnelly"
 		}
 	},
 	"chaingraph": {
 		"description": {
 			"text": "Chaingraph es un indexador de blockchain multinodo y una API GraphQL.",
 			"sourceHash": "1c48876c546e6721",
-			"status": "machine",
+			"status": "reviewed",
 			"translator": "Claude",
-			"qaHash": "eca31c85fb75959d"
+			"reviewer": "George Donnelly"
 		}
 	},
 	"bitbox-sdk-lite": {
 		"description": {
 			"text": "Crea con Flutter.",
 			"sourceHash": "bb20e98a3b179ef3",
-			"status": "machine",
+			"status": "reviewed",
 			"translator": "Claude",
-			"qaHash": "8d34faae2e269452"
+			"reviewer": "George Donnelly"
 		}
 	},
 	"haskoin-core": {
 		"description": {
 			"text": "Crea con Haskell.",
 			"sourceHash": "8c3813bd1848d71e",
-			"status": "machine",
+			"status": "reviewed",
 			"translator": "Claude",
-			"qaHash": "dd87b3365f242332"
+			"reviewer": "George Donnelly"
 		}
 	},
 	"bitcore-lib-cash": {
 		"description": {
 			"text": "Biblioteca de JS para BCH de BitPay.",
 			"sourceHash": "6af8a5370424317d",
-			"status": "machine",
+			"status": "reviewed",
 			"translator": "Claude",
-			"qaHash": "c9eb61548635c463"
+			"reviewer": "George Donnelly"
 		}
 	},
 	"python-bitcoincash": {
 		"description": {
 			"text": "Biblioteca de Python de bajo nivel.",
 			"sourceHash": "6a0a7923ec7ef6f0",
-			"status": "machine",
+			"status": "reviewed",
 			"translator": "Claude",
-			"qaHash": "c8fea0850b82f797"
+			"reviewer": "George Donnelly"
 		}
 	},
 	"signup-cash": {
 		"description": {
 			"text": "Una billetera para crear apps de BCH.",
 			"sourceHash": "1ec88590bacee285",
-			"status": "machine",
+			"status": "reviewed",
 			"translator": "Claude",
-			"qaHash": "dd48c3a4ae9b1afb"
+			"reviewer": "George Donnelly"
 		}
 	},
 	"be-cash": {
 		"description": {
 			"text": "Biblioteca de BCH en Rust.",
 			"sourceHash": "fae444d2a8ec1549",
-			"status": "machine",
+			"status": "reviewed",
 			"translator": "Claude",
-			"qaHash": "c8fe328af5102dd6"
+			"reviewer": "George Donnelly"
 		}
 	},
 	"rbch": {
 		"description": {
 			"text": "Extracción y análisis de datos de la blockchain de Bitcoin Cash (BCH).",
 			"sourceHash": "bd181f8ec6a9a614",
-			"status": "machine",
+			"status": "reviewed",
 			"translator": "Claude",
-			"qaHash": "8fd95e3d777a891c"
+			"reviewer": "George Donnelly"
 		}
 	},
 	"p2p-cash": {
 		"description": {
 			"text": "P2P-CASH es una biblioteca que te permite comunicarte con nodos completos de BCH.",
 			"sourceHash": "287f6e983cb02a91",
-			"status": "machine",
+			"status": "reviewed",
 			"translator": "Claude",
-			"qaHash": "f1668316f0db65e8"
+			"reviewer": "George Donnelly"
 		}
 	},
 	"rpckit": {
 		"description": {
 			"text": "Biblioteca JSON-RPC con tipado seguro en TypeScript para servicios de BCH",
 			"sourceHash": "668420998c8869dd",
-			"status": "machine",
+			"status": "reviewed",
 			"translator": "Claude",
-			"qaHash": "f2a5f89357b0010c"
+			"reviewer": "George Donnelly"
 		}
 	},
 	"mem-cash": {
 		"description": {
 			"text": "Biblioteca de Bitcoin Cash en TypeScript de mainnet-pat",
 			"sourceHash": "29f92fb5d34fa83b",
-			"status": "machine",
+			"status": "reviewed",
 			"translator": "Claude",
-			"qaHash": "af8f5d8f70bc8457"
+			"reviewer": "George Donnelly"
 		}
 	},
 	"cashlab": {
 		"description": {
 			"text": "Biblioteca de TypeScript para crear apps de Bitcoin Cash",
 			"sourceHash": "6afc3b6a8628d2a2",
-			"status": "machine",
+			"status": "reviewed",
 			"translator": "Claude",
-			"qaHash": "a1b6b22f44679609"
+			"reviewer": "George Donnelly"
 		}
 	},
 	"xo-stack": {
 		"description": {
 			"text": "Stack de código abierto para crear apps UTXO de BCH",
 			"sourceHash": "919f8236557f14a8",
-			"status": "machine",
+			"status": "reviewed",
 			"translator": "Claude",
-			"qaHash": "f2f75c521bc6ae7c"
+			"reviewer": "George Donnelly"
 		}
 	},
 	"documentation-cash": {
 		"description": {
 			"text": "Documentación del protocolo BCH.",
 			"sourceHash": "0a8ac45e34209176",
-			"status": "machine",
+			"status": "reviewed",
 			"translator": "Claude",
-			"qaHash": "4f660cae91abc820"
+			"reviewer": "George Donnelly"
 		}
 	},
 	"reference-cash": {
 		"description": {
 			"text": "Documentación del protocolo BCH.",
 			"sourceHash": "0a8ac45e34209176",
-			"status": "machine",
+			"status": "reviewed",
 			"translator": "Claude",
-			"qaHash": "4f660cae91abc820"
+			"reviewer": "George Donnelly"
 		}
 	},
 	"bch-standards": {
 		"description": {
 			"text": "Estándares de BCH.",
 			"sourceHash": "d73d5192db53323d",
-			"status": "machine",
+			"status": "reviewed",
 			"translator": "Claude",
-			"qaHash": "68cbff056e9cb85c"
+			"reviewer": "George Donnelly"
 		}
 	},
 	"electrum-cash-protocol-docs": {
 		"description": {
 			"text": "Referencia de los métodos del protocolo Electrum Cash.",
 			"sourceHash": "9bd53a21e7dd5f6d",
-			"status": "machine",
+			"status": "reviewed",
 			"translator": "Claude",
-			"qaHash": "71f4df42d267322f"
+			"reviewer": "George Donnelly"
 		}
 	},
 	"electroncash-wiki": {
 		"description": {
 			"text": "Documentación de Electron Cash.",
 			"sourceHash": "c8fb406cb2019828",
-			"status": "machine",
+			"status": "reviewed",
 			"translator": "Claude",
-			"qaHash": "22b6de4bcbcc68d0"
+			"reviewer": "George Donnelly"
 		}
 	},
 	"upgrade-specs": {
 		"description": {
 			"text": "Especificaciones de actualizaciones de la red publicadas por Bitcoin Cash Node",
 			"sourceHash": "9bf49d224187c675",
-			"status": "machine",
+			"status": "reviewed",
 			"translator": "Claude",
-			"qaHash": "3e07d78899ecbfeb"
+			"reviewer": "George Donnelly"
 		}
 	},
 	"vm-cash": {
 		"description": {
 			"text": "Referencia de opcodes de la VM de BCH hasta 2026",
 			"sourceHash": "1092efae2bbe2e1c",
-			"status": "machine",
+			"status": "reviewed",
 			"translator": "Claude",
-			"qaHash": "0ceb46a798f283ad"
+			"reviewer": "George Donnelly"
 		}
 	},
 	"real-bitcoin-fam": {
 		"description": {
 			"text": "Una red de apoyo para quienes crean en Web3.",
 			"sourceHash": "f31c522ed4e0fafc",
-			"status": "machine",
+			"status": "reviewed",
 			"translator": "Claude",
-			"qaHash": "bada225c496b1a60"
+			"reviewer": "George Donnelly"
 		}
 	},
 	"cashtoken-devs-tg": {
 		"description": {
 			"text": "Un grupo de Telegram activo para desarrolladores de CashTokens.",
 			"sourceHash": "f0722e0afb8b0573",
-			"status": "machine",
+			"status": "reviewed",
 			"translator": "Claude",
-			"qaHash": "16bd24c4681b7e8d"
+			"reviewer": "George Donnelly"
 		}
 	},
 	"mainnet-cash-tg": {
 		"description": {
 			"text": "Un grupo de Telegram activo para desarrolladores que usan MainnetJS.",
 			"sourceHash": "cd671b5afb05e503",
-			"status": "machine",
+			"status": "reviewed",
 			"translator": "Claude",
-			"qaHash": "e5981d9b34c1375e"
+			"reviewer": "George Donnelly"
 		}
 	},
 	"libauth-devs-tg": {
 		"description": {
 			"text": "Un grupo de Telegram de ayuda para desarrolladores de libauth.",
 			"sourceHash": "ad27d3089480f36e",
-			"status": "machine",
+			"status": "reviewed",
 			"translator": "Claude",
-			"qaHash": "e8d3fc83371f76be"
+			"reviewer": "George Donnelly"
 		}
 	},
 	"r-bchcashtokens": {
 		"description": {
 			"text": "Un subreddit para desarrolladores y usuarios de BCH.",
 			"sourceHash": "c927ace9290d6785",
-			"status": "machine",
+			"status": "reviewed",
 			"translator": "Claude",
-			"qaHash": "3c972f398dec4160"
+			"reviewer": "George Donnelly"
 		}
 	},
 	"shrimp-club-bch": {
 		"description": {
 			"text": "Un Telegram para poseedores verificados de BCH.",
 			"sourceHash": "d3914733160a1b9a",
-			"status": "machine",
+			"status": "reviewed",
 			"translator": "Claude",
-			"qaHash": "db62313de7a127fc"
+			"reviewer": "George Donnelly"
 		}
 	},
 	"bitauth-ide-tg": {
 		"description": {
 			"text": "Un grupo de Telegram para usuarios de BitAuth IDE.",
 			"sourceHash": "33a576645aa4d203",
-			"status": "machine",
+			"status": "reviewed",
 			"translator": "Claude",
-			"qaHash": "1d22eab40f45da7e"
+			"reviewer": "George Donnelly"
 		}
 	},
 	"walletconnect-devs-tg": {
 		"description": {
 			"text": "Un grupo de Telegram para desarrolladores de WalletConnect.",
 			"sourceHash": "999aa952990aad92",
-			"status": "machine",
+			"status": "reviewed",
 			"translator": "Claude",
-			"qaHash": "f2ad11c8e522de13"
+			"reviewer": "George Donnelly"
 		}
 	},
 	"bch-compilers-tg": {
 		"description": {
 			"text": "Un grupo de Telegram para desarrolladores avanzados de BCH.",
 			"sourceHash": "a047692fa10c097e",
-			"status": "machine",
+			"status": "reviewed",
 			"translator": "Claude",
-			"qaHash": "5fa788141cc46342"
+			"reviewer": "George Donnelly"
 		}
 	},
 	"chaingraph-devs-tg": {
 		"description": {
 			"text": "Un grupo de Telegram para desarrolladores de Chaingraph.",
 			"sourceHash": "a5da1cf8c628c607",
-			"status": "machine",
+			"status": "reviewed",
 			"translator": "Claude",
-			"qaHash": "71f47bebd1c91067"
+			"reviewer": "George Donnelly"
 		}
 	},
 	"bch-argentina": {
 		"description": {
 			"text": "Un grupo de Telegram para usuarios y desarrolladores de BCH en Argentina.",
 			"sourceHash": "2dd0beb4226a89df",
-			"status": "machine",
+			"status": "reviewed",
 			"translator": "Claude",
-			"qaHash": "0fff2a20d3cb85c2"
+			"reviewer": "George Donnelly"
 		}
 	},
 	"bch-latam": {
 		"description": {
 			"text": "Un grupo de Telegram en español para desarrolladores de BCH.",
 			"sourceHash": "3084e406d73681f8",
-			"status": "machine",
+			"status": "reviewed",
 			"translator": "Claude",
-			"qaHash": "80213a8536a381a1"
+			"reviewer": "George Donnelly"
 		}
 	},
 	"tokenstork-support-tg": {
 		"description": {
 			"text": "Un grupo de Telegram para TokenStork.com.",
 			"sourceHash": "21ddda8de50d3cd6",
-			"status": "machine",
+			"status": "reviewed",
 			"translator": "Claude",
-			"qaHash": "5321f73fb8c3b859"
+			"reviewer": "George Donnelly"
 		}
 	},
 	"bch-webring": {
 		"description": {
 			"text": "Federación de sitios web de Bitcoin Cash",
 			"sourceHash": "1899526f13490a0c",
-			"status": "machine",
+			"status": "reviewed",
 			"translator": "Claude",
-			"qaHash": "9296a547b673bac6"
+			"reviewer": "George Donnelly"
 		}
 	},
 	"bch-1-hackcelerator": {
 		"description": {
 			"text": "Programa para desarrolladores de apps de BCH y CashTokens",
 			"sourceHash": "d5067b27cd70d012",
-			"status": "machine",
+			"status": "reviewed",
 			"translator": "Claude",
-			"qaHash": "76d0fdca3c98fbe2"
+			"reviewer": "George Donnelly"
 		}
 	},
 	"bch-bliss": {
 		"description": {
 			"text": "Conferencia anual sobre actualizaciones de BCH en Liubliana",
 			"sourceHash": "fd410d954f7146c3",
-			"status": "machine",
+			"status": "reviewed",
 			"translator": "Claude",
-			"qaHash": "f2b30337f019c1cd"
+			"reviewer": "George Donnelly"
 		}
 	},
 	"cash3-conference": {
 		"description": {
 			"text": "Conferencia y hackathon de Bitcoin Cash en Cebú",
 			"sourceHash": "f1ae53da7b8218f1",
-			"status": "machine",
+			"status": "reviewed",
 			"translator": "Claude",
-			"qaHash": "f7ba84802c21adaf"
+			"reviewer": "George Donnelly"
 		}
 	},
 	"bch-city": {
 		"description": {
 			"text": "Centro de adopción de BCH en Townsville, Queensland",
 			"sourceHash": "31cc21dffd276008",
-			"status": "machine",
+			"status": "reviewed",
 			"translator": "Claude",
-			"qaHash": "0ef45f033395d611"
+			"reviewer": "George Donnelly"
 		}
 	},
 	"bch-global-meetups": {
 		"description": {
 			"text": "Grupo de Meetup para eventos de Bitcoin Cash en todo el mundo",
 			"sourceHash": "0568b8026a447ff2",
-			"status": "machine",
+			"status": "reviewed",
 			"translator": "Claude",
-			"qaHash": "415e8487f0861545"
+			"reviewer": "George Donnelly"
 		}
 	},
 	"tokyo-bch-meetup": {
 		"description": {
 			"text": "Meetup periódico de Bitcoin Cash en Tokio",
 			"sourceHash": "4320dc80127402f0",
-			"status": "machine",
+			"status": "reviewed",
 			"translator": "Claude",
-			"qaHash": "953c435a2244a218"
+			"reviewer": "George Donnelly"
 		}
 	},
 	"darmstadt-bch-meetup": {
 		"description": {
 			"text": "Meetup bimestral de Bitcoin Cash en Darmstadt",
 			"sourceHash": "3c55b18ef6417676",
-			"status": "machine",
+			"status": "reviewed",
 			"translator": "Claude",
-			"qaHash": "accacc97700a459e"
+			"reviewer": "George Donnelly"
 		}
 	},
 	"fullstack-cash-api": {
 		"description": {
 			"text": "Blockchain de BCH como servicio.",
 			"sourceHash": "37b3caeba7009bf1",
-			"status": "machine",
+			"status": "reviewed",
 			"translator": "Claude",
-			"qaHash": "069e546d0b526ddb"
+			"reviewer": "George Donnelly"
 		}
 	},
 	"fountainhead-cash": {
 		"description": {
 			"text": "Diversos servicios de infraestructura.",
 			"sourceHash": "580c0f69137d8310",
-			"status": "machine",
+			"status": "reviewed",
 			"translator": "Claude",
-			"qaHash": "ed0d7b73b5b13cf5"
+			"reviewer": "George Donnelly"
 		}
 	},
 	"actorforth": {
 		"description": {
 			"text": "Clon de la API REST de Bitcoin.com.",
 			"sourceHash": "3a0eafe2714fd3c3",
-			"status": "machine",
+			"status": "reviewed",
 			"translator": "Claude",
-			"qaHash": "bb291c399fb3a715"
+			"reviewer": "George Donnelly"
 		}
 	},
 	"getblock-io": {
 		"description": {
 			"text": "Diversas APIs disponibles.",
 			"sourceHash": "2e7fd48505902483",
-			"status": "machine",
+			"status": "reviewed",
 			"translator": "Claude",
-			"qaHash": "f35867e05e18c8f8"
+			"reviewer": "George Donnelly"
 		}
 	},
 	"coinremitter": {
 		"description": {
 			"text": "Pasarela de pagos de Bitcoin Cash.",
 			"sourceHash": "257d59d80cbd2e64",
-			"status": "machine",
+			"status": "reviewed",
 			"translator": "Claude",
-			"qaHash": "26e475795bd21b90"
+			"reviewer": "George Donnelly"
 		}
 	},
 	"bitsocket-fountainhead": {
 		"description": {
 			"text": "Suscríbete a saldos de BCH y más.",
 			"sourceHash": "123bc29d9009dac2",
-			"status": "machine",
+			"status": "reviewed",
 			"translator": "Claude",
-			"qaHash": "860d924b5de420bb"
+			"reviewer": "George Donnelly"
 		}
 	},
 	"insomnia-cash": {
 		"description": {
 			"text": "Ofrece una forma sencilla de interactuar con la blockchain de BCH mediante HTTP.",
 			"sourceHash": "0868bcbc10d01513",
-			"status": "machine",
+			"status": "reviewed",
 			"translator": "Claude",
-			"qaHash": "3f4232748dc3dfc1"
+			"reviewer": "George Donnelly"
 		}
 	},
 	"watchtower-cash": {
 		"description": {
 			"text": "API de infraestructura de BCH para monitoreo y apps",
 			"sourceHash": "6e3f1973a928e91a",
-			"status": "machine",
+			"status": "reviewed",
 			"translator": "Claude",
-			"qaHash": "c633b6f63f8fa29e"
+			"reviewer": "George Donnelly"
 		}
 	},
 	"cashscript": {
 		"description": {
 			"text": "Contratos inteligentes con SDK de JS.",
 			"sourceHash": "7558f72af58b44d5",
-			"status": "machine",
+			"status": "reviewed",
 			"translator": "Claude",
-			"qaHash": "9458af6d1e00253d"
+			"reviewer": "George Donnelly"
 		}
 	},
 	"cashscript-playground": {
 		"description": {
 			"text": "Prueba CashScript en tu navegador.",
 			"sourceHash": "5c725c8ec1e5504f",
-			"status": "machine",
+			"status": "reviewed",
 			"translator": "Claude",
-			"qaHash": "506c31114acc908c"
+			"reviewer": "George Donnelly"
 		}
 	},
 	"bitauth-ide": {
 		"description": {
 			"text": "Un IDE para crear contratos inteligentes en BCH.",
 			"sourceHash": "96d12b859183b100",
-			"status": "machine",
+			"status": "reviewed",
 			"translator": "Claude",
-			"qaHash": "3abc8dd0f5a4af10"
+			"reviewer": "George Donnelly"
 		}
 	},
 	"spedn": {
 		"description": {
 			"text": "Diseñado para ser explícito.",
 			"sourceHash": "7a6dd2522663c422",
-			"status": "machine",
+			"status": "reviewed",
 			"translator": "Claude",
-			"qaHash": "e97fa6b1b31e3130"
+			"reviewer": "George Donnelly"
 		}
 	},
 	"meep": {
 		"description": {
 			"text": "Depurador de scripts de BCH por línea de comandos.",
 			"sourceHash": "306a77460048a14a",
-			"status": "machine",
+			"status": "reviewed",
 			"translator": "Claude",
-			"qaHash": "d81af20653132173"
+			"reviewer": "George Donnelly"
 		}
 	},
 	"iguana": {
 		"description": {
 			"text": "Depurador.",
 			"sourceHash": "e007e139af70559d",
-			"status": "machine",
+			"status": "reviewed",
 			"translator": "Claude",
-			"qaHash": "527606b3fa84e855"
+			"reviewer": "George Donnelly"
 		}
 	},
 	"vscode-cashscript": {
 		"description": {
 			"text": "Extensión de VS Code para CashScript.",
 			"sourceHash": "c8d239ee5b8d91d3",
-			"status": "machine",
+			"status": "reviewed",
 			"translator": "Claude",
-			"qaHash": "69443905d3185fc0"
+			"reviewer": "George Donnelly"
 		}
 	},
 	"nexops": {
 		"description": {
 			"text": "Plataforma para generar, auditar y desplegar contratos de CashScript",
 			"sourceHash": "068dd9ec6c99b15b",
-			"status": "machine",
+			"status": "reviewed",
 			"translator": "Claude",
-			"qaHash": "aa1c8b800ba49228"
+			"reviewer": "George Donnelly"
 		}
 	},
 	"opencashdao": {
 		"description": {
 			"text": "Plantilla de contrato DAO para Bitcoin Cash",
 			"sourceHash": "d4c6a643e4be97dc",
-			"status": "machine",
+			"status": "reviewed",
 			"translator": "Claude",
-			"qaHash": "54419133bf48c76d"
+			"reviewer": "George Donnelly"
 		}
 	},
 	"jedex": {
 		"description": {
 			"text": "Demo de DEX de ejecución conjunta creada con CashTokens",
 			"sourceHash": "11c18c83828bbda3",
-			"status": "machine",
+			"status": "reviewed",
 			"translator": "Claude",
-			"qaHash": "45e80d8a52a8ea07"
+			"reviewer": "George Donnelly"
 		}
 	},
 	"quantumroot": {
 		"description": {
 			"text": "Contratos de bóveda poscuánticos en script de Bitcoin Cash",
 			"sourceHash": "c4f2c6eee5058e01",
-			"status": "machine",
+			"status": "reviewed",
 			"translator": "Claude",
-			"qaHash": "f269fd928e064d48"
+			"reviewer": "George Donnelly"
 		}
 	},
 	"cashfusion": {
 		"description": {
 			"text": "Privacidad para BCH.",
 			"sourceHash": "48bc665a91c68854",
-			"status": "machine",
+			"status": "reviewed",
 			"translator": "Claude",
-			"qaHash": "18533b016274ceb3"
+			"reviewer": "George Donnelly"
 		}
 	},
 	"cashshuffle": {
 		"description": {
 			"text": "Privacidad para BCH.",
 			"sourceHash": "48bc665a91c68854",
-			"status": "machine",
+			"status": "reviewed",
 			"translator": "Claude",
-			"qaHash": "18533b016274ceb3"
+			"reviewer": "George Donnelly"
 		}
 	},
 	"cashaddr": {
 		"description": {
 			"text": "Formato de dirección de BCH.",
 			"sourceHash": "36384af4113ef177",
-			"status": "machine",
+			"status": "reviewed",
 			"translator": "Claude",
-			"qaHash": "cba59dd80790ba69"
+			"reviewer": "George Donnelly"
 		}
 	},
 	"cashaccounts": {
 		"description": {
 			"text": "Direcciones de BCH legibles para personas.",
 			"sourceHash": "4a8bd4e8b3701130",
-			"status": "machine",
+			"status": "reviewed",
 			"translator": "Claude",
-			"qaHash": "0a4f344070a4de4e"
+			"reviewer": "George Donnelly"
 		}
 	},
 	"cashtokens-protocol": {
 		"description": {
 			"text": "Tokens fungibles y NFTs validados por los mineros.",
 			"sourceHash": "4ee96ed07b8b5f94",
-			"status": "machine",
+			"status": "reviewed",
 			"translator": "Claude",
-			"qaHash": "786d17e7f6ad2ac7"
+			"reviewer": "George Donnelly"
 		}
 	},
 	"bcmr": {
 		"description": {
 			"text": "Un estándar para compartir metadatos autenticados entre billeteras de Bitcoin Cash.",
 			"sourceHash": "bedc0e64205cfe84",
-			"status": "machine",
+			"status": "reviewed",
 			"translator": "Claude",
-			"qaHash": "24e3f9b4d52fe65b"
+			"reviewer": "George Donnelly"
 		}
 	},
 	"cashid": {
 		"description": {
 			"text": "Protocolo de autenticación de BCH.",
 			"sourceHash": "36634fb51f519e4a",
-			"status": "machine",
+			"status": "reviewed",
 			"translator": "Claude",
-			"qaHash": "a7bddf18ebd66273"
+			"reviewer": "George Donnelly"
 		}
 	},
 	"bip-70": {
 		"description": {
 			"text": "Protocolo de comunicación entre un comercio y su cliente.",
 			"sourceHash": "7edf4bea73b8854f",
-			"status": "machine",
+			"status": "reviewed",
 			"translator": "Claude",
-			"qaHash": "36e8ca70966756ee"
+			"reviewer": "George Donnelly"
 		}
 	},
 	"slp": {
 		"description": {
 			"text": "Un protocolo de tokens.",
 			"sourceHash": "78ec99244fe9d8d0",
-			"status": "machine",
+			"status": "reviewed",
 			"translator": "Claude",
-			"qaHash": "9bdc796eeb404f2e"
+			"reviewer": "George Donnelly"
 		}
 	},
 	"memo-protocol": {
 		"description": {
 			"text": "Red social en la cadena.",
 			"sourceHash": "82f21bb16f946111",
-			"status": "machine",
+			"status": "reviewed",
 			"translator": "Claude",
-			"qaHash": "3e7cdfefc54a733b"
+			"reviewer": "George Donnelly"
 		}
 	},
 	"wizardconnect": {
 		"description": {
 			"text": "Protocolo de Riften Labs para conectar billeteras con dApps",
 			"sourceHash": "df9dff5e3b775f16",
-			"status": "machine",
+			"status": "reviewed",
 			"translator": "Claude",
-			"qaHash": "5b19db0075b8f672"
+			"reviewer": "George Donnelly"
 		}
 	},
 	"bitcann": {
 		"description": {
 			"text": "Protocolo descentralizado de nombres de dominio e identidad en BCH",
 			"sourceHash": "da7bba4a47a2f295",
-			"status": "machine",
+			"status": "reviewed",
 			"translator": "Claude",
-			"qaHash": "e31f45765e9b9c7c"
+			"reviewer": "George Donnelly"
 		}
 	},
 	"blockchair": {
 		"description": {
 			"text": "Muestra los datos sin procesar de las transacciones.",
 			"sourceHash": "467a522d7dd75bed",
-			"status": "machine",
+			"status": "reviewed",
 			"translator": "Claude",
-			"qaHash": "7967569082bfec4d"
+			"reviewer": "George Donnelly"
 		}
 	},
 	"salemkode-explorer": {
 		"description": {
 			"text": "Incluye metadatos de CashTokens.",
 			"sourceHash": "d82a3031ea5254f6",
-			"status": "machine",
+			"status": "reviewed",
 			"translator": "Claude",
-			"qaHash": "b91fe65d8de75958"
+			"reviewer": "George Donnelly"
 		}
 	},
 	"3xpl": {
 		"description": {
 			"text": "Nuevo explorador con diseño moderno.",
 			"sourceHash": "bcd0e2715a063334",
-			"status": "machine",
+			"status": "reviewed",
 			"translator": "Claude",
-			"qaHash": "17f90fad055b4d05"
+			"reviewer": "George Donnelly"
 		}
 	},
 	"bu-explorer": {
 		"description": {
 			"text": "Excelente para desarrolladores.",
 			"sourceHash": "e4f439e1489d8a5d",
-			"status": "machine",
+			"status": "reviewed",
 			"translator": "Claude",
-			"qaHash": "3b228ec8e0f80062"
+			"reviewer": "George Donnelly"
 		}
 	},
 	"coin-dance-explorer": {
 		"description": {
 			"text": "Estadísticas y servicios de Bitcoin Cash impulsados por la comunidad.",
 			"sourceHash": "0582479846e1b10e",
-			"status": "machine",
+			"status": "reviewed",
 			"translator": "Claude",
-			"qaHash": "2418e143c05cf301"
+			"reviewer": "George Donnelly"
 		}
 	},
 	"electroncash-de-explorer": {
 		"description": {
 			"text": "Para la red principal.",
 			"sourceHash": "79f508323eb06dfd",
-			"status": "machine",
+			"status": "reviewed",
 			"translator": "Claude",
-			"qaHash": "9ff7b41c457bc0ec"
+			"reviewer": "George Donnelly"
 		}
 	},
 	"bch-explorer": {
 		"description": {
 			"text": "Incluye gráficos útiles.",
 			"sourceHash": "43a51562b2147516",
-			"status": "machine",
+			"status": "reviewed",
 			"translator": "Claude",
-			"qaHash": "6c98c31749b318c2"
+			"reviewer": "George Donnelly"
 		}
 	},
 	"bitcoin-verde-explorer": {
 		"description": {
 			"text": "Interfaz básica.",
 			"sourceHash": "03f5aacac53020c8",
-			"status": "machine",
+			"status": "reviewed",
 			"translator": "Claude",
-			"qaHash": "daeac4f363047a41"
+			"reviewer": "George Donnelly"
 		}
 	},
 	"blockchain-com-explorer": {
 		"description": {
 			"text": "Incluye estadísticas útiles.",
 			"sourceHash": "241c85ad2268e531",
-			"status": "machine",
+			"status": "reviewed",
 			"translator": "Claude",
-			"qaHash": "a785066f9e17ce90"
+			"reviewer": "George Donnelly"
 		}
 	},
 	"imaginary-cash-chipnet": {
 		"description": {
 			"text": "Para Chipnet, una red de pruebas de BCH.",
 			"sourceHash": "756c9d4ac9206fed",
-			"status": "machine",
+			"status": "reviewed",
 			"translator": "Claude",
-			"qaHash": "3b48e74704177054"
+			"reviewer": "George Donnelly"
 		}
 	},
 	"chaingraph-chipnet": {
 		"description": {
 			"text": "Para Chipnet, una red de pruebas de BCH.",
 			"sourceHash": "756c9d4ac9206fed",
-			"status": "machine",
+			"status": "reviewed",
 			"translator": "Claude",
-			"qaHash": "3b48e74704177054"
+			"reviewer": "George Donnelly"
 		}
 	},
 	"bch-ninja-chipnet": {
 		"description": {
 			"text": "Para Chipnet, una red de pruebas de BCH.",
 			"sourceHash": "756c9d4ac9206fed",
-			"status": "machine",
+			"status": "reviewed",
 			"translator": "Claude",
-			"qaHash": "3b48e74704177054"
+			"reviewer": "George Donnelly"
 		}
 	},
 	"loping-net-chipnet": {
 		"description": {
 			"text": "Explorador de bloques de Chipnet.",
 			"sourceHash": "551bd069c765eee3",
-			"status": "machine",
+			"status": "reviewed",
 			"translator": "Claude",
-			"qaHash": "ba563a31663f815f"
+			"reviewer": "George Donnelly"
 		}
 	},
 	"electroncash-de-testnet": {
 		"description": {
 			"text": "Para la red de pruebas.",
 			"sourceHash": "bb819773baa9c899",
-			"status": "machine",
+			"status": "reviewed",
 			"translator": "Claude",
-			"qaHash": "9aea388e4b22fcd8"
+			"reviewer": "George Donnelly"
 		}
 	},
 	"tx-street": {
 		"description": {
 			"text": "Visualizador de la mempool de BCH.",
 			"sourceHash": "ddd8e8f9e2040f26",
-			"status": "machine",
+			"status": "reviewed",
 			"translator": "Claude",
-			"qaHash": "51137827b9f2c828"
+			"reviewer": "George Donnelly"
 		}
 	},
 	"slp-token-explorer": {
 		"description": {
 			"text": "Explorador de tokens de SLP.",
 			"sourceHash": "b500d9d75aaee56d",
-			"status": "machine",
+			"status": "reviewed",
 			"translator": "Claude",
-			"qaHash": "2c2c5f2aafeadefd"
+			"reviewer": "George Donnelly"
 		}
 	},
 	"smartbch-explorer": {
 		"description": {
 			"text": "Para la cadena lateral SmartBCH.",
 			"sourceHash": "4574e755f14cde48",
-			"status": "machine",
+			"status": "reviewed",
 			"translator": "Claude",
-			"qaHash": "19f38a7c58adc1fc"
+			"reviewer": "George Donnelly"
 		}
 	},
 	"cashflow-dev": {
 		"description": {
 			"text": "Explorador visual de transacciones de Bitcoin Cash",
 			"sourceHash": "a1cae5b85305e3e1",
-			"status": "machine",
+			"status": "reviewed",
 			"translator": "Claude",
-			"qaHash": "7be7a6d8f814260a"
+			"reviewer": "George Donnelly"
 		}
 	},
 	"paytaca-explorer": {
 		"description": {
 			"text": "Explorador de bloques y de CashTokens con metadatos de BCMR",
 			"sourceHash": "22244f72f1c1b3a3",
-			"status": "machine",
+			"status": "reviewed",
 			"translator": "Claude",
-			"qaHash": "1e815d15f5ea6b35"
+			"reviewer": "George Donnelly"
 		}
 	},
 	"electrum-cash-npm": {
 		"description": {
 			"text": "Biblioteca JS para servidores Electrum.",
 			"sourceHash": "65afa24294152e8b",
-			"status": "machine",
+			"status": "reviewed",
 			"translator": "Claude",
-			"qaHash": "e01d486922940208"
+			"reviewer": "George Donnelly"
 		}
 	},
 	"bitdb-bitsocket": {
 		"description": {
 			"text": "API de la red de BCH.",
 			"sourceHash": "4a3917033240c4f1",
-			"status": "machine",
+			"status": "reviewed",
 			"translator": "Claude",
-			"qaHash": "d58effb0119a6adf"
+			"reviewer": "George Donnelly"
 		}
 	},
 	"fulcrum": {
 		"description": {
 			"text": "Un servidor SPV rápido y ágil.",
 			"sourceHash": "420f7fb28b0bbe1e",
-			"status": "machine",
+			"status": "reviewed",
 			"translator": "Claude",
-			"qaHash": "dc35a4782384e54a"
+			"reviewer": "George Donnelly"
 		}
 	},
 	"rostrum": {
 		"description": {
 			"text": "Una implementación eficiente de Electrum Server escrita en Rust.",
 			"sourceHash": "0bcedd17874ec4ea",
-			"status": "machine",
+			"status": "reviewed",
 			"translator": "Claude",
-			"qaHash": "21bd88f15f8de665"
+			"reviewer": "George Donnelly"
 		}
 	},
 	"dnsseeder": {
 		"description": {
 			"text": "Rastreador de red y seeder DNS escrito en Go.",
 			"sourceHash": "1398e23a61ed0428",
-			"status": "machine",
+			"status": "reviewed",
 			"translator": "Claude",
-			"qaHash": "c4be8aa82c1153ed"
+			"reviewer": "George Donnelly"
 		}
 	},
 	"bchaddrjs": {
 		"description": {
 			"text": "Biblioteca JS de conversión de direcciones.",
 			"sourceHash": "45c7792182babd69",
-			"status": "machine",
+			"status": "reviewed",
 			"translator": "Claude",
-			"qaHash": "b2c83b5601ff87b4"
+			"reviewer": "George Donnelly"
 		}
 	},
 	"bchutil": {
 		"description": {
 			"text": "Funciones prácticas.",
 			"sourceHash": "139f0860725fbbb4",
-			"status": "machine",
+			"status": "reviewed",
 			"translator": "Claude",
-			"qaHash": "b838c290f4eb4f41"
+			"reviewer": "George Donnelly"
 		}
 	},
 	"qr-code": {
 		"description": {
 			"text": "Un elemento HTML <qr-code> basado en SVG, personalizable y animable.",
 			"sourceHash": "a2ed67a4174ef8b1",
-			"status": "machine",
+			"status": "reviewed",
 			"translator": "Claude",
-			"qaHash": "11d23ababa6059c7"
+			"reviewer": "George Donnelly"
 		}
 	},
 	"address-conversion": {
 		"description": {
 			"text": "Herramienta de conversión entre los formatos de dirección CashAddress y legacy.",
 			"sourceHash": "307eded5afeebb18",
-			"status": "machine",
+			"status": "reviewed",
 			"translator": "Claude",
-			"qaHash": "bff5a922d728e211"
+			"reviewer": "George Donnelly"
 		}
 	},
 	"tx-broadcaster": {
 		"description": {
 			"text": "Transmite transacciones sin procesar a la red.",
 			"sourceHash": "ab6ba4d983c21386",
-			"status": "machine",
+			"status": "reviewed",
 			"translator": "Claude",
-			"qaHash": "a1cd078c6b65f87d"
+			"reviewer": "George Donnelly"
 		}
 	},
 	"googol-tbch-faucet": {
 		"description": {
 			"text": "Consigue tBCH.",
 			"sourceHash": "d4796bf60a2d7f22",
-			"status": "machine",
+			"status": "reviewed",
 			"translator": "Claude",
-			"qaHash": "36f9fd0ec62e2f48"
+			"reviewer": "George Donnelly"
 		}
 	},
 	"mainnet-cash-faucet": {
 		"description": {
 			"text": "Consigue tBCH.",
 			"sourceHash": "d4796bf60a2d7f22",
-			"status": "machine",
+			"status": "reviewed",
 			"translator": "Claude",
-			"qaHash": "36f9fd0ec62e2f48"
+			"reviewer": "George Donnelly"
 		}
 	},
 	"electrum-server-list": {
 		"description": {
 			"text": "Consulta la lista de servidores Electrum, Fulcrum, etc. disponibles.",
 			"sourceHash": "b6ff3965824481f2",
-			"status": "machine",
+			"status": "reviewed",
 			"translator": "Claude",
-			"qaHash": "38e18c245152a786"
+			"reviewer": "George Donnelly"
 		}
 	},
 	"bch-stack-wizard": {
 		"description": {
 			"text": "Encuentra el CashAssembly óptimo para una transformación de la pila",
 			"sourceHash": "ffb89a21ff02ad86",
-			"status": "machine",
+			"status": "reviewed",
 			"translator": "Claude",
-			"qaHash": "67fd9cfac30b3fe0"
+			"reviewer": "George Donnelly"
 		}
 	},
 	"psffpp": {
 		"description": {
 			"text": "Servicio de pinning en IPFS que se paga con Bitcoin Cash",
 			"sourceHash": "60b2a6b15c6918e9",
-			"status": "machine",
+			"status": "reviewed",
 			"translator": "Claude",
-			"qaHash": "d7b40aa86bf5f0b4"
+			"reviewer": "George Donnelly"
 		}
 	},
 	"bchd": {
 		"description": {
 			"text": "Escrito en Go.",
 			"sourceHash": "b49f94221e574fef",
-			"status": "machine",
+			"status": "reviewed",
 			"translator": "Claude",
-			"qaHash": "7ea6249fb9145cec"
+			"reviewer": "George Donnelly"
 		}
 	},
 	"bch-unlimited": {
 		"description": {
 			"text": "Un nodo innovador.",
 			"sourceHash": "c33ad73e42874bff",
-			"status": "machine",
+			"status": "reviewed",
 			"translator": "Claude",
-			"qaHash": "7ff07f0e8a2de52f"
+			"reviewer": "George Donnelly"
 		}
 	},
 	"bch-node": {
 		"description": {
 			"text": "El más usado para minería.",
 			"sourceHash": "ce2c43403989417d",
-			"status": "machine",
+			"status": "reviewed",
 			"translator": "Claude",
-			"qaHash": "5cd6bd2ee40ba7e7"
+			"reviewer": "George Donnelly"
 		}
 	},
 	"bitcoin-verde": {
 		"description": {
 			"text": "Escrito en Java.",
 			"sourceHash": "a0d1908044409b1b",
-			"status": "machine",
+			"status": "reviewed",
 			"translator": "Claude",
-			"qaHash": "01975674261b5aaa"
+			"reviewer": "George Donnelly"
 		}
 	},
 	"knuth": {
 		"description": {
 			"text": "Una plataforma de alto rendimiento.",
 			"sourceHash": "b3b1877a82ed251a",
-			"status": "machine",
+			"status": "reviewed",
 			"translator": "Claude",
-			"qaHash": "53c5b861798cbfc9"
+			"reviewer": "George Donnelly"
 		}
 	},
 	"bchc": {
 		"description": {
 			"text": "Nodo completo e indexador de BCH de alto rendimiento",
 			"sourceHash": "f8db04417f2da3cc",
-			"status": "machine",
+			"status": "reviewed",
 			"translator": "Claude",
-			"qaHash": "9fa05d2cf08cae05"
+			"reviewer": "George Donnelly"
 		}
 	},
 	"flipstarter": {
 		"description": {
 			"text": "Recaudación de fondos descentralizada.",
 			"sourceHash": "fa26e47775ca65ad",
-			"status": "machine",
+			"status": "reviewed",
 			"translator": "Claude",
-			"qaHash": "777b1d0063494f7d"
+			"reviewer": "George Donnelly"
 		}
 	},
 	"mecenas": {
 		"description": {
 			"text": "Un plugin de pagos recurrentes para Electron Cash, pensado como solución de mecenazgo sin custodia.",
 			"sourceHash": "8db2e9f7f213cf73",
-			"status": "machine",
+			"status": "reviewed",
 			"translator": "Claude",
-			"qaHash": "1034a3b850427b35"
+			"reviewer": "George Donnelly"
 		}
 	},
 	"bmp": {
 		"description": {
 			"text": "Gobernanza en la cadena basada en potencia de hash.",
 			"sourceHash": "20cd634723359f6a",
-			"status": "machine",
+			"status": "reviewed",
 			"translator": "Claude",
-			"qaHash": "206bdec84474bbd6"
+			"reviewer": "George Donnelly"
 		}
 	},
 	"votepeer": {
 		"description": {
 			"text": "Votación en blockchain resistente a la censura.",
 			"sourceHash": "f10306643f36f347",
-			"status": "machine",
+			"status": "reviewed",
 			"translator": "Claude",
-			"qaHash": "444162f76ca52c66"
+			"reviewer": "George Donnelly"
 		}
 	},
 	"unspent-phi": {
 		"description": {
 			"text": "DeFi con scripts de desbloqueo de transacciones no gastadas.",
 			"sourceHash": "5e3bba280ed12a48",
-			"status": "machine",
+			"status": "reviewed",
 			"translator": "Claude",
-			"qaHash": "86d97560ca4b1f6d"
+			"reviewer": "George Donnelly"
 		}
 	},
 	"craft-cash": {
 		"description": {
 			"text": "Un programa de dibujo con vóxeles.",
 			"sourceHash": "6bd602824a6cc8ea",
-			"status": "machine",
+			"status": "reviewed",
 			"translator": "Claude",
-			"qaHash": "fd47c48ac53836ce"
+			"reviewer": "George Donnelly"
 		}
 	},
 	"recurr": {
 		"description": {
 			"text": "Un protocolo sencillo para pagos recurrentes.",
 			"sourceHash": "93fc020afd8d417c",
-			"status": "machine",
+			"status": "reviewed",
 			"translator": "Claude",
-			"qaHash": "e4ee1ba6d8379682"
+			"reviewer": "George Donnelly"
 		}
 	},
 	"fundme-cash": {
 		"description": {
 			"text": "Financiamiento colectivo sin custodia con aportes reembolsables mediante CashTokens",
 			"sourceHash": "4a143ecdb150d488",
-			"status": "machine",
+			"status": "reviewed",
 			"translator": "Claude",
-			"qaHash": "ff0d6bcb42a8ed7b"
+			"reviewer": "George Donnelly"
 		}
 	},
 	"shinobi-art-engine": {
 		"description": {
 			"text": "Una herramienta para crear colecciones de NFTs de BCH a partir de capas de imagen.",
 			"sourceHash": "78a29be21c1bbd6c",
-			"status": "machine",
+			"status": "reviewed",
 			"translator": "Claude",
-			"qaHash": "0bba5b12fc4c3936"
+			"reviewer": "George Donnelly"
 		}
 	},
 	"cashtokens-airdrop-tool": {
 		"description": {
 			"text": "Un práctico programa en JavaScript para hacer airdrops de tokens fungibles a quienes poseen NFTs.",
 			"sourceHash": "a934808be0a559d4",
-			"status": "machine",
+			"status": "reviewed",
 			"translator": "Claude",
-			"qaHash": "6e0dd22139b4f3fd"
+			"reviewer": "George Donnelly"
 		}
 	},
 	"bcmr-generator": {
 		"description": {
 			"text": "Una herramienta para generar archivos BCMR.",
 			"sourceHash": "1b473c2d9ccfb392",
-			"status": "machine",
+			"status": "reviewed",
 			"translator": "Claude",
-			"qaHash": "0e50c89792ac97dd"
+			"reviewer": "George Donnelly"
 		}
 	},
 	"cashtokens-studio": {
 		"description": {
 			"text": "Una app completa de gestión de CashTokens.",
 			"sourceHash": "d5a12bd98b97cc0a",
-			"status": "machine",
+			"status": "reviewed",
 			"translator": "Claude",
-			"qaHash": "f22c8351667af383"
+			"reviewer": "George Donnelly"
 		}
 	},
 	"nft-storage": {
 		"description": {
 			"text": "Pinning de archivos en IPFS, gratis y sencillo.",
 			"sourceHash": "c617215aef7751bb",
-			"status": "machine",
+			"status": "reviewed",
 			"translator": "Claude",
-			"qaHash": "4fbc80e88983b47b"
+			"reviewer": "George Donnelly"
 		}
 	},
 	"tokenstork": {
 		"description": {
 			"text": "Un directorio de todos los CashTokens acuñados hasta hoy, a partir de su propio indexador: suministro en vivo, poseedores, NFTs, metadatos de BCMR, precios y TVL. También herramientas de acuñación y airdrop, estadísticas por bloque y un resumen diario de tokens.",
 			"sourceHash": "aecdb9c40476fb74",
-			"status": "machine",
+			"status": "reviewed",
 			"translator": "Claude",
-			"qaHash": "521771bac390dc5c"
+			"reviewer": "George Donnelly"
 		}
 	},
 	"tokenburner": {
 		"description": {
 			"text": "Quema CashTokens de forma irrevocable en la cadena",
 			"sourceHash": "5aff219913b40e19",
-			"status": "machine",
+			"status": "reviewed",
 			"translator": "Claude",
-			"qaHash": "02c029a2329c8249"
+			"reviewer": "George Donnelly"
 		}
 	},
 	"dropship-cash": {
 		"description": {
 			"text": "dApp para hacer airdrops de BCH y CashTokens",
 			"sourceHash": "19913629c96c374e",
-			"status": "machine",
+			"status": "reviewed",
 			"translator": "Claude",
-			"qaHash": "36a1845cae7f7823"
+			"reviewer": "George Donnelly"
 		}
 	},
 	"cashtokens-org": {
 		"description": {
 			"text": "Especificaciones de CashTokens y BCMR.",
 			"sourceHash": "f874d77ff98f08f1",
-			"status": "machine",
+			"status": "reviewed",
 			"translator": "Claude",
-			"qaHash": "48826c006c55b42e"
+			"reviewer": "George Donnelly"
 		}
 	},
 	"bitcats": {
 		"description": {
 			"text": "10.000 imágenes digitales únicas de gatos dibujadas a mano.",
 			"sourceHash": "40b68de5c522450c",
-			"status": "machine",
+			"status": "reviewed",
 			"translator": "Claude",
-			"qaHash": "9e1fef07a8d22e6d"
+			"reviewer": "George Donnelly"
 		}
 	},
 	"cashninjas": {
 		"description": {
 			"text": "Colección de NFTs con mejoras de OpenAI que dan un nombre y una descripción a cada Cash-Ninja.",
 			"sourceHash": "ae8bf9067f0aca0b",
-			"status": "machine",
+			"status": "reviewed",
 			"translator": "Claude",
-			"qaHash": "4634ee2091b43005"
+			"reviewer": "George Donnelly"
 		}
 	},
 	"bch-gurus": {
 		"description": {
 			"text": "Un juego único de predicción de precios de criptomonedas, en la cadena y entre pares, y una colección de NFTs.",
 			"sourceHash": "aa6f8ac83041df57",
-			"status": "machine",
+			"status": "reviewed",
 			"translator": "Claude",
-			"qaHash": "5c6378c29eaabffd"
+			"reviewer": "George Donnelly"
 		}
 	},
 	"emerald-dao": {
 		"description": {
 			"text": "Plantilla sencilla de DAO para Bitcoin Cash que funciona como una bóveda de ahorro de depósito a plazo fijo, con un esquema opcional de recompensas financiado colectivamente.",
 			"sourceHash": "a9c6e544c888728d",
-			"status": "machine",
+			"status": "reviewed",
 			"translator": "Claude",
-			"qaHash": "a97cb8af42030506"
+			"reviewer": "George Donnelly"
 		}
 	},
 	"shady-battlegrounds": {
 		"description": {
 			"text": "Desde un juego de carreras hasta un juego de artillería jugador contra jugador a gran escala que incluye varios tipos de armas para llevar al campo de batalla.",
 			"sourceHash": "0b6d1fa37a1f81cf",
-			"status": "machine",
+			"status": "reviewed",
 			"translator": "Claude",
-			"qaHash": "903aa0463adad03e"
+			"reviewer": "George Donnelly"
 		}
 	},
 	"ghostwriter": {
 		"description": {
 			"text": "NFTs basados en texto.",
 			"sourceHash": "be1db155daa79052",
-			"status": "machine",
+			"status": "reviewed",
 			"translator": "Claude",
-			"qaHash": "6c5013e72b2f5146"
+			"reviewer": "George Donnelly"
 		}
 	},
 	"bch-vision-2021": {
 		"description": {
 			"text": "Una colección de 25 imágenes para redes sociales que plantean una visión del desarrollo futuro de BCH.",
 			"sourceHash": "f4f3b673525de909",
-			"status": "machine",
+			"status": "reviewed",
 			"translator": "Claude",
-			"qaHash": "c1a98f8e43f2d32f"
+			"reviewer": "George Donnelly"
 		}
 	},
 	"reapers": {
 		"description": {
 			"text": "Colección de NFTs de BCH.",
 			"sourceHash": "d3eec30dea86e6b0",
-			"status": "machine",
+			"status": "reviewed",
 			"translator": "Claude",
-			"qaHash": "41ce75cad0382a03"
+			"reviewer": "George Donnelly"
 		}
 	},
 	"tokenaut": {
 		"description": {
 			"text": "Proyecto CashTokens de BCH.",
 			"sourceHash": "d5852490fb2cc8e0",
-			"status": "machine",
+			"status": "reviewed",
 			"translator": "Claude",
-			"qaHash": "8b0a0cbd7055e1b1"
+			"reviewer": "George Donnelly"
 		}
 	},
 	"pepi-nft": {
 		"description": {
 			"text": "Colección de NFTs de memes en CashTokens",
 			"sourceHash": "96a5254e969d149a",
-			"status": "machine",
+			"status": "reviewed",
 			"translator": "Claude",
-			"qaHash": "a576b4c307c2d200"
+			"reviewer": "George Donnelly"
 		}
 	},
 	"dogecash": {
 		"description": {
 			"text": "Memecoin.",
 			"sourceHash": "6842adf8ba88ea0a",
-			"status": "machine",
+			"status": "reviewed",
 			"translator": "Claude",
-			"qaHash": "1fa099b4e4df065d"
+			"reviewer": "George Donnelly"
 		}
 	},
 	"wrapped-bch": {
 		"description": {
 			"text": "BCH, pero como CashToken.",
 			"sourceHash": "78780190438c811c",
-			"status": "machine",
+			"status": "reviewed",
 			"translator": "Claude",
-			"qaHash": "ea0f39cc214a1144"
+			"reviewer": "George Donnelly"
 		}
 	},
 	"rbf-tokens": {
 		"description": {
 			"text": "Token de reconocimiento de la comunidad de Real Bitcoin Fam para premiar a nuevos desarrolladores de BCH que crean con CashTokens.",
 			"sourceHash": "3fdfd74479e90eaa",
-			"status": "machine",
+			"status": "reviewed",
 			"translator": "Claude",
-			"qaHash": "ac96c686cb4c4769"
+			"reviewer": "George Donnelly"
 		}
 	},
 	"spice-token": {
 		"description": {
 			"text": "CashToken de BCH.",
 			"sourceHash": "293ac93669b7866e",
-			"status": "machine",
+			"status": "reviewed",
 			"translator": "Claude",
-			"qaHash": "30029959a5bac4ed"
+			"reviewer": "George Donnelly"
 		}
 	},
 	"popcorn-token": {
 		"description": {
 			"text": "CashToken de BCH.",
 			"sourceHash": "293ac93669b7866e",
-			"status": "machine",
+			"status": "reviewed",
 			"translator": "Claude",
-			"qaHash": "30029959a5bac4ed"
+			"reviewer": "George Donnelly"
 		}
 	},
 	"bchpump": {
 		"description": {
 			"text": "Plataforma de lanzamiento de CashTokens con curva de vinculación",
 			"sourceHash": "e13d38a7b4bd6aa9",
-			"status": "machine",
+			"status": "reviewed",
 			"translator": "Claude",
-			"qaHash": "6c3702c95aa4e585"
+			"reviewer": "George Donnelly"
 		}
 	},
 	"token-explorer": {
 		"description": {
 			"text": "Busca CashTokens por categoría.",
 			"sourceHash": "a175d80b3b46127a",
-			"status": "machine",
+			"status": "reviewed",
 			"translator": "Claude",
-			"qaHash": "f3e9d8e670a479e5"
+			"reviewer": "George Donnelly"
 		}
 	},
 	"nft-viewer": {
 		"description": {
 			"text": "Mira tu colección de NFTs.",
 			"sourceHash": "5b2fefc96d802b72",
-			"status": "machine",
+			"status": "reviewed",
 			"translator": "Claude",
-			"qaHash": "41911caa87b7d570"
+			"reviewer": "George Donnelly"
 		}
 	},
 	"registry-cash": {
 		"description": {
 			"text": "Lista de todos los tokens fungibles de CashTokens creados.",
 			"sourceHash": "f808de996c71dcc1",
-			"status": "machine",
+			"status": "reviewed",
 			"translator": "Claude",
-			"qaHash": "de09a69e7f4ab709"
+			"reviewer": "George Donnelly"
 		}
 	},
 	"cashtoken-markets": {
 		"description": {
 			"text": "Precios, poseedores, capitalización de mercado y volumen de CashTokens",
 			"sourceHash": "721171d8777d0695",
-			"status": "machine",
+			"status": "reviewed",
 			"translator": "Claude",
-			"qaHash": "e60474cb5bb40df9"
+			"reviewer": "George Donnelly"
 		}
 	},
 	"opentokenregistry": {
 		"description": {
 			"text": "BCMR de referencia con requisitos para aparecer en la lista.",
 			"sourceHash": "960189d6ddaf5820",
-			"status": "machine",
+			"status": "reviewed",
 			"translator": "Claude",
-			"qaHash": "b548fd1b15cae06c"
+			"reviewer": "George Donnelly"
 		}
 	},
 	"tokenstork-registry": {
 		"description": {
 			"text": "Un BCMR basado en DNS.",
 			"sourceHash": "8e18f728cc14e1fa",
-			"status": "machine",
+			"status": "reviewed",
 			"translator": "Claude",
-			"qaHash": "ed35ee0f1225dddd"
+			"reviewer": "George Donnelly"
 		}
 	},
 	"paytaca-bcmr-indexer": {
 		"description": {
 			"text": "Indexador y validador de metadatos de tokens de BCMR",
 			"sourceHash": "4fa4ce17abf664f9",
-			"status": "machine",
+			"status": "reviewed",
 			"translator": "Claude",
-			"qaHash": "00e592bdc93a51cd"
+			"reviewer": "George Donnelly"
 		}
 	},
 	"bitcoincashsite-yt": {
 		"description": {
 			"text": "Transmisiones en vivo y tutoriales de BCH.",
 			"sourceHash": "a159225f63063a92",
-			"status": "machine",
+			"status": "reviewed",
 			"translator": "Claude",
-			"qaHash": "781b658d09432625"
+			"reviewer": "George Donnelly"
 		}
 	},
 	"bch-research": {
 		"description": {
 			"text": "Foro de investigación de BCH.",
 			"sourceHash": "8c00a4ccdfaa7cd5",
-			"status": "machine",
+			"status": "reviewed",
 			"translator": "Claude",
-			"qaHash": "6cd83c2a8e008bf6"
+			"reviewer": "George Donnelly"
 		}
 	},
 	"bch-node-tg": {
 		"description": {
 			"text": "Ayuda para nodos completos de BCH.",
 			"sourceHash": "956f64ba45017be6",
-			"status": "machine",
+			"status": "reviewed",
 			"translator": "Claude",
-			"qaHash": "bfb20ea9bdae022f"
+			"reviewer": "George Donnelly"
 		}
 	},
 	"panmoni-tg": {
 		"description": {
 			"text": "Ayuda general sobre BCH.",
 			"sourceHash": "db8aca0007ac6d66",
-			"status": "machine",
+			"status": "reviewed",
 			"translator": "Claude",
-			"qaHash": "8194647c109f3aba"
+			"reviewer": "George Donnelly"
 		}
 	},
 	"real-bitcoin-cash": {
 		"description": {
 			"text": "Foro comunitario de Lemmy para Bitcoin Cash",
 			"sourceHash": "1d5696928ad12cb0",
-			"status": "machine",
+			"status": "reviewed",
 			"translator": "Claude",
-			"qaHash": "c586a8c812bae6e7"
+			"reviewer": "George Donnelly"
 		}
 	},
 	"yt-mrzwets": {
 		"description": {
 			"text": "Tutoriales y noticias de CashTokens.",
 			"sourceHash": "f2090445f8626ca8",
-			"status": "machine",
+			"status": "reviewed",
 			"translator": "Claude",
-			"qaHash": "c6ffa0c3bbcbdb10"
+			"reviewer": "George Donnelly"
 		}
 	},
 	"yt-paytaca": {
 		"description": {
 			"text": "Pódcast y más.",
 			"sourceHash": "e030eef42e582d70",
-			"status": "machine",
+			"status": "reviewed",
 			"translator": "Claude",
-			"qaHash": "68e62ef6a0d8966c"
+			"reviewer": "George Donnelly"
 		}
 	},
 	"yt-generalprotocols": {
 		"description": {
 			"text": "Discusión técnica.",
 			"sourceHash": "2df3a5db8efb7b9a",
-			"status": "machine",
+			"status": "reviewed",
 			"translator": "Claude",
-			"qaHash": "bdca5a208553cb82"
+			"reviewer": "George Donnelly"
 		}
 	},
 	"casualbch": {
 		"description": {
 			"text": "Tutoriales y noticias de CashTokens.",
 			"sourceHash": "f2090445f8626ca8",
-			"status": "machine",
+			"status": "reviewed",
 			"translator": "Claude",
-			"qaHash": "c6ffa0c3bbcbdb10"
+			"reviewer": "George Donnelly"
 		}
 	},
 	"bch-podcast": {
 		"description": {
 			"text": "Conversaciones sobre BCH.",
 			"sourceHash": "b56c03790c5060d3",
-			"status": "machine",
+			"status": "reviewed",
 			"translator": "Claude",
-			"qaHash": "431d80224cdc4ae8"
+			"reviewer": "George Donnelly"
 		}
 	},
 	"yt-bchnetwork": {
 		"description": {
 			"text": "Desarrolladores de BCH en YouTube.",
 			"sourceHash": "c9c0322d066e082f",
-			"status": "machine",
+			"status": "reviewed",
 			"translator": "Claude",
-			"qaHash": "88af770a0a0f19f0"
+			"reviewer": "George Donnelly"
 		}
 	},
 	"yt-rayusesbch": {
 		"description": {
 			"text": "Canal de YouTube de BCH.",
 			"sourceHash": "185d14cb69bac5a2",
-			"status": "machine",
+			"status": "reviewed",
 			"translator": "Claude",
-			"qaHash": "3ececeef42bb837a"
+			"reviewer": "George Donnelly"
 		}
 	},
 	"bitcoincashtv": {
 		"description": {
 			"text": "Contenido en video de BCH.",
 			"sourceHash": "923e01ffc6e30cfc",
-			"status": "machine",
+			"status": "reviewed",
 			"translator": "Claude",
-			"qaHash": "1d07282a194341ed"
+			"reviewer": "George Donnelly"
 		}
 	},
 	"gp-spaces": {
 		"description": {
 			"text": "Programa de debate habitual de General Protocols sobre Bitcoin Cash",
 			"sourceHash": "c10d6c5db721aea5",
-			"status": "machine",
+			"status": "reviewed",
 			"translator": "Claude",
-			"qaHash": "823983558e59740f"
+			"reviewer": "George Donnelly"
 		}
 	},
 	"paytaca-talks": {
 		"description": {
 			"text": "Pódcast de Paytaca sobre Bitcoin Cash",
 			"sourceHash": "60a3334bc2078b69",
-			"status": "machine",
+			"status": "reviewed",
 			"translator": "Claude",
-			"qaHash": "5818c4daa3702efe"
+			"reviewer": "George Donnelly"
 		}
 	},
 	"la-economia-p2p": {
 		"description": {
 			"text": "Pódcast en español sobre economía, privacidad y BCH",
 			"sourceHash": "e59e3af62e80afe2",
-			"status": "machine",
+			"status": "reviewed",
 			"translator": "Claude",
-			"qaHash": "f1a497f10bbd7a2a"
+			"reviewer": "George Donnelly"
 		}
 	},
 	"bitcoinprotocol-org": {
 		"description": {
 			"text": "Un sitio web de BCH con un diseño renovado.",
 			"sourceHash": "24c448726580828a",
-			"status": "machine",
+			"status": "reviewed",
 			"translator": "Claude",
-			"qaHash": "2ba584633cc3ef3f"
+			"reviewer": "George Donnelly"
 		}
 	},
 	"bitcoincash-org": {
 		"description": {
 			"text": "Sitio web de BCH de una sola página.",
 			"sourceHash": "35834b79b0765d2b",
-			"status": "machine",
+			"status": "reviewed",
 			"translator": "Claude",
-			"qaHash": "1be6245f07111824"
+			"reviewer": "George Donnelly"
 		}
 	},
 	"helpme-cash": {
 		"description": {
 			"text": "Proyectos y herramientas de BCH con calendario de eventos.",
 			"sourceHash": "8493d5140cc644dc",
-			"status": "machine",
+			"status": "reviewed",
 			"translator": "Claude",
-			"qaHash": "d8141118a72bdcc2"
+			"reviewer": "George Donnelly"
 		}
 	},
 	"developers-cash": {
 		"description": {
 			"text": "Referencia para desarrolladores.",
 			"sourceHash": "b9cfd16dad08b2a3",
-			"status": "machine",
+			"status": "reviewed",
 			"translator": "Claude",
-			"qaHash": "26d316293d21f1b5"
+			"reviewer": "George Donnelly"
 		}
 	},
 	"bch-info": {
 		"description": {
 			"text": "Sitio web para desarrolladores de BCH.",
 			"sourceHash": "847808f99a86acba",
-			"status": "machine",
+			"status": "reviewed",
 			"translator": "Claude",
-			"qaHash": "d0dfbe7b6655b9d6"
+			"reviewer": "George Donnelly"
 		}
 	},
 	"awesomebch": {
 		"description": {
 			"text": "Proyectos y recursos de Bitcoin Cash.",
 			"sourceHash": "dd280c18c4bf2892",
-			"status": "machine",
+			"status": "reviewed",
 			"translator": "Claude",
-			"qaHash": "a70a8a9882dffba0"
+			"reviewer": "George Donnelly"
 		}
 	},
 	"bchfaq": {
 		"description": {
 			"text": "Preguntas frecuentes sobre BCH con respuestas completas.",
 			"sourceHash": "b6685aeec148c00b",
-			"status": "machine",
+			"status": "reviewed",
 			"translator": "Claude",
-			"qaHash": "d1ea89df34ef49b1"
+			"reviewer": "George Donnelly"
 		}
 	},
 	"bmap-app": {
 		"description": {
 			"text": "Un mapa de comercios.",
 			"sourceHash": "ffb12475551b9e6c",
-			"status": "machine",
+			"status": "reviewed",
 			"translator": "Claude",
-			"qaHash": "569a1ca614e3b238"
+			"reviewer": "George Donnelly"
 		}
 	},
 	"whybitcoincash": {
 		"description": {
 			"text": "Sitio web introductorio sobre BCH.",
 			"sourceHash": "d594137ec3fbb0b6",
-			"status": "machine",
+			"status": "reviewed",
 			"translator": "Claude",
-			"qaHash": "863bddde3cb1e3cd"
+			"reviewer": "George Donnelly"
 		}
 	},
 	"best-bch-wallets": {
 		"description": {
 			"text": "Tu guía para encontrar la billetera de BCH ideal para ti.",
 			"sourceHash": "2ba9e5e0bc1a5319",
-			"status": "machine",
+			"status": "reviewed",
 			"translator": "Claude",
-			"qaHash": "2811c7ddf2cda3cd"
+			"reviewer": "George Donnelly"
 		}
 	},
 	"accept-bch-initiative": {
 		"description": {
 			"text": "Una lista de comercios que aceptan BCH, seleccionada por la comunidad.",
 			"sourceHash": "b6d1179b03dabd71",
-			"status": "machine",
+			"status": "reviewed",
 			"translator": "Claude",
-			"qaHash": "9625a80b77ec3ff7"
+			"reviewer": "George Donnelly"
 		}
 	},
 	"btc-vs-bch-energy": {
 		"description": {
 			"text": "Compara el consumo de energía de BTC y BCH.",
 			"sourceHash": "673c2f2691413783",
-			"status": "machine",
+			"status": "reviewed",
 			"translator": "Claude",
-			"qaHash": "e7c70313b839a0b7"
+			"reviewer": "George Donnelly"
 		}
 	},
 	"elbitcoin": {
 		"description": {
 			"text": "Información sobre BCH en español.",
 			"sourceHash": "5f2c8963aa146e8e",
-			"status": "machine",
+			"status": "reviewed",
 			"translator": "Claude",
-			"qaHash": "13b8c120f789ef97"
+			"reviewer": "George Donnelly"
 		}
 	},
 	"bitcoincash-network": {
 		"description": {
 			"text": "Sitio de información sobre BCH.",
 			"sourceHash": "37b5645e86e63a25",
-			"status": "machine",
+			"status": "reviewed",
 			"translator": "Claude",
-			"qaHash": "b9f99b23c68e2702"
+			"reviewer": "George Donnelly"
 		}
 	},
 	"bchgang": {
 		"description": {
 			"text": "Comunidad de BCH.",
 			"sourceHash": "7309c2173bdea10f",
-			"status": "machine",
+			"status": "reviewed",
 			"translator": "Claude",
-			"qaHash": "4bdf98fe2d2003ef"
+			"reviewer": "George Donnelly"
 		}
 	},
 	"discover-cash": {
 		"description": {
 			"text": "Sitio de información sobre el ecosistema de Bitcoin Cash",
 			"sourceHash": "2b643013314a862c",
-			"status": "machine",
+			"status": "reviewed",
 			"translator": "Claude",
-			"qaHash": "d5b7d0de9c365b51"
+			"reviewer": "George Donnelly"
 		}
 	},
 	"keepbitcoinfree-bch-dev": {
 		"description": {
 			"text": "Lista de proyectos mantenida por KeepBitcoinFree",
 			"sourceHash": "db14f399e0b813e7",
-			"status": "machine",
+			"status": "reviewed",
 			"translator": "Claude",
-			"qaHash": "a658b17a91804be5"
+			"reviewer": "George Donnelly"
 		}
 	},
 	"eatbch": {
 		"description": {
 			"text": "Organización benéfica que alimenta a comunidades con donaciones en BCH",
 			"sourceHash": "dffc99a804a848c5",
-			"status": "machine",
+			"status": "reviewed",
 			"translator": "Claude",
-			"qaHash": "e89b05eb2f132945"
+			"reviewer": "George Donnelly"
 		}
 	},
 	"whitepaper": {
 		"description": {
 			"text": "por Satoshi Nakamoto",
 			"sourceHash": "bff4881b16127695",
-			"status": "machine",
+			"status": "reviewed",
 			"translator": "Claude",
-			"qaHash": "c2398c0ead33ee9e"
+			"reviewer": "George Donnelly"
 		}
 	},
 	"letter-from-ceo": {
 		"description": {
 			"text": "por Rick Falkvinge",
 			"sourceHash": "44eb9ed14e9043a6",
-			"status": "machine",
+			"status": "reviewed",
 			"translator": "Claude",
-			"qaHash": "53cae10c9780efe4"
+			"reviewer": "George Donnelly"
 		}
 	},
 	"whitepaper-visualized": {
 		"description": {
 			"text": "El whitepaper en formato de cómic.",
 			"sourceHash": "cdbaa0fddde0591f",
-			"status": "machine",
+			"status": "reviewed",
 			"translator": "Claude",
-			"qaHash": "4e557f0271b0688e"
+			"reviewer": "George Donnelly"
 		}
 	},
 	"coin-dance": {
 		"description": {
 			"text": "Información de la blockchain de BCH.",
 			"sourceHash": "4f7750daebf78466",
-			"status": "machine",
+			"status": "reviewed",
 			"translator": "Claude",
-			"qaHash": "31c624ada1b95122"
+			"reviewer": "George Donnelly"
 		}
 	},
 	"bitcoinfees-cash": {
 		"description": {
 			"text": "Compara las comisiones por transacción de BTC y BCH en tiempo real.",
 			"sourceHash": "7b9e36ca43bc022e",
-			"status": "machine",
+			"status": "reviewed",
 			"translator": "Claude",
-			"qaHash": "ef8aebf0c6c678a2"
+			"reviewer": "George Donnelly"
 		}
 	},
 	"fork-lol": {
 		"description": {
 			"text": "Información de la blockchain de BCH.",
 			"sourceHash": "4f7750daebf78466",
-			"status": "machine",
+			"status": "reviewed",
 			"translator": "Claude",
-			"qaHash": "31c624ada1b95122"
+			"reviewer": "George Donnelly"
 		}
 	},
 	"jochen-hoenicke": {
 		"description": {
 			"text": "Datos de la mempool de BCH.",
 			"sourceHash": "c4860dc29c5d696f",
-			"status": "machine",
+			"status": "reviewed",
 			"translator": "Claude",
-			"qaHash": "39f7d40d9b2b5881"
+			"reviewer": "George Donnelly"
 		}
 	},
 	"cashfusion-stats": {
 		"description": {
 			"text": "Datos de uso de CashFusion.",
 			"sourceHash": "3c5636d011c619ca",
-			"status": "machine",
+			"status": "reviewed",
 			"translator": "Claude",
-			"qaHash": "1443cd2b694168b7"
+			"reviewer": "George Donnelly"
 		}
 	},
 	"cashnodes": {
 		"description": {
 			"text": "Muestra los nodos completos de BCH activos en este momento.",
 			"sourceHash": "e09f4606d6613721",
-			"status": "machine",
+			"status": "reviewed",
 			"translator": "Claude",
-			"qaHash": "74ee07df2ebe85c8"
+			"reviewer": "George Donnelly"
 		}
 	},
 	"bch-gg": {
 		"description": {
 			"text": "Crea enlaces cortos de BCH.",
 			"sourceHash": "86dfa055fdfd8f39",
-			"status": "machine",
+			"status": "reviewed",
 			"translator": "Claude",
-			"qaHash": "5aa9cbe59b306c77"
+			"reviewer": "George Donnelly"
 		}
 	},
 	"tx-watch": {
 		"description": {
 			"text": "Visualizador en vivo de transacciones y bloques de BTC frente a BCH",
 			"sourceHash": "80f69da0f1981793",
-			"status": "machine",
+			"status": "reviewed",
 			"translator": "Claude",
-			"qaHash": "ac2612a690949154"
+			"reviewer": "George Donnelly"
 		}
 	},
 	"bch-notary": {
 		"description": {
 			"text": "Notariza documentos en la blockchain de Bitcoin Cash",
 			"sourceHash": "89fd192d697e4b29",
-			"status": "machine",
+			"status": "reviewed",
 			"translator": "Claude",
-			"qaHash": "8fd37be06789d0c5"
+			"reviewer": "George Donnelly"
 		}
 	},
 	"bitcoin-com-tools": {
 		"description": {
 			"text": "Colección de utilidades gratuitas de Bitcoin y BCH",
 			"sourceHash": "5342d36850f625b3",
-			"status": "machine",
+			"status": "reviewed",
 			"translator": "Claude",
-			"qaHash": "a01a48b5f8736bec"
+			"reviewer": "George Donnelly"
 		}
 	},
 	"flipstarters-overview": {
 		"description": {
 			"text": "Índice de campañas de Flipstarter activas y pasadas",
 			"sourceHash": "bcd83f418076125d",
-			"status": "machine",
+			"status": "reviewed",
 			"translator": "Claude",
-			"qaHash": "54df3a8fb5956609"
+			"reviewer": "George Donnelly"
 		}
 	},
 	"coinrabbit": {
 		"description": {
 			"text": "Préstamos cripto con garantía en BCH.",
 			"sourceHash": "8059b4e950d2e603",
-			"status": "machine",
+			"status": "reviewed",
 			"translator": "Claude",
-			"qaHash": "51ca67a8064ef181"
+			"reviewer": "George Donnelly"
 		}
 	},
 	"nexo": {
 		"description": {
 			"text": "Préstamos cripto con BCH como garantía.",
 			"sourceHash": "d4b62851ee351d38",
-			"status": "machine",
+			"status": "reviewed",
 			"translator": "Claude",
-			"qaHash": "f2a3e9650c8c1925"
+			"reviewer": "George Donnelly"
 		}
 	},
 	"bitcoin-india": {
 		"description": {
 			"text": "Remesas y servicios de BCH en India.",
 			"sourceHash": "372be4d1b9c2b7cd",
-			"status": "machine",
+			"status": "reviewed",
 			"translator": "Claude",
-			"qaHash": "11cc8de41e1162ed"
+			"reviewer": "George Donnelly"
 		}
 	},
 	"asicseer-pool": {
 		"description": {
 			"text": "Software rápido en C para pools de minería de Bitcoin Cash",
 			"sourceHash": "059c7ad89415365d",
-			"status": "machine",
+			"status": "reviewed",
 			"translator": "Claude",
-			"qaHash": "4e9ac42362a8087c"
+			"reviewer": "George Donnelly"
 		}
 	}
 }

@@ -58,9 +58,9 @@ sources:
     url: https://www.prnewswire.com/news-releases/cme-group-to-expand-crypto-derivatives-suite-with-bitcoin-cash-and-uniswap-futures-302886066.html
 translation:
   sourceHash: ff45759b2b5462df
-  status: machine
+  status: reviewed
   translator: Claude
-  qaHash: b29aee7e2325e761
+  reviewer: George Donnelly
 ---
 
 Publicamos esta página porque un sitio que solo enumera fortalezas es un folleto. Bitcoin Cash funciona como dinero y ejecuta contratos reales. También tiene debilidades. Aquí están, con fuentes. Cuando algo reduce un riesgo, lo decimos. Cuando nada lo reduce, también lo decimos.

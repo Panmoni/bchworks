@@ -38,6 +38,6 @@ graveyard:
   text: Proyectos que cerraron o abandonaron BCH. Los conservamos para que los enlaces antiguos tengan sentido. No les envíes dinero.
 translation:
   sourceHash: 4f0bb557a507775f
-  status: machine
+  status: reviewed
   translator: Claude
-  qaHash: 04938bc67b72fbf3
+  reviewer: George Donnelly

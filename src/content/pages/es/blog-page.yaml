@@ -7,6 +7,6 @@ headline:
   subtitle: Descubre qué está construyendo Bitcoin Cash
 translation:
   sourceHash: 8c1b3f09c54a45f0
-  status: machine
+  status: reviewed
   translator: Claude
-  qaHash: a7f0058f8e57e3c0
+  reviewer: George Donnelly

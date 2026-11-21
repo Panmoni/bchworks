@@ -262,6 +262,6 @@ contact:
   wallet: Conseguir una billetera
 translation:
   sourceHash: 8baa10fe94b2676a
-  status: machine
+  status: reviewed
   translator: Claude
-  qaHash: 02025bb1d74ccf4a
+  reviewer: George Donnelly

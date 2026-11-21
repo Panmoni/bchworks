@@ -48,9 +48,9 @@ sources:
     url: https://www.coinsbee.com/en/buy-gift-cards-with-bitcoin-cash/
 translation:
   sourceHash: 1e6fdc3d39dc132d
-  status: machine
+  status: reviewed
   translator: Claude
-  qaHash: 0e6934b21abf5c19
+  reviewer: George Donnelly
 ---
 
 Filipinas es el lugar donde Bitcoin Cash más se parece a dinero de uso diario en 2026. Eso se debe sobre todo a **Paytaca**, una billetera de BCH y red de comercios creada en Tacloban, Leyte. Puedes comprar BCH con pesos en apps reguladas, intercambiarlo entre pares con GCash y gastarlo en tiendas reales de las Bisayas. Esta guía cubre todo eso, verificado el 26 de septiembre de 2026.

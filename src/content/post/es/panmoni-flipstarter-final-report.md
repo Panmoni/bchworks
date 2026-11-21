@@ -10,9 +10,9 @@ tags:
   - delivery
 translation:
   sourceHash: e15b963222fde016
-  status: machine
+  status: reviewed
   translator: Claude
-  qaHash: 493cced4dbf25b0e
+  reviewer: George Donnelly
 ---
 
 ## Introducción

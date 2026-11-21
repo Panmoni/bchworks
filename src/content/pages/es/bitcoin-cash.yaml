@@ -175,6 +175,6 @@ cta:
   build: Empezar a desarrollar
 translation:
   sourceHash: 1292e53fa2b5d8ef
-  status: machine
+  status: reviewed
   translator: Claude
-  qaHash: 3716b3d8082006c1
+  reviewer: George Donnelly

@@ -7,6 +7,6 @@ hero:
 block: ' · bloque {height}'
 translation:
   sourceHash: 8cb041eb38dfc579
-  status: machine
+  status: reviewed
   translator: Claude
-  qaHash: 1bf923759bb1cb64
+  reviewer: George Donnelly

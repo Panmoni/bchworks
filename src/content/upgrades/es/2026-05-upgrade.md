@@ -54,7 +54,7 @@ Se activaron cuatro CHIPs, todos mantenidos por Jason Dreyzehner.
 ### Bucles (CHIP-2021-05)
 
 [Loops](/chips/chip-2021-05-loops) añade [`OP_BEGIN`](/opcodes/op_begin) (`0x65`) y [`OP_UNTIL`](/opcodes/op_until)
-(`0x66`), la construcción de bucle que usan la mayoría de los lenguajes tipo Forth. Cuando `OP_UNTIL` extrae un cero, la ejecución vuelve a
+(`0x66`), la construcción de bucle que usan la mayoría de los lenguajes tipo Forth. Cuando `OP_UNTIL` extrae un cero, la ejecución vuelve al punto
 justo después del `OP_BEGIN` correspondiente; cualquier otro valor termina el bucle. Cada iteración se cobra según los [límites de la VM de 2025](/upgrades/2025-05-vm-limits-bigint), así que los bucles no pueden disparar
 el costo de validación.
 

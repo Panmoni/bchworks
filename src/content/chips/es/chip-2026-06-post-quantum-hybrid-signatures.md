@@ -17,9 +17,9 @@ sources:
     url: https://gitlab.com/mainnet-pat/chip-2026-06-generic-sigs
 translation:
   sourceHash: 6192ed54290b2e91
-  status: machine
+  status: reviewed
   translator: Claude
-  qaHash: 6695b921f0e277f8
+  reviewer: George Donnelly
 ---
 
 ## Resumen

@@ -1,6 +1,6 @@
 eyebrow: <a href="/state-of-bch">El estado de BCH</a> · {month}
 translation:
   sourceHash: 2579e7346c5130e3
-  status: machine
+  status: reviewed
   translator: Claude
-  qaHash: cae115446631a90b
+  reviewer: George Donnelly

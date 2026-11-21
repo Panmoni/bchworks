@@ -3,9 +3,9 @@ description: 'Cómo maneja BCH Works (bchworks.com) los datos de los visitantes:
 title: Política de privacidad
 translation:
   sourceHash: 22d7699361fb30d9
-  status: machine
+  status: reviewed
   translator: Claude
-  qaHash: 7eb5930535358456
+  reviewer: George Donnelly
 ---
 
 _Última actualización_: 30 de septiembre de 2026

@@ -64,8 +64,8 @@ En simulaciones frente a otros candidatos, ASERT obtuvo la mejor puntuación en 
 
 ## La división
 
-Bitcoin ABC, entonces uno de los equipos de nodos, publicó un conjunto de reglas distinto para esta fecha. Exigía que el 8 % de cada recompensa
-por bloque fuera a una dirección que controlaba (la “regla de la coinbase”). Bitcoin Cash Node y la mayoría de los mineros la rechazaron. Más del 80 %
+Bitcoin ABC, entonces uno de los equipos de nodos, publicó un conjunto de reglas distinto para esta fecha. Exigía que el 8 % de cada recompensa
+por bloque fuera a una dirección que controlaba (la “regla de la coinbase”). Bitcoin Cash Node y la mayoría de los mineros la rechazaron. Más del 80 %
 de los mineros había estado señalizando apoyo a BCHN antes de la división, y la cadena de ABC casi no obtuvo poder de hash. La cadena de ABC cotizó
 como BCHA y cambió su nombre a eCash (XEC) el 1 de julio de 2021. La cadena de BCH es la que sigue las reglas de esta página.
 

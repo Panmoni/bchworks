@@ -88,12 +88,12 @@ La recogida de declaraciones comenzó el 15 de septiembre de 2026. Posiciones vi
 - **A favor:** The Bitcoin Cash Podcast, Selene Wallet, BCH-1, el CEO de Paytaca (que cambió de “en contra por ahora”
   el 26 de septiembre), Maxbit, Jonathan Silverblood, Kallisti.cash y otros.
 - **Neutral o abstención:** General Protocols se abstuvo “hasta que se haya hecho una revisión suficiente de los costos y riesgos de la implementación” (traducción nuestra). Un desarrollador de OPTN Wallet, a título personal, respalda
-  CHIP, pero es neutral sobre la activación hasta que el código esté listo.
+  el CHIP, pero es neutral sobre la activación hasta que el código esté listo.
 - **En contra:** Calin Culianu, desarrollador principal de Bitcoin Cash Node, está en contra “por ahora”. Sus razones: el código
   no está listo y puede tener errores, y dividir los bloques actuales en 10 implica menos transacciones y menos trabajo por bloque.
   Flowee está en contra. Algunos usuarios se oponen con el argumento de “si no está roto, no lo arregles”.
 
-La implementación de Bitcoin Cash Node está en una rama en desarrollo. El autor de CHIP dice que está casi terminada, a falta del
+La implementación de Bitcoin Cash Node está en una rama en desarrollo. El autor del CHIP dice que está casi terminada, a falta del
 manejo del locktime y de las pruebas. La preparación de los nodos es la razón más común que da la gente para esperar.
 
 **Qué significa esto:** los bloques de 1 minuto podrían fijarse este noviembre o pasar al ciclo de 2028. Todavía no hagas planes en función de ninguno

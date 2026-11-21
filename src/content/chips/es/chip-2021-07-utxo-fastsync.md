@@ -16,9 +16,9 @@ sources:
     url: https://bitcoincashresearch.org/t/2027-protocol-upgrade-ideas/1719
 translation:
   sourceHash: fd85239fbc8f8b42
-  status: machine
+  status: reviewed
   translator: Claude
-  qaHash: 5cd9a62ff187ed27
+  reviewer: George Donnelly
 ---
 
 ## Resumen

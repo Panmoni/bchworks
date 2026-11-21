@@ -11,9 +11,9 @@ tags:
   - adoption
 translation:
   sourceHash: 6f541f8896aca4c4
-  status: machine
+  status: reviewed
   translator: Claude
-  qaHash: 2b8935275aad7dd5
+  reviewer: George Donnelly
 ---
 
 ## Un libro de fotos para el equipo detrás del trabajo

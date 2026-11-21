@@ -65,7 +65,7 @@ solo evitaba tener que definir el comportamiento ante desbordamientos.
 
 ## Estado actual
 
-Se activó el 15 de mayo de 2022 junto con [Native Introspection](/chips/chip-2021-02-native-introspection-opcodes). Los hitos del CHIP
+Se activó el 15 de mayo de 2022 junto con [Introspección nativa](/chips/chip-2021-02-native-introspection-opcodes). Los hitos del CHIP
 registran la aceptación por parte de Bitcoin Unlimited, Bitcoin Cash Node, Knuth, Bitcoin Verde y Bitauth. La declaración de General
 Protocols dice que sortear el límite de 32 bits le había costado “una gran cantidad de tiempo y dinero” (traducción nuestra).
 

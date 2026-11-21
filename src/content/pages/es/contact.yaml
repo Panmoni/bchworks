@@ -25,6 +25,6 @@ send:
       description: ¿Estás creando algo sobre Bitcoin Cash? Envíanos el enlace y una línea sobre lo que hace, o agrégalo tú mismo al directorio en GitHub. Incluimos proyectos que funcionan y que favorecen la autocustodia (tú guardas tus propias claves).
 translation:
   sourceHash: d019f692bd4b6923
-  status: machine
+  status: reviewed
   translator: Claude
-  qaHash: 1bbc67a8251c90d2
+  reviewer: George Donnelly

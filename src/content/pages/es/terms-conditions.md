@@ -3,9 +3,9 @@ description: Términos de uso de BCH Works (bchworks.com), un sitio independient
 title: Términos de uso
 translation:
   sourceHash: 18372ed816627044
-  status: machine
+  status: reviewed
   translator: Claude
-  qaHash: 0eac75e6849f4353
+  reviewer: George Donnelly
 ---
 
 _Última actualización_: 26 de septiembre de 2026

@@ -12,9 +12,9 @@ metadata:
   title: Acuña tus primeros CashTokens en Bitcoin Cash
 translation:
   sourceHash: 7d96452f78467c4e
-  status: machine
+  status: reviewed
   translator: Claude
-  qaHash: 5a65abb20777e57d
+  reviewer: George Donnelly
 ---
 
 ## Índice

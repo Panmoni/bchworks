@@ -19,9 +19,9 @@ sources:
     url: https://gitlab.com/0353F40E/sighash
 translation:
   sourceHash: e7614c2a7db0935b
-  status: machine
+  status: reviewed
   translator: Claude
-  qaHash: 1e0900a470fc9ffe
+  reviewer: George Donnelly
 ---
 
 ## Resumen

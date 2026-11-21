@@ -98,7 +98,7 @@ Las comisiones, la tasa de hash (hashrate) y el número de transacciones cambian
 
 ## Dónde gana Bitcoin
 
-**Presupuesto de seguridad y tasa de hash.** Ambas cadenas usan el mismo hardware SHA-256, y Bitcoin tiene, con diferencia, la mayor parte. Una tasa de hash mayor hace que un ataque del 51 % sea mucho más caro. Para liquidaciones grandes, las confirmaciones de BTC tienen más peso. Compara las cifras en vivo en el panel.
+**Presupuesto de seguridad y tasa de hash.** Ambas cadenas usan el mismo hardware SHA-256, y Bitcoin tiene, con diferencia, la mayor parte. Una tasa de hash mayor hace que un ataque del 51 % sea mucho más caro. Para liquidaciones grandes, las confirmaciones de BTC tienen más peso. Compara las cifras en vivo en el panel.
 
 **Liquidez y soporte en exchanges.** Bitcoin tiene los mercados más profundos del mundo cripto y un soporte casi universal en los exchanges. La liquidez de BCH es real, pero mucho menor.
 

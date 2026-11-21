@@ -12,9 +12,9 @@ metadata:
   title: 'TokenStork Flipstarter: herramientas para CashTokens'
 translation:
   sourceHash: ab7d0a146cae0bb5
-  status: machine
+  status: reviewed
   translator: Claude
-  qaHash: 56caad1e4302694c
+  reviewer: George Donnelly
 ---
 
 ## Herramientas innovadoras para hacer crecer el ecosistema de CashTokens

@@ -56,9 +56,9 @@ sources:
     url: https://cashfusion.org/
 translation:
   sourceHash: 1bcf41a085ff2fea
-  status: machine
+  status: reviewed
   translator: Claude
-  qaHash: 37a0868650e816ad
+  reviewer: George Donnelly
 ---
 
 Litecoin y Bitcoin Cash son dos de los intentos más antiguos de hacer que el dinero al estilo de Bitcoin sea más barato y rápido de usar. Tomaron caminos distintos.

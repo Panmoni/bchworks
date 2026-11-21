@@ -9,6 +9,6 @@ reports:
   empty: El primer informe está en camino.
 translation:
   sourceHash: 1dc8d3cf4113e15c
-  status: machine
+  status: reviewed
   translator: Claude
-  qaHash: 69536ad9accf0278
+  reviewer: George Donnelly

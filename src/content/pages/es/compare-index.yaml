@@ -7,6 +7,6 @@ hero:
 card: BCH frente a {ticker}
 translation:
   sourceHash: 074442d6b4815c70
-  status: machine
+  status: reviewed
   translator: Claude
-  qaHash: f5d32268abdef564
+  reviewer: George Donnelly

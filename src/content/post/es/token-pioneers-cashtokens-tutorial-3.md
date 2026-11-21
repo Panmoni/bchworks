@@ -13,9 +13,9 @@ metadata:
   title: 'BCMR: metadatos CashTokens en Bitcoin Cash'
 translation:
   sourceHash: 5a133b792841d683
-  status: machine
+  status: reviewed
   translator: Claude
-  qaHash: afbbc6d78a0bd695
+  reviewer: George Donnelly
 ---
 
 ## Índice

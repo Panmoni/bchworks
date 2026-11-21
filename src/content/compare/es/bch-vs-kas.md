@@ -52,9 +52,9 @@ sources:
     url: https://bitcoincashresearch.org/t/chip-2025-03-faster-blocks-for-bitcoin-cash/1513/189
 translation:
   sourceHash: 577eb24e2581f24f
-  status: machine
+  status: reviewed
   translator: Claude
-  qaHash: 8cf2a52996893b19
+  reviewer: George Donnelly
 ---
 
 Bitcoin Cash y Kaspa son cadenas de prueba de trabajo basadas en UTXO. No comparten historia. BCH desciende de Bitcoin y mantiene la cadena de bloques de 10 minutos de Bitcoin. Kaspa empezó desde cero con una estructura diferente: una blockDAG que acepta muchos bloques a la vez.

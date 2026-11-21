@@ -74,7 +74,7 @@ translation:
 
 ## Resumen
 
-“El CHIP propone reducir el tiempo de bloque objetivo de Bitcoin Cash de 10 minutos a 1 minuto para mejorar la velocidad de las transacciones, la fiabilidad y la experiencia de usuario” (traducción nuestra). La versión del autor en una sola frase: los bloques llegan 10 veces más a menudo, y la recompensa, la dificultad y el límite de tamaño por bloque se reducen cada uno a 1/10, “para que la emisión de monedas, la capacidad de procesamiento, ABLA, los bloqueos temporales y el DAA conserven su significado” (traducción nuestra).
+“El CHIP propone reducir el tiempo de bloque objetivo de Bitcoin Cash de 10 minutos a 1 minuto para mejorar la velocidad de las transacciones, la fiabilidad y la experiencia de usuario” (traducción nuestra). La versión del autor en una sola frase: los bloques llegan 10 veces más a menudo, y la recompensa por bloque, la dificultad y el límite de tamaño de bloque se reducen cada uno a 1/10, “para que la emisión de monedas, la capacidad de procesamiento, ABLA, los bloqueos temporales y el DAA conserven su significado” (traducción nuestra).
 
 Es la principal candidata para la [actualización de mayo de 2027](/upgrades/2027-05-upgrade). **No está fijada.**
 

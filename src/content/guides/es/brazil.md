@@ -42,9 +42,9 @@ sources:
     url: https://www.paytaca.com
 translation:
   sourceHash: 5ef09c4dd491d029
-  status: machine
+  status: reviewed
   translator: Claude
-  qaHash: 6d46afa6bdc11be9
+  reviewer: George Donnelly
 ---
 
 Brasil es el país más fácil de esta serie para comprar Bitcoin Cash con moneda local. Dos exchanges nacionales tienen par directo **BCH/BRL**, y el P2P de Paytaca acepta Pix. La otra cara de la moneda: 2026 trajo reglas nuevas del Banco Central y de la Receita Federal. Esta guía cubre las dos cosas. Verificamos todo el 26 de septiembre de 2026.

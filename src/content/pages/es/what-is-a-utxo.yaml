@@ -62,6 +62,6 @@ faq:
 sources: La máquina lee la cadena en vivo mediante el protocolo Electrum Cash desde servidores públicos de <a class="underline" href="https://github.com/cculianu/Fulcrum" target="_blank" rel="noopener noreferrer">Fulcrum</a>. Solo les envía identificadores de transacción, nada más. Los gráficos del conjunto UTXO provienen de nuestro propio <a class="underline" href="https://bitcoincashnode.org" target="_blank" rel="noopener noreferrer">Bitcoin Cash Node</a>.
 translation:
   sourceHash: 377ca9ad6886dd70
-  status: machine
+  status: reviewed
   translator: Claude
-  qaHash: 6559005a921ca6d5
+  reviewer: George Donnelly

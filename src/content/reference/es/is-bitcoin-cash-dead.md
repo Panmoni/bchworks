@@ -63,7 +63,7 @@ Respuesta corta: no. Bitcoin Cash sigue produciendo bloques, lanza una actualiza
 
 ## Por qué la gente lo pregunta
 
-La pregunta tiene historia. BCH se separó de Bitcoin el 1 de agosto de 2017 y alcanzó su máximo de 4355,62 US$ en diciembre de ese año. Para agosto de 2018 había caído cerca de un 88 %. Ese mismo año se separó Bitcoin SV. En noviembre de 2020 la cadena volvió a dividirse, cuando el equipo de Bitcoin ABC se fue y más tarde se convirtió en eCash. Algunas plataformas se retiraron entonces. OKCoin dejó de listar BCH y BSV en febrero de 2021, alegando que los usuarios nuevos los confundían con Bitcoin. Coinbase Wallet retiró BCH en enero de 2023.
+La pregunta tiene historia. BCH se separó de Bitcoin el 1 de agosto de 2017 y alcanzó su máximo de 4355,62 US$ en diciembre de ese año. Para agosto de 2018 había caído cerca de un 88 %. Ese mismo año se separó Bitcoin SV. En noviembre de 2020 la cadena volvió a dividirse, cuando el equipo de Bitcoin ABC se fue y más tarde se convirtió en eCash. Algunas plataformas se retiraron entonces. OKCoin dejó de listar BCH y BSV en febrero de 2021, alegando que los usuarios nuevos los confundían con Bitcoin. Coinbase Wallet retiró BCH en enero de 2023.
 
 Cada uno de estos hechos alimentó la pregunta “¿está muerto BCH?”. Ninguno detuvo la cadena. La pregunta justa es cómo está la red ahora, no en 2018.
 
@@ -112,10 +112,10 @@ No estar muerto no es lo mismo que prosperar. Esto es en lo que aciertan los esc
 
 - **El uso es reducido.** Las transacciones y los depósitos en DeFi son mínimos frente a Ethereum o Solana. Consulta el panel en vivo.
 - **La liquidez es escasa**, y no hay USDT ni USDC en BCH.
-- **La tasa de hash (hashrate) es una parte pequeña** del total de SHA-256, lo que plantea dudas sobre ataques del 51 %.
+- **La tasa de hash (hashrate) es una parte pequeña** del total de SHA-256, lo que plantea dudas sobre ataques del 51 %.
 - **Los bloques tardan 10 minutos**, y todavía no hay acuerdo sobre bloques más rápidos.
 - **El acceso se redujo en algunos lugares.** Coinbase Wallet retiró el soporte para BCH en enero de 2023, alegando poco uso. El exchange Coinbase lo mantuvo.
-- **El precio oscila mucho.** BCH cayó cerca de un 88 % desde su máximo de diciembre de 2017 hasta agosto de 2018.
+- **El precio oscila mucho.** BCH cayó cerca de un 88 % desde su máximo de diciembre de 2017 hasta agosto de 2018.
 - **Historial de bifurcaciones.** BCH se dividió en 2018 (Bitcoin SV) y en 2020 (eCash).
 
 Tratamos cada punto, con fuentes y formas de mitigarlo, en la página [Riesgos, sin rodeos](/risks).

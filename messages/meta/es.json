@@ -1,1628 +1,1628 @@
 {
 	"translation_notice_machine": {
 		"sourceHash": "ebcad51bac007e92",
-		"status": "machine",
+		"status": "reviewed",
 		"translator": "Claude (claude-opus-5-5)",
-		"qaHash": "873d6743dade24e6"
+		"reviewer": "George Donnelly"
 	},
 	"translation_notice_stale": {
 		"sourceHash": "02ea69b73bf928b6",
-		"status": "machine",
+		"status": "reviewed",
 		"translator": "Claude (claude-opus-5-5)",
-		"qaHash": "2e08e716260aad48"
+		"reviewer": "George Donnelly"
 	},
 	"translation_credit": {
 		"sourceHash": "86306016a2ed861a",
-		"status": "machine",
+		"status": "reviewed",
 		"translator": "Claude (claude-opus-5-5)",
-		"qaHash": "87759441611919e2"
+		"reviewer": "George Donnelly"
 	},
 	"utxo_amount_bch": {
 		"sourceHash": "d499d9e3119d20da",
-		"status": "machine",
+		"status": "reviewed",
 		"translator": "Claude",
-		"qaHash": "2b8f6e0d7fd9a77d"
+		"reviewer": "George Donnelly"
 	},
 	"utxo_amount_sats": {
 		"sourceHash": "9b94547a575e0b82",
-		"status": "machine",
+		"status": "reviewed",
 		"translator": "Claude",
-		"qaHash": "1ea2e562d804aa28"
+		"reviewer": "George Donnelly"
 	},
 	"utxo_date_mempool": {
 		"sourceHash": "90856e579993615a",
-		"status": "machine",
+		"status": "reviewed",
 		"translator": "Claude",
-		"qaHash": "426e036993e6951e"
+		"reviewer": "George Donnelly"
 	},
 	"utxo_span_under_two_minutes": {
 		"sourceHash": "b1a43e89bb13baa0",
-		"status": "machine",
+		"status": "reviewed",
 		"translator": "Claude",
-		"qaHash": "670ce89ee824ad6e"
+		"reviewer": "George Donnelly"
 	},
 	"utxo_span_minutes": {
 		"sourceHash": "bde421368e9cfabe",
-		"status": "machine",
+		"status": "reviewed",
 		"translator": "Claude",
-		"qaHash": "784aa34a5552d250"
+		"reviewer": "George Donnelly"
 	},
 	"utxo_span_hours": {
 		"sourceHash": "efd01f4ad5f9f433",
-		"status": "machine",
+		"status": "reviewed",
 		"translator": "Claude",
-		"qaHash": "7ea22851c76f99d6"
+		"reviewer": "George Donnelly"
 	},
 	"utxo_span_days": {
 		"sourceHash": "7f9e36dda4838688",
-		"status": "machine",
+		"status": "reviewed",
 		"translator": "Claude",
-		"qaHash": "1770416981bbae1c"
+		"reviewer": "George Donnelly"
 	},
 	"utxo_span_months": {
 		"sourceHash": "9a9017956f9156b0",
-		"status": "machine",
+		"status": "reviewed",
 		"translator": "Claude",
-		"qaHash": "b1406e29b1dab1fd"
+		"reviewer": "George Donnelly"
 	},
 	"utxo_span_years": {
 		"sourceHash": "76e37fdb2481a589",
-		"status": "machine",
+		"status": "reviewed",
 		"translator": "Claude",
-		"qaHash": "4b0a80633fd2054a"
+		"reviewer": "George Donnelly"
 	},
 	"utxo_span_years_months": {
 		"sourceHash": "0e16ec0b96f3252b",
-		"status": "machine",
+		"status": "reviewed",
 		"translator": "Claude",
-		"qaHash": "5d51db15e1d90e4c"
+		"reviewer": "George Donnelly"
 	},
 	"utxo_headline_mempool": {
 		"sourceHash": "53ebe8c50dc09afe",
-		"status": "machine",
+		"status": "reviewed",
 		"translator": "Claude",
-		"qaHash": "d69e09a4496fb4a2"
+		"reviewer": "George Donnelly"
 	},
 	"utxo_headline_woken": {
 		"sourceHash": "e92a8ba19dffc4d4",
-		"status": "machine",
+		"status": "reviewed",
 		"translator": "Claude",
-		"qaHash": "9ba32350314fe3a1"
+		"reviewer": "George Donnelly"
 	},
 	"utxo_headline_created_before": {
 		"sourceHash": "61eb00b3ffdfd674",
-		"status": "machine",
+		"status": "reviewed",
 		"translator": "Claude",
-		"qaHash": "659d2c245c7f5b5d"
+		"reviewer": "George Donnelly"
 	},
 	"utxo_headline_dormant_unspent": {
 		"sourceHash": "2ede1581dc24c17a",
-		"status": "machine",
+		"status": "reviewed",
 		"translator": "Claude",
-		"qaHash": "a028f88bc2c3118e"
+		"reviewer": "George Donnelly"
 	},
 	"utxo_headline_unspent": {
 		"sourceHash": "b3214f34fa99ce98",
-		"status": "machine",
+		"status": "reviewed",
 		"translator": "Claude",
-		"qaHash": "44d85fa3de9f5b65"
+		"reviewer": "George Donnelly"
 	},
 	"utxo_headline_spent": {
 		"sourceHash": "d69311eeddddb53b",
-		"status": "machine",
+		"status": "reviewed",
 		"translator": "Claude",
-		"qaHash": "c9cfb3a54866edfd"
+		"reviewer": "George Donnelly"
 	},
 	"utxo_headline_unspendable": {
 		"sourceHash": "6af32102812f49fd",
-		"status": "machine",
+		"status": "reviewed",
 		"translator": "Claude",
-		"qaHash": "5c75f0a40c3a4390"
+		"reviewer": "George Donnelly"
 	},
 	"utxo_story_created_on_in_block": {
 		"sourceHash": "1a3b6ae8fcb96a3a",
-		"status": "machine",
+		"status": "reviewed",
 		"translator": "Claude",
-		"qaHash": "12cb32e73419f7a5"
+		"reviewer": "George Donnelly"
 	},
 	"utxo_story_created_on": {
 		"sourceHash": "5dfa52d34ea2b955",
-		"status": "machine",
+		"status": "reviewed",
 		"translator": "Claude",
-		"qaHash": "b068ed64fcc1f7f2"
+		"reviewer": "George Donnelly"
 	},
 	"utxo_story_created_moments_in_block": {
 		"sourceHash": "557f466421ab195c",
-		"status": "machine",
+		"status": "reviewed",
 		"translator": "Claude",
-		"qaHash": "ff251f016e28c1c8"
+		"reviewer": "George Donnelly"
 	},
 	"utxo_story_created_moments": {
 		"sourceHash": "49045d8adeca66f2",
-		"status": "machine",
+		"status": "reviewed",
 		"translator": "Claude",
-		"qaHash": "a371dfc41052cd1f"
+		"reviewer": "George Donnelly"
 	},
 	"utxo_story_unmoved": {
 		"sourceHash": "3a4d2a05746e2197",
-		"status": "machine",
+		"status": "reviewed",
 		"translator": "Claude",
-		"qaHash": "61d7121bd3b5b29e"
+		"reviewer": "George Donnelly"
 	},
 	"utxo_story_unspent_today": {
 		"sourceHash": "de3f8cb7e6ce8d30",
-		"status": "machine",
+		"status": "reviewed",
 		"translator": "Claude",
-		"qaHash": "f13aeba4bc0bf1a3"
+		"reviewer": "George Donnelly"
 	},
 	"utxo_story_woken": {
 		"sourceHash": "ba8e78614475ebfe",
-		"status": "machine",
+		"status": "reviewed",
 		"translator": "Claude",
-		"qaHash": "334db819f2ed1928"
+		"reviewer": "George Donnelly"
 	},
 	"utxo_story_spent_later": {
 		"sourceHash": "08ada58e446dbea3",
-		"status": "machine",
+		"status": "reviewed",
 		"translator": "Claude",
-		"qaHash": "4fe1b838ce6de9f8"
+		"reviewer": "George Donnelly"
 	},
 	"utxo_story_coinbase": {
 		"sourceHash": "a0055fd78bc41cb8",
-		"status": "machine",
+		"status": "reviewed",
 		"translator": "Claude",
-		"qaHash": "e9d24285b62f18a1"
+		"reviewer": "George Donnelly"
 	},
 	"utxo_story_further_back": {
 		"sourceHash": "6ce79ccda93b1f23",
-		"status": "machine",
+		"status": "reviewed",
 		"translator": "Claude",
-		"qaHash": "684bdc1f3cfe69c3"
+		"reviewer": "George Donnelly"
 	},
 	"utxo_story_quick_same_day": {
 		"sourceHash": "afefdaaff59c4b8d",
-		"status": "machine",
+		"status": "reviewed",
 		"translator": "Claude",
-		"qaHash": "8563cc5f1f90ce5b"
+		"reviewer": "George Donnelly"
 	},
 	"utxo_story_quick_between": {
 		"sourceHash": "70982b877a88afa1",
-		"status": "machine",
+		"status": "reviewed",
 		"translator": "Claude",
-		"qaHash": "c966b3d463e3851c"
+		"reviewer": "George Donnelly"
 	},
 	"utxo_story_peel_chain": {
 		"sourceHash": "ee6fb71a42bca51c",
-		"status": "machine",
+		"status": "reviewed",
 		"translator": "Claude",
-		"qaHash": "75768f5a37ddef4c"
+		"reviewer": "George Donnelly"
 	},
 	"utxo_story_with_peel_chain": {
 		"sourceHash": "6404a4e746abbe4a",
-		"status": "machine",
+		"status": "reviewed",
 		"translator": "Claude",
-		"qaHash": "65234352ce18f511"
+		"reviewer": "George Donnelly"
 	},
 	"utxo_story_melted": {
 		"sourceHash": "1ff267bf2b3b6ab9",
-		"status": "machine",
+		"status": "reviewed",
 		"translator": "Claude",
-		"qaHash": "bd7bcc6f011a647b"
+		"reviewer": "George Donnelly"
 	},
 	"utxo_story_single_parent": {
 		"sourceHash": "b40233299b0e7883",
-		"status": "machine",
+		"status": "reviewed",
 		"translator": "Claude",
-		"qaHash": "03178343c2168798"
+		"reviewer": "George Donnelly"
 	},
 	"utxo_story_split": {
 		"sourceHash": "e5e2394e4f0e788b",
-		"status": "machine",
+		"status": "reviewed",
 		"translator": "Claude",
-		"qaHash": "7974516683341811"
+		"reviewer": "George Donnelly"
 	},
 	"utxo_machine_title": {
 		"sourceHash": "6be21ad6b525c5d3",
-		"status": "machine",
+		"status": "reviewed",
 		"translator": "Claude",
-		"qaHash": "ee89f7916eb7df66"
+		"reviewer": "George Donnelly"
 	},
 	"utxo_machine_server": {
 		"sourceHash": "968b0910cb9e0c95",
-		"status": "machine",
+		"status": "reviewed",
 		"translator": "Claude",
-		"qaHash": "50fdec5d13453bd1"
+		"reviewer": "George Donnelly"
 	},
 	"utxo_txid_label": {
 		"sourceHash": "e43696c1254fa3c2",
-		"status": "machine",
+		"status": "reviewed",
 		"translator": "Claude",
-		"qaHash": "258b93f8bee7ac3f"
+		"reviewer": "George Donnelly"
 	},
 	"utxo_txid_placeholder": {
 		"sourceHash": "8944ec07cc81463c",
-		"status": "machine",
+		"status": "reviewed",
 		"translator": "Claude",
-		"qaHash": "48903a60ddc78e1b"
+		"reviewer": "George Donnelly"
 	},
 	"utxo_run": {
 		"sourceHash": "4592f24979d6a310",
-		"status": "machine",
+		"status": "reviewed",
 		"translator": "Claude",
-		"qaHash": "4aa9dceaace0ab64"
+		"reviewer": "George Donnelly"
 	},
 	"utxo_examples_label": {
 		"sourceHash": "ae9679995d7898a0",
-		"status": "machine",
+		"status": "reviewed",
 		"translator": "Claude",
-		"qaHash": "842d70412fda3511"
+		"reviewer": "George Donnelly"
 	},
 	"utxo_inputs_heading": {
 		"sourceHash": "9e911dc3dee708c4",
-		"status": "machine",
+		"status": "reviewed",
 		"translator": "Claude",
-		"qaHash": "c6e159766f2a270f"
+		"reviewer": "George Donnelly"
 	},
 	"utxo_outputs_heading": {
 		"sourceHash": "b2fba379236ead44",
-		"status": "machine",
+		"status": "reviewed",
 		"translator": "Claude",
-		"qaHash": "62ea08773a0e8b76"
+		"reviewer": "George Donnelly"
 	},
 	"utxo_transaction": {
 		"sourceHash": "1b4811652e99ab55",
-		"status": "machine",
+		"status": "reviewed",
 		"translator": "Claude",
-		"qaHash": "92f45c752371c272"
+		"reviewer": "George Donnelly"
 	},
 	"utxo_in": {
 		"sourceHash": "4dc08fa5817bfd4e",
-		"status": "machine",
+		"status": "reviewed",
 		"translator": "Claude",
-		"qaHash": "85be61b3ce1c4b78"
+		"reviewer": "George Donnelly"
 	},
 	"utxo_out": {
 		"sourceHash": "bf83a3d02431edc9",
-		"status": "machine",
+		"status": "reviewed",
 		"translator": "Claude",
-		"qaHash": "2e8d642b8734a576"
+		"reviewer": "George Donnelly"
 	},
 	"utxo_fee": {
 		"sourceHash": "5f74c2dc2eaa935f",
-		"status": "machine",
+		"status": "reviewed",
 		"translator": "Claude",
-		"qaHash": "db9a95a4719e3f00"
+		"reviewer": "George Donnelly"
 	},
 	"utxo_fee_chip": {
 		"sourceHash": "05a22aba5b085e40",
-		"status": "machine",
+		"status": "reviewed",
 		"translator": "Claude",
-		"qaHash": "e9c93661f7226789"
+		"reviewer": "George Donnelly"
 	},
 	"utxo_replay": {
 		"sourceHash": "fe57f6a923f274b7",
-		"status": "machine",
+		"status": "reviewed",
 		"translator": "Claude",
-		"qaHash": "9c497c3e7904ee1d"
+		"reviewer": "George Donnelly"
 	},
 	"utxo_pick_hint": {
 		"sourceHash": "6079db6f81377f7b",
-		"status": "machine",
+		"status": "reviewed",
 		"translator": "Claude",
-		"qaHash": "b779f99d11d2f260"
+		"reviewer": "George Donnelly"
 	},
 	"utxo_follow_title": {
 		"sourceHash": "34b99467c5cc26c9",
-		"status": "machine",
+		"status": "reviewed",
 		"translator": "Claude",
-		"qaHash": "77c9a91a2a41cbdd"
+		"reviewer": "George Donnelly"
 	},
 	"utxo_close": {
 		"sourceHash": "d7cf5045c01b2eb9",
-		"status": "machine",
+		"status": "reviewed",
 		"translator": "Claude",
-		"qaHash": "95febb5d168c1224"
+		"reviewer": "George Donnelly"
 	},
 	"utxo_trail_heading": {
 		"sourceHash": "ad4b4ea1f998f4e9",
-		"status": "machine",
+		"status": "reviewed",
 		"translator": "Claude",
-		"qaHash": "ed2a82c240ad42d6"
+		"reviewer": "George Donnelly"
 	},
 	"utxo_keep_following": {
 		"sourceHash": "7f34e47f4028b915",
-		"status": "machine",
+		"status": "reviewed",
 		"translator": "Claude",
-		"qaHash": "aa01036ab591ef75"
+		"reviewer": "George Donnelly"
 	},
 	"utxo_disc_data": {
 		"sourceHash": "babbe30094a92aba",
-		"status": "machine",
+		"status": "reviewed",
 		"translator": "Claude",
-		"qaHash": "2840f9f8743c3e0d"
+		"reviewer": "George Donnelly"
 	},
 	"utxo_tag_token": {
 		"sourceHash": "3d872b2ab22a2475",
-		"status": "machine",
+		"status": "reviewed",
 		"translator": "Claude",
-		"qaHash": "19919c906ea57828"
+		"reviewer": "George Donnelly"
 	},
 	"utxo_tag_spent_later": {
 		"sourceHash": "daffe5cac375d3b3",
-		"status": "machine",
+		"status": "reviewed",
 		"translator": "Claude",
-		"qaHash": "5f8967d5dc7e2115"
+		"reviewer": "George Donnelly"
 	},
 	"utxo_tag_unspendable": {
 		"sourceHash": "e659b8eedab1aa2e",
-		"status": "machine",
+		"status": "reviewed",
 		"translator": "Claude",
-		"qaHash": "355c370f365a6191"
+		"reviewer": "George Donnelly"
 	},
 	"utxo_coin_data_output": {
 		"sourceHash": "1556d5e4ccd3655f",
-		"status": "machine",
+		"status": "reviewed",
 		"translator": "Claude",
-		"qaHash": "bbb698df6d0b57c3"
+		"reviewer": "George Donnelly"
 	},
 	"utxo_coin_input_label": {
 		"sourceHash": "707b2511667b3dde",
-		"status": "machine",
+		"status": "reviewed",
 		"translator": "Claude",
-		"qaHash": "61cdf4deb0dcd9af"
+		"reviewer": "George Donnelly"
 	},
 	"utxo_coin_output_label": {
 		"sourceHash": "9c55a7fe819b7711",
-		"status": "machine",
+		"status": "reviewed",
 		"translator": "Claude",
-		"qaHash": "dfa1d53f9a021944"
+		"reviewer": "George Donnelly"
 	},
 	"utxo_more": {
 		"sourceHash": "34967e4d998a3cf9",
-		"status": "machine",
+		"status": "reviewed",
 		"translator": "Claude",
-		"qaHash": "8b4428ceb24fcb0d"
+		"reviewer": "George Donnelly"
 	},
 	"utxo_more_value": {
 		"sourceHash": "807c4ed3ec161b27",
-		"status": "machine",
+		"status": "reviewed",
 		"translator": "Claude",
-		"qaHash": "9a85127130be3aa2"
+		"reviewer": "George Donnelly"
 	},
 	"utxo_coinbase_no_inputs": {
 		"sourceHash": "2baef728651f1a99",
-		"status": "machine",
+		"status": "reviewed",
 		"translator": "Claude",
-		"qaHash": "798ce76fc74c3505"
+		"reviewer": "George Donnelly"
 	},
 	"utxo_coinbase_explain": {
 		"sourceHash": "f5a8555e543fb6b6",
-		"status": "machine",
+		"status": "reviewed",
 		"translator": "Claude",
-		"qaHash": "89e12e63fc1e33ab"
+		"reviewer": "George Donnelly"
 	},
 	"utxo_core_block": {
 		"sourceHash": "859344aefad7b0ff",
-		"status": "machine",
+		"status": "reviewed",
 		"translator": "Claude",
-		"qaHash": "eff79cd711fe822f"
+		"reviewer": "George Donnelly"
 	},
 	"utxo_core_unconfirmed": {
 		"sourceHash": "e006ee4114b21036",
-		"status": "machine",
+		"status": "reviewed",
 		"translator": "Claude",
-		"qaHash": "7b8090fd3ccb6085"
+		"reviewer": "George Donnelly"
 	},
 	"utxo_core_new_coins": {
 		"sourceHash": "dee562b27c0cd999",
-		"status": "machine",
+		"status": "reviewed",
 		"translator": "Claude",
-		"qaHash": "7706ca2d4a48cc15"
+		"reviewer": "George Donnelly"
 	},
 	"utxo_core_fee": {
 		"sourceHash": "328df61f49e80ab7",
-		"status": "machine",
+		"status": "reviewed",
 		"translator": "Claude",
-		"qaHash": "e652f5f83eed0edf"
+		"reviewer": "George Donnelly"
 	},
 	"utxo_status_connecting": {
 		"sourceHash": "eba8e67fe20d06ca",
-		"status": "machine",
+		"status": "reviewed",
 		"translator": "Claude",
-		"qaHash": "019e4cf87430995a"
+		"reviewer": "George Donnelly"
 	},
 	"utxo_n_inputs": {
 		"sourceHash": "338418126318ec52",
-		"status": "machine",
+		"status": "reviewed",
 		"translator": "Claude",
-		"qaHash": "0e9cfdf0d34c59e9"
+		"reviewer": "George Donnelly"
 	},
 	"utxo_n_outputs": {
 		"sourceHash": "d83403e871fb2001",
-		"status": "machine",
+		"status": "reviewed",
 		"translator": "Claude",
-		"qaHash": "fffeb97f10a7e93f"
+		"reviewer": "George Donnelly"
 	},
 	"utxo_status_loaded": {
 		"sourceHash": "8aa9b218719106ae",
-		"status": "machine",
+		"status": "reviewed",
 		"translator": "Claude",
-		"qaHash": "8ad94f5df46e6cb4"
+		"reviewer": "George Donnelly"
 	},
 	"utxo_status_load_failed": {
 		"sourceHash": "e6720d32a14cf7a0",
-		"status": "machine",
+		"status": "reviewed",
 		"translator": "Claude",
-		"qaHash": "a67d005f702a7e2d"
+		"reviewer": "George Donnelly"
 	},
 	"utxo_status_no_txid": {
 		"sourceHash": "221ceb44c154336c",
-		"status": "machine",
+		"status": "reviewed",
 		"translator": "Claude",
-		"qaHash": "f3a0918e9bd9ed50"
+		"reviewer": "George Donnelly"
 	},
 	"utxo_status_picking": {
 		"sourceHash": "8e0bee22cc3c4409",
-		"status": "machine",
+		"status": "reviewed",
 		"translator": "Claude",
-		"qaHash": "ba8e60beb1fe2b1c"
+		"reviewer": "George Donnelly"
 	},
 	"utxo_status_no_server": {
 		"sourceHash": "7aa420c619a7719f",
-		"status": "machine",
+		"status": "reviewed",
 		"translator": "Claude",
-		"qaHash": "637a620f65253089"
+		"reviewer": "George Donnelly"
 	},
 	"utxo_stat_steps_back": {
 		"sourceHash": "276ea2dbef331445",
-		"status": "machine",
+		"status": "reviewed",
 		"translator": "Claude",
-		"qaHash": "19a720d9f977a6f1"
+		"reviewer": "George Donnelly"
 	},
 	"utxo_stat_longest_nap": {
 		"sourceHash": "665283040b012d9a",
-		"status": "machine",
+		"status": "reviewed",
 		"translator": "Claude",
-		"qaHash": "46783b269d6e7437"
+		"reviewer": "George Donnelly"
 	},
 	"utxo_stat_nap_value": {
 		"sourceHash": "cc27f531af1340ab",
-		"status": "machine",
+		"status": "reviewed",
 		"translator": "Claude",
-		"qaHash": "1582fc8ec6a17788"
+		"reviewer": "George Donnelly"
 	},
 	"utxo_stat_origin": {
 		"sourceHash": "26de7310884abe17",
-		"status": "machine",
+		"status": "reviewed",
 		"translator": "Claude",
-		"qaHash": "4af396c44d7e5576"
+		"reviewer": "George Donnelly"
 	},
 	"utxo_stat_mined_in_block": {
 		"sourceHash": "858561e3c3d87aad",
-		"status": "machine",
+		"status": "reviewed",
 		"translator": "Claude",
-		"qaHash": "1ee2b867f6956810"
+		"reviewer": "George Donnelly"
 	},
 	"utxo_stat_further_back": {
 		"sourceHash": "34971514fb86eeb5",
-		"status": "machine",
+		"status": "reviewed",
 		"translator": "Claude",
-		"qaHash": "365f5317817bc157"
+		"reviewer": "George Donnelly"
 	},
 	"utxo_hop_unconfirmed": {
 		"sourceHash": "3c0aee7635e08356",
-		"status": "machine",
+		"status": "reviewed",
 		"translator": "Claude",
-		"qaHash": "abf15cf33cc57883"
+		"reviewer": "George Donnelly"
 	},
 	"utxo_hop_coinbase": {
 		"sourceHash": "3d973ff57076bb63",
-		"status": "machine",
+		"status": "reviewed",
 		"translator": "Claude",
-		"qaHash": "7b5e78f83fd6bb19"
+		"reviewer": "George Donnelly"
 	},
 	"utxo_hop_made_from": {
 		"sourceHash": "b06daac41ddbdcf6",
-		"status": "machine",
+		"status": "reviewed",
 		"translator": "Claude",
-		"qaHash": "273e18b2fa061219"
+		"reviewer": "George Donnelly"
 	},
 	"utxo_follow_label": {
 		"sourceHash": "8fe2c68f9753a946",
-		"status": "machine",
+		"status": "reviewed",
 		"translator": "Claude",
-		"qaHash": "cca44dca9000ef21"
+		"reviewer": "George Donnelly"
 	},
 	"utxo_follow_parent_label": {
 		"sourceHash": "7f2f14ae881cc6c6",
-		"status": "machine",
+		"status": "reviewed",
 		"translator": "Claude",
-		"qaHash": "e37edcbfa5782706"
+		"reviewer": "George Donnelly"
 	},
 	"utxo_waited": {
 		"sourceHash": "cb261bd5c0e63f74",
-		"status": "machine",
+		"status": "reviewed",
 		"translator": "Claude",
-		"qaHash": "3c4b571c66f88940"
+		"reviewer": "George Donnelly"
 	},
 	"utxo_trail_walking": {
 		"sourceHash": "855a6c0260355f53",
-		"status": "machine",
+		"status": "reviewed",
 		"translator": "Claude",
-		"qaHash": "4f7eb869d515d668"
+		"reviewer": "George Donnelly"
 	},
 	"utxo_trail_origin": {
 		"sourceHash": "d8f628ecbaad6302",
-		"status": "machine",
+		"status": "reviewed",
 		"translator": "Claude",
-		"qaHash": "99146dc3ca70196e"
+		"reviewer": "George Donnelly"
 	},
 	"utxo_trail_traced": {
 		"sourceHash": "92f9960f670d7eb7",
-		"status": "machine",
+		"status": "reviewed",
 		"translator": "Claude",
-		"qaHash": "91a1cf93c303628f"
+		"reviewer": "George Donnelly"
 	},
 	"utxo_trail_stopped": {
 		"sourceHash": "d4c9b398247605b3",
-		"status": "machine",
+		"status": "reviewed",
 		"translator": "Claude",
-		"qaHash": "c20665a5d845e95a"
+		"reviewer": "George Donnelly"
 	},
 	"utxo_coin_load_failed": {
 		"sourceHash": "4534f0cc8fe3f8e0",
-		"status": "machine",
+		"status": "reviewed",
 		"translator": "Claude",
-		"qaHash": "2d90aa3dfa3246cf"
+		"reviewer": "George Donnelly"
 	},
 	"utxo_set_title": {
 		"sourceHash": "41b41046b42ad560",
-		"status": "machine",
+		"status": "reviewed",
 		"translator": "Claude",
-		"qaHash": "7e10170488a84356"
+		"reviewer": "George Donnelly"
 	},
 	"utxo_data_as_of": {
 		"sourceHash": "55e9ae045203d73c",
-		"status": "machine",
+		"status": "reviewed",
 		"translator": "Claude",
-		"qaHash": "e5d44c302816fcc1"
+		"reviewer": "George Donnelly"
 	},
 	"utxo_stale_before": {
 		"sourceHash": "0d1a8a8c07ee3d36",
-		"status": "machine",
+		"status": "reviewed",
 		"translator": "Claude",
-		"qaHash": "1e3ad70550cc7d50"
+		"reviewer": "George Donnelly"
 	},
 	"utxo_stale_after": {
 		"sourceHash": "058d1f0bd8eefe34",
-		"status": "machine",
+		"status": "reviewed",
 		"translator": "Claude",
-		"qaHash": "67b0c9e46ca8ca3e"
+		"reviewer": "George Donnelly"
 	},
 	"utxo_not_published": {
 		"sourceHash": "483b4503f3cee663",
-		"status": "machine",
+		"status": "reviewed",
 		"translator": "Claude",
-		"qaHash": "8b7a2559f89f0add"
+		"reviewer": "George Donnelly"
 	},
 	"utxo_tile_supply": {
 		"sourceHash": "b5f811a70f963475",
-		"status": "machine",
+		"status": "reviewed",
 		"translator": "Claude",
-		"qaHash": "9abbdb0c96b03508"
+		"reviewer": "George Donnelly"
 	},
 	"utxo_tile_supply_note": {
 		"sourceHash": "3071d8e0a3711b96",
-		"status": "machine",
+		"status": "reviewed",
 		"translator": "Claude",
-		"qaHash": "ccc8d76d70509737"
+		"reviewer": "George Donnelly"
 	},
 	"utxo_tile_unmoved": {
 		"sourceHash": "385fe84b4730048b",
-		"status": "machine",
+		"status": "reviewed",
 		"translator": "Claude",
-		"qaHash": "139672a63877c6ce"
+		"reviewer": "George Donnelly"
 	},
 	"utxo_tile_unmoved_note": {
 		"sourceHash": "0d5c3b9587977582",
-		"status": "machine",
+		"status": "reviewed",
 		"translator": "Claude",
-		"qaHash": "840920440969b776"
+		"reviewer": "George Donnelly"
 	},
 	"utxo_tile_cdd": {
 		"sourceHash": "bfc5ad3816f703bf",
-		"status": "machine",
+		"status": "reviewed",
 		"translator": "Claude",
-		"qaHash": "e00e2ee69caea4ff"
+		"reviewer": "George Donnelly"
 	},
 	"utxo_tile_cdd_note": {
 		"sourceHash": "122cb3c831f1e058",
-		"status": "machine",
+		"status": "reviewed",
 		"translator": "Claude",
-		"qaHash": "b10c60d74d458739"
+		"reviewer": "George Donnelly"
 	},
 	"utxo_tile_awakenings": {
 		"sourceHash": "8a26b366749360b3",
-		"status": "machine",
+		"status": "reviewed",
 		"translator": "Claude",
-		"qaHash": "eab4eacab6f8aee7"
+		"reviewer": "George Donnelly"
 	},
 	"utxo_tile_awakenings_note": {
 		"sourceHash": "0bceb76d59517efa",
-		"status": "machine",
+		"status": "reviewed",
 		"translator": "Claude",
-		"qaHash": "1b4816602930ccc7"
+		"reviewer": "George Donnelly"
 	},
 	"utxo_range_label": {
 		"sourceHash": "5cf1b93714881f7c",
-		"status": "machine",
+		"status": "reviewed",
 		"translator": "Claude",
-		"qaHash": "7e34b1f87093fe57"
+		"reviewer": "George Donnelly"
 	},
 	"utxo_range_split": {
 		"sourceHash": "b57d98f7032e11c5",
-		"status": "machine",
+		"status": "reviewed",
 		"translator": "Claude",
-		"qaHash": "194f836f39a93eda"
+		"reviewer": "George Donnelly"
 	},
 	"utxo_range_all": {
 		"sourceHash": "4b44ae1447a4f0c8",
-		"status": "machine",
+		"status": "reviewed",
 		"translator": "Claude",
-		"qaHash": "1548c27492fffa0a"
+		"reviewer": "George Donnelly"
 	},
 	"utxo_range_5y": {
 		"sourceHash": "92fec94b1c1a116f",
-		"status": "machine",
+		"status": "reviewed",
 		"translator": "Claude",
-		"qaHash": "2e9d827765af0e2e"
+		"reviewer": "George Donnelly"
 	},
 	"utxo_range_1y": {
 		"sourceHash": "6dccccd1a590b092",
-		"status": "machine",
+		"status": "reviewed",
 		"translator": "Claude",
-		"qaHash": "604e91a3e4ff3bad"
+		"reviewer": "George Donnelly"
 	},
 	"utxo_chart_age_title": {
 		"sourceHash": "d0b540a20f68c144",
-		"status": "machine",
+		"status": "reviewed",
 		"translator": "Claude",
-		"qaHash": "5e09c0142e9064a7"
+		"reviewer": "George Donnelly"
 	},
 	"utxo_chart_age_caption": {
 		"sourceHash": "4e09298abe7482e9",
-		"status": "machine",
+		"status": "reviewed",
 		"translator": "Claude",
-		"qaHash": "67f3c8a1ad362feb"
+		"reviewer": "George Donnelly"
 	},
 	"utxo_legend": {
 		"sourceHash": "0af13a8d08fa8060",
-		"status": "machine",
+		"status": "reviewed",
 		"translator": "Claude",
-		"qaHash": "06a74c6753ef5e24"
+		"reviewer": "George Donnelly"
 	},
 	"utxo_chart_cdd_title": {
 		"sourceHash": "03cfc5bb74e8960a",
-		"status": "machine",
+		"status": "reviewed",
 		"translator": "Claude",
-		"qaHash": "5e6e7063e37e3f6a"
+		"reviewer": "George Donnelly"
 	},
 	"utxo_chart_cdd_caption": {
 		"sourceHash": "7576d08eb905746a",
-		"status": "machine",
+		"status": "reviewed",
 		"translator": "Claude",
-		"qaHash": "292d74f136004466"
+		"reviewer": "George Donnelly"
 	},
 	"utxo_chart_awake_title": {
 		"sourceHash": "253ec185a3d0afcb",
-		"status": "machine",
+		"status": "reviewed",
 		"translator": "Claude",
-		"qaHash": "fb90a7f835612d0a"
+		"reviewer": "George Donnelly"
 	},
 	"utxo_chart_awake_caption": {
 		"sourceHash": "8552becccc734459",
-		"status": "machine",
+		"status": "reviewed",
 		"translator": "Claude",
-		"qaHash": "254ab316a3126572"
+		"reviewer": "George Donnelly"
 	},
 	"utxo_table_largest": {
 		"sourceHash": "a7a221ed551e02d8",
-		"status": "machine",
+		"status": "reviewed",
 		"translator": "Claude",
-		"qaHash": "c66da53195a0eb81"
+		"reviewer": "George Donnelly"
 	},
 	"utxo_table_latest": {
 		"sourceHash": "b3308ff22cd7bab6",
-		"status": "machine",
+		"status": "reviewed",
 		"translator": "Claude",
-		"qaHash": "9f93ca64f59acc5f"
+		"reviewer": "George Donnelly"
 	},
 	"utxo_col_woke": {
 		"sourceHash": "811789bfc79c73f5",
-		"status": "machine",
+		"status": "reviewed",
 		"translator": "Claude",
-		"qaHash": "eecbf2601e2003e0"
+		"reviewer": "George Donnelly"
 	},
 	"utxo_col_since": {
 		"sourceHash": "10d028dc14ca5d9f",
-		"status": "machine",
+		"status": "reviewed",
 		"translator": "Claude",
-		"qaHash": "ac44bb70b3303382"
+		"reviewer": "George Donnelly"
 	},
 	"utxo_col_tx": {
 		"sourceHash": "1b4811652e99ab55",
-		"status": "machine",
+		"status": "reviewed",
 		"translator": "Claude",
-		"qaHash": "92f45c752371c272"
+		"reviewer": "George Donnelly"
 	},
 	"utxo_years_short": {
 		"sourceHash": "5eefb8af5329abc4",
-		"status": "machine",
+		"status": "reviewed",
 		"translator": "Claude",
-		"qaHash": "31050cd8330ff215"
+		"reviewer": "George Donnelly"
 	},
 	"utxo_how_title": {
 		"sourceHash": "1312821494527686",
-		"status": "machine",
+		"status": "reviewed",
 		"translator": "Claude",
-		"qaHash": "77beaa9a4d4cbebc"
+		"reviewer": "George Donnelly"
 	},
 	"utxo_node": {
 		"sourceHash": "2cc2ea2091e8f3a3",
-		"status": "machine",
+		"status": "reviewed",
 		"translator": "Claude",
-		"qaHash": "dcf343ef27179577"
+		"reviewer": "George Donnelly"
 	},
 	"utxo_chart_age_aria": {
 		"sourceHash": "16fab6ab2cdf243c",
-		"status": "machine",
+		"status": "reviewed",
 		"translator": "Claude",
-		"qaHash": "8c5ef22ec4364428"
+		"reviewer": "George Donnelly"
 	},
 	"utxo_chart_cdd_aria": {
 		"sourceHash": "8c177357a8317b83",
-		"status": "machine",
+		"status": "reviewed",
 		"translator": "Claude",
-		"qaHash": "76e47ec3bdd897f4"
+		"reviewer": "George Donnelly"
 	},
 	"utxo_chart_awake_aria": {
 		"sourceHash": "929d5339985be1e4",
-		"status": "machine",
+		"status": "reviewed",
 		"translator": "Claude",
-		"qaHash": "174fb19bc13ddffa"
+		"reviewer": "George Donnelly"
 	},
 	"utxo_tip_total": {
 		"sourceHash": "714bdb4ba7da01e5",
-		"status": "machine",
+		"status": "reviewed",
 		"translator": "Claude",
-		"qaHash": "56ffe35552918b17"
+		"reviewer": "George Donnelly"
 	},
 	"utxo_tip_week_to": {
 		"sourceHash": "a422aa639e8688f5",
-		"status": "machine",
+		"status": "reviewed",
 		"translator": "Claude",
-		"qaHash": "49dd9578e0131818"
+		"reviewer": "George Donnelly"
 	},
 	"utxo_tip_cdd": {
 		"sourceHash": "560a8bb8eae9482d",
-		"status": "machine",
+		"status": "reviewed",
 		"translator": "Claude",
-		"qaHash": "d57a3ada0a9c1177"
+		"reviewer": "George Donnelly"
 	},
 	"utxo_tip_moved_after": {
 		"sourceHash": "6b3a8efa49b35efa",
-		"status": "machine",
+		"status": "reviewed",
 		"translator": "Claude",
-		"qaHash": "8909ed1655cfcec7"
+		"reviewer": "George Donnelly"
 	},
 	"utxo_tip_asleep": {
 		"sourceHash": "b39d24c08583fd37",
-		"status": "machine",
+		"status": "reviewed",
 		"translator": "Claude",
-		"qaHash": "19ddd804143a84f5"
+		"reviewer": "George Donnelly"
 	},
 	"utxo_dot_label": {
 		"sourceHash": "b432c3338b7c2b52",
-		"status": "machine",
+		"status": "reviewed",
 		"translator": "Claude",
-		"qaHash": "fa326d8d9b70e8dd"
+		"reviewer": "George Donnelly"
 	},
 	"utxo_tip_click": {
 		"sourceHash": "3078c5a40daf72a8",
-		"status": "machine",
+		"status": "reviewed",
 		"translator": "Claude",
-		"qaHash": "a1c6713880e7761a"
+		"reviewer": "George Donnelly"
 	},
 	"utxo_axis_years": {
 		"sourceHash": "9bb5ce60d5c0bf42",
-		"status": "machine",
+		"status": "reviewed",
 		"translator": "Claude",
-		"qaHash": "a2a2a4d3c9d79a6e"
+		"reviewer": "George Donnelly"
 	},
 	"nav_home": {
 		"sourceHash": "d2187d527809f532",
-		"status": "machine",
+		"status": "reviewed",
 		"translator": "Claude",
-		"qaHash": "217a6125496a6ce4"
+		"reviewer": "George Donnelly"
 	},
 	"nav_why_bch": {
 		"sourceHash": "6fad84b4d7bb9b6a",
-		"status": "machine",
+		"status": "reviewed",
 		"translator": "Claude",
-		"qaHash": "960177f757e3fda6"
+		"reviewer": "George Donnelly"
 	},
 	"nav_use": {
 		"sourceHash": "91436d6b374e8263",
-		"status": "machine",
+		"status": "reviewed",
 		"translator": "Claude",
-		"qaHash": "cc7b9ce74f163c6c"
+		"reviewer": "George Donnelly"
 	},
 	"nav_get_wallet": {
 		"sourceHash": "bc9f3a2d6e7e9ac0",
-		"status": "machine",
+		"status": "reviewed",
 		"translator": "Claude",
-		"qaHash": "f7c313881897f50a"
+		"reviewer": "George Donnelly"
 	},
 	"nav_grab_wallet": {
 		"sourceHash": "62d3f5a1d66ab3fc",
-		"status": "machine",
+		"status": "reviewed",
 		"translator": "Claude",
-		"qaHash": "1274b3bb1d88d930"
+		"reviewer": "George Donnelly"
 	},
 	"nav_compare_wallets": {
 		"sourceHash": "2cf8ac63d187b0e7",
-		"status": "machine",
+		"status": "reviewed",
 		"translator": "Claude",
-		"qaHash": "c19c0145b887f429"
+		"reviewer": "George Donnelly"
 	},
 	"nav_buy_bch": {
 		"sourceHash": "0f02158074296b7a",
-		"status": "machine",
+		"status": "reviewed",
 		"translator": "Claude",
-		"qaHash": "fd4f30a87dfe278d"
+		"reviewer": "George Donnelly"
 	},
 	"nav_spend_bch": {
 		"sourceHash": "7e4945b1de8a4da6",
-		"status": "machine",
+		"status": "reviewed",
 		"translator": "Claude",
-		"qaHash": "830fb6f61ae54bda"
+		"reviewer": "George Donnelly"
 	},
 	"nav_earn_bch": {
 		"sourceHash": "bfa12573d18976ce",
-		"status": "machine",
+		"status": "reviewed",
 		"translator": "Claude",
-		"qaHash": "cf781a92b31383ea"
+		"reviewer": "George Donnelly"
 	},
 	"nav_accept_bch": {
 		"sourceHash": "d0da7aca57be7001",
-		"status": "machine",
+		"status": "reviewed",
 		"translator": "Claude",
-		"qaHash": "d1ca606d3c9c13fc"
+		"reviewer": "George Donnelly"
 	},
 	"nav_country_guides": {
 		"sourceHash": "444bff59d700950d",
-		"status": "machine",
+		"status": "reviewed",
 		"translator": "Claude",
-		"qaHash": "d79446e346612c89"
+		"reviewer": "George Donnelly"
 	},
 	"nav_build": {
 		"sourceHash": "8f4b2028ad75465d",
-		"status": "machine",
+		"status": "reviewed",
 		"translator": "Claude",
-		"qaHash": "b997380837c68cc5"
+		"reviewer": "George Donnelly"
 	},
 	"nav_build_with_bch": {
 		"sourceHash": "5aa05319421a217f",
-		"status": "machine",
+		"status": "reviewed",
 		"translator": "Claude",
-		"qaHash": "e6bb8e5655a3a586"
+		"reviewer": "George Donnelly"
 	},
 	"nav_opcodes": {
 		"sourceHash": "939086bdeab6638d",
-		"status": "machine",
+		"status": "reviewed",
 		"translator": "Claude",
-		"qaHash": "a77653bc5c438301"
+		"reviewer": "George Donnelly"
 	},
 	"nav_upgrades": {
 		"sourceHash": "bd58c723a824dcca",
-		"status": "machine",
+		"status": "reviewed",
 		"translator": "Claude",
-		"qaHash": "84768a11ea3864e9"
+		"reviewer": "George Donnelly"
 	},
 	"nav_mining": {
 		"sourceHash": "0f8691601be6ba02",
-		"status": "machine",
+		"status": "reviewed",
 		"translator": "Claude",
-		"qaHash": "a084ff8ce051de29"
+		"reviewer": "George Donnelly"
 	},
 	"nav_bch_mining": {
 		"sourceHash": "f5687f0112f79eb7",
-		"status": "machine",
+		"status": "reviewed",
 		"translator": "Claude",
-		"qaHash": "1d7c33a2e202e36d"
+		"reviewer": "George Donnelly"
 	},
 	"nav_reference": {
 		"sourceHash": "62bf2677b9ec30fc",
-		"status": "machine",
+		"status": "reviewed",
 		"translator": "Claude",
-		"qaHash": "21135d85d1064f06"
+		"reviewer": "George Donnelly"
 	},
 	"nav_all_reference": {
 		"sourceHash": "ade04f7e405061aa",
-		"status": "machine",
+		"status": "reviewed",
 		"translator": "Claude",
-		"qaHash": "b20ecff1a0f7f855"
+		"reviewer": "George Donnelly"
 	},
 	"nav_directory": {
 		"sourceHash": "8c214aae9670fcba",
-		"status": "machine",
+		"status": "reviewed",
 		"translator": "Claude",
-		"qaHash": "cc4b2e7e9c37c16a"
+		"reviewer": "George Donnelly"
 	},
 	"nav_glossary": {
 		"sourceHash": "5f8e5ecf2f63ad1f",
-		"status": "machine",
+		"status": "reviewed",
 		"translator": "Claude",
-		"qaHash": "75f9c5468c19bb28"
+		"reviewer": "George Donnelly"
 	},
 	"nav_utxo_machine": {
 		"sourceHash": "bd45da3210993033",
-		"status": "machine",
+		"status": "reviewed",
 		"translator": "Claude",
-		"qaHash": "e2191bf59fc20b66"
+		"reviewer": "George Donnelly"
 	},
 	"nav_bch_vs_others": {
 		"sourceHash": "b3efdaf3d7f5635c",
-		"status": "machine",
+		"status": "reviewed",
 		"translator": "Claude",
-		"qaHash": "7b4d55434933f340"
+		"reviewer": "George Donnelly"
 	},
 	"nav_state_of_bch": {
 		"sourceHash": "c096d7cb8caa27fb",
-		"status": "machine",
+		"status": "reviewed",
 		"translator": "Claude",
-		"qaHash": "051a6f2f2d5ad92f"
+		"reviewer": "George Donnelly"
 	},
 	"nav_honest_risks": {
 		"sourceHash": "1a8af6a75d7fc8b1",
-		"status": "machine",
+		"status": "reviewed",
 		"translator": "Claude",
-		"qaHash": "e4ee535d6f0e1515"
+		"reviewer": "George Donnelly"
 	},
 	"nav_is_bch_dead": {
 		"sourceHash": "c53be7a24312fc9e",
-		"status": "machine",
+		"status": "reviewed",
 		"translator": "Claude",
-		"qaHash": "24c9f8f55cd088f0"
+		"reviewer": "George Donnelly"
 	},
 	"nav_support": {
 		"sourceHash": "7744c89b4e37c0a5",
-		"status": "machine",
+		"status": "reviewed",
 		"translator": "Claude",
-		"qaHash": "1d7340868a740f4d"
+		"reviewer": "George Donnelly"
 	},
 	"nav_blog": {
 		"sourceHash": "3e6bad6451bd2969",
-		"status": "machine",
+		"status": "reviewed",
 		"translator": "Claude",
-		"qaHash": "04683e5b888ea1a2"
+		"reviewer": "George Donnelly"
 	},
 	"nav_main_aria": {
 		"sourceHash": "229c1f769b91b4ac",
-		"status": "machine",
+		"status": "reviewed",
 		"translator": "Claude",
-		"qaHash": "ce532427e8f7a54d"
+		"reviewer": "George Donnelly"
 	},
 	"nav_rss_feed_aria": {
 		"sourceHash": "d13522a76cfae7ac",
-		"status": "machine",
+		"status": "reviewed",
 		"translator": "Claude",
-		"qaHash": "c1c99ec5d4abecb8"
+		"reviewer": "George Donnelly"
 	},
 	"nav_language_aria": {
 		"sourceHash": "1fa24b4905737a8d",
-		"status": "machine",
+		"status": "reviewed",
 		"translator": "Claude",
-		"qaHash": "a6e6ef8bda1e4cae"
+		"reviewer": "George Donnelly"
 	},
 	"footer_use_bch": {
 		"sourceHash": "1fc8841d5583a308",
-		"status": "machine",
+		"status": "reviewed",
 		"translator": "Claude",
-		"qaHash": "371050ae4acc83ed"
+		"reviewer": "George Donnelly"
 	},
 	"footer_about": {
 		"sourceHash": "0c6c56cf4a50bd50",
-		"status": "machine",
+		"status": "reviewed",
 		"translator": "Claude",
-		"qaHash": "a6168a8cb69b514e"
+		"reviewer": "George Donnelly"
 	},
 	"footer_about_site": {
 		"sourceHash": "873da531fcc3ae44",
-		"status": "machine",
+		"status": "reviewed",
 		"translator": "Claude",
-		"qaHash": "3e0fb7f5581a8d39"
+		"reviewer": "George Donnelly"
 	},
 	"footer_contact": {
 		"sourceHash": "3d9bbb6461c76edc",
-		"status": "machine",
+		"status": "reviewed",
 		"translator": "Claude",
-		"qaHash": "77aff41fd1954b49"
+		"reviewer": "George Donnelly"
 	},
 	"footer_terms": {
 		"sourceHash": "06b2dd027a0d1a0d",
-		"status": "machine",
+		"status": "reviewed",
 		"translator": "Claude",
-		"qaHash": "95e702a4e478c017"
+		"reviewer": "George Donnelly"
 	},
 	"footer_privacy_policy": {
 		"sourceHash": "0afb547bbe92b243",
-		"status": "machine",
+		"status": "reviewed",
 		"translator": "Claude",
-		"qaHash": "c34ac49accd1fd28"
+		"reviewer": "George Donnelly"
 	},
 	"footer_tagline": {
 		"sourceHash": "af4c0189ce26270e",
-		"status": "machine",
+		"status": "reviewed",
 		"translator": "Claude",
-		"qaHash": "79dae15615f04f79"
+		"reviewer": "George Donnelly"
 	},
 	"footer_panmoni_title": {
 		"sourceHash": "0670fef29c645b76",
-		"status": "machine",
+		"status": "reviewed",
 		"translator": "Claude",
-		"qaHash": "16572ccb3fb48592"
+		"reviewer": "George Donnelly"
 	},
 	"footer_footnote": {
 		"sourceHash": "947ae70a9a0854d3",
-		"status": "machine",
+		"status": "reviewed",
 		"translator": "Claude",
-		"qaHash": "abdc35a6df019de4"
+		"reviewer": "George Donnelly"
 	},
 	"layout_hub_compare": {
 		"sourceHash": "9ddaebc0fd8f2335",
-		"status": "machine",
+		"status": "reviewed",
 		"translator": "Claude",
-		"qaHash": "e85d0182e1e89770"
+		"reviewer": "George Donnelly"
 	},
 	"common_toggle_menu": {
 		"sourceHash": "d0563041a58a84b8",
-		"status": "machine",
+		"status": "reviewed",
 		"translator": "Claude",
-		"qaHash": "ccc3d1e2c2841932"
+		"reviewer": "George Donnelly"
 	},
 	"common_toggle_theme": {
 		"sourceHash": "b8c3d4919b6eab3c",
-		"status": "machine",
+		"status": "reviewed",
 		"translator": "Claude",
-		"qaHash": "96ffcad35cbcb78c"
+		"reviewer": "George Donnelly"
 	},
 	"widget_announcement_new": {
 		"sourceHash": "e9f7cceb39860c56",
-		"status": "machine",
+		"status": "reviewed",
 		"translator": "Claude",
-		"qaHash": "cf398ee2730daf00"
+		"reviewer": "George Donnelly"
 	},
 	"widget_announcement_why_bch": {
 		"sourceHash": "bb4c725c97dda1ac",
-		"status": "machine",
+		"status": "reviewed",
 		"translator": "Claude",
-		"qaHash": "d43a572d64684f87"
+		"reviewer": "George Donnelly"
 	},
 	"widget_blog_view_all": {
 		"sourceHash": "0538f1d9e5a9e4dd",
-		"status": "machine",
+		"status": "reviewed",
 		"translator": "Claude",
-		"qaHash": "86aa481f7f64474a"
+		"reviewer": "George Donnelly"
 	},
 	"widget_boxes_stale": {
 		"sourceHash": "f8a2563c3d6855f5",
-		"status": "machine",
+		"status": "reviewed",
 		"translator": "Claude",
-		"qaHash": "e6ce859c2f2d7e81"
+		"reviewer": "George Donnelly"
 	},
 	"widget_boxes_stale_title": {
 		"sourceHash": "1ddd6ee01bcd766c",
-		"status": "machine",
+		"status": "reviewed",
 		"translator": "Claude",
-		"qaHash": "1838ca6137afa585"
+		"reviewer": "George Donnelly"
 	},
 	"widget_inner_title_fees": {
 		"sourceHash": "c11c6c24c4e3ecb7",
-		"status": "machine",
+		"status": "reviewed",
 		"translator": "Claude",
-		"qaHash": "78474f2e6d0e8f74"
+		"reviewer": "George Donnelly"
 	},
 	"notfound_title": {
 		"sourceHash": "ee42bfb381db06de",
-		"status": "machine",
+		"status": "reviewed",
 		"translator": "Claude",
-		"qaHash": "4af34008387bff5c"
+		"reviewer": "George Donnelly"
 	},
 	"notfound_get_wallet": {
 		"sourceHash": "227352da9d6126c4",
-		"status": "machine",
+		"status": "reviewed",
 		"translator": "Claude",
-		"qaHash": "ae715c44535cb213"
+		"reviewer": "George Donnelly"
 	},
 	"notfound_build_on_bch": {
 		"sourceHash": "c748d0c9dcc0a5d9",
-		"status": "machine",
+		"status": "reviewed",
 		"translator": "Claude",
-		"qaHash": "fcc290a0ddea119f"
+		"reviewer": "George Donnelly"
 	},
 	"notfound_latest_blog": {
 		"sourceHash": "c90f8aec23f6fd74",
-		"status": "machine",
+		"status": "reviewed",
 		"translator": "Claude",
-		"qaHash": "c1a4551c641dcbb0"
+		"reviewer": "George Donnelly"
 	},
 	"notfound_chip": {
 		"sourceHash": "f62733421828b04a",
-		"status": "machine",
+		"status": "reviewed",
 		"translator": "Claude",
-		"qaHash": "0d0e7eb33a58839c"
+		"reviewer": "George Donnelly"
 	},
 	"notfound_heading_before": {
 		"sourceHash": "b16e805ecc35d9d7",
-		"status": "machine",
+		"status": "reviewed",
 		"translator": "Claude",
-		"qaHash": "7809966ffd3596d8"
+		"reviewer": "George Donnelly"
 	},
 	"notfound_orphaned": {
 		"sourceHash": "296272079b49dc22",
-		"status": "machine",
+		"status": "reviewed",
 		"translator": "Claude",
-		"qaHash": "3ed7872eef29d318"
+		"reviewer": "George Donnelly"
 	},
 	"notfound_heading_after": {
 		"sourceHash": "7299b59de0b5dad3",
-		"status": "machine",
+		"status": "reviewed",
 		"translator": "Claude",
-		"qaHash": "b5f6c82d01278c7f"
+		"reviewer": "George Donnelly"
 	},
 	"notfound_lead": {
 		"sourceHash": "2aa3f7ac9eb12c8a",
-		"status": "machine",
+		"status": "reviewed",
 		"translator": "Claude",
-		"qaHash": "f0670047bfa57bf4"
+		"reviewer": "George Donnelly"
 	},
 	"notfound_chain_aria": {
 		"sourceHash": "e94ab80cc2109f14",
-		"status": "machine",
+		"status": "reviewed",
 		"translator": "Claude",
-		"qaHash": "bd726f3e558785cb"
+		"reviewer": "George Donnelly"
 	},
 	"notfound_main_chain": {
 		"sourceHash": "f31c88b23f1d986a",
-		"status": "machine",
+		"status": "reviewed",
 		"translator": "Claude",
-		"qaHash": "25d2fa29f3966672"
+		"reviewer": "George Donnelly"
 	},
 	"notfound_tip_depth": {
 		"sourceHash": "0c83aaf5630512e1",
-		"status": "machine",
+		"status": "reviewed",
 		"translator": "Claude",
-		"qaHash": "351f801b4b02534c"
+		"reviewer": "George Donnelly"
 	},
 	"notfound_tip": {
 		"sourceHash": "75940fd681449ec3",
-		"status": "machine",
+		"status": "reviewed",
 		"translator": "Claude",
-		"qaHash": "ce75ec96dc5bd611"
+		"reviewer": "George Donnelly"
 	},
 	"notfound_tip_minus": {
 		"sourceHash": "8a291be6cba2d711",
-		"status": "machine",
+		"status": "reviewed",
 		"translator": "Claude",
-		"qaHash": "31b24f7b0a684148"
+		"reviewer": "George Donnelly"
 	},
 	"notfound_just_mined": {
 		"sourceHash": "41af1c1926891d6c",
-		"status": "machine",
+		"status": "reviewed",
 		"translator": "Claude",
-		"qaHash": "536874cc2f6687c2"
+		"reviewer": "George Donnelly"
 	},
 	"notfound_conf": {
 		"sourceHash": "738227e1e9323699",
-		"status": "machine",
+		"status": "reviewed",
 		"translator": "Claude",
-		"qaHash": "2935b4696c105552"
+		"reviewer": "George Donnelly"
 	},
 	"notfound_orphan_aria": {
 		"sourceHash": "8298c58ca455f06e",
-		"status": "machine",
+		"status": "reviewed",
 		"translator": "Claude",
-		"qaHash": "beed9a935420e676"
+		"reviewer": "George Donnelly"
 	},
 	"notfound_this_page": {
 		"sourceHash": "95db96a9cea387db",
-		"status": "machine",
+		"status": "reviewed",
 		"translator": "Claude",
-		"qaHash": "aceec4f146108ab5"
+		"reviewer": "George Donnelly"
 	},
 	"notfound_finality": {
 		"sourceHash": "e8970eec01924f54",
-		"status": "machine",
+		"status": "reviewed",
 		"translator": "Claude",
-		"qaHash": "d203e4eee7f21fbb"
+		"reviewer": "George Donnelly"
 	},
 	"notfound_back_to_tip": {
 		"sourceHash": "af5a9e6e0d95e71d",
-		"status": "machine",
+		"status": "reviewed",
 		"translator": "Claude",
-		"qaHash": "ebdf571548ab05ba"
+		"reviewer": "George Donnelly"
 	},
 	"notfound_search_glossary": {
 		"sourceHash": "0c5e5cc293e60e1b",
-		"status": "machine",
+		"status": "reviewed",
 		"translator": "Claude",
-		"qaHash": "8d57b19b0b8214c9"
+		"reviewer": "George Donnelly"
 	},
 	"blog_pagination_newer": {
 		"sourceHash": "53ec8010c109aed9",
-		"status": "machine",
+		"status": "reviewed",
 		"translator": "Claude",
-		"qaHash": "6bf1592cfeb072ff"
+		"reviewer": "George Donnelly"
 	},
 	"blog_pagination_older": {
 		"sourceHash": "3d2b3dfc111b8dd9",
-		"status": "machine",
+		"status": "reviewed",
 		"translator": "Claude",
-		"qaHash": "520b7560c3e116a4"
+		"reviewer": "George Donnelly"
 	},
 	"blog_post_updated": {
 		"sourceHash": "ccdf0762d89e2695",
-		"status": "machine",
+		"status": "reviewed",
 		"translator": "Claude",
-		"qaHash": "4f28ff9bc3b710b6"
+		"reviewer": "George Donnelly"
 	},
 	"blog_post_min_read": {
 		"sourceHash": "79540970c0711472",
-		"status": "machine",
+		"status": "reviewed",
 		"translator": "Claude",
-		"qaHash": "1d6b8b1029808fb1"
+		"reviewer": "George Donnelly"
 	},
 	"blog_post_back_to_blog": {
 		"sourceHash": "49765d27569bf767",
-		"status": "machine",
+		"status": "reviewed",
 		"translator": "Claude",
-		"qaHash": "4ca818fb702a5b56"
+		"reviewer": "George Donnelly"
 	},
 	"blog_post_back_to_top_label": {
 		"sourceHash": "7f4646c0703d108c",
-		"status": "machine",
+		"status": "reviewed",
 		"translator": "Claude",
-		"qaHash": "df8dae7fac1e0533"
+		"reviewer": "George Donnelly"
 	},
 	"blog_post_back_to_top": {
 		"sourceHash": "27644f0497fd9849",
-		"status": "machine",
+		"status": "reviewed",
 		"translator": "Claude",
-		"qaHash": "86e749739f0f2a46"
+		"reviewer": "George Donnelly"
 	},
 	"blog_code_lang_fallback": {
 		"sourceHash": "4a1933b06cf695fc",
-		"status": "machine",
+		"status": "reviewed",
 		"translator": "Claude",
-		"qaHash": "3971afb0352b63c2"
+		"reviewer": "George Donnelly"
 	},
 	"blog_code_copy": {
 		"sourceHash": "4f60d1e142affa9c",
-		"status": "machine",
+		"status": "reviewed",
 		"translator": "Claude",
-		"qaHash": "af1283f2e36dd0c9"
+		"reviewer": "George Donnelly"
 	},
 	"blog_code_copy_label": {
 		"sourceHash": "5970bd6f73035c3d",
-		"status": "machine",
+		"status": "reviewed",
 		"translator": "Claude",
-		"qaHash": "f4c76babdcc52a39"
+		"reviewer": "George Donnelly"
 	},
 	"blog_code_copied": {
 		"sourceHash": "e04191fa6cc78800",
-		"status": "machine",
+		"status": "reviewed",
 		"translator": "Claude",
-		"qaHash": "871ce72354693545"
+		"reviewer": "George Donnelly"
 	},
 	"blog_code_copy_manual": {
 		"sourceHash": "1468cd0288801aa6",
-		"status": "machine",
+		"status": "reviewed",
 		"translator": "Claude",
-		"qaHash": "2042809426bc0f49"
+		"reviewer": "George Donnelly"
 	},
 	"ref_article_verified": {
 		"sourceHash": "c91735882a48dd54",
-		"status": "machine",
+		"status": "reviewed",
 		"translator": "Claude",
-		"qaHash": "64fb7daba27edf09"
+		"reviewer": "George Donnelly"
 	},
 	"ref_article_faq": {
 		"sourceHash": "85fd5b082eaec7e3",
-		"status": "machine",
+		"status": "reviewed",
 		"translator": "Claude",
-		"qaHash": "c4b99e536388887c"
+		"reviewer": "George Donnelly"
 	},
 	"ref_article_sources": {
 		"sourceHash": "267b19cf16b7766d",
-		"status": "machine",
+		"status": "reviewed",
 		"translator": "Claude",
-		"qaHash": "db837c27f13fa1c5"
+		"reviewer": "George Donnelly"
 	},
 	"ref_freshness_hint_fresh": {
 		"sourceHash": "63e89162df1dfd25",
-		"status": "machine",
+		"status": "reviewed",
 		"translator": "Claude",
-		"qaHash": "10b3fe3f43fff304"
+		"reviewer": "George Donnelly"
 	},
 	"ref_freshness_hint_aging": {
 		"sourceHash": "5715ec92865a0f1d",
-		"status": "machine",
+		"status": "reviewed",
 		"translator": "Claude",
-		"qaHash": "f4b2ea6517cc3cc0"
+		"reviewer": "George Donnelly"
 	},
 	"ref_freshness_hint_stale": {
 		"sourceHash": "8ccd8f692e49d2b0",
-		"status": "machine",
+		"status": "reviewed",
 		"translator": "Claude",
-		"qaHash": "e1428aa675935046"
+		"reviewer": "George Donnelly"
 	},
 	"ref_freshness_never_checked": {
 		"sourceHash": "d1e646140dc020fa",
-		"status": "machine",
+		"status": "reviewed",
 		"translator": "Claude",
-		"qaHash": "24da0b2df92ccaff"
+		"reviewer": "George Donnelly"
 	},
 	"ref_freshness_stale_sr": {
 		"sourceHash": "1ac543f92e541b3f",
-		"status": "machine",
+		"status": "reviewed",
 		"translator": "Claude",
-		"qaHash": "cf16c3befc3bd500"
+		"reviewer": "George Donnelly"
 	},
 	"ref_freshness_not_verified": {
 		"sourceHash": "a7d16557a6de3c15",
-		"status": "machine",
+		"status": "reviewed",
 		"translator": "Claude",
-		"qaHash": "92bcaca80ed916d9"
+		"reviewer": "George Donnelly"
 	},
 	"ref_snapshot": {
 		"sourceHash": "ebe36488221f8f29",
-		"status": "machine",
+		"status": "reviewed",
 		"translator": "Claude",
-		"qaHash": "fe3e0ec044111ab9"
+		"reviewer": "George Donnelly"
 	},
 	"ref_vitals_heading": {
 		"sourceHash": "b6dd2ea94b4d6ebb",
-		"status": "machine",
+		"status": "reviewed",
 		"translator": "Claude",
-		"qaHash": "d3e410b5d7734497"
+		"reviewer": "George Donnelly"
 	},
 	"ref_vitals_block_height": {
 		"sourceHash": "aa396006be89f301",
-		"status": "machine",
+		"status": "reviewed",
 		"translator": "Claude",
-		"qaHash": "2023dd6807651932"
+		"reviewer": "George Donnelly"
 	},
 	"ref_vitals_tx_24h": {
 		"sourceHash": "0f9c5af2e1e6b755",
-		"status": "machine",
+		"status": "reviewed",
 		"translator": "Claude",
-		"qaHash": "0455d509a8a0d577"
+		"reviewer": "George Donnelly"
 	},
 	"ref_vitals_median_fee": {
 		"sourceHash": "a09d9f334f866530",
-		"status": "machine",
+		"status": "reviewed",
 		"translator": "Claude",
-		"qaHash": "261d77121ace1d38"
+		"reviewer": "George Donnelly"
 	},
 	"ref_vitals_blocks_24h": {
 		"sourceHash": "0824e76257fd41cb",
-		"status": "machine",
+		"status": "reviewed",
 		"translator": "Claude",
-		"qaHash": "84b134217965d5f7"
+		"reviewer": "George Donnelly"
 	},
 	"ref_vitals_hashrate": {
 		"sourceHash": "c354a102ea3a4fa5",
-		"status": "machine",
+		"status": "reviewed",
 		"translator": "Claude",
-		"qaHash": "c6f48e00a85fe02b"
+		"reviewer": "George Donnelly"
 	},
 	"ref_vitals_nodes": {
 		"sourceHash": "f5b4dc937970322d",
-		"status": "machine",
+		"status": "reviewed",
 		"translator": "Claude",
-		"qaHash": "6d47c818f1905010"
+		"reviewer": "George Donnelly"
 	},
 	"ref_vitals_source": {
 		"sourceHash": "3d59ff4fd296be77",
-		"status": "machine",
+		"status": "reviewed",
 		"translator": "Claude",
-		"qaHash": "05a9da96d0d01530"
+		"reviewer": "George Donnelly"
 	},
 	"ref_vitals_refreshed_daily": {
 		"sourceHash": "f5b8f948bfa72290",
-		"status": "machine",
+		"status": "reviewed",
 		"translator": "Claude",
-		"qaHash": "2d03348bf2b5a81e"
+		"reviewer": "George Donnelly"
 	},
 	"ref_countdown_next_upgrade": {
 		"sourceHash": "7ca1bff3ca2709d5",
-		"status": "machine",
+		"status": "reviewed",
 		"translator": "Claude",
-		"qaHash": "8f06fb2fbd0c7f88"
+		"reviewer": "George Donnelly"
 	},
 	"ref_countdown_in_days": {
 		"sourceHash": "284439c0675c1d97",
-		"status": "machine",
+		"status": "reviewed",
 		"translator": "Claude",
-		"qaHash": "76f0f6ad4334d288"
+		"reviewer": "George Donnelly"
 	},
 	"ref_countdown_activated": {
 		"sourceHash": "4648f0a5be663f1b",
-		"status": "machine",
+		"status": "reviewed",
 		"translator": "Claude",
-		"qaHash": "5b5de70c79a36602"
+		"reviewer": "George Donnelly"
 	},
 	"ref_countdown_remaining": {
 		"sourceHash": "a47ad7165c40acfb",
-		"status": "machine",
+		"status": "reviewed",
 		"translator": "Claude",
-		"qaHash": "c76accb72c0777d6"
+		"reviewer": "George Donnelly"
 	},
 	"ref_health_alive": {
 		"sourceHash": "f3b367b1b1a62c54",
-		"status": "machine",
+		"status": "reviewed",
 		"translator": "Claude",
-		"qaHash": "b8190699b38f511e"
+		"reviewer": "George Donnelly"
 	},
 	"ref_health_stale": {
 		"sourceHash": "f8a2563c3d6855f5",
-		"status": "machine",
+		"status": "reviewed",
 		"translator": "Claude",
-		"qaHash": "e6ce859c2f2d7e81"
+		"reviewer": "George Donnelly"
 	},
 	"ref_health_dead": {
 		"sourceHash": "0453462f31b2bcf6",
-		"status": "machine",
+		"status": "reviewed",
 		"translator": "Claude",
-		"qaHash": "965c6849129d50fa"
+		"reviewer": "George Donnelly"
 	},
 	"ref_health_unknown": {
 		"sourceHash": "eb8bf0d80db32399",
-		"status": "machine",
+		"status": "reviewed",
 		"translator": "Claude",
-		"qaHash": "dcbeb3ce51223ee3"
+		"reviewer": "George Donnelly"
 	},
 	"ref_health_http": {
 		"sourceHash": "003886655e74e29b",
-		"status": "machine",
+		"status": "reviewed",
 		"translator": "Claude",
-		"qaHash": "0539ec4760ee418c"
+		"reviewer": "George Donnelly"
 	},
 	"ref_health_unreachable": {
 		"sourceHash": "e7f0ac074bc696fc",
-		"status": "machine",
+		"status": "reviewed",
 		"translator": "Claude",
-		"qaHash": "bf7e00f5289ff214"
+		"reviewer": "George Donnelly"
 	},
 	"ref_health_archived": {
 		"sourceHash": "f5bc4f8430945823",
-		"status": "machine",
+		"status": "reviewed",
 		"translator": "Claude",
-		"qaHash": "89658c5e0ed5b08e"
+		"reviewer": "George Donnelly"
 	},
 	"ref_health_last_commit": {
 		"sourceHash": "49bcdb341b1eb2cc",
-		"status": "machine",
+		"status": "reviewed",
 		"translator": "Claude",
-		"qaHash": "20e9fe1160f7cb69"
+		"reviewer": "George Donnelly"
 	},
 	"ref_health_checked": {
 		"sourceHash": "bb2cc7e987ee9db9",
-		"status": "machine",
+		"status": "reviewed",
 		"translator": "Claude",
-		"qaHash": "4988d57d73419a0e"
+		"reviewer": "George Donnelly"
 	},
 	"ref_health_not_checked": {
 		"sourceHash": "8f867b5ce4621f43",
-		"status": "machine",
+		"status": "reviewed",
 		"translator": "Claude",
-		"qaHash": "c45cc12d851dcf2d"
+		"reviewer": "George Donnelly"
 	},
 	"ref_numbers_title": {
 		"sourceHash": "00addfab01fe20f7",
-		"status": "machine",
+		"status": "reviewed",
 		"translator": "Claude",
-		"qaHash": "3dcb7d01a9464278"
+		"reviewer": "George Donnelly"
 	},
 	"ref_numbers_chain": {
 		"sourceHash": "3dc350d9e6eb85c8",
-		"status": "machine",
+		"status": "reviewed",
 		"translator": "Claude",
-		"qaHash": "9b49124da8ae87c5"
+		"reviewer": "George Donnelly"
 	},
 	"ref_numbers_median_fee": {
 		"sourceHash": "a09d9f334f866530",
-		"status": "machine",
+		"status": "reviewed",
 		"translator": "Claude",
-		"qaHash": "261d77121ace1d38"
+		"reviewer": "George Donnelly"
 	},
 	"ref_numbers_tx_24h": {
 		"sourceHash": "06b517f3327720fd",
-		"status": "machine",
+		"status": "reviewed",
 		"translator": "Claude",
-		"qaHash": "31f847e34d801ca6"
+		"reviewer": "George Donnelly"
 	},
 	"ref_numbers_block_time": {
 		"sourceHash": "264a96013f2c7be4",
-		"status": "machine",
+		"status": "reviewed",
 		"translator": "Claude",
-		"qaHash": "f0e01f7d8c1bcf6b"
+		"reviewer": "George Donnelly"
 	},
 	"ref_numbers_market_cap": {
 		"sourceHash": "ae193521149737e1",
-		"status": "machine",
+		"status": "reviewed",
 		"translator": "Claude",
-		"qaHash": "b0ea77702d41d484"
+		"reviewer": "George Donnelly"
 	},
 	"ref_numbers_sources": {
 		"sourceHash": "4e3a037c72bc1ab8",
-		"status": "machine",
+		"status": "reviewed",
 		"translator": "Claude",
-		"qaHash": "2c62598436ff3a97"
+		"reviewer": "George Donnelly"
 	},
 	"ref_numbers_sources_fees": {
 		"sourceHash": "a777851507b17a0c",
-		"status": "machine",
+		"status": "reviewed",
 		"translator": "Claude",
-		"qaHash": "47f5106cea361ec9"
+		"reviewer": "George Donnelly"
 	},
 	"ref_numbers_sources_market_cap": {
 		"sourceHash": "6bacd42d3c088314",
-		"status": "machine",
+		"status": "reviewed",
 		"translator": "Claude",
-		"qaHash": "4056e4f0a896dc32"
+		"reviewer": "George Donnelly"
 	},
 	"ref_numbers_sources_and": {
 		"sourceHash": "88734c440aebeb4d",
-		"status": "machine",
+		"status": "reviewed",
 		"translator": "Claude",
-		"qaHash": "ed567b0bc6a3a534"
+		"reviewer": "George Donnelly"
 	},
 	"ref_numbers_sol_note": {
 		"sourceHash": "cb436ded6c6d03a0",
-		"status": "machine",
+		"status": "reviewed",
 		"translator": "Claude",
-		"qaHash": "12d80c76b99cf979"
+		"reviewer": "George Donnelly"
 	},
 	"ref_numbers_kas_note": {
 		"sourceHash": "3f41a28090f5f53c",
-		"status": "machine",
+		"status": "reviewed",
 		"translator": "Claude",
-		"qaHash": "7ce4fbf0a483f976"
+		"reviewer": "George Donnelly"
 	},
 	"ref_numbers_average_note": {
 		"sourceHash": "965b65958c0bd83c",
-		"status": "machine",
+		"status": "reviewed",
 		"translator": "Claude",
-		"qaHash": "82689e72782e18d6"
+		"reviewer": "George Donnelly"
 	},
 	"ref_numbers_na_note": {
 		"sourceHash": "d758b999c6cca929",
-		"status": "machine",
+		"status": "reviewed",
 		"translator": "Claude",
-		"qaHash": "da9b2998a2d84168"
+		"reviewer": "George Donnelly"
 	},
 	"legal_english_governs": {
 		"sourceHash": "3f44506b722b4947",
-		"status": "machine",
+		"status": "reviewed",
 		"translator": "Claude",
-		"qaHash": "2f10dc76c1e92fd1"
+		"reviewer": "George Donnelly"
 	},
 	"legal_english_governs_link": {
 		"sourceHash": "9ad2585ad4f0c260",
-		"status": "machine",
+		"status": "reviewed",
 		"translator": "Claude",
-		"qaHash": "2e396a3104a23325"
+		"reviewer": "George Donnelly"
 	}
 }

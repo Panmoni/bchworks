@@ -55,7 +55,7 @@ video:
 cta:
   title: ¿Billetera lista?
   subtitle: Consigue un poco de BCH y envíate un pago de prueba. Cuesta menos de un centavo.
-  next: 'Siguiente: consigue algo de BCH →'
+  next: 'Siguiente: conseguir algo de BCH →'
   updates: Recibir novedades de BCH
 translation:
   sourceHash: 0289c2d0646b45fd

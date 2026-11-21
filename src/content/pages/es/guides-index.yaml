@@ -6,6 +6,6 @@ hero:
   subtitle: Cómo comprar, gastar, enviar remesas y convertir en efectivo, país por país. En el idioma local.
 translation:
   sourceHash: 277a41e838847638
-  status: machine
+  status: reviewed
   translator: Claude
-  qaHash: f757ce2da12081b0
+  reviewer: George Donnelly

@@ -12,9 +12,9 @@ metadata:
   title: Acuña tus primeros NFTs en Bitcoin Cash
 translation:
   sourceHash: 078d00558eaf20a9
-  status: machine
+  status: reviewed
   translator: Claude
-  qaHash: e342a6bcce12777d
+  reviewer: George Donnelly
 ---
 
 ## Tabla de contenidos

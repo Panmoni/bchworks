@@ -89,7 +89,7 @@ Nuestro [directorio](/directory) revisa a diario cada proyecto listado. De 371 p
 
 **Cambian:** fondos y traders regulados pueden tomar una posición en BCH sin tener monedas ni confiar en un exchange en el extranjero. Eso puede traer liquidez y atención.
 
-**No cambian:** las comisiones, los tiempos de bloque, la capacidad, las actualizaciones ni la posibilidad de cualquiera de enviar BCH. Nada de eso depende de un mercado de futuros.
+**No cambian:** las comisiones, los tiempos de bloque, la capacidad, las actualizaciones ni la posibilidad de que cualquiera envíe BCH. Nada de eso depende de un mercado de futuros.
 
 Si llegaste aquí por los futuros, empieza por [por qué Bitcoin Cash](/bitcoin-cash) y luego [cómo se compara con Bitcoin](/compare/bch-vs-btc). Si quieres comprobar las cifras tú mismo, [consigue una billetera](/onboard) y envía un pago. Cuesta alrededor de una décima de centavo.
 

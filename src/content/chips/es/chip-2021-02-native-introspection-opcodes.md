@@ -39,9 +39,9 @@ sources:
     url: https://upgradespecs.bitcoincashnode.org/2022-05-15-upgrade/
 translation:
   sourceHash: 5c1da0ff13624470
-  status: machine
+  status: reviewed
   translator: Claude
-  qaHash: 7c009e2c300285fd
+  reviewer: George Donnelly
 ---
 
 ## Resumen

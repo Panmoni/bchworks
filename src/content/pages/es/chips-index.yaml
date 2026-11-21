@@ -7,6 +7,6 @@ hero:
 intro: BCH no tiene fundación ni un único cliente. Un cambio se incorpora cuando los equipos de nodos, los mineros, los exchanges y los desarrolladores llegan a un acuerdo sobre un CHIP, normalmente tras un año de debate en <a class="underline" href="https://bitcoincashresearch.org" target="_blank" rel="noopener noreferrer">bitcoincashresearch.org</a>. Consulta la <a class="underline" href="/upgrades">cronología de actualizaciones</a> para ver qué se incorporó y cuándo.
 translation:
   sourceHash: d74b0c22379063df
-  status: machine
+  status: reviewed
   translator: Claude
-  qaHash: 41e3d39afb4ea5eb
+  reviewer: George Donnelly

@@ -91,7 +91,7 @@ el modelo [UTXO](/glossary#utxo) sin estado de BCH. Los contratos pueden interac
 
 ## Estado actual
 
-Final (versión 2.2.2). Se activó el 15 de mayo de 2023; chipnet (la red de pruebas de los CHIPs) lo ejecutaba desde el 15 de noviembre de 2022.
+Final (versión 2.2.2). Se activó el 15 de mayo de 2023; Chipnet (la red de pruebas de los CHIPs) lo ejecutaba desde el 15 de noviembre de 2022.
 
 La tabla de partes interesadas registra 82 aprobaciones, 1 desaprobación (Memo Technology, Inc.) y 253 neutrales. La consulta del CHIP
 contó las faltas de respuesta como neutrales, así que la cifra de neutrales refleja sobre todo silencio, no objeción. Todas las implementaciones

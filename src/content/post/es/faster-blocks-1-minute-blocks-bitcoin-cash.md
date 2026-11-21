@@ -14,9 +14,9 @@ metadata:
   description: CHIP-2025-03 llevaría Bitcoin Cash a bloques de 1 minuto en mayo de 2027. Qué cambia, qué no, los argumentos a favor y en contra, y el cierre del 15 de noviembre.
 translation:
   sourceHash: 2275643202fafab7
-  status: machine
+  status: reviewed
   translator: Claude
-  qaHash: 6a19152761c2d933
+  reviewer: George Donnelly
 ---
 
 Bitcoin Cash produce un bloque aproximadamente cada 10 minutos. Una propuesta llamada [Faster Blocks (CHIP-2025-03)](/chips/chip-2025-03-faster-blocks) lo reduciría a 1 minuto, a partir de la actualización de mayo de 2027.

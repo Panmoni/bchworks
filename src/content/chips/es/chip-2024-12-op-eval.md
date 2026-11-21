@@ -18,9 +18,9 @@ sources:
     url: https://github.com/bitjson/bch-functions
 translation:
   sourceHash: cdb0f6f0e5aa8065
-  status: machine
+  status: reviewed
   translator: Claude
-  qaHash: 81648e4726fe1aba
+  reviewer: George Donnelly
 ---
 
 ## Resumen

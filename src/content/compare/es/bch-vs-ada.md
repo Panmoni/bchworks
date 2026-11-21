@@ -73,7 +73,7 @@ Cardano se lanzó en 2017 como una nueva cadena de prueba de participación basa
 
 | | Bitcoin Cash (BCH) | Cardano (ADA) |
 |---|---|---|
-| Tiempo de bloque | ~10 minutos (prueba de trabajo) | ~20 segundos (slots de 1 s, 5 % activos) |
+| Tiempo de bloque | ~10 minutos (prueba de trabajo) | ~20 segundos (slots de 1 s, 5 % activos) |
 | Política de tamaño de bloque | Límite adaptativo (ABLA), mínimo de 32 MB, crece con el uso sostenido | Parámetro del protocolo, modificado por voto de gobernanza |
 | Modelo de comisiones | Tasa fija por byte; 1 sat/byte por defecto | `a × size + b`, más costos de ejecución de scripts |
 | Modelo de contratos inteligentes | [Covenants](/glossary#covenant) de UTXO (contratos que limitan cómo se pueden gastar las monedas) con opcodes (códigos de operación) de introspección | eUTXO: datum, redeemer, contexto del script |

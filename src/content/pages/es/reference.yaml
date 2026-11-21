@@ -51,6 +51,6 @@ sections:
     text: El informe mensual de datos.
 translation:
   sourceHash: 5ae62f1cafc0dd48
-  status: machine
+  status: reviewed
   translator: Claude
-  qaHash: 818c96c1485acd63
+  reviewer: George Donnelly

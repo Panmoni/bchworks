@@ -2,6 +2,6 @@ eyebrow: <a href="/compare">Comparar</a> · BCH frente a {ticker}
 numbers: 'BCH frente a {ticker}: las cifras reales'
 translation:
   sourceHash: c1480018730f0d37
-  status: machine
+  status: reviewed
   translator: Claude
-  qaHash: e7671b2f82e6e4c4
+  reviewer: George Donnelly

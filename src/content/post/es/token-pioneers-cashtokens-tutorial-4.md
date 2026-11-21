@@ -130,7 +130,7 @@ Se pueden extraer datos detallados de estos NFTs parseables para que luego los u
 
 ### Los NFTs parseables sí escalan
 
-¡No son los JPEG graciosos de tu abuelo! BCH Los NFTs parseables se pueden poner a trabajar en tus casos de uso Web3 complejos. Y, algo único, ¡escalan! ¿Ya lo había mencionado?
+¡No son los JPEG graciosos de tu abuelo! Los NFTs parseables de BCH se pueden poner a trabajar en tus casos de uso Web3 complejos. Y, algo único, ¡escalan! ¿Ya lo había mencionado?
 
 Los NFTs parseables solo pueden contener hasta 40 bytes de datos de `commitment`, pero aun así se puede hacer mucho con eso, y esta cantidad podría aumentar en el futuro.
 
