@@ -1,6 +1,7 @@
 ---
 // import { Icon } from 'astro-icon/components';
 
+import SeriesNav from "~/components/blog/SeriesNav.astro";
 import PostTags from "~/components/blog/Tags.astro";
 import Image from "~/components/common/Image.astro";
 import TranslationNotice from "~/components/common/TranslationNotice.astro";
@@ -79,6 +80,7 @@ const l = msg(Astro.currentLocale);
     <div class="mt-8 md:mt-12 grid gap-10 lg:grid-cols-[minmax(0,1fr)_16rem] lg:gap-16">
       <div class="min-w-0 prose prose-lg lg:prose-xl max-w-none prose-headings:scroll-mt-[100px]">
         {Content ? <Content /> : <Fragment set:html={post.content || ''} />}
+        <SeriesNav slug={post.slug} />
       </div>
       <aside class="lg:sticky lg:top-28 self-start flex flex-col gap-6">
         {post.tags?.length ? <PostTags tags={post.tags} /> : null}
