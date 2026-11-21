@@ -72,7 +72,7 @@ test("a reference page's copy is found through its id prop", () => {
 	]);
 });
 
-test("a collection route adds the entry it renders", () => {
+test("a collection route adds its entry and the other collections it reads", () => {
 	const page = `export const getStaticPaths = async () =>
 	(await getCollection("chips")).map((e) => ({ params: { slug: e.id } }));
 const copy = await getPageCopy("chips-entry");
@@ -81,7 +81,6 @@ const up = (await getCollection("upgrades")).find(() => true);`;
 		"src/pages/chips/[slug].astro": page,
 		"src/content/pages/chips-entry.yaml": "x: 1",
 		"src/content/chips/chip-a.md": "# A",
-		"src/content/upgrades/chip-a.md": "# not this one",
 	});
 	assert.deepEqual(
 		pageSources("src/pages/chips/[slug].astro", "/chips/chip-a", root),
@@ -89,6 +88,8 @@ const up = (await getCollection("upgrades")).find(() => true);`;
 			"src/pages/chips/[slug].astro",
 			"src/content/pages/chips-entry.yaml",
 			"src/content/chips/chip-a.md",
+			"src/content/upgrades/*",
+			"src/data/upgrades.json",
 		],
 	);
 });
@@ -137,7 +138,13 @@ const git = (root, env, ...args) =>
 	execFileSync("git", args, {
 		cwd: root,
 		stdio: "ignore",
-		env: { ...process.env, ...env },
+		// The developer's own git config (signing, hooks) stays out of it.
+		env: {
+			...process.env,
+			GIT_CONFIG_GLOBAL: "/dev/null",
+			GIT_CONFIG_NOSYSTEM: "1",
+			...env,
+		},
 	});
 
 const commit = (root, file, date) => {
@@ -169,6 +176,6 @@ test("commitDates gives each file its newest commit date", () => {
 	assert.equal(Date.parse(dates.get("src/b.md")), Date.parse("2026-02-01"));
 });
 
-test("commitDates is empty outside a git repo", () => {
-	assert.equal(commitDates(fixture({})).size, 0);
+test("commitDates is empty when git cannot run", () => {
+	assert.equal(commitDates(path.join(fixture({}), "missing")).size, 0);
 });

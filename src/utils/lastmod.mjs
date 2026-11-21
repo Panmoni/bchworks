@@ -6,6 +6,10 @@
 // entry it renders and the collections it lists. Never the build time, so
 // two builds of the same commit give the same sitemap.
 //
+// The sources are an approximation read from the source text: data reached
+// through other helpers (the daily health.json badges) does not count, and a
+// listing counts every file in its collection, drafts included.
+//
 // The build fetches full history first (scripts/version.mjs unshallows the
 // Cloudflare clone when astro.config.mjs loads). If that fails, pages get
 // no lastmod and the build warns, rather than every page getting HEAD's date.
@@ -75,6 +79,10 @@ export function pageSources(entrypoint, pagePath, root) {
 			].filter(exists),
 		);
 	}
+	// Other collections the route file reads, such as the upgrade a chip page
+	// links to, count in full: any of their entries can change the page.
+	for (const [, c] of src.matchAll(/getCollection\("(\w+)"/g))
+		if (c !== entryOf?.[1]) sources.push(...collectionSource(c));
 	for (const [, mod] of src.matchAll(HOP_IMPORT)) {
 		const file = mod.endsWith(".astro") ? `src/${mod}` : `src/${mod}.ts`;
 		const hop = read(root, file);
