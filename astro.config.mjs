@@ -14,12 +14,12 @@ import localizeLinks from "./src/i18n/links-integration.mjs";
 import { astroI18n, draftLocaleCodes } from "./src/i18n/locales.ts";
 import { paraglideOptions } from "./src/i18n/paraglide.mjs";
 import { SITE } from "./src/utils/config.ts";
-
 import {
 	lazyImagesPlugin,
 	readingTimePlugin,
 	responsiveTablesPlugin,
 } from "./src/utils/frontmatter.mjs";
+import { sitemapLastmod } from "./src/utils/lastmod.mjs";
 import tasks from "./src/utils/tasks.mjs";
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
@@ -33,6 +33,8 @@ const inDraftLocale = (pathname) =>
 // hreflang for translated pages, written after the build; the sitemap
 // reuses the same links as xhtml:link alternates.
 const alternates = i18nAlternates();
+// <lastmod> per sitemap entry: a post's own date, else its sources' last commit.
+const lastmod = sitemapLastmod();
 
 // The footer shows the site version and build commit (scripts/version.mjs).
 const build = resolveVersion();
@@ -129,10 +131,11 @@ export default defineConfig({
 	integrations: [
 		// Before sitemap(): it fills the links that sitemap's serialize reads.
 		alternates.integration,
+		lastmod.integration,
 		...(SITE.site
 			? [
 					sitemap({
-						serialize: alternates.serialize,
+						serialize: (item) => lastmod.serialize(alternates.serialize(item)),
 						// Tag, category and paged blog archives are noindex; keep them out.
 						filter: (page) =>
 							!/\/(tag|category)\/|\/blog\/\d+$/.test(page) &&
