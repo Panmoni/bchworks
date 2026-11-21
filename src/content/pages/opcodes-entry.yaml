@@ -25,4 +25,17 @@ btcLabel:
 
 example:
   title: Example
+  # Walkthrough table headings: the stack after each step, top on the right.
+  step: Step
+  stack: Stack after (top on the right)
+  note: What happens
   debugger: 'Step through it opcode by opcode in <a href="https://ide.bitauth.com" target="_blank" rel="noopener noreferrer">Bitauth IDE</a>, the in-browser BCH VM debugger.'
+
+usedIn:
+  title: Where {name} is used
+  kind:
+    chip: CHIP
+    upgrade: Upgrade
+    contract: Contracts
+    tutorial: Tutorial
+    implementation: Implementation

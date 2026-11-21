@@ -11,9 +11,67 @@
 		"stackOut": "0",
 		"description": "Pushes an empty byte string, which the VM reads as the number 0 and as false.",
 		"cost": "Base instruction cost 100; pushes 0 bytes.",
-		"example": "OP_0",
+		"example": "OP_0 OP_IF <0x01> OP_ELSE <0x02> OP_ENDIF <0x02> OP_EQUAL",
+		"metaDescription": "OP_0 (OP_FALSE, 0x00) pushes an empty byte string that Bitcoin Cash Script reads as 0 and false. Worked example, stack trace and where contracts use it.",
+		"walkthrough": [
+			{
+				"op": "OP_0",
+				"stack": "0x",
+				"note": "Pushes an empty item: the number 0, and false."
+			},
+			{
+				"op": "OP_IF",
+				"stack": "∅",
+				"note": "Pops the false item and skips to OP_ELSE; <0x01> never runs."
+			},
+			{
+				"op": "<0x02>",
+				"stack": "0x02",
+				"note": "The OP_ELSE branch runs."
+			},
+			{
+				"op": "OP_ENDIF",
+				"stack": "0x02",
+				"note": "Closes the conditional."
+			},
+			{
+				"op": "<0x02>",
+				"stack": "0x02 0x02"
+			},
+			{
+				"op": "OP_EQUAL",
+				"stack": "1",
+				"note": "The ELSE branch ran, so the script ends true."
+			}
+		],
+		"usedIn": [
+			{
+				"kind": "contract",
+				"title": "CashScript function selector",
+				"url": "https://github.com/CashScript/cashscript/blob/master/packages/cashc/src/generation/GenerateTargetTraversal.ts",
+				"note": "A CashScript contract with several functions picks one by an index the spender pushes. Index 0 is an empty push, which minimal encoding writes as OP_0."
+			},
+			{
+				"kind": "tutorial",
+				"title": "Token Pioneers Tutorial 4: parsable NFTs",
+				"url": "/blog/token-pioneers-cashtokens-tutorial-4",
+				"note": "Decodes NFT commitment bytecode that starts with OP_0 OP_TOALTSTACK."
+			},
+			{
+				"kind": "upgrade",
+				"title": "November 2019: Schnorr multisig and MINIMALDATA",
+				"url": "/upgrades/2019-11-upgrade",
+				"note": "Made minimal pushes a consensus rule, so an empty or zero push must be OP_0."
+			},
+			{
+				"kind": "chip",
+				"title": "VM Limits: Targeted Virtual Machine Limits",
+				"url": "/chips/chip-2021-05-vm-limits",
+				"note": "Sets the base instruction cost of 100 that OP_0 pays."
+			}
+		],
 		"btc": "same",
-		"verified": "2026-09-26",
+		"verified": "2026-11-21",
 		"sources": [
 			{
 				"title": "Libauth BCH_2023_05 opcodes (bch-2023-opcodes.ts)",
@@ -144,8 +202,50 @@
 		"description": "Pushes the number -1.",
 		"cost": "Base instruction cost 100 plus the byte length of the pushed result (2025 VM limits).",
 		"example": "OP_1NEGATE OP_ABS OP_1 OP_EQUAL",
+		"metaDescription": "OP_1NEGATE (0x4f) pushes -1 in Bitcoin Cash Script, the only minimal way to push it since 2019. Worked example with stack trace, cost and uses.",
+		"walkthrough": [
+			{
+				"op": "OP_1NEGATE",
+				"stack": "-1",
+				"note": "Pushes the one-byte number 0x81, which is -1."
+			},
+			{
+				"op": "OP_ABS",
+				"stack": "1",
+				"note": "Absolute value of -1."
+			},
+			{
+				"op": "OP_1",
+				"stack": "1 1"
+			},
+			{
+				"op": "OP_EQUAL",
+				"stack": "1",
+				"note": "Both items are the byte 0x01, so the script ends true."
+			}
+		],
+		"usedIn": [
+			{
+				"kind": "upgrade",
+				"title": "November 2019: Schnorr multisig and MINIMALDATA",
+				"url": "/upgrades/2019-11-upgrade",
+				"note": "Made minimal pushes a consensus rule. A script that pushes -1 as the data byte 0x81 now fails; it must use OP_1NEGATE."
+			},
+			{
+				"kind": "contract",
+				"title": "CashScript integer literals",
+				"url": "https://github.com/CashScript/cashscript/blob/master/packages/cashc/src/generation/GenerateTargetTraversal.ts",
+				"note": "CashScript encodes integer literals as minimal pushes, so a literal -1 in a contract compiles to OP_1NEGATE."
+			},
+			{
+				"kind": "chip",
+				"title": "Bigger Script Integers",
+				"url": "/chips/chip-2021-03-bigger-script-integers",
+				"note": "Widened the signed script numbers that -1 belongs to, from 32 to 64 bits."
+			}
+		],
 		"btc": "same",
-		"verified": "2026-09-26",
+		"verified": "2026-11-21",
 		"sources": [
 			{
 				"title": "Libauth BCH_2023_05 opcodes (bch-2023-opcodes.ts)",
@@ -1028,8 +1128,47 @@
 		"description": "Pushes the number of items on the stack.",
 		"cost": "Base instruction cost 100 plus bytes pushed (2025 VM limits).",
 		"example": "OP_1 OP_2 OP_DEPTH OP_2 OP_EQUAL",
+		"metaDescription": "OP_DEPTH (0x74) pushes how many items sit on the Bitcoin Cash Script stack. Worked example with stack trace, cost and how scripts use the count.",
+		"walkthrough": [
+			{
+				"op": "OP_1",
+				"stack": "1"
+			},
+			{
+				"op": "OP_2",
+				"stack": "1 2"
+			},
+			{
+				"op": "OP_DEPTH",
+				"stack": "1 2 2",
+				"note": "Two items were on the stack, so it pushes 2."
+			},
+			{
+				"op": "OP_2",
+				"stack": "1 2 2 2"
+			},
+			{
+				"op": "OP_EQUAL",
+				"stack": "1 2 1",
+				"note": "The count matched. The top item is true."
+			}
+		],
+		"usedIn": [
+			{
+				"kind": "contract",
+				"title": "Hand-written scripts, with OP_NUMEQUALVERIFY",
+				"url": "/opcodes/op_numequalverify",
+				"note": "A script can start with OP_DEPTH <n> OP_NUMEQUALVERIFY to reject an unlocking script that supplies the wrong number of items. CashScript does not emit OP_DEPTH; it tracks stack positions at compile time."
+			},
+			{
+				"kind": "implementation",
+				"title": "Libauth BCH VM",
+				"url": "https://github.com/bitauth/libauth/blob/next/src/lib/vm/instruction-sets/bch/2023/bch-2023-opcodes.ts",
+				"note": "The reference JavaScript implementation that Bitauth IDE runs."
+			}
+		],
 		"btc": "same",
-		"verified": "2026-09-26",
+		"verified": "2026-11-21",
 		"sources": [
 			{
 				"title": "Libauth BCH_2023_05 opcodes (bch-2023-opcodes.ts)",
@@ -1211,9 +1350,52 @@
 		"stackOut": "b a",
 		"description": "Swaps the top two items.",
 		"cost": "Base instruction cost 100 plus bytes pushed (2025 VM limits).",
-		"example": "OP_1 OP_2 OP_SWAP",
+		"example": "OP_2 OP_10 OP_SWAP OP_SUB OP_8 OP_EQUAL",
+		"metaDescription": "OP_SWAP (0x7c) swaps the top two items on the Bitcoin Cash Script stack. Worked example showing why operand order matters, stack trace and uses.",
+		"walkthrough": [
+			{
+				"op": "OP_2",
+				"stack": "2"
+			},
+			{
+				"op": "OP_10",
+				"stack": "2 10"
+			},
+			{
+				"op": "OP_SWAP",
+				"stack": "10 2",
+				"note": "Without the swap, OP_SUB would compute 2 − 10 = −8."
+			},
+			{
+				"op": "OP_SUB",
+				"stack": "8",
+				"note": "Second item minus top item: 10 − 2."
+			},
+			{
+				"op": "OP_8",
+				"stack": "8 8"
+			},
+			{
+				"op": "OP_EQUAL",
+				"stack": "1"
+			}
+		],
+		"usedIn": [
+			{
+				"kind": "contract",
+				"title": "CashScript compiler",
+				"url": "https://github.com/CashScript/cashscript/blob/master/packages/cashc/src/generation/GenerateTargetTraversal.ts",
+				"note": "The compiler emits OP_SWAP when a variable is reassigned inside a branch or loop, and when it builds OP_RETURN data."
+			},
+			{
+				"kind": "upgrade",
+				"title": "May 2020 upgrade",
+				"url": "/upgrades/2020-05-upgrade",
+				"note": "Before OP_REVERSEBYTES, contracts reversed byte order with chains of OP_SPLIT, OP_SWAP and OP_CAT."
+			}
+		],
 		"btc": "same",
-		"verified": "2026-09-26",
+		"verified": "2026-11-21",
 		"sources": [
 			{
 				"title": "Libauth BCH_2023_05 opcodes (bch-2023-opcodes.ts)",
@@ -1255,10 +1437,83 @@
 		"stackOut": "a‖b",
 		"description": "Concatenates the top two items. Disabled in Bitcoin since 2010 and re-enabled on BCH in May 2018. Covenants use it to build output scripts on the stack.",
 		"cost": "Base instruction cost 100 plus result length. The result may be up to 10,000 bytes since 2025 (was 520).",
-		"example": "<0x1122> <0x33> OP_CAT <0x112233> OP_EQUAL",
+		"example": "<0x76a914> <pkh> OP_CAT <0x88ac> OP_CAT OP_0 OP_OUTPUTBYTECODE OP_EQUAL",
+		"metaDescription": "OP_CAT (0x7e) joins two byte strings in Bitcoin Cash Script, live on BCH since 2018. Worked covenant example, stack trace, cost and BTC's BIP-347.",
+		"walkthrough": [
+			{
+				"op": "<0x76a914>",
+				"stack": "76a914",
+				"note": "P2PKH prefix: OP_DUP OP_HASH160, push 20 bytes."
+			},
+			{
+				"op": "<pkh>",
+				"stack": "76a914 pkh",
+				"note": "A 20-byte public key hash, from the contract or the spender."
+			},
+			{
+				"op": "OP_CAT",
+				"stack": "76a914‖pkh"
+			},
+			{
+				"op": "<0x88ac>",
+				"stack": "76a914‖pkh 88ac",
+				"note": "P2PKH suffix: OP_EQUALVERIFY OP_CHECKSIG."
+			},
+			{
+				"op": "OP_CAT",
+				"stack": "76a914‖pkh‖88ac",
+				"note": "A complete 25-byte P2PKH locking script."
+			},
+			{
+				"op": "OP_0",
+				"stack": "76a914‖pkh‖88ac 0"
+			},
+			{
+				"op": "OP_OUTPUTBYTECODE",
+				"stack": "76a914‖pkh‖88ac out0",
+				"note": "The locking script of output 0."
+			},
+			{
+				"op": "OP_EQUAL",
+				"stack": "1",
+				"note": "True only if output 0 pays that address. This is a covenant."
+			}
+		],
+		"usedIn": [
+			{
+				"kind": "upgrade",
+				"title": "May 2018: 32 MB blocks and restored opcodes",
+				"url": "/upgrades/2018-05-upgrade",
+				"note": "Re-enabled OP_CAT on BCH, with OP_SPLIT as its inverse."
+			},
+			{
+				"kind": "chip",
+				"title": "Native Introspection Opcodes",
+				"url": "/chips/chip-2021-02-native-introspection-opcodes",
+				"note": "Introspection opcodes such as OP_OUTPUTBYTECODE read the spending transaction. OP_CAT builds the bytes to compare them with."
+			},
+			{
+				"kind": "chip",
+				"title": "VM Limits: Targeted Virtual Machine Limits",
+				"url": "/chips/chip-2021-05-vm-limits",
+				"note": "Raised the largest OP_CAT result from 520 to 10,000 bytes in May 2025."
+			},
+			{
+				"kind": "contract",
+				"title": "CashScript bytes concatenation",
+				"url": "https://github.com/CashScript/cashscript/blob/master/packages/cashc/src/generation/utils.ts",
+				"note": "The + operator on bytes compiles to OP_CAT, so every CashScript covenant that assembles an output script uses it."
+			},
+			{
+				"kind": "upgrade",
+				"title": "May 2020 upgrade",
+				"url": "/upgrades/2020-05-upgrade",
+				"note": "Before OP_REVERSEBYTES, contracts reversed byte order with chains of OP_SPLIT, OP_SWAP and OP_CAT."
+			}
+		],
 		"btc": "proposed-for-btc",
 		"btcNote": "Disabled in BTC since 2010. BIP-347 proposes re-adding it in Tapscript via OP_SUCCESS126 (same byte, 0x7e); not activated.",
-		"verified": "2026-09-26",
+		"verified": "2026-11-21",
 		"sources": [
 			{
 				"title": "BCHN upgrade specs: Restore disabled script opcodes, May 2018",
@@ -1380,8 +1635,43 @@
 		"description": "Pushes the byte length of the top item without removing it.",
 		"cost": "Base instruction cost 100 plus the byte length of the pushed result (2025 VM limits).",
 		"example": "<0x112233> OP_SIZE OP_3 OP_EQUALVERIFY",
+		"metaDescription": "OP_SIZE (0x82) pushes the byte length of the top Bitcoin Cash Script item and keeps the item. Worked example, stack trace, cost and contract uses.",
+		"walkthrough": [
+			{
+				"op": "<0x112233>",
+				"stack": "112233"
+			},
+			{
+				"op": "OP_SIZE",
+				"stack": "112233 3",
+				"note": "Pushes the length. The item itself stays."
+			},
+			{
+				"op": "OP_3",
+				"stack": "112233 3 3"
+			},
+			{
+				"op": "OP_EQUALVERIFY",
+				"stack": "112233",
+				"note": "The length was 3, so the script goes on with the item."
+			}
+		],
+		"usedIn": [
+			{
+				"kind": "contract",
+				"title": "CashScript .length",
+				"url": "https://github.com/CashScript/cashscript/blob/master/packages/cashc/src/generation/utils.ts",
+				"note": "bytes.length compiles to OP_SIZE OP_NIP: measure, then drop the item. Contracts use it to check a preimage or an NFT commitment has the expected size."
+			},
+			{
+				"kind": "chip",
+				"title": "VM Limits: Targeted Virtual Machine Limits",
+				"url": "/chips/chip-2021-05-vm-limits",
+				"note": "Raised the largest stack item from 520 to 10,000 bytes, so OP_SIZE can now return up to 10,000."
+			}
+		],
 		"btc": "same",
-		"verified": "2026-09-26",
+		"verified": "2026-11-21",
 		"sources": [
 			{
 				"title": "Libauth BCH_2023_05 opcodes (bch-2023-opcodes.ts)",
@@ -2377,10 +2667,48 @@
 		"stackOut": "min(a,b)",
 		"description": "Pushes the smaller of two numbers. Since May 2025 numbers may be up to 10,000 bytes long (BigInt).",
 		"cost": "Base instruction cost 100, plus the result length, plus the result length again to cover number encoding (2025 VM limits).",
-		"example": "OP_2 OP_3 OP_MIN OP_2 OP_EQUAL",
+		"example": "<fee> <1000> OP_MIN",
+		"metaDescription": "OP_MIN (0xa3) returns the smaller of two numbers in Bitcoin Cash Script, BigInt-sized since 2025. Worked fee-cap example, stack trace and cost.",
+		"walkthrough": [
+			{
+				"op": "<fee>",
+				"stack": "1500",
+				"note": "Say the spender asks for a 1,500-satoshi fee."
+			},
+			{
+				"op": "<1000>",
+				"stack": "1500 1000",
+				"note": "The contract's cap."
+			},
+			{
+				"op": "OP_MIN",
+				"stack": "1000",
+				"note": "The smaller number wins: the fee is capped at 1,000."
+			}
+		],
+		"usedIn": [
+			{
+				"kind": "contract",
+				"title": "CashScript min()",
+				"url": "https://github.com/CashScript/cashscript/blob/master/packages/cashc/src/ast/Globals.ts",
+				"note": "The built-in min(a, b) compiles to OP_MIN. Contracts use it to cap fees, payouts and withdrawals."
+			},
+			{
+				"kind": "chip",
+				"title": "BigInt: High-Precision Arithmetic for Bitcoin Cash",
+				"url": "/chips/chip-2024-07-bigint",
+				"note": "Lets OP_MIN compare numbers up to 10,000 bytes long since May 2025."
+			},
+			{
+				"kind": "upgrade",
+				"title": "May 2022: native introspection and 64-bit math",
+				"url": "/upgrades/2022-05-upgrade",
+				"note": "Widened script numbers to 64 bits, enough to compare satoshi amounts directly."
+			}
+		],
 		"btc": "same",
 		"btcNote": "BTC limits arithmetic inputs to 4 bytes.",
-		"verified": "2026-09-26",
+		"verified": "2026-11-21",
 		"sources": [
 			{
 				"title": "Libauth BCH_2023_05 opcodes (bch-2023-opcodes.ts)",
@@ -2470,9 +2798,52 @@
 		"stackOut": "hash(x)",
 		"description": "Replaces the top item with its RIPEMD-160 hash (20 bytes).",
 		"cost": "Base instruction cost 100 plus result length, plus 192 per hash digest iteration under relay policy (64 under consensus); digest iterations also count toward the per-input hashing limit (2025 VM limits).",
-		"example": "<'abc'> OP_RIPEMD160",
+		"example": "<'abc'> OP_RIPEMD160 <0x8eb208f7e05d987a9b044a8e98c6b087f15a0bfc> OP_EQUAL",
+		"metaDescription": "OP_RIPEMD160 (0xa6) hashes the top item to 20 bytes in Bitcoin Cash Script. Worked example with the 'abc' test vector, stack trace, cost and uses.",
+		"walkthrough": [
+			{
+				"op": "<'abc'>",
+				"stack": "616263",
+				"note": "The three ASCII bytes of abc."
+			},
+			{
+				"op": "OP_RIPEMD160",
+				"stack": "8eb208f7…0bfc",
+				"note": "The RIPEMD-160 test vector for abc."
+			},
+			{
+				"op": "<0x8eb2…0bfc>",
+				"stack": "8eb208f7…0bfc 8eb208f7…0bfc",
+				"note": "The expected hash."
+			},
+			{
+				"op": "OP_EQUAL",
+				"stack": "1",
+				"note": "The hashes match."
+			}
+		],
+		"usedIn": [
+			{
+				"kind": "contract",
+				"title": "CashScript ripemd160()",
+				"url": "https://github.com/CashScript/cashscript/blob/master/packages/cashc/src/ast/Globals.ts",
+				"note": "The built-in ripemd160(x) compiles to OP_RIPEMD160 and returns 20 bytes."
+			},
+			{
+				"kind": "contract",
+				"title": "P2PKH and P2SH20 addresses, through OP_HASH160",
+				"url": "/opcodes/op_hash160",
+				"note": "OP_HASH160 runs RIPEMD-160 over a SHA-256 hash in one opcode. Every P2PKH and P2SH20 address is that 20-byte result."
+			},
+			{
+				"kind": "chip",
+				"title": "VM Limits: Targeted Virtual Machine Limits",
+				"url": "/chips/chip-2021-05-vm-limits",
+				"note": "Charges each hash digest iteration against a per-input hashing limit, and adds it to the operation cost."
+			}
+		],
 		"btc": "same",
-		"verified": "2026-09-30",
+		"verified": "2026-11-21",
 		"sources": [
 			{
 				"title": "Libauth BCH_2023_05 opcodes (bch-2023-opcodes.ts)",
@@ -3395,10 +3766,66 @@
 		"stackOut": "sats",
 		"description": "Pushes the value in satoshis of the UTXO spent by input i. Fails if the index is out of range.",
 		"cost": "Base instruction cost 100 plus the byte length of the pushed result (2025 VM limits).",
-		"example": "OP_INPUTINDEX OP_UTXOVALUE",
+		"example": "OP_INPUTINDEX OP_UTXOVALUE <1000> OP_SUB OP_0 OP_OUTPUTVALUE OP_LESSTHANOREQUAL",
+		"metaDescription": "OP_UTXOVALUE (0xc6) pushes the satoshi value of the coin an input spends in Bitcoin Cash Script. Worked covenant example, stack trace and uses.",
+		"walkthrough": [
+			{
+				"op": "OP_INPUTINDEX",
+				"stack": "0",
+				"note": "This input's index, here 0."
+			},
+			{
+				"op": "OP_UTXOVALUE",
+				"stack": "100000",
+				"note": "Say the coin it spends holds 100,000 satoshis."
+			},
+			{
+				"op": "<1000>",
+				"stack": "100000 1000",
+				"note": "The most the spender may take as a fee."
+			},
+			{
+				"op": "OP_SUB",
+				"stack": "99000"
+			},
+			{
+				"op": "OP_0",
+				"stack": "99000 0"
+			},
+			{
+				"op": "OP_OUTPUTVALUE",
+				"stack": "99000 99500",
+				"note": "Output 0 pays 99,500 satoshis."
+			},
+			{
+				"op": "OP_LESSTHANOREQUAL",
+				"stack": "1",
+				"note": "Output 0 keeps all but at most 1,000 satoshis of the input, so the covenant passes."
+			}
+		],
+		"usedIn": [
+			{
+				"kind": "chip",
+				"title": "Native Introspection Opcodes",
+				"url": "/chips/chip-2021-02-native-introspection-opcodes",
+				"note": "Added OP_UTXOVALUE with the other transaction introspection opcodes."
+			},
+			{
+				"kind": "upgrade",
+				"title": "May 2022: native introspection and 64-bit math",
+				"url": "/upgrades/2022-05-upgrade",
+				"note": "Activated introspection on mainnet, with 64-bit numbers wide enough for any satoshi value."
+			},
+			{
+				"kind": "contract",
+				"title": "CashScript tx.inputs[i].value",
+				"url": "https://cashscript.org/docs/language/globals#txinputsivalue",
+				"note": "Compiles to OP_UTXOVALUE. Covenants use it to make sure value moves where the contract says."
+			}
+		],
 		"btc": "not-in-btc",
 		"btcNote": "BTC has no native introspection opcodes. In Tapscript (BIP-342) this byte is an OP_SUCCESSx code reserved for future soft forks.",
-		"verified": "2026-09-26",
+		"verified": "2026-11-21",
 		"sources": [
 			{
 				"title": "CHIP-2021-02 Native Introspection Opcodes",
@@ -3724,10 +4151,63 @@
 		"stackOut": "category[+cap] | 0",
 		"description": "Pushes the token category of output i, with a capability byte appended for mutable (0x01) or minting (0x02) NFTs. Pushes 0 if the output holds no tokens.",
 		"cost": "Base instruction cost 100 plus the byte length of the pushed result (2025 VM limits).",
-		"example": "OP_0 OP_OUTPUTTOKENCATEGORY",
+		"example": "OP_0 OP_OUTPUTTOKENCATEGORY OP_INPUTINDEX OP_UTXOTOKENCATEGORY OP_EQUAL",
+		"metaDescription": "OP_OUTPUTTOKENCATEGORY (0xd1) pushes an output's CashTokens category and NFT capability in BCH Script. Worked example, stack trace and uses.",
+		"walkthrough": [
+			{
+				"op": "OP_0",
+				"stack": "0"
+			},
+			{
+				"op": "OP_OUTPUTTOKENCATEGORY",
+				"stack": "cat",
+				"note": "Output 0's 32-byte category, plus 0x01 or 0x02 if it holds a mutable or minting NFT."
+			},
+			{
+				"op": "OP_INPUTINDEX",
+				"stack": "cat 0",
+				"note": "This input's index, here 0."
+			},
+			{
+				"op": "OP_UTXOTOKENCATEGORY",
+				"stack": "cat cat",
+				"note": "The category of the token this input spends."
+			},
+			{
+				"op": "OP_EQUAL",
+				"stack": "1",
+				"note": "Output 0 carries the same category and capability, so the token stays in the contract's hands."
+			}
+		],
+		"usedIn": [
+			{
+				"kind": "chip",
+				"title": "CashTokens: Token Primitives for Bitcoin Cash",
+				"url": "/chips/chip-2022-02-cashtokens",
+				"note": "Defines OP_OUTPUTTOKENCATEGORY with the other token introspection opcodes."
+			},
+			{
+				"kind": "upgrade",
+				"title": "May 2023: CashTokens, P2SH32 and smaller transactions",
+				"url": "/upgrades/2023-05-cashtokens",
+				"note": "Activated CashTokens on mainnet."
+			},
+			{
+				"kind": "contract",
+				"title": "CashScript tx.outputs[i].tokenCategory",
+				"url": "https://cashscript.org/docs/language/globals#txoutputsitokencategory",
+				"note": "Compiles to OP_OUTPUTTOKENCATEGORY. The CashScript docs warn the bytes come in unreversed order."
+			},
+			{
+				"kind": "tutorial",
+				"title": "Token Pioneers Tutorial 2: mint your first NFTs",
+				"url": "/blog/token-pioneers-cashtokens-tutorial-2",
+				"note": "Mints the NFTs whose category and capability this opcode reads."
+			}
+		],
 		"btc": "not-in-btc",
 		"btcNote": "BTC has no native tokens. In Tapscript (BIP-342) this byte is an OP_SUCCESSx code reserved for future soft forks.",
-		"verified": "2026-09-26",
+		"verified": "2026-11-21",
 		"sources": [
 			{
 				"title": "CHIP-2022-02 CashTokens: Token Primitives for Bitcoin Cash",

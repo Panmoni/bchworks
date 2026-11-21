@@ -5,6 +5,7 @@ import { paraglideVitePlugin } from "@inlang/paraglide-js";
 import tailwindcss from "@tailwindcss/vite";
 import { defineConfig, fontProviders } from "astro/config";
 import icon from "astro-icon";
+import { readFileSync } from "fs";
 import path from "path";
 import { fileURLToPath } from "url";
 import { resolveVersion } from "./scripts/version.mjs";
@@ -29,6 +30,13 @@ const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const draftLocales = draftLocaleCodes();
 const inDraftLocale = (pathname) =>
 	draftLocales.includes(splitLocale(pathname).locale);
+
+// NOP, reserved and undefined opcode pages are noindex (PAN-425): drop them too.
+const noindexOpcodes = new Set(
+	JSON.parse(readFileSync("./src/data/opcodes.json", "utf8"))
+		.filter((o) => o.group === "reserved")
+		.map((o) => `/opcodes/${o.id}`),
+);
 
 // hreflang for translated pages, written after the build; the sitemap
 // reuses the same links as xhtml:link alternates.
@@ -143,6 +151,7 @@ export default defineConfig({
 							!/\/(privacy-policy|terms-conditions|contact|support)$/.test(
 								new URL(page).pathname,
 							) &&
+							!noindexOpcodes.has(new URL(page).pathname) &&
 							!inDraftLocale(new URL(page).pathname),
 					}),
 				]

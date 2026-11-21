@@ -336,6 +336,36 @@ const opcodeCollection = defineCollection({
 		description: z.string(),
 		cost: z.string().optional(),
 		example: z.string().optional(),
+		// Meta description when the padded `description` would be too generic.
+		metaDescription: z.string().max(170).optional(),
+		// The stack after each step of `example`, top of stack on the right.
+		walkthrough: z
+			.array(
+				z.object({
+					op: z.string(),
+					stack: z.string(),
+					note: z.string().optional(),
+				}),
+			)
+			.default([]),
+		// Where the opcode shows up: CHIPs, upgrades, compilers, tutorials.
+		usedIn: z
+			.array(
+				z.object({
+					kind: z.enum([
+						"chip",
+						"upgrade",
+						"contract",
+						"tutorial",
+						"implementation",
+					]),
+					title: z.string(),
+					// Site-relative path or an https URL.
+					url: z.string().regex(/^(\/|https:\/\/)/),
+					note: z.string(),
+				}),
+			)
+			.default([]),
 		btc: z.enum([
 			"same",
 			"disabled-in-btc",
