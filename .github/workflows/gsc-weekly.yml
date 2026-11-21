@@ -26,31 +26,40 @@ concurrency:
 jobs:
   gsc:
     runs-on: ubuntu-latest
-    env:
-      GSC_SERVICE_ACCOUNT_JSON: ${{ secrets.GSC_SERVICE_ACCOUNT_JSON }}
-      GSC_IMPR_FLOOR: ${{ inputs.impr_floor }}
-      GSC_IMPR_DROP: ${{ inputs.impr_drop }}
+    timeout-minutes: 30
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-node@v4
         with:
           node-version: 22
+      # The last 7 days of data against everything since the property's
+      # first data (2026-09-28). GSC lags about 3 days.
       - name: Report
-        run: node scripts/gsc-report.mjs | tee gsc-report.txt
         shell: bash
+        env:
+          GSC_SERVICE_ACCOUNT_JSON: ${{ secrets.GSC_SERVICE_ACCOUNT_JSON }}
+        run: node scripts/gsc-report.mjs "$(date -u -d '-9 days' +%F)" 2026-09-28 | tee gsc-report.txt
+      # The repo is public: any signed-in GitHub user can download this.
       - uses: actions/upload-artifact@v4
         if: ${{ !cancelled() }}
         with:
           name: gsc-report
           path: gsc-report.txt
+          retention-days: 30
       - name: Alerts
         if: ${{ !cancelled() }}
+        env:
+          GSC_SERVICE_ACCOUNT_JSON: ${{ secrets.GSC_SERVICE_ACCOUNT_JSON }}
+          GSC_IMPR_FLOOR: ${{ inputs.impr_floor }}
+          GSC_IMPR_DROP: ${{ inputs.impr_drop }}
         run: node scripts/gsc-check.mjs
       # Runs even when an alert fired, so the new baseline lands; the failed
-      # step keeps the run red.
+      # step keeps the run red. Only from main: a manual run on another
+      # branch must not push that branch to main.
       - name: Commit if changed
-        if: ${{ !cancelled() }}
+        if: ${{ !cancelled() && github.ref == 'refs/heads/main' }}
         run: |
+          [ -f src/data/gsc-indexed.json ] || { echo "No index file written."; exit 0; }
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git add src/data/gsc-indexed.json
@@ -59,5 +68,9 @@ jobs:
             exit 0
           fi
           git commit -m "chore(data): refresh the Search Console indexed-URL list"
-          git pull --rebase origin main
-          git push origin HEAD:main
+          # Other workflows push to main too; retry the rebase and push.
+          for i in 1 2 3; do
+            git pull --rebase origin main && git push origin HEAD:main && exit 0
+            sleep $((i * 10))
+          done
+          exit 1

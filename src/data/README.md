@@ -78,7 +78,13 @@ refresh become requirements.
 - the last 7 days' impressions fall more than 50% below the prior 4-week weekly
   average, once that average is at least 100.
 
-The list is committed either way, so one drop alerts once. Auth is the
+The list is committed either way, so one drop alerts once. The impressions
+alert compares against a rolling average, so a lasting drop alerts for up to
+4 weeks, then the average catches down to it. Alerts and failures go out as
+GitHub's failed-run email, to whoever last edited the workflow's schedule,
+if their Actions notifications include email. Annotations titled
+`GSC alert` are real alerts; any other red is the run itself failing. Auth is the
 `GSC_SERVICE_ACCOUNT_JSON` repo secret. A manual run takes `impr_floor` and
 `impr_drop` inputs to force the impressions alert. Locally:
-`GSC_KEY_FILE=<key path> node scripts/gsc-check.mjs`.
+`GSC_KEY_FILE=<key path> node scripts/gsc-check.mjs`. A local run rewrites
+`gsc-indexed.json`; don't commit that, or CI loses the alert.

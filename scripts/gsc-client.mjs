@@ -7,6 +7,7 @@ import { readFile } from "node:fs/promises";
 
 const SCOPE = "https://www.googleapis.com/auth/webmasters.readonly";
 const API = "https://searchconsole.googleapis.com";
+const TIMEOUT = 30_000;
 
 export const day = (d, n) =>
 	new Date(Date.parse(d) + n * 864e5).toISOString().slice(0, 10);
@@ -35,6 +36,7 @@ export async function connect() {
 	const sig = createSign("RSA-SHA256").update(body).sign(key.private_key);
 	const res = await fetch(key.token_uri, {
 		method: "POST",
+		signal: AbortSignal.timeout(TIMEOUT),
 		body: new URLSearchParams({
 			grant_type: "urn:ietf:params:oauth:grant-type:jwt-bearer",
 			assertion: `${body}.${sig.toString("base64url")}`,
@@ -48,13 +50,20 @@ export async function connect() {
 			method: body ? "POST" : "GET",
 			headers: { ...auth, "content-type": "application/json" },
 			body: body && JSON.stringify(body),
+			signal: AbortSignal.timeout(TIMEOUT),
 		});
-		if (!res.ok) throw new Error(`${path}: ${res.status} ${await res.text()}`);
+		if (!res.ok) {
+			const err = new Error(`${path}: ${res.status} ${await res.text()}`);
+			err.status = res.status;
+			throw err;
+		}
 		return res.json();
 	}
 
 	const sites = (await api("/webmasters/v3/sites")).siteEntry ?? [];
-	const site = sites.find((s) => /bchworks\.com/.test(s.siteUrl))?.siteUrl;
+	const site = ["sc-domain:bchworks.com", "https://bchworks.com/"].find((u) =>
+		sites.some((s) => s.siteUrl === u),
+	);
 	if (!site) {
 		console.error(
 			`No bchworks.com property visible to ${key.client_email}. Sites: ${sites.map((s) => s.siteUrl).join(", ") || "none"}`,
