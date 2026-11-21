@@ -9,6 +9,7 @@ All reference data lives in git as Astro content collections
 | `health.json` | `health` — alive / stale / dead per project | `scripts/health-check.mjs`, daily |
 | `metrics.json` | (imported) — chain stats for Real Numbers and vitals | `scripts/metrics.mjs`, daily |
 | `utxo-stats.json` | (imported) — UTXO-set analytics on /what-is-a-utxo: supply by age, coin-days destroyed, awakenings | `scripts/utxo-stats.mjs`, daily, from our BCHN node |
+| `gsc-indexed.json` | (not read by the site) — sitemap URLs Google reports as indexed | `scripts/gsc-check.mjs`, weekly |
 | `opcodes.json` | `opcodes` | people |
 | `glossary.json` | `glossary` | people |
 | `src/content/upgrades/` | `upgrades` | people |
@@ -65,3 +66,19 @@ the step off again.
 
 Revisit if user submissions without GitHub, per-visitor data, or sub-daily
 refresh become requirements.
+
+## Weekly Search Console check
+
+`.github/workflows/gsc-weekly.yml` runs Mondays at 07:41 UTC. It saves the
+`scripts/gsc-report.mjs` output as the `gsc-report` artifact, then runs
+`scripts/gsc-check.mjs`, which fails the run (GitHub emails the failure) when:
+
+- a URL in `gsc-indexed.json` is no longer indexed (URL Inspection API over the
+  sitemap plus last run's list), or
+- the last 7 days' impressions fall more than 50% below the prior 4-week weekly
+  average, once that average is at least 100.
+
+The list is committed either way, so one drop alerts once. Auth is the
+`GSC_SERVICE_ACCOUNT_JSON` repo secret. A manual run takes `impr_floor` and
+`impr_drop` inputs to force the impressions alert. Locally:
+`GSC_KEY_FILE=<key path> node scripts/gsc-check.mjs`.

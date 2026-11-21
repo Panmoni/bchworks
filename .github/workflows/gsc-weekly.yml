@@ -1,0 +1,63 @@
+name: Search Console weekly report and alerts
+
+# Weekly: save the Search Console report as an artifact, then run the index
+# and impressions alerts (scripts/gsc-check.mjs). A fired alert fails the run,
+# and GitHub emails the failure. The indexed-URL list is committed either way,
+# so the next run diffs against it and one drop alerts once.
+on:
+  schedule:
+    - cron: "41 7 * * 1"
+  workflow_dispatch:
+    inputs:
+      impr_floor:
+        description: Weekly-average floor for the impressions alert
+        default: "100"
+      impr_drop:
+        description: Fractional drop that fires the impressions alert
+        default: "0.5"
+
+permissions:
+  contents: write
+
+concurrency:
+  group: gsc-weekly
+  cancel-in-progress: false
+
+jobs:
+  gsc:
+    runs-on: ubuntu-latest
+    env:
+      GSC_SERVICE_ACCOUNT_JSON: ${{ secrets.GSC_SERVICE_ACCOUNT_JSON }}
+      GSC_IMPR_FLOOR: ${{ inputs.impr_floor }}
+      GSC_IMPR_DROP: ${{ inputs.impr_drop }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+      - name: Report
+        run: node scripts/gsc-report.mjs | tee gsc-report.txt
+        shell: bash
+      - uses: actions/upload-artifact@v4
+        if: ${{ !cancelled() }}
+        with:
+          name: gsc-report
+          path: gsc-report.txt
+      - name: Alerts
+        if: ${{ !cancelled() }}
+        run: node scripts/gsc-check.mjs
+      # Runs even when an alert fired, so the new baseline lands; the failed
+      # step keeps the run red.
+      - name: Commit if changed
+        if: ${{ !cancelled() }}
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add src/data/gsc-indexed.json
+          if git diff --cached --quiet; then
+            echo "No index changes."
+            exit 0
+          fi
+          git commit -m "chore(data): refresh the Search Console indexed-URL list"
+          git pull --rebase origin main
+          git push origin HEAD:main
