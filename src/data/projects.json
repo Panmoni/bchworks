@@ -354,6 +354,13 @@
 		}
 	},
 	{
+		"id": "ownbit",
+		"title": "Ownbit",
+		"description": "Self-custody iOS and Android wallet with BCH MultiSig and offline phone QR signing. Paid, closed-source app with a 7-day trial.",
+		"url": "https://ownbit.io/en/",
+		"categories": ["wallet"]
+	},
+	{
 		"id": "satochip",
 		"title": "Satochip",
 		"description": "Hardware wallet.",
@@ -1231,6 +1238,13 @@
 		"icon": "https://www.guanaco.fi/logo-body-pink-144.png",
 		"url": "https://www.guanaco.fi/",
 		"categories": ["buy:swap", "earn:defi", "build:dapp"]
+	},
+	{
+		"id": "eidex",
+		"title": "EIDEX",
+		"description": "Swap route aggregator.",
+		"url": "https://eidex.io/screener",
+		"categories": ["buy:swap"]
 	},
 	{
 		"id": "bch-bull",
