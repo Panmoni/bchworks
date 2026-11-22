@@ -1,6 +1,6 @@
 ---
-import { getCollection, render } from "astro:content";
-import ArticleShell from "~/components/reference/ArticleShell.astro";
+import { getCollection } from "astro:content";
+import ChipEntry from "~/components/reference/ChipEntry.astro";
 import { getPageCopy } from "~/utils/pages";
 
 export const getStaticPaths = async () =>
@@ -11,59 +11,6 @@ export const getStaticPaths = async () =>
 
 const copy = await getPageCopy("chips-entry");
 const { entry } = Astro.props;
-const { Content } = await render(entry);
-const c = entry.data;
-const upgrade = c.upgrade
-	? (await getCollection("upgrades")).find((u) => u.id === c.upgrade)
-	: undefined;
-const positionStyle = {
-	support: "bg-wb-green",
-	neutral: "bg-wb-yellow",
-	oppose: "bg-wb-pink",
-	unknown: "bg-soft",
-};
 ---
 
-<ArticleShell
-  title={c.title}
-  description={c.summary}
-  verified={c.verified}
-  eyebrow={copy.eyebrow.replaceAll('{code}', () => c.code).replaceAll('{status}', () => c.status)}
-  sources={c.sources}
->
-  <Fragment slot="before">
-    <div class="not-prose flex flex-wrap gap-3 mb-8 text-sm">
-      <a class="wb-chip" href={c.spec} target="_blank" rel="noopener noreferrer">{copy.links.spec}</a>
-      {c.discussion && <a class="wb-chip" href={c.discussion} target="_blank" rel="noopener noreferrer">{copy.links.discussion}</a>}
-      {upgrade && <a class="wb-chip" href={`/upgrades/${upgrade.id}`}>{copy.links.shipped.replaceAll('{title}', () => upgrade.data.title)}</a>}
-      {c.owners.length > 0 && <span class="wb-chip">{copy.links.owners.replaceAll('{owners}', () => c.owners.join(', '))}</span>}
-    </div>
-  </Fragment>
-
-  <Content />
-
-  <Fragment slot="after">
-    {
-      c.stakeholders.length > 0 && (
-        <section class="mt-10">
-          <h2 class="font-heading text-2xl font-extrabold tracking-tight mb-1">{copy.stakeholders.title}</h2>
-          <p class="text-sm text-muted mb-4">{copy.stakeholders.note}</p>
-          <ul class="grid gap-2 sm:grid-cols-2">
-            {c.stakeholders.map((s) => (
-              <li class="wb-card p-3 flex items-center justify-between gap-3">
-                <span class="font-bold">{s.name}</span>
-                {s.source ? (
-                  <a class:list={['rounded border-2 border-line px-2 py-0.5 font-mono text-xs text-on-accent', positionStyle[s.position]]} href={s.source} target="_blank" rel="noopener noreferrer">
-                    {s.position}
-                  </a>
-                ) : (
-                  <span class:list={['rounded border-2 border-line px-2 py-0.5 font-mono text-xs', positionStyle[s.position]]}>{s.position}</span>
-                )}
-              </li>
-            ))}
-          </ul>
-        </section>
-      )
-    }
-  </Fragment>
-</ArticleShell>
+<ChipEntry entry={entry} copy={copy} />

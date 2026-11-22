@@ -1,0 +1,106 @@
+---
+// An upgrade page, English or translated (PAN-517). The routes
+// src/pages/upgrades/[slug].astro and src/pages/[locale]/upgrades/[slug].astro
+// pass the entry in the page's locale, its English neighbours and the copy.
+import { type CollectionEntry, getCollection, render } from "astro:content";
+import ArticleShell from "~/components/reference/ArticleShell.astro";
+import Countdown from "~/components/reference/Countdown.astro";
+import { formatNumber } from "~/i18n/format";
+import { DEFAULT_LOCALE, type LocaleCode } from "~/i18n/locales";
+import { msg } from "~/i18n/messages";
+import {
+	type LocalizedEntry,
+	listLocalized,
+	type TranslationState,
+} from "~/utils/l10n";
+import type { PageCopy } from "~/utils/pages";
+import { formatDate, upgradeStatus } from "~/utils/reference";
+
+interface Props {
+	entry: LocalizedEntry<"upgrades">;
+	/** The English slug: a translation's own id carries its locale. */
+	slug: string;
+	/** The English entries before and after it in date order. */
+	prev?: CollectionEntry<"upgrades">;
+	next?: CollectionEntry<"upgrades">;
+	/** The page copy for this locale (src/content/pages/[<locale>/]upgrades-entry). */
+	copy: PageCopy;
+	locale?: LocaleCode;
+	/** Set on a translated page: drives its <TranslationNotice>. */
+	translation?: TranslationState | null;
+}
+
+const {
+	entry,
+	slug,
+	prev,
+	next,
+	copy,
+	locale = DEFAULT_LOCALE,
+	translation = null,
+} = Astro.props;
+const { Content } = await render(entry);
+// getLocalizedEntry's union leaves data untyped; it is an upgrade's.
+const d = entry.data as CollectionEntry<"upgrades">["data"];
+// A block height is data: the Spanish style brief copies it without
+// separators (docs/i18n/es-style.md); the English page keeps its grouping.
+const height = d.height
+	? locale === DEFAULT_LOCALE
+		? formatNumber(d.height, locale)
+		: String(d.height)
+	: undefined;
+// Titles in this locale where translated, else English marked as a fallback
+// fragment. Links stay English; the build rewrites them (src/i18n/links.mjs).
+const chips = await listLocalized(
+	"chips",
+	(await getCollection("chips")).filter(
+		(c) => c.data.upgrade === slug || d.chips.includes(c.id),
+	),
+	locale,
+);
+const [prevListed, nextListed] = await Promise.all(
+	[prev, next].map(async (u) =>
+		u ? (await listLocalized("upgrades", [u], locale))[0] : undefined,
+	),
+);
+---
+
+<ArticleShell
+  title={d.title}
+  description={d.summary}
+  verified={d.verified}
+  lang={locale}
+  eyebrow={`${formatDate(d.date, locale)} · ${upgradeStatus(d.status, msg(locale))}${height ? copy.block.replaceAll('{height}', () => height) : ''}`}
+  sources={d.sources}
+  translation={translation}
+>
+  <Fragment slot="before">
+    {d.date.getTime() > Date.now() && <Countdown date={d.date} title={d.title} status={d.status} />}
+  </Fragment>
+
+  <Content />
+
+  <Fragment slot="after">
+    {
+      chips.length > 0 && (
+        <section class="mt-10">
+          <h2 class="font-heading text-2xl font-extrabold tracking-tight mb-3">{copy.chips.title}</h2>
+          <ul class="grid gap-3 sm:grid-cols-2">
+            {chips.map((c) => (
+              <li>
+                <a class="wb-card wb-card-hover block p-4" href={`/chips/${c.entry.id}`}>
+                  <span class="font-mono text-xs text-muted">{c.data.code}</span>
+                  <span class="block font-bold" {...c.attrs}>{c.data.title}</span>
+                </a>
+              </li>
+            ))}
+          </ul>
+        </section>
+      )
+    }
+    <nav class="mt-10 flex justify-between gap-4 font-mono text-sm">
+      {prevListed ? <a class="underline" href={`/upgrades/${prevListed.entry.id}`}>← <span {...prevListed.attrs}>{prevListed.data.title}</span></a> : <span />}
+      {nextListed && <a class="underline text-right" href={`/upgrades/${nextListed.entry.id}`}><span {...nextListed.attrs}>{nextListed.data.title}</span> →</a>}
+    </nav>
+  </Fragment>
+</ArticleShell>

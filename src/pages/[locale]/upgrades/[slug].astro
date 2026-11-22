@@ -1,0 +1,47 @@
+---
+// /<code>/upgrades/<slug>: a translated upgrade (PAN-517). A route exists only
+// where both the entry and the page copy
+// (src/content/pages/<code>/upgrades-entry.yaml) are translated (docs/i18n.md,
+// "Fallback policy").
+import { getCollection } from "astro:content";
+import type { GetStaticPaths, InferGetStaticPropsType } from "astro";
+import UpgradeEntry from "~/components/reference/UpgradeEntry.astro";
+import { DEFAULT_LOCALE, LOCALES } from "~/i18n/locales";
+import { getLocalizedEntry, getTranslationState } from "~/utils/l10n";
+import { getPageEntry, type PageCopy } from "~/utils/pages";
+
+export const getStaticPaths = (async () => {
+	const all = (await getCollection("upgrades")).sort(
+		(a, b) => a.data.date.getTime() - b.data.date.getTime(),
+	);
+	const paths = [];
+	for (const { code } of LOCALES.filter((l) => l.code !== DEFAULT_LOCALE)) {
+		const copy = await getPageEntry("upgrades-entry", code);
+		if (!copy) continue;
+		for (const [i, english] of all.entries()) {
+			const entry = await getLocalizedEntry("upgrades", english.id, code);
+			if (!entry) continue;
+			paths.push({
+				params: { locale: code, slug: english.id },
+				props: {
+					entry,
+					slug: english.id,
+					prev: all[i - 1],
+					next: all[i + 1],
+					locale: code,
+					copy: copy.data as PageCopy,
+					translation: await getTranslationState("upgrades", english.id, code),
+				},
+			});
+		}
+	}
+	return paths;
+}) satisfies GetStaticPaths;
+
+type Props = InferGetStaticPropsType<typeof getStaticPaths>;
+
+const { entry, slug, prev, next, copy, locale, translation } =
+	Astro.props as Props;
+---
+
+<UpgradeEntry entry={entry} slug={slug} prev={prev} next={next} copy={copy} locale={locale} translation={translation} />

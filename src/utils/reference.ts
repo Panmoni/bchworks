@@ -51,6 +51,84 @@ export const upgradeStatus = (
 		proposed: m.ref_upgrade_status_proposed,
 	})[status]({}, l);
 
+type Labels = ReturnType<typeof msg>;
+
+/** A CHIP's status in the reader's language. */
+export const chipStatus = (
+	status:
+		| "draft"
+		| "proposed"
+		| "locked-in"
+		| "activated"
+		| "withdrawn"
+		| "superseded",
+	l: Labels,
+): string =>
+	({
+		draft: m.ref_chip_status_draft,
+		proposed: m.ref_chip_status_proposed,
+		"locked-in": m.ref_chip_status_locked_in,
+		activated: m.ref_chip_status_activated,
+		withdrawn: m.ref_chip_status_withdrawn,
+		superseded: m.ref_chip_status_superseded,
+	})[status]({}, l);
+
+/** A CHIP stakeholder's position in the reader's language. */
+export const chipPosition = (
+	position: "support" | "neutral" | "oppose" | "unknown",
+	l: Labels,
+): string =>
+	({
+		support: m.ref_chip_position_support,
+		neutral: m.ref_chip_position_neutral,
+		oppose: m.ref_chip_position_oppose,
+		unknown: m.ref_chip_position_unknown,
+	})[position]({}, l);
+
+/** An opcode's status in the reader's language. */
+export const opcodeStatus = (
+	status: "enabled" | "disabled" | "reserved" | "nop",
+	l: Labels,
+): string =>
+	({
+		enabled: m.ref_opcode_status_enabled,
+		disabled: m.ref_opcode_status_disabled,
+		reserved: m.ref_opcode_status_reserved,
+		nop: m.ref_opcode_status_nop,
+	})[status]({}, l);
+
+/** An opcode's group in the reader's language. */
+export const opcodeGroup = (
+	group:
+		| "push"
+		| "control"
+		| "stack"
+		| "splice"
+		| "bitwise"
+		| "arithmetic"
+		| "crypto"
+		| "locktime"
+		| "introspection"
+		| "token"
+		| "function"
+		| "reserved",
+	l: Labels,
+): string =>
+	({
+		push: m.ref_opcode_group_push,
+		control: m.ref_opcode_group_control,
+		stack: m.ref_opcode_group_stack,
+		splice: m.ref_opcode_group_splice,
+		bitwise: m.ref_opcode_group_bitwise,
+		arithmetic: m.ref_opcode_group_arithmetic,
+		crypto: m.ref_opcode_group_crypto,
+		locktime: m.ref_opcode_group_locktime,
+		introspection: m.ref_opcode_group_introspection,
+		token: m.ref_opcode_group_token,
+		function: m.ref_opcode_group_function,
+		reserved: m.ref_opcode_group_reserved,
+	})[group]({}, l);
+
 export const isoDate = (date: Date | string) =>
 	new Date(date).toISOString().slice(0, 10);
 

@@ -1,0 +1,101 @@
+---
+// A CHIP page, English or translated (PAN-517). The routes
+// src/pages/chips/[slug].astro and src/pages/[locale]/chips/[slug].astro pass
+// the entry in the page's locale and its copy.
+import { type CollectionEntry, render } from "astro:content";
+import ArticleShell from "~/components/reference/ArticleShell.astro";
+import { DEFAULT_LOCALE, type LocaleCode } from "~/i18n/locales";
+import { msg } from "~/i18n/messages";
+import {
+	englishData,
+	getLocalizedEntry,
+	type LocalizedEntry,
+	type TranslationState,
+} from "~/utils/l10n";
+import type { PageCopy } from "~/utils/pages";
+import { chipPosition, chipStatus } from "~/utils/reference";
+
+interface Props {
+	entry: LocalizedEntry<"chips">;
+	/** The page copy for this locale (src/content/pages/[<locale>/]chips-entry). */
+	copy: PageCopy;
+	locale?: LocaleCode;
+	/** Set on a translated page: drives its <TranslationNotice>. */
+	translation?: TranslationState | null;
+}
+
+const {
+	entry,
+	copy,
+	locale = DEFAULT_LOCALE,
+	translation = null,
+} = Astro.props;
+const { Content } = await render(entry);
+// getLocalizedEntry's union leaves data untyped; it is a CHIP's.
+const c = entry.data as CollectionEntry<"chips">["data"];
+const l = msg(locale);
+// The upgrade that shipped it, in this locale where translated, else English
+// marked as a fallback fragment.
+const localUpgrade = c.upgrade
+	? await getLocalizedEntry("upgrades", c.upgrade, locale)
+	: null;
+const upgrade =
+	localUpgrade ??
+	(c.upgrade
+		? await getLocalizedEntry("upgrades", c.upgrade, DEFAULT_LOCALE)
+		: null);
+const upgradeAttrs = localUpgrade ? {} : englishData(locale);
+const [shippedBefore, shippedAfter] = copy.links.shipped.split("{title}");
+const positionStyle = {
+	support: "bg-wb-green",
+	neutral: "bg-wb-yellow",
+	oppose: "bg-wb-pink",
+	unknown: "bg-soft",
+};
+---
+
+<ArticleShell
+  title={c.title}
+  description={c.summary}
+  verified={c.verified}
+  lang={locale}
+  eyebrow={copy.eyebrow.replaceAll('{code}', () => c.code).replaceAll('{status}', () => chipStatus(c.status, l))}
+  sources={c.sources}
+  translation={translation}
+>
+  <Fragment slot="before">
+    <div class="not-prose flex flex-wrap gap-3 mb-8 text-sm">
+      <a class="wb-chip" href={c.spec} target="_blank" rel="noopener noreferrer">{copy.links.spec}</a>
+      {c.discussion && <a class="wb-chip" href={c.discussion} target="_blank" rel="noopener noreferrer">{copy.links.discussion}</a>}
+      {upgrade && <a class="wb-chip" href={`/upgrades/${c.upgrade}`}>{shippedBefore}<span {...upgradeAttrs}>{upgrade.data.title}</span>{shippedAfter}</a>}
+      {c.owners.length > 0 && <span class="wb-chip">{copy.links.owners.replaceAll('{owners}', () => c.owners.join(', '))}</span>}
+    </div>
+  </Fragment>
+
+  <Content />
+
+  <Fragment slot="after">
+    {
+      c.stakeholders.length > 0 && (
+        <section class="mt-10">
+          <h2 class="font-heading text-2xl font-extrabold tracking-tight mb-1">{copy.stakeholders.title}</h2>
+          <p class="text-sm text-muted mb-4">{copy.stakeholders.note}</p>
+          <ul class="grid gap-2 sm:grid-cols-2">
+            {c.stakeholders.map((s) => (
+              <li class="wb-card p-3 flex items-center justify-between gap-3">
+                <span class="font-bold">{s.name}</span>
+                {s.source ? (
+                  <a class:list={['rounded border-2 border-line px-2 py-0.5 font-mono text-xs text-on-accent', positionStyle[s.position]]} href={s.source} target="_blank" rel="noopener noreferrer">
+                    {chipPosition(s.position, l)}
+                  </a>
+                ) : (
+                  <span class:list={['rounded border-2 border-line px-2 py-0.5 font-mono text-xs', positionStyle[s.position]]}>{chipPosition(s.position, l)}</span>
+                )}
+              </li>
+            ))}
+          </ul>
+        </section>
+      )
+    }
+  </Fragment>
+</ArticleShell>

@@ -1,0 +1,208 @@
+---
+// An opcode page, English or translated (PAN-517). The routes
+// src/pages/opcodes/[slug].astro and src/pages/[locale]/opcodes/[slug].astro
+// pass the English record, its neighbours and the copy. Only `description`
+// has a translation (the `opcodes` overlay); the other prose fields render in
+// English, marked as fallback fragments (docs/i18n.md, "Fallback policy").
+import { type CollectionEntry, getCollection } from "astro:content";
+import ArticleShell from "~/components/reference/ArticleShell.astro";
+import { DEFAULT_LOCALE, type LocaleCode } from "~/i18n/locales";
+import { msg } from "~/i18n/messages";
+import {
+	englishData,
+	getLocalizedEntry,
+	localizeRecord,
+	type TranslationState,
+} from "~/utils/l10n";
+import { isNoindexOpcode } from "~/utils/opcodes.mjs";
+import type { PageCopy } from "~/utils/pages";
+import { opcodeGroup, opcodeStatus } from "~/utils/reference";
+
+interface Props {
+	entry: CollectionEntry<"opcodes">;
+	prev?: CollectionEntry<"opcodes">;
+	next?: CollectionEntry<"opcodes">;
+	/** The page copy for this locale (src/content/pages/[<locale>/]opcodes-entry). */
+	copy: PageCopy;
+	locale?: LocaleCode;
+	/** Set on a translated page: drives its <TranslationNotice>. */
+	translation?: TranslationState | null;
+}
+
+const {
+	entry,
+	prev,
+	next,
+	copy,
+	locale = DEFAULT_LOCALE,
+	translation = null,
+} = Astro.props;
+const o = entry.data;
+const l = msg(locale);
+const english = locale === DEFAULT_LOCALE;
+// Marks English words on a translated page as a fallback fragment.
+const en = englishData(locale);
+const description = localizeRecord(
+	{ id: entry.id, description: o.description },
+	"opcodes",
+	["description"],
+	locale,
+).description.text;
+const toHex = (n: number) => `0x${n.toString(16).padStart(2, "0")}`;
+const hex =
+	o.codeEnd === undefined
+		? toHex(o.code)
+		: `${toHex(o.code)}–${toHex(o.codeEnd)}`;
+const btcLabel: Record<string, string> = copy.btcLabel;
+const fill = (template: string) =>
+	template
+		.replaceAll("{name}", () => o.name)
+		.replaceAll("{hex}", () => hex)
+		.replaceAll("{group}", () => opcodeGroup(o.group, l))
+		.replaceAll("{status}", () => opcodeStatus(o.status, l));
+// The upgrade that added it, in this locale where translated.
+const sinceUpgrade = o.since
+	? (await getCollection("upgrades")).find((u) => u.id === o.since)
+	: undefined;
+const localUpgrade = sinceUpgrade
+	? await getLocalizedEntry("upgrades", sinceUpgrade.id, locale)
+	: null;
+const upgradeTitle = (localUpgrade ?? sinceUpgrade)?.data.title;
+const upgradeAttrs = localUpgrade ? {} : en;
+
+// Pad short descriptions for search snippets, staying inside ~160 characters.
+// Noindex opcodes share long descriptions (the NOPs, the undefined bytes), so
+// theirs lead with the name and byte to keep every meta description unique.
+// A hand-written `metaDescription` is English, so only the English page uses it.
+const noindex = isNoindexOpcode(o);
+const suffix = fill(copy.metadata.description);
+const metaDescription =
+	(english ? o.metaDescription : undefined) ??
+	(description.length + suffix.length <= 160
+		? description + suffix
+		: noindex
+			? `${o.name} (${hex}): ${description}`
+			: description);
+const robots = noindex ? { index: false, follow: true } : undefined;
+const kindLabel: Record<string, string> = copy.usedIn.kind;
+
+const term = {
+	"@context": "https://schema.org",
+	"@type": "DefinedTerm",
+	name: o.name,
+	termCode: hex,
+	description,
+	inDefinedTermSet: "https://bchworks.com/opcodes",
+};
+---
+
+<ArticleShell
+  title={fill(copy.title)}
+  description={description}
+  metaTitle={fill(copy.metadata.title)}
+  metaDescription={metaDescription}
+  verified={o.verified}
+  lang={locale}
+  eyebrow={fill(copy.eyebrow)}
+  sources={o.sources}
+  robots={robots}
+  translation={translation}
+>
+  <Fragment slot="before">
+    <script type="application/ld+json" set:html={JSON.stringify(term)} />
+    <dl class="not-prose grid sm:grid-cols-2 gap-4 mb-8">
+      <div class="wb-card p-4">
+        <dt class="font-mono text-xs text-muted uppercase">{copy.facts.stack}</dt>
+        <dd class="font-mono mt-1">{o.stackIn || '∅'} → {o.stackOut || '∅'}</dd>
+      </div>
+      <div class="wb-card p-4">
+        <dt class="font-mono text-xs text-muted uppercase">{copy.facts.since}</dt>
+        <dd class="mt-1">
+          {sinceUpgrade ? <a class="underline" href={`/upgrades/${sinceUpgrade.id}`} {...upgradeAttrs}>{upgradeTitle}</a> : o.sinceNote ? <span {...en}>{o.sinceNote}</span> : copy.facts.original}
+        </dd>
+      </div>
+      {
+        o.cost && (
+          <div class="wb-card p-4">
+            <dt class="font-mono text-xs text-muted uppercase">{copy.facts.cost}</dt>
+            <dd class="mt-1" {...en}>{o.cost}</dd>
+          </div>
+        )
+      }
+      <div class="wb-card p-4">
+        <dt class="font-mono text-xs text-muted uppercase">{copy.facts.btcStatus}</dt>
+        <dd class="mt-1">{btcLabel[o.btc]}{o.btcNote && <span class="block text-sm text-muted mt-1" {...en}>{o.btcNote}</span>}</dd>
+      </div>
+      {
+        o.aliases.length > 0 && (
+          <div class="wb-card p-4">
+            <dt class="font-mono text-xs text-muted uppercase">{copy.facts.aliases}</dt>
+            <dd class="font-mono mt-1">{o.aliases.join(', ')}</dd>
+          </div>
+        )
+      }
+    </dl>
+  </Fragment>
+
+  {
+    o.example && (
+      <>
+        <h2>{copy.example.title}</h2>
+        <pre><code>{o.example}</code></pre>
+        {
+          o.walkthrough.length > 0 && (
+            <table>
+              <thead>
+                <tr>
+                  <th>{copy.example.step}</th>
+                  <th>{copy.example.stack}</th>
+                  <th>{copy.example.note}</th>
+                </tr>
+              </thead>
+              <tbody>
+                {o.walkthrough.map((s) => (
+                  <tr>
+                    <td><code>{s.op}</code></td>
+                    <td><code>{s.stack}</code></td>
+                    <td {...(s.note ? en : {})}>{s.note}</td>
+                  </tr>
+                ))}
+              </tbody>
+            </table>
+          )
+        }
+        <p set:html={copy.example.debugger} />
+      </>
+    )
+  }
+
+  {
+    o.usedIn.length > 0 && (
+      <>
+        <h2>{fill(copy.usedIn.title)}</h2>
+        <ul>
+          {o.usedIn.map((u) => (
+            <li>
+              <span class="font-mono text-xs uppercase text-muted">{kindLabel[u.kind]}</span>{" "}
+              <span {...en}>
+                {u.url.startsWith("/") ? (
+                  <a href={u.url}>{u.title}</a>
+                ) : (
+                  <a href={u.url} target="_blank" rel="noopener noreferrer">{u.title}</a>
+                )}
+                : {u.note}
+              </span>
+            </li>
+          ))}
+        </ul>
+      </>
+    )
+  }
+
+  <Fragment slot="after">
+    <nav class="mt-10 flex justify-between gap-4 font-mono text-sm">
+      {prev ? <a class="underline" href={`/opcodes/${prev.id}`}>← {prev.data.name}</a> : <span />}
+      {next && <a class="underline" href={`/opcodes/${next.id}`}>{next.data.name} →</a>}
+    </nav>
+  </Fragment>
+</ArticleShell>

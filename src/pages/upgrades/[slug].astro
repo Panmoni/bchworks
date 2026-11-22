@@ -1,11 +1,7 @@
 ---
-import { getCollection, render } from "astro:content";
-import ArticleShell from "~/components/reference/ArticleShell.astro";
-import Countdown from "~/components/reference/Countdown.astro";
-import { formatNumber } from "~/i18n/format";
-import { msg } from "~/i18n/messages";
+import { getCollection } from "astro:content";
+import UpgradeEntry from "~/components/reference/UpgradeEntry.astro";
 import { getPageCopy } from "~/utils/pages";
-import { formatDate, upgradeStatus } from "~/utils/reference";
 
 export const getStaticPaths = async () => {
 	const all = (await getCollection("upgrades")).sort(
@@ -19,47 +15,6 @@ export const getStaticPaths = async () => {
 
 const copy = await getPageCopy("upgrades-entry");
 const { entry, prev, next } = Astro.props;
-const { Content } = await render(entry);
-const chips = (await getCollection("chips")).filter(
-	(c) => c.data.upgrade === entry.id || entry.data.chips.includes(c.id),
-);
-const d = entry.data;
 ---
 
-<ArticleShell
-  title={d.title}
-  description={d.summary}
-  verified={d.verified}
-  eyebrow={`${formatDate(d.date, Astro.currentLocale)} · ${upgradeStatus(d.status, msg(Astro.currentLocale))}${d.height ? copy.block.replaceAll('{height}', () => formatNumber(d.height as number, Astro.currentLocale)) : ''}`}
-  sources={d.sources}
->
-  <Fragment slot="before">
-    {d.date.getTime() > Date.now() && <Countdown date={d.date} title={d.title} status={d.status} />}
-  </Fragment>
-
-  <Content />
-
-  <Fragment slot="after">
-    {
-      chips.length > 0 && (
-        <section class="mt-10">
-          <h2 class="font-heading text-2xl font-extrabold tracking-tight mb-3">{copy.chips.title}</h2>
-          <ul class="grid gap-3 sm:grid-cols-2">
-            {chips.map((c) => (
-              <li>
-                <a class="wb-card wb-card-hover block p-4" href={`/chips/${c.id}`}>
-                  <span class="font-mono text-xs text-muted">{c.data.code}</span>
-                  <span class="block font-bold">{c.data.title}</span>
-                </a>
-              </li>
-            ))}
-          </ul>
-        </section>
-      )
-    }
-    <nav class="mt-10 flex justify-between gap-4 font-mono text-sm">
-      {prev ? <a class="underline" href={`/upgrades/${prev.id}`}>← {prev.data.title}</a> : <span />}
-      {next && <a class="underline text-right" href={`/upgrades/${next.id}`}>{next.data.title} →</a>}
-    </nav>
-  </Fragment>
-</ArticleShell>
+<UpgradeEntry entry={entry} slug={entry.id} prev={prev} next={next} copy={copy} />

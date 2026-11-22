@@ -1,0 +1,65 @@
+---
+// /<code>/opcodes/<slug>: a translated opcode (PAN-517). A route exists only
+// where both the opcode's description (src/data/i18n/<code>/opcodes.json,
+// current against the English) and the page copy
+// (src/content/pages/<code>/opcodes-entry.yaml) are translated (docs/i18n.md,
+// "Fallback policy"). The notice and credit follow that description's
+// provenance.
+import { getCollection } from "astro:content";
+import type { GetStaticPaths, InferGetStaticPropsType } from "astro";
+import OpcodeEntry from "~/components/reference/OpcodeEntry.astro";
+import { DEFAULT_LOCALE, LOCALES } from "~/i18n/locales";
+import {
+	getOverlay,
+	localizeRecord,
+	type TranslationState,
+} from "~/utils/l10n";
+import { getPageEntry, type PageCopy } from "~/utils/pages";
+
+export const getStaticPaths = (async () => {
+	const all = (await getCollection("opcodes")).sort(
+		(a, b) => a.data.code - b.data.code,
+	);
+	const paths = [];
+	for (const { code } of LOCALES.filter((l) => l.code !== DEFAULT_LOCALE)) {
+		const copy = await getPageEntry("opcodes-entry", code);
+		if (!copy) continue;
+		const overlay = getOverlay("opcodes", code);
+		for (const [i, entry] of all.entries()) {
+			// A missing or stale description falls back to English: no route.
+			const { description } = localizeRecord(
+				{ id: entry.id, description: entry.data.description },
+				"opcodes",
+				["description"],
+				code,
+			);
+			const t = overlay[entry.id]?.description;
+			if (description.fallback || !t) continue;
+			const translation: TranslationState = {
+				status: t.status ?? "machine",
+				stale: false,
+				translator: t.translator ?? "",
+				reviewer: t.reviewer,
+			};
+			paths.push({
+				params: { locale: code, slug: entry.id },
+				props: {
+					entry,
+					prev: all[i - 1],
+					next: all[i + 1],
+					locale: code,
+					copy: copy.data as PageCopy,
+					translation,
+				},
+			});
+		}
+	}
+	return paths;
+}) satisfies GetStaticPaths;
+
+type Props = InferGetStaticPropsType<typeof getStaticPaths>;
+
+const { entry, prev, next, copy, locale, translation } = Astro.props as Props;
+---
+
+<OpcodeEntry entry={entry} prev={prev} next={next} copy={copy} locale={locale} translation={translation} />

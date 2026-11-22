@@ -1,0 +1,40 @@
+---
+// /<code>/chips/<slug>: a translated CHIP (PAN-517). A route exists only where
+// both the entry and the page copy (src/content/pages/<code>/chips-entry.yaml)
+// are translated (docs/i18n.md, "Fallback policy").
+import { getCollection } from "astro:content";
+import type { GetStaticPaths, InferGetStaticPropsType } from "astro";
+import ChipEntry from "~/components/reference/ChipEntry.astro";
+import { DEFAULT_LOCALE, LOCALES } from "~/i18n/locales";
+import { getLocalizedEntry, getTranslationState } from "~/utils/l10n";
+import { getPageEntry, type PageCopy } from "~/utils/pages";
+
+export const getStaticPaths = (async () => {
+	const entries = await getCollection("chips");
+	const paths = [];
+	for (const { code } of LOCALES.filter((l) => l.code !== DEFAULT_LOCALE)) {
+		const copy = await getPageEntry("chips-entry", code);
+		if (!copy) continue;
+		for (const english of entries) {
+			const entry = await getLocalizedEntry("chips", english.id, code);
+			if (!entry) continue;
+			paths.push({
+				params: { locale: code, slug: english.id },
+				props: {
+					entry,
+					locale: code,
+					copy: copy.data as PageCopy,
+					translation: await getTranslationState("chips", english.id, code),
+				},
+			});
+		}
+	}
+	return paths;
+}) satisfies GetStaticPaths;
+
+type Props = InferGetStaticPropsType<typeof getStaticPaths>;
+
+const { entry, copy, locale, translation } = Astro.props as Props;
+---
+
+<ChipEntry entry={entry} copy={copy} locale={locale} translation={translation} />

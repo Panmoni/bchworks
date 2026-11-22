@@ -1,0 +1,13 @@
+eyebrow: <a href="/chips">CHIPs</a> · {code} · {status}
+links:
+  spec: Leer la especificación ↗
+  discussion: Discusión ↗
+  shipped: Incluido en {title}
+  owners: Por {owners}
+stakeholders:
+  title: Posturas de las partes interesadas
+  note: Solo declaraciones públicas que pudimos enlazar. El silencio no figura como una posición.
+translation:
+  sourceHash: 83ab8771c2639086
+  status: machine
+  translator: Claude

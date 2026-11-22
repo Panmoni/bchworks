@@ -1,0 +1,36 @@
+metadata:
+  title: '{name} ({hex}): opcode de Bitcoin Cash Script'
+  description: ' {name} ({hex}) en Bitcoin Cash Script: estado, efecto en la pila, costo y un ejemplo.'
+title: '{name} ({hex})'
+eyebrow: <a href="/opcodes">Opcodes</a> · {group} · {status}
+facts:
+  stack: 'Pila: entrada → salida'
+  since: Desde
+  original: Script original de Bitcoin
+  cost: Costo
+  btcStatus: Estado en Bitcoin
+  aliases: También conocido como
+btcLabel:
+  same: Igual en Bitcoin (BTC)
+  disabled-in-btc: Deshabilitado en Bitcoin (BTC)
+  not-in-btc: No existe en Bitcoin (BTC)
+  proposed-for-btc: Propuesto para Bitcoin (BTC)
+  different: Funciona de otra manera en Bitcoin (BTC)
+example:
+  title: Ejemplo
+  step: Paso
+  stack: Pila después (cima a la derecha)
+  note: Qué ocurre
+  debugger: Recórrelo opcode por opcode en <a href="https://ide.bitauth.com" target="_blank" rel="noopener noreferrer">Bitauth IDE</a>, el depurador de la VM de BCH en el navegador.
+usedIn:
+  title: Dónde se usa {name}
+  kind:
+    chip: CHIP
+    upgrade: Actualización
+    contract: Contratos
+    tutorial: Tutorial
+    implementation: Implementación
+translation:
+  sourceHash: 88ae09e9c6dc3f7e
+  status: machine
+  translator: Claude
