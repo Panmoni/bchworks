@@ -9,6 +9,7 @@ import {
 	buildDeepinfraRequest,
 	deepinfraReviewer,
 	MODELS,
+	readEventStream,
 } from "./deepinfra.mjs";
 
 const batch = {
@@ -21,6 +22,33 @@ const batch = {
 	style: "Usa tú.",
 };
 
+// An unstreamed reply as the event stream DeepInfra sends: its content in
+// two deltas, then the finish_reason, then usage alone in the last chunk.
+const toEvents = (reply) => {
+	const choice = reply.choices?.[0];
+	if (!choice) return [`data: ${JSON.stringify(reply)}\n\n`];
+	const text = choice.message?.content ?? "";
+	const half = Math.ceil(text.length / 2);
+	const delta = (content, finish_reason = null) =>
+		`data: ${JSON.stringify({ choices: [{ delta: { content }, finish_reason }] })}\n\n`;
+	return [
+		delta(text.slice(0, half)),
+		delta(text.slice(half), choice.finish_reason),
+		`data: ${JSON.stringify({ choices: [], usage: reply.usage })}\n\n`,
+		"data: [DONE]\n\n",
+	];
+};
+
+const streamOf = (chunks, onCancel) =>
+	new ReadableStream({
+		start(c) {
+			if (!chunks) return; // an error reply: left open for cancel()
+			for (const s of chunks) c.enqueue(new TextEncoder().encode(s));
+			c.close();
+		},
+		cancel: onCancel,
+	});
+
 const fakeFetch = (reply, { status = 200 } = {}) => {
 	const sent = [];
 	const cancelled = [];
@@ -29,8 +57,9 @@ const fakeFetch = (reply, { status = 200 } = {}) => {
 		return {
 			ok: status < 400,
 			status,
-			json: async () => reply,
-			body: { cancel: async () => cancelled.push(status) },
+			body: streamOf(status < 400 ? toEvents(reply) : null, () =>
+				cancelled.push(status),
+			),
 		};
 	};
 	return { fetch, sent, cancelled };
@@ -184,6 +213,46 @@ describe("deepinfraReviewer", () => {
 			prompt: 7,
 			completion: 0,
 			cost: 0.25,
+		});
+	});
+
+	test("streams the reply, so a long review is not cut off at 300 s", async () => {
+		const verdicts = [{ id: "a", verdict: "clean" }];
+		const { fetch, sent } = fakeFetch(reply(verdicts));
+		await deepinfraReviewer({ fetch, key: "k" }).review(batch);
+		assert.equal(sent[0].body.stream, true);
+		assert.deepEqual(sent[0].body.stream_options, { include_usage: true });
+	});
+
+	test("reads an event split mid-line across network chunks", async () => {
+		const sse = toEvents(
+			reply([{ id: "a", verdict: "clean" }], { prompt_tokens: 3 }),
+		).join("");
+		const chunks = sse.match(/[\s\S]{1,7}/g);
+		const body = await readEventStream(streamOf(chunks));
+		assert.deepEqual(JSON.parse(body.choices[0].message.content).verdicts, [
+			{ id: "a", verdict: "clean" },
+		]);
+		assert.equal(body.choices[0].finish_reason, "stop");
+		assert.deepEqual(body.usage, { prompt_tokens: 3 });
+	});
+
+	test("a connection dropped mid-reply fails the batch only", async () => {
+		const fetch = async () => ({
+			ok: true,
+			status: 200,
+			body: new ReadableStream({
+				start(c) {
+					c.enqueue(new TextEncoder().encode('data: {"choices":[]}\n'));
+					c.error(new Error("terminated"));
+				},
+			}),
+		});
+		const r = deepinfraReviewer({ fetch, key: "k" });
+		await assert.rejects(r.review(batch), (e) => {
+			assert.equal(e instanceof TranslatorError, false);
+			assert.equal(e.message, "DeepInfra: terminated");
+			return true;
 		});
 	});
 

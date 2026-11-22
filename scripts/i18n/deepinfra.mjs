@@ -39,8 +39,42 @@ export const buildDeepinfraRequest = (batch, model) => {
 		},
 		max_tokens: 64000,
 		temperature: 0.2,
+		// Streamed so the headers arrive at once. Unstreamed, a long review
+		// sends nothing until it ends, and Node's fetch drops a request whose
+		// headers take over 300 s, well before the 15-minute abort below.
+		stream: true,
+		stream_options: { include_usage: true },
 		...(Object.hasOwn(TUNING, model) ? TUNING[model] : {}),
 	};
+};
+
+/**
+ * Reads an OpenAI-style event stream into the shape of an unstreamed reply:
+ * the content deltas joined, the last finish_reason, and the usage from the
+ * final chunk. A malformed event throws a SyntaxError.
+ */
+export const readEventStream = async (stream) => {
+	let content = "";
+	let finish_reason;
+	let usage;
+	let rest = "";
+	const take = (line) => {
+		if (!line.startsWith("data:")) return;
+		const data = line.slice(5).trim();
+		if (data === "[DONE]") return;
+		const event = JSON.parse(data);
+		if (event.usage) usage = event.usage;
+		const choice = event.choices?.[0];
+		if (choice?.delta?.content) content += choice.delta.content;
+		if (choice?.finish_reason) finish_reason = choice.finish_reason;
+	};
+	for await (const chunk of stream.pipeThrough(new TextDecoderStream())) {
+		const lines = (rest + chunk).split("\n");
+		rest = lines.pop();
+		lines.forEach(take);
+	}
+	take(rest);
+	return { choices: [{ message: { content }, finish_reason }], usage };
 };
 
 /**
@@ -93,7 +127,17 @@ export const deepinfraReviewer = ({
 					});
 				}
 			};
-			const body = await parse(() => res.json());
+			let body;
+			try {
+				body = await readEventStream(res.body);
+			} catch (e) {
+				if (e instanceof SyntaxError)
+					throw new Error(`DeepInfra (${model}): unparseable reply`, {
+						cause: e,
+					});
+				// A timeout or a dropped connection mid-reply: this batch only.
+				throw new Error(`DeepInfra: ${e.message}`, { cause: e });
+			}
 			const u = body.usage ?? {};
 			usage.calls++;
 			usage.prompt += Number(u.prompt_tokens) || 0;
