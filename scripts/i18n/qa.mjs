@@ -271,7 +271,7 @@ const NUMBER_RULES = [
 	[
 		// A block height is data and takes no separator (es-style.md): read
 		// a dotted number right after "bloque" or "altura", a table cell too.
-		/(?<!\p{L})(?:bloques?|altura)(?:\s+de\s+bloque)?\s*[:|]?\s*\d{1,3}(?:\.\d{3})+(?!\d|,\d)/iu,
+		/(?<!\p{L})(?:bloques?|alturas?)(?:\s+de\s+bloque)?\s*[:|]?\s*\d{1,3}(?:\.\d{3})+(?!\d|,\d)/iu,
 		"medium",
 		"a block height takes no separator (bloque 478558)",
 	],

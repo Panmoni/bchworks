@@ -236,6 +236,7 @@ describe("format check", () => {
 		assert.match(fmt("de altura 478.558.")[0], height);
 		assert.match(fmt("| Altura de bloque | 970.356 |")[0], height);
 		assert.match(fmt("cerca de la altura 1.003.670")[0], height);
+		assert.match(fmt("las alturas 478.558 y 478.559")[0], height);
 		for (const ok of [
 			"El bloque 478559",
 			"la altura 1003670",
