@@ -79,7 +79,7 @@ BCH se ha actualizado puntualmente cada 15 de mayo:
 - **2025:** [Límites de la VM y BigInt](/upgrades/2025-05-vm-limits-bigint). Más capacidad de cómputo para los contratos y aritmética de precisión arbitraria.
 - **2026:** [Layla](/upgrades/2026-05-upgrade). Bucles, funciones, operaciones a nivel de bits y pay-to-script.
 
-La próxima decisión llega pronto. Se espera que la actualización de mayo de 2027 quede fijada alrededor del 15 de noviembre. La principal candidata es [Faster Blocks](/blog/faster-blocks-1-minute-blocks-bitcoin-cash), que reduciría el tiempo de bloque de 10 minutos a 1 minuto. Todavía no está fijada.
+La próxima decisión llega pronto. Se espera que la actualización de mayo de 2027 quede fijada alrededor del 15 de noviembre. La principal candidata es [Bloques más rápidos](/blog/faster-blocks-1-minute-blocks-bitcoin-cash), que reduciría el tiempo de bloque de 10 minutos a 1 minuto. Todavía no está fijada.
 
 ## Ecosistema: lo que sigue vivo
 

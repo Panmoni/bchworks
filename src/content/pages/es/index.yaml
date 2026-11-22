@@ -11,7 +11,7 @@ hero:
   code:
     label: 'Ejemplo de código: acuñar un CashToken con mainnet-js'
     intro: '// Acuña tu primer CashToken (Token Pioneers #1)'
-    result: '// → 8a3f…c91e   comisión: 0,00000431 BCH'
+    result: '// → 8a3f…c91e   comisión: 0.00000431 BCH'
     tutorial: → Sigue el tutorial completo
     nfts: '→ Parte 2: acuña tus primeros NFTs'
   stickers:
@@ -70,13 +70,13 @@ specs:
       description: Alrededor de 1 satoshi por byte. Pagas por el tamaño de la transacción, no por el cómputo, así que la comisión se mantiene fija y predecible.
     - label: El pago aparece
       figure: Segundos
-      description: Las billeteras ven un pago de inmediato. Las pruebas de doble gasto alertan a los comercios si alguien intenta gastar las mismas monedas dos veces. Los bloques se confirman cada 10 minutos en promedio.
+      description: Las billeteras ven un pago de inmediato. Las pruebas de doble gasto alertan a los comercios si alguien intenta gastar las mismas monedas dos veces. Los bloques confirman los pagos cada 10 minutos en promedio.
     - label: Tamaño de bloque
       figure: 32 MB+
       description: El límite crece con la demanda sostenida gracias al algoritmo adaptativo (ABLA). Los bloques actuales usan una pequeña fracción de él.
     - label: Suministro
       figure: 21M
-      description: Un suministro fijo, protegido por prueba de trabajo SHA-256. La historia es compartida con Bitcoin hasta la división de 2017.
+      description: Un suministro fijo, protegido por prueba de trabajo SHA-256. Comparte su historia con Bitcoin hasta la división de 2017.
     - label: Tokens nativos
       figure: 20k+
       description: Se han acuñado en la cadena más de 20.000 categorías de CashToken, sin ningún contrato de token de por medio.

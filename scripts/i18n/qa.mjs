@@ -271,7 +271,12 @@ const NUMBER_RULES = [
 	[
 		// A block height is data and takes no separator (es-style.md): read
 		// a dotted number right after "bloque" or "altura", a table cell too.
-		/(?<!\p{L})(?:bloques?|alturas?)(?:\s+de\s+bloque)?\s*[:|]?\s*\d{1,3}(?:\.\d{3})+(?!\d|,\d)/iu,
+		// A number with a unit after it is a size (32.000.000 bytes), and the
+		// lookahead refuses a shorter match inside a longer number.
+		new RegExp(
+			String.raw`(?<!\p{L})(?:bloque|alturas?)(?:\s+de\s+bloque)?\s*[:|]?\s*(?:(?:n\.?º|#|número)\s*)?\d{1,3}(?:\.\d{3})+(?!\d|\.\d|,\d|\s?${UNIT})`,
+			"iu",
+		),
 		"medium",
 		"a block height takes no separator (bloque 478558)",
 	],
