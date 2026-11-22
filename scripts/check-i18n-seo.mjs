@@ -128,14 +128,16 @@ export function checkLinks(pages, byPath, registry) {
 	return errors;
 }
 
+// A numeric entity past Unicode is dropped, not a RangeError.
+const codePoint = (n) => (n <= 0x10ffff ? String.fromCodePoint(n) : "");
 const ENTITIES = { amp: "&", quot: '"', apos: "'", lt: "<", gt: ">" };
 
 /** The visible text of a page: text nodes, <title> and text attributes. */
 export function visibleText(html) {
 	const body = html
 		.replace(INERT, " ")
-		// Code stays as written. <time> holds Intl output, which has no
-		// pseudo-locale data; src/i18n/format.test.mjs covers it.
+		// Code stays as written. <time> holds formatter output by
+		// construction; src/i18n/format.test.mjs covers it.
 		.replace(/<(pre|code|svg|time)\b[\s\S]*?<\/\1>/gi, " ");
 	// Declared English fragments are allowed (dataFallbacks lists them), and
 	// so is any element that names its own language, such as a language
@@ -157,9 +159,9 @@ export function visibleText(html) {
 				.replace(/&nbsp;|&#160;/g, " ")
 				// Decoded, not dropped: "Satoshi&#39;s Angels" must still match
 				// the term "Satoshi's Angels".
-				.replace(/&#(\d+);/g, (_, n) => String.fromCodePoint(Number(n)))
+				.replace(/&#(\d+);/g, (_, n) => codePoint(Number(n)))
 				.replace(/&#x([\da-f]+);/gi, (_, n) =>
-					String.fromCodePoint(Number.parseInt(n, 16)),
+					codePoint(Number.parseInt(n, 16)),
 				)
 				.replace(/&(amp|quot|apos|lt|gt);/g, (_, e) => ENTITIES[e])
 				.replace(/&[a-z]+;/gi, "")

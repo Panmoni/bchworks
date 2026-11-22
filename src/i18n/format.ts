@@ -8,12 +8,14 @@
 // `locale` is a registry code ("es"). A tag outside the registry that Intl
 // knows ("pt", from a guide's frontmatter) is used as is; anything else falls
 // back to the default locale. Formatters are built once per locale+options.
-import { getLocale, LOCALES } from "./locales.ts";
+import { getLocale, LOCALES, PSEUDO_LOCALES } from "./locales.ts";
 
 const cache = new Map<string, unknown>();
 
 const intlTag = (locale: string | undefined): string => {
-	const entry = LOCALES.find((l) => l.code === locale);
+	// Pseudo-locales too: the browser registry lacks them (no I18N_PSEUDO
+	// there), and the client must format as the server did.
+	const entry = [...LOCALES, ...PSEUDO_LOCALES].find((l) => l.code === locale);
 	if (entry) return entry.intl;
 	if (locale && Intl.DateTimeFormat.supportedLocalesOf(locale).length)
 		return locale;

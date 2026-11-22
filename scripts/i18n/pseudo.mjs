@@ -81,7 +81,8 @@ export const unpseudoWords = (text, locale, terms = []) => {
 			" ",
 		);
 	// Bare domains after the terms, so a name such as "Bitcoin.com Wallet"
-	// matches whole before its domain is cut out.
-	t = t.replace(/\b[\w-]+\.(?:com|org|net|io|cash)\b/g, " ");
+	// matches whole before its domain is cut out. Any lowercase TLD: a daily
+	// health line can name "compi.gg" or "korbit.co.kr".
+	t = t.replace(/\b[\w-]+(?:\.[\w-]+)*\.[a-z]{2,6}\b/g, " ");
 	return t.match(/(?<![\p{L}])[A-Za-z]{2,}(?![\p{L}])/gu) ?? [];
 };

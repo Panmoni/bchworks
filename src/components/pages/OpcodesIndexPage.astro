@@ -1,9 +1,10 @@
 ---
-// The /opcodes page, English or translated (PAN-387). The routes
-// src/pages/opcodes/index.astro and src/pages/[locale]/[page].astro pass the copy.
 import { getCollection } from "astro:content";
 import Freshness from "~/components/reference/Freshness.astro";
 import InnerTitle from "~/components/widgets/InnerTitle.astro";
+// The /opcodes page, English or translated (PAN-387). The routes
+// src/pages/opcodes/index.astro and src/pages/[locale]/[page].astro pass the copy.
+import { formatDate } from "~/i18n/format";
 import Layout from "~/layouts/PageLayout.astro";
 import { englishData, type TranslationState } from "~/utils/l10n";
 import type { PageCopy } from "~/utils/pages";
@@ -27,6 +28,12 @@ const groups = [...new Set(opcodes.map((o) => o.data.group))];
 const oldest = opcodes
 	.map((o) => o.data.verified.getTime())
 	.sort((a, b) => a - b)[0];
+// `since` is an upgrade id ("2023-05-cashtokens"); show its month and year
+// in the page locale.
+const sinceMonth = (since: string) =>
+	formatDate(`${since.slice(0, 7)}-01`, Astro.currentLocale, {
+		day: undefined,
+	});
 const hex = (n: number) => `0x${n.toString(16).padStart(2, "0")}`;
 const hexRange = (o: { code: number; codeEnd?: number }) =>
 	o.codeEnd === undefined ? hex(o.code) : `${hex(o.code)}–${hex(o.codeEnd)}`;
@@ -88,7 +95,7 @@ const statusStyle = {
                       <td class="p-2 font-mono text-xs" translate="no">
                         {o.data.stackIn || '∅'} → {o.data.stackOut || '∅'}
                       </td>
-                      <td class="p-2 font-mono text-xs">{o.data.sinceNote ? <span {...en}>{o.data.sinceNote}</span> : (!o.data.since || o.data.since === 'original' ? copy.table.original : <span translate="no">{o.data.since}</span>)}</td>
+                      <td class="p-2 font-mono text-xs">{o.data.sinceNote ? <span {...en}>{o.data.sinceNote}</span> : (!o.data.since || o.data.since === 'original' ? copy.table.original : sinceMonth(o.data.since))}</td>
                       <td class="p-2 font-mono text-xs" {...en}>{o.data.btc}</td>
                     </tr>
                   ))}

@@ -2,7 +2,7 @@
 // Countdown to an upgrade. The server renders the date and the day count so
 // the page indexes; the script only ticks the clock in the browser.
 import { m, msg } from "~/i18n/messages";
-import { formatDate } from "~/utils/reference";
+import { formatDate, upgradeStatus } from "~/utils/reference";
 
 export interface Props {
 	date: Date;
@@ -15,16 +15,11 @@ export interface Props {
 
 const { date, title, titleAttrs = {}, href, status } = Astro.props;
 const l = msg(Astro.currentLocale);
-const statusLabel = {
-	activated: m.ref_upgrade_status_activated({}, l),
-	"locked-in": m.ref_upgrade_status_locked_in({}, l),
-	proposed: m.ref_upgrade_status_proposed({}, l),
-};
 const days = Math.max(0, Math.ceil((date.getTime() - Date.now()) / 86_400_000));
 ---
 
 <div class="not-prose wb-card shadow-hard bg-wb-yellow text-on-accent p-5 my-6" data-countdown={date.toISOString()} data-locale={l.locale}>
-  <p class="font-mono text-xs uppercase font-bold">{m.ref_countdown_next_upgrade({}, l)}{status && ` · ${statusLabel[status]}`}</p>
+  <p class="font-mono text-xs uppercase font-bold">{m.ref_countdown_next_upgrade({}, l)}{status && ` · ${upgradeStatus(status, l)}`}</p>
   <p class="font-heading text-2xl md:text-3xl font-extrabold tracking-tight mt-1">
     {href ? <a href={href} class="hover:underline" {...titleAttrs}>{title}</a> : <span {...titleAttrs}>{title}</span>}
   </p>

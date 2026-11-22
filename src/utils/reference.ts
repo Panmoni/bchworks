@@ -1,6 +1,7 @@
 import { getCollection } from "astro:content";
 import metrics from "~/data/metrics.json";
 import { count, formatDate, formatNumber, usd } from "~/i18n/format";
+import { m, type msg } from "~/i18n/messages";
 
 export { metrics };
 export type ChainId = keyof typeof metrics.chains;
@@ -26,18 +27,29 @@ export const freshness = (
 
 export { count, formatDate, usd };
 
-// metrics.json holds block times as written: "10 min", "12 s", "~0.4 s".
+// metrics.json holds block times as written: "10 min", "12 s", "~0.4 s", "1 h".
 // The number and unit display in the page locale.
 export const blockTime = (value: string, locale?: string): string => {
-	const parts = value.match(/^(~?)(\d+(?:\.\d+)?) (min|s)$/);
+	const parts = value.match(/^(~?)(\d+(?:\.\d+)?) (h|min|s)$/);
 	if (!parts) return value;
 	const [, approx, n, unit] = parts;
 	return `${approx}${formatNumber(Number(n), locale, {
 		style: "unit",
-		unit: unit === "min" ? "minute" : "second",
+		unit: { h: "hour", min: "minute", s: "second" }[unit],
 		unitDisplay: "short",
 	})}`;
 };
+
+/** An upgrade's status in the reader's language. */
+export const upgradeStatus = (
+	status: "activated" | "locked-in" | "proposed",
+	l: ReturnType<typeof msg>,
+): string =>
+	({
+		activated: m.ref_upgrade_status_activated,
+		"locked-in": m.ref_upgrade_status_locked_in,
+		proposed: m.ref_upgrade_status_proposed,
+	})[status]({}, l);
 
 export const isoDate = (date: Date | string) =>
 	new Date(date).toISOString().slice(0, 10);

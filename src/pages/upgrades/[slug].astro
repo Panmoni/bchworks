@@ -3,8 +3,9 @@ import { getCollection, render } from "astro:content";
 import ArticleShell from "~/components/reference/ArticleShell.astro";
 import Countdown from "~/components/reference/Countdown.astro";
 import { formatNumber } from "~/i18n/format";
+import { msg } from "~/i18n/messages";
 import { getPageCopy } from "~/utils/pages";
-import { formatDate } from "~/utils/reference";
+import { formatDate, upgradeStatus } from "~/utils/reference";
 
 export const getStaticPaths = async () => {
 	const all = (await getCollection("upgrades")).sort(
@@ -29,7 +30,7 @@ const d = entry.data;
   title={d.title}
   description={d.summary}
   verified={d.verified}
-  eyebrow={`${formatDate(d.date, Astro.currentLocale)} · ${d.status}${d.height ? copy.block.replaceAll('{height}', () => formatNumber(d.height as number, Astro.currentLocale)) : ''}`}
+  eyebrow={`${formatDate(d.date, Astro.currentLocale)} · ${upgradeStatus(d.status, msg(Astro.currentLocale))}${d.height ? copy.block.replaceAll('{height}', () => formatNumber(d.height as number, Astro.currentLocale)) : ''}`}
   sources={d.sources}
 >
   <Fragment slot="before">
