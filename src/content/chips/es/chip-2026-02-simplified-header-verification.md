@@ -16,8 +16,9 @@ sources:
     url: https://gitlab.com/0353F40E/fablous
 translation:
   sourceHash: d555f7f5cea06d08
-  status: machine
+  status: reviewed
   translator: Claude
+  reviewer: George Donnelly
 ---
 
 ## Resumen

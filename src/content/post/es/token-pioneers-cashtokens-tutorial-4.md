@@ -13,9 +13,9 @@ metadata:
   title: 'NFTs parseables: boletos y canarios de orden judicial en BCH'
 translation:
   sourceHash: e50d852e4fa675ab
-  status: machine
+  status: reviewed
   translator: Claude
-  qaHash: c03e2066dcf6de6f
+  reviewer: George Donnelly
 ---
 
 ## Índice

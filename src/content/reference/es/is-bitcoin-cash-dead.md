@@ -54,9 +54,9 @@ sources:
     url: https://en.wikipedia.org/wiki/Bitcoin_Cash
 translation:
   sourceHash: 1cb0ae6ee4350fff
-  status: machine
+  status: reviewed
   translator: Claude
-  qaHash: 32272b401d987291
+  reviewer: George Donnelly
 ---
 
 Respuesta corta: no. Bitcoin Cash sigue produciendo bloques, lanza una actualización del protocolo cada año y sigue publicando software. Un exchange regulado prevé listar futuros de BCH en octubre de 2026. También es una red pequeña con poca liquidez. Ambas cosas son ciertas, y esta página muestra las pruebas de cada una.

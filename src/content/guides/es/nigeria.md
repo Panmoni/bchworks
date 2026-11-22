@@ -50,9 +50,9 @@ sources:
     url: https://www.paytaca.com
 translation:
   sourceHash: d3143e2d8068a4b7
-  status: machine
+  status: reviewed
   translator: Claude
-  qaHash: f892f028eee8716d
+  reviewer: George Donnelly
 ---
 
 Nigeria tiene uno de los mercados cripto más activos de África, pero casi todo funciona con bitcoin y USDT. Bitcoin Cash es un rincón pequeño de ese mercado. Eso determina esta guía: **no hay un mercado directo de naira a BCH en las plataformas que revisamos en septiembre de 2026**, así que toda ruta pasa por USDT. La buena noticia es que la ruta es corta y usa un exchange local con licencia.

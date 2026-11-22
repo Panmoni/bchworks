@@ -29,9 +29,9 @@ sources:
     url: https://www.bitcoinabc.org/bcha/
 translation:
   sourceHash: 937c10e04f8ec3af
-  status: machine
+  status: reviewed
   translator: Claude
-  qaHash: b1695f2240a0e973
+  reviewer: George Donnelly
 ---
 
 ## Qué cambió

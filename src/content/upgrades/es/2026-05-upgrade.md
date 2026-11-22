@@ -38,9 +38,9 @@ sources:
     url: https://gitlab.com/bitcoin-cash-node/bitcoin-cash-node/-/blob/master/src/chainparams.cpp
 translation:
   sourceHash: 012cc6a78245497c
-  status: machine
+  status: reviewed
   translator: Claude
-  qaHash: 28fcb8856b2e5886
+  reviewer: George Donnelly
 ---
 
 ## Qué cambió

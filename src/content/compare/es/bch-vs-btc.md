@@ -56,9 +56,9 @@ sources:
     url: https://bitcoincashresearch.org/t/chip-2025-03-faster-blocks-for-bitcoin-cash/1513/189
 translation:
   sourceHash: 19babea6b11efb9f
-  status: machine
+  status: reviewed
   translator: Claude
-  qaHash: 2784aeefc4ff9ac1
+  reviewer: George Donnelly
 ---
 
 Bitcoin Cash y Bitcoin son la misma cadena hasta el 1 de agosto de 2017. En el bloque 478559 se dividieron. Todo poseedor de BTC en ese momento recibió también BCH. Ambas monedas siguen compartiendo minería SHA-256, bloques de 10 minutos y un límite de suministro de 21 millones.

@@ -14,8 +14,9 @@ sources:
     url: https://bitcoincashresearch.org/t/retracted-chip-2026-06-cashtokens-ft-nft-ambiguity-fix/1870
 translation:
   sourceHash: 5b5f61bca4a0ed83
-  status: machine
+  status: reviewed
   translator: Claude
+  reviewer: George Donnelly
 ---
 
 ## Resumen

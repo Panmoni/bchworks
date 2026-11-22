@@ -70,6 +70,6 @@ faq:
       a: Solo desde el sitio oficial de la billetera o su página de versiones en GitHub. Los APKs falsos de billeteras son una forma común de robar frases semilla. Si la billetera está en Google Play, instalarla desde ahí es la opción más sencilla.
 translation:
   sourceHash: e224a98e1cc29521
-  status: machine
+  status: reviewed
   translator: Claude
-  qaHash: bd1b5cec6b7e30bc
+  reviewer: George Donnelly

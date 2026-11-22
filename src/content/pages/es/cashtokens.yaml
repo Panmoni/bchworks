@@ -69,6 +69,6 @@ cta:
   action: Recibir novedades de BCH
 translation:
   sourceHash: c5c4eca37abd67be
-  status: machine
+  status: reviewed
   translator: Claude
-  qaHash: 4e311741537acb3b
+  reviewer: George Donnelly

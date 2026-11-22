@@ -21,8 +21,9 @@ sources:
     url: https://blog.bitjson.com/bitcoin-cash-upgrade-2023/
 translation:
   sourceHash: 5fc04aa7999368e6
-  status: machine
+  status: reviewed
   translator: Claude
+  reviewer: George Donnelly
 ---
 
 ## Resumen

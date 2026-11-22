@@ -23,8 +23,9 @@ sources:
     url: https://api.blockchair.com/bitcoin-cash/raw/block/582679
 translation:
   sourceHash: 89611129b17d1e6f
-  status: machine
+  status: reviewed
   translator: Claude
+  reviewer: George Donnelly
 ---
 
 ## Qué cambió

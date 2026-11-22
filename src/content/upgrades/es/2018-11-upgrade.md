@@ -26,8 +26,9 @@ sources:
     url: https://bitwiseinvestments.com/crypto-market-insights/the-november-2018-bitcoin-cash-fork
 translation:
   sourceHash: fb65984a114304a8
-  status: machine
+  status: reviewed
   translator: Claude
+  reviewer: George Donnelly
 ---
 
 ## Qué cambió

@@ -185,6 +185,6 @@ updates:
   action: Unirse en Telegram
 translation:
   sourceHash: 4418c4a3a9192e56
-  status: machine
+  status: reviewed
   translator: Claude
-  qaHash: a0254e22b63643c2
+  reviewer: George Donnelly

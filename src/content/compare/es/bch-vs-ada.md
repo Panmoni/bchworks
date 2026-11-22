@@ -56,9 +56,9 @@ sources:
     url: https://bitcoincashresearch.org/t/lower-the-default-relay-fee-create-a-fee-estimation-algorithm/440
 translation:
   sourceHash: 7dad31e4c20a8939
-  status: machine
+  status: reviewed
   translator: Claude
-  qaHash: 04bd8ed7846c5202
+  reviewer: George Donnelly
 ---
 
 Cardano y Bitcoin Cash son parientes más cercanos que la mayoría de las parejas que se suelen comparar. Ambas conservan la idea de [UTXO](/glossary#utxo) de Bitcoin: las monedas son salidas discretas, cada una con su propio bloqueo. Ambas ponen los tokens en el propio libro contable. Se diferencian en el consenso, en cómo los contratos ven el mundo y en cómo se gobierna la cadena.

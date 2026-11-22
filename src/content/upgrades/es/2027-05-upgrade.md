@@ -39,9 +39,9 @@ sources:
     url: https://bitcoincashresearch.org/t/chip-2026-06-post-quantum-and-hybrid-signatures/1864
 translation:
   sourceHash: 0d5f8e35014614a8
-  status: machine
+  status: reviewed
   translator: Claude
-  qaHash: 3bcbf3ca44053819
+  reviewer: George Donnelly
 ---
 
 ## Estado al 26 de septiembre de 2026
@@ -56,7 +56,7 @@ translation:
 | Otros CHIPs | Borradores. Ninguno se ha ganado un lugar con un apoyo claro. |
 | Un año “sin cambios” | Posible. Algunos colaboradores han dicho que incluso podría demostrar disciplina. |
 
-El `date` de esta página es la hora de activación tentativa. Cambiará a `locked-in` (fijada) solo si las versiones de los nodos
+El `date` de esta página es la hora de activación tentativa. Cambiará a “locked-in” (fijada) solo si las versiones de los nodos
 incluyen las reglas, y cuando lo hagan.
 
 ## El candidato principal: Faster Blocks
