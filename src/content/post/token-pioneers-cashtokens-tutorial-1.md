@@ -138,7 +138,7 @@ In this tutorial, you will mint your first (fungible) CashTokens! It’s easy so
 
 ### A Quick Intro to How Bitcoin Transactions Work
 
-Bitcoin transactions are made of inputs and outputs. For a transaction to be valid, among other requirements, the outputs must be larger in terms of the total BCH amount than the input(s).
+Bitcoin transactions are made of inputs and outputs. For a transaction to be valid, among other requirements, the total BCH amount of the outputs cannot be larger than the total BCH amount of the input(s). The difference between the two goes to the miner as the transaction fee.
 
 Each of the outputs in a transaction is an _unspent transaction output_, or **UTXO**. A UTXO is usually a BCH balance on a key pair (address) that you have in your wallet, available to spend.
 

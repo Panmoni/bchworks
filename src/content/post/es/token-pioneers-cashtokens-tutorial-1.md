@@ -143,7 +143,7 @@ En este tutorial, ¡acuñarás tus primeros CashTokens (fungibles)! Es fácil, a
 
 ### Una breve introducción al funcionamiento de las transacciones de Bitcoin
 
-Las transacciones de Bitcoin se componen de entradas y salidas. Para que una transacción sea válida, entre otros requisitos, las salidas deben ser mayores, en términos del monto total de BCH, que la(s) entrada(s).
+Las transacciones de Bitcoin se componen de entradas y salidas. Para que una transacción sea válida, entre otros requisitos, el monto total de BCH de las salidas no puede ser mayor que el monto total de BCH de la(s) entrada(s). La diferencia entre ambos va al minero como comisión de la transacción.
 
 Cada una de las salidas de una transacción es una _salida de transacción no gastada_, o **UTXO**. Un UTXO suele ser un saldo de BCH en un par de claves (dirección) que tienes en tu billetera, disponible para gastar.
 
