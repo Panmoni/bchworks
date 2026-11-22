@@ -392,6 +392,7 @@
 	"footer_tagline": "Construye tu prosperidad con Bitcoin Cash.",
 	"footer_panmoni_title": "Panmoni es un estudio de productos Web3",
 	"footer_footnote": "Un proyecto de {panmoni}. Contacto: {email}. *Incluye enlaces de afiliado.",
+	"footer_version_title": "Versión del sitio y el commit de git con el que se compiló",
 	"layout_hub_compare": "Comparar",
 	"common_toggle_menu": "Mostrar u ocultar el menú",
 	"common_toggle_theme": "Cambiar entre modo oscuro y claro",

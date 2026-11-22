@@ -42,7 +42,7 @@ const REAL_LOCALES = [
 		dir: "ltr",
 		intl: "es",
 		og: "es_ES",
-		status: "draft",
+		status: "live",
 	},
 ] as const satisfies readonly Locale[];
 

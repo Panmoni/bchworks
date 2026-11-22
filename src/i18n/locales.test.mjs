@@ -47,8 +47,9 @@ test("htmlAttrs renders an rtl locale as dir=rtl", () => {
 	assert.deepEqual(htmlAttrs(getLocale("es")), { lang: "es", dir: "ltr" });
 });
 
-test("Spanish is draft, and the astro i18n block keeps English unprefixed", () => {
-	assert.deepEqual(draftLocaleCodes(), ["es"]);
+test("Spanish is live, and the astro i18n block keeps English unprefixed", () => {
+	assert.deepEqual(draftLocaleCodes(), []);
+	assert.equal(getLocale("es").status, "live");
 	assert.deepEqual(astroI18n(), {
 		defaultLocale: "en",
 		locales: ["en", "es"],

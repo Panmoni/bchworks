@@ -1079,6 +1079,12 @@
 		"translator": "Claude",
 		"reviewer": "George Donnelly"
 	},
+	"footer_version_title": {
+		"sourceHash": "3fa752fe20ae9667",
+		"status": "reviewed",
+		"translator": "Claude",
+		"reviewer": "George Donnelly"
+	},
 	"layout_hub_compare": {
 		"sourceHash": "9ddaebc0fd8f2335",
 		"status": "reviewed",
@@ -1627,17 +1633,20 @@
 	},
 	"blog_series_label": {
 		"sourceHash": "745240423f113fdc",
-		"status": "machine",
-		"translator": "Claude"
+		"status": "reviewed",
+		"translator": "Claude",
+		"reviewer": "George Donnelly"
 	},
 	"blog_series_previous": {
 		"sourceHash": "5660ba8f9621a19f",
-		"status": "machine",
-		"translator": "Claude"
+		"status": "reviewed",
+		"translator": "Claude",
+		"reviewer": "George Donnelly"
 	},
 	"blog_series_next": {
 		"sourceHash": "eeb4d533f4f2c7aa",
-		"status": "machine",
-		"translator": "Claude"
+		"status": "reviewed",
+		"translator": "Claude",
+		"reviewer": "George Donnelly"
 	}
 }

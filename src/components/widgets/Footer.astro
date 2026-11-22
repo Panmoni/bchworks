@@ -75,7 +75,7 @@ const l = msg(Astro.currentLocale);
           target="_blank"
           rel="noopener noreferrer license">CC-BY</a
         >
-        <span class="opacity-70" title="Site version and the git commit it was built from">
+        <span class="opacity-70" title={m.footer_version_title({}, l)}>
           · {__APP_VERSION__} ({__GIT_COMMIT__})
         </span>
       </span>
