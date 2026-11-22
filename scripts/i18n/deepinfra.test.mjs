@@ -176,7 +176,9 @@ describe("deepinfraReviewer", () => {
 	});
 
 	test("a malformed reply fails the batch only, never the run", async () => {
-		const content = (c) => ({ choices: [{ message: { content: c } }] });
+		const content = (c) => ({
+			choices: [{ message: { content: c }, finish_reason: "stop" }],
+		});
 		for (const res of [
 			content('{"verdicts":{"id":"a"}}'),
 			content('{"verdicts":[null]}'),
@@ -235,6 +237,55 @@ describe("deepinfraReviewer", () => {
 		]);
 		assert.equal(body.choices[0].finish_reason, "stop");
 		assert.deepEqual(body.usage, { prompt_tokens: 3 });
+	});
+
+	test("reads a last event that has no trailing newline", async () => {
+		const body = await readEventStream(
+			streamOf([
+				'data: {"choices":[{"delta":{"content":"x"},"finish_reason":"stop"}]}',
+			]),
+		);
+		assert.equal(body.choices[0].message.content, "x");
+	});
+
+	test("an error event, a stream that ends early or no body fails the batch with its cause", async () => {
+		for (const [chunks, message] of [
+			[
+				['data: {"error":{"message":"Insufficient balance"}}\n\n'],
+				"DeepInfra: Insufficient balance",
+			],
+			[
+				['data: {"choices":[{"delta":{"content":"{\\"verd"}}]}\n\n'],
+				"DeepInfra: the stream ended early",
+			],
+			[null, "DeepInfra (deepseek): empty reply"],
+		]) {
+			const fetch = async () => ({
+				ok: true,
+				status: 200,
+				body: chunks && streamOf(chunks),
+			});
+			const r = deepinfraReviewer({ fetch, key: "k" });
+			await assert.rejects(r.review(batch), (e) => {
+				assert.equal(e instanceof TranslatorError, false);
+				assert.equal(e.message, message);
+				return true;
+			});
+		}
+	});
+
+	test("a malformed event line fails the batch as an unparseable reply", async () => {
+		const fetch = async () => ({
+			ok: true,
+			status: 200,
+			body: streamOf(["data: {not json}\n\n"]),
+		});
+		const r = deepinfraReviewer({ fetch, key: "k" });
+		await assert.rejects(r.review(batch), (e) => {
+			assert.equal(e instanceof TranslatorError, false);
+			assert.match(e.message, /unparseable reply/);
+			return true;
+		});
 	});
 
 	test("a connection dropped mid-reply fails the batch only", async () => {

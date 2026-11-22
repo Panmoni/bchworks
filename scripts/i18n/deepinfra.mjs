@@ -63,6 +63,9 @@ export const readEventStream = async (stream) => {
 		const data = line.slice(5).trim();
 		if (data === "[DONE]") return;
 		const event = JSON.parse(data);
+		// After the 200 headers, a failure arrives as an error event.
+		if (event.error)
+			throw new StreamError(event.error.message ?? "error in the stream");
 		if (event.usage) usage = event.usage;
 		const choice = event.choices?.[0];
 		if (choice?.delta?.content) content += choice.delta.content;
@@ -74,8 +77,13 @@ export const readEventStream = async (stream) => {
 		lines.forEach(take);
 	}
 	take(rest);
+	// A clean close before the model finished is a transport fault.
+	if (!finish_reason) throw new StreamError("the stream ended early");
 	return { choices: [{ message: { content }, finish_reason }], usage };
 };
+
+/** A failure the stream itself reports: never a malformed reply. */
+class StreamError extends Error {}
 
 /**
  * The reviewer `pnpm i18n:qa --provider deepinfra` uses. `fetch` is
@@ -127,6 +135,7 @@ export const deepinfraReviewer = ({
 					});
 				}
 			};
+			if (!res.body) throw new Error(`DeepInfra (${model}): empty reply`);
 			let body;
 			try {
 				body = await readEventStream(res.body);

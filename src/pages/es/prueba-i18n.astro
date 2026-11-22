@@ -1,7 +1,8 @@
 ---
-// Fixture for the locale routing (PAN-376): proves /es/ pages get lang, dir
-// and the draft noindex from src/i18n/locales.ts. The bare Layout keeps the
-// English header and footer out. Remove once real Spanish pages ship.
+// Fixture for the locale routing (PAN-376): proves /es/ pages get lang and
+// dir from src/i18n/locales.ts. The bare Layout keeps the English header and
+// footer out. Noindex and out of the sitemap (astro.config.mjs): it is a
+// test page, and Spanish is live.
 //
 // It also proves the fragment fallback (PAN-378, docs/i18n.md): the glossary
 // term below goes in under an id no overlay holds, so it renders in English
@@ -15,6 +16,7 @@ import { localizeRecord } from "~/utils/l10n";
 const metadata = {
 	title: "Prueba de idioma",
 	description: "Página de prueba de las rutas en español.",
+	robots: { index: false, follow: false },
 };
 
 const utxo = await getEntry("glossary", "utxo");

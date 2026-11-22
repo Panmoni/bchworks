@@ -44,7 +44,7 @@ const feedItems = async (code: string) => {
 
 export const getStaticPaths = (async () => {
 	if (!APP_BLOG.isEnabled) return [];
-	// Widened: today no other locale is live, and TS would narrow this to never.
+	// Widened: with no other locale live, TS would narrow this to never.
 	const live = (LOCALES as readonly Locale[]).filter(
 		(l) => l.status === "live" && l.code !== DEFAULT_LOCALE,
 	);

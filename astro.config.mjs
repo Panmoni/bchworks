@@ -155,6 +155,10 @@ export default defineConfig({
 								new URL(page).pathname,
 							) &&
 							!noindexOpcodes.has(new URL(page).pathname) &&
+							// The Spanish i18n test pages are noindex.
+							!/^\/es\/prueba-(i18n|traduccion)(\/|$)/.test(
+								new URL(page).pathname,
+							) &&
 							!inDraftLocale(new URL(page).pathname),
 					}),
 				]
