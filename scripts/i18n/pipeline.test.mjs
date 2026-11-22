@@ -657,6 +657,14 @@ describe("protect", () => {
 		assert.equal(unmask(text, tokens), src);
 	});
 
+	test("angle brackets around prose are not a tag", () => {
+		const { text } = mask(
+			"Use OP_HASH256 <32 bytes> OP_EQUAL, <b>now</b>",
+			null,
+		);
+		assert.equal(text, "Use ⟦0⟧ <32 bytes> ⟦1⟧, ⟦2⟧now⟦3⟧");
+	});
+
 	test("an HTML <code> element is protected whole, text included", () => {
 		const src = 'Read with <code class="font-mono">getblock</code> <b>now</b>';
 		const { text, tokens } = mask(src, null);

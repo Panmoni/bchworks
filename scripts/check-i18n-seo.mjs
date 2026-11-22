@@ -128,6 +128,8 @@ export function checkLinks(pages, byPath, registry) {
 	return errors;
 }
 
+const ENTITIES = { amp: "&", quot: '"', apos: "'", lt: "<", gt: ">" };
+
 /** The visible text of a page: text nodes, <title> and text attributes. */
 export function visibleText(html) {
 	const body = html
@@ -153,7 +155,14 @@ export function visibleText(html) {
 		.map((t) =>
 			t
 				.replace(/&nbsp;|&#160;/g, " ")
-				.replace(/&[a-z]+;|&#x?[\da-f]+;/gi, "")
+				// Decoded, not dropped: "Satoshi&#39;s Angels" must still match
+				// the term "Satoshi's Angels".
+				.replace(/&#(\d+);/g, (_, n) => String.fromCodePoint(Number(n)))
+				.replace(/&#x([\da-f]+);/gi, (_, n) =>
+					String.fromCodePoint(Number.parseInt(n, 16)),
+				)
+				.replace(/&(amp|quot|apos|lt|gt);/g, (_, e) => ENTITIES[e])
+				.replace(/&[a-z]+;/gi, "")
 				.replace(/\s+/g, " ")
 				.trim(),
 		)
@@ -168,7 +177,9 @@ export function checkPseudo(pages, pseudoCodes, terms) {
 		for (const text of new Set(visibleText(page.html))) {
 			const words = unpseudoWords(text, page.locale.code, terms);
 			if (words.length)
-				errors.push(`${page.path}: un-pseudo'd "${text.slice(0, 80)}"`);
+				errors.push(
+					`${page.path}: un-pseudo'd "${text.slice(0, 80)}" (${[...new Set(words)].join(", ")})`,
+				);
 		}
 	}
 	return errors;

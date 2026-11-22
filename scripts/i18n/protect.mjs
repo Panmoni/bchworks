@@ -14,7 +14,9 @@ const PATTERNS = [
 	// An HTML <code> element whole, its text included: page copy writes RPC
 	// names and file paths as <code>getblock</code> (PAN-408).
 	/<code\b[^>\n]*>[^<\n]*<\/code>/,
-	/<[^>\n]+>/, // HTML tag or <autolink>
+	// An HTML tag, comment or <autolink>. A tag name starts with a letter, so
+	// prose such as "OP_HASH256 <32 bytes> OP_EQUAL" is translated (PAN-520).
+	/<[A-Za-z/!][^>\n]*>/,
 	// Markdown link target, spaces and apostrophes included: an image path
 	// such as "Screenshot 2023-12-28 at 3.48.11 PM.png" was translated. It
 	// stops before a ` "title"`, so an image title is translated (PAN-383).

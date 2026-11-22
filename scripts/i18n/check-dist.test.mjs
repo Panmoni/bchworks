@@ -151,7 +151,9 @@ describe("pseudo-locale check", () => {
 			["en-XA"],
 			[],
 		);
-		assert.deepEqual(errors, ['/en-XA/about: un-pseudo\'d "Hello world"']);
+		assert.deepEqual(errors, [
+			'/en-XA/about: un-pseudo\'d "Hello world" (Hello, world)',
+		]);
 	});
 
 	test("pseudo text, terms, code, fragments and translate=no pass", async () => {
@@ -182,9 +184,16 @@ describe("pseudo-locale check", () => {
 			["en-XA"],
 			[],
 		);
-		assert.deepEqual(errors, ['/en-XA/about: un-pseudo\'d "A chart"']);
+		assert.deepEqual(errors, ['/en-XA/about: un-pseudo\'d "A chart" (chart)']);
 	});
 
+	test("an entity in visible text is decoded, so a term still matches", async () => {
+		const body = "<p>Satoshi&#39;s Angels &amp; bitdb</p>";
+		assert.deepEqual(
+			checkPseudo(await pages(body), ["en-XA"], ["Satoshi's Angels", "bitdb"]),
+			[],
+		);
+	});
 	test("dataFallbacks lists embedded English in locale pages only", async () => {
 		const dir = await site({
 			"about.html": page("/about", "en", {
@@ -243,5 +252,14 @@ describe("pseudoize", () => {
 			),
 			["now", "at"],
 		);
+	});
+
+	test("unpseudoWords matches a term before cutting a domain or a curly apostrophe", () => {
+		const terms = ["Bitcoin.com Wallet", "Satoshi's Angels"];
+		assert.deepEqual(
+			unpseudoWords("Bitcoin.com Wallet, Satoshi’s Angels", "en-XA", terms),
+			[],
+		);
+		assert.deepEqual(unpseudoWords("Bitcoin.com Map", "en-XA", terms), ["Map"]);
 	});
 });

@@ -35,6 +35,8 @@ const sanitize = (
 	const description = describeProject(id, data, locale);
 	return {
 		title: data.title,
+		// A project name stays as written in every language.
+		titleIsName: true,
 		description: description?.text,
 		// English shown on a translated page: render it inside lang="en".
 		descriptionFallback: description?.fallback ?? false,

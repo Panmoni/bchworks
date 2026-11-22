@@ -146,11 +146,11 @@ const dataset = {
                 <div class="min-w-0 flex-1">
                   <div class="flex flex-wrap items-center gap-2">
                     {p.data.url ? (
-                      <a class="font-heading text-lg font-extrabold hover:underline" href={p.data.url} target="_blank" rel="noopener noreferrer">
+                      <a class="font-heading text-lg font-extrabold hover:underline" href={p.data.url} target="_blank" rel="noopener noreferrer" translate="no">
                         {p.data.title}
                       </a>
                     ) : (
-                      <span class="font-heading text-lg font-extrabold">{p.data.title}</span>
+                      <span class="font-heading text-lg font-extrabold" translate="no">{p.data.title}</span>
                     )}
                     <HealthBadge health={h} />
                   </div>
@@ -187,7 +187,7 @@ const dataset = {
         <ul class="flex flex-wrap gap-2">
           {graveyard
             .sort((a, b) => a.data.title.localeCompare(b.data.title))
-            .map((p) => <li class="wb-chip opacity-70 line-through">{p.data.title}</li>)}
+            .map((p) => <li class="wb-chip opacity-70 line-through" translate="no">{p.data.title}</li>)}
         </ul>
       </section>
     )

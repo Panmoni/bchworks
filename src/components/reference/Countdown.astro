@@ -7,19 +7,26 @@ import { formatDate } from "~/utils/reference";
 export interface Props {
 	date: Date;
 	title: string;
+	/** Attributes for the title, such as a fallback marker for English. */
+	titleAttrs?: Record<string, string | boolean>;
 	href?: string;
-	status?: string;
+	status?: "activated" | "locked-in" | "proposed";
 }
 
-const { date, title, href, status } = Astro.props;
+const { date, title, titleAttrs = {}, href, status } = Astro.props;
 const l = msg(Astro.currentLocale);
+const statusLabel = {
+	activated: m.ref_upgrade_status_activated({}, l),
+	"locked-in": m.ref_upgrade_status_locked_in({}, l),
+	proposed: m.ref_upgrade_status_proposed({}, l),
+};
 const days = Math.max(0, Math.ceil((date.getTime() - Date.now()) / 86_400_000));
 ---
 
 <div class="not-prose wb-card shadow-hard bg-wb-yellow text-on-accent p-5 my-6" data-countdown={date.toISOString()} data-locale={l.locale}>
-  <p class="font-mono text-xs uppercase font-bold">{m.ref_countdown_next_upgrade({}, l)}{status && ` · ${status}`}</p>
+  <p class="font-mono text-xs uppercase font-bold">{m.ref_countdown_next_upgrade({}, l)}{status && ` · ${statusLabel[status]}`}</p>
   <p class="font-heading text-2xl md:text-3xl font-extrabold tracking-tight mt-1">
-    {href ? <a href={href} class="hover:underline">{title}</a> : title}
+    {href ? <a href={href} class="hover:underline" {...titleAttrs}>{title}</a> : <span {...titleAttrs}>{title}</span>}
   </p>
   <p class="mt-2 font-mono text-lg">
     <span data-countdown-text>{m.ref_countdown_in_days({ count: days }, l)}</span>

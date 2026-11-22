@@ -47,7 +47,16 @@ Libauth
 Mainnet Cash
 Electrum
 
+# Other blockchains, as /compare and the State of BCH name them
+Bitcoin Core
+Cardano
+Ethereum
+Kaspa
+Litecoin
+Solana
+
 # Tickers
+ADA
 ETH
 XMR
 LTC

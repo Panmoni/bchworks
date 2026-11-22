@@ -16,6 +16,11 @@ Kaspa API
 Koios
 UTC
 
+# Units and symbols that stay as written: hashrate, and the US dollar sign
+# Intl writes for some locales ("0,0016 US$" in Arabic)
+EH/s
+US$
+
 # Publisher and licence
 George Donnelly
 Panmoni

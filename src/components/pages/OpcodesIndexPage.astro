@@ -78,17 +78,17 @@ const statusStyle = {
                       data-op
                       data-search={`${o.data.name} ${o.data.aliases.join(' ')} ${hexRange(o.data)} ${o.data.group} ${o.data.description}`.toLowerCase()}
                     >
-                      <td class="p-2 font-mono whitespace-nowrap">{hexRange(o.data)}</td>
+                      <td class="p-2 font-mono whitespace-nowrap" translate="no">{hexRange(o.data)}</td>
                       <td class="p-2">
                         <a class:list={['font-mono font-bold underline', statusStyle[o.data.status]]} href={`/opcodes/${o.id}`}>
                           {o.data.name}
                         </a>
                         {o.data.status !== 'enabled' && <span class="ml-2 font-mono text-xs text-muted" {...en}>{o.data.status}</span>}
                       </td>
-                      <td class="p-2 font-mono text-xs">
+                      <td class="p-2 font-mono text-xs" translate="no">
                         {o.data.stackIn || '∅'} → {o.data.stackOut || '∅'}
                       </td>
-                      <td class="p-2 font-mono text-xs">{o.data.sinceNote ? <span {...en}>{o.data.sinceNote}</span> : (o.data.since ?? copy.table.original)}</td>
+                      <td class="p-2 font-mono text-xs">{o.data.sinceNote ? <span {...en}>{o.data.sinceNote}</span> : (!o.data.since || o.data.since === 'original' ? copy.table.original : <span translate="no">{o.data.since}</span>)}</td>
                       <td class="p-2 font-mono text-xs" {...en}>{o.data.btc}</td>
                     </tr>
                   ))}

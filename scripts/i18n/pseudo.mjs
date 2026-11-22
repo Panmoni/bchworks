@@ -62,10 +62,11 @@ export const pseudoTranslator = {
  * ar-XB, the overridden runs are removed.
  */
 export const unpseudoWords = (text, locale, terms = []) => {
-	let t = text.replace(
-		/https?:\/\/\S+|[\w.+-]+@[\w-]+\.[\w.]+|\b[\w-]+\.(?:com|org|net|io|cash)\b/g,
-		" ",
-	);
+	let t = text
+		// Typography curls apostrophes ("Satoshi’s Angels"); terms are written
+		// with a straight one.
+		.replace(/[\u2018\u2019]/g, "'")
+		.replace(/https?:\/\/\S+|[\w.+-]+@[\w-]+\.[\w.]+/g, " ");
 	if (locale === "ar-XB")
 		t = t.replace(new RegExp(`${RLO}[^${PDF}]*${PDF}`, "g"), " ");
 	// Opcode names stay as written, as protect.mjs keeps them.
@@ -79,5 +80,8 @@ export const unpseudoWords = (text, locale, terms = []) => {
 			),
 			" ",
 		);
+	// Bare domains after the terms, so a name such as "Bitcoin.com Wallet"
+	// matches whole before its domain is cut out.
+	t = t.replace(/\b[\w-]+\.(?:com|org|net|io|cash)\b/g, " ");
 	return t.match(/(?<![\p{L}])[A-Za-z]{2,}(?![\p{L}])/gu) ?? [];
 };

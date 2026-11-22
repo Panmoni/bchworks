@@ -1,6 +1,6 @@
 import { getCollection } from "astro:content";
 import metrics from "~/data/metrics.json";
-import { count, formatDate, usd } from "~/i18n/format";
+import { count, formatDate, formatNumber, usd } from "~/i18n/format";
 
 export { metrics };
 export type ChainId = keyof typeof metrics.chains;
@@ -25,6 +25,19 @@ export const freshness = (
 };
 
 export { count, formatDate, usd };
+
+// metrics.json holds block times as written: "10 min", "12 s", "~0.4 s".
+// The number and unit display in the page locale.
+export const blockTime = (value: string, locale?: string): string => {
+	const parts = value.match(/^(~?)(\d+(?:\.\d+)?) (min|s)$/);
+	if (!parts) return value;
+	const [, approx, n, unit] = parts;
+	return `${approx}${formatNumber(Number(n), locale, {
+		style: "unit",
+		unit: unit === "min" ? "minute" : "second",
+		unitDisplay: "short",
+	})}`;
+};
 
 export const isoDate = (date: Date | string) =>
 	new Date(date).toISOString().slice(0, 10);

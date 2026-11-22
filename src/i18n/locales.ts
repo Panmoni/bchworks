@@ -55,7 +55,10 @@ export const PSEUDO_LOCALES = [
 		bcp47: "en-XA",
 		endonym: "Ëñĝļîšĥ (pseudo)",
 		dir: "ltr",
-		intl: "en",
+		// Not "en": Intl output (dates, units) must not read as plain English,
+		// or a hard-coded English date passes the pseudo check unseen. Greek
+		// keeps Latin digits and gives non-ASCII month names.
+		intl: "el",
 		og: "en_XA",
 		status: "draft",
 	},

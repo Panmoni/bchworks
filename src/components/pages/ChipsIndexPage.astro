@@ -4,6 +4,7 @@
 import { getCollection } from "astro:content";
 import Freshness from "~/components/reference/Freshness.astro";
 import InnerTitle from "~/components/widgets/InnerTitle.astro";
+import { m, msg } from "~/i18n/messages";
 import Layout from "~/layouts/PageLayout.astro";
 import {
 	englishData,
@@ -45,6 +46,13 @@ const byStatus = order
 		items: chips.filter((c) => c.entry.data.status === s),
 	}))
 	.filter((g) => g.items.length);
+const l = msg(Astro.currentLocale);
+// A CHIP with no number has the code "CHIP (unnumbered, <year>)" in its
+// frontmatter; the words around the year are the reader's language.
+const chipCode = (code: string) => {
+	const year = code.match(/^CHIP \(unnumbered, (\d{4})\)$/)?.[1];
+	return year ? m.chips_code_unnumbered({ year }, l) : code;
+};
 ---
 
 <Layout metadata={metadata} translation={translation}>
@@ -65,7 +73,7 @@ const byStatus = order
             {g.items.map((i) => (
               <li>
                 <a class="wb-card wb-card-hover block p-4 h-full" href={`/chips/${i.entry.id}`}>
-                  <span class="font-mono text-xs text-muted">{i.entry.data.code}</span>
+                  <span class="font-mono text-xs text-muted">{chipCode(i.entry.data.code)}</span>
                   <span class="block font-heading text-lg font-extrabold" {...i.attrs}>{i.data.title}</span>
                   <span class="block text-sm text-muted mt-1" {...i.attrs}>{i.data.summary}</span>
                   <Freshness class="mt-2" date={i.entry.data.verified} />

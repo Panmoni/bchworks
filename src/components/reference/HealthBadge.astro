@@ -22,11 +22,26 @@ const stateLabel = {
 	dead: m.ref_health_dead({}, l),
 	unknown: m.ref_health_unknown({}, l),
 };
+// scripts/health-check.mjs stores the raw failure: an error code or class
+// (ENOTFOUND, TimeoutError), "redirects to <host>" or "no-url". A reader sees
+// it in their language, by kind; the code itself stays in health.json.
+const reason = (error: string) => {
+	if (error === "no-url") return m.ref_health_no_url({}, l);
+	const redirect = error.match(/^redirects to (\S+)$/);
+	if (redirect) return m.ref_health_redirects({ host: redirect[1] }, l);
+	if (/TIMEOUT|Timeout/.test(error)) return m.ref_health_timeout({}, l);
+	if (/CERT|TLS|SSL|^UNABLE_TO_/.test(error)) return m.ref_health_tls({}, l);
+	if (/^(ENOTFOUND|EAI_AGAIN)$/.test(error)) return m.ref_health_dns({}, l);
+	return m.ref_health_failed({}, l);
+};
 const why = health
 	? [
 			health.httpStatus
 				? m.ref_health_http({ status: health.httpStatus }, l)
-				: health.error && m.ref_health_unreachable({ error: health.error }, l),
+				: health.error &&
+					(health.error === "no-url"
+						? reason(health.error)
+						: m.ref_health_unreachable({ error: reason(health.error) }, l)),
 			health.archived && m.ref_health_archived({}, l),
 			health.lastCommit &&
 				m.ref_health_last_commit(
