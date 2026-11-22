@@ -236,12 +236,13 @@ describe("format check", () => {
 		assert.match(fmt("de altura 478.558.")[0], height);
 		assert.match(fmt("| Altura de bloque | 970.356 |")[0], height);
 		assert.match(fmt("cerca de la altura 1.003.670")[0], height);
-		assert.deepEqual(
-			fmt(
-				"El bloque 478559, la altura 1003670, un bloqueo de hasta 30000 y cada 210.000 bloques",
-			),
-			[],
-		);
+		for (const ok of [
+			"El bloque 478559",
+			"la altura 1003670",
+			"un bloqueo de hasta 30.000",
+			"cada 210.000 bloques",
+		])
+			assert.deepEqual(fmt(ok), [], ok);
 	});
 
 	test("flags an English date and a capitalised month", () => {
