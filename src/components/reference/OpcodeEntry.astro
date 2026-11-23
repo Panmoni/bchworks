@@ -7,7 +7,7 @@
 import { type CollectionEntry, getCollection } from "astro:content";
 import ArticleShell from "~/components/reference/ArticleShell.astro";
 import { DEFAULT_LOCALE, type LocaleCode } from "~/i18n/locales";
-import { msg } from "~/i18n/messages";
+import { m, msg } from "~/i18n/messages";
 import {
 	englishData,
 	getLocalizedEntry,
@@ -118,7 +118,7 @@ const term = {
     <dl class="not-prose grid sm:grid-cols-2 gap-4 mb-8">
       <div class="wb-card p-4">
         <dt class="font-mono text-xs text-muted uppercase">{copy.facts.stack}</dt>
-        <dd class="font-mono mt-1" translate="no">{o.stackIn || '∅'} → {o.stackOut || '∅'}</dd>
+        <dd class="font-mono mt-1"><span translate="no">{o.stackIn || '∅'} →</span> {o.stackOut === '(fails)' ? m.opcodes_stack_fails({}, l) : <span translate="no">{o.stackOut || '∅'}</span>}</dd>
       </div>
       <div class="wb-card p-4">
         <dt class="font-mono text-xs text-muted uppercase">{copy.facts.since}</dt>

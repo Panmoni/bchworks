@@ -70,10 +70,11 @@ export const unpseudoWords = (text, locale, terms = []) => {
 	if (locale === "ar-XB")
 		t = t.replace(new RegExp(`${RLO}[^${PDF}]*${PDF}`, "g"), " ");
 	// Opcode names and inline code stay as written, as protect.mjs keeps them;
-	// so does a hex byte such as "0xa5", which is data.
+	// so does a hex byte such as "0xa5", which is data. Inline code here is one
+	// token ("`bits`"): two stray backticks must not hide the prose between.
 	t = t
 		.replace(/\bOP_[A-Z0-9_]+\b/g, " ")
-		.replace(/`[^`\n]+`/g, " ")
+		.replace(/`[^`\s]+`/g, " ")
 		.replace(/\b0x[\da-f]+\b/gi, " ");
 	const list = [...terms].sort((a, b) => b.length - a.length);
 	if (list.length)

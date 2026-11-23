@@ -509,6 +509,7 @@
 	"ref_opcode_group_function": "function",
 	"ref_opcode_group_reserved": "reserved",
 	"chips_code_unnumbered": "CHIP (unnumbered, {year})",
+	"opcodes_stack_fails": "(fails)",
 	"ref_health_alive": "alive",
 	"ref_health_stale": "stale",
 	"ref_health_dead": "dead",

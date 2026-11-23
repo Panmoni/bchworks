@@ -276,5 +276,11 @@ describe("pseudoize", () => {
 			"by",
 			"bits",
 		]);
+		assert.deepEqual(unpseudoWords("the ` key, then ` menu", "en-XA"), [
+			"the",
+			"key",
+			"then",
+			"menu",
+		]);
 	});
 });

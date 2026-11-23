@@ -1673,6 +1673,11 @@
 		"translator": "Claude",
 		"qaHash": "fa54da1c6bad0d66"
 	},
+	"opcodes_stack_fails": {
+		"sourceHash": "9a14bf4fd4ba519a",
+		"status": "machine",
+		"translator": "Claude"
+	},
 	"ref_health_timeout": {
 		"sourceHash": "4353d9a6ae6c4bbe",
 		"status": "machine",
