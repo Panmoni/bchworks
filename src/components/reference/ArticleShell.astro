@@ -18,7 +18,8 @@ export interface Props {
 	lang?: string;
 	eyebrow?: string;
 	faq?: Array<{ q: string; a: string }>;
-	sources?: Array<{ title: string; url: string }>;
+	/** `lang` marks a title cited in its own language, not the page's. */
+	sources?: Array<{ title: string; url: string; lang?: string }>;
 	/** Set on a translated entry: drives its <TranslationNotice>. */
 	translation?: TranslationState | null;
 	robots?: MetaData["robots"];
@@ -113,7 +114,7 @@ const faqLd = faqJsonLd(faq, lang);
           <ol class="list-decimal pl-5 space-y-1 text-sm text-muted">
             {sources.map((s) => (
               <li>
-                <a class="underline break-words" href={s.url} target="_blank" rel="noopener noreferrer">
+                <a class="underline break-words" href={s.url} target="_blank" rel="noopener noreferrer" lang={s.lang}>
                   {s.title}
                 </a>
               </li>

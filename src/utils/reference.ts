@@ -73,6 +73,15 @@ export const chipStatus = (
 		superseded: m.ref_chip_status_superseded,
 	})[status]({}, l);
 
+/**
+ * A CHIP's code. One with no number has the code "CHIP (unnumbered, <year>)"
+ * in its frontmatter; the words around the year are the reader's language.
+ */
+export const chipCode = (code: string, l: Labels): string => {
+	const year = code.match(/^CHIP \(unnumbered, (\d{4})\)$/)?.[1];
+	return year ? m.chips_code_unnumbered({ year }, l) : code;
+};
+
 /** A CHIP stakeholder's position in the reader's language. */
 export const chipPosition = (
 	position: "support" | "neutral" | "oppose" | "unknown",

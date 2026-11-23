@@ -14,7 +14,7 @@ import {
 	type TranslationState,
 } from "~/utils/l10n";
 import type { PageCopy } from "~/utils/pages";
-import { formatDate, upgradeStatus } from "~/utils/reference";
+import { chipCode, formatDate, upgradeStatus } from "~/utils/reference";
 
 interface Props {
 	entry: LocalizedEntry<"upgrades">;
@@ -89,7 +89,7 @@ const [prevListed, nextListed] = await Promise.all(
             {chips.map((c) => (
               <li>
                 <a class="wb-card wb-card-hover block p-4" href={`/chips/${c.entry.id}`}>
-                  <span class="font-mono text-xs text-muted">{c.data.code}</span>
+                  <span class="font-mono text-xs text-muted">{chipCode(c.data.code, msg(locale))}</span>
                   <span class="block font-bold" {...c.attrs}>{c.data.title}</span>
                 </a>
               </li>

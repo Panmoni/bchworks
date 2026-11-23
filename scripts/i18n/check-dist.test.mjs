@@ -262,4 +262,19 @@ describe("pseudoize", () => {
 		);
 		assert.deepEqual(unpseudoWords("Bitcoin.com Map", "en-XA", terms), ["Map"]);
 	});
+
+	test("unpseudoWords keeps hex bytes and inline code as written", () => {
+		assert.deepEqual(
+			unpseudoWords(
+				`OP_WITHIN (0xa5) 0xd4–0xff ${pseudoize("by", "en-XA")} \`bits\``,
+				"en-XA",
+			),
+			[],
+		);
+		assert.deepEqual(unpseudoWords("shift by bits", "en-XA"), [
+			"shift",
+			"by",
+			"bits",
+		]);
+	});
 });

@@ -13,7 +13,7 @@ import {
 	type TranslationState,
 } from "~/utils/l10n";
 import type { PageCopy } from "~/utils/pages";
-import { chipPosition, chipStatus } from "~/utils/reference";
+import { chipCode, chipPosition, chipStatus } from "~/utils/reference";
 
 interface Props {
 	entry: LocalizedEntry<"chips">;
@@ -46,6 +46,8 @@ const upgrade =
 		: null);
 const upgradeAttrs = localUpgrade ? {} : englishData(locale);
 const [shippedBefore, shippedAfter] = copy.links.shipped.split("{title}");
+// Owner and stakeholder names are people and organisations: never translated.
+const [ownersBefore, ownersAfter] = copy.links.owners.split("{owners}");
 const positionStyle = {
 	support: "bg-wb-green",
 	neutral: "bg-wb-yellow",
@@ -59,7 +61,7 @@ const positionStyle = {
   description={c.summary}
   verified={c.verified}
   lang={locale}
-  eyebrow={copy.eyebrow.replaceAll('{code}', () => c.code).replaceAll('{status}', () => chipStatus(c.status, l))}
+  eyebrow={copy.eyebrow.replaceAll('{code}', () => chipCode(c.code, l)).replaceAll('{status}', () => chipStatus(c.status, l))}
   sources={c.sources}
   translation={translation}
 >
@@ -68,7 +70,7 @@ const positionStyle = {
       <a class="wb-chip" href={c.spec} target="_blank" rel="noopener noreferrer">{copy.links.spec}</a>
       {c.discussion && <a class="wb-chip" href={c.discussion} target="_blank" rel="noopener noreferrer">{copy.links.discussion}</a>}
       {upgrade && <a class="wb-chip" href={`/upgrades/${c.upgrade}`}>{shippedBefore}<span {...upgradeAttrs}>{upgrade.data.title}</span>{shippedAfter}</a>}
-      {c.owners.length > 0 && <span class="wb-chip">{copy.links.owners.replaceAll('{owners}', () => c.owners.join(', '))}</span>}
+      {c.owners.length > 0 && <span class="wb-chip">{ownersBefore}<span translate="no">{c.owners.join(', ')}</span>{ownersAfter}</span>}
     </div>
   </Fragment>
 
@@ -83,7 +85,7 @@ const positionStyle = {
           <ul class="grid gap-2 sm:grid-cols-2">
             {c.stakeholders.map((s) => (
               <li class="wb-card p-3 flex items-center justify-between gap-3">
-                <span class="font-bold">{s.name}</span>
+                <span class="font-bold" translate="no">{s.name}</span>
                 {s.source ? (
                   <a class:list={['rounded border-2 border-line px-2 py-0.5 font-mono text-xs text-on-accent', positionStyle[s.position]]} href={s.source} target="_blank" rel="noopener noreferrer">
                     {chipPosition(s.position, l)}

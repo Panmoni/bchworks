@@ -69,8 +69,12 @@ export const unpseudoWords = (text, locale, terms = []) => {
 		.replace(/https?:\/\/\S+|[\w.+-]+@[\w-]+\.[\w.]+/g, " ");
 	if (locale === "ar-XB")
 		t = t.replace(new RegExp(`${RLO}[^${PDF}]*${PDF}`, "g"), " ");
-	// Opcode names stay as written, as protect.mjs keeps them.
-	t = t.replace(/\bOP_[A-Z0-9_]+\b/g, " ");
+	// Opcode names and inline code stay as written, as protect.mjs keeps them;
+	// so does a hex byte such as "0xa5", which is data.
+	t = t
+		.replace(/\bOP_[A-Z0-9_]+\b/g, " ")
+		.replace(/`[^`\n]+`/g, " ")
+		.replace(/\b0x[\da-f]+\b/gi, " ");
 	const list = [...terms].sort((a, b) => b.length - a.length);
 	if (list.length)
 		t = t.replace(

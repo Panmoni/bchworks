@@ -85,6 +85,11 @@ const metaDescription =
 			: description);
 const robots = noindex ? { index: false, follow: true } : undefined;
 const kindLabel: Record<string, string> = copy.usedIn.kind;
+// Sources are titles of English specs and source files ("BCHN script
+// interpreter (interpreter.cpp)"): cited as published, so they say so.
+const sources = english
+	? o.sources
+	: o.sources.map((s) => ({ ...s, lang: "en" }));
 
 const term = {
 	"@context": "https://schema.org",
@@ -104,7 +109,7 @@ const term = {
   verified={o.verified}
   lang={locale}
   eyebrow={fill(copy.eyebrow)}
-  sources={o.sources}
+  sources={sources}
   robots={robots}
   translation={translation}
 >
@@ -113,7 +118,7 @@ const term = {
     <dl class="not-prose grid sm:grid-cols-2 gap-4 mb-8">
       <div class="wb-card p-4">
         <dt class="font-mono text-xs text-muted uppercase">{copy.facts.stack}</dt>
-        <dd class="font-mono mt-1">{o.stackIn || '∅'} → {o.stackOut || '∅'}</dd>
+        <dd class="font-mono mt-1" translate="no">{o.stackIn || '∅'} → {o.stackOut || '∅'}</dd>
       </div>
       <div class="wb-card p-4">
         <dt class="font-mono text-xs text-muted uppercase">{copy.facts.since}</dt>
