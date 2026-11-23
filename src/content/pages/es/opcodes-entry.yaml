@@ -32,5 +32,6 @@ usedIn:
     implementation: Implementación
 translation:
   sourceHash: 88ae09e9c6dc3f7e
-  status: machine
+  status: reviewed
   translator: Claude
+  reviewer: George Donnelly

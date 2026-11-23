@@ -3,5 +3,6 @@ chips:
   title: CHIPs en esta actualización
 translation:
   sourceHash: b8f1bb313ef66840
-  status: machine
+  status: reviewed
   translator: Claude
+  reviewer: George Donnelly

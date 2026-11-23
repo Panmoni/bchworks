@@ -9,5 +9,6 @@ stakeholders:
   note: Solo declaraciones públicas que pudimos enlazar. El silencio no figura como una posición.
 translation:
   sourceHash: 83ab8771c2639086
-  status: machine
+  status: reviewed
   translator: Claude
+  reviewer: George Donnelly
