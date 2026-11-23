@@ -18,7 +18,7 @@
 // processes only the blocks since the last run. The first backfill from
 // genesis reads ~1M blocks: run it on the node's host, not in CI.
 //   BCH_RPC_URL=... node scripts/utxo-stats.mjs [--budget-minutes 50]
-import { readFile, writeFile } from "node:fs/promises";
+import { readFile, rename, writeFile } from "node:fs/promises";
 
 const OUT = "src/data/utxo-stats.json";
 const CONFIRMATIONS = 6; // never process the last 6 blocks, so no reorg reaches us
@@ -205,7 +205,9 @@ async function save(tipHeight) {
 		open: acc,
 		state,
 	};
-	await writeFile(OUT, `${JSON.stringify(out)}\n`);
+	// Write then rename, so a kill mid-save never truncates the resume cursor.
+	await writeFile(`${OUT}.tmp`, `${JSON.stringify(out)}\n`);
+	await rename(`${OUT}.tmp`, OUT);
 	console.log(
 		`utxo-stats: height ${cursor.height}, ${rows.length} days, ${awakenings.length} awakenings → ${OUT}`,
 	);

@@ -112,9 +112,11 @@ install_work() {
 set -eu
 read -r run src sample
 install -d -o bchn -g bchn $dir $dir/scripts $dir/src $dir/src/data
-printf %s \"\$run\" | base64 -d | install -o bchn -g bchn -m 0755 /dev/stdin $dir/run.sh
-printf %s \"\$src\" | base64 -d | install -o bchn -g bchn -m 0644 /dev/stdin $dir/scripts/utxo-stats.mjs
-printf %s \"\$sample\" | base64 -d | install -o bchn -g bchn -m 0644 /dev/stdin $dir/scripts/sample.mjs
+# install cannot read /dev/stdin over an existing file: decode to .new first.
+put() { printf %s \"\$1\" | base64 -d >\"\$2.new\"; install -o bchn -g bchn -m \"\$3\" \"\$2.new\" \"\$2\"; rm -f \"\$2.new\"; }
+put \"\$run\" $dir/run.sh 0755
+put \"\$src\" $dir/scripts/utxo-stats.mjs 0644
+put \"\$sample\" $dir/scripts/sample.mjs 0644
 '"
 }
 
@@ -125,7 +127,9 @@ SYSTEMD_RUN="sudo -n systemd-run --quiet --uid=bchn --gid=bchn -p Nice=19 -p CPU
 progress() {
 	remote "sudo -n node -e '
 const f = \"$1/$OUT\";
-let d; try { d = JSON.parse(require(\"fs\").readFileSync(f, \"utf8\")); } catch { console.log(\"progress: no stats file yet\"); process.exit(0); }
+const fs = require(\"fs\");
+if (!fs.existsSync(f)) { console.log(\"progress: no stats file yet\"); process.exit(0); }
+let d; try { d = JSON.parse(fs.readFileSync(f, \"utf8\")); } catch { console.log(\"progress: CORRUPT stats file \" + f); process.exit(1); }
 const done = d.cursor && d.tip !== undefined && d.cursor.height >= d.tip - 6;
 console.log(\"progress: height \" + (d.cursor?.height ?? 0) + \" of \" + (d.tip ?? \"?\") + \", \" + d.rows.length + \" days, \" + d.awakenings.length + \" awakenings, saved \" + d.generatedAt + (done ? \" — FINISHED\" : \"\"));
 console.log(\"verified: \" + JSON.stringify(d.verified));
@@ -147,7 +151,7 @@ dry-run)
 	;;
 start)
 	state=$(remote "systemctl is-active $UNIT 2>/dev/null || true")
-	[ "$state" = active ] && die "$UNIT is already running on $SSH_HOST: $0 status"
+	case "$state" in inactive | failed | unknown) ;; *) die "$UNIT is $state on $SSH_HOST: $0 status" ;; esac
 	remote "sudo -n systemctl reset-failed $UNIT 2>/dev/null || true"
 	install_work "$WORK"
 	progress "$WORK"
@@ -163,7 +167,8 @@ status)
 fetch)
 	state=$(remote "systemctl is-active $UNIT 2>/dev/null || true")
 	[ "$state" = active ] && die "$UNIT is still running"
-	progress "$WORK" | grep -q FINISHED || die "the backfill has not finished; '$0 start' resumes it"
+	[[ $(progress "$WORK") == *FINISHED* ]] || die "the backfill has not finished; '$0 start' resumes it"
+	trap 'rm -f "$OUT.tmp"' EXIT
 	remote "sudo -n cat $WORK/$OUT" >"$OUT.tmp"
 	node -e 'const d = JSON.parse(require("fs").readFileSync(process.argv[1], "utf8")); if (!d.verified?.matchesCoinstatsindex) process.exit(1);' "$OUT.tmp" ||
 		die "$OUT.tmp does not carry a verified row"
