@@ -1,10 +1,10 @@
 [
 	{
 		"id": "zapit",
-		"checkedAt": "2026-11-26T16:53:15.925Z",
+		"checkedAt": "2026-11-27T16:39:15.807Z",
 		"httpStatus": null,
 		"error": "no-url",
-		"failures": 63,
+		"failures": 64,
 		"lastCommit": null,
 		"lastRelease": null,
 		"archived": false,
@@ -12,29 +12,29 @@
 	},
 	{
 		"id": "paytaca",
-		"checkedAt": "2026-11-26T16:53:17.372Z",
+		"checkedAt": "2026-11-27T16:39:16.978Z",
 		"httpStatus": 200,
 		"error": null,
 		"failures": 0,
-		"lastCommit": "2026-11-26T08:55:19Z",
+		"lastCommit": "2026-11-27T04:32:56Z",
 		"lastRelease": "2026-11-08T14:07:33Z",
 		"archived": false,
 		"state": "alive"
 	},
 	{
 		"id": "cashonize",
-		"checkedAt": "2026-11-26T16:53:16.914Z",
+		"checkedAt": "2026-11-27T16:39:16.631Z",
 		"httpStatus": 200,
 		"error": null,
 		"failures": 0,
-		"lastCommit": "2026-11-26T14:43:24Z",
+		"lastCommit": "2026-11-27T15:51:37Z",
 		"lastRelease": "2026-11-25T11:54:21Z",
 		"archived": false,
 		"state": "alive"
 	},
 	{
 		"id": "electron-cash",
-		"checkedAt": "2026-11-26T16:53:16.966Z",
+		"checkedAt": "2026-11-27T16:39:16.698Z",
 		"httpStatus": 200,
 		"error": null,
 		"failures": 0,
@@ -45,7 +45,7 @@
 	},
 	{
 		"id": "stack-wallet",
-		"checkedAt": "2026-11-26T16:53:16.954Z",
+		"checkedAt": "2026-11-27T16:39:16.661Z",
 		"httpStatus": 200,
 		"error": null,
 		"failures": 0,
@@ -56,18 +56,18 @@
 	},
 	{
 		"id": "cake-wallet",
-		"checkedAt": "2026-11-26T16:53:16.934Z",
+		"checkedAt": "2026-11-27T16:39:16.709Z",
 		"httpStatus": 200,
 		"error": null,
 		"failures": 0,
-		"lastCommit": "2026-11-26T15:39:28Z",
+		"lastCommit": "2026-11-27T13:59:32Z",
 		"lastRelease": "2026-11-15T19:18:34Z",
 		"archived": false,
 		"state": "alive"
 	},
 	{
 		"id": "edge",
-		"checkedAt": "2026-11-26T16:53:18.860Z",
+		"checkedAt": "2026-11-27T16:39:18.625Z",
 		"httpStatus": 200,
 		"error": null,
 		"failures": 0,
@@ -78,7 +78,7 @@
 	},
 	{
 		"id": "bitpay",
-		"checkedAt": "2026-11-26T16:53:16.996Z",
+		"checkedAt": "2026-11-27T16:39:16.653Z",
 		"httpStatus": 200,
 		"error": null,
 		"failures": 0,
@@ -89,7 +89,7 @@
 	},
 	{
 		"id": "fullstack-cash-wallet",
-		"checkedAt": "2026-11-26T16:53:17.144Z",
+		"checkedAt": "2026-11-27T16:39:16.985Z",
 		"httpStatus": 200,
 		"error": null,
 		"failures": 0,
@@ -100,7 +100,7 @@
 	},
 	{
 		"id": "exodus",
-		"checkedAt": "2026-11-26T16:53:16.509Z",
+		"checkedAt": "2026-11-27T16:39:16.239Z",
 		"httpStatus": 403,
 		"error": null,
 		"failures": 0,
@@ -111,7 +111,7 @@
 	},
 	{
 		"id": "guarda",
-		"checkedAt": "2026-11-26T16:53:16.663Z",
+		"checkedAt": "2026-11-27T16:39:16.506Z",
 		"httpStatus": 200,
 		"error": null,
 		"failures": 0,
@@ -122,7 +122,7 @@
 	},
 	{
 		"id": "coinbase-wallet",
-		"checkedAt": "2026-11-26T16:53:16.432Z",
+		"checkedAt": "2026-11-27T16:39:16.214Z",
 		"httpStatus": 200,
 		"error": null,
 		"failures": 0,
@@ -133,7 +133,7 @@
 	},
 	{
 		"id": "atomic-wallet",
-		"checkedAt": "2026-11-26T16:53:16.562Z",
+		"checkedAt": "2026-11-27T16:39:16.287Z",
 		"httpStatus": 200,
 		"error": null,
 		"failures": 0,
@@ -144,7 +144,7 @@
 	},
 	{
 		"id": "cashaddress-org",
-		"checkedAt": "2026-11-26T16:53:17.350Z",
+		"checkedAt": "2026-11-27T16:39:17.084Z",
 		"httpStatus": 200,
 		"error": null,
 		"failures": 0,
@@ -155,29 +155,29 @@
 	},
 	{
 		"id": "unstoppable-wallet",
-		"checkedAt": "2026-11-26T16:53:17.382Z",
+		"checkedAt": "2026-11-27T16:39:17.179Z",
 		"httpStatus": 200,
 		"error": null,
 		"failures": 0,
-		"lastCommit": "2026-11-26T13:02:02Z",
+		"lastCommit": "2026-11-27T10:39:04Z",
 		"lastRelease": "2026-10-26T05:53:54Z",
 		"archived": false,
 		"state": "alive"
 	},
 	{
 		"id": "gem-wallet",
-		"checkedAt": "2026-11-26T16:53:17.256Z",
+		"checkedAt": "2026-11-27T16:39:16.986Z",
 		"httpStatus": 200,
 		"error": null,
 		"failures": 0,
-		"lastCommit": "2026-11-26T14:06:42Z",
+		"lastCommit": "2026-11-27T09:11:54Z",
 		"lastRelease": "2026-11-26T08:15:51Z",
 		"archived": false,
 		"state": "alive"
 	},
 	{
 		"id": "oxapay-wallet",
-		"checkedAt": "2026-11-26T16:53:16.768Z",
+		"checkedAt": "2026-11-27T16:39:16.591Z",
 		"httpStatus": 403,
 		"error": null,
 		"failures": 0,
@@ -188,7 +188,7 @@
 	},
 	{
 		"id": "coinomi",
-		"checkedAt": "2026-11-26T16:53:17.065Z",
+		"checkedAt": "2026-11-27T16:39:16.817Z",
 		"httpStatus": 200,
 		"error": null,
 		"failures": 0,
@@ -199,10 +199,10 @@
 	},
 	{
 		"id": "xdefi-wallet",
-		"checkedAt": "2026-11-26T16:53:17.160Z",
+		"checkedAt": "2026-11-27T16:39:16.887Z",
 		"httpStatus": 521,
 		"error": null,
-		"failures": 64,
+		"failures": 65,
 		"lastCommit": null,
 		"lastRelease": null,
 		"archived": false,
@@ -210,7 +210,7 @@
 	},
 	{
 		"id": "coin-space",
-		"checkedAt": "2026-11-26T16:53:17.648Z",
+		"checkedAt": "2026-11-27T16:39:17.232Z",
 		"httpStatus": 200,
 		"error": null,
 		"failures": 0,
@@ -221,7 +221,7 @@
 	},
 	{
 		"id": "trust-wallet",
-		"checkedAt": "2026-11-26T16:53:17.198Z",
+		"checkedAt": "2026-11-27T16:39:16.842Z",
 		"httpStatus": 200,
 		"error": null,
 		"failures": 0,
@@ -232,7 +232,7 @@
 	},
 	{
 		"id": "bitcoin-com-wallet",
-		"checkedAt": "2026-11-26T16:53:17.228Z",
+		"checkedAt": "2026-11-27T16:39:16.844Z",
 		"httpStatus": 200,
 		"error": null,
 		"failures": 0,
@@ -243,7 +243,7 @@
 	},
 	{
 		"id": "ownbit",
-		"checkedAt": "2026-11-26T16:53:17.698Z",
+		"checkedAt": "2026-11-27T16:39:17.557Z",
 		"httpStatus": 200,
 		"error": null,
 		"failures": 0,
@@ -254,7 +254,7 @@
 	},
 	{
 		"id": "satochip",
-		"checkedAt": "2026-11-26T16:53:19.698Z",
+		"checkedAt": "2026-11-27T16:39:19.857Z",
 		"httpStatus": 200,
 		"error": null,
 		"failures": 0,
@@ -265,29 +265,29 @@
 	},
 	{
 		"id": "ledger",
-		"checkedAt": "2026-11-26T16:53:17.706Z",
+		"checkedAt": "2026-11-27T16:39:17.485Z",
 		"httpStatus": 200,
 		"error": null,
 		"failures": 0,
-		"lastCommit": "2026-11-26T16:53:09Z",
+		"lastCommit": "2026-11-27T16:39:12Z",
 		"lastRelease": "2026-11-24T16:04:29Z",
 		"archived": false,
 		"state": "alive"
 	},
 	{
 		"id": "trezor",
-		"checkedAt": "2026-11-26T16:53:17.822Z",
+		"checkedAt": "2026-11-27T16:39:17.602Z",
 		"httpStatus": 200,
 		"error": null,
 		"failures": 0,
-		"lastCommit": "2026-11-26T14:35:48Z",
+		"lastCommit": "2026-11-27T16:19:45Z",
 		"lastRelease": null,
 		"archived": false,
 		"state": "alive"
 	},
 	{
 		"id": "keepkey",
-		"checkedAt": "2026-11-26T16:53:18.136Z",
+		"checkedAt": "2026-11-27T16:39:17.686Z",
 		"httpStatus": 200,
 		"error": null,
 		"failures": 0,
@@ -298,18 +298,18 @@
 	},
 	{
 		"id": "onekey",
-		"checkedAt": "2026-11-26T16:53:18.040Z",
+		"checkedAt": "2026-11-27T16:39:17.776Z",
 		"httpStatus": 200,
 		"error": null,
 		"failures": 0,
-		"lastCommit": "2026-11-26T16:32:17Z",
+		"lastCommit": "2026-11-27T16:37:16Z",
 		"lastRelease": "2026-11-14T00:20:23Z",
 		"archived": false,
 		"state": "alive"
 	},
 	{
 		"id": "keystone",
-		"checkedAt": "2026-11-26T16:53:17.912Z",
+		"checkedAt": "2026-11-27T16:39:17.667Z",
 		"httpStatus": 200,
 		"error": null,
 		"failures": 0,
@@ -320,18 +320,18 @@
 	},
 	{
 		"id": "tangem",
-		"checkedAt": "2026-11-26T16:53:17.898Z",
+		"checkedAt": "2026-11-27T16:39:17.572Z",
 		"httpStatus": 403,
 		"error": null,
 		"failures": 0,
-		"lastCommit": "2026-11-20T12:30:25Z",
-		"lastRelease": "2026-11-20T11:05:44Z",
+		"lastCommit": "2026-11-27T10:48:04Z",
+		"lastRelease": "2026-11-27T10:22:39Z",
 		"archived": false,
 		"state": "unknown"
 	},
 	{
 		"id": "safepal",
-		"checkedAt": "2026-11-26T16:53:17.609Z",
+		"checkedAt": "2026-11-27T16:39:17.399Z",
 		"httpStatus": 200,
 		"error": null,
 		"failures": 0,
@@ -342,7 +342,7 @@
 	},
 	{
 		"id": "ellipal",
-		"checkedAt": "2026-11-26T16:53:17.675Z",
+		"checkedAt": "2026-11-27T16:39:17.495Z",
 		"httpStatus": 200,
 		"error": null,
 		"failures": 0,
@@ -353,7 +353,7 @@
 	},
 	{
 		"id": "kraken",
-		"checkedAt": "2026-11-26T16:53:17.687Z",
+		"checkedAt": "2026-11-27T16:39:17.300Z",
 		"httpStatus": 200,
 		"error": null,
 		"failures": 0,
@@ -364,7 +364,7 @@
 	},
 	{
 		"id": "gemini",
-		"checkedAt": "2026-11-26T16:53:17.864Z",
+		"checkedAt": "2026-11-27T16:39:17.512Z",
 		"httpStatus": 200,
 		"error": null,
 		"failures": 0,
@@ -375,7 +375,7 @@
 	},
 	{
 		"id": "bitcoinvn",
-		"checkedAt": "2026-11-26T16:53:18.088Z",
+		"checkedAt": "2026-11-27T16:39:17.806Z",
 		"httpStatus": 200,
 		"error": null,
 		"failures": 0,
@@ -386,7 +386,7 @@
 	},
 	{
 		"id": "coinbase",
-		"checkedAt": "2026-11-26T16:53:17.786Z",
+		"checkedAt": "2026-11-27T16:39:17.532Z",
 		"httpStatus": 403,
 		"error": null,
 		"failures": 0,
@@ -397,7 +397,7 @@
 	},
 	{
 		"id": "binance",
-		"checkedAt": "2026-11-26T16:53:17.900Z",
+		"checkedAt": "2026-11-27T16:39:17.664Z",
 		"httpStatus": 202,
 		"error": null,
 		"failures": 0,
@@ -408,7 +408,7 @@
 	},
 	{
 		"id": "okx",
-		"checkedAt": "2026-11-26T16:53:18.522Z",
+		"checkedAt": "2026-11-27T16:39:18.131Z",
 		"httpStatus": 200,
 		"error": null,
 		"failures": 0,
@@ -419,7 +419,7 @@
 	},
 	{
 		"id": "coinex",
-		"checkedAt": "2026-11-26T16:53:18.523Z",
+		"checkedAt": "2026-11-27T16:39:18.198Z",
 		"httpStatus": 200,
 		"error": null,
 		"failures": 0,
@@ -430,10 +430,10 @@
 	},
 	{
 		"id": "huobi",
-		"checkedAt": "2026-11-26T16:53:17.957Z",
+		"checkedAt": "2026-11-27T16:39:17.644Z",
 		"httpStatus": null,
 		"error": "ENOTFOUND",
-		"failures": 61,
+		"failures": 62,
 		"lastCommit": null,
 		"lastRelease": null,
 		"archived": false,
@@ -441,7 +441,7 @@
 	},
 	{
 		"id": "buda",
-		"checkedAt": "2026-11-26T16:53:18.116Z",
+		"checkedAt": "2026-11-27T16:39:17.797Z",
 		"httpStatus": 200,
 		"error": null,
 		"failures": 0,
@@ -452,7 +452,7 @@
 	},
 	{
 		"id": "coincola",
-		"checkedAt": "2026-11-26T16:53:18.296Z",
+		"checkedAt": "2026-11-27T16:39:17.996Z",
 		"httpStatus": 200,
 		"error": null,
 		"failures": 0,
@@ -463,7 +463,7 @@
 	},
 	{
 		"id": "bitstamp",
-		"checkedAt": "2026-11-26T16:53:18.105Z",
+		"checkedAt": "2026-11-27T16:39:17.800Z",
 		"httpStatus": 200,
 		"error": null,
 		"failures": 0,
@@ -474,7 +474,7 @@
 	},
 	{
 		"id": "cex-io",
-		"checkedAt": "2026-11-26T16:53:18.412Z",
+		"checkedAt": "2026-11-27T16:39:18.118Z",
 		"httpStatus": 200,
 		"error": null,
 		"failures": 0,
@@ -485,7 +485,7 @@
 	},
 	{
 		"id": "uphold",
-		"checkedAt": "2026-11-26T16:53:18.308Z",
+		"checkedAt": "2026-11-27T16:39:17.998Z",
 		"httpStatus": 200,
 		"error": null,
 		"failures": 0,
@@ -496,7 +496,7 @@
 	},
 	{
 		"id": "etoro",
-		"checkedAt": "2026-11-26T16:53:18.204Z",
+		"checkedAt": "2026-11-27T16:39:17.924Z",
 		"httpStatus": 200,
 		"error": null,
 		"failures": 0,
@@ -507,7 +507,7 @@
 	},
 	{
 		"id": "crypto-com",
-		"checkedAt": "2026-11-26T16:53:18.633Z",
+		"checkedAt": "2026-11-27T16:39:18.041Z",
 		"httpStatus": 200,
 		"error": null,
 		"failures": 0,
@@ -518,7 +518,7 @@
 	},
 	{
 		"id": "coincheck",
-		"checkedAt": "2026-11-26T16:53:18.685Z",
+		"checkedAt": "2026-11-27T16:39:18.172Z",
 		"httpStatus": 200,
 		"error": null,
 		"failures": 0,
@@ -529,7 +529,7 @@
 	},
 	{
 		"id": "independent-reserve",
-		"checkedAt": "2026-11-26T16:53:18.475Z",
+		"checkedAt": "2026-11-27T16:39:18.186Z",
 		"httpStatus": 200,
 		"error": null,
 		"failures": 0,
@@ -540,10 +540,10 @@
 	},
 	{
 		"id": "korbit",
-		"checkedAt": "2026-11-26T16:53:18.889Z",
+		"checkedAt": "2026-11-27T16:39:18.614Z",
 		"httpStatus": null,
 		"error": "redirects to miraeasset.com",
-		"failures": 63,
+		"failures": 64,
 		"lastCommit": null,
 		"lastRelease": null,
 		"archived": false,
@@ -551,7 +551,7 @@
 	},
 	{
 		"id": "poloniex",
-		"checkedAt": "2026-11-26T16:53:18.565Z",
+		"checkedAt": "2026-11-27T16:39:18.192Z",
 		"httpStatus": 200,
 		"error": null,
 		"failures": 0,
@@ -562,7 +562,7 @@
 	},
 	{
 		"id": "karsha",
-		"checkedAt": "2026-11-26T16:53:18.915Z",
+		"checkedAt": "2026-11-27T16:39:18.588Z",
 		"httpStatus": 200,
 		"error": null,
 		"failures": 0,
@@ -573,7 +573,7 @@
 	},
 	{
 		"id": "coinfalcon",
-		"checkedAt": "2026-11-26T16:53:19.232Z",
+		"checkedAt": "2026-11-27T16:39:18.949Z",
 		"httpStatus": 200,
 		"error": null,
 		"failures": 0,
@@ -584,7 +584,7 @@
 	},
 	{
 		"id": "bitflyer",
-		"checkedAt": "2026-11-26T16:53:18.612Z",
+		"checkedAt": "2026-11-27T16:39:18.233Z",
 		"httpStatus": 403,
 		"error": null,
 		"failures": 0,
@@ -595,7 +595,7 @@
 	},
 	{
 		"id": "bitvavo",
-		"checkedAt": "2026-11-26T16:53:18.638Z",
+		"checkedAt": "2026-11-27T16:39:18.232Z",
 		"httpStatus": 403,
 		"error": null,
 		"failures": 0,
@@ -606,10 +606,10 @@
 	},
 	{
 		"id": "matrixport",
-		"checkedAt": "2026-11-26T16:53:20.020Z",
+		"checkedAt": "2026-11-27T16:39:19.956Z",
 		"httpStatus": null,
 		"error": "redirects to bit.com",
-		"failures": 63,
+		"failures": 64,
 		"lastCommit": null,
 		"lastRelease": null,
 		"archived": false,
@@ -617,7 +617,7 @@
 	},
 	{
 		"id": "sideshift-ai",
-		"checkedAt": "2026-11-26T16:53:19.473Z",
+		"checkedAt": "2026-11-27T16:39:18.986Z",
 		"httpStatus": 200,
 		"error": null,
 		"failures": 0,
@@ -628,7 +628,7 @@
 	},
 	{
 		"id": "thorswap",
-		"checkedAt": "2026-11-26T16:53:19.503Z",
+		"checkedAt": "2026-11-27T16:39:19.365Z",
 		"httpStatus": 200,
 		"error": null,
 		"failures": 0,
@@ -639,7 +639,7 @@
 	},
 	{
 		"id": "shapeshift",
-		"checkedAt": "2026-11-26T16:53:19.027Z",
+		"checkedAt": "2026-11-27T16:39:18.737Z",
 		"httpStatus": 200,
 		"error": null,
 		"failures": 0,
@@ -650,7 +650,7 @@
 	},
 	{
 		"id": "changenow",
-		"checkedAt": "2026-11-26T16:53:19.260Z",
+		"checkedAt": "2026-11-27T16:39:18.942Z",
 		"httpStatus": 200,
 		"error": null,
 		"failures": 0,
@@ -661,7 +661,7 @@
 	},
 	{
 		"id": "stealthex",
-		"checkedAt": "2026-11-26T16:53:18.940Z",
+		"checkedAt": "2026-11-27T16:39:18.753Z",
 		"httpStatus": 200,
 		"error": null,
 		"failures": 0,
@@ -672,7 +672,7 @@
 	},
 	{
 		"id": "simpleswap",
-		"checkedAt": "2026-11-26T16:53:19.657Z",
+		"checkedAt": "2026-11-27T16:39:19.091Z",
 		"httpStatus": 200,
 		"error": null,
 		"failures": 0,
@@ -683,7 +683,7 @@
 	},
 	{
 		"id": "swapzone",
-		"checkedAt": "2026-11-26T16:53:19.712Z",
+		"checkedAt": "2026-11-27T16:39:19.058Z",
 		"httpStatus": 200,
 		"error": null,
 		"failures": 0,
@@ -694,7 +694,7 @@
 	},
 	{
 		"id": "changelly",
-		"checkedAt": "2026-11-26T16:53:19.627Z",
+		"checkedAt": "2026-11-27T16:39:18.908Z",
 		"httpStatus": 200,
 		"error": null,
 		"failures": 0,
@@ -705,7 +705,7 @@
 	},
 	{
 		"id": "cyphergoat",
-		"checkedAt": "2026-11-26T16:53:20.527Z",
+		"checkedAt": "2026-11-27T16:39:19.818Z",
 		"httpStatus": 200,
 		"error": null,
 		"failures": 0,
@@ -716,7 +716,7 @@
 	},
 	{
 		"id": "flashift",
-		"checkedAt": "2026-11-26T16:53:19.401Z",
+		"checkedAt": "2026-11-27T16:39:19.142Z",
 		"httpStatus": 200,
 		"error": null,
 		"failures": 0,
@@ -727,7 +727,7 @@
 	},
 	{
 		"id": "whalesheaven",
-		"checkedAt": "2026-11-26T16:53:20.717Z",
+		"checkedAt": "2026-11-27T16:39:20.049Z",
 		"httpStatus": 200,
 		"error": null,
 		"failures": 0,
@@ -738,7 +738,7 @@
 	},
 	{
 		"id": "bestrate",
-		"checkedAt": "2026-11-26T16:53:19.384Z",
+		"checkedAt": "2026-11-27T16:39:19.359Z",
 		"httpStatus": 200,
 		"error": null,
 		"failures": 0,
@@ -749,7 +749,7 @@
 	},
 	{
 		"id": "basicswap",
-		"checkedAt": "2026-11-26T16:53:20.230Z",
+		"checkedAt": "2026-11-27T16:39:19.676Z",
 		"httpStatus": 200,
 		"error": null,
 		"failures": 0,
@@ -760,7 +760,7 @@
 	},
 	{
 		"id": "axeswap",
-		"checkedAt": "2026-11-26T16:53:20.508Z",
+		"checkedAt": "2026-11-27T16:39:19.855Z",
 		"httpStatus": 200,
 		"error": null,
 		"failures": 0,
@@ -771,7 +771,7 @@
 	},
 	{
 		"id": "coinatmradar",
-		"checkedAt": "2026-11-26T16:53:19.830Z",
+		"checkedAt": "2026-11-27T16:39:19.275Z",
 		"httpStatus": 403,
 		"error": null,
 		"failures": 0,
@@ -782,7 +782,7 @@
 	},
 	{
 		"id": "fastbtc-atm",
-		"checkedAt": "2026-11-26T16:53:19.884Z",
+		"checkedAt": "2026-11-27T16:39:19.302Z",
 		"httpStatus": 403,
 		"error": null,
 		"failures": 0,
@@ -793,7 +793,7 @@
 	},
 	{
 		"id": "coingate-spend",
-		"checkedAt": "2026-11-26T16:53:19.907Z",
+		"checkedAt": "2026-11-27T16:39:19.381Z",
 		"httpStatus": 200,
 		"error": null,
 		"failures": 0,
@@ -804,7 +804,7 @@
 	},
 	{
 		"id": "alfatop",
-		"checkedAt": "2026-11-26T16:53:22.516Z",
+		"checkedAt": "2026-11-27T16:39:20.690Z",
 		"httpStatus": 200,
 		"error": null,
 		"failures": 0,
@@ -815,7 +815,7 @@
 	},
 	{
 		"id": "egifter",
-		"checkedAt": "2026-11-26T16:53:20.031Z",
+		"checkedAt": "2026-11-27T16:39:19.360Z",
 		"httpStatus": 403,
 		"error": null,
 		"failures": 0,
@@ -826,7 +826,7 @@
 	},
 	{
 		"id": "bitgree",
-		"checkedAt": "2026-11-26T16:53:20.893Z",
+		"checkedAt": "2026-11-27T16:39:20.234Z",
 		"httpStatus": 200,
 		"error": null,
 		"failures": 0,
@@ -837,7 +837,7 @@
 	},
 	{
 		"id": "menufy",
-		"checkedAt": "2026-11-26T16:53:20.641Z",
+		"checkedAt": "2026-11-27T16:39:19.660Z",
 		"httpStatus": 200,
 		"error": null,
 		"failures": 0,
@@ -848,10 +848,10 @@
 	},
 	{
 		"id": "swagme-cash",
-		"checkedAt": "2026-11-26T16:53:20.277Z",
+		"checkedAt": "2026-11-27T16:39:19.418Z",
 		"httpStatus": null,
 		"error": "ENOTFOUND",
-		"failures": 64,
+		"failures": 65,
 		"lastCommit": null,
 		"lastRelease": null,
 		"archived": false,
@@ -859,7 +859,7 @@
 	},
 	{
 		"id": "travala",
-		"checkedAt": "2026-11-26T16:53:20.568Z",
+		"checkedAt": "2026-11-27T16:39:19.829Z",
 		"httpStatus": 200,
 		"error": null,
 		"failures": 0,
@@ -870,7 +870,7 @@
 	},
 	{
 		"id": "overstock",
-		"checkedAt": "2026-11-26T16:53:20.501Z",
+		"checkedAt": "2026-11-27T16:39:19.708Z",
 		"httpStatus": 200,
 		"error": null,
 		"failures": 0,
@@ -881,7 +881,7 @@
 	},
 	{
 		"id": "keys4coins",
-		"checkedAt": "2026-11-26T16:53:20.397Z",
+		"checkedAt": "2026-11-27T16:39:19.544Z",
 		"httpStatus": 403,
 		"error": null,
 		"failures": 0,
@@ -892,7 +892,7 @@
 	},
 	{
 		"id": "namecheap",
-		"checkedAt": "2026-11-26T16:53:20.415Z",
+		"checkedAt": "2026-11-27T16:39:19.626Z",
 		"httpStatus": 403,
 		"error": null,
 		"failures": 0,
@@ -903,7 +903,7 @@
 	},
 	{
 		"id": "ramnode",
-		"checkedAt": "2026-11-26T16:53:21.794Z",
+		"checkedAt": "2026-11-27T16:39:20.411Z",
 		"httpStatus": 200,
 		"error": null,
 		"failures": 0,
@@ -914,10 +914,10 @@
 	},
 	{
 		"id": "cheapair",
-		"checkedAt": "2026-11-26T16:53:21.100Z",
+		"checkedAt": "2026-11-27T16:39:20.264Z",
 		"httpStatus": null,
 		"error": "redirects to cheapoair.com",
-		"failures": 63,
+		"failures": 64,
 		"lastCommit": null,
 		"lastRelease": null,
 		"archived": false,
@@ -925,7 +925,7 @@
 	},
 	{
 		"id": "mullvad",
-		"checkedAt": "2026-11-26T16:53:21.681Z",
+		"checkedAt": "2026-11-27T16:39:20.582Z",
 		"httpStatus": 200,
 		"error": null,
 		"failures": 0,
@@ -936,10 +936,10 @@
 	},
 	{
 		"id": "satoshis-angels",
-		"checkedAt": "2026-11-26T16:53:20.415Z",
+		"checkedAt": "2026-11-27T16:39:19.708Z",
 		"httpStatus": null,
 		"error": "no-url",
-		"failures": 63,
+		"failures": 64,
 		"lastCommit": null,
 		"lastRelease": null,
 		"archived": false,
@@ -947,7 +947,7 @@
 	},
 	{
 		"id": "newegg",
-		"checkedAt": "2026-11-26T16:53:20.684Z",
+		"checkedAt": "2026-11-27T16:39:19.787Z",
 		"httpStatus": 403,
 		"error": null,
 		"failures": 0,
@@ -958,10 +958,10 @@
 	},
 	{
 		"id": "one-surgery",
-		"checkedAt": "2026-11-26T16:53:21.340Z",
+		"checkedAt": "2026-11-27T16:39:20.284Z",
 		"httpStatus": null,
 		"error": "UND_ERR_SOCKET",
-		"failures": 6,
+		"failures": 7,
 		"lastCommit": null,
 		"lastRelease": null,
 		"archived": false,
@@ -969,7 +969,7 @@
 	},
 	{
 		"id": "apmex",
-		"checkedAt": "2026-11-26T16:53:20.754Z",
+		"checkedAt": "2026-11-27T16:39:19.895Z",
 		"httpStatus": 403,
 		"error": null,
 		"failures": 0,
@@ -980,7 +980,7 @@
 	},
 	{
 		"id": "att",
-		"checkedAt": "2026-11-26T16:53:21.033Z",
+		"checkedAt": "2026-11-27T16:39:20.267Z",
 		"httpStatus": 200,
 		"error": null,
 		"failures": 0,
@@ -991,7 +991,7 @@
 	},
 	{
 		"id": "dish-tv",
-		"checkedAt": "2026-11-26T16:53:21.270Z",
+		"checkedAt": "2026-11-27T16:39:20.207Z",
 		"httpStatus": 200,
 		"error": null,
 		"failures": 0,
@@ -1002,7 +1002,7 @@
 	},
 	{
 		"id": "visionati",
-		"checkedAt": "2026-11-26T16:53:21.088Z",
+		"checkedAt": "2026-11-27T16:39:20.139Z",
 		"httpStatus": 200,
 		"error": null,
 		"failures": 0,
@@ -1013,10 +1013,10 @@
 	},
 	{
 		"id": "alagoria",
-		"checkedAt": "2026-11-26T16:53:35.685Z",
+		"checkedAt": "2026-11-27T16:39:34.895Z",
 		"httpStatus": null,
 		"error": "TimeoutError",
-		"failures": 64,
+		"failures": 65,
 		"lastCommit": null,
 		"lastRelease": null,
 		"archived": false,
@@ -1024,7 +1024,7 @@
 	},
 	{
 		"id": "ipfs-bch",
-		"checkedAt": "2026-11-26T16:53:21.744Z",
+		"checkedAt": "2026-11-27T16:39:20.346Z",
 		"httpStatus": 200,
 		"error": null,
 		"failures": 0,
@@ -1035,7 +1035,7 @@
 	},
 	{
 		"id": "paytaca-map",
-		"checkedAt": "2026-11-26T16:53:21.517Z",
+		"checkedAt": "2026-11-27T16:39:20.575Z",
 		"httpStatus": 200,
 		"error": null,
 		"failures": 0,
@@ -1046,7 +1046,7 @@
 	},
 	{
 		"id": "bitcoin-com-map",
-		"checkedAt": "2026-11-26T16:53:21.295Z",
+		"checkedAt": "2026-11-27T16:39:20.353Z",
 		"httpStatus": 403,
 		"error": null,
 		"failures": 0,
@@ -1057,7 +1057,7 @@
 	},
 	{
 		"id": "cryptwerk",
-		"checkedAt": "2026-11-26T16:53:21.531Z",
+		"checkedAt": "2026-11-27T16:39:20.764Z",
 		"httpStatus": 200,
 		"error": null,
 		"failures": 0,
@@ -1068,10 +1068,10 @@
 	},
 	{
 		"id": "noise-app",
-		"checkedAt": "2026-11-26T16:53:23.122Z",
+		"checkedAt": "2026-11-27T16:39:21.482Z",
 		"httpStatus": 410,
 		"error": null,
-		"failures": 64,
+		"failures": 65,
 		"lastCommit": null,
 		"lastRelease": null,
 		"archived": false,
@@ -1079,7 +1079,7 @@
 	},
 	{
 		"id": "read-cash",
-		"checkedAt": "2026-11-26T16:53:23.245Z",
+		"checkedAt": "2026-11-27T16:39:21.478Z",
 		"httpStatus": 200,
 		"error": null,
 		"failures": 0,
@@ -1090,10 +1090,10 @@
 	},
 	{
 		"id": "cashrain",
-		"checkedAt": "2026-11-26T16:53:22.716Z",
+		"checkedAt": "2026-11-27T16:39:20.896Z",
 		"httpStatus": 402,
 		"error": null,
-		"failures": 24,
+		"failures": 25,
 		"lastCommit": null,
 		"lastRelease": null,
 		"archived": false,
@@ -1101,7 +1101,7 @@
 	},
 	{
 		"id": "glimpse-cash",
-		"checkedAt": "2026-11-26T16:53:22.261Z",
+		"checkedAt": "2026-11-27T16:39:20.784Z",
 		"httpStatus": 200,
 		"error": null,
 		"failures": 0,
@@ -1112,7 +1112,7 @@
 	},
 	{
 		"id": "chaintip",
-		"checkedAt": "2026-11-26T16:53:22.407Z",
+		"checkedAt": "2026-11-27T16:39:20.849Z",
 		"httpStatus": 200,
 		"error": null,
 		"failures": 0,
@@ -1123,10 +1123,10 @@
 	},
 	{
 		"id": "tipbitcoincash",
-		"checkedAt": "2026-11-26T16:53:21.517Z",
+		"checkedAt": "2026-11-27T16:39:20.353Z",
 		"httpStatus": null,
 		"error": "no-url",
-		"failures": 63,
+		"failures": 64,
 		"lastCommit": null,
 		"lastRelease": null,
 		"archived": false,
@@ -1134,7 +1134,7 @@
 	},
 	{
 		"id": "cointree",
-		"checkedAt": "2026-11-26T16:53:22.314Z",
+		"checkedAt": "2026-11-27T16:39:20.924Z",
 		"httpStatus": 200,
 		"error": null,
 		"failures": 0,
@@ -1145,7 +1145,7 @@
 	},
 	{
 		"id": "issues-cash",
-		"checkedAt": "2026-11-26T16:53:23.194Z",
+		"checkedAt": "2026-11-27T16:39:21.566Z",
 		"httpStatus": 200,
 		"error": null,
 		"failures": 0,
@@ -1156,7 +1156,7 @@
 	},
 	{
 		"id": "purelypeer",
-		"checkedAt": "2026-11-26T16:53:22.872Z",
+		"checkedAt": "2026-11-27T16:39:21.331Z",
 		"httpStatus": 200,
 		"error": null,
 		"failures": 0,
@@ -1167,7 +1167,7 @@
 	},
 	{
 		"id": "gaze-cash",
-		"checkedAt": "2026-11-26T16:53:22.590Z",
+		"checkedAt": "2026-11-27T16:39:21.038Z",
 		"httpStatus": 200,
 		"error": null,
 		"failures": 0,
@@ -1178,7 +1178,7 @@
 	},
 	{
 		"id": "memo-cash",
-		"checkedAt": "2026-11-26T16:53:23.790Z",
+		"checkedAt": "2026-11-27T16:39:21.958Z",
 		"httpStatus": 200,
 		"error": null,
 		"failures": 0,
@@ -1189,10 +1189,10 @@
 	},
 	{
 		"id": "bchouse-app",
-		"checkedAt": "2026-11-26T16:53:22.672Z",
+		"checkedAt": "2026-11-27T16:39:21.047Z",
 		"httpStatus": null,
 		"error": "ENOTFOUND",
-		"failures": 64,
+		"failures": 65,
 		"lastCommit": null,
 		"lastRelease": null,
 		"archived": false,
@@ -1200,7 +1200,7 @@
 	},
 	{
 		"id": "yt-bch-university",
-		"checkedAt": "2026-11-26T16:53:22.981Z",
+		"checkedAt": "2026-11-27T16:39:21.245Z",
 		"httpStatus": 200,
 		"error": null,
 		"failures": 0,
@@ -1211,7 +1211,7 @@
 	},
 	{
 		"id": "yt-bitcoin-out-loud",
-		"checkedAt": "2026-11-26T16:53:23.019Z",
+		"checkedAt": "2026-11-27T16:39:21.483Z",
 		"httpStatus": 200,
 		"error": null,
 		"failures": 0,
@@ -1222,7 +1222,7 @@
 	},
 	{
 		"id": "moria-protocol",
-		"checkedAt": "2026-11-26T16:53:23.860Z",
+		"checkedAt": "2026-11-27T16:39:21.704Z",
 		"httpStatus": 200,
 		"error": null,
 		"failures": 0,
@@ -1233,10 +1233,10 @@
 	},
 	{
 		"id": "permute-cash",
-		"checkedAt": "2026-11-26T16:53:22.766Z",
+		"checkedAt": "2026-11-27T16:39:21.143Z",
 		"httpStatus": null,
 		"error": "ENOTFOUND",
-		"failures": 64,
+		"failures": 65,
 		"lastCommit": null,
 		"lastRelease": null,
 		"archived": false,
@@ -1244,7 +1244,7 @@
 	},
 	{
 		"id": "anyhedge",
-		"checkedAt": "2026-11-26T16:53:23.005Z",
+		"checkedAt": "2026-11-27T16:39:21.383Z",
 		"httpStatus": 200,
 		"error": null,
 		"failures": 0,
@@ -1255,7 +1255,7 @@
 	},
 	{
 		"id": "cauldrondex",
-		"checkedAt": "2026-11-26T16:53:23.226Z",
+		"checkedAt": "2026-11-27T16:39:21.387Z",
 		"httpStatus": 200,
 		"error": null,
 		"failures": 0,
@@ -1266,7 +1266,7 @@
 	},
 	{
 		"id": "tapswap",
-		"checkedAt": "2026-11-26T16:53:23.503Z",
+		"checkedAt": "2026-11-27T16:39:21.509Z",
 		"httpStatus": 200,
 		"error": null,
 		"failures": 0,
@@ -1277,10 +1277,10 @@
 	},
 	{
 		"id": "fex-cash",
-		"checkedAt": "2026-11-26T16:53:33.469Z",
+		"checkedAt": "2026-11-27T16:39:31.939Z",
 		"httpStatus": null,
 		"error": "UND_ERR_CONNECT_TIMEOUT",
-		"failures": 64,
+		"failures": 65,
 		"lastCommit": "2024-03-09T10:10:20Z",
 		"lastRelease": null,
 		"archived": false,
@@ -1288,7 +1288,7 @@
 	},
 	{
 		"id": "guanaco",
-		"checkedAt": "2026-11-26T16:53:23.502Z",
+		"checkedAt": "2026-11-27T16:39:21.682Z",
 		"httpStatus": 200,
 		"error": null,
 		"failures": 0,
@@ -1299,7 +1299,7 @@
 	},
 	{
 		"id": "eidex",
-		"checkedAt": "2026-11-26T16:53:23.897Z",
+		"checkedAt": "2026-11-27T16:39:21.933Z",
 		"httpStatus": 200,
 		"error": null,
 		"failures": 0,
@@ -1310,7 +1310,7 @@
 	},
 	{
 		"id": "bch-bull",
-		"checkedAt": "2026-11-26T16:53:23.638Z",
+		"checkedAt": "2026-11-27T16:39:21.748Z",
 		"httpStatus": 200,
 		"error": null,
 		"failures": 0,
@@ -1321,7 +1321,7 @@
 	},
 	{
 		"id": "sideshift-staking",
-		"checkedAt": "2026-11-26T16:53:24.619Z",
+		"checkedAt": "2026-11-27T16:39:22.698Z",
 		"httpStatus": 200,
 		"error": null,
 		"failures": 0,
@@ -1332,7 +1332,7 @@
 	},
 	{
 		"id": "paryonusd",
-		"checkedAt": "2026-11-26T16:53:24.166Z",
+		"checkedAt": "2026-11-27T16:39:22.239Z",
 		"httpStatus": 200,
 		"error": null,
 		"failures": 0,
@@ -1343,7 +1343,7 @@
 	},
 	{
 		"id": "future-bitcoin-cash",
-		"checkedAt": "2026-11-26T16:53:24.330Z",
+		"checkedAt": "2026-11-27T16:39:22.151Z",
 		"httpStatus": 200,
 		"error": null,
 		"failures": 0,
@@ -1354,7 +1354,7 @@
 	},
 	{
 		"id": "badgers-cash",
-		"checkedAt": "2026-11-26T16:53:24.845Z",
+		"checkedAt": "2026-11-27T16:39:22.951Z",
 		"httpStatus": 200,
 		"error": null,
 		"failures": 0,
@@ -1365,7 +1365,7 @@
 	},
 	{
 		"id": "bch-games",
-		"checkedAt": "2026-11-26T16:53:24.042Z",
+		"checkedAt": "2026-11-27T16:39:22.107Z",
 		"httpStatus": 403,
 		"error": null,
 		"failures": 0,
@@ -1376,7 +1376,7 @@
 	},
 	{
 		"id": "satoshi-dice",
-		"checkedAt": "2026-11-26T16:53:24.485Z",
+		"checkedAt": "2026-11-27T16:39:22.191Z",
 		"httpStatus": 200,
 		"error": null,
 		"failures": 0,
@@ -1387,10 +1387,10 @@
 	},
 	{
 		"id": "spin-bch",
-		"checkedAt": "2026-11-26T16:53:24.829Z",
+		"checkedAt": "2026-11-27T16:39:22.499Z",
 		"httpStatus": null,
 		"error": "ECONNREFUSED",
-		"failures": 64,
+		"failures": 65,
 		"lastCommit": null,
 		"lastRelease": null,
 		"archived": false,
@@ -1398,7 +1398,7 @@
 	},
 	{
 		"id": "blockchain-poker",
-		"checkedAt": "2026-11-26T16:53:24.180Z",
+		"checkedAt": "2026-11-27T16:39:22.493Z",
 		"httpStatus": 200,
 		"error": null,
 		"failures": 0,
@@ -1409,7 +1409,7 @@
 	},
 	{
 		"id": "basepoker",
-		"checkedAt": "2026-11-26T16:53:24.262Z",
+		"checkedAt": "2026-11-27T16:39:22.514Z",
 		"httpStatus": 200,
 		"error": null,
 		"failures": 0,
@@ -1420,7 +1420,7 @@
 	},
 	{
 		"id": "bugs-cash",
-		"checkedAt": "2026-11-26T16:53:25.707Z",
+		"checkedAt": "2026-11-27T16:39:23.573Z",
 		"httpStatus": 200,
 		"error": null,
 		"failures": 0,
@@ -1431,7 +1431,7 @@
 	},
 	{
 		"id": "gumshoe",
-		"checkedAt": "2026-11-26T16:53:24.738Z",
+		"checkedAt": "2026-11-27T16:39:22.752Z",
 		"httpStatus": 200,
 		"error": null,
 		"failures": 0,
@@ -1442,7 +1442,7 @@
 	},
 	{
 		"id": "bch-global-lotto",
-		"checkedAt": "2026-11-26T16:53:25.001Z",
+		"checkedAt": "2026-11-27T16:39:22.897Z",
 		"httpStatus": 200,
 		"error": null,
 		"failures": 0,
@@ -1453,7 +1453,7 @@
 	},
 	{
 		"id": "crypto-woo",
-		"checkedAt": "2026-11-26T16:53:24.737Z",
+		"checkedAt": "2026-11-27T16:39:22.629Z",
 		"httpStatus": 200,
 		"error": null,
 		"failures": 0,
@@ -1464,7 +1464,7 @@
 	},
 	{
 		"id": "prompt-cash",
-		"checkedAt": "2026-11-26T16:53:25.381Z",
+		"checkedAt": "2026-11-27T16:39:23.061Z",
 		"httpStatus": 200,
 		"error": null,
 		"failures": 0,
@@ -1475,18 +1475,18 @@
 	},
 	{
 		"id": "bitcart",
-		"checkedAt": "2026-11-26T16:53:25.567Z",
+		"checkedAt": "2026-11-27T16:39:23.052Z",
 		"httpStatus": 200,
 		"error": null,
 		"failures": 0,
-		"lastCommit": "2026-11-26T09:55:49Z",
+		"lastCommit": "2026-11-27T16:19:25Z",
 		"lastRelease": "2026-11-07T23:05:43Z",
 		"archived": false,
 		"state": "alive"
 	},
 	{
 		"id": "cashpayserver",
-		"checkedAt": "2026-11-26T16:53:25.431Z",
+		"checkedAt": "2026-11-27T16:39:23.321Z",
 		"httpStatus": 200,
 		"error": null,
 		"failures": 0,
@@ -1497,10 +1497,10 @@
 	},
 	{
 		"id": "coinbase-commerce",
-		"checkedAt": "2026-11-26T16:53:25.050Z",
+		"checkedAt": "2026-11-27T16:39:22.837Z",
 		"httpStatus": 502,
 		"error": null,
-		"failures": 64,
+		"failures": 65,
 		"lastCommit": null,
 		"lastRelease": null,
 		"archived": false,
@@ -1508,18 +1508,18 @@
 	},
 	{
 		"id": "gourl-io",
-		"checkedAt": "2026-11-26T16:53:25.176Z",
-		"httpStatus": null,
-		"error": "ETIMEDOUT",
-		"failures": 1,
+		"checkedAt": "2026-11-27T16:39:23.085Z",
+		"httpStatus": 200,
+		"error": null,
+		"failures": 0,
 		"lastCommit": null,
 		"lastRelease": null,
 		"archived": false,
-		"state": "unknown"
+		"state": "alive"
 	},
 	{
 		"id": "pay-button",
-		"checkedAt": "2026-11-26T16:53:25.477Z",
+		"checkedAt": "2026-11-27T16:39:23.529Z",
 		"httpStatus": 200,
 		"error": null,
 		"failures": 0,
@@ -1530,7 +1530,7 @@
 	},
 	{
 		"id": "coingate-accept",
-		"checkedAt": "2026-11-26T16:53:24.913Z",
+		"checkedAt": "2026-11-27T16:39:22.836Z",
 		"httpStatus": 200,
 		"error": null,
 		"failures": 0,
@@ -1541,7 +1541,7 @@
 	},
 	{
 		"id": "coinpayments",
-		"checkedAt": "2026-11-26T16:53:25.066Z",
+		"checkedAt": "2026-11-27T16:39:22.962Z",
 		"httpStatus": 200,
 		"error": null,
 		"failures": 0,
@@ -1552,7 +1552,7 @@
 	},
 	{
 		"id": "pos-cash",
-		"checkedAt": "2026-11-26T16:53:25.204Z",
+		"checkedAt": "2026-11-27T16:39:22.935Z",
 		"httpStatus": 200,
 		"error": null,
 		"failures": 0,
@@ -1563,7 +1563,7 @@
 	},
 	{
 		"id": "scan-to-pay",
-		"checkedAt": "2026-11-26T16:53:25.313Z",
+		"checkedAt": "2026-11-27T16:39:23.201Z",
 		"httpStatus": 200,
 		"error": null,
 		"failures": 0,
@@ -1574,7 +1574,7 @@
 	},
 	{
 		"id": "cashtags",
-		"checkedAt": "2026-11-26T16:53:25.380Z",
+		"checkedAt": "2026-11-27T16:39:23.178Z",
 		"httpStatus": 200,
 		"error": null,
 		"failures": 0,
@@ -1585,7 +1585,7 @@
 	},
 	{
 		"id": "event-cash",
-		"checkedAt": "2026-11-26T16:53:25.326Z",
+		"checkedAt": "2026-11-27T16:39:23.026Z",
 		"httpStatus": 200,
 		"error": null,
 		"failures": 0,
@@ -1596,7 +1596,7 @@
 	},
 	{
 		"id": "bitrequest",
-		"checkedAt": "2026-11-26T16:53:31.900Z",
+		"checkedAt": "2026-11-27T16:39:23.476Z",
 		"httpStatus": 200,
 		"error": null,
 		"failures": 0,
@@ -1607,7 +1607,7 @@
 	},
 	{
 		"id": "mobazha",
-		"checkedAt": "2026-11-26T16:53:25.384Z",
+		"checkedAt": "2026-11-27T16:39:23.255Z",
 		"httpStatus": 200,
 		"error": null,
 		"failures": 0,
@@ -1618,7 +1618,7 @@
 	},
 	{
 		"id": "stickers-cash",
-		"checkedAt": "2026-11-26T16:53:25.485Z",
+		"checkedAt": "2026-11-27T16:39:23.176Z",
 		"httpStatus": 200,
 		"error": null,
 		"failures": 0,
@@ -1629,7 +1629,7 @@
 	},
 	{
 		"id": "nowpayments",
-		"checkedAt": "2026-11-26T16:53:25.449Z",
+		"checkedAt": "2026-11-27T16:39:23.222Z",
 		"httpStatus": 200,
 		"error": null,
 		"failures": 0,
@@ -1640,7 +1640,7 @@
 	},
 	{
 		"id": "oxapay",
-		"checkedAt": "2026-11-26T16:53:25.433Z",
+		"checkedAt": "2026-11-27T16:39:23.198Z",
 		"httpStatus": 403,
 		"error": null,
 		"failures": 0,
@@ -1651,7 +1651,7 @@
 	},
 	{
 		"id": "alfacoins",
-		"checkedAt": "2026-11-26T16:53:26.031Z",
+		"checkedAt": "2026-11-27T16:39:24.100Z",
 		"httpStatus": 200,
 		"error": null,
 		"failures": 0,
@@ -1662,7 +1662,7 @@
 	},
 	{
 		"id": "apirone",
-		"checkedAt": "2026-11-26T16:53:25.649Z",
+		"checkedAt": "2026-11-27T16:39:23.332Z",
 		"httpStatus": 200,
 		"error": null,
 		"failures": 0,
@@ -1673,7 +1673,7 @@
 	},
 	{
 		"id": "rocketr",
-		"checkedAt": "2026-11-26T16:53:25.795Z",
+		"checkedAt": "2026-11-27T16:39:23.404Z",
 		"httpStatus": 200,
 		"error": null,
 		"failures": 0,
@@ -1684,7 +1684,7 @@
 	},
 	{
 		"id": "alchemy-pay",
-		"checkedAt": "2026-11-26T16:53:25.663Z",
+		"checkedAt": "2026-11-27T16:39:23.437Z",
 		"httpStatus": 200,
 		"error": null,
 		"failures": 0,
@@ -1695,7 +1695,7 @@
 	},
 	{
 		"id": "aeon-xyz",
-		"checkedAt": "2026-11-26T16:53:25.637Z",
+		"checkedAt": "2026-11-27T16:39:23.280Z",
 		"httpStatus": 200,
 		"error": null,
 		"failures": 0,
@@ -1706,7 +1706,7 @@
 	},
 	{
 		"id": "gocrypto",
-		"checkedAt": "2026-11-26T16:53:26.254Z",
+		"checkedAt": "2026-11-27T16:39:23.651Z",
 		"httpStatus": 200,
 		"error": null,
 		"failures": 0,
@@ -1717,7 +1717,7 @@
 	},
 	{
 		"id": "living-room-of-satoshi",
-		"checkedAt": "2026-11-26T16:53:25.915Z",
+		"checkedAt": "2026-11-27T16:39:23.463Z",
 		"httpStatus": 200,
 		"error": null,
 		"failures": 0,
@@ -1728,10 +1728,10 @@
 	},
 	{
 		"id": "paytaca-payment-hub",
-		"checkedAt": "2026-11-26T16:53:26.559Z",
+		"checkedAt": "2026-11-27T16:39:23.993Z",
 		"httpStatus": 500,
 		"error": null,
-		"failures": 40,
+		"failures": 41,
 		"lastCommit": null,
 		"lastRelease": null,
 		"archived": false,
@@ -1739,7 +1739,7 @@
 	},
 	{
 		"id": "httpay",
-		"checkedAt": "2026-11-26T16:53:26.159Z",
+		"checkedAt": "2026-11-27T16:39:23.812Z",
 		"httpStatus": 200,
 		"error": null,
 		"failures": 0,
@@ -1750,7 +1750,7 @@
 	},
 	{
 		"id": "mainnetjs",
-		"checkedAt": "2026-11-26T16:53:27.398Z",
+		"checkedAt": "2026-11-27T16:39:24.190Z",
 		"httpStatus": 200,
 		"error": null,
 		"failures": 0,
@@ -1761,7 +1761,7 @@
 	},
 	{
 		"id": "libauth",
-		"checkedAt": "2026-11-26T16:53:26.445Z",
+		"checkedAt": "2026-11-27T16:39:24.219Z",
 		"httpStatus": 200,
 		"error": null,
 		"failures": 0,
@@ -1772,7 +1772,7 @@
 	},
 	{
 		"id": "oracles-cash",
-		"checkedAt": "2026-11-26T16:53:26.251Z",
+		"checkedAt": "2026-11-27T16:39:23.973Z",
 		"httpStatus": 200,
 		"error": null,
 		"failures": 0,
@@ -1783,7 +1783,7 @@
 	},
 	{
 		"id": "bitcash-python",
-		"checkedAt": "2026-11-26T16:53:26.832Z",
+		"checkedAt": "2026-11-27T16:39:24.353Z",
 		"httpStatus": 200,
 		"error": null,
 		"failures": 0,
@@ -1794,7 +1794,7 @@
 	},
 	{
 		"id": "bitcoincashclient",
-		"checkedAt": "2026-11-26T16:53:27.327Z",
+		"checkedAt": "2026-11-27T16:39:24.693Z",
 		"httpStatus": 200,
 		"error": null,
 		"failures": 0,
@@ -1805,10 +1805,10 @@
 	},
 	{
 		"id": "bitcoincashj",
-		"checkedAt": "2026-11-26T16:53:26.519Z",
+		"checkedAt": "2026-11-27T16:39:23.913Z",
 		"httpStatus": 404,
 		"error": null,
-		"failures": 64,
+		"failures": 65,
 		"lastCommit": null,
 		"lastRelease": null,
 		"archived": false,
@@ -1816,7 +1816,7 @@
 	},
 	{
 		"id": "bch-js",
-		"checkedAt": "2026-11-26T16:53:27.118Z",
+		"checkedAt": "2026-11-27T16:39:24.749Z",
 		"httpStatus": 200,
 		"error": null,
 		"failures": 0,
@@ -1827,7 +1827,7 @@
 	},
 	{
 		"id": "rust-bitcoincash",
-		"checkedAt": "2026-11-26T16:53:26.834Z",
+		"checkedAt": "2026-11-27T16:39:24.326Z",
 		"httpStatus": 200,
 		"error": null,
 		"failures": 0,
@@ -1838,7 +1838,7 @@
 	},
 	{
 		"id": "cashp",
-		"checkedAt": "2026-11-26T16:53:27.692Z",
+		"checkedAt": "2026-11-27T16:39:25.160Z",
 		"httpStatus": 200,
 		"error": null,
 		"failures": 0,
@@ -1849,7 +1849,7 @@
 	},
 	{
 		"id": "bitcoinkit-ios",
-		"checkedAt": "2026-11-26T16:53:27.640Z",
+		"checkedAt": "2026-11-27T16:39:24.948Z",
 		"httpStatus": 200,
 		"error": null,
 		"failures": 0,
@@ -1860,7 +1860,7 @@
 	},
 	{
 		"id": "bitcoinkit-android",
-		"checkedAt": "2026-11-26T16:53:27.485Z",
+		"checkedAt": "2026-11-27T16:39:25.026Z",
 		"httpStatus": 200,
 		"error": null,
 		"failures": 0,
@@ -1871,10 +1871,10 @@
 	},
 	{
 		"id": "chaingraph",
-		"checkedAt": "2026-11-26T16:53:27.631Z",
+		"checkedAt": "2026-11-27T16:39:24.651Z",
 		"httpStatus": 402,
 		"error": null,
-		"failures": 25,
+		"failures": 26,
 		"lastCommit": "2025-11-16T01:53:02Z",
 		"lastRelease": "2025-11-16T01:53:00Z",
 		"archived": false,
@@ -1882,7 +1882,7 @@
 	},
 	{
 		"id": "bitbox-sdk-lite",
-		"checkedAt": "2026-11-26T16:53:28.178Z",
+		"checkedAt": "2026-11-27T16:39:25.239Z",
 		"httpStatus": 200,
 		"error": null,
 		"failures": 0,
@@ -1893,18 +1893,18 @@
 	},
 	{
 		"id": "haskoin-core",
-		"checkedAt": "2026-11-26T16:53:28.071Z",
+		"checkedAt": "2026-11-27T16:39:25.209Z",
 		"httpStatus": 200,
 		"error": null,
 		"failures": 0,
-		"lastCommit": "2026-11-25T23:22:00Z",
+		"lastCommit": "2026-11-27T07:22:46Z",
 		"lastRelease": null,
 		"archived": false,
 		"state": "alive"
 	},
 	{
 		"id": "bitcore-lib-cash",
-		"checkedAt": "2026-11-26T16:53:28.204Z",
+		"checkedAt": "2026-11-27T16:39:25.178Z",
 		"httpStatus": 200,
 		"error": null,
 		"failures": 0,
@@ -1915,7 +1915,7 @@
 	},
 	{
 		"id": "python-bitcoincash",
-		"checkedAt": "2026-11-26T16:53:28.486Z",
+		"checkedAt": "2026-11-27T16:39:25.490Z",
 		"httpStatus": 200,
 		"error": null,
 		"failures": 0,
@@ -1926,10 +1926,10 @@
 	},
 	{
 		"id": "signup-cash",
-		"checkedAt": "2026-11-26T16:53:27.540Z",
+		"checkedAt": "2026-11-27T16:39:24.662Z",
 		"httpStatus": null,
 		"error": "ENOTFOUND",
-		"failures": 64,
+		"failures": 65,
 		"lastCommit": null,
 		"lastRelease": null,
 		"archived": false,
@@ -1937,7 +1937,7 @@
 	},
 	{
 		"id": "be-cash",
-		"checkedAt": "2026-11-26T16:53:28.673Z",
+		"checkedAt": "2026-11-27T16:39:25.631Z",
 		"httpStatus": 200,
 		"error": null,
 		"failures": 0,
@@ -1948,7 +1948,7 @@
 	},
 	{
 		"id": "rbch",
-		"checkedAt": "2026-11-26T16:53:28.466Z",
+		"checkedAt": "2026-11-27T16:39:25.419Z",
 		"httpStatus": 200,
 		"error": null,
 		"failures": 0,
@@ -1959,7 +1959,7 @@
 	},
 	{
 		"id": "p2p-cash",
-		"checkedAt": "2026-11-26T16:53:28.888Z",
+		"checkedAt": "2026-11-27T16:39:25.984Z",
 		"httpStatus": 200,
 		"error": null,
 		"failures": 0,
@@ -1970,7 +1970,7 @@
 	},
 	{
 		"id": "rpckit",
-		"checkedAt": "2026-11-26T16:53:28.281Z",
+		"checkedAt": "2026-11-27T16:39:25.436Z",
 		"httpStatus": 200,
 		"error": null,
 		"failures": 0,
@@ -1981,7 +1981,7 @@
 	},
 	{
 		"id": "mem-cash",
-		"checkedAt": "2026-11-26T16:53:28.753Z",
+		"checkedAt": "2026-11-27T16:39:26.120Z",
 		"httpStatus": 200,
 		"error": null,
 		"failures": 0,
@@ -1992,7 +1992,7 @@
 	},
 	{
 		"id": "cashlab",
-		"checkedAt": "2026-11-26T16:53:29.294Z",
+		"checkedAt": "2026-11-27T16:39:26.264Z",
 		"httpStatus": 200,
 		"error": null,
 		"failures": 0,
@@ -2003,7 +2003,7 @@
 	},
 	{
 		"id": "xo-stack",
-		"checkedAt": "2026-11-26T16:53:28.690Z",
+		"checkedAt": "2026-11-27T16:39:25.539Z",
 		"httpStatus": 200,
 		"error": null,
 		"failures": 0,
@@ -2014,7 +2014,7 @@
 	},
 	{
 		"id": "documentation-cash",
-		"checkedAt": "2026-11-26T16:53:28.634Z",
+		"checkedAt": "2026-11-27T16:39:25.480Z",
 		"httpStatus": 200,
 		"error": null,
 		"failures": 0,
@@ -2025,7 +2025,7 @@
 	},
 	{
 		"id": "reference-cash",
-		"checkedAt": "2026-11-26T16:53:28.777Z",
+		"checkedAt": "2026-11-27T16:39:25.334Z",
 		"httpStatus": 200,
 		"error": null,
 		"failures": 0,
@@ -2036,7 +2036,7 @@
 	},
 	{
 		"id": "bch-standards",
-		"checkedAt": "2026-11-26T16:53:29.133Z",
+		"checkedAt": "2026-11-27T16:39:26.012Z",
 		"httpStatus": 200,
 		"error": null,
 		"failures": 0,
@@ -2047,7 +2047,7 @@
 	},
 	{
 		"id": "electrum-cash-protocol-docs",
-		"checkedAt": "2026-11-26T16:53:28.804Z",
+		"checkedAt": "2026-11-27T16:39:25.506Z",
 		"httpStatus": 200,
 		"error": null,
 		"failures": 0,
@@ -2058,7 +2058,7 @@
 	},
 	{
 		"id": "electroncash-wiki",
-		"checkedAt": "2026-11-26T16:53:30.278Z",
+		"checkedAt": "2026-11-27T16:39:26.997Z",
 		"httpStatus": 200,
 		"error": null,
 		"failures": 0,
@@ -2069,7 +2069,7 @@
 	},
 	{
 		"id": "upgrade-specs",
-		"checkedAt": "2026-11-26T16:53:29.002Z",
+		"checkedAt": "2026-11-27T16:39:26.072Z",
 		"httpStatus": 200,
 		"error": null,
 		"failures": 0,
@@ -2080,10 +2080,10 @@
 	},
 	{
 		"id": "vm-cash",
-		"checkedAt": "2026-11-26T16:53:29.134Z",
+		"checkedAt": "2026-11-27T16:39:25.815Z",
 		"httpStatus": 402,
 		"error": null,
-		"failures": 25,
+		"failures": 26,
 		"lastCommit": null,
 		"lastRelease": null,
 		"archived": false,
@@ -2091,10 +2091,10 @@
 	},
 	{
 		"id": "real-bitcoin-fam",
-		"checkedAt": "2026-11-26T16:53:28.823Z",
+		"checkedAt": "2026-11-27T16:39:25.705Z",
 		"httpStatus": null,
 		"error": "ENOTFOUND",
-		"failures": 64,
+		"failures": 65,
 		"lastCommit": null,
 		"lastRelease": null,
 		"archived": false,
@@ -2102,7 +2102,7 @@
 	},
 	{
 		"id": "cashtoken-devs-tg",
-		"checkedAt": "2026-11-26T16:53:29.237Z",
+		"checkedAt": "2026-11-27T16:39:26.018Z",
 		"httpStatus": 200,
 		"error": null,
 		"failures": 0,
@@ -2113,7 +2113,7 @@
 	},
 	{
 		"id": "mainnet-cash-tg",
-		"checkedAt": "2026-11-26T16:53:29.249Z",
+		"checkedAt": "2026-11-27T16:39:26.023Z",
 		"httpStatus": 200,
 		"error": null,
 		"failures": 0,
@@ -2124,7 +2124,7 @@
 	},
 	{
 		"id": "libauth-devs-tg",
-		"checkedAt": "2026-11-26T16:53:29.238Z",
+		"checkedAt": "2026-11-27T16:39:26.024Z",
 		"httpStatus": 200,
 		"error": null,
 		"failures": 0,
@@ -2135,7 +2135,7 @@
 	},
 	{
 		"id": "r-bchcashtokens",
-		"checkedAt": "2026-11-26T16:53:29.106Z",
+		"checkedAt": "2026-11-27T16:39:25.936Z",
 		"httpStatus": 403,
 		"error": null,
 		"failures": 0,
@@ -2146,7 +2146,7 @@
 	},
 	{
 		"id": "shrimp-club-bch",
-		"checkedAt": "2026-11-26T16:53:29.377Z",
+		"checkedAt": "2026-11-27T16:39:26.218Z",
 		"httpStatus": 200,
 		"error": null,
 		"failures": 0,
@@ -2157,7 +2157,7 @@
 	},
 	{
 		"id": "bitauth-ide-tg",
-		"checkedAt": "2026-11-26T16:53:29.464Z",
+		"checkedAt": "2026-11-27T16:39:26.276Z",
 		"httpStatus": 200,
 		"error": null,
 		"failures": 0,
@@ -2168,7 +2168,7 @@
 	},
 	{
 		"id": "walletconnect-devs-tg",
-		"checkedAt": "2026-11-26T16:53:29.494Z",
+		"checkedAt": "2026-11-27T16:39:26.296Z",
 		"httpStatus": 200,
 		"error": null,
 		"failures": 0,
@@ -2179,7 +2179,7 @@
 	},
 	{
 		"id": "bch-compilers-tg",
-		"checkedAt": "2026-11-26T16:53:29.495Z",
+		"checkedAt": "2026-11-27T16:39:26.301Z",
 		"httpStatus": 200,
 		"error": null,
 		"failures": 0,
@@ -2190,7 +2190,7 @@
 	},
 	{
 		"id": "chaingraph-devs-tg",
-		"checkedAt": "2026-11-26T16:53:29.590Z",
+		"checkedAt": "2026-11-27T16:39:26.309Z",
 		"httpStatus": 200,
 		"error": null,
 		"failures": 0,
@@ -2201,7 +2201,7 @@
 	},
 	{
 		"id": "bch-argentina",
-		"checkedAt": "2026-11-26T16:53:29.591Z",
+		"checkedAt": "2026-11-27T16:39:26.310Z",
 		"httpStatus": 200,
 		"error": null,
 		"failures": 0,
@@ -2212,7 +2212,7 @@
 	},
 	{
 		"id": "bch-latam",
-		"checkedAt": "2026-11-26T16:53:29.614Z",
+		"checkedAt": "2026-11-27T16:39:26.356Z",
 		"httpStatus": 200,
 		"error": null,
 		"failures": 0,
@@ -2223,7 +2223,7 @@
 	},
 	{
 		"id": "tokenstork-support-tg",
-		"checkedAt": "2026-11-26T16:53:29.672Z",
+		"checkedAt": "2026-11-27T16:39:26.406Z",
 		"httpStatus": 200,
 		"error": null,
 		"failures": 0,
@@ -2234,7 +2234,7 @@
 	},
 	{
 		"id": "bch-webring",
-		"checkedAt": "2026-11-26T16:53:30.421Z",
+		"checkedAt": "2026-11-27T16:39:27.150Z",
 		"httpStatus": 200,
 		"error": null,
 		"failures": 0,
@@ -2245,7 +2245,7 @@
 	},
 	{
 		"id": "bch-1-hackcelerator",
-		"checkedAt": "2026-11-26T16:53:29.945Z",
+		"checkedAt": "2026-11-27T16:39:26.576Z",
 		"httpStatus": 200,
 		"error": null,
 		"failures": 0,
@@ -2256,7 +2256,7 @@
 	},
 	{
 		"id": "bch-bliss",
-		"checkedAt": "2026-11-26T16:53:29.897Z",
+		"checkedAt": "2026-11-27T16:39:26.566Z",
 		"httpStatus": 200,
 		"error": null,
 		"failures": 0,
@@ -2267,18 +2267,18 @@
 	},
 	{
 		"id": "cash3-conference",
-		"checkedAt": "2026-11-26T16:53:44.495Z",
-		"httpStatus": null,
-		"error": "TimeoutError",
-		"failures": 1,
+		"checkedAt": "2026-11-27T16:39:27.151Z",
+		"httpStatus": 200,
+		"error": null,
+		"failures": 0,
 		"lastCommit": null,
 		"lastRelease": null,
 		"archived": false,
-		"state": "unknown"
+		"state": "alive"
 	},
 	{
 		"id": "bch-city",
-		"checkedAt": "2026-11-26T16:53:30.285Z",
+		"checkedAt": "2026-11-27T16:39:27.376Z",
 		"httpStatus": 200,
 		"error": null,
 		"failures": 0,
@@ -2289,7 +2289,7 @@
 	},
 	{
 		"id": "bch-global-meetups",
-		"checkedAt": "2026-11-26T16:53:30.342Z",
+		"checkedAt": "2026-11-27T16:39:26.996Z",
 		"httpStatus": 200,
 		"error": null,
 		"failures": 0,
@@ -2300,7 +2300,7 @@
 	},
 	{
 		"id": "tokyo-bch-meetup",
-		"checkedAt": "2026-11-26T16:53:31.424Z",
+		"checkedAt": "2026-11-27T16:39:26.508Z",
 		"httpStatus": 200,
 		"error": null,
 		"failures": 0,
@@ -2311,7 +2311,7 @@
 	},
 	{
 		"id": "darmstadt-bch-meetup",
-		"checkedAt": "2026-11-26T16:53:30.293Z",
+		"checkedAt": "2026-11-27T16:39:26.853Z",
 		"httpStatus": 200,
 		"error": null,
 		"failures": 0,
@@ -2322,7 +2322,7 @@
 	},
 	{
 		"id": "fullstack-cash-api",
-		"checkedAt": "2026-11-26T16:53:30.212Z",
+		"checkedAt": "2026-11-27T16:39:26.705Z",
 		"httpStatus": 200,
 		"error": null,
 		"failures": 0,
@@ -2333,7 +2333,7 @@
 	},
 	{
 		"id": "fountainhead-cash",
-		"checkedAt": "2026-11-26T16:53:30.213Z",
+		"checkedAt": "2026-11-27T16:39:26.583Z",
 		"httpStatus": 200,
 		"error": null,
 		"failures": 0,
@@ -2344,7 +2344,7 @@
 	},
 	{
 		"id": "actorforth",
-		"checkedAt": "2026-11-26T16:53:30.967Z",
+		"checkedAt": "2026-11-27T16:39:27.296Z",
 		"httpStatus": 200,
 		"error": null,
 		"failures": 0,
@@ -2355,7 +2355,7 @@
 	},
 	{
 		"id": "getblock-io",
-		"checkedAt": "2026-11-26T16:53:30.319Z",
+		"checkedAt": "2026-11-27T16:39:26.710Z",
 		"httpStatus": 200,
 		"error": null,
 		"failures": 0,
@@ -2366,7 +2366,7 @@
 	},
 	{
 		"id": "coinremitter",
-		"checkedAt": "2026-11-26T16:53:30.649Z",
+		"checkedAt": "2026-11-27T16:39:26.857Z",
 		"httpStatus": 403,
 		"error": null,
 		"failures": 0,
@@ -2377,10 +2377,10 @@
 	},
 	{
 		"id": "bitsocket-fountainhead",
-		"checkedAt": "2026-11-26T16:53:40.415Z",
+		"checkedAt": "2026-11-27T16:39:36.817Z",
 		"httpStatus": null,
 		"error": "UND_ERR_CONNECT_TIMEOUT",
-		"failures": 64,
+		"failures": 65,
 		"lastCommit": null,
 		"lastRelease": null,
 		"archived": false,
@@ -2388,10 +2388,10 @@
 	},
 	{
 		"id": "insomnia-cash",
-		"checkedAt": "2026-11-26T16:53:40.415Z",
+		"checkedAt": "2026-11-27T16:39:36.816Z",
 		"httpStatus": null,
 		"error": "UND_ERR_CONNECT_TIMEOUT",
-		"failures": 64,
+		"failures": 65,
 		"lastCommit": null,
 		"lastRelease": null,
 		"archived": false,
@@ -2399,7 +2399,7 @@
 	},
 	{
 		"id": "watchtower-cash",
-		"checkedAt": "2026-11-26T16:53:31.105Z",
+		"checkedAt": "2026-11-27T16:39:27.305Z",
 		"httpStatus": 200,
 		"error": null,
 		"failures": 0,
@@ -2410,7 +2410,7 @@
 	},
 	{
 		"id": "cashscript",
-		"checkedAt": "2026-11-26T16:53:31.211Z",
+		"checkedAt": "2026-11-27T16:39:27.525Z",
 		"httpStatus": 200,
 		"error": null,
 		"failures": 0,
@@ -2421,7 +2421,7 @@
 	},
 	{
 		"id": "cashscript-playground",
-		"checkedAt": "2026-11-26T16:53:31.345Z",
+		"checkedAt": "2026-11-27T16:39:27.832Z",
 		"httpStatus": 200,
 		"error": null,
 		"failures": 0,
@@ -2432,10 +2432,10 @@
 	},
 	{
 		"id": "bitauth-ide",
-		"checkedAt": "2026-11-26T16:53:31.801Z",
+		"checkedAt": "2026-11-27T16:39:27.613Z",
 		"httpStatus": 402,
 		"error": null,
-		"failures": 25,
+		"failures": 26,
 		"lastCommit": "2025-09-05T17:52:34Z",
 		"lastRelease": null,
 		"archived": false,
@@ -2443,7 +2443,7 @@
 	},
 	{
 		"id": "spedn",
-		"checkedAt": "2026-11-26T16:53:31.759Z",
+		"checkedAt": "2026-11-27T16:39:28.258Z",
 		"httpStatus": 200,
 		"error": null,
 		"failures": 0,
@@ -2454,7 +2454,7 @@
 	},
 	{
 		"id": "meep",
-		"checkedAt": "2026-11-26T16:53:32.301Z",
+		"checkedAt": "2026-11-27T16:39:28.244Z",
 		"httpStatus": 200,
 		"error": null,
 		"failures": 0,
@@ -2465,7 +2465,7 @@
 	},
 	{
 		"id": "iguana",
-		"checkedAt": "2026-11-26T16:53:32.315Z",
+		"checkedAt": "2026-11-27T16:39:28.245Z",
 		"httpStatus": 200,
 		"error": null,
 		"failures": 0,
@@ -2476,7 +2476,7 @@
 	},
 	{
 		"id": "vscode-cashscript",
-		"checkedAt": "2026-11-26T16:53:31.923Z",
+		"checkedAt": "2026-11-27T16:39:27.855Z",
 		"httpStatus": 200,
 		"error": null,
 		"failures": 0,
@@ -2487,7 +2487,7 @@
 	},
 	{
 		"id": "nexops",
-		"checkedAt": "2026-11-26T16:53:32.458Z",
+		"checkedAt": "2026-11-27T16:39:28.088Z",
 		"httpStatus": 200,
 		"error": null,
 		"failures": 0,
@@ -2498,7 +2498,7 @@
 	},
 	{
 		"id": "opencashdao",
-		"checkedAt": "2026-11-26T16:53:32.997Z",
+		"checkedAt": "2026-11-27T16:39:28.624Z",
 		"httpStatus": 200,
 		"error": null,
 		"failures": 0,
@@ -2509,7 +2509,7 @@
 	},
 	{
 		"id": "jedex",
-		"checkedAt": "2026-11-26T16:53:33.021Z",
+		"checkedAt": "2026-11-27T16:39:28.709Z",
 		"httpStatus": 200,
 		"error": null,
 		"failures": 0,
@@ -2520,7 +2520,7 @@
 	},
 	{
 		"id": "quantumroot",
-		"checkedAt": "2026-11-26T16:53:32.742Z",
+		"checkedAt": "2026-11-27T16:39:28.387Z",
 		"httpStatus": 200,
 		"error": null,
 		"failures": 0,
@@ -2531,7 +2531,7 @@
 	},
 	{
 		"id": "cashfusion",
-		"checkedAt": "2026-11-26T16:53:34.180Z",
+		"checkedAt": "2026-11-27T16:39:29.831Z",
 		"httpStatus": 200,
 		"error": null,
 		"failures": 0,
@@ -2542,10 +2542,10 @@
 	},
 	{
 		"id": "cashshuffle",
-		"checkedAt": "2026-11-26T16:53:32.301Z",
+		"checkedAt": "2026-11-27T16:39:28.088Z",
 		"httpStatus": null,
 		"error": "no-url",
-		"failures": 63,
+		"failures": 64,
 		"lastCommit": null,
 		"lastRelease": null,
 		"archived": false,
@@ -2553,7 +2553,7 @@
 	},
 	{
 		"id": "cashaddr",
-		"checkedAt": "2026-11-26T16:53:32.469Z",
+		"checkedAt": "2026-11-27T16:39:28.158Z",
 		"httpStatus": 200,
 		"error": null,
 		"failures": 0,
@@ -2564,10 +2564,10 @@
 	},
 	{
 		"id": "cashaccounts",
-		"checkedAt": "2026-11-26T16:53:32.624Z",
+		"checkedAt": "2026-11-27T16:39:28.285Z",
 		"httpStatus": null,
 		"error": "UNABLE_TO_GET_ISSUER_CERT_LOCALLY",
-		"failures": 64,
+		"failures": 65,
 		"lastCommit": null,
 		"lastRelease": null,
 		"archived": false,
@@ -2575,7 +2575,7 @@
 	},
 	{
 		"id": "cashtokens-protocol",
-		"checkedAt": "2026-11-26T16:53:33.106Z",
+		"checkedAt": "2026-11-27T16:39:29.031Z",
 		"httpStatus": 200,
 		"error": null,
 		"failures": 0,
@@ -2586,7 +2586,7 @@
 	},
 	{
 		"id": "bcmr",
-		"checkedAt": "2026-11-26T16:53:33.207Z",
+		"checkedAt": "2026-11-27T16:39:29.092Z",
 		"httpStatus": 200,
 		"error": null,
 		"failures": 0,
@@ -2597,7 +2597,7 @@
 	},
 	{
 		"id": "price-oracle-spec",
-		"checkedAt": "2026-11-26T16:53:33.175Z",
+		"checkedAt": "2026-11-27T16:39:28.842Z",
 		"httpStatus": 200,
 		"error": null,
 		"failures": 0,
@@ -2608,10 +2608,10 @@
 	},
 	{
 		"id": "electrum-cash-protocol",
-		"checkedAt": "2026-11-26T16:53:42.911Z",
+		"checkedAt": "2026-11-27T16:39:38.316Z",
 		"httpStatus": null,
 		"error": "UND_ERR_CONNECT_TIMEOUT",
-		"failures": 64,
+		"failures": 65,
 		"lastCommit": null,
 		"lastRelease": null,
 		"archived": false,
@@ -2619,10 +2619,10 @@
 	},
 	{
 		"id": "cashid",
-		"checkedAt": "2026-11-26T16:53:33.059Z",
+		"checkedAt": "2026-11-27T16:39:28.513Z",
 		"httpStatus": null,
 		"error": "ENOTFOUND",
-		"failures": 64,
+		"failures": 65,
 		"lastCommit": null,
 		"lastRelease": null,
 		"archived": false,
@@ -2630,7 +2630,7 @@
 	},
 	{
 		"id": "bip-70",
-		"checkedAt": "2026-11-26T16:53:33.391Z",
+		"checkedAt": "2026-11-27T16:39:28.959Z",
 		"httpStatus": 200,
 		"error": null,
 		"failures": 0,
@@ -2641,7 +2641,7 @@
 	},
 	{
 		"id": "slp",
-		"checkedAt": "2026-11-26T16:53:34.296Z",
+		"checkedAt": "2026-11-27T16:39:29.597Z",
 		"httpStatus": 200,
 		"error": null,
 		"failures": 0,
@@ -2652,7 +2652,7 @@
 	},
 	{
 		"id": "memo-protocol",
-		"checkedAt": "2026-11-26T16:53:33.572Z",
+		"checkedAt": "2026-11-27T16:39:29.386Z",
 		"httpStatus": 200,
 		"error": null,
 		"failures": 0,
@@ -2663,7 +2663,7 @@
 	},
 	{
 		"id": "wizardconnect",
-		"checkedAt": "2026-11-26T16:53:33.523Z",
+		"checkedAt": "2026-11-27T16:39:29.104Z",
 		"httpStatus": 200,
 		"error": null,
 		"failures": 0,
@@ -2674,7 +2674,7 @@
 	},
 	{
 		"id": "bitcann",
-		"checkedAt": "2026-11-26T16:53:34.160Z",
+		"checkedAt": "2026-11-27T16:39:29.809Z",
 		"httpStatus": 200,
 		"error": null,
 		"failures": 0,
@@ -2685,7 +2685,7 @@
 	},
 	{
 		"id": "blockchair",
-		"checkedAt": "2026-11-26T16:53:33.955Z",
+		"checkedAt": "2026-11-27T16:39:29.489Z",
 		"httpStatus": 200,
 		"error": null,
 		"failures": 0,
@@ -2696,7 +2696,7 @@
 	},
 	{
 		"id": "salemkode-explorer",
-		"checkedAt": "2026-11-26T16:53:34.124Z",
+		"checkedAt": "2026-11-27T16:39:29.678Z",
 		"httpStatus": 403,
 		"error": null,
 		"failures": 0,
@@ -2707,7 +2707,7 @@
 	},
 	{
 		"id": "3xpl",
-		"checkedAt": "2026-11-26T16:53:33.972Z",
+		"checkedAt": "2026-11-27T16:39:29.434Z",
 		"httpStatus": 200,
 		"error": null,
 		"failures": 0,
@@ -2718,7 +2718,7 @@
 	},
 	{
 		"id": "bu-explorer",
-		"checkedAt": "2026-11-26T16:53:33.788Z",
+		"checkedAt": "2026-11-27T16:39:29.498Z",
 		"httpStatus": 403,
 		"error": null,
 		"failures": 0,
@@ -2729,7 +2729,7 @@
 	},
 	{
 		"id": "coin-dance-explorer",
-		"checkedAt": "2026-11-26T16:53:37.745Z",
+		"checkedAt": "2026-11-27T16:39:32.784Z",
 		"httpStatus": 200,
 		"error": null,
 		"failures": 0,
@@ -2740,7 +2740,7 @@
 	},
 	{
 		"id": "electroncash-de-explorer",
-		"checkedAt": "2026-11-26T16:53:34.746Z",
+		"checkedAt": "2026-11-27T16:39:30.064Z",
 		"httpStatus": 200,
 		"error": null,
 		"failures": 0,
@@ -2751,7 +2751,7 @@
 	},
 	{
 		"id": "bch-explorer",
-		"checkedAt": "2026-11-26T16:53:34.589Z",
+		"checkedAt": "2026-11-27T16:39:29.984Z",
 		"httpStatus": 403,
 		"error": null,
 		"failures": 0,
@@ -2762,10 +2762,10 @@
 	},
 	{
 		"id": "bitcoin-verde-explorer",
-		"checkedAt": "2026-11-26T16:53:44.407Z",
+		"checkedAt": "2026-11-27T16:39:39.813Z",
 		"httpStatus": null,
 		"error": "UND_ERR_CONNECT_TIMEOUT",
-		"failures": 64,
+		"failures": 65,
 		"lastCommit": null,
 		"lastRelease": null,
 		"archived": false,
@@ -2773,7 +2773,7 @@
 	},
 	{
 		"id": "blockchain-com-explorer",
-		"checkedAt": "2026-11-26T16:53:35.784Z",
+		"checkedAt": "2026-11-27T16:39:34.870Z",
 		"httpStatus": 200,
 		"error": null,
 		"failures": 0,
@@ -2784,18 +2784,18 @@
 	},
 	{
 		"id": "imaginary-cash-chipnet",
-		"checkedAt": "2026-11-26T16:53:34.756Z",
-		"httpStatus": 200,
+		"checkedAt": "2026-11-27T16:39:30.739Z",
+		"httpStatus": 500,
 		"error": null,
-		"failures": 0,
+		"failures": 1,
 		"lastCommit": null,
 		"lastRelease": null,
 		"archived": false,
-		"state": "alive"
+		"state": "unknown"
 	},
 	{
 		"id": "chaingraph-chipnet",
-		"checkedAt": "2026-11-26T16:53:34.392Z",
+		"checkedAt": "2026-11-27T16:39:29.906Z",
 		"httpStatus": 403,
 		"error": null,
 		"failures": 0,
@@ -2806,7 +2806,7 @@
 	},
 	{
 		"id": "bch-ninja-chipnet",
-		"checkedAt": "2026-11-26T16:53:34.714Z",
+		"checkedAt": "2026-11-27T16:39:30.266Z",
 		"httpStatus": 200,
 		"error": null,
 		"failures": 0,
@@ -2817,10 +2817,10 @@
 	},
 	{
 		"id": "loping-net-chipnet",
-		"checkedAt": "2026-11-26T16:53:35.194Z",
+		"checkedAt": "2026-11-27T16:39:30.489Z",
 		"httpStatus": null,
 		"error": "ETIMEDOUT",
-		"failures": 13,
+		"failures": 14,
 		"lastCommit": null,
 		"lastRelease": null,
 		"archived": false,
@@ -2828,10 +2828,10 @@
 	},
 	{
 		"id": "electroncash-de-testnet",
-		"checkedAt": "2026-11-26T16:53:40.807Z",
+		"checkedAt": "2026-11-27T16:39:35.581Z",
 		"httpStatus": null,
 		"error": "TypeError",
-		"failures": 21,
+		"failures": 22,
 		"lastCommit": null,
 		"lastRelease": null,
 		"archived": false,
@@ -2839,7 +2839,7 @@
 	},
 	{
 		"id": "tx-street",
-		"checkedAt": "2026-11-26T16:53:34.961Z",
+		"checkedAt": "2026-11-27T16:39:30.331Z",
 		"httpStatus": 403,
 		"error": null,
 		"failures": 0,
@@ -2850,7 +2850,7 @@
 	},
 	{
 		"id": "slp-token-explorer",
-		"checkedAt": "2026-11-26T16:53:35.039Z",
+		"checkedAt": "2026-11-27T16:39:30.487Z",
 		"httpStatus": 403,
 		"error": null,
 		"failures": 0,
@@ -2861,7 +2861,7 @@
 	},
 	{
 		"id": "smartbch-explorer",
-		"checkedAt": "2026-11-26T16:53:35.094Z",
+		"checkedAt": "2026-11-27T16:39:30.528Z",
 		"httpStatus": 200,
 		"error": null,
 		"failures": 0,
@@ -2872,7 +2872,7 @@
 	},
 	{
 		"id": "cashflow-dev",
-		"checkedAt": "2026-11-26T16:53:35.992Z",
+		"checkedAt": "2026-11-27T16:39:31.309Z",
 		"httpStatus": 200,
 		"error": null,
 		"failures": 0,
@@ -2883,7 +2883,7 @@
 	},
 	{
 		"id": "paytaca-explorer",
-		"checkedAt": "2026-11-26T16:53:35.878Z",
+		"checkedAt": "2026-11-27T16:39:31.237Z",
 		"httpStatus": 403,
 		"error": null,
 		"failures": 0,
@@ -2894,7 +2894,7 @@
 	},
 	{
 		"id": "electrum-cash-npm",
-		"checkedAt": "2026-11-26T16:53:35.305Z",
+		"checkedAt": "2026-11-27T16:39:30.783Z",
 		"httpStatus": 403,
 		"error": null,
 		"failures": 0,
@@ -2905,10 +2905,10 @@
 	},
 	{
 		"id": "bitdb-bitsocket",
-		"checkedAt": "2026-11-26T16:53:38.875Z",
+		"checkedAt": "2026-11-27T16:39:32.466Z",
 		"httpStatus": null,
 		"error": "TypeError",
-		"failures": 64,
+		"failures": 65,
 		"lastCommit": null,
 		"lastRelease": null,
 		"archived": false,
@@ -2916,7 +2916,7 @@
 	},
 	{
 		"id": "fulcrum",
-		"checkedAt": "2026-11-26T16:53:36.675Z",
+		"checkedAt": "2026-11-27T16:39:32.156Z",
 		"httpStatus": 200,
 		"error": null,
 		"failures": 0,
@@ -2927,7 +2927,7 @@
 	},
 	{
 		"id": "rostrum",
-		"checkedAt": "2026-11-26T16:53:36.394Z",
+		"checkedAt": "2026-11-27T16:39:31.941Z",
 		"httpStatus": 200,
 		"error": null,
 		"failures": 0,
@@ -2938,7 +2938,7 @@
 	},
 	{
 		"id": "dnsseeder",
-		"checkedAt": "2026-11-26T16:53:37.183Z",
+		"checkedAt": "2026-11-27T16:39:33.171Z",
 		"httpStatus": 200,
 		"error": null,
 		"failures": 0,
@@ -2949,7 +2949,7 @@
 	},
 	{
 		"id": "bchaddrjs",
-		"checkedAt": "2026-11-26T16:53:36.560Z",
+		"checkedAt": "2026-11-27T16:39:32.440Z",
 		"httpStatus": 403,
 		"error": null,
 		"failures": 0,
@@ -2960,7 +2960,7 @@
 	},
 	{
 		"id": "bchutil",
-		"checkedAt": "2026-11-26T16:53:37.570Z",
+		"checkedAt": "2026-11-27T16:39:33.319Z",
 		"httpStatus": 200,
 		"error": null,
 		"failures": 0,
@@ -2971,7 +2971,7 @@
 	},
 	{
 		"id": "qr-code",
-		"checkedAt": "2026-11-26T16:53:37.481Z",
+		"checkedAt": "2026-11-27T16:39:33.354Z",
 		"httpStatus": 200,
 		"error": null,
 		"failures": 0,
@@ -2982,7 +2982,7 @@
 	},
 	{
 		"id": "address-conversion",
-		"checkedAt": "2026-11-26T16:53:37.049Z",
+		"checkedAt": "2026-11-27T16:39:32.700Z",
 		"httpStatus": 200,
 		"error": null,
 		"failures": 0,
@@ -2993,7 +2993,7 @@
 	},
 	{
 		"id": "tx-broadcaster",
-		"checkedAt": "2026-11-26T16:53:37.588Z",
+		"checkedAt": "2026-11-27T16:39:33.089Z",
 		"httpStatus": 200,
 		"error": null,
 		"failures": 0,
@@ -3004,7 +3004,7 @@
 	},
 	{
 		"id": "googol-tbch-faucet",
-		"checkedAt": "2026-11-26T16:53:38.134Z",
+		"checkedAt": "2026-11-27T16:39:33.534Z",
 		"httpStatus": 200,
 		"error": null,
 		"failures": 0,
@@ -3015,7 +3015,7 @@
 	},
 	{
 		"id": "mainnet-cash-faucet",
-		"checkedAt": "2026-11-26T16:53:37.971Z",
+		"checkedAt": "2026-11-27T16:39:33.420Z",
 		"httpStatus": 200,
 		"error": null,
 		"failures": 0,
@@ -3026,7 +3026,7 @@
 	},
 	{
 		"id": "electrum-server-list",
-		"checkedAt": "2026-11-26T16:53:37.808Z",
+		"checkedAt": "2026-11-27T16:39:33.456Z",
 		"httpStatus": 200,
 		"error": null,
 		"failures": 0,
@@ -3037,7 +3037,7 @@
 	},
 	{
 		"id": "bch-stack-wizard",
-		"checkedAt": "2026-11-26T16:53:38.286Z",
+		"checkedAt": "2026-11-27T16:39:33.880Z",
 		"httpStatus": 200,
 		"error": null,
 		"failures": 0,
@@ -3048,7 +3048,7 @@
 	},
 	{
 		"id": "psffpp",
-		"checkedAt": "2026-11-26T16:53:37.915Z",
+		"checkedAt": "2026-11-27T16:39:33.424Z",
 		"httpStatus": 200,
 		"error": null,
 		"failures": 0,
@@ -3059,7 +3059,7 @@
 	},
 	{
 		"id": "bchd",
-		"checkedAt": "2026-11-26T16:53:38.587Z",
+		"checkedAt": "2026-11-27T16:39:33.979Z",
 		"httpStatus": 200,
 		"error": null,
 		"failures": 0,
@@ -3070,7 +3070,7 @@
 	},
 	{
 		"id": "bch-unlimited",
-		"checkedAt": "2026-11-26T16:53:38.379Z",
+		"checkedAt": "2026-11-27T16:39:33.898Z",
 		"httpStatus": 200,
 		"error": null,
 		"failures": 0,
@@ -3081,7 +3081,7 @@
 	},
 	{
 		"id": "bch-node",
-		"checkedAt": "2026-11-26T16:53:38.303Z",
+		"checkedAt": "2026-11-27T16:39:33.755Z",
 		"httpStatus": 200,
 		"error": null,
 		"failures": 0,
@@ -3092,10 +3092,10 @@
 	},
 	{
 		"id": "bitcoin-verde",
-		"checkedAt": "2026-11-26T16:53:38.658Z",
+		"checkedAt": "2026-11-27T16:39:34.005Z",
 		"httpStatus": null,
 		"error": "CERT_HAS_EXPIRED",
-		"failures": 64,
+		"failures": 65,
 		"lastCommit": "2025-06-05T14:20:55Z",
 		"lastRelease": "2025-05-16T02:04:23Z",
 		"archived": false,
@@ -3103,18 +3103,18 @@
 	},
 	{
 		"id": "knuth",
-		"checkedAt": "2026-11-26T16:53:39.013Z",
+		"checkedAt": "2026-11-27T16:39:34.220Z",
 		"httpStatus": 200,
 		"error": null,
 		"failures": 0,
-		"lastCommit": "2026-11-26T15:48:01Z",
-		"lastRelease": "2026-11-13T08:41:48Z",
+		"lastCommit": "2026-11-27T12:39:12Z",
+		"lastRelease": "2026-11-27T12:09:05Z",
 		"archived": false,
 		"state": "alive"
 	},
 	{
 		"id": "bchc",
-		"checkedAt": "2026-11-26T16:53:39.377Z",
+		"checkedAt": "2026-11-27T16:39:34.897Z",
 		"httpStatus": 200,
 		"error": null,
 		"failures": 0,
@@ -3125,7 +3125,7 @@
 	},
 	{
 		"id": "flipstarter",
-		"checkedAt": "2026-11-26T16:53:38.901Z",
+		"checkedAt": "2026-11-27T16:39:34.304Z",
 		"httpStatus": 200,
 		"error": null,
 		"failures": 0,
@@ -3136,7 +3136,7 @@
 	},
 	{
 		"id": "mecenas",
-		"checkedAt": "2026-11-26T16:53:39.858Z",
+		"checkedAt": "2026-11-27T16:39:35.042Z",
 		"httpStatus": 200,
 		"error": null,
 		"failures": 0,
@@ -3147,7 +3147,7 @@
 	},
 	{
 		"id": "bmp",
-		"checkedAt": "2026-11-26T16:53:40.307Z",
+		"checkedAt": "2026-11-27T16:39:34.196Z",
 		"httpStatus": 200,
 		"error": null,
 		"failures": 0,
@@ -3158,7 +3158,7 @@
 	},
 	{
 		"id": "votepeer",
-		"checkedAt": "2026-11-26T16:53:39.061Z",
+		"checkedAt": "2026-11-27T16:39:34.303Z",
 		"httpStatus": 200,
 		"error": null,
 		"failures": 0,
@@ -3169,7 +3169,7 @@
 	},
 	{
 		"id": "unspent-phi",
-		"checkedAt": "2026-11-26T16:53:39.571Z",
+		"checkedAt": "2026-11-27T16:39:34.841Z",
 		"httpStatus": 200,
 		"error": null,
 		"failures": 0,
@@ -3180,10 +3180,10 @@
 	},
 	{
 		"id": "craft-cash",
-		"checkedAt": "2026-11-26T16:53:40.285Z",
+		"checkedAt": "2026-11-27T16:39:34.543Z",
 		"httpStatus": null,
 		"error": "EAI_AGAIN",
-		"failures": 64,
+		"failures": 65,
 		"lastCommit": null,
 		"lastRelease": null,
 		"archived": false,
@@ -3191,7 +3191,7 @@
 	},
 	{
 		"id": "recurr",
-		"checkedAt": "2026-11-26T16:53:39.285Z",
+		"checkedAt": "2026-11-27T16:39:34.674Z",
 		"httpStatus": 200,
 		"error": null,
 		"failures": 0,
@@ -3202,7 +3202,7 @@
 	},
 	{
 		"id": "fundme-cash",
-		"checkedAt": "2026-11-26T16:53:39.942Z",
+		"checkedAt": "2026-11-27T16:39:35.255Z",
 		"httpStatus": 200,
 		"error": null,
 		"failures": 0,
@@ -3213,7 +3213,7 @@
 	},
 	{
 		"id": "shinobi-art-engine",
-		"checkedAt": "2026-11-26T16:53:40.627Z",
+		"checkedAt": "2026-11-27T16:39:35.636Z",
 		"httpStatus": 200,
 		"error": null,
 		"failures": 0,
@@ -3224,7 +3224,7 @@
 	},
 	{
 		"id": "cashtokens-airdrop-tool",
-		"checkedAt": "2026-11-26T16:53:40.602Z",
+		"checkedAt": "2026-11-27T16:39:35.884Z",
 		"httpStatus": 200,
 		"error": null,
 		"failures": 0,
@@ -3235,7 +3235,7 @@
 	},
 	{
 		"id": "bcmr-generator",
-		"checkedAt": "2026-11-26T16:53:40.732Z",
+		"checkedAt": "2026-11-27T16:39:35.659Z",
 		"httpStatus": 200,
 		"error": null,
 		"failures": 0,
@@ -3246,7 +3246,7 @@
 	},
 	{
 		"id": "cashtokens-studio",
-		"checkedAt": "2026-11-26T16:53:40.410Z",
+		"checkedAt": "2026-11-27T16:39:35.403Z",
 		"httpStatus": 200,
 		"error": null,
 		"failures": 0,
@@ -3257,7 +3257,7 @@
 	},
 	{
 		"id": "nft-storage",
-		"checkedAt": "2026-11-26T16:53:40.679Z",
+		"checkedAt": "2026-11-27T16:39:35.185Z",
 		"httpStatus": 200,
 		"error": null,
 		"failures": 0,
@@ -3268,7 +3268,7 @@
 	},
 	{
 		"id": "tokenstork",
-		"checkedAt": "2026-11-26T16:53:42.750Z",
+		"checkedAt": "2026-11-27T16:39:36.197Z",
 		"httpStatus": 200,
 		"error": null,
 		"failures": 0,
@@ -3279,7 +3279,7 @@
 	},
 	{
 		"id": "tokenburner",
-		"checkedAt": "2026-11-26T16:53:40.626Z",
+		"checkedAt": "2026-11-27T16:39:35.280Z",
 		"httpStatus": 200,
 		"error": null,
 		"failures": 0,
@@ -3290,7 +3290,7 @@
 	},
 	{
 		"id": "dropship-cash",
-		"checkedAt": "2026-11-26T16:53:40.964Z",
+		"checkedAt": "2026-11-27T16:39:35.423Z",
 		"httpStatus": 200,
 		"error": null,
 		"failures": 0,
@@ -3301,7 +3301,7 @@
 	},
 	{
 		"id": "cashtokens-org",
-		"checkedAt": "2026-11-26T16:53:41.168Z",
+		"checkedAt": "2026-11-27T16:39:35.727Z",
 		"httpStatus": 200,
 		"error": null,
 		"failures": 0,
@@ -3312,7 +3312,7 @@
 	},
 	{
 		"id": "bitcats",
-		"checkedAt": "2026-11-26T16:53:41.020Z",
+		"checkedAt": "2026-11-27T16:39:35.730Z",
 		"httpStatus": 200,
 		"error": null,
 		"failures": 0,
@@ -3323,7 +3323,7 @@
 	},
 	{
 		"id": "cashninjas",
-		"checkedAt": "2026-11-26T16:53:41.053Z",
+		"checkedAt": "2026-11-27T16:39:35.676Z",
 		"httpStatus": 200,
 		"error": null,
 		"failures": 0,
@@ -3334,7 +3334,7 @@
 	},
 	{
 		"id": "bch-gurus",
-		"checkedAt": "2026-11-26T16:53:41.013Z",
+		"checkedAt": "2026-11-27T16:39:35.865Z",
 		"httpStatus": 200,
 		"error": null,
 		"failures": 0,
@@ -3345,10 +3345,10 @@
 	},
 	{
 		"id": "emerald-dao",
-		"checkedAt": "2026-11-26T16:53:40.797Z",
+		"checkedAt": "2026-11-27T16:39:35.700Z",
 		"httpStatus": null,
 		"error": "ENOTFOUND",
-		"failures": 64,
+		"failures": 65,
 		"lastCommit": null,
 		"lastRelease": null,
 		"archived": false,
@@ -3356,10 +3356,10 @@
 	},
 	{
 		"id": "shady-battlegrounds",
-		"checkedAt": "2026-11-26T16:53:40.828Z",
+		"checkedAt": "2026-11-27T16:39:35.670Z",
 		"httpStatus": null,
 		"error": "ENOTFOUND",
-		"failures": 64,
+		"failures": 65,
 		"lastCommit": null,
 		"lastRelease": null,
 		"archived": false,
@@ -3367,7 +3367,7 @@
 	},
 	{
 		"id": "ghostwriter",
-		"checkedAt": "2026-11-26T16:53:41.227Z",
+		"checkedAt": "2026-11-27T16:39:35.765Z",
 		"httpStatus": 200,
 		"error": null,
 		"failures": 0,
@@ -3378,10 +3378,10 @@
 	},
 	{
 		"id": "bch-vision-2021",
-		"checkedAt": "2026-11-26T16:53:40.807Z",
+		"checkedAt": "2026-11-27T16:39:35.676Z",
 		"httpStatus": null,
 		"error": "no-url",
-		"failures": 64,
+		"failures": 65,
 		"lastCommit": null,
 		"lastRelease": null,
 		"archived": false,
@@ -3389,7 +3389,7 @@
 	},
 	{
 		"id": "haniwa",
-		"checkedAt": "2026-11-26T16:53:41.079Z",
+		"checkedAt": "2026-11-27T16:39:35.818Z",
 		"httpStatus": 200,
 		"error": null,
 		"failures": 0,
@@ -3400,7 +3400,7 @@
 	},
 	{
 		"id": "legendary-zombie-government",
-		"checkedAt": "2026-11-26T16:53:41.181Z",
+		"checkedAt": "2026-11-27T16:39:35.772Z",
 		"httpStatus": 200,
 		"error": null,
 		"failures": 0,
@@ -3411,7 +3411,7 @@
 	},
 	{
 		"id": "reapers",
-		"checkedAt": "2026-11-26T16:53:41.418Z",
+		"checkedAt": "2026-11-27T16:39:35.996Z",
 		"httpStatus": 200,
 		"error": null,
 		"failures": 0,
@@ -3422,7 +3422,7 @@
 	},
 	{
 		"id": "tokenaut",
-		"checkedAt": "2026-11-26T16:53:41.425Z",
+		"checkedAt": "2026-11-27T16:39:36.082Z",
 		"httpStatus": 200,
 		"error": null,
 		"failures": 0,
@@ -3433,7 +3433,7 @@
 	},
 	{
 		"id": "pepi-nft",
-		"checkedAt": "2026-11-26T16:53:41.419Z",
+		"checkedAt": "2026-11-27T16:39:36.062Z",
 		"httpStatus": 200,
 		"error": null,
 		"failures": 0,
@@ -3444,10 +3444,10 @@
 	},
 	{
 		"id": "dogecash",
-		"checkedAt": "2026-11-26T16:53:41.540Z",
+		"checkedAt": "2026-11-27T16:39:36.148Z",
 		"httpStatus": 404,
 		"error": null,
-		"failures": 46,
+		"failures": 47,
 		"lastCommit": null,
 		"lastRelease": null,
 		"archived": false,
@@ -3455,7 +3455,7 @@
 	},
 	{
 		"id": "wrapped-bch",
-		"checkedAt": "2026-11-26T16:53:41.474Z",
+		"checkedAt": "2026-11-27T16:39:36.017Z",
 		"httpStatus": 200,
 		"error": null,
 		"failures": 0,
@@ -3466,10 +3466,10 @@
 	},
 	{
 		"id": "rbf-tokens",
-		"checkedAt": "2026-11-26T16:53:41.213Z",
+		"checkedAt": "2026-11-27T16:39:35.906Z",
 		"httpStatus": null,
 		"error": "ENOTFOUND",
-		"failures": 64,
+		"failures": 65,
 		"lastCommit": null,
 		"lastRelease": null,
 		"archived": false,
@@ -3477,10 +3477,10 @@
 	},
 	{
 		"id": "spice-token",
-		"checkedAt": "2026-11-26T16:53:41.181Z",
+		"checkedAt": "2026-11-27T16:39:35.884Z",
 		"httpStatus": null,
 		"error": "no-url",
-		"failures": 64,
+		"failures": 65,
 		"lastCommit": null,
 		"lastRelease": null,
 		"archived": false,
@@ -3488,10 +3488,10 @@
 	},
 	{
 		"id": "popcorn-token",
-		"checkedAt": "2026-11-26T16:53:41.181Z",
+		"checkedAt": "2026-11-27T16:39:35.884Z",
 		"httpStatus": null,
 		"error": "no-url",
-		"failures": 64,
+		"failures": 65,
 		"lastCommit": null,
 		"lastRelease": null,
 		"archived": false,
@@ -3499,7 +3499,7 @@
 	},
 	{
 		"id": "bchpump",
-		"checkedAt": "2026-11-26T16:53:42.687Z",
+		"checkedAt": "2026-11-27T16:39:36.917Z",
 		"httpStatus": 200,
 		"error": null,
 		"failures": 0,
@@ -3510,10 +3510,10 @@
 	},
 	{
 		"id": "pepecash-faucet",
-		"checkedAt": "2026-11-26T16:53:41.701Z",
+		"checkedAt": "2026-11-27T16:39:36.322Z",
 		"httpStatus": 404,
 		"error": null,
-		"failures": 64,
+		"failures": 65,
 		"lastCommit": null,
 		"lastRelease": null,
 		"archived": false,
@@ -3521,10 +3521,10 @@
 	},
 	{
 		"id": "dogecash-faucet",
-		"checkedAt": "2026-11-26T16:53:42.046Z",
+		"checkedAt": "2026-11-27T16:39:36.316Z",
 		"httpStatus": 404,
 		"error": null,
-		"failures": 64,
+		"failures": 65,
 		"lastCommit": null,
 		"lastRelease": null,
 		"archived": false,
@@ -3532,7 +3532,7 @@
 	},
 	{
 		"id": "token-explorer",
-		"checkedAt": "2026-11-26T16:53:41.850Z",
+		"checkedAt": "2026-11-27T16:39:36.290Z",
 		"httpStatus": 200,
 		"error": null,
 		"failures": 0,
@@ -3543,10 +3543,10 @@
 	},
 	{
 		"id": "nft-viewer",
-		"checkedAt": "2026-11-26T16:53:41.518Z",
+		"checkedAt": "2026-11-27T16:39:36.090Z",
 		"httpStatus": null,
 		"error": "ENOTFOUND",
-		"failures": 64,
+		"failures": 65,
 		"lastCommit": null,
 		"lastRelease": null,
 		"archived": false,
@@ -3554,10 +3554,10 @@
 	},
 	{
 		"id": "registry-cash",
-		"checkedAt": "2026-11-26T16:53:41.547Z",
+		"checkedAt": "2026-11-27T16:39:36.127Z",
 		"httpStatus": null,
 		"error": "ENOTFOUND",
-		"failures": 64,
+		"failures": 65,
 		"lastCommit": null,
 		"lastRelease": null,
 		"archived": false,
@@ -3565,10 +3565,10 @@
 	},
 	{
 		"id": "cashtoken-markets",
-		"checkedAt": "2026-11-26T16:53:42.073Z",
+		"checkedAt": "2026-11-27T16:39:36.674Z",
 		"httpStatus": 503,
 		"error": null,
-		"failures": 35,
+		"failures": 36,
 		"lastCommit": null,
 		"lastRelease": null,
 		"archived": false,
@@ -3576,7 +3576,7 @@
 	},
 	{
 		"id": "opentokenregistry",
-		"checkedAt": "2026-11-26T16:53:41.881Z",
+		"checkedAt": "2026-11-27T16:39:36.254Z",
 		"httpStatus": 200,
 		"error": null,
 		"failures": 0,
@@ -3587,7 +3587,7 @@
 	},
 	{
 		"id": "tokenstork-registry",
-		"checkedAt": "2026-11-26T16:53:42.175Z",
+		"checkedAt": "2026-11-27T16:39:36.217Z",
 		"httpStatus": 200,
 		"error": null,
 		"failures": 0,
@@ -3598,7 +3598,7 @@
 	},
 	{
 		"id": "paytaca-bcmr-indexer",
-		"checkedAt": "2026-11-26T16:53:43.591Z",
+		"checkedAt": "2026-11-27T16:39:37.940Z",
 		"httpStatus": 200,
 		"error": null,
 		"failures": 0,
@@ -3609,7 +3609,7 @@
 	},
 	{
 		"id": "george-donnelly",
-		"checkedAt": "2026-11-26T16:53:42.221Z",
+		"checkedAt": "2026-11-27T16:39:36.679Z",
 		"httpStatus": 200,
 		"error": null,
 		"failures": 0,
@@ -3620,7 +3620,7 @@
 	},
 	{
 		"id": "mathieu-geukens",
-		"checkedAt": "2026-11-26T16:53:42.349Z",
+		"checkedAt": "2026-11-27T16:39:36.798Z",
 		"httpStatus": 200,
 		"error": null,
 		"failures": 0,
@@ -3631,10 +3631,10 @@
 	},
 	{
 		"id": "bitcoincashsite-yt",
-		"checkedAt": "2026-11-26T16:53:42.105Z",
+		"checkedAt": "2026-11-27T16:39:36.450Z",
 		"httpStatus": 404,
 		"error": null,
-		"failures": 64,
+		"failures": 65,
 		"lastCommit": null,
 		"lastRelease": null,
 		"archived": false,
@@ -3642,7 +3642,7 @@
 	},
 	{
 		"id": "bch-research",
-		"checkedAt": "2026-11-26T16:53:42.722Z",
+		"checkedAt": "2026-11-27T16:39:37.512Z",
 		"httpStatus": 200,
 		"error": null,
 		"failures": 0,
@@ -3653,7 +3653,7 @@
 	},
 	{
 		"id": "bch-node-tg",
-		"checkedAt": "2026-11-26T16:53:42.432Z",
+		"checkedAt": "2026-11-27T16:39:36.649Z",
 		"httpStatus": 200,
 		"error": null,
 		"failures": 0,
@@ -3664,7 +3664,7 @@
 	},
 	{
 		"id": "panmoni-tg",
-		"checkedAt": "2026-11-26T16:53:42.477Z",
+		"checkedAt": "2026-11-27T16:39:36.726Z",
 		"httpStatus": 200,
 		"error": null,
 		"failures": 0,
@@ -3675,7 +3675,7 @@
 	},
 	{
 		"id": "real-bitcoin-cash",
-		"checkedAt": "2026-11-26T16:53:42.781Z",
+		"checkedAt": "2026-11-27T16:39:37.087Z",
 		"httpStatus": 200,
 		"error": null,
 		"failures": 0,
@@ -3686,7 +3686,7 @@
 	},
 	{
 		"id": "yt-mrzwets",
-		"checkedAt": "2026-11-26T16:53:42.478Z",
+		"checkedAt": "2026-11-27T16:39:36.937Z",
 		"httpStatus": 200,
 		"error": null,
 		"failures": 0,
@@ -3697,10 +3697,10 @@
 	},
 	{
 		"id": "yt-paytaca",
-		"checkedAt": "2026-11-26T16:53:42.538Z",
+		"checkedAt": "2026-11-27T16:39:36.836Z",
 		"httpStatus": 404,
 		"error": null,
-		"failures": 64,
+		"failures": 65,
 		"lastCommit": null,
 		"lastRelease": null,
 		"archived": false,
@@ -3708,7 +3708,7 @@
 	},
 	{
 		"id": "yt-generalprotocols",
-		"checkedAt": "2026-11-26T16:53:42.759Z",
+		"checkedAt": "2026-11-27T16:39:37.037Z",
 		"httpStatus": 200,
 		"error": null,
 		"failures": 0,
@@ -3719,7 +3719,7 @@
 	},
 	{
 		"id": "casualbch",
-		"checkedAt": "2026-11-26T16:53:42.951Z",
+		"checkedAt": "2026-11-27T16:39:37.174Z",
 		"httpStatus": 200,
 		"error": null,
 		"failures": 0,
@@ -3730,7 +3730,7 @@
 	},
 	{
 		"id": "bch-podcast",
-		"checkedAt": "2026-11-26T16:53:42.629Z",
+		"checkedAt": "2026-11-27T16:39:36.891Z",
 		"httpStatus": 200,
 		"error": null,
 		"failures": 0,
@@ -3741,7 +3741,7 @@
 	},
 	{
 		"id": "yt-bchnetwork",
-		"checkedAt": "2026-11-26T16:53:42.771Z",
+		"checkedAt": "2026-11-27T16:39:37.058Z",
 		"httpStatus": 200,
 		"error": null,
 		"failures": 0,
@@ -3752,10 +3752,10 @@
 	},
 	{
 		"id": "yt-rayusesbch",
-		"checkedAt": "2026-11-26T16:53:42.790Z",
+		"checkedAt": "2026-11-27T16:39:36.979Z",
 		"httpStatus": 404,
 		"error": null,
-		"failures": 64,
+		"failures": 65,
 		"lastCommit": null,
 		"lastRelease": null,
 		"archived": false,
@@ -3763,10 +3763,10 @@
 	},
 	{
 		"id": "bitcoincashtv",
-		"checkedAt": "2026-11-26T16:53:42.687Z",
+		"checkedAt": "2026-11-27T16:39:36.891Z",
 		"httpStatus": null,
 		"error": "no-url",
-		"failures": 64,
+		"failures": 65,
 		"lastCommit": null,
 		"lastRelease": null,
 		"archived": false,
@@ -3774,7 +3774,7 @@
 	},
 	{
 		"id": "gp-spaces",
-		"checkedAt": "2026-11-26T16:53:43.131Z",
+		"checkedAt": "2026-11-27T16:39:37.440Z",
 		"httpStatus": 200,
 		"error": null,
 		"failures": 0,
@@ -3785,7 +3785,7 @@
 	},
 	{
 		"id": "paytaca-talks",
-		"checkedAt": "2026-11-26T16:53:43.646Z",
+		"checkedAt": "2026-11-27T16:39:38.716Z",
 		"httpStatus": 200,
 		"error": null,
 		"failures": 0,
@@ -3796,7 +3796,7 @@
 	},
 	{
 		"id": "la-economia-p2p",
-		"checkedAt": "2026-11-26T16:53:43.367Z",
+		"checkedAt": "2026-11-27T16:39:37.315Z",
 		"httpStatus": 200,
 		"error": null,
 		"failures": 0,
@@ -3807,7 +3807,7 @@
 	},
 	{
 		"id": "bitcoinprotocol-org",
-		"checkedAt": "2026-11-26T16:53:42.981Z",
+		"checkedAt": "2026-11-27T16:39:37.372Z",
 		"httpStatus": 200,
 		"error": null,
 		"failures": 0,
@@ -3818,7 +3818,7 @@
 	},
 	{
 		"id": "bitcoincash-org",
-		"checkedAt": "2026-11-26T16:53:43.640Z",
+		"checkedAt": "2026-11-27T16:39:37.852Z",
 		"httpStatus": 200,
 		"error": null,
 		"failures": 0,
@@ -3829,7 +3829,7 @@
 	},
 	{
 		"id": "helpme-cash",
-		"checkedAt": "2026-11-26T16:53:43.086Z",
+		"checkedAt": "2026-11-27T16:39:37.386Z",
 		"httpStatus": 200,
 		"error": null,
 		"failures": 0,
@@ -3840,7 +3840,7 @@
 	},
 	{
 		"id": "developers-cash",
-		"checkedAt": "2026-11-26T16:53:44.185Z",
+		"checkedAt": "2026-11-27T16:39:38.504Z",
 		"httpStatus": 200,
 		"error": null,
 		"failures": 0,
@@ -3851,7 +3851,7 @@
 	},
 	{
 		"id": "bch-info",
-		"checkedAt": "2026-11-26T16:53:43.511Z",
+		"checkedAt": "2026-11-27T16:39:37.474Z",
 		"httpStatus": 200,
 		"error": null,
 		"failures": 0,
@@ -3862,7 +3862,7 @@
 	},
 	{
 		"id": "awesomebch",
-		"checkedAt": "2026-11-26T16:53:43.734Z",
+		"checkedAt": "2026-11-27T16:39:37.917Z",
 		"httpStatus": 200,
 		"error": null,
 		"failures": 0,
@@ -3873,7 +3873,7 @@
 	},
 	{
 		"id": "bchfaq",
-		"checkedAt": "2026-11-26T16:53:43.291Z",
+		"checkedAt": "2026-11-27T16:39:37.624Z",
 		"httpStatus": 200,
 		"error": null,
 		"failures": 0,
@@ -3884,7 +3884,7 @@
 	},
 	{
 		"id": "bmap-app",
-		"checkedAt": "2026-11-26T16:53:43.255Z",
+		"checkedAt": "2026-11-27T16:39:37.531Z",
 		"httpStatus": 200,
 		"error": null,
 		"failures": 0,
@@ -3895,7 +3895,7 @@
 	},
 	{
 		"id": "whybitcoincash",
-		"checkedAt": "2026-11-26T16:53:43.482Z",
+		"checkedAt": "2026-11-27T16:39:37.662Z",
 		"httpStatus": 200,
 		"error": null,
 		"failures": 0,
@@ -3906,7 +3906,7 @@
 	},
 	{
 		"id": "best-bch-wallets",
-		"checkedAt": "2026-11-26T16:53:43.625Z",
+		"checkedAt": "2026-11-27T16:39:37.665Z",
 		"httpStatus": 200,
 		"error": null,
 		"failures": 0,
@@ -3917,7 +3917,7 @@
 	},
 	{
 		"id": "accept-bch-initiative",
-		"checkedAt": "2026-11-26T16:53:43.607Z",
+		"checkedAt": "2026-11-27T16:39:37.629Z",
 		"httpStatus": 200,
 		"error": null,
 		"failures": 0,
@@ -3928,7 +3928,7 @@
 	},
 	{
 		"id": "btc-vs-bch-energy",
-		"checkedAt": "2026-11-26T16:53:44.269Z",
+		"checkedAt": "2026-11-27T16:39:38.300Z",
 		"httpStatus": 200,
 		"error": null,
 		"failures": 0,
@@ -3939,7 +3939,7 @@
 	},
 	{
 		"id": "elbitcoin",
-		"checkedAt": "2026-11-26T16:53:43.668Z",
+		"checkedAt": "2026-11-27T16:39:37.780Z",
 		"httpStatus": 200,
 		"error": null,
 		"failures": 0,
@@ -3950,10 +3950,10 @@
 	},
 	{
 		"id": "bitcoincash-network",
-		"checkedAt": "2026-11-26T16:53:53.891Z",
+		"checkedAt": "2026-11-27T16:39:47.805Z",
 		"httpStatus": null,
 		"error": "UND_ERR_CONNECT_TIMEOUT",
-		"failures": 64,
+		"failures": 65,
 		"lastCommit": null,
 		"lastRelease": null,
 		"archived": false,
@@ -3961,7 +3961,7 @@
 	},
 	{
 		"id": "bchgang",
-		"checkedAt": "2026-11-26T16:53:44.490Z",
+		"checkedAt": "2026-11-27T16:39:38.739Z",
 		"httpStatus": 200,
 		"error": null,
 		"failures": 0,
@@ -3972,10 +3972,10 @@
 	},
 	{
 		"id": "discover-cash",
-		"checkedAt": "2026-11-26T16:53:44.423Z",
+		"checkedAt": "2026-11-27T16:39:38.503Z",
 		"httpStatus": null,
 		"error": "UND_ERR_SOCKET",
-		"failures": 6,
+		"failures": 7,
 		"lastCommit": null,
 		"lastRelease": null,
 		"archived": false,
@@ -3983,10 +3983,10 @@
 	},
 	{
 		"id": "keepbitcoinfree-bch-dev",
-		"checkedAt": "2026-11-26T16:53:44.045Z",
+		"checkedAt": "2026-11-27T16:39:38.036Z",
 		"httpStatus": null,
 		"error": "UNABLE_TO_VERIFY_LEAF_SIGNATURE",
-		"failures": 44,
+		"failures": 45,
 		"lastCommit": null,
 		"lastRelease": null,
 		"archived": false,
@@ -3994,7 +3994,7 @@
 	},
 	{
 		"id": "eatbch",
-		"checkedAt": "2026-11-26T16:53:44.091Z",
+		"checkedAt": "2026-11-27T16:39:38.509Z",
 		"httpStatus": 200,
 		"error": null,
 		"failures": 0,
@@ -4005,10 +4005,10 @@
 	},
 	{
 		"id": "whitepaper",
-		"checkedAt": "2026-11-26T16:53:43.646Z",
+		"checkedAt": "2026-11-27T16:39:37.917Z",
 		"httpStatus": null,
 		"error": "no-url",
-		"failures": 64,
+		"failures": 65,
 		"lastCommit": null,
 		"lastRelease": null,
 		"archived": false,
@@ -4016,7 +4016,7 @@
 	},
 	{
 		"id": "letter-from-ceo",
-		"checkedAt": "2026-11-26T16:53:44.494Z",
+		"checkedAt": "2026-11-27T16:39:38.398Z",
 		"httpStatus": 200,
 		"error": null,
 		"failures": 0,
@@ -4027,7 +4027,7 @@
 	},
 	{
 		"id": "whitepaper-visualized",
-		"checkedAt": "2026-11-26T16:53:44.472Z",
+		"checkedAt": "2026-11-27T16:39:41.536Z",
 		"httpStatus": 200,
 		"error": null,
 		"failures": 0,
@@ -4038,7 +4038,7 @@
 	},
 	{
 		"id": "coin-dance",
-		"checkedAt": "2026-11-26T16:53:44.010Z",
+		"checkedAt": "2026-11-27T16:39:38.061Z",
 		"httpStatus": 200,
 		"error": null,
 		"failures": 0,
@@ -4049,7 +4049,7 @@
 	},
 	{
 		"id": "bitcoinfees-cash",
-		"checkedAt": "2026-11-26T16:53:45.080Z",
+		"checkedAt": "2026-11-27T16:39:38.683Z",
 		"httpStatus": 200,
 		"error": null,
 		"failures": 0,
@@ -4060,10 +4060,10 @@
 	},
 	{
 		"id": "fork-lol",
-		"checkedAt": "2026-11-26T16:53:44.232Z",
+		"checkedAt": "2026-11-27T16:39:38.602Z",
 		"httpStatus": null,
 		"error": "ERR_TLS_CERT_ALTNAME_INVALID",
-		"failures": 64,
+		"failures": 65,
 		"lastCommit": null,
 		"lastRelease": null,
 		"archived": false,
@@ -4071,7 +4071,7 @@
 	},
 	{
 		"id": "jochen-hoenicke",
-		"checkedAt": "2026-11-26T16:53:44.715Z",
+		"checkedAt": "2026-11-27T16:39:38.686Z",
 		"httpStatus": 200,
 		"error": null,
 		"failures": 0,
@@ -4082,7 +4082,7 @@
 	},
 	{
 		"id": "cashfusion-stats",
-		"checkedAt": "2026-11-26T16:53:47.094Z",
+		"checkedAt": "2026-11-27T16:39:40.843Z",
 		"httpStatus": 200,
 		"error": null,
 		"failures": 0,
@@ -4093,7 +4093,7 @@
 	},
 	{
 		"id": "cashnodes",
-		"checkedAt": "2026-11-26T16:53:44.914Z",
+		"checkedAt": "2026-11-27T16:39:39.015Z",
 		"httpStatus": 200,
 		"error": null,
 		"failures": 0,
@@ -4104,10 +4104,10 @@
 	},
 	{
 		"id": "bch-gg",
-		"checkedAt": "2026-11-26T16:53:45.115Z",
+		"checkedAt": "2026-11-27T16:39:38.798Z",
 		"httpStatus": null,
 		"error": "redirects to compi.gg",
-		"failures": 57,
+		"failures": 58,
 		"lastCommit": null,
 		"lastRelease": null,
 		"archived": false,
@@ -4115,7 +4115,7 @@
 	},
 	{
 		"id": "tx-watch",
-		"checkedAt": "2026-11-26T16:53:44.740Z",
+		"checkedAt": "2026-11-27T16:39:38.748Z",
 		"httpStatus": 200,
 		"error": null,
 		"failures": 0,
@@ -4126,7 +4126,7 @@
 	},
 	{
 		"id": "bch-notary",
-		"checkedAt": "2026-11-26T16:53:44.838Z",
+		"checkedAt": "2026-11-27T16:39:38.837Z",
 		"httpStatus": 200,
 		"error": null,
 		"failures": 0,
@@ -4137,7 +4137,7 @@
 	},
 	{
 		"id": "bitcoin-com-tools",
-		"checkedAt": "2026-11-26T16:53:45.917Z",
+		"checkedAt": "2026-11-27T16:39:39.675Z",
 		"httpStatus": 200,
 		"error": null,
 		"failures": 0,
@@ -4148,7 +4148,7 @@
 	},
 	{
 		"id": "flipstarters-overview",
-		"checkedAt": "2026-11-26T16:53:45.143Z",
+		"checkedAt": "2026-11-27T16:39:39.080Z",
 		"httpStatus": 200,
 		"error": null,
 		"failures": 0,
@@ -4159,7 +4159,7 @@
 	},
 	{
 		"id": "coinrabbit",
-		"checkedAt": "2026-11-26T16:53:44.957Z",
+		"checkedAt": "2026-11-27T16:39:39.213Z",
 		"httpStatus": 200,
 		"error": null,
 		"failures": 0,
@@ -4170,7 +4170,7 @@
 	},
 	{
 		"id": "nexo",
-		"checkedAt": "2026-11-26T16:53:44.856Z",
+		"checkedAt": "2026-11-27T16:39:38.929Z",
 		"httpStatus": 200,
 		"error": null,
 		"failures": 0,
@@ -4181,7 +4181,7 @@
 	},
 	{
 		"id": "bitcoin-india",
-		"checkedAt": "2026-11-26T16:53:45.803Z",
+		"checkedAt": "2026-11-27T16:39:38.940Z",
 		"httpStatus": 200,
 		"error": null,
 		"failures": 0,
@@ -4192,7 +4192,7 @@
 	},
 	{
 		"id": "antpool",
-		"checkedAt": "2026-11-26T16:53:46.741Z",
+		"checkedAt": "2026-11-27T16:39:40.208Z",
 		"httpStatus": 200,
 		"error": null,
 		"failures": 0,
@@ -4203,7 +4203,7 @@
 	},
 	{
 		"id": "viabtc",
-		"checkedAt": "2026-11-26T16:53:45.973Z",
+		"checkedAt": "2026-11-27T16:39:39.498Z",
 		"httpStatus": 200,
 		"error": null,
 		"failures": 0,
@@ -4214,7 +4214,7 @@
 	},
 	{
 		"id": "f2pool",
-		"checkedAt": "2026-11-26T16:53:46.201Z",
+		"checkedAt": "2026-11-27T16:39:39.580Z",
 		"httpStatus": 200,
 		"error": null,
 		"failures": 0,
@@ -4225,10 +4225,10 @@
 	},
 	{
 		"id": "btc-com",
-		"checkedAt": "2026-11-26T16:53:44.985Z",
+		"checkedAt": "2026-11-27T16:39:39.008Z",
 		"httpStatus": null,
 		"error": "ENOTFOUND",
-		"failures": 64,
+		"failures": 65,
 		"lastCommit": null,
 		"lastRelease": null,
 		"archived": false,
@@ -4236,10 +4236,10 @@
 	},
 	{
 		"id": "btc-top",
-		"checkedAt": "2026-11-26T16:53:45.049Z",
+		"checkedAt": "2026-11-27T16:39:39.037Z",
 		"httpStatus": null,
 		"error": "ENOTFOUND",
-		"failures": 64,
+		"failures": 65,
 		"lastCommit": null,
 		"lastRelease": null,
 		"archived": false,
@@ -4247,10 +4247,10 @@
 	},
 	{
 		"id": "bitcoin-com-pool",
-		"checkedAt": "2026-11-26T16:53:59.986Z",
+		"checkedAt": "2026-11-27T16:39:54.015Z",
 		"httpStatus": null,
 		"error": "TimeoutError",
-		"failures": 64,
+		"failures": 65,
 		"lastCommit": null,
 		"lastRelease": null,
 		"archived": false,
@@ -4258,7 +4258,7 @@
 	},
 	{
 		"id": "poolin",
-		"checkedAt": "2026-11-26T16:53:45.175Z",
+		"checkedAt": "2026-11-27T16:39:39.176Z",
 		"httpStatus": 403,
 		"error": null,
 		"failures": 0,
@@ -4269,7 +4269,7 @@
 	},
 	{
 		"id": "mining-dutch",
-		"checkedAt": "2026-11-26T16:53:45.625Z",
+		"checkedAt": "2026-11-27T16:39:39.534Z",
 		"httpStatus": 200,
 		"error": null,
 		"failures": 0,
@@ -4280,7 +4280,7 @@
 	},
 	{
 		"id": "prohashing",
-		"checkedAt": "2026-11-26T16:53:45.561Z",
+		"checkedAt": "2026-11-27T16:39:39.499Z",
 		"httpStatus": 200,
 		"error": null,
 		"failures": 0,
@@ -4291,7 +4291,7 @@
 	},
 	{
 		"id": "p2pool",
-		"checkedAt": "2026-11-26T16:53:45.908Z",
+		"checkedAt": "2026-11-27T16:39:40.021Z",
 		"httpStatus": 200,
 		"error": null,
 		"failures": 0,
@@ -4302,10 +4302,10 @@
 	},
 	{
 		"id": "huobipool",
-		"checkedAt": "2026-11-26T16:53:45.258Z",
+		"checkedAt": "2026-11-27T16:39:39.540Z",
 		"httpStatus": null,
 		"error": "ENOTFOUND",
-		"failures": 64,
+		"failures": 65,
 		"lastCommit": null,
 		"lastRelease": null,
 		"archived": false,
@@ -4313,7 +4313,7 @@
 	},
 	{
 		"id": "spiderpool",
-		"checkedAt": "2026-11-26T16:53:45.515Z",
+		"checkedAt": "2026-11-27T16:39:39.892Z",
 		"httpStatus": 200,
 		"error": null,
 		"failures": 0,
@@ -4324,7 +4324,7 @@
 	},
 	{
 		"id": "foundryusapool",
-		"checkedAt": "2026-11-26T16:53:45.628Z",
+		"checkedAt": "2026-11-27T16:39:39.631Z",
 		"httpStatus": 403,
 		"error": null,
 		"failures": 0,
@@ -4335,10 +4335,10 @@
 	},
 	{
 		"id": "solomining",
-		"checkedAt": "2026-11-26T16:54:00.561Z",
+		"checkedAt": "2026-11-27T16:39:54.540Z",
 		"httpStatus": null,
 		"error": "TimeoutError",
-		"failures": 60,
+		"failures": 61,
 		"lastCommit": null,
 		"lastRelease": null,
 		"archived": false,
@@ -4346,7 +4346,7 @@
 	},
 	{
 		"id": "binancepool",
-		"checkedAt": "2026-11-26T16:53:45.809Z",
+		"checkedAt": "2026-11-27T16:39:39.749Z",
 		"httpStatus": 202,
 		"error": null,
 		"failures": 0,
@@ -4357,7 +4357,7 @@
 	},
 	{
 		"id": "asicseer-pool",
-		"checkedAt": "2026-11-26T16:53:47.081Z",
+		"checkedAt": "2026-11-27T16:39:40.565Z",
 		"httpStatus": 200,
 		"error": null,
 		"failures": 0,
