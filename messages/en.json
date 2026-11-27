@@ -542,7 +542,6 @@
 	"ref_numbers_na_note": "\"n/a\" means no free public source we trust for that number yet. Block times are protocol targets.",
 	"translation_notice_machine": "Machine translation: nobody has reviewed this page yet.",
 	"translation_notice_stale": "This translation may be out of date: the English page changed after it was reviewed.",
-	"translation_credit": "Translation reviewed by {reviewer}.",
 	"legal_english_governs": "This translation is provided for convenience. If it differs from the English version, the English version governs.",
 	"legal_english_governs_link": "Read the English version"
 }

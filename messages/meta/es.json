@@ -11,12 +11,6 @@
 		"translator": "Claude (claude-opus-5-5)",
 		"reviewer": "George Donnelly"
 	},
-	"translation_credit": {
-		"sourceHash": "86306016a2ed861a",
-		"status": "reviewed",
-		"translator": "Claude (claude-opus-5-5)",
-		"reviewer": "George Donnelly"
-	},
 	"utxo_amount_bch": {
 		"sourceHash": "d499d9e3119d20da",
 		"status": "reviewed",
